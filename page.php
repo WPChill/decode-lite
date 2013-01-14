@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package _s
- * @since _s 1.0
+ * @package Decode
+ * @since Decode 1.0
  */
 
 get_header(); ?>
@@ -20,12 +20,9 @@ get_header(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
 
-					<?php comments_template( '', true ); ?>
-
 				<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

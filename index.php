@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
- * @since _s 1.0
+ * @package Decode
+ * @since Decode 1.0
  */
 
 get_header(); ?>
@@ -18,8 +18,6 @@ get_header(); ?>
 			<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
-
-				<?php _s_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -34,7 +32,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php _s_content_nav( 'nav-below' ); ?>
+				<?php decode_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
@@ -44,6 +42,4 @@ get_header(); ?>
 
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
