@@ -515,8 +515,7 @@ article.page .entry-content {
 	width: 92.5%;
 }
 
-.post img {
-	width: 100%;
+.post img, .page img {
 	margin: 2.5% auto;
 }
 
@@ -680,7 +679,6 @@ img[class*="wp-image-"] {
 .entry-content img,
 img.size-full {
 	max-width: 100%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -918,9 +916,6 @@ a {
 	margin: 0 -7%;
 }
 
-.post img {
-	width: 75%;
-}
 
 .post .date a:hover, .post .date a:active {
 	border-bottom: none;
