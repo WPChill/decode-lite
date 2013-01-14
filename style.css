@@ -555,7 +555,7 @@ article.page .entry-content {
 
 .reply .replylink {
 	opacity: 0;
-	width: 35%;
+	width: 30%;
 	border-bottom: none;
 }
 
@@ -576,10 +576,12 @@ article.page .entry-content {
 	font-size: 1em;
 	color: #444444;
 	display: inline-block;
+	margin: 0 auto;
 }
 
 .reply .replytrigger {
 	text-align: center;
+	width: 15%;
 }
 
 .reply:hover .replytrigger, .reply.triggered .replytrigger {
@@ -805,7 +807,7 @@ a {
 	}
 
 .site-header, .post, article.page {
-	width: 75%;
+	width: 80%;
 }
 
 .site-title a {
@@ -915,7 +917,6 @@ a {
 .entry-title .reply:hover .replytrigger, .entry-title .reply.triggered .replytrigger {
 	margin: 0 -7%;
 }
-
 
 .post .date a:hover, .post .date a:active {
 	border-bottom: none;
