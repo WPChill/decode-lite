@@ -489,7 +489,7 @@ a {
 .entry-title h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -926,6 +926,7 @@ a {
 
 .entry-title h2 {
 	font-size: 2em;
+	width: 80%;
 }
 
 .reply {
