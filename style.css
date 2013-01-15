@@ -780,6 +780,22 @@ object {
 }
 
 
+/* =iPad
+----------------------------------------------- */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+.site-header, .post, article.page {
+	width: 85%;
+}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.site-header, .post, article.page {
+	font-size: 0.75em;
+}
+}
+
+
 /* =Desktop
 ----------------------------------------------- */
 @media only screen and (min-width: 699px) {
@@ -911,11 +927,11 @@ a {
 }
 
 .reply .replylink {
-	width: 25%;
+	width: auto;
 }
 
 .entry-title .reply:hover .replytrigger, .entry-title .reply.triggered .replytrigger {
-	margin: 0 -7%;
+	margin: 0 -6%;
 }
 
 .post .date a:hover, .post .date a:active {
