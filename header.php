@@ -25,6 +25,17 @@
 
 <script type="text/javascript" src="http://beyondtheco.de/wp-content/themes/Decode/js/respond.js"></script>
 
+<script>
+// When ready...
+window.addEventListener("load",function() {
+  // Set a timeout...
+  setTimeout(function(){
+    // Hide the address bar!
+    window.scrollTo(0, 1);
+  }, 0);
+});
+</script>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script type="text/javascript">

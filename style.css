@@ -553,6 +553,8 @@ article.page .entry-content {
 	border-bottom: none;
 	margin: 1% auto 0;
 	display: inline-block;
+	position: relative;
+	right: 10px;
 }
 
 .reply .replytrigger {
@@ -562,14 +564,10 @@ article.page .entry-content {
 
 .reply:hover .replytrigger, .reply.triggered .replytrigger {
 	opacity: 0;
-	color: #444444;
-	border-bottom: none;
 }
 
 .reply .replylink {
 	opacity: 0;
-	width: -1%;
-	border-bottom: none;
 }
 
 .replylink.left {
@@ -927,13 +925,9 @@ a {
 	font-size: 2em;
 }
 
-/*.reply {
-	width: 55%;
+.reply {
+	right: 5px;
 }
-
-.reply:hover {
-	width: 35%;
-}*/
 
 .post .date a:hover, .post .date a:active {
 	border-bottom: none;
