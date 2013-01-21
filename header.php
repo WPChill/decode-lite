@@ -15,6 +15,15 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<!-- Icons -->
+<link rel="icon" href="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+
+<link rel="apple-touch-icon-precomposed" href="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+
+<meta name="msapplication-TileColor" content="#E3E5E7">
+
+<meta name="msapplication-TileImage" content="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
