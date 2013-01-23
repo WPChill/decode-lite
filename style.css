@@ -509,7 +509,7 @@ article.page .entry-content {
 
 .post {
 	width: 100%;
-	margin: 5% auto;
+	margin: 2.5% auto 15%;
 	line-height: 1.75em;
 }
 
@@ -538,7 +538,7 @@ article.page .entry-content {
 .date {
 	font-size: .8em;
 	clear: both;
-	margin: 5% 0 0;
+	margin: 2.5% 0 0;
 }
 
 .date a {
@@ -741,7 +741,7 @@ object {
 ----------------------------------------------- */
 
 .site-content .site-navigation {
-	margin: 2.5% 2.5% 2.5%;
+	margin: -5% 2.5% 2.5%;
 	overflow: hidden;
 }
 .site-navigation.paging-navigation .nav-previous {
@@ -933,7 +933,12 @@ a {
 	right: 5px;
 }
 
+.post {
+	margin: 2.5% auto 6.5%;
+}
+
 .post .date a:hover, .post .date a:active {
+	margin-top: 3.5%;
 	border-bottom: none;
 }
 
@@ -942,7 +947,7 @@ a {
 }
 
 .site-content .site-navigation {
-	margin-top: 1%;
+	margin-top: -2.5%;
 }
 
 .nav-next a, .nav-previous a {
