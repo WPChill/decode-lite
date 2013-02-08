@@ -24,13 +24,13 @@
 <meta name="msapplication-TileColor" content="#E3E5E7">
 
 <meta name="msapplication-TileImage" content="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
 
 <!-- Typekit -->
-<script type="text/javascript" src="//use.typekit.net/olq0xkh.js"></script>
+<script type="text/javascript" src="//use.typekit.net/hjf6cdg.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- Modernizr -->
+<script type="text/javascript" src="http://beyondtheco.de/wp-content/themes/Decode/js/modernizr.js"></script>
 
 <script type="text/javascript" src="http://beyondtheco.de/wp-content/themes/Decode/js/respond.js"></script>
 
@@ -45,7 +45,7 @@ window.addEventListener("load",function() {
 });
 </script>
 
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
