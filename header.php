@@ -19,11 +19,13 @@
 <!-- Icons -->
 <link rel="icon" href="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
 
-<link rel="apple-touch-icon-precomposed" href="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+<link rel="apple-touch-icon-precomposed" href="http://beyondtheco.de/wp-content/themes/Decode/images/homescreen.png">
 
 <meta name="msapplication-TileColor" content="#E3E5E7">
 
 <meta name="msapplication-TileImage" content="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+
+<meta property="og:site_name" content="Beyond The Code" />
 
 <!-- Typekit -->
 <script type="text/javascript" src="//use.typekit.net/hjf6cdg.js"></script>
