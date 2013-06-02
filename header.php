@@ -74,10 +74,10 @@ window.addEventListener("load",function() {
 					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/Twitter.svg"/>
 				</a>
 				<a class="sociallink mobile AppNetLink" href="http://beyondtheco.de/ADN/">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/AppNet.svg"/>
+					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/ADN.svg"/>
 				</a>
 				<a class="sociallink desktop AppNetLink" href="https://alpha.app.net/scottsmith">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/AppNet.svg"/>
+					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/ADN.svg"/>
 				</a>
 				<a class="sociallink FacebookLink" href="https://www.facebook.com/BeyondTheCode">
 					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/Facebook.svg"/>
