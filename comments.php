@@ -8,7 +8,6 @@
  * located in the functions.php file.
  *
  * @package Decode
- * @since Decode 1.0
  */
 ?>
 

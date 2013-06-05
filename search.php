@@ -3,7 +3,6 @@
  * The template for displaying Search Results pages.
  *
  * @package Decode
- * @since Decode 1.0
  */
 
 get_header(); ?>

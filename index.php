@@ -9,7 +9,6 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Decode
- * @since Decode 1.0
  */
 
 get_header(); ?>

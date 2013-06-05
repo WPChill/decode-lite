@@ -3,7 +3,6 @@
  * The Template for displaying all single posts.
  *
  * @package Decode
- * @since Decode 1.0
  */
 
 get_header(); ?>

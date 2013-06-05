@@ -5,14 +5,11 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package Decode
- * @since Decode 1.0
  */
 
 if ( ! function_exists( 'decode_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
- *
- * @since Decode 1.0
  */
 function decode_content_nav( $nav_id ) {
 	global $wp_query, $post;
@@ -119,8 +116,6 @@ endif; // ends check for decode_comment()
 if ( ! function_exists( 'decode_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
- *
- * @since Decode 1.0
  */
 function decode_posted_on() {
 	printf( __( '%2$s', 'twentyten' ),
@@ -136,8 +131,6 @@ endif;
 
 /**
  * Returns true if a blog has more than 1 category
- *
- * @since Decode 1.0
  */
 function decode_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -163,8 +156,6 @@ function decode_categorized_blog() {
 
 /**
  * Flush out the transients used in decode_categorized_blog
- *
- * @since Decode 1.0
  */
 function decode_category_transient_flusher() {
 	// Like, beat it. Dig?

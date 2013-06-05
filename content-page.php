@@ -3,7 +3,6 @@
  * The template used for displaying page content in page.php
  *
  * @package Decode
- * @since Decode 1.0
  */
 ?>
 

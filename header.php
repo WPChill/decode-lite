@@ -5,37 +5,35 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package Decode
- * @since Decode 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, user-scalable = no">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Icons -->
-<link rel="icon" href="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/icon.png">
 
-<link rel="apple-touch-icon-precomposed" href="http://beyondtheco.de/wp-content/themes/Decode/images/homescreen.png">
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/homescreen.png">
 
 <meta name="msapplication-TileColor" content="#E3E5E7">
 
-<meta name="msapplication-TileImage" content="http://beyondtheco.de/wp-content/themes/Decode/images/icon.png">
+<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/icon.png">
 
-<meta property="og:site_name" content="Beyond The Code" />
-
-<!-- Typekit -->
-<script type="text/javascript" src="//use.typekit.net/hjf6cdg.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
 <!-- Modernizr -->
-<script type="text/javascript" src="http://beyondtheco.de/wp-content/themes/Decode/js/modernizr.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
 
-<script type="text/javascript" src="http://beyondtheco.de/wp-content/themes/Decode/js/respond.js"></script>
+<!-- Respond.js -->
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
 
+<!-- Hide Navbar on iPhone and iPod touch -->
 <script>
 // When ready...
 window.addEventListener("load",function() {
@@ -47,12 +45,17 @@ window.addEventListener("load",function() {
 });
 </script>
 
+<!-- jQuery -->
 <script src="http://code.jquery.com/jquery.min.js"></script>
 
+<!-- Reply Tool -->
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.replytrigger').click(function(){
 			$(this).closest('reply').addClass('triggered').setTimeout(1).removeClass('triggered');
+		});
+		$('.archive').click(function(){
+			$('#archive').addClass('open').setTimeout(1).removeClass('open');
 		});
 	});
 </script>
@@ -64,31 +67,25 @@ window.addEventListener("load",function() {
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description">by <a href="http://scotthsmith.com">Scott Smith</a></h2>
-		</hgroup>
-		<div class="sociallinks">
+			<h2 class="site-description"><?php echo get_theme_mod( 'html_in_description', '' ); ?></h2>
+		</div>
+		<div class="sociallinks <?php echo get_theme_mod( 'show_social_icons' );?>">
 			<ul> 
-				<a class="sociallink TwitterLink" href="http://twitter.com/BeyondTheCode">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/Twitter.svg"/>
+				<a class="sociallink TwitterLink <?php echo get_theme_mod( 'show_twitter' );?>" <?php echo 'href=https://twitter.com/' .get_theme_mod( 'twitter_username' )."\n";?>>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/Twitter.svg">
 				</a>
-				<a class="sociallink mobile AppNetLink" href="http://beyondtheco.de/ADN/">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/ADN.svg"/>
+				<a class="sociallink AppNetLink <?php echo get_theme_mod( 'show_adn' );?>" <?php echo 'href=https://alpha.app.net/' .get_theme_mod( 'adn_username' )."\n";?>>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/ADN.svg">
 				</a>
-				<a class="sociallink desktop AppNetLink" href="https://alpha.app.net/scottsmith">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/ADN.svg"/>
+				<a class="sociallink FacebookLink <?php echo get_theme_mod( 'show_facebook' );?>" <?php echo 'href=https://facebook.com/' .get_theme_mod( 'facebook_username' )."\n";?>>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/Facebook.svg">
 				</a>
-				<a class="sociallink FacebookLink" href="https://www.facebook.com/BeyondTheCode">
-					<img src="http://beyondtheco.de/wp-content/themes/Decode/images/Facebook.svg"/>
-				</a>
-					<a href="https://plus.google.com/111019875270643537691?rel=author" style="display: none;">Google</a>
 			</ul>
 		</div>
 
 		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'decode' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->

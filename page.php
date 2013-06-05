@@ -7,22 +7,28 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Decode
- * @since Decode 1.0
+ * @package _s
  */
 
 get_header(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+				<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() )
+						comments_template();
+				?>
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+			<?php endwhile; // end of the loop. ?>
 
-<?php wp_footer(); ?>
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

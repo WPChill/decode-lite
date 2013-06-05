@@ -3,7 +3,6 @@
  * The Sidebar containing the main widget areas.
  *
  * @package Decode
- * @since Decode 1.0
  */
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
