@@ -127,7 +127,7 @@ function decode_customize_register( $wp_customize ) {
 		'default'        => '',
 	) );
 	
-    $wp_customize->add_setting( 'html_in_description', array(
+    $wp_customize->add_setting( 'use_html_in_description', array(
 		'default'        => '',
 	) );
 	
@@ -139,8 +139,8 @@ function decode_customize_register( $wp_customize ) {
 		'priority'=> 1,
 	) );
 
-	$wp_customize->add_control( 'html_in_description', array(
-		'label'   => 'Want HTML in the header\'s description?',
+	$wp_customize->add_control( 'use_html_in_description', array(
+		'label'   => 'After saving the above setting, set and save this one. Want HTML in the header\'s description?',
 		'section' => 'decode_header_html_options',
 		'type'       => 'radio',
 		'choices'    => array(

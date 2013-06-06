@@ -69,7 +69,7 @@ window.addEventListener("load",function() {
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php echo get_theme_mod( 'html_in_description', '' ); ?></h2>
+			<h2 class="site-description"><?php echo get_theme_mod( 'use_html_in_description', '' ); ?></h2>
 		</div>
 		<div class="sociallinks <?php echo get_theme_mod( 'show_social_icons' );?>">
 			<ul> 
