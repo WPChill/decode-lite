@@ -21,6 +21,7 @@
 					<div class="reply <?php echo get_theme_mod( 'show_reply_tool' ); ?>"><a href="https://twitter.com/intent/tweet?screen_name=<?php echo get_theme_mod( 'twitter_reply_username' ); ?>&text=(about%3A%20<?php the_permalink(); ?>) " class="twitterreply replylink left" target="_blank" data-related="<?php echo get_theme_mod( 'twitter_reply_username' ); ?>">With Twitter</a><div class="replytrigger">Reply</div><a href="https://alpha.app.net/intent/post?text=@<?php echo get_theme_mod( 'adn_reply_username' ); ?> (about%3A%20<?php the_permalink(); ?>) " class="adnreply replylink right" target="_blank">With ADN</a></div></div>
 					<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'twentyten' ) ); ?></div>
 					<footer class="entry-meta">
+						<p class="tags"><?php the_tags(); ?></p>
 						<p class="date"><a href="<?php the_permalink(); ?>">Committed on <?php decode_posted_on(); ?></a></p>
 					</footer><!-- .entry-meta -->
 				</article>
