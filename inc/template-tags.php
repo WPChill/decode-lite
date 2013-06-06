@@ -118,7 +118,7 @@ if ( ! function_exists( 'decode_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function decode_posted_on() {
-	printf( __( '%2$s', 'twentyten' ),
+	printf( __( '%2$s', 'decode' ),
 		'meta-prep meta-prep-author',
 		sprintf( '%3$s',
 			get_permalink(),
