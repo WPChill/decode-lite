@@ -71,7 +71,7 @@ add_action( 'after_setup_theme', 'decode_setup' );
  
 function decode_register_custom_background() {
 	$args = array(
-		'default-color' => 'E3E5E7',
+		'default-color' => 'e3e5e7',
 		'default-image' => '',
 	);
 
