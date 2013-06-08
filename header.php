@@ -33,31 +33,22 @@
 <!-- Respond.js -->
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
 
-<!-- Hide Navbar on iPhone and iPod touch -->
-<script>
-// When ready...
-window.addEventListener("load",function() {
-  // Set a timeout...
-  setTimeout(function(){
-    // Hide the address bar!
-    window.scrollTo(0, 1);
-  }, 0);
-});
-</script>
-
 <!-- jQuery -->
-<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
-<!-- Reply Tool -->
+<!-- jQuery Scripts -->
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.replytrigger').click(function(){
 			$(this).closest('reply').addClass('triggered').setTimeout(1).removeClass('triggered');
 		});
-		$('.archive').click(function(){
-			$('#archive').addClass('open').setTimeout(1).removeClass('open');
+		$('#sidebar_link').click(function(){
+			$('#sidebar').toggleClass('visible');
 		});
-	});
+		$('#sidebar_close').click(function(){
+			$('#sidebar').toggleClass('visible');
+		});
+    });
 </script>
 
 <?php wp_head(); ?>
@@ -87,8 +78,15 @@ window.addEventListener("load",function() {
 
 		<nav role="navigation" class="site-navigation main-navigation">
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?> <a id="sidebar_link" class="SidebarLink"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"></a>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
+
+	<div id="sidebar" class="sidebar left">
+		<a id="sidebar_close" class="SidebarClose"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.svg"></a>
+		<div class="SidebarContent">
+			<?php get_sidebar(); ?>
+		</div>
+	</div>
 
 	<div id="main" class="site-main">

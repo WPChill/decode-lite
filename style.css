@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith and Underscores.me
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme
-Version: 2.1
+Version: 2.2
 License: GNU General Public License
 License URI: license.txt
 Tags: flexible-width, one-column, light, theme-options, post-formats, custom-background
@@ -52,6 +52,8 @@ body {
 	background: #E3E5E7;
 	text-align: left;
 	margin: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 article,
 aside,
@@ -366,20 +368,6 @@ object {
 	max-width: 100%;
 }
 
-/* =Infinite Scroll
------------------------------------------------ */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
 
 /* =Header
 ----------------------------------------------- */
@@ -613,6 +601,66 @@ article.page .entry-content {
 }
 
 
+/* =Sidebar
+----------------------------------------------- */
+
+.SidebarLink {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+.SidebarLink img {
+	width: 25px;
+}
+
+.SidebarClose img {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 25px;
+	padding-bottom: 5%;
+}
+
+.sidebar {
+	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
+	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
+	transition: left 0.35s ease-out, right 0.35s ease-out;
+	top: 0;
+	width: 95%;
+	background: #E3E5E7;
+	position: fixed;
+	height: 100%;
+	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 10;
+}
+
+.sidebar.left {
+	left: -110%;
+}
+
+.sidebar.right {
+	right: -110%;
+	float: right;
+	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
+}
+
+.SidebarContent {
+	padding-top: 70px;
+	margin: 0 5%;
+}
+
+.sidebar.left.visible {
+	left: 0;
+}
+
+.sidebar.right.visible {
+	right: 0;
+}
+
+
 /* =Reply Tool
 ----------------------------------------------- */
 
@@ -836,8 +884,12 @@ object {
 /* =Comments
 ----------------------------------------------- */
 
+.comment-content a {
+	word-wrap: break-word;
+}
 .bypostauthor {
 }
+
 
 /* =Widgets
 ----------------------------------------------- */
@@ -852,10 +904,23 @@ object {
 }
 
 /* Search widget */
-#searchsubmit {
+.widget_search .submit {
 	display: none;
 }
 
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
 
 /* =iPad
 ----------------------------------------------- */
@@ -993,6 +1058,31 @@ a {
 	0%, 54%, 90% {right: -7px;}
 	18%, 72% {right: 7px;}
 	100% {right: 0px;}
+}
+
+.SidebarLink {
+  position: fixed;
+  width: 30px;
+}
+
+.SidebarClose img {
+	width: 20px;
+}
+
+.sidebar {
+	width: 25%;
+}
+
+.sidebar.left {
+	left: -28%;
+}
+
+.sidebar.right {
+	right: -28%;
+}
+
+.SidebarContent {
+	padding-top: 70px;
 }
 
 .entry-title h2 {
