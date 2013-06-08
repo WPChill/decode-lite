@@ -374,12 +374,12 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 0 auto;
+	margin: 5% auto 0;
 	border-bottom: 1px solid #009BCD;
 }
 
 .site-title {
-	margin: 3% 0 1%;
+	margin: 0 0 1%;
 	text-align: center;
 }
 
@@ -391,12 +391,16 @@ object {
 	border-bottom: none;
 }
 
+.page-header {
+	text-align: center;
+}
+
 .page-title {
 	text-align: center;
 	font-size: 1.35em;
-	margin: 0 35%;
-	padding: 0.5%;
+	padding: 1%;
 	border-bottom: 1px solid #009BCD;
+	display: inline-block;
 }
 
 .site-description {
@@ -613,8 +617,9 @@ footer .date a {
 ----------------------------------------------- */
 
 .SidebarLink {
-	position: absolute;
-	top: 15%;
+	position: relative;
+	width: 25px;
+	cursor: pointer;
 }
 
 .SidebarLink.left {
@@ -917,9 +922,14 @@ object {
 /* =Comments
 ----------------------------------------------- */
 
+#comments {
+	display: none;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 }
 
