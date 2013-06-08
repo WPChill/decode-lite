@@ -114,7 +114,61 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'text',
 		'priority'=> 7,
 	) );
-		
+	
+	
+	
+	$wp_customize->add_section( 'decode_sidebar_options', array(
+    	'title'          => 'Sidebar Options',
+		'priority'       => 33,
+    ) );
+    
+    
+    $wp_customize->add_setting( 'show_sidebar', array(
+		'default'        => 'hidden',
+	) );
+
+	$wp_customize->add_setting( 'sidebar_position', array(
+		'default'        => 'left',
+	) );
+	
+	$wp_customize->add_setting( 'sidebar_button_position', array(
+		'default'        => 'left',
+	) );
+	
+	
+	$wp_customize->add_control( 'show_sidebar', array(
+		'label'   => 'Show Sidebar',
+		'section' => 'decode_sidebar_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'' => 'Yes',
+			'hidden' => 'No',
+        ),
+		'priority'=> 1,
+	) );
+	
+	$wp_customize->add_control( 'sidebar_position', array(
+		'label'   => 'Sidebar Position',
+		'section' => 'decode_sidebar_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'left' => 'Left',
+			'right' => 'Right',
+        ),
+		'priority'=> 2,
+	) );
+	
+	$wp_customize->add_control( 'sidebar_button_position', array(
+		'label'   => 'Sidebar Button Position',
+		'section' => 'decode_sidebar_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'left' => 'Left',
+			'right' => 'Right',
+        ),
+		'priority'=> 3,
+	) );
+
 
 
 	$wp_customize->add_section( 'decode_header_html_options', array(

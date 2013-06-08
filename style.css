@@ -607,14 +607,25 @@ article.page .entry-content {
 .SidebarLink {
 	position: absolute;
 	top: 5%;
+}
+
+.SidebarLink.left {
 	left: 5%;
+}
+
+.SidebarLink.right {
+	right: 5%;
+}
+
+.SidebarLink.hidden {
+	display: none;
 }
 
 .SidebarLink img {
 	width: 25px;
 }
 
-.SidebarClose img {
+.SidebarClose {
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -645,6 +656,10 @@ article.page .entry-content {
 	right: -110%;
 	float: right;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
+}
+
+.sidebar.hidden {
+	display: none;
 }
 
 .SidebarContent {
@@ -1065,7 +1080,7 @@ a {
   width: 30px;
 }
 
-.SidebarClose img {
+.SidebarClose {
 	width: 20px;
 }
 

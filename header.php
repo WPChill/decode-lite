@@ -78,12 +78,12 @@
 
 		<nav role="navigation" class="site-navigation main-navigation">
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?> <a id="sidebar_link" class="SidebarLink"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?> <a id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"></a>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 
-	<div id="sidebar" class="sidebar left">
-		<a id="sidebar_close" class="SidebarClose"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.svg"></a>
+	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>">
+		<img id="sidebar_close" class="SidebarClose" src="<?php echo get_template_directory_uri(); ?>/images/cross.svg">
 		<div class="SidebarContent">
 			<?php get_sidebar(); ?>
 		</div>
