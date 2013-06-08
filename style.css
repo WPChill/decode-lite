@@ -612,6 +612,14 @@ footer .date a {
 	color: #808080;
 }
 
+.theme-info {
+	font-size: 0.8em;
+}
+
+.theme-info.hidden {
+	display: none;
+}
+
 
 /* =Sidebar
 ----------------------------------------------- */
@@ -1164,6 +1172,14 @@ a {
 .site-content .nav-previous a:hover, .site-navigation .nav-next a:hover {
 	padding-right: 2.5%
 }
+
+	.theme-info a:hover {
+		border-bottom: 1px solid #009BCD;
+	}
+	
+	.theme-info a:active {
+		border-bottom: 1px solid #007EA6;
+	}
 }
 
 @media only screen and (min-width: 1100px) {

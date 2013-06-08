@@ -249,6 +249,30 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'text',
 		'priority'=> 3,
 	) );
+	
+	
+	
+	$wp_customize->add_section( 'decode_other_options', array(
+    	'title'          => 'Other Options',
+		'priority'       => 33,
+    ) );
+    
+    
+    $wp_customize->add_setting( 'show_theme_info', array(
+		'default'        => '',
+	) );
+	
+	
+	$wp_customize->add_control( 'show_reply_tool', array(
+		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
+		'section' => 'decode_other_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'' => 'Yes',
+			'hidden' => 'No',
+        ),
+		'priority'=> 1,
+	) );
 
 
 }
