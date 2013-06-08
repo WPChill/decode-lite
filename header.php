@@ -33,14 +33,20 @@
 <!-- Respond.js -->
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
 
+<!-- fastclick.js -->
+<script type='application/javascript' src='<?php echo get_template_directory_uri(); ?>/js/fastclick.js'></script>
+
 <!-- jQuery -->
 <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
 <!-- jQuery Scripts -->
 <script type="text/javascript">
 	$(document).ready(function(){
+		$(function() {
+			FastClick.attach(document.body);
+		});
 		$('.replytrigger').click(function(){
-			$(this).closest('reply').addClass('triggered').setTimeout(1).removeClass('triggered');
+			$(this).closest('reply').addClass('triggered').setTimeout(300).removeClass('triggered');
 		});
 		$('#sidebar_link').click(function(){
 			$('#sidebar').toggleClass('visible');
