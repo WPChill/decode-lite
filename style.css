@@ -606,7 +606,7 @@ article.page .entry-content {
 
 .SidebarLink {
 	position: absolute;
-	top: 5%;
+	top: 15%;
 }
 
 .SidebarLink.left {
@@ -1087,6 +1087,7 @@ a {
 
 .SidebarLink {
   position: fixed;
+  top: 5%;
   width: 30px;
 }
 
