@@ -391,6 +391,14 @@ object {
 	border-bottom: none;
 }
 
+.page-title {
+	text-align: center;
+	font-size: 1.35em;
+	margin: 0 35%;
+	padding: 0.5%;
+	border-bottom: 1px solid #009BCD;
+}
+
 .site-description {
 	text-align: center;
 }
@@ -590,13 +598,13 @@ article.page .entry-content {
 	color: #808080;
 }
 
-.date {
+footer .date {
 	font-size: 0.8em;
 	clear: both;
 	margin: 0.5% 0 0;
 }
 
-.date a {
+footer .date a {
 	color: #808080;
 }
 
@@ -793,7 +801,7 @@ article.page .entry-content {
 	font-size: 1em;
 }
 
-.format-quote .date:before, .format-quote .reply .replytrigger:before, .format-quote .date:after, .format-quote .reply .replytrigger:after {
+.format-quote footer .date:before, .format-quote .reply .replytrigger:before, .format-quote  footer .date:after, .format-quote .reply .replytrigger:after {
 	content: "";
 }
 
@@ -1120,7 +1128,7 @@ a {
 	margin: 2.5% auto 6.5%;
 }
 
-.post .date a:hover, .post .date a:active {
+.post footer .date a:hover, .post footer .date a:active {
 	margin-top: 3.5%;
 	border-bottom: none;
 }
