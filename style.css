@@ -633,6 +633,10 @@ article.page .entry-content {
 	padding-bottom: 5%;
 }
 
+.admin-bar .SidebarClose {
+	top: 50px;
+}
+
 .sidebar {
 	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
 	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
@@ -663,8 +667,12 @@ article.page .entry-content {
 }
 
 .SidebarContent {
-	padding-top: 70px;
+	padding-top: 65px;
 	margin: 0 5%;
+}
+
+.admin-bar SidebarContent {
+	padding-top: 90px;
 }
 
 .sidebar.left.visible {
@@ -1094,10 +1102,6 @@ a {
 
 .sidebar.right {
 	right: -28%;
-}
-
-.SidebarContent {
-	padding-top: 70px;
 }
 
 .entry-title h2 {
