@@ -623,6 +623,7 @@ article.page .entry-content {
 
 .SidebarLink img {
 	width: 25px;
+	cursor: pointer;
 }
 
 .SidebarClose {
@@ -631,6 +632,7 @@ article.page .entry-content {
 	left: 20px;
 	width: 25px;
 	padding-bottom: 5%;
+	cursor: pointer;
 }
 
 .admin-bar .SidebarClose {
@@ -671,7 +673,7 @@ article.page .entry-content {
 	margin: 0 5%;
 }
 
-.admin-bar SidebarContent {
+.admin-bar .SidebarContent {
 	padding-top: 90px;
 }
 
