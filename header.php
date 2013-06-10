@@ -46,7 +46,8 @@
 			FastClick.attach(document.body);
 		});
 		$('.replytrigger').click(function(){
-			$(this).closest('reply').addClass('triggered').setTimeout(300).removeClass('triggered');
+			$('.triggered').removeClass('triggered');
+			$(this).closest('.reply').addClass('triggered');
 		});
 		$("#sidebar_link, #sidebar_top").click(function(){
 			$('#sidebar').toggleClass('visible');
