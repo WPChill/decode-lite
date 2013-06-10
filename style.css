@@ -46,15 +46,6 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
-body {
-	font: normal 300 165%/1.5em "Oxygen", sans-serif;
-	color: #444444;
-	background: #E3E5E7;
-	text-align: left;
-	margin: 0;
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
-}
 article,
 aside,
 details,
@@ -104,11 +95,19 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	font: normal 300 165%/1.5em "Oxygen", sans-serif;
+	color: #444444;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
+}
+
+body {
+	background: #E3E5E7;
+	text-align: left;
+	margin: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* Headings */
@@ -642,22 +641,27 @@ footer .date a {
 	display: none;
 }
 
-.SidebarLink img {
-	width: 25px;
-	cursor: pointer;
+.SidebarTop {
+	position: relative;
+	background: #E3E5E7;
+	width: 100%;
+	height: 5%;
+	padding: 4.5% 0;
+	margin-bottom: 2.5%;
+	border-bottom: 1px solid #009BCD;
+	z-index: 11;
+}
+
+.admin-bar .SidebarTop {
+	top: 28px;
 }
 
 .SidebarClose {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 25px;
-	padding-bottom: 5%;
+	position: relative;
+	height: 100%;
+	padding-left: 4.5%;
+	display: block;
 	cursor: pointer;
-}
-
-.admin-bar .SidebarClose {
-	top: 50px;
 }
 
 .sidebar {
@@ -690,12 +694,8 @@ footer .date a {
 }
 
 .SidebarContent {
-	padding-top: 65px;
+	padding-top: 10%;
 	margin: 0 5%;
-}
-
-.admin-bar .SidebarContent {
-	padding-top: 90px;
 }
 
 .sidebar.left.visible {
@@ -1117,8 +1117,17 @@ a {
   width: 30px;
 }
 
+.admin-bar .SidebarLink {
+	top: 7.5%;
+}
+
+.SidebarTop {
+	height: 3%;
+	padding: 2.5% 0;
+}
+
 .SidebarClose {
-	width: 20px;
+	padding-left: 2.5%;
 }
 
 .sidebar {

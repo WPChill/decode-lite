@@ -37,7 +37,7 @@
 <script type='application/javascript' src='<?php echo get_template_directory_uri(); ?>/js/fastclick.js'></script>
 
 <!-- jQuery -->
-<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+<script src="//code.jquery.com/jquery-2.0.1.min.js"></script>
 
 <!-- jQuery Scripts -->
 <script type="text/javascript">
@@ -48,10 +48,7 @@
 		$('.replytrigger').click(function(){
 			$(this).closest('reply').addClass('triggered').setTimeout(300).removeClass('triggered');
 		});
-		$('#sidebar_link').click(function(){
-			$('#sidebar').toggleClass('visible');
-		});
-		$('#sidebar_close').click(function(){
+		$("#sidebar_link, #sidebar_top").click(function(){
 			$('#sidebar').toggleClass('visible');
 		});
     });
@@ -64,6 +61,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
+		<img id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php echo get_theme_mod( 'use_html_in_description', '' ); ?></h2>
@@ -84,12 +82,12 @@
 
 		<nav role="navigation" class="site-navigation main-navigation">
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?> <a id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 
 	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>">
-		<img id="sidebar_close" class="SidebarClose" src="<?php echo get_template_directory_uri(); ?>/images/cross.svg">
+		<div id="sidebar_top" class="SidebarTop"><img id="sidebar_close" class="SidebarClose" src="<?php echo get_template_directory_uri(); ?>/images/cross.svg"></div>
 		<div class="SidebarContent">
 			<?php get_sidebar(); ?>
 		</div>
