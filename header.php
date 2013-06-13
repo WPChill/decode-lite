@@ -28,16 +28,16 @@
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
 <!-- Modernizr -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
+<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
 
 <!-- Respond.js -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
+<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
 
 <!-- fastclick.js -->
 <script type='application/javascript' src='<?php echo get_template_directory_uri(); ?>/js/fastclick.js'></script>
 
 <!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.0.1.min.js"></script>
+<script async src="//code.jquery.com/jquery-2.0.1.min.js"></script>
 
 <!-- jQuery Scripts -->
 <script type="text/javascript">
