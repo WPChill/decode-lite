@@ -95,11 +95,8 @@ button,
 input,
 select,
 textarea {
-	font: normal 300 165%/1.5em "Oxygen", sans-serif;
 	color: #444444;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+	font: normal 300 165%/1.5em "Oxygen", sans-serif;
 }
 
 body {
@@ -645,9 +642,9 @@ footer .date a {
 	position: relative;
 	background: #E3E5E7;
 	width: 100%;
-	height: 5%;
+	height: 3.5%;
 	padding: 4.5% 0;
-	margin-bottom: 2.5%;
+	margin-bottom: 4.5%;
 	border-bottom: 1px solid #009BCD;
 	z-index: 11;
 }
@@ -1122,7 +1119,7 @@ a {
 }
 
 .SidebarTop {
-	height: 3%;
+	height: 2.5%;
 	padding: 2.5% 0;
 }
 
