@@ -70,13 +70,13 @@
 		<div class="sociallinks <?php echo get_theme_mod( 'show_social_icons' );?>">
 			<ul> 
 				<a class="sociallink TwitterLink <?php echo get_theme_mod( 'show_twitter' );?>" <?php echo 'href=https://twitter.com/' .get_theme_mod( 'twitter_username' )."\n";?>>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/Twitter.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/Twitter.svg" alt="Link to Twitter profile">
 				</a>
 				<a class="sociallink AppNetLink <?php echo get_theme_mod( 'show_adn' );?>" <?php echo 'href=https://alpha.app.net/' .get_theme_mod( 'adn_username' )."\n";?>>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/ADN.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/ADN.svg" alt="Link to App dot net profile">
 				</a>
 				<a class="sociallink FacebookLink <?php echo get_theme_mod( 'show_facebook' );?>" <?php echo 'href=https://facebook.com/' .get_theme_mod( 'facebook_username' )."\n";?>>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/Facebook.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/Facebook.svg" alt="Link to Facebook profile">
 				</a>
 			</ul>
 		</div>
