@@ -15,46 +15,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<!-- Icons -->
-<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/icon.png">
-
-<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/homescreen.png">
-
-<meta name="msapplication-TileColor" content="#E3E5E7">
-
-<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/icon.png">
-
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-<!-- Modernizr -->
-<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
-
-<!-- Respond.js -->
-<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
-
-<!-- fastclick.js -->
-<script type='application/javascript' src='<?php echo get_template_directory_uri(); ?>/js/fastclick.js'></script>
-
-<!-- jQuery -->
-<script async src="//code.jquery.com/jquery-2.0.1.min.js"></script>
-
-<!-- jQuery Scripts -->
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(function() {
-			FastClick.attach(document.body);
-		});
-		$('.replytrigger').click(function(){
-			$('.triggered').removeClass('triggered');
-			$(this).closest('.reply').addClass('triggered');
-		});
-		$("#sidebar_link, #sidebar_top").click(function(){
-			$('#sidebar').toggleClass('visible');
-		});
-    });
-</script>
-
 <?php wp_head(); ?>
 </head>
 
@@ -81,11 +41,12 @@
 			</ul>
 		</div>
 
-		<nav role="navigation" class="site-navigation main-navigation">
+		<nav id="site-navigation" class="navigation-main" role="navigation">
+			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
-	</header><!-- #masthead .site-header -->
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
 	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position' );?> <?php echo get_theme_mod( 'show_sidebar' );?>">
 		<div id="sidebar_top" class="SidebarTop"><img id="sidebar_close" class="SidebarClose" src="<?php echo get_template_directory_uri(); ?>/images/cross.svg"></div>

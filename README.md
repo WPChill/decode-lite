@@ -9,3 +9,6 @@ Decode's elegant sidebar is conveniently accessed by clicking or tapping on the 
 Decode also has a nifty built in reply tool that lets readers send you a reply about the post using Twitter or App.net. This can, of course, be turned off in the Customize menu. 
 
 Lastly, Decode has social icons in the header that can link to your Twitter, App.net, or Facebook profile. These can be configured in the Customize menu as well. 
+
+
+*The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*

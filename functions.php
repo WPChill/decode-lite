@@ -24,7 +24,7 @@ function decode_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on Decode, use a find and replace
+	 * If you're building a theme based on decode, use a find and replace
 	 * to change 'decode' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
@@ -51,42 +51,18 @@ function decode_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Setup the WordPress core custom background feature.
+	 */
+	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
+		'default-color' => 'e3e5e7',
+		'default-image' => '',
+	) ) );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
-
-/**
- * Setup the WordPress core custom background feature.
- *
- * Use add_theme_support to register support for WordPress 3.4+
- * as well as provide backward compatibility for WordPress 3.3
- * using feature detection of wp_get_theme() which was introduced
- * in WordPress 3.4.
- *
- * @todo Remove the 3.3 support when WordPress 3.6 is released.
- *
- * Hooks into the after_setup_theme action.
- */
- 
-function decode_register_custom_background() {
-	$args = array(
-		'default-color' => 'e3e5e7',
-		'default-image' => '',
-	);
-
-	$args = apply_filters( 'decode_custom_background_args', $args );
-
-	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
-	} else {
-		define( 'BACKGROUND_COLOR', $args['default-color'] );
-		if ( ! empty( $args['default-image'] ) )
-			define( 'BACKGROUND_IMAGE', $args['default-image'] );
-		add_custom_background();
-	}
-}
-add_action( 'after_setup_theme', 'decode_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -108,6 +84,16 @@ add_action( 'widgets_init', 'decode_widgets_init' );
  */
 function decode_scripts() {
 	wp_enqueue_style( 'decode-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
+
+	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.2', true );
+
+	wp_enqueue_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.2', true );
+	
+	wp_enqueue_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.2', true );
+		
+	wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.2', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

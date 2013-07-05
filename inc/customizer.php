@@ -168,49 +168,18 @@ function decode_customize_register( $wp_customize ) {
         ),
 		'priority'=> 3,
 	) );
-
-
-
-	$wp_customize->add_section( 'decode_header_html_options', array(
-    	'title'          => 'Header HTML Options',
-		'priority'       => 31,
-    ) );
-    
-    
-	$wp_customize->add_setting( 'html_description', array(
-		'default'        => '',
-	) );
-	
-    $wp_customize->add_setting( 'use_html_in_description', array(
-		'default'        => '',
-	) );
-	
-	
-	$wp_customize->add_control( 'html_description', array(
-		'label'   => 'HTML for description (set this first, then save)',
-		'section' => 'decode_header_html_options',
-		'type'    => 'text',
-		'priority'=> 1,
-	) );
-
-	$wp_customize->add_control( 'use_html_in_description', array(
-		'label'   => 'After saving the above setting, set and save this one. Want HTML in the header\'s description?',
-		'section' => 'decode_header_html_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			get_theme_mod( 'html_description' ) => 'Yes',
-			get_bloginfo ( 'description' ) => 'No',
-        ),
-		'priority'=> 2,
-	) );
 	
 
 
-	$wp_customize->add_section( 'decode_reply_options', array(
-    	'title'          => 'Reply Options',
-		'priority'       => 36,
+	$wp_customize->add_section( 'decode_discussion_options', array(
+    	'title'          => 'Discussion Options',
+		'priority'       => 34,
     ) );
 
+	
+	$wp_customize->add_setting( 'enable_comments', array(
+		'default'        => '',
+	) );
 	
 	$wp_customize->add_setting( 'show_reply_tool', array(
 		'default'        => '',
@@ -225,9 +194,9 @@ function decode_customize_register( $wp_customize ) {
 	) );
 
 
-	$wp_customize->add_control( 'show_reply_tool', array(
-		'label'   => 'Show Reply Tool',
-		'section' => 'decode_reply_options',
+	$wp_customize->add_control( 'enable_comments', array(
+		'label'   => 'Enable Comments',
+		'section' => 'decode_discussion_options',
 		'type'       => 'radio',
 		'choices'    => array(
 			'' => 'Yes',
@@ -236,29 +205,48 @@ function decode_customize_register( $wp_customize ) {
 		'priority'=> 1,
 	) );
 	
+	$wp_customize->add_control( 'show_reply_tool', array(
+		'label'   => 'Show Reply Tool',
+		'section' => 'decode_discussion_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'' => 'Yes',
+			'hidden' => 'No',
+        ),
+		'priority'=> 2,
+	) );
+	
 	$wp_customize->add_control( 'twitter_reply_username', array(
 		'label'   => 'Twitter Username for Replies',
-		'section' => 'decode_reply_options',
+		'section' => 'decode_discussion_options',
 		'type'    => 'text',
-		'priority'=> 2,
+		'priority'=> 3,
 	) );
 	
 	$wp_customize->add_control( 'adn_reply_username', array(
 		'label'   => 'App.net Username for Replies',
-		'section' => 'decode_reply_options',
+		'section' => 'decode_discussion_options',
 		'type'    => 'text',
-		'priority'=> 3,
+		'priority'=> 4,
 	) );
 	
 	
 	
 	$wp_customize->add_section( 'decode_other_options', array(
     	'title'          => 'Other Options',
-		'priority'       => 33,
+		'priority'       => 37,
     ) );
     
     
     $wp_customize->add_setting( 'show_theme_info', array(
+		'default'        => '',
+	) );
+	
+	$wp_customize->add_setting( 'html_description', array(
+		'default'        => '',
+	) );
+	
+    $wp_customize->add_setting( 'use_html_in_description', array(
 		'default'        => '',
 	) );
 	
@@ -272,6 +260,24 @@ function decode_customize_register( $wp_customize ) {
 			'hidden' => 'No',
         ),
 		'priority'=> 1,
+	) );	
+	
+	$wp_customize->add_control( 'html_description', array(
+		'label'   => 'HTML for description (set this first, then save)',
+		'section' => 'decode_other_options',
+		'type'    => 'text',
+		'priority'=> 1,
+	) );
+
+	$wp_customize->add_control( 'use_html_in_description', array(
+		'label'   => 'After saving the above setting, set and save this one. Want HTML in the header\'s description?',
+		'section' => 'decode_other_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			get_theme_mod( 'html_description' ) => 'Yes',
+			get_bloginfo ( 'description' ) => 'No',
+        ),
+		'priority'=> 2,
 	) );
 
 
