@@ -181,7 +181,7 @@ function decode_customize_register( $wp_customize ) {
 		'default'        => '',
 	) );
 	
-	$wp_customize->add_setting( 'show_reply_tool', array(
+	$wp_customize->add_setting( 'show_reply_option', array(
 		'default'        => '',
 	) );
 	
@@ -205,7 +205,7 @@ function decode_customize_register( $wp_customize ) {
 		'priority'=> 1,
 	) );
 	
-	$wp_customize->add_control( 'show_reply_tool', array(
+	$wp_customize->add_control( 'show_reply_option', array(
 		'label'   => 'Show Reply Tool',
 		'section' => 'decode_discussion_options',
 		'type'       => 'radio',
@@ -251,7 +251,7 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 	
-	$wp_customize->add_control( 'show_reply_tool', array(
+	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
 		'section' => 'decode_other_options',
 		'type'       => 'radio',

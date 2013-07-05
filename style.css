@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith and Underscores.me
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme
-Version: 2.2.1
+Version: 2.2.2
 License: GNU General Public License
 License URI: license.txt
 Tags: flexible-width, one-column, left-sidebar, right-sidebar, light, theme-options, post-formats, sticky-post, custom-background, custom-header
@@ -96,7 +96,6 @@ a img {
 
 body,
 button,
-input,
 select,
 textarea {
 	color: #444444;
