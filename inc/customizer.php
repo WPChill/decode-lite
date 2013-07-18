@@ -22,7 +22,7 @@ function decode_customize_register( $wp_customize ) {
 
 
 	$wp_customize->add_setting( 'show_social_icons', array(
-		'default'        => '',
+		'default'        => 'hidden',
 	) );
 
 	$wp_customize->add_setting( 'show_twitter', array(
@@ -35,6 +35,10 @@ function decode_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_setting( 'show_facebook', array(
 		'default'        => '',
+	) );
+	
+	$wp_customize->add_setting( 'show_google_plus', array(
+		'default'        => 'hidden',
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
@@ -49,14 +53,18 @@ function decode_customize_register( $wp_customize ) {
 		'default'        => '',
 	) );
 	
+	$wp_customize->add_setting( 'google_plus_username', array(
+		'default'        => '',
+	) );
+	
 	
 	$wp_customize->add_control( 'show_social_icons', array(
 		'label'   => 'Show Social Icons',
 		'section' => 'decode_social_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 1,
 	) );
@@ -66,8 +74,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_social_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 2,
 	) );
@@ -77,8 +85,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_social_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 3,
 	) );
@@ -88,31 +96,49 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_social_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 4,
+	) );
+	
+	$wp_customize->add_control( 'show_google_plus', array(
+		'label'   => 'Show Google+',
+		'section' => 'decode_social_options',
+		'type'       => 'radio',
+		'choices'    => array(
+			'' => 'Show',
+			'hidden' => 'Hide',
+        ),
+		'priority'=> 5,
 	) );
 
 	$wp_customize->add_control( 'twitter_username', array(
 		'label'   => 'Twitter Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
  
 	$wp_customize->add_control( 'adn_username', array(
     	'label'   => 'App.net Username',
         'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 6,
+		'priority'=> 7,
 	) );
 	
 	$wp_customize->add_control( 'facebook_username', array(
 		'label'   => 'Facebook Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 7,
+		'priority'=> 8,
+	) );
+	
+	$wp_customize->add_control( 'google_plus_username', array(
+		'label'   => 'Google+ Username (or the long number in your profile URL)',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 9,
 	) );
 	
 	
@@ -141,8 +167,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_sidebar_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 1,
 	) );
@@ -199,8 +225,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_discussion_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 1,
 	) );
@@ -210,8 +236,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_discussion_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 2,
 	) );
@@ -256,8 +282,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_other_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Yes',
-			'hidden' => 'No',
+			'' => 'Show',
+			'hidden' => 'Hide',
         ),
 		'priority'=> 1,
 	) );	
