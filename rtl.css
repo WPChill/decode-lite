@@ -1,17 +1,140 @@
 /*
 Theme Name: Decode
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
-http://codex.wordpress.org/Right_to_Left_Language_Support
-
 */
 
-/*
+
+/* =Global
+----------------------------------------------- */
+
 body {
 	direction: rtl;
 	unicode-bidi: embed;
+	text-align: right;
 }
-*/
+
+caption, th, td {
+	text-align: right;
+}
+
+ul, ol {
+	margin: 0 3em 1.5em 0;
+}
+
+li > ul,
+li > ol {
+	margin-right: 1.5em;
+}
+
+textarea {
+	padding-right: 3px;
+}
+
+/* Alignment */
+.alignleft {
+	float: right;
+	margin-left: 1.5em;
+}
+.alignright {
+	float: left;
+	margin-right: 1.5em;
+}
+
+.screen-reader-text:hover, .assistive-text:hover,
+.screen-reader-text:active, .assistive-text:active,
+.screen-reader-text:focus, .assistive-text:focus {
+	left: auto;
+	right: 5px;
+}
+
+/* =Header
+----------------------------------------------- */
+.sociallinks ul {
+	direction: ltr;
+}
+
+/* =Menu
+----------------------------------------------- */
+
+.navigation-main ul {
+	padding-right: 0;
+}
+.navigation-main ul ul {
+	float: right;
+	top: 1.5em;
+	left: auto;
+	right: 0;
+}
+.navigation-main ul ul ul {
+	left: auto;
+	right: 100%;
+}
+
+/* =Sidebar
+----------------------------------------------- */
+
+.SidebarClose {
+	float: left;
+}
+
+/* =Content
+----------------------------------------------- */
+
+.post blockquote {
+	padding: 0 5% 0 0;
+	border-left: none;
+	border-right: 1px solid #009BCD;
+}
+
+/* =Reply Tool
+----------------------------------------------- */
+
+.social-reply {
+	right: auto;
+	left: 10px;
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-navigation.paging-navigation .nav-previous {
+	float: right;
+	text-align: right;
+}
+.site-navigation.paging-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+.site-content .nav-previous {
+	float: left;
+	text-align: left;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-metadata a {
+	margin-right: auto;
+	margin-left: 1.5%
+}
+
+/* =Desktop
+----------------------------------------------- */
+@media only screen and (min-width: 699px) {
+.social-reply {
+	right: auto;
+	left: 5px;
+}
+.site-content .nav-next a:hover, .site-navigation .nav-previous a:hover {
+	padding-left: auto;
+	padding-right: 2.5%
+}
+
+.site-content .nav-previous a:hover, .site-navigation .nav-next a:hover {
+	padding-left: auto;
+	padding-right: 2.5%;
+}
+}
