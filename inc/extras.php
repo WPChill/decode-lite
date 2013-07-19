@@ -44,27 +44,57 @@ function decode_enhanced_image_navigation( $url, $id ) {
 }
 add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
 
-/**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
+/* a custom callback function that displays a meaningful title
+ * depending on the page being rendered
  */
-function decode_wp_title( $title, $sep ) {
-	global $page, $paged;
-
-	if ( is_feed() )
-		return $title;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'decode' ), max( $paged, $page ) );
-
-	return $title;
-}
-add_filter( 'wp_title', 'decode_wp_title', 10, 2 );
+function decode_filter_wp_title($title, $sep, $sep_location) {
+ 
+  // add white space around $sep
+  $sep = ' ' . $sep . ' ';
+ 
+  $site_description = get_bloginfo('description');
+ 
+  if ($site_description && (is_home() || is_front_page()))
+      $custom = $sep . $site_description;
+ 
+  elseif(is_category())
+      $custom = $sep . __('Category', 'decode');
+ 
+  elseif(is_tag())
+      $custom = $sep . __('Tag', 'decode');
+ 
+  elseif(is_author())
+      $custom = $sep . __('Author', 'decode');
+ 
+  elseif(is_year() || is_month() || is_day())
+      $custom = $sep . __('Archives', 'decode');
+ 
+  else
+      $custom = '';
+ 
+  // get the page number (main page or an archive)
+  if(get_query_var('paged'))
+    $page_number = $sep . __('Page ', 'decode') . get_query_var('paged');
+ 
+  // get the page number (post with multipages)
+  elseif(get_query_var('page'))
+    $page_number = $sep . __('Page ', 'decode') . get_query_var('page');
+ 
+  else
+    $page_number = '';
+ 
+  // Comment the 4 lines of code below and see how odd the title format becomes
+  if($sep_location == 'right' && !(is_home() || is_front_page())) {
+      $custom = $custom . $sep;
+      $title = substr($title, 0, -2);
+  }
+ 
+  // return full title
+  return get_bloginfo('name') . $custom . $title . $page_number;
+ 
+} // end of function decode_filter_wp_title
+ 
+/* add function 'decode_filter_wp_title()' to the
+ * wp_title filter, with priority 10 and 3 args
+ */
+add_filter('wp_title', 'decode_filter_wp_title', 10, 3);
