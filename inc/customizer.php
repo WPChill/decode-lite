@@ -14,7 +14,12 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
+
+
+/**
+ * Social Options
+ */
+
 	$wp_customize->add_section( 'decode_social_options', array(
     	'title'          => 'Social Options',
 		'priority'       => 35,
@@ -142,7 +147,10 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 	
-	
+/**
+ * Sidebar Options
+ */
+
 	$wp_customize->add_section( 'decode_sidebar_options', array(
     	'title'          => 'Sidebar Options',
 		'priority'       => 33,
@@ -196,6 +204,9 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 
+/**
+ * Discussion Options
+ */
 
 	$wp_customize->add_section( 'decode_discussion_options', array(
     	'title'          => 'Discussion Options',
@@ -208,7 +219,7 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_setting( 'show_reply_option', array(
-		'default'        => '',
+		'default'        => 'hidden',
 	) );
 	
 	$wp_customize->add_setting( 'twitter_reply_username', array(
@@ -257,7 +268,10 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 	
-	
+/**
+ * Other Options
+ */
+
 	$wp_customize->add_section( 'decode_other_options', array(
     	'title'          => 'Other Options',
 		'priority'       => 37,
