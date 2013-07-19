@@ -11,8 +11,8 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="theme-info <?php echo get_theme_mod( 'show_theme_info', '' );?>">
-			<p><a href="http://ScottHSmith.com/projects/decode/">Decode</a> by <a href="http://ScottHSmith.com">Scott Smith</a></p>
+		<div class="theme-info <?php echo get_theme_mod( 'show_theme_info', 'hidden' );?>">
+			<p><a href="http://ScottHSmith.com/projects/decode/">Decode</a> by Scott Smith</p>
 		</div><!-- .theme-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
