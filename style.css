@@ -1278,11 +1278,11 @@ a {
 }
 
 .site-content .nav-next a:hover, .site-navigation .nav-previous a:hover {
-	padding-left: 2.5%
+	padding-left: 2.5%;
 }
 
 .site-content .nav-previous a:hover, .site-navigation .nav-next a:hover {
-	padding-right: 2.5%
+	padding-right: 2.5%;
 }
 
 	.theme-info a:hover {
