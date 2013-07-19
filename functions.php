@@ -57,7 +57,7 @@ function decode_setup() {
 	 * Setup the WordPress core custom background feature.
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
-		'default-color' => 'e3e5e7',
+		'default-color' => 'E3E5E7',
 		'default-image' => '',
 	) ) );
 }
@@ -78,6 +78,14 @@ function decode_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'decode_widgets_init' );
+
+/**
+ * Setup editor styles
+ */
+function decode_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'init', 'decode_add_editor_styles' );
 
 /**
  * Enqueue scripts and styles
@@ -134,6 +142,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
+/**
+ * Link post titles link to the link URL, not the permalink for link blog-style behaviour
+ */
 function decode_print_post_title() {
 
 global $post;
