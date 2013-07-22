@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php if ( has_post_format( 'quote' ) ) : ?>
+<?php if ( has_post_format( 'quote' ) && !is_search() ) : ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
@@ -17,7 +17,7 @@
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 
-<?php elseif ( has_post_format( 'link' )): ?>
+<?php elseif ( has_post_format( 'link' ) && !is_search() ): ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
@@ -35,12 +35,13 @@
 <?php elseif ( is_search() ) : // Only display Excerpts for Search ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<a href="<?php the_permalink(); ?>">
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
-			<div class="entry-content">
+		<a class="search-entry" href="<?php the_permalink(); ?>">
+			<div class="entry-title">
+				<?php search_title_highlight(); ?>
 			</div>
+			<div class="entry-summary">
+				<?php search_excerpt_highlight(); ?>
+			</div><!-- .entry-summary -->
 		</a>
 	</article>
 

@@ -395,6 +395,7 @@ object {
 
 .page-header {
 	text-align: center;
+	margin-bottom: 2.5%;
 }
 
 .page-title {
@@ -540,21 +541,6 @@ color: #000000;
 	word-wrap: break-word;
 }
 
-.search a .entry-summary {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
-	color: #444444;
-}
-
-.search a .entry-summary:hover {
-	color: #009BCD;
-}
-
-.search a .entry-summary:active {
-	color: #007EA6;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -585,27 +571,27 @@ article.page {
 }
 
 
-.post h1 {
+.post h1, .page .entry-content h1 {
 	font-size: 2em;
 }
 
-.post h2 {
+.post h2, .page .entry-content h2 {
 	font-size: 1.8em;
 }
 
-.post h3 {
+.post h3, .page .entry-content h3 {
 	font-size: 1.6em;
 }
 
-.post h4 {
+.post h4, .page .entry-content h4 {
 	font-size: 1.4em;
 }
 
-.post h5 {
+.post h5, .page .entry-content h5 {
 	font-size: 1.2em;
 }
 
-.post h6 {
+.post h6, .page .entry-content h6 {
 	font-size: 1.1em;
 }
 
@@ -633,7 +619,7 @@ article.page .entry-content {
 	margin: 2.5% auto;
 }
 
-.post blockquote {
+.post blockquote, .page blockquote {
 	margin: 1.5% 0;
 	padding: 0 0 0 5%;
 	border-left: 1px solid #009BCD;
@@ -649,6 +635,25 @@ article.page .entry-content {
 .tags {
 	font-size: 0.8em;
 	color: #808080;
+}
+
+.search .search-entry {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color: #444444;
+}
+
+.search .search-entry:hover {
+	color: #009BCD;
+}
+
+.search .search-entry:active {
+	color: #007EA6;
+}
+
+.search-highlight {
+	background: rgba(255,255,0,0.5);
 }
 
 article footer {
@@ -795,10 +800,15 @@ footer .date a {
 /* =Quotes
 ----------------------------------------------- */
 
-.format-quote .entry-content {
+.blog .format-quote .entry-content, .single .format-quote .entry-content {
 	margin-top: 3%;
 	font-size: 2em;
 	line-height: 1.5em;
+}
+
+.format-quote blockquote {
+	padding-left: 0;
+	border-left: none;
 }
 
 .format-quote p:before { 
@@ -809,6 +819,10 @@ footer .date a {
 .format-quote p:after { 
 	content: '\201D';
 	font-size: 1.3em;
+}
+
+.format-quote footer .date:before, .format-quote .reply .replytrigger:before, .format-quote  footer .date:after, .format-quote .reply .replytrigger:after {
+	content: "";
 }
 
 /* =Asides
@@ -1196,7 +1210,7 @@ a {
 	border-bottom: none;
 }
 
-.format-quote .entry-content {
+.blog .format-quote .entry-content, .single .format-quote .entry-content {
 	font-size: 2.75em;
 }
 
