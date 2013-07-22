@@ -5,7 +5,7 @@ Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme. Decode supports link posts, where the title can be hyperlinked. Decode includes an elegant sidebar is conveniently accessed by clicking or tapping on the much-loved hamburger icon. The sidebar can hold any number of widgets you choose. The side on which the sidebar and the hamburger icon are placed is customizable. You can also disable the sidebar if you choose. Decode also has a nifty built in reply tool that lets readers send you a reply about the post using Twitter or App.net. 
 Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, or Google+ profile.  
-Version: 2.2.4
+Version: 2.3
 License: GNU General Public License
 License URI: license.txt
 Tags: flexible-width, one-column, left-sidebar, right-sidebar, light, theme-options, post-formats, sticky-post, custom-background, custom-header, rtl-language-support, editor-style
@@ -407,6 +407,7 @@ object {
 
 .site-description {
 	text-align: center;
+	margin-bottom: 0.75%;
 }
 
 .sociallinks {
@@ -458,7 +459,7 @@ object {
 }
 .navigation-main ul {
 	list-style: none;
-	margin: 0;
+	margin: 1.5% auto 0;
 	padding-left: 0;
 }
 .navigation-main li {
@@ -538,6 +539,22 @@ color: #000000;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
+
+.search a .entry-summary {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color: #444444;
+}
+
+.search a .entry-summary:hover {
+	color: #009BCD;
+}
+
+.search a .entry-summary:active {
+	color: #007EA6;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -568,27 +585,27 @@ article.page {
 }
 
 
-.content h1 {
+.post h1 {
 	font-size: 2em;
 }
 
-.content h2 {
+.post h2 {
 	font-size: 1.8em;
 }
 
-.content h3 {
+.post h3 {
 	font-size: 1.6em;
 }
 
-.content h4 {
+.post h4 {
 	font-size: 1.4em;
 }
 
-.content h5 {
+.post h5 {
 	font-size: 1.2em;
 }
 
-.content h6 {
+.post h6 {
 	font-size: 1.1em;
 }
 
@@ -753,72 +770,7 @@ footer .date a {
 
 .sidebar.right.visible {
 	right: 0;
-}
-
-
-/* =Reply Tool
------------------------------------------------ */
-
-.social-reply {
-	-webkit-transition: width 0.25s ease-out;
-	-moz-transition: width 0.25s ease-out;
-	transition: width 0.25s ease-out;
-	border-bottom: none;
-	margin: 1% auto 0;
-	display: inline-block;
-	position: relative;
-	right: 10px;
-}
-
-.social-reply.hidden {
-	display: none;
-}
-
-.social-reply .replytrigger {
-	width: auto;
-	float: none;
-}
-
-.social-reply:hover .replytrigger, .social-reply.triggered .replytrigger {
-	opacity: 0;
-}
-
-.social-reply .replylink {
-	opacity: 0;
-}
-
-.replylink.left {
-	float: left;
-	text-align: right;
-}
-
-.replylink.right {
-	float: right;
-	text-align: left;
-}
-
-.social-reply:hover .replylink, .social-reply.triggered .replylink {
-	opacity: 1;
-}
-
-.social-reply .replylink, .social-reply .replytrigger {
-	-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
-	-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
-	transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
-	font-size: 1em;
-	color: #444444;
-	display: inline-block;
-}
-	.social-reply .replylink:hover {
-		color: #009BCD;
-		border-bottom: none;
-	}
-	
-	.social-reply .replylink:active {
-		color: #007EA6;
-		border-bottom: none;
-	}
-	
+}	
 
 
 /* =Links
@@ -1247,10 +1199,6 @@ a {
 .entry-title h2 {
 	font-size: 2em;
 	width: 80%;
-}
-
-.social-reply {
-	right: 5px;
 }
 
 .post {
