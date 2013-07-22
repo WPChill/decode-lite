@@ -218,18 +218,6 @@ function decode_customize_register( $wp_customize ) {
 		'default'        => '',
 	) );
 	
-	$wp_customize->add_setting( 'show_reply_option', array(
-		'default'        => 'hidden',
-	) );
-	
-	$wp_customize->add_setting( 'twitter_reply_username', array(
-		'default'        => '',
-	) );
-	
-	$wp_customize->add_setting( 'adn_reply_username', array(
-		'default'        => '',
-	) );
-
 
 	$wp_customize->add_control( 'enable_comments', array(
 		'label'   => 'Enable Comments',
@@ -241,31 +229,7 @@ function decode_customize_register( $wp_customize ) {
         ),
 		'priority'=> 1,
 	) );
-	
-	$wp_customize->add_control( 'show_reply_option', array(
-		'label'   => 'Show Reply Tool',
-		'section' => 'decode_discussion_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 2,
-	) );
-	
-	$wp_customize->add_control( 'twitter_reply_username', array(
-		'label'   => 'Twitter Username for Replies',
-		'section' => 'decode_discussion_options',
-		'type'    => 'text',
-		'priority'=> 3,
-	) );
-	
-	$wp_customize->add_control( 'adn_reply_username', array(
-		'label'   => 'App.net Username for Replies',
-		'section' => 'decode_discussion_options',
-		'type'    => 'text',
-		'priority'=> 4,
-	) );
+
 	
 	
 /**
