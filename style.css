@@ -653,7 +653,7 @@ article.page .entry-content {
 }
 
 .search-highlight {
-	background: rgba(255,255,0,0.5);
+	background: rgba(255,255,0,0.25);
 }
 
 article footer {
