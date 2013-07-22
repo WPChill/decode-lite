@@ -25,7 +25,7 @@
 		<img id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?> <?php echo get_theme_mod( 'show_sidebar', 'hidden' );?>" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php echo get_theme_mod( 'use_html_in_description', '' ); ?></h2>
+			<h2 class="site-description"><?php echo get_theme_mod( 'use_html_in_description', get_bloginfo ( 'description' ) ); ?></h2>
 		</div>
 		<div class="sociallinks <?php echo get_theme_mod( 'show_social_icons', 'hidden' );?>">
 			<ul> 
