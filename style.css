@@ -565,7 +565,7 @@ color: #000000;
 	margin: 0 auto;
 }
 
-article.page, article.post {
+article.page {
 	width: 92.5%;
 	margin: 0 auto;
 }
@@ -653,6 +653,7 @@ article.page .entry-content {
 }
 
 .search .post, .search .page {
+	width: 92.5%;
 	border-bottom: 1px solid #009BCD;
 	margin-bottom: 10%;
 }
@@ -911,7 +912,7 @@ object {
 ----------------------------------------------- */
 
 .site-content .site-navigation {
-	margin: 0 2.5% 2.5%;
+	margin: 2.5%;
 	overflow: hidden;
 }
 .nav-next, .nav-previous {
@@ -940,7 +941,7 @@ object {
 ----------------------------------------------- */
 
 .comments-area {
-	width: 100%;
+	width: 92.5%;
 	margin: 3.5% auto 5%;
 }
 
@@ -1209,8 +1210,8 @@ a {
 	font-size: 2.75em;
 }
 
-.site-content .site-navigation {
-	margin-top: -2.5%;
+.search .post, .search .page {
+	width: 80%;
 }
 
 .nav-next a, .nav-previous a {
@@ -1245,7 +1246,7 @@ a {
 	font-size: 2.25em;
 }
 
-.site-header, .post, article.page, .comments-area {
+.site-header, .post, .page, .comments-area {
 	width: 60%;
 }
 }
