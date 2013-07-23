@@ -565,7 +565,7 @@ color: #000000;
 	margin: 0 auto;
 }
 
-article.page {
+article.page, article.post {
 	width: 92.5%;
 	margin: 0 auto;
 }
@@ -652,6 +652,11 @@ article.page .entry-content {
 	color: #007EA6;
 }
 
+.search .post, .search .page {
+	border-bottom: 1px solid #009BCD;
+	margin-bottom: 10%;
+}
+
 .search-highlight {
 	background: rgba(255,255,0,0.25);
 }
@@ -697,6 +702,7 @@ footer .date a {
 .SidebarLink {
 	position: relative;
 	width: 25px;
+	margin-bottom: 2.5%;
 	cursor: pointer;
 }
 
@@ -716,8 +722,6 @@ footer .date a {
 	position: relative;
 	background: #E3E5E7;
 	width: 100%;
-	height: 3.5%;
-	padding: 4.5% 0;
 	margin-bottom: 4.5%;
 	border-bottom: 1px solid #009BCD;
 	z-index: 11;
@@ -729,8 +733,8 @@ footer .date a {
 
 .SidebarClose {
 	position: relative;
-	height: 100%;
-	padding-left: 4.5%;
+	height: 1.5em;
+	padding: 2.5% 0 2.5% 2.5%;
 	display: block;
 	cursor: pointer;
 }
@@ -907,7 +911,7 @@ object {
 ----------------------------------------------- */
 
 .site-content .site-navigation {
-	margin: -5% 2.5% 2.5%;
+	margin: 0 2.5% 2.5%;
 	overflow: hidden;
 }
 .nav-next, .nav-previous {
@@ -1173,15 +1177,6 @@ a {
 
 .admin-bar .SidebarLink {
 	top: 7.5%;
-}
-
-.SidebarTop {
-	height: 2.5%;
-	padding: 2.5% 0;
-}
-
-.SidebarClose {
-	padding-left: 2.5%;
 }
 
 .sidebar {
