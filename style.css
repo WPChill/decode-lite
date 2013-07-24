@@ -48,9 +48,6 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
-body {
-	background: #fff;
-}
 article,
 aside,
 details,
@@ -221,7 +218,7 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
 button,
 input {
@@ -318,17 +315,17 @@ a {
 }
 
 /* Alignment */
-.alignleft {
+.entry-content img.alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-right: 2.5%;
 }
-.alignright {
+.entry-content img.alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-left: 2.5%;
 }
-.aligncenter {
+.entry-content img.aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto;
@@ -374,7 +371,7 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 5% auto 0;
+	margin: 5% auto 7.5%;
 	border-bottom: 1px solid #009BCD;
 }
 
@@ -395,13 +392,13 @@ object {
 
 .page-header {
 	text-align: center;
-	margin-bottom: 2.5%;
+	margin: -7.5% auto 7.5%;
 }
 
 .page-title {
 	text-align: center;
 	font-size: 1.35em;
-	padding: 1%;
+	padding: 1.5%;
 	border-bottom: 1px solid #009BCD;
 	display: inline-block;
 }
@@ -570,53 +567,52 @@ article.page {
 	margin: 0 auto;
 }
 
-
-.post h1, .page .entry-content h1 {
+.entry-content h1 {
 	font-size: 2em;
 }
 
-.post h2, .page .entry-content h2 {
+.entry-content h2 {
 	font-size: 1.8em;
 }
 
-.post h3, .page .entry-content h3 {
+.entry-content h3 {
 	font-size: 1.6em;
 }
 
-.post h4, .page .entry-content h4 {
+.entry-content h4 {
 	font-size: 1.4em;
 }
 
-.post h5, .page .entry-content h5 {
+.entry-content h5 {
 	font-size: 1.2em;
 }
 
-.post h6, .page .entry-content h6 {
+.entry-content h6 {
 	font-size: 1.1em;
 }
 
 article.page .entry-header {
 	font-size: 1.75em;
-	margin: 2.5% auto;
+	margin: 2.5% auto 5%;
 }
 
 article.page .entry-content {
 	margin: 0;
 }
 
-.post {
+article.post {
 	width: 100%;
-	margin: 2.5% auto 15%;
+	margin: 0 auto 15%;
 	line-height: 1.75em;
 }
 
 .post .entry-content {
-	margin: 0 auto;
 	width: 92.5%;
+	margin: 0 auto;
 }
 
-.post img, .page img {
-	margin: 2.5% auto;
+.entry-content img {
+	margin: 0 auto 2.5%;
 }
 
 .post blockquote, .page blockquote {
@@ -627,7 +623,7 @@ article.page .entry-content {
 }
 
 .post footer {
-	width: 75%;
+	width: 90%;
 	margin: 0 auto;
 	border-bottom: 1px solid #009BCD;
 }
@@ -637,18 +633,18 @@ article.page .entry-content {
 	color: #808080;
 }
 
-.search .search-entry {
+.search-entry, .search-entry .entry-title {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #444444;
 }
 
-.search .search-entry:hover {
+.search-entry:hover, .search-entry:hover .entry-title {
 	color: #009BCD;
 }
 
-.search .search-entry:active {
+.search-entry:active, .search-entry:active .entry-title {
 	color: #007EA6;
 }
 
@@ -728,7 +724,7 @@ footer .date a {
 	z-index: 11;
 }
 
-.admin-bar .SidebarTop {
+.admin-bar .SidebarTop, .admin-bar .SidebarContent {
 	top: 28px;
 }
 
@@ -756,11 +752,11 @@ footer .date a {
 }
 
 .sidebar.left {
-	left: -110%;
+	left: -100%;
 }
 
 .sidebar.right {
-	right: -110%;
+	right: -100%;
 	float: right;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
 }
@@ -770,8 +766,8 @@ footer .date a {
 }
 
 .SidebarContent {
-	padding-top: 10%;
 	margin: 0 5%;
+	position: relative;
 }
 
 .sidebar.left.visible {
@@ -805,7 +801,7 @@ footer .date a {
 /* =Quotes
 ----------------------------------------------- */
 
-.blog .format-quote .entry-content, .single .format-quote .entry-content {
+.blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
 	margin-top: 3%;
 	font-size: 2em;
 	line-height: 1.5em;
@@ -833,11 +829,20 @@ footer .date a {
 /* =Asides
 ----------------------------------------------- */
 
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
+.blog .format-aside .entry-header,
+.archive .format-aside .entry-header {
 	display: none;
 }
 
+.format-aside .entry-content {
+	font-style: italic;
+}
+
+/* =Audio
+----------------------------------------------- */
+.mejs-container {
+	max-width: 100% !important; /* The WP audio player has a hardcoded width of 400px, which is BS. */
+}
 
 /* =Media
 ----------------------------------------------- */
@@ -1074,8 +1079,16 @@ a {
 		border-bottom: 1px solid #007EA6;
 	}
 
-.site-header, .post, article.page, .comments-area {
+.site-header, article.post, article.page, .comments-area, .search .post, .search .page {
 	width: 80%;
+}
+
+.site-header {
+	margin-bottom: 3.5%;
+}
+
+.page-header {
+	margin: -3.5% auto 5%;
 }
 
 .site-title a {
@@ -1181,15 +1194,15 @@ a {
 }
 
 .sidebar {
-	width: 25%;
+	width: 33%;
 }
 
 .sidebar.left {
-	left: -28%;
+	left: -40%;
 }
 
 .sidebar.right {
-	right: -28%;
+	right: -40%;
 }
 
 .entry-title h2 {
@@ -1197,8 +1210,12 @@ a {
 	width: 80%;
 }
 
-.post {
-	margin: 2.5% auto 6.5%;
+article.post {
+	margin: 0 auto 7.5%;
+}
+
+.post footer {
+	width: 75%;
 }
 
 .post footer .date a:hover, .post footer .date a:active {
@@ -1206,12 +1223,12 @@ a {
 	border-bottom: none;
 }
 
-.blog .format-quote .entry-content, .single .format-quote .entry-content {
-	font-size: 2.75em;
+.search .post, .search .page {
+	margin-bottom: 5%;
 }
 
-.search .post, .search .page {
-	width: 80%;
+.blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
+	font-size: 2.75em;
 }
 
 .nav-next a, .nav-previous a {
@@ -1246,7 +1263,24 @@ a {
 	font-size: 2.25em;
 }
 
-.site-header, .post, .page, .comments-area {
+.page-header {
+	margin-bottom: 3.5%;
+}
+
+.site-header, article.post, article.page, .comments-area, .search .post, .search .page {
 	width: 60%;
+	max-width: 1200px;
+}
+
+.sidebar {
+	width: 25%;
+}
+
+.sidebar.left {
+	left: -28%;
+}
+
+.sidebar.right {
+	right: -28%;
 }
 }
