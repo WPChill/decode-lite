@@ -38,7 +38,7 @@ function decode_setup() {
 	 * Enable support for Post Thumbnails on posts and pages
 	 */
 	add_theme_support( 'post-thumbnails' );
-	
+
 	/**
 	 * Enable support for Post Formats
 	 */
@@ -101,7 +101,7 @@ function decode_search_excerpt_highlight() {
     $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
 
     echo '<p>' . $excerpt . '</p>';
-} 
+}
 }
 
 if ( ! function_exists( 'decode_search_title_highlight' ) ) {
@@ -116,42 +116,47 @@ function decode_search_title_highlight() {
 }
 
 /**
- * Enqueue scripts and styles
+ * Register styles and scripts
  */
 
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri() );
-	
-	wp_enqueue_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
+
+	wp_register_style( 'decode-style', get_stylesheet_uri() );
+
+	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
+
+	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2' );
 
 	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.2', true );
 
 	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.2', true );
-	
+
 	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3', true );
-		
+
 	wp_register_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.3', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
-	}
-	
+	wp_enqueue_style( 'decode-style');
+
+	wp_enqueue_style( 'decode-font-stylesheet' );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
+
+	if ( is_singular() && wp_attachment_is_image() ) { wp_enqueue_script( 'decode-keyboard-image-navigation' ); }
+
 	wp_enqueue_script( 'decode-modernizr' );
-	
+
 	wp_enqueue_script( 'decode-respond' );
-	
+
 	wp_enqueue_script( 'decode-fastclick' );
-	
+
 	wp_enqueue_script( 'decode-sidebar' );
 }
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
@@ -185,53 +190,53 @@ require get_template_directory() . '/inc/jetpack.php';
 if ( ! function_exists( 'decode_print_post_title' ) ) {
 
 	function decode_print_post_title() {
-	
+
 	global $post;
-	
+
 	$thePostID = $post->ID;
-	
+
 	$post_id = get_post($thePostID);
-	
+
 	$title = $post_id->post_title;
-	
+
 	$perm = get_permalink($post_id);
-	
+
 	$post_keys = array(); $post_val = array();
-	
+
 	$post_keys = get_post_custom_keys($thePostID);
-	
-	 
-	
+
+
+
 	if (!empty($post_keys)) {
-	
+
 	foreach ($post_keys as $pkey) {
-	
+
 	if ($pkey=='url1' || $pkey=='title_url' || $pkey=='url_title') {
-	
+
 	$post_val = get_post_custom_values($pkey);
-	
+
 	}
-	
+
 	}
-	
+
 	if (empty($post_val)) {
-	
+
 	$link = $perm;
-	
+
 	} else {
-	
+
 	$link = $post_val[0];
-	
+
 	}
-	
+
 	} else {
-	
+
 	$link = $perm;
-	
+
 	}
-	
-	
+
+
 	echo '<h2 class="entry-title"><a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a></h2>';
-	
+
 	}
 }
