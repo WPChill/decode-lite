@@ -55,10 +55,10 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<a class="search-entry" href="<?php the_permalink(); ?>">
 			<div class="entry-title">
-				<h3><?php search_title_highlight(); ?></h3>
+				<h3><?php decode_search_title_highlight(); ?></h3>
 			</div>
 			<div class="entry-summary">
-				<?php search_excerpt_highlight(); ?>
+				<?php decode_search_excerpt_highlight(); ?>
 			</div><!-- .entry-summary -->
 		</a>
 	</article>

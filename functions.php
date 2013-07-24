@@ -38,14 +38,7 @@ function decode_setup() {
 	 * Enable support for Post Thumbnails on posts and pages
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	/**
-	 * This theme uses wp_nav_menu() in one location.
-	 */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'decode' ),
-	) );
-
+	
 	/**
 	 * Enable support for Post Formats
 	 */
@@ -56,8 +49,14 @@ function decode_setup() {
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
-		'default-image' => '',
 	) ) );
+
+	/**
+	 * This theme uses wp_nav_menu() in one location.
+	 */
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'decode' ),
+	) );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
@@ -65,6 +64,8 @@ add_action( 'after_setup_theme', 'decode_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
+if ( ! function_exists( 'decode_widgets_init' ) ) {
+
 function decode_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'decode' ),
@@ -75,41 +76,51 @@ function decode_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+}
 add_action( 'widgets_init', 'decode_widgets_init' );
 
 /**
  * Setup editor styles
  */
+if ( ! function_exists( 'decode_add_editor_styles' ) ) {
+
 function decode_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
+}
 }
 add_action( 'init', 'decode_add_editor_styles' );
 
 /**
  * Highlight search terms in search results
  */
+if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
 
-function search_excerpt_highlight() {
+function decode_search_excerpt_highlight() {
     $excerpt = get_the_excerpt();
     $keys = implode('|', explode(' ', get_search_query()));
     $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
 
     echo '<p>' . $excerpt . '</p>';
 } 
+}
 
-function search_title_highlight() {
+if ( ! function_exists( 'decode_search_title_highlight' ) ) {
+
+function decode_search_title_highlight() {
     $title = get_the_title();
     $keys = implode('|', explode(' ', get_search_query()));
     $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
 
     echo $title;
 }
+}
 
 /**
  * Enqueue scripts and styles
  */
 
-if ( ! is_admin() ) {
+if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
+
 function decode_scripts() {
 	wp_enqueue_style( 'decode-style', get_stylesheet_uri() );
 	
@@ -171,53 +182,56 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Link post titles link to the link URL, not the permalink for link blog-style behaviour
  */
-function decode_print_post_title() {
+if ( ! function_exists( 'decode_print_post_title' ) ) {
 
-global $post;
-
-$thePostID = $post->ID;
-
-$post_id = get_post($thePostID);
-
-$title = $post_id->post_title;
-
-$perm = get_permalink($post_id);
-
-$post_keys = array(); $post_val = array();
-
-$post_keys = get_post_custom_keys($thePostID);
-
- 
-
-if (!empty($post_keys)) {
-
-foreach ($post_keys as $pkey) {
-
-if ($pkey=='url1' || $pkey=='title_url' || $pkey=='url_title') {
-
-$post_val = get_post_custom_values($pkey);
-
-}
-
-}
-
-if (empty($post_val)) {
-
-$link = $perm;
-
-} else {
-
-$link = $post_val[0];
-
-}
-
-} else {
-
-$link = $perm;
-
-}
-
-
-echo '<h2 class="entry-title"><a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a></h2>';
-
+	function decode_print_post_title() {
+	
+	global $post;
+	
+	$thePostID = $post->ID;
+	
+	$post_id = get_post($thePostID);
+	
+	$title = $post_id->post_title;
+	
+	$perm = get_permalink($post_id);
+	
+	$post_keys = array(); $post_val = array();
+	
+	$post_keys = get_post_custom_keys($thePostID);
+	
+	 
+	
+	if (!empty($post_keys)) {
+	
+	foreach ($post_keys as $pkey) {
+	
+	if ($pkey=='url1' || $pkey=='title_url' || $pkey=='url_title') {
+	
+	$post_val = get_post_custom_values($pkey);
+	
+	}
+	
+	}
+	
+	if (empty($post_val)) {
+	
+	$link = $perm;
+	
+	} else {
+	
+	$link = $post_val[0];
+	
+	}
+	
+	} else {
+	
+	$link = $perm;
+	
+	}
+	
+	
+	echo '<h2 class="entry-title"><a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a></h2>';
+	
+	}
 }
