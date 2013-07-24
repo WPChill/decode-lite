@@ -412,15 +412,7 @@ object {
 	display: inline;
 }
 
-.sociallinks.hidden {
-	display: none;
-}
-
 .sociallink.desktop {
-	display: none;
-}
-
-.sociallink.hidden {
 	display: none;
 }
 
@@ -689,11 +681,6 @@ footer .date a {
 	text-align: center;
 }
 
-.theme-info.hidden {
-	display: none;
-}
-
-
 /* =Sidebar
 ----------------------------------------------- */
 
@@ -710,10 +697,6 @@ footer .date a {
 
 .SidebarLink.right {
 	right: 5%;
-}
-
-.SidebarLink.hidden {
-	display: none;
 }
 
 .SidebarTop {
@@ -743,6 +726,7 @@ footer .date a {
 	transition: left 0.35s ease-out, right 0.35s ease-out;
 	top: 0;
 	width: 95%;
+	font-size: 0.95em;
 	background: #E3E5E7;
 	position: fixed;
 	height: 100%;
@@ -760,10 +744,6 @@ footer .date a {
 	right: -100%;
 	float: right;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.sidebar.hidden {
-	display: none;
 }
 
 .SidebarContent {
@@ -949,14 +929,6 @@ object {
 .comments-area {
 	width: 92.5%;
 	margin: 3.5% auto 5%;
-}
-
-.comments-area.hidden {
-	display: none;
-}
-
-.comments-link.hidden {
-	display: none;
 }
 
 .comment, .comment-body {
