@@ -441,23 +441,23 @@ object {
 /* =Menu
 ----------------------------------------------- */
 
-.navigation-main {
+.main-navigation {
 	clear: both;
 	width: 100%;
 	text-align: center;
 	margin-bottom: 1.5%;
 }
-.navigation-main ul {
+.main-navigation ul {
 	list-style: none;
 	margin: 1.5% auto 0;
 	padding-left: 0;
 }
-.navigation-main li {
+.main-navigation li {
 	display: inline-block;
 	margin: 0 0.5em;
 	position: relative;
 }
-.navigation-main a {
+.main-navigation a {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
@@ -465,13 +465,13 @@ object {
 	text-decoration: none;
 	color: #444444;
 }
-.navigation-main a:hover {
+.main-navigation a:hover {
 	color: #009BCD;
 }
-.navigation-main a:active {
+.main-navigation a:active {
 	color: #007EA6
 }
-.navigation-main ul ul {
+.main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
@@ -481,26 +481,26 @@ object {
 	z-index: 99999;
 	background: #E3E5E7;
 }
-.navigation-main ul ul ul {
+.main-navigation ul ul ul {
 	left: 100%;
 	top: 0;
 }
-.navigation-main ul ul a {
+.main-navigation ul ul a {
 	width: 12em;
 }
-.navigation-main ul ul li {
+.main-navigation ul ul li {
 }
-.navigation-main li:hover > a {
+.main-navigation li:hover > a {
 }
-.navigation-main ul ul :hover > a {
+.main-navigation ul ul :hover > a {
 }
-.navigation-main ul ul a:hover {
+.main-navigation ul ul a:hover {
 }
-.navigation-main ul li:hover > ul {
+.main-navigation ul li:hover > ul {
 	display: block;
 }
-.navigation-main li.current_page_item a,
-.navigation-main li.current-menu-item a {
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
 color: #000000;
 }
 
@@ -523,6 +523,7 @@ color: #000000;
 .group-blog .byline {
 	display: inline;
 }
+.page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
@@ -845,6 +846,7 @@ img[class*="wp-image-"] {
 img.size-full {
 	max-width: 100%;
 }
+.page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
