@@ -10,8 +10,10 @@
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?></span>
+			<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
+				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?></span>
+				<?php endif; ?>
 			<?php endif; ?>
 			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
 		</footer><!-- .entry-meta -->
@@ -25,8 +27,10 @@
 		</header>
 		<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) ); ?></span>
+			<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
+				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+				<span class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) ); ?></span>
+				<?php endif; ?>
 			<?php endif; ?>
 			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
 		</footer><!-- .entry-meta -->
@@ -43,8 +47,10 @@
 		</header>
 		<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) ); ?></span>
+			<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
+				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+				<span class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', '_s' ), __( '1 Comment', '_s' ), __( '% Comments', '_s' ) ); ?></span>
+				<?php endif; ?>
 			<?php endif; ?>
 			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
 		</footer><!-- .entry-meta -->

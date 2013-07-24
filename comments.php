@@ -18,8 +18,9 @@
 if ( post_password_required() )
 	return;
 ?>
-
-	<div id="comments" class="comments-area <?php echo get_theme_mod( 'enable_comments', '' ); ?>">
+	<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
+	
+	<div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -71,3 +72,5 @@ if ( post_password_required() )
 	<?php comment_form(); ?>
 
 </div><!-- #comments -->
+
+<?php endif; ?>

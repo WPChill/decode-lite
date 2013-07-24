@@ -30,22 +30,6 @@ function decode_customize_register( $wp_customize ) {
 		'default'        => 'hidden',
 	) );
 
-	$wp_customize->add_setting( 'show_twitter', array(
-		'default'        => '',
-	) );
-
-	$wp_customize->add_setting( 'show_adn', array(
-		'default'        => '',
-	) );
-	
-	$wp_customize->add_setting( 'show_facebook', array(
-		'default'        => '',
-	) );
-	
-	$wp_customize->add_setting( 'show_google_plus', array(
-		'default'        => 'hidden',
-	) );
-
 	$wp_customize->add_setting( 'twitter_username', array(
 		'default'        => '',
 	) );
@@ -68,82 +52,38 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_social_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
+			true => 'Show',
+			false => 'Hide',
         ),
 		'priority'=> 1,
 	) );
 	
-	$wp_customize->add_control( 'show_twitter', array(
-		'label'   => 'Show Twitter',
-		'section' => 'decode_social_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 2,
-	) );
-	
-	$wp_customize->add_control( 'show_adn', array(
-		'label'   => 'Show App.net',
-		'section' => 'decode_social_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 3,
-	) );
-	
-	$wp_customize->add_control( 'show_facebook', array(
-		'label'   => 'Show Facebook',
-		'section' => 'decode_social_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 4,
-	) );
-	
-	$wp_customize->add_control( 'show_google_plus', array(
-		'label'   => 'Show Google+',
-		'section' => 'decode_social_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 5,
-	) );
-
 	$wp_customize->add_control( 'twitter_username', array(
 		'label'   => 'Twitter Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 6,
+		'priority'=> 2,
 	) );
  
 	$wp_customize->add_control( 'adn_username', array(
     	'label'   => 'App.net Username',
         'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 7,
+		'priority'=> 3,
 	) );
 	
 	$wp_customize->add_control( 'facebook_username', array(
 		'label'   => 'Facebook Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 8,
+		'priority'=> 4,
 	) );
 	
 	$wp_customize->add_control( 'google_plus_username', array(
 		'label'   => 'Google+ Username (or the long number in your profile URL)',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 9,
+		'priority'=> 5,
 	) );
 	
 	
@@ -158,7 +98,7 @@ function decode_customize_register( $wp_customize ) {
     
     
     $wp_customize->add_setting( 'show_sidebar', array(
-		'default'        => 'hidden',
+		'default'        => true,
 	) );
 
 	$wp_customize->add_setting( 'sidebar_position', array(
@@ -175,8 +115,8 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_sidebar_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
+			true => 'Show',
+			false => 'Hide',
         ),
 		'priority'=> 1,
 	) );
@@ -215,7 +155,7 @@ function decode_customize_register( $wp_customize ) {
 
 	
 	$wp_customize->add_setting( 'enable_comments', array(
-		'default'        => '',
+		'default'        => true,
 	) );
 	
 
@@ -243,48 +183,31 @@ function decode_customize_register( $wp_customize ) {
     
     
     $wp_customize->add_setting( 'show_theme_info', array(
-		'default'        => '',
+		'default'        => true,
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
 		'default'        => '',
 	) );
-	
-    $wp_customize->add_setting( 'use_html_in_description', array(
-		'default'        => '',
-	) );
-	
+		
 	
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
 		'section' => 'decode_other_options',
 		'type'       => 'radio',
 		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
+			true => 'Show',
+			false => 'Hide',
         ),
 		'priority'=> 1,
 	) );	
 	
 	$wp_customize->add_control( 'html_description', array(
-		'label'   => 'HTML for description (set this first, then save)',
+		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
 		'section' => 'decode_other_options',
 		'type'    => 'text',
 		'priority'=> 1,
 	) );
-
-	$wp_customize->add_control( 'use_html_in_description', array(
-		'label'   => 'After saving the above setting, set and save this one. Want HTML in the header\'s description?',
-		'section' => 'decode_other_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			get_theme_mod( 'html_description' ) => 'Yes',
-			get_bloginfo ( 'description' ) => 'No',
-        ),
-		'priority'=> 2,
-	) );
-
-
 }
 add_action( 'customize_register', 'decode_customize_register' );
 
