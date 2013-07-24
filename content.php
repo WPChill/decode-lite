@@ -33,6 +33,7 @@
 	</article><!-- #post-<?php the_ID(); ?> -->
 	
 <?php elseif ( has_post_thumbnail() && !is_search() ): ?>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -54,7 +55,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<a class="search-entry" href="<?php the_permalink(); ?>">
 			<div class="entry-title">
-				<?php search_title_highlight(); ?>
+				<h3><?php search_title_highlight(); ?></h3>
 			</div>
 			<div class="entry-summary">
 				<?php search_excerpt_highlight(); ?>
