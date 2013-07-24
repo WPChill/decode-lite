@@ -139,6 +139,16 @@ function decode_scripts() {
 
 
 	wp_enqueue_style( 'decode-style');
+	
+	//get the custom background color
+	$bg_color = '#' . get_background_color();
+	//add it to other elements that should use that color
+	$colors_css = "
+		.sidebar, .SidebarTop, .navigation-main ul ul {
+			background: {$bg_color};
+		}";
+    //add it to the stlesheet
+    wp_add_inline_style( 'decode-style', $colors_css );
 
 	wp_enqueue_style( 'decode-font-stylesheet' );
 
