@@ -613,7 +613,7 @@ article.post {
 }
 
 .entry-content img {
-	margin: 0 auto 2.5%;
+	margin: 2.5% auto;
 }
 
 .post blockquote, .page blockquote {
