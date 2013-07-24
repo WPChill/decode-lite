@@ -16,6 +16,7 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 
+
 /**
  * Social Options
  */
@@ -86,6 +87,7 @@ function decode_customize_register( $wp_customize ) {
 		'priority'=> 5,
 	) );
 	
+
 	
 /**
  * Sidebar Options
@@ -144,6 +146,7 @@ function decode_customize_register( $wp_customize ) {
 	) );
 	
 
+
 /**
  * Discussion Options
  */
@@ -170,7 +173,7 @@ function decode_customize_register( $wp_customize ) {
 		'priority'=> 1,
 	) );
 
-	
+
 	
 /**
  * Other Options
@@ -210,6 +213,7 @@ function decode_customize_register( $wp_customize ) {
 	) );
 }
 add_action( 'customize_register', 'decode_customize_register' );
+
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
