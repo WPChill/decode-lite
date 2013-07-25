@@ -27,4 +27,4 @@ get_header(); ?>
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
