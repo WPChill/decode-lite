@@ -366,6 +366,76 @@ object {
 }
 
 
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+}
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
 /* =Header
 ----------------------------------------------- */
 
@@ -374,6 +444,28 @@ object {
 	margin: 5% auto 7.5%;
 	border-bottom: 1px solid #009BCD;
 }
+
+.site-branding {
+	text-align: center;
+}
+
+.site-logo {
+	-webkit-transition: opacity 0.25s ease-out;
+	-moz-transition: opacity 0.25s ease-out;
+	transition: opacity 0.25s ease-out;
+	margin: 2.5% auto;
+	height: auto;
+	width: 10em;
+	opacity: 1;
+}
+
+	.site-logo:hover {
+		opacity: 0.75;
+	}
+	
+	.site-logo:active {
+		opacity: 0.85;
+	}
 
 .site-title {
 	margin: 0 0 1%;
@@ -449,7 +541,7 @@ object {
 }
 .main-navigation ul {
 	list-style: none;
-	margin: 1.5% auto 0;
+	margin: 3.5% auto 0;
 	padding-left: 0;
 }
 .main-navigation li {
@@ -686,11 +778,23 @@ footer .date a {
 ----------------------------------------------- */
 
 .SidebarLink {
+	-webkit-transition: opacity 0.25s ease-out;
+	-moz-transition: opacity 0.25s ease-out;
+	transition: opacity 0.25s ease-out;
 	position: relative;
 	width: 25px;
 	margin-bottom: 2.5%;
 	cursor: pointer;
+	opacity: 1;
 }
+
+	.SidebarLink:hover {
+		opacity: 0.65;
+	}
+	
+	.SidebarLink:active {
+		opacity: 0.85;
+	}
 
 .SidebarLink.left {
 	left: 5%;
@@ -707,6 +811,7 @@ footer .date a {
 	margin-bottom: 4.5%;
 	border-bottom: 1px solid #009BCD;
 	z-index: 11;
+	cursor: pointer;
 }
 
 .admin-bar .SidebarTop, .admin-bar .SidebarContent {
@@ -714,12 +819,23 @@ footer .date a {
 }
 
 .SidebarClose {
+	-webkit-transition: opacity 0.25s ease-out;
+	-moz-transition: opacity 0.25s ease-out;
+	transition: opacity 0.25s ease-out;
 	position: relative;
-	height: 1.5em;
-	padding: 2.5% 0 2.5% 2.5%;
+	height: 1.25em;
+	padding: 2.5%;
 	display: block;
-	cursor: pointer;
+	opacity: 1;
 }
+
+	.SidebarTop:hover .SidebarClose {
+		opacity: 0.65;
+	}
+	
+	.SidebarTop:hover .SidebarClose:active {
+		opacity: 0.85;
+	}
 
 .sidebar {
 	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
@@ -808,6 +924,7 @@ footer .date a {
 	content: "";
 }
 
+
 /* =Asides
 ----------------------------------------------- */
 
@@ -820,108 +937,37 @@ footer .date a {
 	font-style: italic;
 }
 
+
 /* =Audio
 ----------------------------------------------- */
+
 .mejs-container {
 	max-width: 100% !important; /* The WP audio player has a hardcoded width of 400px, which is BS. */
-}
-
-/* =Media
------------------------------------------------ */
-
-.site-header img,
-.entry-content img,
-.comment-content img,
-.widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
-}
-.site-header img,
-.entry-content img,
-img[class*="align"],
-img[class*="wp-image-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-.site-header img,
-.entry-content img,
-img.size-full {
-	max-width: 100%;
-}
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-.wp-caption {
-	border: 1px solid #ccc;
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
-}
-.wp-caption-text {
-	text-align: center;
-}
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-.site-content .gallery {
-	margin-bottom: 1.5em;
-}
-.gallery-caption {
-}
-.site-content .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
-}
-.site-content .gallery dd {
-	margin: 0;
-}
-.site-content .gallery-columns-4 .gallery-item {
-}
-.site-content .gallery-columns-4 .gallery-item img {
-}
-
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
 }
 
 
 /* =Navigation
 ----------------------------------------------- */
 
-.site-content .site-navigation {
+.site-content .post-navigation, .site-content .paging-navigation {
 	margin: 2.5%;
 	overflow: hidden;
 }
+
 .nav-next, .nav-previous {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
-.site-navigation.paging-navigation .nav-previous {
+
+.nav-previous {
 	float: left;
 	text-align: left;
-}
-.site-navigation.paging-navigation .nav-next {
-	float: right;
-	text-align: right;
-}
-.site-content .nav-previous {
-	float: right;
-	text-align: right;
 	width: 50%;
 }
-.site-content .nav-next {
-	float: left;
+
+.nav-next {
+	float: right;
+	text-align: right;
 	width: 50%;
 }
 
@@ -1035,7 +1081,7 @@ a {
 	-webkit-transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	-moz-transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	border-bottom: 0 solid rgba(69,69,69,0);
+	border-bottom: 0 solid rgba(69, 69, 69, 0);
 }
 
 	a:hover {
@@ -1119,7 +1165,7 @@ a {
 	}
 	
 	.sociallinks img:active {
-		opacity: 0.5;
+		opacity: 0.85;
 	}
 
 .main-navigation li {
@@ -1180,6 +1226,11 @@ a {
 	right: -40%;
 }
 
+.SidebarClose {
+	height: 1.5em;
+	padding: 3.5%
+}
+
 .entry-title h2 {
 	font-size: 2em;
 	width: 80%;
@@ -1212,12 +1263,8 @@ article.post {
 	transition: padding 0.25s ease-out;
 }
 
-.site-content .nav-next a:hover, .site-navigation .nav-previous a:hover {
-	padding-left: 2.5%;
-}
-
-.site-content .nav-previous a:hover, .site-navigation .nav-next a:hover {
-	padding-right: 2.5%;
+.nav-next a:hover, .nav-previous a:hover {
+	padding: 2.5%;
 }
 
 	.theme-info a:hover {

@@ -94,23 +94,15 @@ textarea {
 /* =Navigation
 ----------------------------------------------- */
 
-.site-navigation.paging-navigation .nav-previous {
-	float: right;
-	text-align: right;
-}
-.site-navigation.paging-navigation .nav-next {
-	float: left;
-	text-align: left;
-}
-.site-content .nav-previous {
-	float: left;
-	text-align: left;
-}
-.site-content .nav-next {
+.nav-previous {
 	float: right;
 	text-align: right;
 }
 
+.nav-next {
+	float: left;
+	text-align: left;
+}
 /* =Comments
 ----------------------------------------------- */
 
