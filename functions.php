@@ -85,7 +85,7 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
 
 function decode_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
+	add_editor_style( 'editor-style.css' );
 }
 }
 add_action( 'init', 'decode_add_editor_styles' );
@@ -124,7 +124,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 function decode_scripts() {
 
 	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.3-b4" );
-
+	
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
 	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2' );
@@ -147,7 +147,7 @@ function decode_scripts() {
 		.sidebar, .SidebarTop, .navigation-main ul ul {
 			background: {$bg_color};
 		}";
-    //add it to the stlesheet
+	//add it to the stlesheet
     wp_add_inline_style( 'decode-style', $colors_css );
 
 	wp_enqueue_style( 'decode-font-stylesheet' );
