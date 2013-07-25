@@ -16,46 +16,118 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 
+/**
+ * Sidebar Options
+ */
+
+	$wp_customize->add_section( 'decode_sidebar_options', array(
+    	'title'    => 'Sidebar Options',
+		'priority' => 33,
+    ) );
+    
+    
+    $wp_customize->add_setting( 'show_sidebar', array(
+		'default'  => true,
+	) );
+
+	$wp_customize->add_setting( 'sidebar_position', array(
+		'default'  => 'left',
+	) );
+	
+	$wp_customize->add_setting( 'sidebar_button_position', array(
+		'default'  => 'left',
+	) );
+	
+	
+	$wp_customize->add_control( 'show_sidebar', array(
+		'label'   => 'Enable Sidebar',
+		'section' => 'decode_sidebar_options',
+		'type'       => 'checkbox',
+		'priority'=> 1,
+	) );
+	
+	$wp_customize->add_control( 'sidebar_position', array(
+		'label'   => 'Sidebar Position',
+		'section' => 'decode_sidebar_options',
+		'type'    => 'radio',
+		'choices' => array(
+			'left'  => 'Left',
+			'right' => 'Right',
+        ),
+		'priority'=> 2,
+	) );
+	
+	$wp_customize->add_control( 'sidebar_button_position', array(
+		'label'   => 'Sidebar Button Position',
+		'section' => 'decode_sidebar_options',
+		'type'    => 'radio',
+		'choices' => array(
+			'left'  => 'Left',
+			'right' => 'Right',
+        ),
+		'priority'=> 3,
+	) );
+	
+
+
+/**
+ * Discussion Options
+ */
+
+	$wp_customize->add_section( 'decode_discussion_options', array(
+    	'title'   => 'Discussion Options',
+		'priority'=> 34,
+    ) );
+
+	
+	$wp_customize->add_setting( 'enable_comments', array(
+		'default' => true,
+	) );
+	
+
+	$wp_customize->add_control( 'enable_comments', array(
+		'label'   => 'Enable Comments',
+		'section' => 'decode_discussion_options',
+		'type'    => 'checkbox',
+		'priority'=> 1,
+	) );
+
 
 /**
  * Social Options
  */
 
 	$wp_customize->add_section( 'decode_social_options', array(
-    	'title'          => 'Social Options',
-		'priority'       => 35,
+    	'title'   => 'Social Options',
+		'priority'=> 35,
     ) );
 
 
 	$wp_customize->add_setting( 'show_social_icons', array(
-		'default'        => 'hidden',
+		'default' => false,
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
-		'default'        => '',
+		'default' => '',
 	) );
 
 	$wp_customize->add_setting( 'adn_username', array(
-		'default'        => '',
+		'default' => '',
 	) );
 	
 	$wp_customize->add_setting( 'facebook_username', array(
-		'default'        => '',
+		'default' => '',
 	) );
 	
 	$wp_customize->add_setting( 'google_plus_username', array(
-		'default'        => '',
+		'default' => '',
 	) );
 	
 	
 	$wp_customize->add_control( 'show_social_icons', array(
 		'label'   => 'Show Social Icons',
 		'section' => 'decode_social_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			true => 'Show',
-			false => 'Hide',
-        ),
+		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 	
@@ -86,122 +158,31 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'text',
 		'priority'=> 5,
 	) );
-	
-
-	
-/**
- * Sidebar Options
- */
-
-	$wp_customize->add_section( 'decode_sidebar_options', array(
-    	'title'          => 'Sidebar Options',
-		'priority'       => 33,
-    ) );
-    
-    
-    $wp_customize->add_setting( 'show_sidebar', array(
-		'default'        => true,
-	) );
-
-	$wp_customize->add_setting( 'sidebar_position', array(
-		'default'        => 'left',
-	) );
-	
-	$wp_customize->add_setting( 'sidebar_button_position', array(
-		'default'        => 'left',
-	) );
-	
-	
-	$wp_customize->add_control( 'show_sidebar', array(
-		'label'   => 'Show Sidebar',
-		'section' => 'decode_sidebar_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			true => 'Show',
-			false => 'Hide',
-        ),
-		'priority'=> 1,
-	) );
-	
-	$wp_customize->add_control( 'sidebar_position', array(
-		'label'   => 'Sidebar Position',
-		'section' => 'decode_sidebar_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'left' => 'Left',
-			'right' => 'Right',
-        ),
-		'priority'=> 2,
-	) );
-	
-	$wp_customize->add_control( 'sidebar_button_position', array(
-		'label'   => 'Sidebar Button Position',
-		'section' => 'decode_sidebar_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'left' => 'Left',
-			'right' => 'Right',
-        ),
-		'priority'=> 3,
-	) );
-	
 
 
-/**
- * Discussion Options
- */
-
-	$wp_customize->add_section( 'decode_discussion_options', array(
-    	'title'          => 'Discussion Options',
-		'priority'       => 34,
-    ) );
-
-	
-	$wp_customize->add_setting( 'enable_comments', array(
-		'default'        => true,
-	) );
-	
-
-	$wp_customize->add_control( 'enable_comments', array(
-		'label'   => 'Enable Comments',
-		'section' => 'decode_discussion_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			'' => 'Show',
-			'hidden' => 'Hide',
-        ),
-		'priority'=> 1,
-	) );
-
-
-	
 /**
  * Other Options
  */
 
 	$wp_customize->add_section( 'decode_other_options', array(
-    	'title'          => 'Other Options',
-		'priority'       => 37,
+    	'title'   => 'Other Options',
+		'priority'=> 37,
     ) );
     
     
     $wp_customize->add_setting( 'show_theme_info', array(
-		'default'        => true,
+		'default' => true,
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
-		'default'        => '',
+		'default' => '',
 	) );
 		
 	
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
 		'section' => 'decode_other_options',
-		'type'       => 'radio',
-		'choices'    => array(
-			true => 'Show',
-			false => 'Hide',
-        ),
+		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );	
 	
@@ -209,7 +190,7 @@ function decode_customize_register( $wp_customize ) {
 		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
 		'section' => 'decode_other_options',
 		'type'    => 'text',
-		'priority'=> 1,
+		'priority'=> 2,
 	) );
 }
 add_action( 'customize_register', 'decode_customize_register' );
