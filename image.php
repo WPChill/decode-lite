@@ -34,7 +34,7 @@ get_header();
 						?>
 					</div><!-- .entry-meta -->
 
-					<nav role="navigation" id="image-navigation" class="navigation-image">
+					<nav role="navigation" id="image-navigation" class="image-navigation">
 						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'decode' ) ); ?></div>
 						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 					</nav><!-- #image-navigation -->
@@ -100,6 +100,7 @@ get_header();
 				</div><!-- .entry-content -->
 
 				<footer class="entry-meta">
+					<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
 					<?php
 						if ( comments_open() && pings_open() ) : // Comments and trackbacks open
 							printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'decode' ), esc_url( get_trackback_url() ) );
@@ -110,16 +111,21 @@ get_header();
 						elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed
 							_e( 'Both comments and trackbacks are currently closed.', 'decode' );
 						endif;
-
-						edit_post_link( __( 'Edit', '_s' ), ' <span class="edit-link">', '</span>' );
 					?>
+					<?php endif; ?>
+					
+					<?php edit_post_link( __( 'Edit', '_s' ), ' <span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 
 			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template();
+				if (get_theme_mod( 'enable_comments', true ) == true ) :
+				
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() )
+						comments_template();
+				
+				endif;
 			?>
 
 		<?php endwhile; // end of the loop. ?>
