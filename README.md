@@ -11,5 +11,6 @@ Featured Images are also supported, allowing you to display large, beautiful ima
 Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, or Google+ profile. These can be configured in the Customize menu as well. 
 
 
-*In the event that the sidebar is not able to be dismissed after the inital activation, this may be remedied by using the theme customize menu to toggle the Show Sidebar preference.*
+If you desire to add Typekit fonts to your blog, I highly recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). This allows you more flexibility and ease when adding or changing fonts. 
+
 *The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*
