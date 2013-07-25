@@ -971,6 +971,7 @@ footer .date a {
 	width: 50%;
 }
 
+
 /* =Comments
 ----------------------------------------------- */
 
@@ -1044,6 +1045,7 @@ li.comment {
 	display: none;
 }
 
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -1057,6 +1059,7 @@ li.comment {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
 
 /* =iPad
 ----------------------------------------------- */
