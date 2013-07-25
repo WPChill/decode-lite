@@ -27,18 +27,16 @@ function decode_content_nav( $nav_id ) {
 	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
 		return;
 
-	$nav_class = 'site-navigation paging-navigation';
-	if ( is_single() )
-		$nav_class = 'site-navigation post-navigation';
+	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 
 	?>
-	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
+	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Previous post link', 'decode' ) . '</span>' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Next post link', 'decode' ) . '</span> %title' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'decode' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'decode' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
@@ -52,7 +50,7 @@ function decode_content_nav( $nav_id ) {
 
 	<?php endif; ?>
 
-	</nav><!-- #<?php echo $nav_id; ?> -->
+	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
 endif; // decode_content_nav
@@ -111,18 +109,85 @@ function decode_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for decode_comment()
 
+if ( ! function_exists( 'decode_the_attached_image' ) ) :
+/**
+ * Prints the attached image with a link to the next attached image.
+ */
+function decode_the_attached_image() {
+	$post                = get_post();
+	$attachment_size     = apply_filters( 'decode_attachment_size', array( 1200, 1200 ) );
+	$next_attachment_url = wp_get_attachment_url();
+
+	/**
+	 * Grab the IDs of all the image attachments in a gallery so we can get the
+	 * URL of the next adjacent image in a gallery, or the first image (if
+	 * we're looking at the last image in a gallery), or, in a gallery of one,
+	 * just the link to that image file.
+	 */
+	$attachment_ids = get_posts( array(
+		'post_parent'    => $post->post_parent,
+		'fields'         => 'ids',
+		'numberposts'    => -1,
+		'post_status'    => 'inherit',
+		'post_type'      => 'attachment',
+		'post_mime_type' => 'image',
+		'order'          => 'ASC',
+		'orderby'        => 'menu_order ID'
+	) );
+
+	// If there is more than 1 attachment in a gallery...
+	if ( count( $attachment_ids ) > 1 ) {
+		foreach ( $attachment_ids as $attachment_id ) {
+			if ( $attachment_id == $post->ID ) {
+				$next_id = current( $attachment_ids );
+				break;
+			}
+		}
+
+		// get the URL of the next image attachment...
+		if ( $next_id )
+			$next_attachment_url = get_attachment_link( $next_id );
+
+		// or get the URL of the first image attachment.
+		else
+			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+	}
+
+	printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
+		esc_url( $next_attachment_url ),
+		the_title_attribute( array( 'echo' => false ) ),
+		wp_get_attachment_image( $post->ID, $attachment_size )
+	);
+}
+endif;
+
 
 if ( ! function_exists( 'decode_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function decode_posted_on() {
-	printf( __( '%2$s', 'decode' ),
-		'meta-prep meta-prep-author',
-		sprintf( '%3$s',
-			get_permalink(),
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
+		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'decode' ),
+		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
-			get_the_date()
+			$time_string
+		),
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'decode' ), get_the_author() ) ),
+			esc_html( get_the_author() )
 		)
 	);
 }
