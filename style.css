@@ -823,8 +823,8 @@ footer .date a {
 	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
 	position: relative;
-	height: 1.25em;
-	padding: 2.5%;
+	height: 1.35em;
+	padding: 3.5%;
 	display: block;
 	opacity: 1;
 }
@@ -949,7 +949,7 @@ footer .date a {
 /* =Navigation
 ----------------------------------------------- */
 
-.site-content .post-navigation, .site-content .paging-navigation {
+.post-navigation, .paging-navigation, .image-navigation {
 	margin: 2.5%;
 	overflow: hidden;
 }
@@ -1231,7 +1231,6 @@ a {
 
 .SidebarClose {
 	height: 1.5em;
-	padding: 3.5%
 }
 
 .entry-title h2 {
