@@ -42,7 +42,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 html {
-	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
@@ -96,7 +95,7 @@ button,
 select,
 textarea {
 	color: #444444;
-	font: normal 300 165%/1.5em "Oxygen", "Helvetica Neue", "Arial" sans-serif;
+	font: normal 300 115%/1.5em "Oxygen", "Helvetica Neue", "Arial" sans-serif;
 }
 
 body {
@@ -1123,11 +1122,11 @@ a {
 		color: #007EA6;
 	}
 
-	.post a:hover {
+	.entry-content a:hover {
 		border-bottom: 1px solid #009BCD;
 	}
 	
-	.post a:active {
+	.entry-content a:active {
 		border-bottom: 1px solid #007EA6;
 	}
 
