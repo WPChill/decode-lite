@@ -619,18 +619,18 @@ object {
 	text-decoration: none;
 	color: #444444;
 }
-.main-navigation a:hover {
-	color: #009BCD;
-}
-.main-navigation a:active {
-	color: #007EA6
-}
+	.no-touch .main-navigation a:hover {
+		color: #009BCD;
+	}
+	.no-touch .main-navigation a:active {
+		color: #007EA6
+	}
 .main-navigation ul ul {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 	display: none;
 	float: left;
 	position: absolute;
-		top: 1.5em;
+		top: 1.25em;
 		left: 0;
 	z-index: 10;
 	background: #E3E5E7;
@@ -653,22 +653,21 @@ object {
 .main-navigation ul li:hover > ul {
 	display: block;
 }
-.main-navigation ul li a:hover > ul {
-	display: block;
-}
 .main-navigation ul ul:hover {
 	display: block;
 }
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+.main-navigation li.current_page_item > a,
+.main-navigation li.current-menu-item > a {
 	color: #222222;
 }
 
-.menu li.current_page_item a {
+.menu li.current_page_item > a,
+.main-navigation li.current-menu-item > a {
 	position: relative;
 }
 
-.no-touch .menu li.current_page_item a:hover {
+.menu li.current_page_item > a:hover,
+.main-navigation li.current-menu-item > a:hover {
 	-webkit-animation: shake 0.25s ease 0.25s;
 	-moz-animation: shake 0.25s ease 0.25s;
 	animation: shake 0.25s ease 0.25s;
@@ -755,7 +754,7 @@ a .attachment-post-thumbnail {
 
 .entry-title h2 {
 	font-size: 1.5em;
-	line-height: 1.25em;
+	line-height: 1.25;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -801,7 +800,7 @@ article.page .entry-content {
 article.post {
 	width: 100%;
 	margin: 0 auto 15%;
-	line-height: 1.75em;
+	line-height: 1.75;
 }
 
 .post .entry-content {
@@ -1022,7 +1021,7 @@ footer .date a {
 .blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
 	margin-top: 3%;
 	font-size: 2em;
-	line-height: 1.5em;
+	line-height: 1.5;
 }
 
 .format-quote blockquote {
