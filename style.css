@@ -653,9 +653,12 @@ object {
 .main-navigation ul li:hover > ul {
 	display: block;
 }
+.main-navigation ul ul:hover {
+	display: block;
+}
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a {
-color: #222222;
+	color: #222222;
 }
 
 .menu li.current_page_item a {
