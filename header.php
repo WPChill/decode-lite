@@ -40,26 +40,26 @@
 		<?php if (get_theme_mod( 'show_social_icons', false ) == true ) : ?>
 		<div class="sociallinks <?php echo get_theme_mod( 'show_social_icons', 'hidden' );?>">
 			<ul>
-				<?php if (get_theme_mod( 'adn_username', '' ) !== '' ) : ?>
-				<a class="sociallink TwitterLink" href="https://alpha.app.net/<?php get_theme_mod( 'twitter_username' );?>">
+				<?php if (get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>
+				<a class="sociallink TwitterLink" href="https://twitter.com/<?php echo get_theme_mod( 'twitter_username' );?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/Twitter.svg" alt="Link to Twitter profile">
 				</a>
 				<?php endif; ?>
 
 				<?php if (get_theme_mod( 'adn_username', '' ) !== '' ) : ?>
-				<a class="sociallink ADNLink" href="https://alpha.app.net/<?php get_theme_mod( 'adn_username' );?>">
+				<a class="sociallink ADNLink" href="https://alpha.app.net/<?php echo get_theme_mod( 'adn_username' );?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/ADN.svg" alt="Link to App dot net profile">
 				</a>
 				<?php endif; ?>
 
 				<?php if (get_theme_mod( 'facebook_username', '' ) !== '' ) : ?>
-				<a class="sociallink FacebookLink" href="https://facebook.com/<?php get_theme_mod( 'facebook_username' );?>">
+				<a class="sociallink FacebookLink" href="https://facebook.com/<?php echo get_theme_mod( 'facebook_username' );?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/Facebook.svg" alt="Link to Facebook profile">
 				</a>
 				<?php endif; ?>
 
 				<?php if (get_theme_mod( 'google_plus_username', '' ) !== '' ) : ?>
-				<a class="sociallink GooglePlusLink" href="https://plus.google.com/u/0/<?php get_theme_mod( 'google_plus_username' );?>">
+				<a class="sociallink GooglePlusLink" href="https://plus.google.com/u/0/<?php echo get_theme_mod( 'google_plus_username' );?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/GooglePlus.svg" alt="Link to Google Plus profile">
 				</a>
 				<?php endif; ?>
