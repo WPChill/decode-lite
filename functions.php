@@ -142,11 +142,45 @@ function decode_scripts() {
 	
 	//get the custom background color
 	$bg_color = '#' . get_background_color();
+	$accent_color = get_theme_mod( 'accent_color', '#009BCD' );
+	$secondary_accent_color = get_theme_mod( 'secondary_accent_color', '#007EA6' );
+	$text_color = get_theme_mod( 'text_color', '#444444' );
+	$secondary_text_color = get_theme_mod( 'secondary_text_color', '#808080' );
+	
 	//add it to other elements that should use that color
 	$colors_css = "
-		.sidebar, .SidebarTop, .navigation-main ul ul {
+		body, .sidebar, .SidebarTop, .main-navigation ul ul {
 			background: {$bg_color};
-		}";
+		}	
+		
+		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
+			fill: $text_color;
+		}
+		
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .format-link .entry-title h2 a, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch textarea:focus, .touch textarea:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+			color: $text_color;
+		}
+		
+		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .search-entry:hover, .search-entry:hover .entry-title, footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .decode-reply-tool-plugin .replylink:hover {
+			color: $accent_color;
+		}
+		
+		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .no-touch .site-description a:hover, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active {
+			border-color: $accent_color;
+		}
+		
+		.no-touch a:active, .no-touch .main-navigation a:active, .search-entry:active, .search-entry:active .entry-title, footer .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active {
+			color: $secondary_accent_color;
+		}
+		
+		.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
+			border-color: $secondary_accent_color;
+		}
+		
+		.tags, footer .date a, .comment-metadata a {
+			color: $secondary_text_color;
+		}
+		";
 	//add it to the stlesheet
     wp_add_inline_style( 'decode-style', $colors_css );
 

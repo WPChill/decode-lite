@@ -156,8 +156,6 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	padding: 1.6em;
@@ -498,11 +496,11 @@ object {
 	opacity: 1;
 }
 
-	.site-logo:hover {
+	.no-touch .site-logo:hover {
 		opacity: 0.75;
 	}
 	
-	.site-logo:active {
+	.no-touch .site-logo:active {
 		opacity: 0.85;
 	}
 
@@ -573,21 +571,32 @@ object {
 	height: 2em;
 }
 
-.sociallinks img {
-    -webkit-transition: opacity 0.4s ease-out;
-	-moz-transition: opacity 0.4s ease-out;
-	transition: opacity 0.4s ease-out;
+.sociallinks svg {
 	height: 2em;
-	width: auto;
-	margin: 0 0.4%;
-	border: none;
+	width: 2em;
 }
 	
-	.sociallinks img:hover {
+	.no-touch .sociallinks svg:hover {
 		opacity: 0.6;
 	}
 	
-	.sociallinks img:active {
+	.no-touch .sociallinks svg:active {
+		opacity: 0.8;
+	}
+
+.sociallink {
+	-webkit-transition: opacity 0.4s ease-out;
+	-moz-transition: opacity 0.4s ease-out;
+	transition: opacity 0.4s ease-out;
+	margin: 0 0.4%;
+	border: none;
+}
+
+	.no-touch .sociallink:hover {
+		opacity: 0.6;
+	}
+	
+	.no-touch .sociallink:active {
 		opacity: 0.8;
 	}
 
@@ -736,11 +745,11 @@ a .attachment-post-thumbnail {
 	opacity: 1;
 }
 
-	a .attachment-post-thumbnail:hover {
+	.no-touch a .attachment-post-thumbnail:hover {
 		opacity: 0.8;
 	}
 	
-	a .attachment-post-thumbnail:active {
+	.no-touch a .attachment-post-thumbnail:active {
 		opacity: 0.9;
 	}
 
@@ -764,30 +773,6 @@ article.page, article.attachment {
 	margin: 0 auto;
 }
 
-.entry-content h1 {
-	font-size: 2.5em;
-}
-
-.entry-content h2 {
-	font-size: 2.125em;
-}
-
-.entry-content h3 {
-	font-size: 1.75em;
-}
-
-.entry-content h4 {
-	font-size: 1.375em;
-}
-
-.entry-content h5 {
-	font-size: 1.25em;
-}
-
-.entry-content h6 {
-	font-size: 1.125em;
-}
-
 article.page .entry-header {
 	font-size: 1.75em;
 	margin: 2.5% auto 5%;
@@ -806,6 +791,30 @@ article.post {
 .post .entry-content {
 	width: 92.5%;
 	margin: 0 auto;
+}
+
+.entry-content h1 {
+	font-size: 2em;
+}
+
+.entry-content h2 {
+	font-size: 1.75em;
+}
+
+.entry-content h3 {
+	font-size: 1.5em;
+}
+
+.entry-content h4 {
+	font-size: 1.375em;
+}
+
+.entry-content h5 {
+	font-size: 1.25em;
+}
+
+.entry-content h6 {
+	font-size: 1.125em;
 }
 
 .entry-content img {
@@ -880,6 +889,11 @@ footer .date a {
 		color: #007EA6;
 	}
 
+	.post footer .date a:hover, .post footer .date a:active {
+		margin-top: 3.5%;
+		border-bottom: none;
+	}
+
 .theme-info {
 	font-size: 0.8em;
 	text-align: center;
@@ -902,16 +916,17 @@ footer .date a {
 	transition: opacity 0.25s ease-out;
 	position: relative;
 	width: 25px;
+	height: 25px;
 	margin-bottom: 2.5%;
 	cursor: pointer;
 	opacity: 1;
 }
 
-	.SidebarLink:hover {
+	.no-touch .SidebarLink:hover {
 		opacity: 0.65;
 	}
 	
-	.SidebarLink:active {
+	.no-touch .SidebarLink:active {
 		opacity: 0.85;
 	}
 
@@ -943,16 +958,17 @@ footer .date a {
 	transition: opacity 0.25s ease-out;
 	position: relative;
 	height: 1.35em;
+	width: 1.35em;
 	padding: 3.5%;
 	display: block;
 	opacity: 1;
 }
 
-	.SidebarTop:hover .SidebarClose {
+	.no-touch .SidebarTop:hover .SidebarClose {
 		opacity: 0.65;
 	}
 	
-	.SidebarTop:hover .SidebarClose:active {
+	.no-touch .SidebarTop:hover .SidebarClose:active {
 		opacity: 0.85;
 	}
 
@@ -1004,12 +1020,12 @@ footer .date a {
 	color: #444444;
 }
 
-	.format-link .entry-title a:hover {
+	.no-touch .format-link .entry-title a:hover {
 		color: #009BCD;
 		border-bottom: none;
 	}
 	
-	.format-link .entry-title a:active {
+	.no-touch .format-link .entry-title a:active {
 		color: #007EA6;
 		border-bottom: none;
 	}
@@ -1096,7 +1112,7 @@ footer .date a {
 	transition: padding 0.25s ease-out;
 }
 
-.nav-next a:hover, .nav-previous a:hover {
+.no-touch .nav-next a:hover, .no-touch .nav-previous a:hover {
 	padding: 2.5%;
 }
 
@@ -1138,11 +1154,11 @@ footer .date a {
 	margin-right: 1.5%;
 }
 
-	.comment-metadata a:hover {
+	.no-touch .comment-metadata a:hover {
 		color: #009BCD;
 	}
 	
-	.comment-metadata a:active {
+	.no-touch .comment-metadata a:active {
 		color: #007EA6;
 	}
 	
@@ -1226,14 +1242,14 @@ li.comment {
 	font-size: 2.8em;
 }
 	
-.site-description a:hover {
-	border-bottom: 1px solid #009BCD;
-}
-
-.site-description a:active {
-	color: #007EA6;
-	border-bottom: 1px solid #007EA6;
-}
+	.no-touch .site-description a:hover {
+		border-bottom: 1px solid #009BCD;
+	}
+	
+	.no-touch .site-description a:active {
+		color: #007EA6;
+		border-bottom: 1px solid #007EA6;
+	}
 	
 .sociallinks ul {
 	height: 2.5em;
@@ -1248,9 +1264,9 @@ li.comment {
 	display: inline;
 }
 
-.sociallinks img {
+.sociallinks svg {
 	height: 2.5em;
-	width: auto;
+	width: 2.5em;
 	margin: 0 0.5%;
 }
 
@@ -1262,6 +1278,7 @@ li.comment {
   position: fixed;
   top: 5%;
   width: 30px;
+  height: 30px;
 }
 
 .admin-bar .SidebarLink {
@@ -1282,6 +1299,7 @@ li.comment {
 
 .SidebarClose {
 	height: 1.4em;
+	width: 1.4em;
 	padding: 2.5%;
 }
 
@@ -1294,13 +1312,32 @@ article.post {
 	margin: 0 auto 7.5%;
 }
 
-.post footer {
-	width: 75%;
+.entry-content h1 {
+	font-size: 2.5em;
 }
 
-.post footer .date a:hover, .post footer .date a:active {
-	margin-top: 3.5%;
-	border-bottom: none;
+.entry-content h2 {
+	font-size: 2.125em;
+}
+
+.entry-content h3 {
+	font-size: 1.75em;
+}
+
+.entry-content h4 {
+	font-size: 1.375em;
+}
+
+.entry-content h5 {
+	font-size: 1.25em;
+}
+
+.entry-content h6 {
+	font-size: 1.125em;
+}
+
+.post footer {
+	width: 75%;
 }
 
 .search .post, .search .page {

@@ -192,6 +192,52 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'text',
 		'priority'=> 2,
 	) );
+	
+/**
+ * Color Options
+ */
+
+	$wp_customize->add_setting( 'accent_color', array(
+		'default' => '#009BCD',
+	) );
+	
+	$wp_customize->add_setting( 'secondary_accent_color', array(
+		'default' => '#007EA6',
+	) );
+	
+	$wp_customize->add_setting( 'text_color', array(
+		'default' => '#444444',
+	) );
+	
+	$wp_customize->add_setting( 'secondary_text_color', array(
+		'default' => '#808080',
+	) );
+	
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
+		'label'        => __( 'Accent Color', 'decode' ),
+		'section'    => 'colors',
+		'settings'   => 'accent_color',
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
+		'label'        => __( 'Active Link Color', 'decode' ),
+		'section'    => 'colors',
+		'settings'   => 'secondary_accent_color',
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
+		'label'        => __( 'Text Color', 'decode' ),
+		'section'    => 'colors',
+		'settings'   => 'text_color',
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
+		'label'        => __( 'Secondary Text Color', 'decode' ),
+		'section'    => 'colors',
+		'settings'   => 'secondary_text_color',
+	) ) );
+	
 }
 add_action( 'customize_register', 'decode_customize_register' );
 
