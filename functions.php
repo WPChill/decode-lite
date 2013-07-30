@@ -123,7 +123,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.3.3" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.4" );
 	
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
