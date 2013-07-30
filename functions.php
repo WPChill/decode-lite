@@ -123,17 +123,17 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.3" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.3.3" );
 	
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
 	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2' );
 
-	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.2', true );
+	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.3.2', true );
 
 	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.2', true );
 
-	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3', true );
+	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
 
 	wp_register_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.3', true );
 
