@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features an elegant sidebar is conveniently accessed by clicking or tapping on the much-loved hamburger icon. The sidebar can hold any number of widgets you choose and the sides on which the sidebar and the hamburger icon are placed are customizable. You can also disable the sidebar and comments if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your Twitter, App.net, Facebook, or Google+ profile. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.3.2
+Version: 2.3.3
 License: GNU General Public License
 License URI: license.txt
 Tags: one-column, left-sidebar, right-sidebar, light, flexible-width, custom-background, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments
@@ -759,33 +759,33 @@ a .attachment-post-thumbnail {
 	margin: 0 auto;
 }
 
-article.page {
+article.page, article.attachment {
 	width: 92.5%;
 	margin: 0 auto;
 }
 
 .entry-content h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 .entry-content h2 {
-	font-size: 1.8em;
+	font-size: 2.125em;
 }
 
 .entry-content h3 {
-	font-size: 1.6em;
+	font-size: 1.75em;
 }
 
 .entry-content h4 {
-	font-size: 1.4em;
+	font-size: 1.375em;
 }
 
 .entry-content h5 {
-	font-size: 1.2em;
+	font-size: 1.25em;
 }
 
 .entry-content h6 {
-	font-size: 1.1em;
+	font-size: 1.125em;
 }
 
 article.page .entry-header {
@@ -1194,13 +1194,13 @@ li.comment {
 ----------------------------------------------- */
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-header, .post, article.page {
+.site-header, .post, article.page, article.attachment {
 	width: 85%;
 }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-.site-header, .post, article.page {
+.site-header, .post, article.page, article.attachment {
 	font-size: 0.75em;
 }
 }
@@ -1210,7 +1210,7 @@ li.comment {
 ----------------------------------------------- */
 @media only screen and (min-width: 699px) {
 
-.site-header, article.post, article.page, .comments-area, .search .post, .search .page {
+.site-header, article.post, article.page, .comments-area, .search .post, .search .page, article.attachment {
 	width: 80%;
 }
 
@@ -1325,7 +1325,7 @@ article.post {
 	margin-bottom: 3.5%;
 }
 
-.site-header, article.post, article.page, .comments-area, .search .post, .search .page {
+.site-header, article.post, article.page, .comments-area, .search .post, .search .page, article.attachment {
 	width: 60%;
 	max-width: 1200px;
 }
