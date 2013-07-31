@@ -505,7 +505,8 @@ object {
 	}
 
 .site-title {
-	margin: 0 0 1%;
+	margin: 0 0 0.5%;
+	line-height: 1;
 	text-align: center;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -550,7 +551,8 @@ object {
 }
 
 .sociallinks {
-	display: inline;
+	display: block;
+	margin: 2.5% auto 0;
 }
 
 .sociallink.desktop {
@@ -560,29 +562,22 @@ object {
 .sociallinks ul {
 	list-style: none;
 	text-align: center;
-	margin: 1% auto;
+	margin: 0 auto;
 }
 
 .sociallinks a:hover {
 	border-bottom: none;
 }
 
-.sociallinks ul {
+.sociallinks {
 	height: 2em;
+	margin: 0.5% 0;
 }
 
 .sociallinks svg {
 	height: 2em;
 	width: 2em;
 }
-	
-	.no-touch .sociallinks svg:hover {
-		opacity: 0.6;
-	}
-	
-	.no-touch .sociallinks svg:active {
-		opacity: 0.8;
-	}
 
 .sociallink {
 	-webkit-transition: opacity 0.4s ease-out;
@@ -612,7 +607,7 @@ object {
 }
 .main-navigation ul {
 	list-style: none;
-	margin: 3.5% auto 0;
+	margin: 2.5% auto 0;
 	padding-left: 0;
 }
 .main-navigation li {
@@ -915,8 +910,6 @@ footer .date a {
 	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
 	position: relative;
-	width: 25px;
-	height: 25px;
 	margin-bottom: 2.5%;
 	cursor: pointer;
 	opacity: 1;
@@ -929,6 +922,11 @@ footer .date a {
 	.no-touch .SidebarLink:active {
 		opacity: 0.85;
 	}
+	
+.SidebarLink svg {
+	width: 25px;
+	height: 25px;
+}
 
 .SidebarLink.left {
 	left: 5%;
@@ -957,8 +955,6 @@ footer .date a {
 	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
 	position: relative;
-	height: 1.35em;
-	width: 1.35em;
 	padding: 3.5%;
 	display: block;
 	opacity: 1;
@@ -971,6 +967,11 @@ footer .date a {
 	.no-touch .SidebarTop:hover .SidebarClose:active {
 		opacity: 0.85;
 	}
+	
+.SidebarClose {
+	height: 1.35em;
+	width: 1.35em;
+}
 
 .sidebar {
 	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
@@ -1251,7 +1252,7 @@ li.comment {
 		border-bottom: 1px solid #007EA6;
 	}
 	
-.sociallinks ul {
+.sociallinks {
 	height: 2.5em;
 	margin: 1.5% auto;
 }
@@ -1277,8 +1278,11 @@ li.comment {
 .SidebarLink {
   position: fixed;
   top: 5%;
-  width: 30px;
-  height: 30px;
+}
+
+.SidebarLink svg {
+	width: 30px;
+	height: 30px;
 }
 
 .admin-bar .SidebarLink {
@@ -1298,9 +1302,12 @@ li.comment {
 }
 
 .SidebarClose {
+	padding: 2.5%;
+}
+
+.SidebarClose svg {
 	height: 1.4em;
 	width: 1.4em;
-	padding: 2.5%;
 }
 
 .entry-title h2 {
