@@ -95,7 +95,7 @@ button,
 select,
 textarea {
 	color: #444444;
-	font: normal 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial" sans-serif;
+	font: normal 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
 }
 
 body {
