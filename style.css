@@ -553,10 +553,8 @@ object {
 .sociallinks {
 	display: block;
 	margin: 2.5% auto 0;
-}
-
-.sociallink.desktop {
-	display: none;
+	height: 2em;
+	margin: 1% 0;
 }
 
 .sociallinks ul {
@@ -565,25 +563,20 @@ object {
 	margin: 0 auto;
 }
 
-.sociallinks a:hover {
-	border-bottom: none;
-}
-
-.sociallinks {
-	height: 2em;
-	margin: 0.5% 0;
-}
-
-.sociallinks svg {
+.sociallink svg {
 	height: 2em;
 	width: 2em;
+	margin: 0 0.5%;
+}
+
+.sociallink.desktop {
+	display: none;
 }
 
 .sociallink {
 	-webkit-transition: opacity 0.4s ease-out;
 	-moz-transition: opacity 0.4s ease-out;
 	transition: opacity 0.4s ease-out;
-	margin: 0 0.4%;
 	border: none;
 }
 
@@ -913,6 +906,7 @@ footer .date a {
 	margin-bottom: 2.5%;
 	cursor: pointer;
 	display: inline-block;
+	height: 1.5em;
 	opacity: 1;
 }
 
@@ -925,8 +919,8 @@ footer .date a {
 	}
 	
 .SidebarLink svg {
-	width: 25px;
-	height: 25px;
+	width: 1.5em;
+	height: 1.5em;
 }
 
 .SidebarLink.left {
@@ -1247,10 +1241,10 @@ li.comment {
 	display: inline;
 }
 
-.sociallinks svg {
+.sociallink svg {
 	height: 2.5em;
 	width: 2.5em;
-	margin: 0 0.5%;
+	margin: 0 1%;
 }
 
 .main-navigation li {
@@ -1260,11 +1254,12 @@ li.comment {
 .SidebarLink {
   position: fixed;
   top: 5%;
+  height: 1.75em;
 }
 
 .SidebarLink svg {
-	width: 30px;
-	height: 30px;
+	width: 1.75em;
+	height: 1.75em;
 }
 
 .admin-bar .SidebarLink {
