@@ -177,7 +177,7 @@ function decode_scripts() {
 			border-color: $secondary_accent_color;
 		}
 		
-		.tags, footer .date a, .comment-metadata a {
+		.tags, .categories, footer .date a, .comment-metadata a {
 			color: $secondary_text_color;
 		}
 		";

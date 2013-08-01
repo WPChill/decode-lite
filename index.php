@@ -31,8 +31,6 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php decode_content_nav( 'nav-below' ); ?>
-
 			<?php else : ?>
 
 				<?php get_template_part( 'no-results', 'index' ); ?>
@@ -40,5 +38,8 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content .site-content -->
+			
+			<?php decode_content_nav( 'nav-below' ); ?>
+			
 		</div><!-- #primary .content-area -->
 <?php get_footer(); ?>

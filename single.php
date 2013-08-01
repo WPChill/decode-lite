@@ -20,11 +20,12 @@ get_header(); ?>
 						comments_template();
 				?>
 
-				<?php decode_content_nav( 'nav-below' ); ?>
-
 			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content .site-content -->
+			
+			<?php decode_content_nav( 'nav-below' ); ?>
+
 		</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>
