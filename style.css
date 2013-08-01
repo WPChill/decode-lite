@@ -693,6 +693,10 @@ object {
 /* =Content
 ----------------------------------------------- */
 
+.site-content {
+	width: 92.5%;
+	margin: 0 auto;
+}
 .sticky {
 }
 .hentry {
@@ -756,29 +760,15 @@ a .attachment-post-thumbnail {
 	margin: 0 auto;
 }
 
-article.page, article.attachment {
-	width: 92.5%;
-	margin: 0 auto;
-}
-
 article.page .entry-header {
 	font-size: 1.75em;
 	margin: 2.5% auto 5%;
-}
-
-article.page .entry-content {
-	margin: 0;
 }
 
 article.post {
 	width: 100%;
 	margin: 0 auto 15%;
 	line-height: 1.75;
-}
-
-.post .entry-content {
-	width: 92.5%;
-	margin: 0 auto;
 }
 
 .entry-content h1 {
@@ -825,31 +815,6 @@ article.post {
 .tags {
 	font-size: 0.8em;
 	color: #808080;
-}
-
-.search-entry, .search-entry .entry-title {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
-	color: #444444;
-}
-
-.search-entry:hover, .search-entry:hover .entry-title {
-	color: #009BCD;
-}
-
-.search-entry:active, .search-entry:active .entry-title {
-	color: #007EA6;
-}
-
-.search .post, .search .page {
-	width: 92.5%;
-	border-bottom: 1px solid #009BCD;
-	margin-bottom: 10%;
-}
-
-.search-highlight {
-	background: rgba(255,255,0,0.25);
 }
 
 article footer {
@@ -929,12 +894,13 @@ footer .date a {
 
 .SidebarLink.right {
 	right: 5%;
+	float: right;
 }
 
 .SidebarTop {
 	background: #E3E5E7;
 	width: 100%;
-	margin-bottom: 4.5%;
+	margin-bottom: 7.5%;
 	border-bottom: 1px solid #009BCD;
 	cursor: pointer;
 }
@@ -1115,7 +1081,6 @@ footer .date a {
 ----------------------------------------------- */
 
 .comments-area {
-	width: 92.5%;
 	margin: 3.5% auto 5%;
 }
 
@@ -1167,6 +1132,38 @@ li.comment {
 }
 
 
+/* =Search
+----------------------------------------------- */
+
+.search-form {
+	margin-bottom: 2.5%;
+}
+
+.search-entry, .search-entry .entry-title {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color: #444444;
+}
+
+.search-entry:hover, .search-entry:hover .entry-title {
+	color: #009BCD;
+}
+
+.search-entry:active, .search-entry:active .entry-title {
+	color: #007EA6;
+}
+
+.search .post, .search .page {
+	border-bottom: 1px solid #009BCD;
+	margin-bottom: 10%;
+}
+
+.search-highlight {
+	background: rgba(255,255,0,0.25);
+}
+
+
 /* =Widgets
 ----------------------------------------------- */
 
@@ -1203,7 +1200,7 @@ li.comment {
 ----------------------------------------------- */
 @media only screen and (min-width: 699px) {
 
-.site-header, article.post, article.page, .comments-area, .search .post, .search .page, article.attachment {
+.site-content, .site-header {
 	width: 80%;
 }
 
@@ -1260,6 +1257,14 @@ li.comment {
 .SidebarLink svg {
 	width: 1.75em;
 	height: 1.75em;
+}
+
+.SidebarLink.left {
+	left: 3.5%;
+}
+
+.SidebarLink.right {
+	right: 3.5%;
 }
 
 .admin-bar .SidebarLink {
@@ -1334,7 +1339,7 @@ article.post {
 
 /* Portrait iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-header, .post, article.page, article.attachment {
+.site-content, .site-header {
 	width: 85%;
 }
 
@@ -1348,13 +1353,6 @@ article.post {
 
 .sidebar.right {
 	right: -50%;
-}
-}
-
-/* Landscape iPad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-.site-header, .post, article.page, article.attachment {
-	/* Landscape iPad */
 }
 }
 
@@ -1375,9 +1373,17 @@ article.post {
 	margin-bottom: 3.5%;
 }
 
-.site-header, article.post, article.page, .comments-area, .search .post, .search .page, article.attachment {
+.site-content, .site-header {
 	width: 60%;
 	max-width: 1200px;
+}
+
+.SidebarLink.left {
+	left: 5%;
+}
+
+.SidebarLink.right {
+	right: 5%;
 }
 
 .sidebar {
