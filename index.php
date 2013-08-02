@@ -14,7 +14,7 @@
 get_header(); ?>
 
 		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+			<main id="main" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -37,9 +37,9 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content .site-content -->
+			</main><!-- #main -->
 			
 			<?php decode_content_nav( 'nav-below' ); ?>
 			
-		</div><!-- #primary .content-area -->
+		</div><!-- #primary -->
 <?php get_footer(); ?>

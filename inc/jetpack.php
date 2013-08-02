@@ -14,7 +14,7 @@ if ( ! function_exists( 'decode_jetpack_setup' ) ) {
 
 function decode_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'content',
+		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }

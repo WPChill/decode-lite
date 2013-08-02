@@ -447,22 +447,22 @@ img.size-full {
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
-.site-content .gallery {
+.site-main .gallery {
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
 }
-.site-content .gallery a img {
+.site-main .gallery a img {
 	border: none;
 	height: auto;
 	max-width: 90%;
 }
-.site-content .gallery dd {
+.site-main .gallery dd {
 	margin: 0;
 }
-.site-content .gallery-columns-4 .gallery-item {
+.site-main .gallery-columns-4 .gallery-item {
 }
-.site-content .gallery-columns-4 .gallery-item img {
+.site-main .gallery-columns-4 .gallery-item img {
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -478,7 +478,7 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 5% auto 7.5%;
+	margin: 5% auto 0;
 	border-bottom: 1px solid #009BCD;
 }
 
@@ -534,7 +534,7 @@ object {
 
 .page-header {
 	text-align: center;
-	margin: -7.5% auto 7.5%;
+	margin: 0 auto 7.5%;
 }
 
 .page-title {
@@ -693,10 +693,11 @@ object {
 /* =Content
 ----------------------------------------------- */
 
-.site-content {
+.site-main {
 	width: 92.5%;
 	margin: 0 auto;
 }
+
 .sticky {
 }
 .hentry {
@@ -715,7 +716,7 @@ object {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -726,7 +727,7 @@ object {
 }
 
 .entry-header {
-	margin-bottom: 1.5%;
+	margin: 5% auto 3.5%;
 	text-align: center;
 }
 
@@ -1197,16 +1198,12 @@ li.comment {
 ----------------------------------------------- */
 @media only screen and (min-width: 699px) {
 
-.site-content, .site-header {
+.site-main, .site-header {
 	width: 80%;
 }
 
-.site-header {
-	margin-bottom: 3.5%;
-}
-
 .page-header {
-	margin: -3.5% auto 5%;
+	margin: 0 auto 5%;
 }
 
 .site-title a {
@@ -1336,7 +1333,7 @@ article.post {
 
 /* Portrait iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-content, .site-header {
+.site-main, .site-header {
 	width: 85%;
 }
 
@@ -1370,7 +1367,7 @@ article.post {
 	margin-bottom: 3.5%;
 }
 
-.site-content, .site-header {
+.site-main, .site-header {
 	width: 60%;
 	max-width: 1200px;
 }

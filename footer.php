@@ -8,7 +8,7 @@
  */
 ?>
 
-	</div><!-- #main -->
+	 </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php if (get_theme_mod( 'show_theme_info', true ) == true ) : ?>

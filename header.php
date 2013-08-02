@@ -123,4 +123,4 @@
 	</div>
 	<?php endif; ?>
 
-	<div id="main" class="site-main">
+	<div id="content" class="site-content">
