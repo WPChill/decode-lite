@@ -9,9 +9,9 @@ Decode supports link posts, where the title can be hyperlinked. To do this, firs
 
 Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. 
 
-Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, or Google+ profile. These can be configured in the Customize menu as well. 
+Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, Google+, Dribbble, Behance, LinkedIn, Tumblr, Pinterest, Instagram, 500px, Flickr, Rdio, Spotify, Soundcloud, Vimeo, YouTube, Github, and Foursquare profiles. These can all be configured in the Customize menu as well. 
 
 
-If you desire to add Typekit fonts to your blog, I highly recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
+If you desire to add Typekit fonts to your blog, I highly recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 
 *The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*

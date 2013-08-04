@@ -554,7 +554,6 @@ object {
 .sociallinks {
 	display: block;
 	margin: 2.5% auto 0;
-	height: 2em;
 	margin: 1% 0;
 }
 
@@ -1221,7 +1220,6 @@ li.comment {
 	}
 	
 .sociallinks {
-	height: 2.5em;
 	margin: 1.5% auto;
 }
 
@@ -1335,7 +1333,7 @@ article.post {
 /* Portrait iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 .site-main, .site-header {
-	width: 85%;
+	width: 82.5%;
 }
 
 .sidebar {

@@ -12,7 +12,7 @@
  */
 function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'bl/Volumes/Macintosh%20HD/Users/Scott/Dropbox/Documents/Web/Decode/Decode%202.4/inc/customizer.phpogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 
@@ -123,6 +123,66 @@ function decode_customize_register( $wp_customize ) {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'dribbble_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'behance_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'linkedin_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'tumblr_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'pinterest_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'instagram_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( '500px_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'flickr_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'rdio_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'spotify_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'soundcloud_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'vimeo_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'youtube_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'github_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'foursquare_username', array(
+		'default' => '',
+	) );
+	
 	
 	$wp_customize->add_control( 'show_social_icons', array(
 		'label'   => 'Show Social Icons',
@@ -157,6 +217,111 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 5,
+	) );
+	
+	$wp_customize->add_control( 'dribbble_username', array(
+		'label'   => 'Dribbble Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 6,
+	) );
+	
+	$wp_customize->add_control( 'behance_username', array(
+		'label'   => 'Behance Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 7,
+	) );
+	
+	$wp_customize->add_control( 'linkedin_username', array(
+		'label'   => 'Linkedin Profile ID',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 8,
+	) );
+	
+	$wp_customize->add_control( 'tumblr_username', array(
+		'label'   => 'Tumblr Site URL',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 9,
+	) );
+	
+	$wp_customize->add_control( 'pinterest_username', array(
+		'label'   => 'Pinterest Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 10,
+	) );
+	
+	$wp_customize->add_control( 'instagram_username', array(
+		'label'   => 'Instagram Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 11,
+	) );
+	
+	$wp_customize->add_control( '500px_username', array(
+		'label'   => '500px Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 12,
+	) );
+	
+	$wp_customize->add_control( 'flickr_username', array(
+		'label'   => 'Flickr Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 13,
+	) );
+	
+	$wp_customize->add_control( 'rdio_username', array(
+		'label'   => 'Rdio Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 14,
+	) );
+	
+	$wp_customize->add_control( 'spotify_username', array(
+		'label'   => 'Spotify Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 15,
+	) );
+	
+	$wp_customize->add_control( 'soundcloud_username', array(
+		'label'   => 'Soundcloud Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 16,
+	) );
+	
+	$wp_customize->add_control( 'vimeo_username', array(
+		'label'   => 'Vimeo Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 17,
+	) );
+	
+	$wp_customize->add_control( 'youtube_username', array(
+		'label'   => 'YouTube Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 18,
+	) );
+	
+	$wp_customize->add_control( 'github_username', array(
+		'label'   => 'GitHub Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 19,
+	) );
+	
+	$wp_customize->add_control( 'foursquare_username', array(
+		'label'   => 'Foursquare Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 20,
 	) );
 
 
