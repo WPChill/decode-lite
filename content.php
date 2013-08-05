@@ -30,7 +30,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<div class="entry-title"><h2><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594</span>'; ?><?php decode_print_post_title() ?></h2></div>
+			<div class="entry-title"><h2><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?><?php decode_print_post_title() ?></h2></div>
 		</header>
 		<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
