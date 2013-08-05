@@ -12,7 +12,7 @@
  */
 function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'bl/Volumes/Macintosh%20HD/Users/Scott/Dropbox/Documents/Web/Decode/Decode%202.4/inc/customizer.phpogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 
