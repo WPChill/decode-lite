@@ -11,6 +11,12 @@
 	 </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php if (get_theme_mod( 'site_colophon', '' ) !== '' ) : ?>
+		<div class="site-colophon">
+			<p><?php echo get_theme_mod( 'site_colophon' ); ?></p>
+		</div><!-- .site-colophon -->
+		<?php endif; ?>
+		
 		<?php if (get_theme_mod( 'show_theme_info', true ) == true ) : ?>
 		<div class="theme-info">
 			<p><a href="http://ScottHSmith.com/projects/decode/">Decode</a> by Scott Smith</p>

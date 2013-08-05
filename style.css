@@ -844,16 +844,16 @@ footer .date a {
 		border-bottom: none;
 	}
 
-.theme-info {
+.theme-info, .site-colophon {
 	font-size: 0.8em;
 	text-align: center;
 }
 
-	.no-touch .theme-info a:hover {
+	.no-touch .theme-info a:hover, .no-touch .site-colophon a:hover {
 		border-bottom: 1px solid #009BCD;
 	}
 	
-	.no-touch .theme-info a:active {
+	.no-touch .theme-info a:active, .no-touch .site-colophon a:active {
 		border-bottom: 1px solid #007EA6;
 	}
 
@@ -986,6 +986,10 @@ footer .date a {
 		color: #007EA6;
 		border-bottom: none;
 	}
+	
+.link-title-arrow {
+	padding: 0.5em;
+}
 
 
 /* =Quotes

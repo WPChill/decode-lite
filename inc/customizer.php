@@ -325,12 +325,13 @@ function decode_customize_register( $wp_customize ) {
 	) );
 
 
+
 /**
- * Other Options
+ * Reading Options
  */
 
-	$wp_customize->add_section( 'decode_other_options', array(
-    	'title'   => 'Other Options',
+	$wp_customize->add_section( 'decode_reading_options', array(
+    	'title'   => 'Reading Options',
 		'priority'=> 37,
     ) );
     
@@ -342,9 +343,17 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'show_categories', array(
 		'default' => false,
 	) );
+	
+	$wp_customize->add_setting( 'link_post_title_arrow', array(
+		'default' => false,
+	) );
     
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
+	) );
+	
+	$wp_customize->add_setting( 'site_colophon', array(
+		'default' => '',
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
@@ -354,30 +363,44 @@ function decode_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => 'Show tags on front page (tags will be shown on post\'s individual page)',
-		'section' => 'decode_other_options',
+		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 	
 	$wp_customize->add_control( 'show_categories', array(
 		'label'   => 'Show categories on front page (categories will be shown on post\'s individual page)',
-		'section' => 'decode_other_options',
+		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 2,
 	) );
 	
-	$wp_customize->add_control( 'show_theme_info', array(
-		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
-		'section' => 'decode_other_options',
+	$wp_customize->add_control( 'link_post_title_arrow', array(
+		'label'   => 'Add an arrow before the title of a link post',
+		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 3,
+	) );
+	
+	$wp_customize->add_control( 'show_theme_info', array(
+		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 4,
 	) );	
+	
+	$wp_customize->add_control( 'site_colophon', array(
+		'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
+		'section' => 'decode_reading_options',
+		'type'    => 'text',
+		'priority'=> 5,
+	) );
 	
 	$wp_customize->add_control( 'html_description', array(
 		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
-		'section' => 'decode_other_options',
+		'section' => 'decode_reading_options',
 		'type'    => 'text',
-		'priority'=> 4,
+		'priority'=> 6,
 	) );
 	
 /**

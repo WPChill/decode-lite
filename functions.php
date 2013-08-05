@@ -280,7 +280,7 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 	}
 
 
-	echo '<h2 class="entry-title"><a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a></h2>';
+	echo '<a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a>';
 
 	}
 }
