@@ -1340,6 +1340,14 @@ article.post {
 	width: 82.5%;
 }
 
+.SidebarLink.left {
+	left: 2.5%;
+}
+
+.SidebarLink.right {
+	right: 2.5%;
+}
+
 .sidebar {
 	width: 45%;
 }
