@@ -831,15 +831,15 @@ footer .date a {
 	color: #808080;
 }
 
-	footer .date a:hover {
+	.no-touch footer .date a:hover {
 		color: #009BCD;
 	}
 	
-	footer .date a:active {
+	.no-touch footer .date a:active {
 		color: #007EA6;
 	}
 
-	.post footer .date a:hover, .post footer .date a:active {
+	.no-touch .post footer .date a:hover, .post footer .date a:active {
 		margin-top: 3.5%;
 		border-bottom: none;
 	}
