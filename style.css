@@ -698,17 +698,20 @@ object {
 	margin: 0 auto;
 }
 
-.sticky {
-}
+.sticky {}
+
 .hentry {
 	margin: 0 0 1.5em;
 }
+
 .entry-meta {
 	clear: both;
 }
+
 .byline {
 	display: none;
 }
+
 .single .byline,
 .group-blog .byline {
 	display: inline;
@@ -900,6 +903,11 @@ footer .date a {
 	margin-bottom: 7.5%;
 	border-bottom: 1px solid #009BCD;
 	cursor: pointer;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: sticky;
+	top: 0;
 }
 
 .admin-bar .sidebar {
@@ -910,7 +918,6 @@ footer .date a {
 	-webkit-transition: opacity 0.25s ease-out;
 	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
-	position: relative;
 	padding: 3.5%;
 	display: block;
 	opacity: 1;
