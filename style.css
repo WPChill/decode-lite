@@ -966,7 +966,7 @@ footer .date a {
 	-webkit-transform: translateX(110%);
 	-moz-transform: translateX(110%);
 	transform: translateX(110%);
-	float: right;
+	right: 0;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
 }
 
