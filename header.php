@@ -42,7 +42,7 @@
 		
 		<div class="site-branding">
 			
-			<?php if (get_theme_mod( 'header_image', '' )) echo '<img class="site-logo" src="' . get_theme_mod( 'header_image', '' ) . '">'; ?>
+			<?php if (get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '"><img class="site-logo" src="' . get_theme_mod( 'header_image', '' ) . '"></a>'; ?>
 						
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			
