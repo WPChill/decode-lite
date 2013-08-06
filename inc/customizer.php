@@ -471,28 +471,24 @@ function decode_customize_register( $wp_customize ) {
 		'label'      => __( 'Accent Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'accent_color',
-		'priority'=> 2,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
 		'label'      => __( 'Active Link Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_accent_color',
-		'priority'=> 3,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
 		'label'      => __( 'Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'text_color',
-		'priority'=> 4,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
 		'label'      => __( 'Secondary Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
-		'priority'=> 5,
 	) ) );
 
 }
