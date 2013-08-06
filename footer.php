@@ -25,6 +25,26 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+	<?php if (get_theme_mod( 'show_sidebar', true ) == true ) : ?>
+	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position', 'left' );?>">
+		<div id="sidebar_top" class="SidebarTop">
+			<div id="sidebar_close" class="SidebarClose">
+				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+				<title>Cross</title>
+				<g id="Page 1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<path class="SocialIconFill" d="M0,172.881356 L72.8813559,100 L1.0658141e-14,27.1186441 L27.1186441,-2.84217094e-14 L100,72.8813559 L172.881356,0 L200,27.1186441 L127.118644,100 L200,172.881356 L172.881356,200 L100,127.118644 L27.1186441,200 Z M0,172.881356" fill="#444444"></path>
+				</g>
+				</svg>
+			</div>
+		</div>
+		<div class="SidebarContent">
+			<?php get_sidebar(); ?>
+		</div>
+	</div>
+	<?php endif; ?>
+	<!-- #sidebar -->
+
+
 <?php wp_footer(); ?>
 
 </body>
