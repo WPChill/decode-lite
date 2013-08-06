@@ -14,6 +14,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<?php if (get_theme_mod( 'favicon_image', '' )) echo '<link rel="icon" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
+<?php if (get_theme_mod( 'favicon_image', '' )) echo '<link rel="apple-touch-icon-precomposed" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
 
 <?php wp_head(); ?>
 </head>

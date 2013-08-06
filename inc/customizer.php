@@ -31,12 +31,24 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'header_image', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'favicon_image', array(
+		'default' => '',
+	) );
 
 
-	$wp_customize->add_control( new WP_Customize_Header_Image_Control( $wp_customize, 'header_image', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
 		'label'   => 'Header Image',
 		'section' => 'decode_header_options',
 		'settings'=> 'header_image',
+		'priority'=> 1,
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'favicon_image', array(
+		'label'   => 'Favicon Image (recommended to be a PNG)',
+		'section' => 'decode_header_options',
+		'settings'=> 'favicon_image',
+		'priority'=> 2,
 	) ) );
 
 
@@ -459,24 +471,28 @@ function decode_customize_register( $wp_customize ) {
 		'label'      => __( 'Accent Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'accent_color',
+		'priority'=> 2,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
 		'label'      => __( 'Active Link Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_accent_color',
+		'priority'=> 3,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
 		'label'      => __( 'Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'text_color',
+		'priority'=> 4,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
 		'label'      => __( 'Secondary Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
+		'priority'=> 5,
 	) ) );
 
 }

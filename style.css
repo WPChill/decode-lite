@@ -413,7 +413,7 @@ object {
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 }
-.site-header img,
+
 .entry-content img,
 img[class*="align"],
 img[class*="wp-image-"] {
@@ -479,7 +479,7 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 5% auto 0;
+	margin: 3.5% auto 0;
 	border-bottom: 1px solid #009BCD;
 }
 
@@ -491,9 +491,9 @@ object {
 	-webkit-transition: opacity 0.5s ease-out;
 	-moz-transition: opacity 0.5s ease-out;
 	transition: opacity 0.5s ease-out;
-	margin: 2.5% auto;
-	height: auto;
-	width: 10em;
+	margin: 0 auto 2%;
+	height: 8.5em;
+	width: auto;
 	opacity: 1;
 }
 
