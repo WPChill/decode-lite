@@ -3,7 +3,7 @@ Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar or the menu icon to be on the left or right side of the page. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your Twitter, App.net, Facebook, or Google+ profile. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
+Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar or the menu icon to be on the left or right side of the page. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
 Version: 2.5.1
 License: GNU General Public License
 License URI: license.txt
@@ -931,9 +931,9 @@ footer .date a {
 }
 
 .sidebar {
-	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
-	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
-	transition: left 0.35s ease-out, right 0.35s ease-out;
+	-webkit-transition: -webkit-transform 0.35s ease-out;
+	-moz-transition: -moz-transform 0.35s ease-out;
+	transition: transform 0.35s ease-out;
 	top: 0;
 	width: 95%;
 	font-size: 0.95em;
@@ -946,25 +946,49 @@ footer .date a {
 	z-index: 5;
 }
 
+.no-csstransforms {
+	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
+	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
+	transition: left 0.35s ease-out, right 0.35s ease-out;
+}
+
 .sidebar.left {
+	-webkit-transform: translateX(-110%);
+	-moz-transform: translateX(-110%);
+	transform: translateX(-110%);
+}
+
+.no-csstransforms .sidebar.left {
 	left: -100%;
 }
 
 .sidebar.right {
-	right: -100%;
+	-webkit-transform: translateX(110%);
+	-moz-transform: translateX(110%);
+	transform: translateX(110%);
 	float: right;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
+}
+
+.no-csstransforms .sidebar.right {
+	right: -100%;
 }
 
 .SidebarContent {
 	margin: 0 5%;
 }
 
-.sidebar.left.visible {
+.sidebar.left.visible, .sidebar.right.visible {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+.no-csstransforms .sidebar.left.visible {
 	left: 0;
 }
 
-.sidebar.right.visible {
+.no-csstransforms .sidebar.right.visible {
 	right: 0;
 }	
 
@@ -1272,11 +1296,11 @@ li.comment {
 	width: 33%;
 }
 
-.sidebar.left {
+.no-csstransforms .sidebar.left {
 	left: -40%;
 }
 
-.sidebar.right {
+.no-csstransforms .sidebar.right {
 	right: -40%;
 }
 
@@ -1352,11 +1376,11 @@ article.post {
 	width: 45%;
 }
 
-.sidebar.left {
+.no-csstransforms .sidebar.left {
 	left: -50%;
 }
 
-.sidebar.right {
+.no-csstransforms .sidebar.right {
 	right: -50%;
 }
 }
@@ -1395,11 +1419,11 @@ article.post {
 	width: 25%;
 }
 
-.sidebar.left {
+.no-csstransforms .sidebar.left {
 	left: -28%;
 }
 
-.sidebar.right {
+.no-csstransforms .sidebar.right {
 	right: -28%;
 }
 }
