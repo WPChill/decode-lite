@@ -35,6 +35,14 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'favicon_image', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'show_site_title', array(
+		'default' => true,
+	) );
+	
+	$wp_customize->add_setting( 'show_site_description', array(
+		'default' => true,
+	) );
 
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
@@ -50,6 +58,20 @@ function decode_customize_register( $wp_customize ) {
 		'settings'=> 'favicon_image',
 		'priority'=> 2,
 	) ) );
+	
+	$wp_customize->add_control( 'show_site_title', array(
+		'label'   => 'Show Site Title',
+		'section' => 'decode_header_options',
+		'type'    => 'checkbox',
+		'priority'=> 3,
+	) );
+	
+	$wp_customize->add_control( 'show_site_description', array(
+		'label'   => 'Show Site Description',
+		'section' => 'decode_header_options',
+		'type'    => 'checkbox',
+		'priority'=> 4,
+	) );
 
 
 
