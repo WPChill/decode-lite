@@ -905,7 +905,7 @@ footer .date a {
 	cursor: pointer;
 }
 
-.no-touch {
+.no-touch .SidebarTop {
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
