@@ -7,12 +7,14 @@ jQuery(document).ready(function($){
 	});
 	$(window).swipe( {
 	
+	threshold:150, maxTimeThreshold:1000,
 	swipeRight:function(event, distance, duration, fingerCount) {
 		
 		$('#sidebar.left').addClass('visible');
 		$('#sidebar.right').removeClass('visible');
 	},
-
+	
+	threshold:150, maxTimeThreshold:1000,
 	swipeLeft:function(event, distance, duration, fingerCount) {
 		
 		$('#sidebar.left').removeClass('visible');
