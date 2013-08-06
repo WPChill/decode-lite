@@ -33,4 +33,11 @@
 			}
 		} );
 	} );
+	//Update site background color...
+	wp.customize( 'background_color', function( value ) {
+		value.bind( function( newval ) {
+			$('body, .sidebar, .SidebarTop, .main-navigation ul ul').css('background-color', newval );
+		} );
+	} );
+	
 } )( jQuery );

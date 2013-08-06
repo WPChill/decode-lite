@@ -769,7 +769,7 @@ article.page .entry-header {
 article.post {
 	width: 100%;
 	margin: 0 auto 15%;
-	line-height: 1.75;
+	line-height: 1.65;
 }
 
 .entry-content h1 {
@@ -1380,7 +1380,7 @@ article.post {
 
 .site-main, .site-header {
 	width: 60%;
-	max-width: 1200px;
+	max-width: 800px;
 }
 
 .SidebarLink.left {

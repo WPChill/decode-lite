@@ -14,6 +14,8 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';	
+
 
 
 /**
@@ -42,7 +44,7 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'show_sidebar', array(
 		'label'   => 'Enable Sidebar',
 		'section' => 'decode_sidebar_options',
-		'type'       => 'checkbox',
+		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 	
@@ -91,6 +93,7 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
+
 
 
 /**
@@ -329,12 +332,32 @@ function decode_customize_register( $wp_customize ) {
 /**
  * Reading Options
  */
+ 
+	$wp_customize->add_section( 'decode_header_options', array(
+    	'title'   => 'Header Options',
+		'priority'=> 32,
+    ) );
+
+    $wp_customize->add_setting( 'header_image', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_control( new WP_Customize_Header_Image_Control( $wp_customize, 'header_image', array(
+        'label'   => 'Header Image',
+        'section' => 'decode_header_options',
+        'settings'=> 'header_image',
+    ) ) );
+
+
+
+/**
+ * Reading Options
+ */
 
 	$wp_customize->add_section( 'decode_reading_options', array(
     	'title'   => 'Reading Options',
 		'priority'=> 37,
     ) );
-    
     
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
@@ -360,7 +383,7 @@ function decode_customize_register( $wp_customize ) {
 		'default' => '',
 	) );
 		
-	
+		
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => 'Show tags on front page (tags will be shown on post\'s individual page)',
 		'section' => 'decode_reading_options',
@@ -402,48 +425,54 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'text',
 		'priority'=> 6,
 	) );
-	
+
+
+
 /**
  * Color Options
  */
 
 	$wp_customize->add_setting( 'accent_color', array(
-		'default' => '#009BCD',
+		'default'   => '#009BCD',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'secondary_accent_color', array(
-		'default' => '#007EA6',
+		'default'   => '#007EA6',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'text_color', array(
-		'default' => '#444444',
+		'default'   => '#444444',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'secondary_text_color', array(
-		'default' => '#808080',
+		'default'   => '#808080',
+		'transport' => 'refresh',
 	) );
 	
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
-		'label'        => __( 'Accent Color', 'decode' ),
+		'label'      => __( 'Accent Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'accent_color',
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
-		'label'        => __( 'Active Link Color', 'decode' ),
+		'label'      => __( 'Active Link Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_accent_color',
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
-		'label'        => __( 'Text Color', 'decode' ),
+		'label'      => __( 'Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'text_color',
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
-		'label'        => __( 'Secondary Text Color', 'decode' ),
+		'label'      => __( 'Secondary Text Color', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
 	) ) );
@@ -456,6 +485,6 @@ add_action( 'customize_register', 'decode_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '201308051', true );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );
