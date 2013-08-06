@@ -903,6 +903,9 @@ footer .date a {
 	margin-bottom: 7.5%;
 	border-bottom: 1px solid #009BCD;
 	cursor: pointer;
+}
+
+.no-touch {
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
