@@ -5,20 +5,4 @@ jQuery(document).ready(function($){
 	$("#sidebar_link, #sidebar_top").click(function(){
 		$('#sidebar').toggleClass('visible');
 	});
-	$(window).swipe( {
-	
-	threshold:100, maxTimeThreshold:1000,
-	swipeRight:function(event, distance, duration, fingerCount) {
-		
-		$('#sidebar.left').addClass('visible');
-		$('#sidebar.right').removeClass('visible');
-	},
-	
-	threshold:100, maxTimeThreshold:1000,
-	swipeLeft:function(event, distance, duration, fingerCount) {
-		
-		$('#sidebar.left').removeClass('visible');
-		$('#sidebar.right').addClass('visible');
-	}
-	});
 });

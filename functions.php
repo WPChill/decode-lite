@@ -135,8 +135,6 @@ function decode_scripts() {
 
 	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
 	
-	wp_register_script( 'decode-touchswipe', get_template_directory_uri() . '/js/touchswipe.js', array('jquery'), '2.6', true );
-
 	wp_register_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
 
 
@@ -154,8 +152,6 @@ function decode_scripts() {
 
 	wp_enqueue_script( 'decode-fastclick' );
 	
-	wp_enqueue_script( 'decode-touchswipe' );
-
 	wp_enqueue_script( 'decode-sidebar' );	
 }
 }
