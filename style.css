@@ -962,7 +962,6 @@ footer .date a {
 	background: #E3E5E7;
 	position: fixed;
 	height: 100%;
-	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	z-index: 5;
@@ -979,6 +978,8 @@ footer .date a {
 	-moz-transform: translateX(-110%);
 	-ms-transform: translateX(-110%);
 	transform: translateX(-110%);
+	left: 0;
+	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 }
 
 .no-csstransforms .sidebar.left {
