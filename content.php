@@ -75,7 +75,7 @@
 			<?php endif; ?>
 			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
 		</footer><!-- .entry-meta -->
-	</article>
+	</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php elseif ( is_search() ): // Only display Excerpts for Search ?>
 
@@ -89,20 +89,22 @@
 			</div><!-- .entry-summary -->
 		</a>
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
-	</article>
+	</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php elseif ( get_theme_mod( 'use_excerpts', false ) == true && !is_sticky() ) : ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<div class="entry-title"><h2><?php the_title(); ?></h2></div>
+			<div class="entry-title"><a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a></div>
 		</header><!-- .entry-header -->
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
-		<a class="read-more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
+		<footer class="entry-meta">
+		<a class="read-more-link" href="<?php echo get_permalink(); ?>">Read More&hellip;</a>
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
-	</article>
+		</footer><!-- .entry-meta -->
+	</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php else : ?>
 
