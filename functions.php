@@ -179,7 +179,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 				
-		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .search-entry:hover, .search-entry:hover .entry-title, footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
+		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .search-entry:hover, .search-entry:hover .entry-title, .no-touch footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 		
@@ -187,7 +187,7 @@ function decode_customize_css()
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 		
-		.no-touch a:active, .no-touch .main-navigation a:active, .search-entry:active, .search-entry:active .entry-title, footer .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover {
+		.no-touch a:active, .no-touch .main-navigation a:active, .search-entry:active, .search-entry:active .entry-title, .no-touch footer .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
 			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 		
