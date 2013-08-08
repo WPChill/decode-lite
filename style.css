@@ -344,11 +344,11 @@ a {
 		color: #007EA6;
 	}
 
-	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .read-more-link:hover {
+	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover {
 		border-bottom: 1px solid #009BCD;
 	}
 	
-	.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .read-more-link:active {
+	.no-touch .entry-content a:active, .no-touch .entry-meta a:active {
 		border-bottom: 1px solid #007EA6;
 	}
 
@@ -764,6 +764,10 @@ a .attachment-post-thumbnail {
 	margin: 0 auto;
 }
 
+.entry-title a {
+	color: #444444;
+}
+
 article.page .entry-header {
 	font-size: 1.75em;
 	margin: 2.5% auto 5%;
@@ -813,6 +817,7 @@ article.post {
 .post footer {
 	width: 90%;
 	margin: 0 auto;
+	padding-bottom: 0.5%;
 	border-bottom: 1px solid #009BCD;
 }
 
@@ -1352,7 +1357,7 @@ article.post {
 }
 
 .post footer {
-	width: 75%;
+	width: 85%;
 }
 
 .search .post, .search .page {
@@ -1404,17 +1409,23 @@ article.post {
 	font-size: 3.5em;
 }
 
-.entry-title h2 {
-	font-size: 2.25em;
+.sociallink svg {
+	height: 2.75em;
+	width: 2.75em;
+	margin: 0 1%;
+}
+
+.site-main, .site-header {
+	width: 60%;
+	max-width: 800px;
 }
 
 .page-header {
 	margin-bottom: 3.5%;
 }
 
-.site-main, .site-header {
-	width: 60%;
-	max-width: 800px;
+.entry-title h2 {
+	font-size: 2.25em;
 }
 
 .SidebarLink.left {
