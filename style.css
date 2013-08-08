@@ -948,7 +948,7 @@ footer .date a {
 .sidebar {
 	-webkit-transition: -webkit-transform 0.35s ease-out;
 	-moz-transition: -moz-transform 0.35s ease-out;
-	transition: transform 0.35s ease-out;
+	transition: -webkit-transform 0.35s ease-out, -ms-transform 0.35s ease-out, transform 0.35s ease-out;
 	top: 0;
 	width: 95%;
 	font-size: 0.95em;
@@ -961,7 +961,7 @@ footer .date a {
 	z-index: 5;
 }
 
-.no-csstransforms {
+.no-csstransforms .sidebar {
 	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
 	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
 	transition: left 0.35s ease-out, right 0.35s ease-out;
@@ -970,6 +970,7 @@ footer .date a {
 .sidebar.left {
 	-webkit-transform: translateX(-110%);
 	-moz-transform: translateX(-110%);
+	-ms-transform: translateX(-110%);
 	transform: translateX(-110%);
 }
 
@@ -980,6 +981,7 @@ footer .date a {
 .sidebar.right {
 	-webkit-transform: translateX(110%);
 	-moz-transform: translateX(110%);
+	-ms-transform: translateX(110%);
 	transform: translateX(110%);
 	right: 0;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
@@ -996,6 +998,7 @@ footer .date a {
 .sidebar.left.visible, .sidebar.right.visible {
 	-webkit-transform: translateX(0%);
 	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
 	transform: translateX(0%);
 }
 
@@ -1005,7 +1008,7 @@ footer .date a {
 
 .no-csstransforms .sidebar.right.visible {
 	right: 0;
-}	
+}
 
 
 /* =Links
