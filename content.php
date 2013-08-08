@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php if ( has_post_format( 'quote' ) && !is_search() ) : ?>
+<?php if ( has_post_format( 'quote' ) && get_theme_mod( 'use_excerpts', false ) == false && !is_search() ) : ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
@@ -26,7 +26,7 @@
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 
-<?php elseif ( has_post_format( 'link' ) && !is_search() ): ?>
+<?php elseif ( has_post_format( 'link' ) && get_theme_mod( 'use_excerpts', false ) == false && !is_search() ): ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
@@ -49,8 +49,8 @@
 			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
-	
-<?php elseif ( has_post_thumbnail() && !is_search() ): ?>
+
+<?php elseif ( has_post_thumbnail() && get_theme_mod( 'use_excerpts', false ) == false && !is_search() ): ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
@@ -77,7 +77,7 @@
 		</footer><!-- .entry-meta -->
 	</article>
 
-<?php elseif ( is_search() ) : // Only display Excerpts for Search ?>
+<?php elseif ( is_search() ): // Only display Excerpts for Search ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<a class="search-entry" href="<?php the_permalink(); ?>">
@@ -88,6 +88,19 @@
 				<?php decode_search_excerpt_highlight(); ?>
 			</div><!-- .entry-summary -->
 		</a>
+		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+	</article>
+
+<?php elseif ( get_theme_mod( 'use_excerpts', false ) == true && !is_sticky() ) : ?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			<div class="entry-title"><h2><?php the_title(); ?></h2></div>
+		</header><!-- .entry-header -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<a class="read-more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 	</article>
 
