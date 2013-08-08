@@ -183,7 +183,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 		
-		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .no-touch .site-description a:hover, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch textarea:focus, .touch textarea:focus {
+		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .no-touch .site-description a:hover, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .read-more-link:hover {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 		
@@ -191,7 +191,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 		
-		.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
+		.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active, .no-touch .read-more-link:active {
 			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 		
