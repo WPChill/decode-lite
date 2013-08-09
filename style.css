@@ -1430,7 +1430,11 @@ article.post {
 
 .site-main, .site-header {
 	width: 60%;
-	max-width: 800px;
+	max-width: 45em;
+}
+
+.site-header {
+	max-width: 60em;
 }
 
 .page-header {
