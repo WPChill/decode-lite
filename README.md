@@ -7,7 +7,7 @@ Decode's elegant sidebar is conveniently accessed by clicking or tapping on the 
 
 Decode supports link posts, where the title can be hyperlinked. To do this, first set the post format to "Link" and then add designate where the title should link to using a custom field entitled, `title_url` or `url_title`. I also have added support for quote posts. Quote marks are automatically added, so don't use them when composing a quote.
 
-Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. 
+Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. A site-wide header image can also be set in the Header Options section of the theme customizer.
 
 Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, Google+, Dribbble, Behance, LinkedIn, Tumblr, Pinterest, Instagram, 500px, Flickr, Rdio, Spotify, Soundcloud, Vimeo, YouTube, Github, and Foursquare profiles. These can all be configured in the Customize menu as well. 
 
