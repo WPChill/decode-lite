@@ -695,7 +695,7 @@ object {
 /* =Content
 ----------------------------------------------- */
 
-.site-main {
+.site-main, .site-footer {
 	width: 92.5%;
 	margin: 0 auto;
 }
@@ -1254,7 +1254,7 @@ li.comment {
 ----------------------------------------------- */
 @media only screen and (min-width: 699px) {
 
-.site-main, .site-header {
+.site-header, .site-main, .site-footer {
 	width: 80%;
 }
 
@@ -1388,7 +1388,7 @@ article.post {
 
 /* Portrait iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-main, .site-header {
+.site-header, .site-main, .site-footer {
 	width: 82.5%;
 }
 
@@ -1428,7 +1428,7 @@ article.post {
 	margin: 0 1%;
 }
 
-.site-main, .site-header {
+.site-header, .site-main, .site-footer {
 	width: 60%;
 	max-width: 45em;
 }
