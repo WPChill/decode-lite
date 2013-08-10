@@ -13,7 +13,7 @@
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
-			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
+			<p class="date"><?php decode_posted_on(); ?></p>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 		
@@ -28,7 +28,7 @@
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
-			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
+			<p class="date"><?php decode_posted_on(); ?></p>
 		</footer><!-- .entry-meta -->
 	</article>
 	
@@ -44,7 +44,7 @@
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
-			<p class="date"><a href="<?php the_permalink(); ?>">Posted on <?php decode_posted_on(); ?></a></p>
+			<p class="date"><?php decode_posted_on(); ?></p>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 

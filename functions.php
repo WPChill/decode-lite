@@ -200,7 +200,7 @@ function decode_customize_css()
 			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 		
-		.tags, .categories, footer .date a, .comment-metadata a {
+		.tags, .categories, footer .date, footer .date a, .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
 		}
          </style>
