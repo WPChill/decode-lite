@@ -28,7 +28,12 @@ function decode_setup() {
 	 * to change 'decode' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
-
+	
+	/**
+	 * Specifies for the theme to use HTML 5 tags
+	 */
+	add_theme_support( 'html5' );
+	
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
@@ -123,7 +128,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.6.1" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.6.2" );
 	
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
