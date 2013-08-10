@@ -565,7 +565,7 @@ object {
 	margin: 0 auto;
 }
 
-.sociallink svg {
+.sociallink svg, .sociallink img {
 	height: 2em;
 	width: 2em;
 	margin: 0 0.5%;
@@ -1287,7 +1287,7 @@ li.comment {
 	display: inline;
 }
 
-.sociallink svg {
+.sociallink svg, .sociallink img {
 	height: 2.5em;
 	width: 2.5em;
 	margin: 0 1%;
@@ -1422,7 +1422,7 @@ article.post {
 	font-size: 3.5em;
 }
 
-.sociallink svg {
+.sociallink svg, .sociallink img {
 	height: 2.75em;
 	width: 2.75em;
 	margin: 0 1%;
