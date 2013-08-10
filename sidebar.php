@@ -21,4 +21,4 @@
 				</aside>
 
 			<?php endif; // end sidebar widget area ?>
-		</div><!-- #secondary .widget-area -->
+		</div><!-- #primary .widget-area -->
