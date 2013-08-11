@@ -703,7 +703,7 @@ object {
 
 .site-main, .site-footer {
 	width: 92.5%;
-	margin: 2.5% auto 0;
+	margin: 0 auto;
 }
 
 .sticky {}
@@ -783,7 +783,7 @@ article.page .entry-header {
 
 article.post {
 	width: 100%;
-	margin: 0 auto 15%;
+	margin: 5% auto 10%;
 	line-height: 1.65;
 }
 
@@ -1348,7 +1348,7 @@ li.comment {
 }
 
 article.post {
-	margin: 0 auto 7.5%;
+	margin: 2.5% auto 5%;
 }
 
 .entry-content h1 {
