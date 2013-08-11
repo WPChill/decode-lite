@@ -39,7 +39,42 @@
 			$('body, .sidebar, .SidebarTop, .main-navigation ul ul').css('background-color', newval );
 		} );
 	} );
+	
+	//Show/Hide site title
+	wp.customize( 'show_site_title', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-title' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide site description
+	wp.customize( 'show_site_description', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-description' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide social links
+	wp.customize( 'show_social_icons', function( value ) {
+		value.bind( function( to ) {
+			$( '.sociallinks' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide sidebar
+	wp.customize( 'show_sidebar', function( value ) {
+		value.bind( function( to ) {
+			$( '.SidebarLink' ).fadeToggle(250);
+		} );
+	} );
 		
+	//Show/Hide comments
+	wp.customize( 'enable_comments', function( value ) {
+		value.bind( function( to ) {
+			$( '.comments-link, #comments' ).slideToggle(250);
+		} );
+	} );
+	
 	//Update site footer text
 	wp.customize( 'site_colophon', function( value ) {
 		value.bind( function( to ) {

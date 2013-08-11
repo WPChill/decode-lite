@@ -50,10 +50,12 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'show_site_title', array(
 		'default' => true,
+		'transport' => 'postMessage',
 	) );
 	
 	$wp_customize->add_setting( 'show_site_description', array(
 		'default' => true,
+		'transport' => 'postMessage',
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
@@ -110,6 +112,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_sidebar', array(
 		'default'  => true,
+		'transport' => 'postMessage',
 	) );
 
 	$wp_customize->add_setting( 'sidebar_position', array(
@@ -164,6 +167,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'enable_comments', array(
 		'default' => true,
+		'transport' => 'postMessage',
 	) );
 
 
@@ -188,6 +192,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'show_social_icons', array(
 		'default' => false,
+		'transport' => 'postMessage',
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
