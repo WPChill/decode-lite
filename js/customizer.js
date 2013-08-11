@@ -75,6 +75,34 @@
 		} );
 	} );
 	
+	//Show/Hide tags
+	wp.customize( 'show_tags', function( value ) {
+		value.bind( function( to ) {
+			$( '.tags' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide categories
+	wp.customize( 'show_categories', function( value ) {
+		value.bind( function( to ) {
+			$( '.categories' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide theme credit
+	wp.customize( 'show_theme_info', function( value ) {
+		value.bind( function( to ) {
+			$( '.theme-info' ).slideToggle(250);
+		} );
+	} );
+	
+	//Show/Hide arrows in link post title
+	wp.customize( 'link_post_title_arrow', function( value ) {
+		value.bind( function( to ) {
+			$( '.link-title-arrow' ).toggle(250);
+		} );
+	} );
+	
 	//Update site footer text
 	wp.customize( 'site_colophon', function( value ) {
 		value.bind( function( to ) {

@@ -430,18 +430,22 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
+		'transport' => 'postMessage',
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
 		'default' => false,
+		'transport' => 'postMessage',
 	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
+		'transport' => 'postMessage',
 	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
+		'transport' => 'postMessage',
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
