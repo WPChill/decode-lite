@@ -727,7 +727,7 @@ object {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 0;
+	margin: 0 0 2.5%;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
