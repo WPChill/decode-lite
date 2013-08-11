@@ -114,7 +114,7 @@ get_header();
 					?>
 					<?php endif; ?>
 					
-					<?php edit_post_link( __( 'Edit', '_s' ), ' <span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'decode' ), ' <span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 
