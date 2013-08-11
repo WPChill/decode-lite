@@ -441,6 +441,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'site_colophon', array(
 		'default' => '',
+		'transport' => 'postMessage',
 	) );
 
 
@@ -545,6 +546,6 @@ add_action( 'customize_register', 'decode_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '201308051', true );
+	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.6.3', true );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );

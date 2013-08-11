@@ -16,7 +16,7 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
+	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' == to ) {
@@ -33,10 +33,17 @@
 			}
 		} );
 	} );
-	//Update site background color...
+	//Update site background color
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('body, .sidebar, .SidebarTop, .main-navigation ul ul').css('background-color', newval );
+		} );
+	} );
+		
+	//Update site footer text
+	wp.customize( 'site_colophon', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-colophon p' ).text( to );
 		} );
 	} );
 	
