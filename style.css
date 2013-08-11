@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar or the menu icon to be on the left or right side of the page. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.6.2
+Version: 2.6.3
 License: GNU General Public License
 License URI: license.txt
 Tags: one-column, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
@@ -282,6 +282,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
 	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
@@ -297,6 +299,8 @@ textarea {
 	.no-touch input[type="email"]:hover,
 	.no-touch input[type="password"]:hover,
 	.no-touch input[type="search"]:hover,
+	.no-touch input[type="tel"]:hover,
+	.no-touch input[type="url"]:hover,
 	.no-touch textarea:hover{
 		color: #A6A6A6;
 		border-color: #A6A6A6;
@@ -306,6 +310,8 @@ textarea {
 	.no-touch input[type="email"]:focus, .touch input[type="email"]:focus,
 	.no-touch input[type="password"]:focus, .touch input[type="password"]:focus,
 	.no-touch input[type="search"]:focus, .touch input[type="search"]:focus,
+	.no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus,
+	.no-touch input[type="url"]:focus, .touch input[type="url"]:focus,
 	.no-touch textarea:focus, .touch textarea:focus {
 		color: #444444;
 		outline: none;
@@ -697,7 +703,7 @@ object {
 
 .site-main, .site-footer {
 	width: 92.5%;
-	margin: 0 auto;
+	margin: 2.5% auto 0;
 }
 
 .sticky {}
