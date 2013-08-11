@@ -16,6 +16,18 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
+class Decode_Customize_Textarea_Control extends WP_Customize_Control {
+    public $type = 'textarea';
+ 
+    public function render_content() {
+        ?>
+        <label>
+        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+        <textarea rows="5" style="width:100%; padding: 5px;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+        </label>
+        <?php
+    }
+}
 
 
 /**
@@ -42,6 +54,10 @@ function decode_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_setting( 'show_site_description', array(
 		'default' => true,
+	) );
+	
+	$wp_customize->add_setting( 'html_description', array(
+		'default' => '',
 	) );
 
 
@@ -71,6 +87,13 @@ function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
 		'priority'=> 4,
+	) );
+	
+	$wp_customize->add_control( 'html_description', array(
+		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
+		'section' => 'decode_header_options',
+		'type'    => 'text',
+		'priority'=> 5,
 	) );
 
 
@@ -420,10 +443,6 @@ function decode_customize_register( $wp_customize ) {
 		'default' => '',
 	) );
 
-	$wp_customize->add_setting( 'html_description', array(
-		'default' => '',
-	) );
-
 
 	$wp_customize->add_control( 'use_excerpts', array(
 		'label'   => 'Use entry excerpts instead of full text on site home. Excludes sticky posts.',
@@ -459,21 +478,14 @@ function decode_customize_register( $wp_customize ) {
 		'type'    => 'checkbox',
 		'priority'=> 5,
 	) );
-
-	$wp_customize->add_control( 'site_colophon', array(
-		'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
-		'section' => 'decode_reading_options',
-		'type'    => 'text',
-		'priority'=> 6,
-	) );
-
-	$wp_customize->add_control( 'html_description', array(
-		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
-		'section' => 'decode_reading_options',
-		'type'    => 'text',
-		'priority'=> 7,
-	) );
-
+	
+	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
+	    'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
+	    'section' => 'decode_reading_options',
+	    'settings'=> 'site_colophon',
+	    'priority'=> 6,
+	) ) );
+	
 
 
 /**
