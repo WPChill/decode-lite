@@ -276,11 +276,13 @@
 		</div>
 		<?php endif; ?>
 
+		<?php if (get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
-
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<?php endif; ?>
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

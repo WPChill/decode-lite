@@ -61,6 +61,13 @@
 		} );
 	} );
 	
+	//Show/Hide site navigation
+	wp.customize( 'show_site_navigation', function( value ) {
+		value.bind( function( to ) {
+			$( '.main-navigation' ).slideToggle(250);
+		} );
+	} );
+	
 	//Show/Hide sidebar
 	wp.customize( 'show_sidebar', function( value ) {
 		value.bind( function( to ) {

@@ -58,6 +58,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'transport' => 'postMessage',
 	) );
 	
+	$wp_customize->add_setting( 'show_site_navigation', array(
+		'default' => true,
+		'transport' => 'postMessage',
+	) );
+	
 	$wp_customize->add_setting( 'html_description', array(
 		'default' => '',
 	) );
@@ -91,11 +96,18 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 4,
 	) );
 	
+	$wp_customize->add_control( 'show_site_navigation', array(
+		'label'   => 'Show Navigation',
+		'section' => 'decode_header_options',
+		'type'    => 'checkbox',
+		'priority'=> 5,
+	) );
+	
 	$wp_customize->add_control( 'html_description', array(
 		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
 		'section' => 'decode_header_options',
 		'type'    => 'text',
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
 
 
