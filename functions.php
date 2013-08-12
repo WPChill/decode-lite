@@ -57,10 +57,10 @@ function decode_setup() {
 	) ) );
 
 	/**
-	 * This theme uses wp_nav_menu() in one location.
+	 * This theme uses wp_nav_menu() once in header.php.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'decode' ),
+		'navigation' => __( 'Nav Menu', 'decode' ),
 	) );
 }
 endif; // decode_setup
