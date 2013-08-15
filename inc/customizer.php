@@ -282,6 +282,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'foursquare_username', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'email_address', array(
+		'default' => '',
+	) );
 
 
 	$wp_customize->add_control( 'show_social_icons', array(
@@ -422,6 +426,13 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 20,
+	) );
+	
+	$wp_customize->add_control( 'email_address', array(
+		'label'   => 'Email Address',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 21,
 	) );
 
 
