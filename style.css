@@ -1105,6 +1105,55 @@ footer .date a {
 }
 
 
+/* =Explore Page
+----------------------------------------------- */
+
+.explore-page {
+	margin: 5% auto 0;
+}
+
+.post-lists {
+	margin: 1.5%;
+}
+
+.explore-page .widget h1 {
+	color: #444;
+	font-size: 1.15em;
+	border-bottom: 1px solid #009BCD;
+	padding-bottom: 1%;
+}
+
+.explore-page .widget:not(.search) {
+	-webkit-transition: box-shadow 0.35s ease-out;
+	-moz-transition: box-shadow 0.35s ease-out;
+	transition: box-shadow 0.35s ease-out;
+	width: 90%;
+	padding: 2.5% 5%;
+	margin: 0 auto 5%;
+	font-size: 1em;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+}
+
+	.explore-page .widget:not(.search):hover {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+	}
+
+.explore-page .widget.archives ul, .explore-page .widget.categories > ul {
+	height: 15em;
+	margin: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.explore-page .widget.search {
+	margin-bottom: 7.5%;
+}
+
+.explore-page .widget.recent-posts ul {
+	list-style: none;
+	margin: 0;
+}
+
 /* =Navigation
 ----------------------------------------------- */
 
@@ -1205,6 +1254,7 @@ li.comment {
 
 .search-form {
 	margin-bottom: 2.5%;
+	text-align: center;
 }
 
 .search-entry, .search-entry .entry-title {
@@ -1244,9 +1294,9 @@ li.comment {
 	margin-bottom: 3.5%;
 }
 
-.author-section:hover {
-	box-shadow: 0px 2px 5px rgba(0,0,0,0.35);
-}
+	.author-section:hover {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+	}
 
 .author-image {
 	width: 25%;
@@ -1431,6 +1481,10 @@ article.post {
 
 .search .post, .search .page {
 	margin-bottom: 5%;
+}
+
+.explore-page .widget.search {
+	margin-bottom: 3.5%;
 }
 
 .blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {

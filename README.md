@@ -9,6 +9,8 @@ Decode supports link posts, where the title can be hyperlinked. To do this, firs
 
 Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. A site-wide header image can also be set in the Header Options section of the theme customizer.
 
+To add an explore page to your site, simply add a page with the title "Explore" and Decode does the rest, adding an easy place to find new content on your site. 
+
 Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, Google+, Dribbble, Behance, LinkedIn, Tumblr, Pinterest, Instagram, 500px, Flickr, Rdio, Spotify, Soundcloud, Vimeo, YouTube, Github, and Foursquare profiles. These can all be configured in the Customize menu as well. 
 
 
