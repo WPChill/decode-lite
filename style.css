@@ -412,6 +412,14 @@ iframe,
 object {
 	max-width: 100%;
 }
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
 
 
 /* =Media
