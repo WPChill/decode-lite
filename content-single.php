@@ -10,6 +10,15 @@
 			<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
+			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
+				<section class="author-section">
+					<div class="author-image cf"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-text cf">
+						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
+					</div>
+				</section>
+			<?php endif; ?>
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
@@ -25,6 +34,15 @@
 		</header>
 		<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
+			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
+				<section class="author-section">
+					<div class="author-image cf"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-text cf">
+						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
+					</div>
+				</section>
+			<?php endif; ?>
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
@@ -41,6 +59,15 @@
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
+			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
+				<section class="author-section cf">
+					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-text">
+						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
+					</div>
+				</section>
+			<?php endif; ?>
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags('Tagged in: ',', '); ?></p>
 			<p class="categories">Categorized in: <?php the_category(', '); ?></p>
