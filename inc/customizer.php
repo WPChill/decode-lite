@@ -460,6 +460,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => false,
 		'transport' => 'postMessage',
 	) );
+	
+	$wp_customize->add_setting( 'show_author_section', array(
+		'default' => false,
+		'transport' => 'postMessage',
+	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
@@ -497,26 +502,33 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'checkbox',
 		'priority'=> 3,
 	) );
+	
+	$wp_customize->add_control( 'show_author_section', array(
+		'label'   => 'Show author\'s name, profile image, and bio after posts',
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 4,
+	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => 'Add an arrow before the title of a link post',
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 4,
+		'priority'=> 5,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 	    'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
 	    'section' => 'decode_reading_options',
 	    'settings'=> 'site_colophon',
-	    'priority'=> 6,
+	    'priority'=> 7,
 	) ) );
 	
 
@@ -578,6 +590,6 @@ add_action( 'customize_register', 'decode_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.6.3', true );
+	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.7', true );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );

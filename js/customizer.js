@@ -96,6 +96,13 @@
 		} );
 	} );
 	
+	//Show/Hide author section
+	wp.customize( 'show_author_section', function( value ) {
+		value.bind( function( to ) {
+			$( '.author-section' ).slideToggle(250);
+=		} );
+	} );
+	
 	//Show/Hide theme credit
 	wp.customize( 'show_theme_info', function( value ) {
 		value.bind( function( to ) {
