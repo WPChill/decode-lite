@@ -11,10 +11,11 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
-				<section class="author-section">
-					<div class="author-image cf"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
-					<div class="author-text cf">
+				<section class="author-section cf">
+					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-text">
 						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
@@ -35,10 +36,11 @@
 		<div class="entry-content"><?php the_content( __( 'continue reading &raquo;', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
-				<section class="author-section">
-					<div class="author-image cf"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
-					<div class="author-text cf">
+				<section class="author-section cf">
+					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-text">
 						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
@@ -64,6 +66,7 @@
 					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
 					<div class="author-text">
 						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
