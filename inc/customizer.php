@@ -556,6 +556,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default'   => '#808080',
 		'transport' => 'refresh',
 	) );
+	
+	$wp_customize->add_setting( 'accent_color_icons', array(
+		'default'   => false,
+		'transport' => 'refresh',
+	) );
 
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
@@ -581,6 +586,12 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
 	) ) );
+	
+	$wp_customize->add_control( 'accent_color_icons', array(
+		'label'   => 'Use accent color instead of text color for icons',
+		'section' => 'colors',
+		'type'    => 'checkbox',
+	) );
 
 }
 add_action( 'customize_register', 'decode_customize_register' );

@@ -32,7 +32,7 @@ function decode_setup() {
 	/**
 	 * Specifies for the theme to use HTML 5 tags
 	 */
-	add_theme_support( 'html5' );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', ) );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -47,7 +47,7 @@ function decode_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
 
 	/**
 	 * Setup the WordPress core custom background feature.
@@ -176,13 +176,19 @@ function decode_customize_css()
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('text_color'); ?>;
-		}
-
 		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
+		
+		<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
+			.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
+				fill: <?php echo get_theme_mod('text_color'); ?>;
+			}
+		<?php else : ?>
+			.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
+				fill: <?php echo get_theme_mod('accent_color'); ?>;
+			}
+		<?php endif; ?>
 
 		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .search-entry:hover, .search-entry:hover .entry-title, .no-touch footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color'); ?>;
