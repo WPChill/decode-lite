@@ -1187,6 +1187,10 @@ li.comment {
 	margin-top: 7.5%;
 }
 
+.form-allowed-tags {
+	display: none;
+}
+
 
 /* =Search
 ----------------------------------------------- */
