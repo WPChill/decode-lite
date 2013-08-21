@@ -155,9 +155,10 @@ function decode_scripts() {
 
 	wp_enqueue_script( 'decode-respond' );
 
-	wp_enqueue_script( 'decode-fastclick' );
-
-	wp_enqueue_script( 'decode-sidebar' );
+	if (get_theme_mod( 'show_sidebar', true ) == true ) {
+		wp_enqueue_script( 'decode-fastclick' );
+		wp_enqueue_script( 'decode-sidebar' );
+	}
 }
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
