@@ -60,7 +60,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'show_site_navigation', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
@@ -124,7 +124,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_sidebar', array(
 		'default'  => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'sidebar_position', array(
@@ -132,6 +132,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 
 	$wp_customize->add_setting( 'sidebar_button_position', array(
+		'default'  => 'left',
+	) );
+	
+	$wp_customize->add_setting( 'constant_sidebar', array(
 		'default'  => 'left',
 	) );
 
@@ -179,7 +183,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'enable_comments', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 
@@ -204,7 +208,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'show_social_icons', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
@@ -453,27 +457,27 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'show_author_section', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
