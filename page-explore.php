@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * Template Name: Explore Page
+ *
  * The template for displaying the explore page.
  *
  * @package Decode
