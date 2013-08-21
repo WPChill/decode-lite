@@ -26,7 +26,7 @@
 </div><!-- #page -->
 
 	<?php if (get_theme_mod( 'show_sidebar', true ) == true ) : ?>
-	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position', 'left' );?>">
+	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position', 'left' );?> <?php echo get_theme_mod( 'constant_sidebar', 'closing' );?>">
 		<div id="sidebar_top" class="SidebarTop">
 			<div id="sidebar_close" class="SidebarClose">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">

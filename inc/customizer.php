@@ -136,7 +136,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 	
 	$wp_customize->add_setting( 'constant_sidebar', array(
-		'default'  => 'left',
+		'default'  => 'closing',
 	) );
 
 
@@ -167,6 +167,18 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 			'right' => 'Right',
         ),
 		'priority'=> 3,
+	) );
+	
+	$wp_customize->add_control( 'constant_sidebar', array(
+		'label'   => 'Always Visible Sidebar',
+		'section' => 'decode_sidebar_options',
+		'type'    => 'radio',
+		'choices' => array(
+			'constant'  => 'Always open',
+			'closing' => 'Closed by default',
+        ),
+        'priority'=> 4,
+
 	) );
 
 

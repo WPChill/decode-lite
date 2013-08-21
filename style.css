@@ -1023,7 +1023,7 @@ footer .date a {
 	transform: translateX(0%);
 }
 
-.no-csstransforms .sidebar.left.visible {
+.no-csstransforms .sidebar.left.visible{
 	left: 0;
 }
 
@@ -1364,6 +1364,17 @@ li.comment {
 	width: 80%;
 }
 
+.site.sidebar-style-constant {
+	float: right;
+	margin: 0 auto;
+	width: 66%;
+}
+
+.site.sidebar-style-constant .site-header, .site.sidebar-style-constant .site-main, .site.sidebar-style-constant .site-footer {
+	width: 100%;
+	max-width: 45em;
+}
+
 .page-header {
 	margin: 0 auto 5%;
 }
@@ -1426,16 +1437,40 @@ li.comment {
 	top: 7.5%;
 }
 
+.sidebar.constant .SidebarTop {
+	display: none;
+}
+
 .sidebar {
 	width: 33%;
 }
 
-.no-csstransforms .sidebar.left {
+.sidebar.constant .SidebarContent {
+	margin-top: 5%;
+}
+
+.no-csstransforms .sidebar.left, .no-csstransforms .sidebar.constant {
 	left: -40%;
 }
 
-.no-csstransforms .sidebar.right {
+.no-csstransforms .sidebar.right, .no-csstransforms .sidebar.constant {
 	right: -40%;
+}
+
+.sidebar.constant {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+	box-shadow: none;
+}
+
+.sidebar.constant.left {
+	border-right: 1px solid #009BCD;
+}
+
+.sidebar.constant.right {
+	border-left: 1px solid #009BCD;
 }
 
 .SidebarClose {
@@ -1514,11 +1549,11 @@ article.post {
 	width: 45%;
 }
 
-.no-csstransforms .sidebar.left {
+.no-csstransforms .sidebar.left, .no-csstransforms .sidebar.constant {
 	left: -50%;
 }
 
-.no-csstransforms .sidebar.right {
+.no-csstransforms .sidebar.right, .no-csstransforms .sidebar.constant {
 	right: -50%;
 }
 }
@@ -1547,6 +1582,10 @@ article.post {
 	max-width: 60em;
 }
 
+.site.sidebar-style-constant {
+	margin: 0 5%;
+}
+
 .page-header {
 	margin-bottom: 3.5%;
 }
@@ -1567,11 +1606,11 @@ article.post {
 	width: 25%;
 }
 
-.no-csstransforms .sidebar.left {
+.no-csstransforms .sidebar.left, .no-csstransforms .sidebar.constant {
 	left: -28%;
 }
 
-.no-csstransforms .sidebar.right {
+.no-csstransforms .sidebar.right, .no-csstransforms .sidebar.constant {
 	right: -28%;
 }
 }
