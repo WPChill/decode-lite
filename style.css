@@ -1440,6 +1440,10 @@ li.comment {
 	right: 3.5%;
 }
 
+.sidebar-style-constant .SidebarLink {
+	display: none;
+}
+
 .admin-bar .SidebarLink {
 	top: 7.5%;
 }
