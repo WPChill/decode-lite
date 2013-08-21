@@ -21,12 +21,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site <?php echo 'sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' );?>">
+<div id="page" class="hfeed site <?php echo 'sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' );?>">
 	<?php do_action( 'before' ); ?>
 		
 	<header id="masthead" class="site-header" role="banner">
 	
-		<?php if (get_theme_mod( 'show_sidebar', true ) == true ) : ?>
+		<?php if (get_theme_mod( 'show_sidebar', true ) == true && get_theme_mod( 'constant_sidebar', 'closing' ) == 'closing' ) : ?>
 		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
 			<svg width="240px" height="200px" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 			    <title>Menu</title>

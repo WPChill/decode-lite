@@ -1,4 +1,4 @@
-/*
+d/*
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
@@ -1365,9 +1365,16 @@ li.comment {
 }
 
 .site.sidebar-style-constant {
-	float: right;
 	margin: 0 auto;
 	width: 66%;
+}
+
+.site.sidebar-style-left {
+	float: right;
+}
+
+.site.sidebar-style-right {
+	float: left;
 }
 
 .site.sidebar-style-constant .site-header, .site.sidebar-style-constant .site-main, .site.sidebar-style-constant .site-footer {
@@ -1583,7 +1590,7 @@ article.post {
 }
 
 .site.sidebar-style-constant {
-	margin: 0 5%;
+	margin: 0 4.5%;
 }
 
 .page-header {
