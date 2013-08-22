@@ -1522,7 +1522,7 @@ article.post {
 ----------------------------------------------- */
 
 /* Portrait iPad */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 .site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
 	width: 82.5%;
 }
@@ -1531,8 +1531,6 @@ article.post {
 	width: auto;
 	height: auto;
 	position: static;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 
 .sidebar-style-constant .site-scroll {
