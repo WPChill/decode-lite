@@ -60,7 +60,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'show_site_navigation', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
@@ -124,7 +124,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_sidebar', array(
 		'default'  => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'sidebar_position', array(
@@ -133,6 +133,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'sidebar_button_position', array(
 		'default'  => 'left',
+	) );
+	
+	$wp_customize->add_setting( 'constant_sidebar', array(
+		'default'  => 'closing',
 	) );
 
 
@@ -164,6 +168,18 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
         ),
 		'priority'=> 3,
 	) );
+	
+	$wp_customize->add_control( 'constant_sidebar', array(
+		'label'   => 'Always Visible Sidebar',
+		'section' => 'decode_sidebar_options',
+		'type'    => 'radio',
+		'choices' => array(
+			'constant'  => 'Always open',
+			'closing' => 'Closed by default',
+        ),
+        'priority'=> 4,
+
+	) );
 
 
 
@@ -179,7 +195,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'enable_comments', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 
@@ -204,7 +220,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'show_social_icons', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
@@ -453,22 +469,27 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'show_author_section', array(
+		'default' => false,
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
@@ -497,26 +518,33 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'checkbox',
 		'priority'=> 3,
 	) );
+	
+	$wp_customize->add_control( 'show_author_section', array(
+		'label'   => 'Show author\'s name, profile image, and bio after posts',
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 4,
+	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => 'Add an arrow before the title of a link post',
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 4,
+		'priority'=> 5,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 	    'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
 	    'section' => 'decode_reading_options',
 	    'settings'=> 'site_colophon',
-	    'priority'=> 6,
+	    'priority'=> 7,
 	) ) );
 	
 
@@ -544,6 +572,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default'   => '#808080',
 		'transport' => 'refresh',
 	) );
+	
+	$wp_customize->add_setting( 'accent_color_icons', array(
+		'default'   => false,
+		'transport' => 'refresh',
+	) );
 
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
@@ -569,6 +602,12 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
 	) ) );
+	
+	$wp_customize->add_control( 'accent_color_icons', array(
+		'label'   => 'Use accent color instead of text color for icons',
+		'section' => 'colors',
+		'type'    => 'checkbox',
+	) );
 
 }
 add_action( 'customize_register', 'decode_customize_register' );
@@ -578,6 +617,7 @@ add_action( 'customize_register', 'decode_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.6.3', true );
+	wp_register_script( 'decode-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'jquery' ), '2.7', true );
+	wp_enqueue_script( 'decode-customizer' );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );
