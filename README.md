@@ -1,4 +1,4 @@
-# Decode 2.6
+# Decode 2.7
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), on the great theme foundation, [Underscores](http://underscores.me). It is built for mobile first, and uses media queries to bring in CSS for larger screens. 
 
 If you want to change any of the colors in your theme, enable the sidebar, social links, and more, access the Theme Customizer in the Appearance Menu > Customize. From here you can access all the settings avaliable for this theme. 
