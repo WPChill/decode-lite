@@ -1,4 +1,4 @@
-d/*
+/*
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
@@ -1183,10 +1183,12 @@ footer .date a {
 	-webkit-transition: padding 0.25s ease-out;
 	-moz-transition: padding 0.25s ease-out;
 	transition: padding 0.25s ease-out;
+	padding: 0;
+	display: block;
 }
 
 .no-touch .nav-next a:hover, .no-touch .nav-previous a:hover {
-	padding: 2.5%;
+	padding: 0 2.5%;
 }
 
 
@@ -1367,14 +1369,22 @@ li.comment {
 .site.sidebar-style-constant {
 	margin: 0 auto;
 	width: 67%;
+	height: 100%;
+	position: fixed;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 .site.sidebar-style-left {
-	float: right;
+	right: 0;
 }
 
 .site.sidebar-style-right {
-	float: left;
+	left: 0;
+}
+
+.site-scroll {
+	margin: 0 2.5%;
 }
 
 .site.sidebar-style-constant .site-header, .site.sidebar-style-constant .site-main, .site.sidebar-style-constant .site-footer {
@@ -1548,6 +1558,10 @@ article.post {
 	width: 82.5%;
 }
 
+.site.sidebar-style-constant {
+	width: 55%;
+}
+
 .SidebarLink.left {
 	left: 2.5%;
 }
@@ -1594,7 +1608,7 @@ article.post {
 }
 
 .site.sidebar-style-constant {
-	margin: 0 4%;
+	width: 75%;
 }
 
 .page-header {

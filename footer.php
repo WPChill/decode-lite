@@ -7,7 +7,7 @@
  * @package Decode
  */
 ?>
-
+		<?php if (get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?>
 	 </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
