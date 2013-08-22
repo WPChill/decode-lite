@@ -32,7 +32,7 @@ function decode_setup() {
 	/**
 	 * Specifies for the theme to use HTML 5 tags
 	 */
-	add_theme_support( 'html5' );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', ) );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -47,7 +47,7 @@ function decode_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
 
 	/**
 	 * Setup the WordPress core custom background feature.
@@ -128,13 +128,13 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.6.4" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7" );
 
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
 	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
 
-	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.3.2', true );
+	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7', true );
 
 	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', true );
 
@@ -155,9 +155,10 @@ function decode_scripts() {
 
 	wp_enqueue_script( 'decode-respond' );
 
-	wp_enqueue_script( 'decode-fastclick' );
-
-	wp_enqueue_script( 'decode-sidebar' );
+	if (get_theme_mod( 'show_sidebar', true ) == true ) {
+		wp_enqueue_script( 'decode-fastclick' );
+		wp_enqueue_script( 'decode-sidebar' );
+	}
 }
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
@@ -176,19 +177,25 @@ function decode_customize_css()
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+			color: <?php echo get_theme_mod('text_color'); ?>;
+		}
+		
+	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
 		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
 			fill: <?php echo get_theme_mod('text_color'); ?>;
 		}
-
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
-			color: <?php echo get_theme_mod('text_color'); ?>;
+	<?php else : ?>
+		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
+			fill: <?php echo get_theme_mod('accent_color'); ?>;
 		}
+	<?php endif; ?>
 
 		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .search-entry:hover, .search-entry:hover .entry-title, .no-touch footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .no-touch .site-description a:hover, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus {
+		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 

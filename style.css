@@ -3,11 +3,11 @@ Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar or the menu icon to be on the left or right side of the page. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.6.4
+Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
+Version: 2.7
 License: GNU General Public License
 License URI: license.txt
-Tags: one-column, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -42,7 +42,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 html {
-	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
@@ -208,6 +207,10 @@ img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
+/* Micro Clearfix */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
 button,
 input,
 select,
@@ -407,6 +410,14 @@ embed,
 iframe,
 object {
 	max-width: 100%;
+}
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -968,12 +979,6 @@ footer .date a {
 	z-index: 5;
 }
 
-.no-csstransforms .sidebar {
-	-webkit-transition: left 0.35s ease-out, right 0.35s ease-out;
-	-moz-transition: left 0.35s ease-out, right 0.35s ease-out;
-	transition: left 0.35s ease-out, right 0.35s ease-out;
-}
-
 .sidebar.left {
 	-webkit-transform: translateX(-110%);
 	-moz-transform: translateX(-110%);
@@ -981,10 +986,6 @@ footer .date a {
 	transform: translateX(-110%);
 	left: 0;
 	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.no-csstransforms .sidebar.left {
-	left: -100%;
 }
 
 .sidebar.right {
@@ -996,10 +997,6 @@ footer .date a {
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
 }
 
-.no-csstransforms .sidebar.right {
-	right: -100%;
-}
-
 .SidebarContent {
 	margin: 0 5%;
 }
@@ -1009,14 +1006,6 @@ footer .date a {
 	-moz-transform: translateX(0%);
 	-ms-transform: translateX(0%);
 	transform: translateX(0%);
-}
-
-.no-csstransforms .sidebar.left.visible {
-	left: 0;
-}
-
-.no-csstransforms .sidebar.right.visible {
-	right: 0;
 }
 
 
@@ -1093,6 +1082,55 @@ footer .date a {
 }
 
 
+/* =Explore Page
+----------------------------------------------- */
+
+.explore-page {
+	margin: 5% auto 0;
+}
+
+.post-lists {
+	margin: 1.5%;
+}
+
+.explore-page .widget h1 {
+	color: #444;
+	font-size: 1.15em;
+	border-bottom: 1px solid #009BCD;
+	padding-bottom: 1%;
+}
+
+.explore-page .widget:not(.search) {
+	-webkit-transition: box-shadow 0.35s ease-out;
+	-moz-transition: box-shadow 0.35s ease-out;
+	transition: box-shadow 0.35s ease-out;
+	width: 90%;
+	padding: 2.5% 5%;
+	margin: 0 auto 5%;
+	font-size: 1em;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+}
+
+	.explore-page .widget:not(.search):hover {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+	}
+
+.explore-page .widget.archives ul, .explore-page .widget.categories > ul {
+	height: 15em;
+	margin: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.explore-page .widget.search {
+	margin-bottom: 7.5%;
+}
+
+.explore-page .widget.recent-posts ul {
+	list-style: none;
+	margin: 0;
+}
+
 /* =Navigation
 ----------------------------------------------- */
 
@@ -1122,10 +1160,12 @@ footer .date a {
 	-webkit-transition: padding 0.25s ease-out;
 	-moz-transition: padding 0.25s ease-out;
 	transition: padding 0.25s ease-out;
+	padding: 0;
+	display: block;
 }
 
 .no-touch .nav-next a:hover, .no-touch .nav-previous a:hover {
-	padding: 2.5%;
+	padding: 0 2.5%;
 }
 
 
@@ -1183,12 +1223,17 @@ li.comment {
 	margin-top: 7.5%;
 }
 
+.form-allowed-tags {
+	display: none;
+}
+
 
 /* =Search
 ----------------------------------------------- */
 
 .search-form {
 	margin-bottom: 2.5%;
+	text-align: center;
 }
 
 .search-entry, .search-entry .entry-title {
@@ -1214,6 +1259,47 @@ li.comment {
 
 .search-highlight {
 	background: rgba(255,255,0,0.25);
+}
+
+
+/* =Author Section
+----------------------------------------------- */
+.author-section {
+	-webkit-transition: box-shadow 0.35s ease-out;
+	-moz-transition: box-shadow 0.35s ease-out;
+	transition: box-shadow 0.35s ease-out;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+	padding: 3.5%;
+	margin-bottom: 3.5%;
+}
+
+	.author-section:hover {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+	}
+
+.author-image {
+	width: 25%;
+	max-width: 128px;
+	float: left;
+}
+
+.author-image img {
+	border-radius: 50%;
+	display: block;
+}
+
+.author-text {
+	width: 65%;
+	float: left;
+	margin-left: 5%;
+}
+
+.author-name {
+	font-size: 1.4em;
+}
+
+.author-site, .author-bio {
+	font-size: 0.9em;
 }
 
 
@@ -1255,6 +1341,32 @@ li.comment {
 
 .site-header, .site-main, .site-footer {
 	width: 80%;
+}
+
+.site.sidebar-style-constant {
+	margin: 0 auto;
+	width: 67%;
+	height: 100%;
+	position: fixed;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.site.sidebar-style-left {
+	right: 0;
+}
+
+.site.sidebar-style-right {
+	left: 0;
+}
+
+.site-scroll {
+	margin: 0 2.5%;
+}
+
+.sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
+	width: 100%;
+	max-width: 45em;
 }
 
 .page-header {
@@ -1315,20 +1427,40 @@ li.comment {
 	right: 3.5%;
 }
 
+.sidebar-style-constant .SidebarLink {
+	display: none;
+}
+
 .admin-bar .SidebarLink {
 	top: 7.5%;
+}
+
+.sidebar.constant .SidebarTop {
+	display: none;
 }
 
 .sidebar {
 	width: 33%;
 }
 
-.no-csstransforms .sidebar.left {
-	left: -40%;
+.sidebar.constant .SidebarContent {
+	margin-top: 5%;
 }
 
-.no-csstransforms .sidebar.right {
-	right: -40%;
+.sidebar.constant {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+	box-shadow: none;
+}
+
+.sidebar.constant.left {
+	border-right: 1px solid #009BCD;
+}
+
+.sidebar.constant.right {
+	border-left: 1px solid #009BCD;
 }
 
 .SidebarClose {
@@ -1376,6 +1508,10 @@ article.post {
 	margin-bottom: 5%;
 }
 
+.explore-page .widget.search {
+	margin-bottom: 3.5%;
+}
+
 .blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
 	font-size: 2.75em;
 }
@@ -1387,8 +1523,22 @@ article.post {
 
 /* Portrait iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-header, .site-main, .site-footer {
+.site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
 	width: 82.5%;
+}
+
+.site.sidebar-style-constant {
+	width: auto;
+	height: auto;
+	position: static;
+}
+
+.sidebar-style-constant .site-scroll {
+	margin: 0;
+}
+
+.sidebar-style-constant .SidebarLink {
+	display: block;
 }
 
 .SidebarLink.left {
@@ -1403,12 +1553,33 @@ article.post {
 	width: 45%;
 }
 
-.no-csstransforms .sidebar.left {
-	left: -50%;
+.sidebar.constant.left {
+	-webkit-transform: translateX(-110%);
+	-moz-transform: translateX(-110%);
+	-ms-transform: translateX(-110%);
+	transform: translateX(-110%);
+	left: 0;
+	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 }
 
-.no-csstransforms .sidebar.right {
-	right: -50%;
+.sidebar.constant.right {
+	-webkit-transform: translateX(110%);
+	-moz-transform: translateX(110%);
+	-ms-transform: translateX(110%);
+	transform: translateX(110%);
+	right: 0;
+	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
+}
+
+.sidebar.constant.left.visible, .sidebar.constant.right.visible {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+.sidebar.constant .SidebarTop {
+	display: block;
 }
 }
 
@@ -1436,6 +1607,10 @@ article.post {
 	max-width: 60em;
 }
 
+.site.sidebar-style-constant {
+	width: 75%;
+}
+
 .page-header {
 	margin-bottom: 3.5%;
 }
@@ -1456,11 +1631,7 @@ article.post {
 	width: 25%;
 }
 
-.no-csstransforms .sidebar.left {
-	left: -28%;
-}
-
-.no-csstransforms .sidebar.right {
-	right: -28%;
+article.post {
+	margin-bottom: 10%;
 }
 }
