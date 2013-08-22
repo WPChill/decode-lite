@@ -1032,6 +1032,22 @@ footer .date a {
 	transform: translateX(0%);
 }
 
+	.no-csstransforms .sidebar.left {
+		left: -100%;
+	}
+	
+	.no-csstransforms .sidebar.left.visible {
+		left: 0;
+	}
+	
+	.no-csstransforms .sidebar.right {
+		right: -100%;
+	}
+	
+	.no-csstransforms .sidebar.right.visible {
+		right: 0;
+	}
+
 
 /* =Links
 ----------------------------------------------- */
@@ -1487,6 +1503,14 @@ li.comment {
 	border-left: 1px solid #009BCD;
 }
 
+	.no-csstransforms .sidebar.left {
+		left: -40%;
+	}
+	
+	.no-csstransforms .sidebar.right {
+		right: -40%;
+	}
+
 .SidebarClose {
 	padding: 2.5%;
 }
@@ -1654,6 +1678,15 @@ article.post {
 .sidebar {
 	width: 25%;
 }
+
+	.no-csstransforms .sidebar.left {
+		left: -30%;
+	}
+	
+	.no-csstransforms .sidebar.right {
+		right: -30%;
+	}
+
 
 article.post {
 	margin-bottom: 10%;
