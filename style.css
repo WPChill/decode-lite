@@ -927,7 +927,7 @@ footer .date a {
 		opacity: 0.85;
 	}
 	
-.SidebarLink svg {
+.SidebarLink svg, .SidebarLink img {
 	width: 1.5em;
 	height: 1.5em;
 }
@@ -983,7 +983,7 @@ footer .date a {
 		opacity: 0.85;
 	}
 	
-.SidebarClose svg {
+.SidebarClose svg, .SidebarClose img {
 	height: 1.4em;
 	width: 1.4em;
 }
@@ -1454,7 +1454,7 @@ li.comment {
   height: 1.75em;
 }
 
-.SidebarLink svg {
+.SidebarLink svg, .SidebarLink img {
 	width: 1.75em;
 	height: 1.75em;
 }
