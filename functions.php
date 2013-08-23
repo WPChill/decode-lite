@@ -128,15 +128,15 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.1" );
 
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
 	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
 
-	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7', true );
+	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
 
-	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', true );
+	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', false );
 
 	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
 
@@ -210,6 +210,9 @@ function decode_customize_css()
 		.tags, .categories, footer .date, footer .date a, .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
 		}
+		
+		<?php echo get_theme_mod('custom_css', ''); ?>
+		
          </style>
     <?php
 }
