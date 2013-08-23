@@ -291,11 +291,12 @@ textarea {
 	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	color: #C0C0C0;
+	padding: 0.3em;
 	border: 1px solid #C0C0C0;
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
 	-webkit-appearance: none;
-	width: 65%;
+	width: 60%;
 }
 	.no-touch input[type="text"]:hover,
 	.no-touch input[type="email"]:hover,
@@ -321,12 +322,6 @@ textarea {
 		border-color: #009BCD;
 	}
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"] {
-	padding: 0.3em;
-}
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
