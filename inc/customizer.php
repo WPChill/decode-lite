@@ -238,6 +238,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'google_plus_username', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'vk_username', array(
+		'default' => '',
+	) );
 
 	$wp_customize->add_setting( 'dribbble_username', array(
 		'default' => '',
@@ -299,6 +303,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'skype_username', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'email_address', array(
 		'default' => '',
 	) );
@@ -338,117 +346,131 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'text',
 		'priority'=> 5,
 	) );
+	
+	$wp_customize->add_control( 'vk_username', array(
+		'label'   => 'VK Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 6,
+	) );
 
 	$wp_customize->add_control( 'dribbble_username', array(
 		'label'   => 'Dribbble Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 6,
+		'priority'=> 7,
 	) );
 
 	$wp_customize->add_control( 'behance_username', array(
 		'label'   => 'Behance Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 7,
+		'priority'=> 8,
 	) );
 
 	$wp_customize->add_control( 'linkedin_username', array(
 		'label'   => 'Linkedin Profile ID',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 8,
+		'priority'=> 9,
 	) );
 
 	$wp_customize->add_control( 'tumblr_username', array(
 		'label'   => 'Tumblr Site URL',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 9,
+		'priority'=> 10,
 	) );
 
 	$wp_customize->add_control( 'pinterest_username', array(
 		'label'   => 'Pinterest Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 10,
+		'priority'=> 11,
 	) );
 
 	$wp_customize->add_control( 'instagram_username', array(
 		'label'   => 'Instagram Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 11,
+		'priority'=> 12,
 	) );
 
 	$wp_customize->add_control( '500px_username', array(
 		'label'   => '500px Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 12,
+		'priority'=> 13,
 	) );
 
 	$wp_customize->add_control( 'flickr_username', array(
 		'label'   => 'Flickr Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 13,
+		'priority'=> 14,
 	) );
 
 	$wp_customize->add_control( 'rdio_username', array(
 		'label'   => 'Rdio Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 14,
+		'priority'=> 15,
 	) );
 
 	$wp_customize->add_control( 'spotify_username', array(
 		'label'   => 'Spotify Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 15,
+		'priority'=> 16,
 	) );
 
 	$wp_customize->add_control( 'soundcloud_username', array(
 		'label'   => 'Soundcloud Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 16,
+		'priority'=> 17,
 	) );
 
 	$wp_customize->add_control( 'vimeo_username', array(
 		'label'   => 'Vimeo Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 17,
+		'priority'=> 18,
 	) );
 
 	$wp_customize->add_control( 'youtube_username', array(
 		'label'   => 'YouTube Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 18,
+		'priority'=> 19,
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
 		'label'   => 'GitHub Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 19,
+		'priority'=> 20,
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => 'Foursquare Username',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 20,
+		'priority'=> 21,
+	) );
+	
+	$wp_customize->add_control( 'skype_username', array(
+		'label'   => 'Skype Username',
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 22,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => 'Email Address',
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 21,
+		'priority'=> 23,
 	) );
 
 
