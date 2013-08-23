@@ -1639,11 +1639,15 @@ article.post {
 }
 
 .sidebar-style-constant .site-scroll {
-	margin: 0;
+	margin: 3.5% 0 0;
 }
 
 .sidebar-style-constant .SidebarLink {
 	display: block;
+}
+
+.SidebarLink {
+	top: 2.5%;
 }
 
 .SidebarLink.left {
