@@ -1327,20 +1327,23 @@ li.comment {
 }
 
 .author-image img {
-	-webkit-transition: box-shadow 0.25s ease-out;
-	-moz-transition: box-shadow 0.25s ease-out;
-	transition: box-shadow 0.25s ease-out;
+	-webkit-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+	-moz-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+	transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 	border-radius: 50%;
 	display: block;
 	box-shadow: 0 0 5px rgba(0,0,0,0);
+	opacity: 1;
 }
 
 	.no-touch .author-image img:hover {
 		box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+		opacity: 1;
 	}
 	
 	.no-touch .author-image img:active {
 		box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+		opacity: 0.85;
 	}
 
 .author-text {
