@@ -725,6 +725,10 @@ object {
 	margin: 0 auto;
 }
 
+.site-footer {
+	margin-bottom: 3.5%;
+}
+
 .sticky {}
 
 .hentry {
@@ -1036,7 +1040,7 @@ footer .date a {
 		left: -100%;
 	}
 	
-	.no-csstransforms .sidebar.left.visible {
+	.no-csstransforms .sidebar.left.visible, .no-csstransforms .sidebar.constant.left {
 		left: 0;
 	}
 	
@@ -1044,7 +1048,7 @@ footer .date a {
 		right: -100%;
 	}
 	
-	.no-csstransforms .sidebar.right.visible {
+	.no-csstransforms .sidebar.right.visible, .no-csstransforms .sidebar.constant.right {
 		right: 0;
 	}
 
@@ -1401,7 +1405,11 @@ li.comment {
 }
 
 .site-scroll {
-	margin: 0 2.5%;
+	margin: 3.5% 2.5% 0;
+}
+
+.site-scroll .site-header {
+	margin-top: 0;
 }
 
 .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
