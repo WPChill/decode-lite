@@ -177,7 +177,7 @@ function decode_customize_css()
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .author-name a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 		
