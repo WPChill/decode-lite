@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.7.1
+Version: 2.7.2
 License: GNU General Public License
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
@@ -240,9 +240,8 @@ input[type="submit"] {
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 0.8rem;
 	line-height: 1;
-	padding: 0.7em 1em;
+	padding: 0.7em 1.2em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	width: 25%;
 }
 	.no-touch button:hover,
 	.no-touch html input[type="button"]:hover,
@@ -292,11 +291,12 @@ textarea {
 	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	color: #C0C0C0;
+	padding: 0.3em;
 	border: 1px solid #C0C0C0;
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
 	-webkit-appearance: none;
-	width: 65%;
+	width: 60%;
 }
 	.no-touch input[type="text"]:hover,
 	.no-touch input[type="email"]:hover,
@@ -322,12 +322,6 @@ textarea {
 		border-color: #009BCD;
 	}
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"] {
-	padding: 0.3em;
-}
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
@@ -1269,6 +1263,7 @@ li.comment {
 
 .form-allowed-tags {
 	display: none;
+	font-size: 0.9em;
 }
 
 
@@ -1312,9 +1307,10 @@ li.comment {
 	-webkit-transition: box-shadow 0.35s ease-out;
 	-moz-transition: box-shadow 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out;
-	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 	padding: 3.5%;
-	margin-bottom: 3.5%;
+	margin: 0 auto 3.5%;
+	text-align: left;
 }
 
 	.author-section:hover {
@@ -1323,14 +1319,29 @@ li.comment {
 
 .author-image {
 	width: 25%;
-	max-width: 128px;
+	max-width: 125px;
 	float: left;
 }
 
 .author-image img {
+	-webkit-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+	-moz-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+	transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 	border-radius: 50%;
 	display: block;
+	box-shadow: 0 0 5px rgba(0,0,0,0);
+	opacity: 1;
 }
+
+	.no-touch .author-image img:hover {
+		box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+		opacity: 1;
+	}
+	
+	.no-touch .author-image img:active {
+		box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+		opacity: 0.85;
+	}
 
 .author-text {
 	width: 65%;
@@ -1342,8 +1353,35 @@ li.comment {
 	font-size: 1.4em;
 }
 
+.author-name a {
+	color: #444;
+}
+
 .author-site, .author-bio {
 	font-size: 0.9em;
+}
+
+/* Author page styles */
+.author .author-section {
+	width: 90%;
+	max-width: 15em;
+	padding: 2.5%;
+	margin: 7.5% auto 0;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.author .author-image {
+	width: 33%;
+	max-width: 175px;
+	float: none;
+	margin: 0 auto;
+}
+
+.author .author-text {
+	width: 95%;
+	float: none;
+	margin: 0 auto;
 }
 
 
@@ -1433,6 +1471,13 @@ li.comment {
 		color: #007EA6;
 		border-bottom: 1px solid #007EA6;
 	}
+
+.author .author-section {
+	width: 75%;
+	max-width: 100%;
+	font-size: 1.25em;
+	margin-top: 3.5%;
+}
 	
 .sociallinks {
 	margin: 1.5% auto;

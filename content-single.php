@@ -12,10 +12,11 @@
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
-					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
 					<div class="author-text">
-						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
-						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
+						<div class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_the_author_meta( 'display_name' ); ?></a></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">Website</a></div>'; ?>
+						<?php if ( get_the_author_meta( 'google_profile' ) ) echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" style="display: none;">Website</a>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
@@ -37,10 +38,11 @@
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
-					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
 					<div class="author-text">
-						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
-						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
+						<div class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_the_author_meta( 'display_name' ); ?></a></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">Website</a></div>'; ?>
+						<?php if ( get_the_author_meta( 'google_profile' ) ) echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" style="display: none;">Website</a>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
@@ -63,10 +65,11 @@
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
-					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?></div>
+					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
 					<div class="author-text">
-						<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></div>
-						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '">Website</a></div>'; ?>
+						<div class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_the_author_meta( 'display_name' ); ?></a></div>
+						<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">Website</a></div>'; ?>
+						<?php if ( get_the_author_meta( 'google_profile' ) ) echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" style="display: none;">Website</a>'; ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
