@@ -1571,6 +1571,10 @@ article.post {
 .blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
 	font-size: 2.75em;
 }
+
+.sidebar-style-constant .site-footer {
+	margin-bottom: 5%;
+}
 }
 
 
