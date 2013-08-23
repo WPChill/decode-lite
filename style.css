@@ -240,7 +240,7 @@ input[type="submit"] {
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 0.8rem;
 	line-height: 1;
-	padding: 0.7em 1em;
+	padding: 0.7em 1.2em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 	.no-touch button:hover,
