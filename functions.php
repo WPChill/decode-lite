@@ -96,6 +96,16 @@ function decode_add_editor_styles() {
 add_action( 'init', 'decode_add_editor_styles' );
 
 /**
+ * Add Google Profile to user contact methods
+ */
+function decode_add_google_profile( $contactmethods ) {
+	// Add Google Profiles
+	$contactmethods['google_profile'] = 'Google Profile URL';
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
+
+/**
  * Highlight search terms in search results
  */
 if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
@@ -128,7 +138,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.1" );
+	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.2" );
 
 	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
 
@@ -177,7 +187,7 @@ function decode_customize_css()
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .author-name a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 		
