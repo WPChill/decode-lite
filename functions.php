@@ -96,6 +96,16 @@ function decode_add_editor_styles() {
 add_action( 'init', 'decode_add_editor_styles' );
 
 /**
+ * Add Google Profile to user contact methods
+ */
+function decode_add_google_profile( $contactmethods ) {
+	// Add Google Profiles
+	$contactmethods['google_profile'] = 'Google Profile URL';
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
+
+/**
  * Highlight search terms in search results
  */
 if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {

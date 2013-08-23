@@ -1268,6 +1268,7 @@ li.comment {
 
 .form-allowed-tags {
 	display: none;
+	font-size: 0.9em;
 }
 
 
@@ -1313,7 +1314,8 @@ li.comment {
 	transition: box-shadow 0.35s ease-out;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 	padding: 3.5%;
-	margin-bottom: 3.5%;
+	margin: 0 auto 3.5%;
+	text-align: left;
 }
 
 	.author-section:hover {
@@ -1322,7 +1324,7 @@ li.comment {
 
 .author-image {
 	width: 25%;
-	max-width: 128px;
+	max-width: 125px;
 	float: left;
 }
 
@@ -1362,6 +1364,29 @@ li.comment {
 
 .author-site, .author-bio {
 	font-size: 0.9em;
+}
+
+/* Author page styles */
+.author .author-section {
+	width: 90%;
+	max-width: 15em;
+	padding: 2.5%;
+	margin: 7.5% auto 0;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.author .author-image {
+	width: 33%;
+	max-width: 175px;
+	float: none;
+	margin: 0 auto;
+}
+
+.author .author-text {
+	width: 95%;
+	float: none;
+	margin: 0 auto;
 }
 
 
@@ -1451,6 +1476,13 @@ li.comment {
 		color: #007EA6;
 		border-bottom: 1px solid #007EA6;
 	}
+
+.author .author-section {
+	width: 75%;
+	max-width: 100%;
+	font-size: 1.25em;
+	margin-top: 3.5%;
+}
 	
 .sociallinks {
 	margin: 1.5% auto;
