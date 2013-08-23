@@ -541,12 +541,37 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
-	    'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
-	    'section' => 'decode_reading_options',
-	    'settings'=> 'site_colophon',
-	    'priority'=> 7,
+		'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
+		'section' => 'decode_reading_options',
+		'settings'=> 'site_colophon',
+		'priority'=> 7,
 	) ) );
 	
+	
+
+/**
+ * Color Options
+ */
+ 
+ 	$wp_customize->add_section( 'decode_other_options', array(
+    	'title'   => 'Other Options',
+		'priority'=> 38,
+    ) );
+    
+    
+    $wp_customize->add_setting( 'custom_css', array(
+		'default' => '',
+		'transport' => 'refresh',
+	) );
+	
+	
+	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'custom_css', array(
+		'label'   => 'Custom CSS',
+		'section' => 'decode_other_options',
+		'settings'=> 'custom_css',
+		'priority'=> 1,
+	) ) );
+
 
 
 /**

@@ -210,6 +210,9 @@ function decode_customize_css()
 		.tags, .categories, footer .date, footer .date a, .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
 		}
+		
+		<?php echo get_theme_mod('custom_css', ''); ?>
+		
          </style>
     <?php
 }
