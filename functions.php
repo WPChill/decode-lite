@@ -138,36 +138,20 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.3" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.3" );
 
-	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
-	
-	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
+	wp_enqueue_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
-	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
+	if ( is_singular() && wp_attachment_is_image() ) {
+		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
+	}
+	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
 
-	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', false );
-
-	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
-
-	wp_register_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
-
-
-	wp_enqueue_style( 'decode-style');
-
-	wp_enqueue_style( 'decode-font-stylesheet' );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
-
-	if ( is_singular() && wp_attachment_is_image() ) { wp_enqueue_script( 'decode-keyboard-image-navigation' ); }
-
-	wp_enqueue_script( 'decode-modernizr' );
-
-	wp_enqueue_script( 'decode-respond' );
+	wp_enqueue_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', false );
 
 	if (get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-fastclick' );
-		wp_enqueue_script( 'decode-sidebar' );
+		wp_enqueue_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
 	}
 }
 }
