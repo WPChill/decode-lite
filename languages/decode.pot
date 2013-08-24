@@ -1,5 +1,7 @@
-# Copyright (C) 2013 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
+# LANGUAGE (LOCALE) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7.3\n"
@@ -297,23 +299,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Decode"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://scotthsmith.com/projects/decode/"
-msgstr ""
-
 #. Description of the plugin/theme
 msgid ""
 "A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Scott Smith"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://scotthsmith.com/"
 msgstr ""
