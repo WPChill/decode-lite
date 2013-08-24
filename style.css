@@ -1195,9 +1195,9 @@ footer .date a {
 }
 
 .nav-next a, .nav-previous a {
-	-webkit-transition: padding 0.25s ease-out;
-	-moz-transition: padding 0.25s ease-out;
-	transition: padding 0.25s ease-out;
+	-webkit-transition: padding 0.25s ease-out, color 0.25s ease-out;
+	-moz-transition: padding 0.25s ease-out, color 0.25s ease-out;
+	transition: padding 0.25s ease-out, color 0.25s ease-out;
 	padding: 0;
 	display: block;
 }
