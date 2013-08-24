@@ -1,0 +1,319 @@
+# Copyright (C) 2013 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode v2.7.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-28 16:41:49+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:44
+msgid "Try looking in the monthly archives."
+msgstr ""
+
+#: author.php:34 content-single.php:19 content-single.php:45 content-single.php:72
+msgid "Website"
+msgstr ""
+
+#: archive.php:27
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:30
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:33
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:36
+msgid "Asides"
+msgstr ""
+
+#: archive.php:39
+msgid "Images"
+msgstr ""
+
+#: archive.php:42
+msgid "Videos"
+msgstr ""
+
+#: archive.php:45
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:48
+msgid "Links"
+msgstr ""
+
+#: archive.php:51 inc/extras.php:83 page-explore.php:37 sidebar.php:17
+msgid "Archives"
+msgstr ""
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:16 content-single.php:64 content.php:99 image.php:95
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:19 content-single.php:24 content-single.php:50 content-single.php:77 
+#: content.php:18 content.php:47 content.php:69 content.php:83 content.php:106 image.php:21
+#: image.php:117 inc/template-tags.php:71 inc/template-tags.php:90
+msgid "Edit"
+msgstr ""
+
+#: content-single.php:25 content-single.php:51 content-single.php:78
+#: content.php:20 content.php:49 content.php:108
+msgid "Tagged with: "
+msgstr ""
+
+#: content-single.php:26 content-single.php:52 content-single.php:79
+#: content.php:23 content.php:52 content.php:111
+msgid "Categorized in&#58; "
+msgstr ""
+
+#: content.php:10 content.php:40 content.php:98
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content.php:15 content.php:44 content.php:103
+msgid "Leave a comment"
+msgstr ""
+
+#: content.php:15 content.php:44 content.php:103
+msgid "1 Comment"
+msgstr ""
+
+#: content.php:15 content.php:44 content.php:103
+msgid "% Comments"
+msgstr ""
+
+#: footer.php:22
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: functions.php:63
+msgid "Nav Menu"
+msgstr ""
+
+#: functions.php:76
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:336
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:24
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: image.php:38
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:39
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: image.php:106
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:108
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:110
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: image.php:112
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: inc/extras.php:74
+msgid "Category"
+msgstr ""
+
+#: inc/extras.php:77
+msgid "Tag"
+msgstr ""
+
+#: inc/extras.php:80
+msgid "Author"
+msgstr ""
+
+#: inc/extras.php:90 inc/extras.php:94
+msgid "Page "
+msgstr ""
+
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:71
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:81
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/template-tags.php:87
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:94
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:183
+msgid ""
+"<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>"
+msgstr ""
+
+#: inc/template-tags.php:191
+msgid "View all posts by %s"
+msgstr ""
+
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: page-explore.php:24
+msgid "Recent Posts"
+msgstr ""
+
+#: page-explore.php:44
+msgid "Categories"
+msgstr ""
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "assistive text"
+msgid "Search"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Decode"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://scotthsmith.com/projects/decode/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Scott Smith"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://scotthsmith.com/"
+msgstr ""
