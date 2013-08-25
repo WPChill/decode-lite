@@ -35,7 +35,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
 
  	$wp_customize->add_section( 'decode_header_options', array(
-    	'title'   => 'Header Options',
+    	'title'   => __( 'Header Options', 'decode' ),
 		'priority'=> 32,
 	) );
 
@@ -50,12 +50,12 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'show_site_title', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'show_site_description', array(
 		'default' => true,
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'show_site_navigation', array(
@@ -69,42 +69,42 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
-		'label'   => 'Header Image',
+		'label'   => __( 'Header Image', 'decode' ),
 		'section' => 'decode_header_options',
 		'settings'=> 'header_image',
 		'priority'=> 1,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'favicon_image', array(
-		'label'   => 'Favicon Image (recommended to be a PNG)',
+		'label'   => __( 'Favicon Image (recommended to be a PNG)', 'decode' ),
 		'section' => 'decode_header_options',
 		'settings'=> 'favicon_image',
 		'priority'=> 2,
 	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
-		'label'   => 'Show Site Title',
+		'label'   => __( 'Show Site Title', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
 		'priority'=> 3,
 	) );
 	
 	$wp_customize->add_control( 'show_site_description', array(
-		'label'   => 'Show Site Description',
+		'label'   => __( 'Show Site Description', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
 		'priority'=> 4,
 	) );
 	
 	$wp_customize->add_control( 'show_site_navigation', array(
-		'label'   => 'Show Navigation',
+		'label'   => __( 'Show Navigation', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
 		'priority'=> 5,
 	) );
 	
 	$wp_customize->add_control( 'html_description', array(
-		'label'   => 'HTML for description, if you wish to replace your blog description with HTML markup',
+		'label'   => __( 'HTML for description, if you wish to replace your blog description with HTML markup', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'text',
 		'priority'=> 6,
@@ -117,7 +117,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
 
 	$wp_customize->add_section( 'decode_sidebar_options', array(
-    	'title'    => 'Sidebar Options',
+    	'title'    => __( 'Sidebar Options', 'decode' ),
 		'priority' => 33,
     ) );
 
@@ -141,25 +141,25 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( 'show_sidebar', array(
-		'label'   => 'Enable Sidebar',
+		'label'   => __( 'Enable Sidebar', 'decode' ),
 		'section' => 'decode_sidebar_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 
 	$wp_customize->add_control( 'sidebar_position', array(
-		'label'   => 'Sidebar Position',
+		'label'   => __( 'Sidebar Position', 'decode' ),
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
-			'left'  => 'Left',
-			'right' => 'Right',
+			'left'  => __( 'Left', 'decode' ),
+			'right' => __( 'Right', 'decode' ),
         ),
 		'priority'=> 2,
 	) );
 
 	$wp_customize->add_control( 'sidebar_button_position', array(
-		'label'   => 'Sidebar Button Position',
+		'label'   => __( 'Sidebar Button Position', 'decode' ),
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
@@ -170,7 +170,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 	
 	$wp_customize->add_control( 'constant_sidebar', array(
-		'label'   => 'Always Visible Sidebar',
+		'label'   => __( 'Always Visible Sidebar', 'decode' ),
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
@@ -188,7 +188,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
 
 	$wp_customize->add_section( 'decode_discussion_options', array(
-    	'title'   => 'Discussion Options',
+    	'title'   => __( 'Discussion Options', 'decode' ),
 		'priority'=> 34,
     ) );
 
@@ -200,7 +200,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( 'enable_comments', array(
-		'label'   => 'Enable Comments',
+		'label'   => __( 'Enable Comments', 'decode' ),
 		'section' => 'decode_discussion_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
@@ -213,7 +213,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
 
 	$wp_customize->add_section( 'decode_social_options', array(
-    	'title'   => 'Social Options',
+    	'title'   => __( 'Social Options', 'decode' ),
 		'priority'=> 35,
     ) );
 
@@ -313,161 +313,161 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( 'show_social_icons', array(
-		'label'   => 'Show Social Icons',
+		'label'   => __( 'Show Social Icons', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 
 	$wp_customize->add_control( 'twitter_username', array(
-		'label'   => 'Twitter Username',
+		'label'   => 'Twitter ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 2,
 	) );
 
 	$wp_customize->add_control( 'adn_username', array(
-    	'label'   => 'App.net Username',
+    	'label'   => 'App.net ' . __( 'Username', 'decode' ),
         'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 3,
 	) );
 
 	$wp_customize->add_control( 'facebook_username', array(
-		'label'   => 'Facebook Username',
+		'label'   => 'Facebook ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 4,
 	) );
 
 	$wp_customize->add_control( 'google_plus_username', array(
-		'label'   => 'Google+ Username (or the long number in your profile URL)',
+		'label'   => 'Google+ ' . __( 'Username', 'decode' ) .  __(' (or the long number in your profile URL)', 'decode'),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 5,
 	) );
 	
 	$wp_customize->add_control( 'vk_username', array(
-		'label'   => 'VK Username',
+		'label'   => 'VK ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 6,
 	) );
 
 	$wp_customize->add_control( 'dribbble_username', array(
-		'label'   => 'Dribbble Username',
+		'label'   => 'Dribbble ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 7,
 	) );
 
 	$wp_customize->add_control( 'behance_username', array(
-		'label'   => 'Behance Username',
+		'label'   => 'Behance ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 8,
 	) );
 
 	$wp_customize->add_control( 'linkedin_username', array(
-		'label'   => 'Linkedin Profile ID',
+		'label'   => 'Linkedin ' . __( 'Profile ID', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 9,
 	) );
 
 	$wp_customize->add_control( 'tumblr_username', array(
-		'label'   => 'Tumblr Site URL',
+		'label'   => 'Tumblr ' . __( 'Site URL', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 10,
 	) );
 
 	$wp_customize->add_control( 'pinterest_username', array(
-		'label'   => 'Pinterest Username',
+		'label'   => 'Pinterest ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 11,
 	) );
 
 	$wp_customize->add_control( 'instagram_username', array(
-		'label'   => 'Instagram Username',
+		'label'   => 'Instagram ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 12,
 	) );
 
 	$wp_customize->add_control( '500px_username', array(
-		'label'   => '500px Username',
+		'label'   => '500px ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 13,
 	) );
 
 	$wp_customize->add_control( 'flickr_username', array(
-		'label'   => 'Flickr Username',
+		'label'   => 'Flickr ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 14,
 	) );
 
 	$wp_customize->add_control( 'rdio_username', array(
-		'label'   => 'Rdio Username',
+		'label'   => 'Rdio ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 15,
 	) );
 
 	$wp_customize->add_control( 'spotify_username', array(
-		'label'   => 'Spotify Username',
+		'label'   => 'Spotify ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 16,
 	) );
 
 	$wp_customize->add_control( 'soundcloud_username', array(
-		'label'   => 'Soundcloud Username',
+		'label'   => 'Soundcloud ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 17,
 	) );
 
 	$wp_customize->add_control( 'vimeo_username', array(
-		'label'   => 'Vimeo Username',
+		'label'   => 'Vimeo ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 18,
 	) );
 
 	$wp_customize->add_control( 'youtube_username', array(
-		'label'   => 'YouTube Username',
+		'label'   => 'YouTube ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 19,
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
-		'label'   => 'GitHub Username',
+		'label'   => 'GitHub ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 20,
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
-		'label'   => 'Foursquare Username',
+		'label'   => 'Foursquare ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 21,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
-		'label'   => 'Skype Username',
+		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 22,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
-		'label'   => 'Email Address',
+		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 23,
@@ -480,7 +480,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
 
 	$wp_customize->add_section( 'decode_reading_options', array(
-    	'title'   => 'Reading Options',
+    	'title'   => __( 'Reading Options', 'decode' ),
 		'priority'=> 37,
     ) );
 
@@ -521,49 +521,49 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( 'use_excerpts', array(
-		'label'   => 'Use entry excerpts instead of full text on site home. Excludes sticky posts.',
+		'label'   => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 
 	$wp_customize->add_control( 'show_tags', array(
-		'label'   => 'Show tags on front page (tags will be shown on post\'s individual page)',
+		'label'   => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 2,
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
-		'label'   => 'Show categories on front page (categories will be shown on post\'s individual page)',
+		'label'   => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 3,
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
-		'label'   => 'Show author\'s name, profile image, and bio after posts',
+		'label'   => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 4,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
-		'label'   => 'Add an arrow before the title of a link post',
+		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 5,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
-		'label'   => 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)',
+		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 6,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
-		'label'   => 'Text (colophon, copyright, credits, etc.) for the footer of the site',
+		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
 		'priority'=> 7,
@@ -576,7 +576,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  */
  
  	$wp_customize->add_section( 'decode_other_options', array(
-    	'title'   => 'Other Options',
+    	'title'   => __( 'Other Options', 'decode' ),
 		'priority'=> 38,
     ) );
     
@@ -588,7 +588,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'custom_css', array(
-		'label'   => 'Custom CSS',
+		'label'   => __( 'Custom CSS', 'decode' ),
 		'section' => 'decode_other_options',
 		'settings'=> 'custom_css',
 		'priority'=> 1,
@@ -651,7 +651,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) ) );
 	
 	$wp_customize->add_control( 'accent_color_icons', array(
-		'label'   => 'Use accent color instead of text color for icons',
+		'label'   => __( 'Use accent color instead of text color for icons', 'decode' ),
 		'section' => 'colors',
 		'type'    => 'checkbox',
 	) );
