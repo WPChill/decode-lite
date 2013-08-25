@@ -144,7 +144,13 @@ msgstr ""
 msgid "Show Social Icons"
 msgstr ""
 
-#: inc/customizer.php:323
+#: inc/customizer.php:323 inc/customizer.php:330 inc/customizer.php:337
+#: inc/customizer.php:344 inc/customizer.php:351 inc/customizer.php:358
+#: inc/customizer.php:365 inc/customizer.php:386 inc/customizer.php:393
+#: inc/customizer.php:400 inc/customizer.php:407 inc/customizer.php:414
+#: inc/customizer.php:421 inc/customizer.php:428 inc/customizer.php:435
+#: inc/customizer.php:442 inc/customizer.php:449 inc/customizer.php:456
+#: inc/customizer.php:463
 msgid "Username"
 msgstr ""
 
