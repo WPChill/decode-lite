@@ -1131,6 +1131,10 @@ footer .date a {
 	margin: 1.5%;
 }
 
+.explore-page .search-form {
+	text-align: center;
+}
+
 .explore-page .widget h1 {
 	color: #444;
 	font-size: 1.15em;
@@ -1272,7 +1276,6 @@ li.comment {
 
 .search-form {
 	margin-bottom: 2.5%;
-	text-align: center;
 }
 
 .search-entry, .search-entry .entry-title {
