@@ -5,10 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-24 22:04-0600\n"
-"PO-Revision-Date: 2013-08-24 22:05-0600\n"
-"Last-Translator: Stéphane Bataillon <sbataillon@yahoo.fr>\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2013-08-24\n"
+"PO-Revision-Date: 2013-08-25 09:54-0600\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -42,9 +42,14 @@ msgid "Most Used Categories"
 msgstr "Catégories les plus utilisées"
 
 # @ decode
-#: 404.php:43
+#: 404.php:44
 msgid "Try looking in the monthly archives."
 msgstr "Essayez de regarder dans les archives mensuelles."
+
+#: author.php:34 content-single.php:19 content-single.php:45
+#: content-single.php:72
+msgid "Website"
+msgstr ""
 
 # @ decode
 #: archive.php:27
@@ -90,18 +95,12 @@ msgid "Links"
 msgstr "Liens"
 
 # @ decode
-#: archive.php:51 page-explore.php:37 sidebar.php:17 inc/extras.php:83
+#: archive.php:51 inc/extras.php:83 page-explore.php:37 sidebar.php:17
 msgid "Archives"
 msgstr "Archives"
 
-#: author.php:34 content-single.php:19 content-single.php:45
-#: content-single.php:72
-msgid "Website"
-msgstr ""
-
 # @ decode
-#: comments.php:28
-#, php-format
+#: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -129,8 +128,7 @@ msgid "Comments are closed."
 msgstr "Les commentaires sont fermés"
 
 # @ decode
-#: content-page.php:16 content-single.php:11 content-single.php:64
-#: content.php:11 content.php:99 image.php:95
+#: content-page.php:16 content-single.php:64 content.php:99 image.php:95
 msgid "Pages:"
 msgstr "Pages:"
 
@@ -141,12 +139,6 @@ msgstr "Pages:"
 #: inc/template-tags.php:71 inc/template-tags.php:90
 msgid "Edit"
 msgstr "Éditer"
-
-# @ decode
-#: content-single.php:10 content-single.php:37 content-single.php:63
-#: content.php:10 content.php:40 content.php:98
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Lire la suite <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-single.php:25 content-single.php:51 content-single.php:78
 #: content.php:20 content.php:49 content.php:108
@@ -159,6 +151,11 @@ msgstr ""
 #, fuzzy
 msgid "Categorized in&#58; "
 msgstr "Catégories"
+
+# @ decode
+#: content.php:10 content.php:40 content.php:98
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lire la suite <span class=\"meta-nav\">&rarr;</span>"
 
 # @ decode
 #: content.php:15 content.php:44 content.php:103
@@ -176,14 +173,14 @@ msgid "% Comments"
 msgstr "% Commentaires"
 
 # @ decode
-#: content.php:82
+#: content.php:84
 #, fuzzy
 msgid "Read More&hellip;"
 msgstr "Recherche&hellip;"
 
 # @ decode
 #: footer.php:22
-#, fuzzy, php-format
+#, fuzzy
 msgid "%1$s by %2$s"
 msgstr "%1$s à %2$s"
 
@@ -204,7 +201,6 @@ msgstr "Voir le contenu"
 
 # @ decode
 #: image.php:24
-#, php-format
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
 "\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
@@ -228,7 +224,6 @@ msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
 
 # @ decode
 #: image.php:106
-#, php-format
 msgid ""
 "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
 "comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
@@ -241,7 +236,6 @@ msgstr ""
 
 # @ decode
 #: image.php:108
-#, php-format
 msgid ""
 "Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
 "\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
@@ -264,57 +258,6 @@ msgstr ""
 #: image.php:112
 msgid "Both comments and trackbacks are currently closed."
 msgstr "Les commentaires et les trackbacks sont fermés."
-
-# @ decode
-#: no-results.php:13
-msgid "Nothing Found"
-msgstr "Rien de trouvé"
-
-# @ decode
-#: no-results.php:19
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Prêt pour publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
-
-# @ decode
-#: no-results.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Désolé, mais rien ne correspond à votre recherche. Essayez d'autres mots-"
-"clés."
-
-# @ decode
-#: no-results.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "Rien de trouvé."
-
-# @ decode
-#: page-explore.php:24
-msgid "Recent Posts"
-msgstr "Articles récents"
-
-# @ decode
-#: page-explore.php:44
-msgid "Categories"
-msgstr "Catégories"
-
-# @ decode
-#: search.php:16
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour: %s"
-
-# @ decode
-#: searchform.php:10 searchform.php:11
-msgctxt "label"
-msgid "Search for:"
-msgstr "Rechercher:"
 
 #: inc/customizer.php:38
 msgid "Header Options"
@@ -366,11 +309,11 @@ msgstr "Barre latérale"
 msgid "Sidebar Position"
 msgstr "Barre latérale"
 
-#: inc/customizer.php:155
+#: inc/customizer.php:155 #: inc/customizer.php:166
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:156
+#: inc/customizer.php:156 #: inc/customizer.php:167
 msgid "Right"
 msgstr ""
 
@@ -445,7 +388,7 @@ msgid ""
 "page)"
 msgstr ""
 
-#: inc/customizer.php:545
+#: inc/customizer.php:548
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 
@@ -549,13 +492,11 @@ msgstr "Pingback:"
 
 # @ decode
 #: inc/template-tags.php:81
-#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">dit:</span>"
 
 # @ decode
 #: inc/template-tags.php:87
-#, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
@@ -567,7 +508,6 @@ msgstr "Votre commentaire est en attente d'approbation."
 
 # @ decode
 #: inc/template-tags.php:183
-#, php-format
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
@@ -577,6 +517,93 @@ msgstr ""
 
 # @ decode
 #: inc/template-tags.php:191
-#, php-format
 msgid "View all posts by %s"
 msgstr "Voir tous les articles de %s"
+
+# @ decode
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+# @ decode
+#: no-results.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt pour publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+
+# @ decode
+#: no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond à votre recherche. Essayez d'autres mots-"
+"clés."
+
+# @ decode
+#: no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Rien de trouvé."
+
+# @ decode
+#: page-explore.php:24
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+# @ decode
+#: page-explore.php:44
+msgid "Categories"
+msgstr "Catégories"
+
+# @ decode
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour: %s"
+
+# @ decode
+#: searchform.php:10
+#, fuzzy
+msgctxt "assistive text"
+msgid "Search"
+msgstr "Rechercher:"
+
+# @ decode
+#: searchform.php:10 searchform.php:11
+msgctxt "label"
+msgid "Search for:"
+msgstr "Rechercher:"
+
+# @ decode
+#: searchform.php:11
+#, fuzzy
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Recherche&hellip;"
+
+# @ decode
+#: searchform.php:13
+#, fuzzy
+msgctxt "submit button"
+msgid "Search"
+msgstr "Rechercher:"
+
+#. Description of the plugin/theme
+msgid ""
+"A minimal, modern theme, designed to be mobile first and very responsive, "
+"Decode features the ability to change all the colors in the theme, an "
+"elegant sidebar conveniently accessed by tapping on the menu icon. The "
+"sidebar can hold any number of widgets you choose and you can choose to have "
+"the sidebar to be on the left or right side of the page and whether it "
+"should stay visible all the time or be closeable. You can also disable the "
+"sidebar and comment links if you choose. Decode supports link posts, where "
+"the title can be hyperlinked. Decode includes custom social icons in the "
+"header that you can easily link to your choice of 19 different social "
+"profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be "
+"sure to find support for the network you want. Lastly, Decode is also built "
+"alongside a companion plugin that adds a sleek reply tool that lets readers "
+"send you a reply about the post using Twitter or App.net. More info here: "
+"http://scotthsmith.com/projects/decode/."
+msgstr ""
