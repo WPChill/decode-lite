@@ -72,6 +72,150 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
+#: inc/customizer.php:38
+msgid "Header Options"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "Favicon Image (recommended to be a PNG)"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Show Site Title"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "Show Site Description"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "Show Navigation"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "HTML for description, if you wish to replace your blog description with HTML markup"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid "Sidebar Options"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "Enable Sidebar"
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Sidebar Position"
+msgstr ""
+
+#: inc/customizer.php:155 #: inc/customizer.php:166
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:156 #: inc/customizer.php:167
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Sidebar Button Position"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Always Visible Sidebar"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Discussion Options"
+msgstr ""
+
+#: inc/customizer.php:203
+msgid "Enable Comments"
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "Social Options"
+msgstr ""
+
+#: inc/customizer.php:316
+msgid "Show Social Icons"
+msgstr ""
+
+#: inc/customizer.php:323
+msgid "Username"
+msgstr ""
+
+#: inc/customizer.php:344
+msgid " (or the long number in your profile URL)"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:483
+msgid "Reading Options"
+msgstr ""
+
+#: inc/customizer.php:524
+msgid "Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+
+#: inc/customizer.php:531
+msgid "Show tags on front page (tags will be shown on post\'s individual page)"
+msgstr ""
+
+#: inc/customizer.php:538
+msgid "Show categories on front page (categories will be shown on post\'s individual page)"
+msgstr ""
+
+#: inc/customizer.php:548
+msgid "Show author\'s name, profile image, and bio after posts"
+msgstr ""
+
+#: inc/customizer.php:552
+msgid "Add an arrow before the title of a link post"
+msgstr ""
+
+#: inc/customizer.php:559
+msgid "Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)"
+msgstr ""
+
+#: inc/customizer.php:566
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr ""
+
+#: inc/customizer.php:579
+msgid "Other Options"
+msgstr ""
+
+#: inc/customizer.php:591
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:630
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer.php:636
+msgid "Active Link Color"
+msgstr ""
+
+#: inc/customizer.php:642
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:648
+msgid "Secondary Text Color"
+msgstr ""
+
+#: inc/customizer.php:654
+msgid "Use accent color instead of text color for icons"
+msgstr ""
+
 #: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -287,6 +431,11 @@ msgstr ""
 #: searchform.php:10
 msgctxt "assistive text"
 msgid "Search"
+msgstr ""
+
+#: searchform.php:10 searchform.php:11
+msgctxt "label"
+msgid "Search for:"
 msgstr ""
 
 #: searchform.php:11
