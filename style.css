@@ -347,11 +347,11 @@ a {
 		color: #007EA6;
 	}
 
-	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover {
+	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover {
 		border-bottom: 1px solid #009BCD;
 	}
 	
-	.no-touch .entry-content a:active, .no-touch .entry-meta a:active {
+	.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active {
 		border-bottom: 1px solid #007EA6;
 	}
 
