@@ -1282,6 +1282,10 @@ li.comment {
 	color: #444444;
 	display: block;
 }
+.search-entry .entry-title {
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
+}
 
 .search-entry:hover, .search-entry:hover .entry-title {
 	color: #009BCD;
