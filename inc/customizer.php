@@ -572,7 +572,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 
 /**
- * Color Options
+ * Other Options
  */
  
  	$wp_customize->add_section( 'decode_other_options', array(
