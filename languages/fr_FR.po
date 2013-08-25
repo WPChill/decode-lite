@@ -1,14 +1,14 @@
-# LANGUAGE (fr_FR) translation for WordPress.
+# LANGUAGE (fr_FR) translation for Decode.
 # This file is distributed under the same license as the WordPress package.
-# Stephane <sbataillon@yahoo.fr>, 2013.
+# Stéphane Bataillon <sbataillon@yahoo.fr>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-24 17:56-0600\n"
-"PO-Revision-Date: 2013-08-24 17:57-0600\n"
-"Last-Translator: stephane <sbataillon@yahoo.fr>\n"
+"POT-Creation-Date: 2013-08-24 22:04-0600\n"
+"PO-Revision-Date: 2013-08-24 22:05-0600\n"
+"Last-Translator: Stéphane Bataillon <sbataillon@yahoo.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -316,6 +316,161 @@ msgctxt "label"
 msgid "Search for:"
 msgstr "Rechercher:"
 
+#: inc/customizer.php:38
+msgid "Header Options"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "Favicon Image (recommended to be a PNG)"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Show Site Title"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "Show Site Description"
+msgstr ""
+
+# @ decode
+#: inc/customizer.php:100
+#, fuzzy
+msgid "Show Navigation"
+msgstr "Navigation dans les articles"
+
+#: inc/customizer.php:107
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr ""
+
+# @ decode
+#: inc/customizer.php:120
+#, fuzzy
+msgid "Sidebar Options"
+msgstr "Barre latérale"
+
+# @ decode
+#: inc/customizer.php:144
+#, fuzzy
+msgid "Enable Sidebar"
+msgstr "Barre latérale"
+
+# @ decode
+#: inc/customizer.php:151
+#, fuzzy
+msgid "Sidebar Position"
+msgstr "Barre latérale"
+
+#: inc/customizer.php:155
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:156
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Sidebar Button Position"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Always Visible Sidebar"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Discussion Options"
+msgstr ""
+
+# @ decode
+#: inc/customizer.php:203
+#, fuzzy
+msgid "Enable Comments"
+msgstr "% Commentaires"
+
+#: inc/customizer.php:216
+msgid "Social Options"
+msgstr ""
+
+#: inc/customizer.php:316
+msgid "Show Social Icons"
+msgstr ""
+
+#: inc/customizer.php:323 inc/customizer.php:330 inc/customizer.php:337
+#: inc/customizer.php:344 inc/customizer.php:351 inc/customizer.php:358
+#: inc/customizer.php:365 inc/customizer.php:386 inc/customizer.php:393
+#: inc/customizer.php:400 inc/customizer.php:407 inc/customizer.php:414
+#: inc/customizer.php:421 inc/customizer.php:428 inc/customizer.php:435
+#: inc/customizer.php:442 inc/customizer.php:449 inc/customizer.php:456
+#: inc/customizer.php:463
+msgid "Username"
+msgstr ""
+
+#: inc/customizer.php:344
+msgid " (or the long number in your profile URL)"
+msgstr ""
+
+#: inc/customizer.php:372
+msgid "Profile ID"
+msgstr ""
+
+#: inc/customizer.php:379
+msgid "Site URL"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:483
+msgid "Reading Options"
+msgstr ""
+
+#: inc/customizer.php:524
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+
+#: inc/customizer.php:531
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+
+#: inc/customizer.php:538
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+
+#: inc/customizer.php:545
+msgid "Show author's name, profile image, and bio after posts"
+msgstr ""
+
+#: inc/customizer.php:552
+msgid "Add an arrow before the title of a link post"
+msgstr ""
+
+#: inc/customizer.php:559
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+
+#: inc/customizer.php:566
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr ""
+
+#: inc/customizer.php:579
+msgid "Other Options"
+msgstr ""
+
+#: inc/customizer.php:591
+msgid "Custom CSS"
+msgstr ""
+
 # @ decode
 #: inc/customizer.php:630
 msgid "Accent Color"
@@ -335,6 +490,10 @@ msgstr "Couleur du texte"
 #: inc/customizer.php:648
 msgid "Secondary Text Color"
 msgstr "Seconde couleur du texte"
+
+#: inc/customizer.php:654
+msgid "Use accent color instead of text color for icons"
+msgstr ""
 
 # @ decode
 #: inc/extras.php:74
