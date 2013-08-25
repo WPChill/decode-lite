@@ -66,7 +66,9 @@
 				<?php decode_search_excerpt_highlight(); ?>
 			</div><!-- .entry-summary -->
 		</a>
-		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+		<footer class="entry-meta">
+			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+		</footer>
 	</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php elseif ( get_theme_mod( 'use_excerpts', false ) == true && !is_sticky() ) : ?>

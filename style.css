@@ -1296,12 +1296,17 @@ li.comment {
 }
 
 .search .post, .search .page {
-	border-bottom: 1px solid #009BCD;
 	margin-bottom: 10%;
 }
 
 .search-highlight {
 	background: rgba(255,255,0,0.25);
+}
+
+.search footer {
+	width: 90%;
+	border-bottom: 1px solid #009BCD;
+	margin: 0 auto;
 }
 
 
@@ -1605,7 +1610,7 @@ article.post {
 	font-size: 1.125em;
 }
 
-.post footer {
+.post footer, .search footer {
 	width: 85%;
 }
 
