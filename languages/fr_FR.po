@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2013-08-24\n"
-"PO-Revision-Date: 2013-08-26 07:31-0600\n"
+"PO-Revision-Date: 2013-08-26 08:34-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -587,8 +587,8 @@ msgstr "Rechercher:"
 # @ decode
 #: searchform.php:11
 msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Recherche &hellip;"
+msgid "Search&hellip;"
+msgstr "Recherche&hellip;"
 
 # @ decode
 #: searchform.php:13

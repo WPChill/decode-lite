@@ -461,7 +461,7 @@ msgstr ""
 
 #: searchform.php:11
 msgctxt "placeholder"
-msgid "Search &hellip;"
+msgid "Search&hellip;"
 msgstr ""
 
 #: searchform.php:13
