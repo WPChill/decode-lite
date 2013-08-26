@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2013-08-24\n"
-"PO-Revision-Date: 2013-08-26 11:49+0100\n"
+"PO-Revision-Date: 2013-08-26 07:31-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -144,7 +144,7 @@ msgstr "Éditer"
 #: content-single.php:25 content-single.php:51 content-single.php:78
 #: content.php:20 content.php:49 content.php:108
 msgid "Tagged as: "
-msgstr "Marqué avec:"
+msgstr "Marqué avec: "
 
 # @ decode
 #: content-single.php:26 content-single.php:52 content-single.php:79
@@ -576,7 +576,7 @@ msgstr "Résultats de la recherche pour: %s"
 #: searchform.php:10
 msgctxt "assistive text"
 msgid "Search"
-msgstr "Rechercher:"
+msgstr "Rechercher"
 
 # @ decode
 #: searchform.php:10 searchform.php:11
@@ -588,13 +588,13 @@ msgstr "Rechercher:"
 #: searchform.php:11
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr "Recherche&hellip;"
+msgstr "Recherche &hellip;"
 
 # @ decode
 #: searchform.php:13
 msgctxt "submit button"
 msgid "Search"
-msgstr "Rechercher:"
+msgstr "Rechercher"
 
 #. Description of the plugin/theme
 msgid ""
