@@ -138,36 +138,20 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_register_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.2" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.7.3" );
 
-	wp_register_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen' );
+	wp_enqueue_style( 'decode-font-stylesheet', 'http://fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
-	wp_register_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
+	if ( is_singular() && wp_attachment_is_image() ) {
+		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.2', true );
+	}
+	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
 
-	wp_register_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
-
-	wp_register_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', false );
-
-	wp_register_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
-
-	wp_register_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
-
-
-	wp_enqueue_style( 'decode-style');
-
-	wp_enqueue_style( 'decode-font-stylesheet' );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
-
-	if ( is_singular() && wp_attachment_is_image() ) { wp_enqueue_script( 'decode-keyboard-image-navigation' ); }
-
-	wp_enqueue_script( 'decode-modernizr' );
-
-	wp_enqueue_script( 'decode-respond' );
+	wp_enqueue_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.5', false );
 
 	if (get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-fastclick' );
-		wp_enqueue_script( 'decode-sidebar' );
+		wp_enqueue_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.3.2', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
 	}
 }
 }
@@ -205,7 +189,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search .post, .search .page, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus {
+		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
@@ -213,7 +197,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 
-		.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
+		.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
 			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 

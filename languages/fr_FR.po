@@ -1,0 +1,628 @@
+# LANGUAGE (fr_FR) translation for Decode.
+# This file is distributed under the same license as the WordPress package.
+# Stéphane Bataillon <sbataillon@yahoo.fr>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode v2.7\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2013-08-24\n"
+"PO-Revision-Date: 2013-08-26 08:34-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ decode
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Désolé, cette page n'existe pas."
+
+# @ decode
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Il semble qu'il n'y ait rien ici. Essayez les liens ci-dessous ou une "
+"nouvelle recherche."
+
+# @ decode
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Catégories les plus utilisées"
+
+# @ decode
+#: 404.php:44
+msgid "Try looking in the monthly archives."
+msgstr "Essayez de regarder dans les archives mensuelles."
+
+#: author.php:34 content-single.php:19 content-single.php:45
+#: content-single.php:72
+msgid "Website"
+msgstr "Site"
+
+# @ decode
+#: archive.php:27
+#, php-format
+msgid "Day: %s"
+msgstr "Jour: %s"
+
+# @ decode
+#: archive.php:30
+#, php-format
+msgid "Month: %s"
+msgstr "Mois: %s"
+
+# @ decode
+#: archive.php:33
+#, php-format
+msgid "Year: %s"
+msgstr "Année: %s"
+
+# @ decode
+#: archive.php:36
+msgid "Asides"
+msgstr "Apartés"
+
+# @ decode
+#: archive.php:39
+msgid "Images"
+msgstr "Images"
+
+# @ decode
+#: archive.php:42
+msgid "Videos"
+msgstr "Vidéos"
+
+# @ decode
+#: archive.php:45
+msgid "Quotes"
+msgstr "Citations"
+
+# @ decode
+#: archive.php:48
+msgid "Links"
+msgstr "Liens"
+
+# @ decode
+#: archive.php:51 inc/extras.php:83 page-explore.php:37 sidebar.php:17
+msgid "Archives"
+msgstr "Archives"
+
+# @ decode
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réaction dans &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réactions dans &ldquo;%2$s&rdquo;"
+
+# @ decode
+#: comments.php:35 comments.php:55
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+# @ decode
+#: comments.php:36 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Anciens commentaires"
+
+# @ decode
+#: comments.php:37 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Nouveaux commentaires &rarr;"
+
+# @ decode
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+# @ decode
+#: content-page.php:16 content-single.php:64 content.php:99 image.php:95
+msgid "Pages:"
+msgstr "Pages:"
+
+# @ decode
+#: content-page.php:19 content-single.php:24 content-single.php:50
+#: content-single.php:77 content.php:18 content.php:47 content.php:69
+#: content.php:83 content.php:106 image.php:21 image.php:117
+#: inc/template-tags.php:71 inc/template-tags.php:90
+msgid "Edit"
+msgstr "Éditer"
+
+#: content-single.php:25 content-single.php:51 content-single.php:78
+#: content.php:20 content.php:49 content.php:108
+msgid "Tagged as: "
+msgstr "Marqué avec: "
+
+# @ decode
+#: content-single.php:26 content-single.php:52 content-single.php:79
+#: content.php:23 content.php:52 content.php:111
+msgid "Categorized in&#58; "
+msgstr "Classé dans&#58; "
+
+# @ decode
+#: content.php:10 content.php:40 content.php:98
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lire la suite <span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#: content.php:15 content.php:44 content.php:103
+msgid "Leave a comment"
+msgstr "Laissez un commentaire"
+
+# @ decode
+#: content.php:15 content.php:44 content.php:103
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+# @ decode
+#: content.php:15 content.php:44 content.php:103
+msgid "% Comments"
+msgstr "% Commentaires"
+
+# @ decode
+#: content.php:84
+msgid "Read More&hellip;"
+msgstr "Lire la suite&hellip;"
+
+# @ decode
+#: footer.php:22
+msgid "%1$s by %2$s"
+msgstr "%1$s à %2$s"
+
+# @ decode
+#: functions.php:63
+msgid "Nav Menu"
+msgstr "Menu de navigation"
+
+# @ decode
+#: functions.php:76
+msgid "Sidebar"
+msgstr "Colonne latérale"
+
+# @ decode
+#: header.php:336
+msgid "Skip to content"
+msgstr "Voir le contenu"
+
+# @ decode
+#: image.php:24
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+"Publié le<span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> à <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+
+# @ decode
+#: image.php:38
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
+
+# @ decode
+#: image.php:39
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#: image.php:106
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Postez "
+"un commentaire</a> ou laissez un trackback: <a class=\"trackback-link\" href="
+"\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback "
+"URL</a>."
+
+# @ decode
+#: image.php:108
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Les commentaires sont fermés, mais vous pouvez laisser un trackback: <a "
+"class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" "
+"rel=\"trackback\">Trackback URL</a>."
+
+# @ decode
+#: image.php:110
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Les trackbacks sont fermés, mais vous pouvez <a class=\"comment-link\" href="
+"\"#respond\" title=\"Post a comment\">laisser un commentaire</a>."
+
+# @ decode
+#: image.php:112
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Les commentaires et les trackbacks sont fermés."
+
+#: inc/customizer.php:38
+msgid "Header Options"
+msgstr "Options de l'en-tête"
+
+#: inc/customizer.php:72
+msgid "Header Image"
+msgstr "Image de l'en-tête"
+
+#: inc/customizer.php:79
+msgid "Favicon Image (recommended to be a PNG)"
+msgstr "Favicon (format PNG recommandé)"
+
+#: inc/customizer.php:86
+msgid "Show Site Title"
+msgstr "Afficher le titre du site"
+
+#: inc/customizer.php:93
+msgid "Show Site Description"
+msgstr "Afficher la description du site"
+
+# @ decode
+#: inc/customizer.php:100
+msgid "Show Navigation"
+msgstr "Afficher le navigation"
+
+#: inc/customizer.php:107
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr ""
+"HTML pour la description, si vous voulez remplacer la description de votre "
+"blog par une balise HTML."
+
+# @ decode
+#: inc/customizer.php:120
+msgid "Sidebar Options"
+msgstr "Options de la colonne latérale"
+
+# @ decode
+#: inc/customizer.php:144
+msgid "Enable Sidebar"
+msgstr "Activer la colonne latérale"
+
+# @ decode
+#: inc/customizer.php:151
+msgid "Sidebar Position"
+msgstr "Position de la colonne latérale"
+
+#: inc/customizer.php:155 #: inc/customizer.php:166
+msgid "Left"
+msgstr "Gauche"
+
+#: inc/customizer.php:156 #: inc/customizer.php:167
+msgid "Right"
+msgstr "Droit"
+
+#: inc/customizer.php:162
+msgid "Sidebar Button Position"
+msgstr "Position du bouton de la colonne latérale"
+
+#: inc/customizer.php:173
+msgid "Always Visible Sidebar"
+msgstr "Colonne latérale toujours visible"
+
+#: inc/customizer.php:191
+msgid "Discussion Options"
+msgstr "Option de discussion"
+
+# @ decode
+#: inc/customizer.php:203
+msgid "Enable Comments"
+msgstr "Activer les commentaires"
+
+#: inc/customizer.php:216
+msgid "Social Options"
+msgstr "Options de réseaux sociaux"
+
+#: inc/customizer.php:316
+msgid "Show Social Icons"
+msgstr "Afficher les icônes de réseaux sociaux"
+
+#: inc/customizer.php:323 inc/customizer.php:330 inc/customizer.php:337
+#: inc/customizer.php:344 inc/customizer.php:351 inc/customizer.php:358
+#: inc/customizer.php:365 inc/customizer.php:386 inc/customizer.php:393
+#: inc/customizer.php:400 inc/customizer.php:407 inc/customizer.php:414
+#: inc/customizer.php:421 inc/customizer.php:428 inc/customizer.php:435
+#: inc/customizer.php:442 inc/customizer.php:449 inc/customizer.php:456
+#: inc/customizer.php:463
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: inc/customizer.php:344
+msgid " (or the long number in your profile URL)"
+msgstr "(ou la suite de chiffre dans l'URL de votre profil)"
+
+#: inc/customizer.php:372
+msgid "Profile ID"
+msgstr "ID du profil"
+
+#: inc/customizer.php:379
+msgid "Site URL"
+msgstr "URL du site"
+
+#: inc/customizer.php:470
+msgid "Email Address"
+msgstr "Adresse email"
+
+#: inc/customizer.php:483
+msgid "Reading Options"
+msgstr "Options de lecture"
+
+#: inc/customizer.php:524
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+"Utiliser l'extrait à la place du texte entier sur la page d'accueil, à "
+"l'exception des articles mis en avant."
+
+#: inc/customizer.php:531
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+"Afficher les tags sur la page d'accueil (les tags seront affichés sur la "
+"page de chaque article)"
+
+#: inc/customizer.php:538
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+"Afficher les catégories sur la page d'accueil (les catégories seront "
+"affichées sur la page de chaque article)"
+
+#: inc/customizer.php:548
+msgid "Show author's name, profile image, and bio after posts"
+msgstr ""
+"Afficher le nom de l'auteur, l'image du profil et la bio après les articles"
+
+#: inc/customizer.php:552
+msgid "Add an arrow before the title of a link post"
+msgstr "Ajouter une ombre devant le titre d'un lien d'article"
+
+#: inc/customizer.php:559
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+"Montrer les informations sur le thème (intègre une ligne sur le nom du thème "
+"et de son créateur à la fin des pages)"
+
+#: inc/customizer.php:566
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr ""
+"Texte (colophon, copyright, credits, etc.) pour le rooter de votre site"
+
+#: inc/customizer.php:579
+msgid "Other Options"
+msgstr "Autres options"
+
+#: inc/customizer.php:591
+msgid "Custom CSS"
+msgstr "Personnaliser le CSS"
+
+# @ decode
+#: inc/customizer.php:630
+msgid "Accent Color"
+msgstr "Couleur du soulignement"
+
+# @ decode
+#: inc/customizer.php:636
+msgid "Active Link Color"
+msgstr "Couleur du lien actif"
+
+# @ decode
+#: inc/customizer.php:642
+msgid "Text Color"
+msgstr "Couleur du texte"
+
+# @ decode
+#: inc/customizer.php:648
+msgid "Secondary Text Color"
+msgstr "Seconde couleur du texte"
+
+#: inc/customizer.php:654
+msgid "Use accent color instead of text color for icons"
+msgstr ""
+"Utiliser la couleur de soulignement à la place de la couleur du texte pour "
+"les icônes"
+
+# @ decode
+#: inc/extras.php:74
+msgid "Category"
+msgstr "Catégorie"
+
+# @ decode
+#: inc/extras.php:77
+msgid "Tag"
+msgstr "Tag"
+
+# @ decode
+#: inc/extras.php:80
+msgid "Author"
+msgstr "Auteur"
+
+# @ decode
+#: inc/extras.php:90 inc/extras.php:94
+msgid "Page "
+msgstr "Page"
+
+# @ decode
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr "Navigation dans les articles"
+
+# @ decode
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+# @ decode
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+# @ decode
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles précédents"
+
+# @ decode
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articles suivants <span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#: inc/template-tags.php:71
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ decode
+#: inc/template-tags.php:81
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dit:</span>"
+
+# @ decode
+#: inc/template-tags.php:87
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+# @ decode
+#: inc/template-tags.php:94
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente d'approbation."
+
+# @ decode
+#: inc/template-tags.php:183
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"posted-on\">Posté le %1$s</span><span class=\"byline\"> par "
+"%2$s</span>"
+
+# @ decode
+#: inc/template-tags.php:191
+msgid "View all posts by %s"
+msgstr "Voir tous les articles de %s"
+
+# @ decode
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+# @ decode
+#: no-results.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt pour publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+
+# @ decode
+#: no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais nous n'avons trouvé aucun élément correspondant à votre "
+"recherche. Essayez avec d'autres mots-clés."
+
+# @ decode
+#: no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Rien ne semble correspondre à votre recherche. Nous vous conseillons "
+"d'essayer autre chose."
+
+# @ decode
+#: page-explore.php:24
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+# @ decode
+#: page-explore.php:44
+msgid "Categories"
+msgstr "Catégories"
+
+# @ decode
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour: %s"
+
+# @ decode
+#: searchform.php:10
+msgctxt "assistive text"
+msgid "Search"
+msgstr "Rechercher"
+
+# @ decode
+#: searchform.php:10 searchform.php:11
+msgctxt "label"
+msgid "Search for:"
+msgstr "Rechercher:"
+
+# @ decode
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr "Recherche&hellip;"
+
+# @ decode
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Rechercher"
+
+#. Description of the plugin/theme
+msgid ""
+"A minimal, modern theme, designed to be mobile first and very responsive, "
+"Decode features the ability to change all the colors in the theme, an "
+"elegant sidebar conveniently accessed by tapping on the menu icon. The "
+"sidebar can hold any number of widgets you choose and you can choose to have "
+"the sidebar to be on the left or right side of the page and whether it "
+"should stay visible all the time or be closeable. You can also disable the "
+"sidebar and comment links if you choose. Decode supports link posts, where "
+"the title can be hyperlinked. Decode includes custom social icons in the "
+"header that you can easily link to your choice of 19 different social "
+"profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be "
+"sure to find support for the network you want. Lastly, Decode is also built "
+"alongside a companion plugin that adds a sleek reply tool that lets readers "
+"send you a reply about the post using Twitter or App.net. More info here: "
+"http://scotthsmith.com/projects/decode/."
+msgstr ""
+"Un thème moderne et minimaliste, conçu en responsive design pour s'adapter "
+"parfaitement à tous les supports mobiles. Les options de Decode permettent "
+"de changer les couleurs du thème et d'afficher une élégante colonne latérale "
+"par simple tap sur son icône. Cette colonne affiche un nombre illimité de "
+"widgets, peut être placée à droite ou à gauche, être visible de façon "
+"permanente ou ponctuelle, ou encore désactivée. Decode permet les liens sur "
+"les titres d'articles, et inclut de superbes icônes dans l'en-tête afin de "
+"relier votre site aux profils de 19 réseaux sociaux de votre choix, de "
+"Twitter à AppNet, en passant par Pinterest ou LinkedIn, vous êtes sûr de "
+"trouver votre réseau préféré. Enfin, Decode peut se compléter d'un plugin "
+"qui permet à vos lecteurs de vous répondre très simplement sur un article "
+"par twitter ou App.net. Plus d'infos ici : http://scotthsmith.com/projects/"
+"decode/."

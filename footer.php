@@ -19,7 +19,7 @@
 		
 		<?php if (get_theme_mod( 'show_theme_info', true ) == true ) : ?>
 		<div class="theme-info">
-			<p><a href="http://ScottHSmith.com/projects/decode/">Decode</a> by Scott Smith</p>
+			<p><?php printf(__( '%1$s by %2$s', 'decode' ), '<a href="http://ScottHSmith.com/projects/decode/">Decode</a>', 'Scott Smith') ?></p>
 		</div><!-- .theme-info -->
 		<?php endif; ?>
 	</footer><!-- #colophon -->

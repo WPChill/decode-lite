@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.7.2
+Version: 2.7.3
 License: GNU General Public License
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
@@ -347,11 +347,11 @@ a {
 		color: #007EA6;
 	}
 
-	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover {
+	.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover {
 		border-bottom: 1px solid #009BCD;
 	}
 	
-	.no-touch .entry-content a:active, .no-touch .entry-meta a:active {
+	.no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active {
 		border-bottom: 1px solid #007EA6;
 	}
 
@@ -1131,6 +1131,10 @@ footer .date a {
 	margin: 1.5%;
 }
 
+.explore-page .search-form {
+	text-align: center;
+}
+
 .explore-page .widget h1 {
 	color: #444;
 	font-size: 1.15em;
@@ -1195,9 +1199,9 @@ footer .date a {
 }
 
 .nav-next a, .nav-previous a {
-	-webkit-transition: padding 0.25s ease-out;
-	-moz-transition: padding 0.25s ease-out;
-	transition: padding 0.25s ease-out;
+	-webkit-transition: padding 0.25s ease-out, color 0.25s ease-out;
+	-moz-transition: padding 0.25s ease-out, color 0.25s ease-out;
+	transition: padding 0.25s ease-out, color 0.25s ease-out;
 	padding: 0;
 	display: block;
 }
@@ -1272,7 +1276,6 @@ li.comment {
 
 .search-form {
 	margin-bottom: 2.5%;
-	text-align: center;
 }
 
 .search-entry, .search-entry .entry-title {
@@ -1281,6 +1284,10 @@ li.comment {
 	transition: color 0.25s ease-out;
 	color: #444444;
 	display: block;
+}
+.search-entry .entry-title {
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
 }
 
 .search-entry:hover, .search-entry:hover .entry-title {
@@ -1292,12 +1299,17 @@ li.comment {
 }
 
 .search .post, .search .page {
-	border-bottom: 1px solid #009BCD;
 	margin-bottom: 10%;
 }
 
 .search-highlight {
 	background: rgba(255,255,0,0.25);
+}
+
+.search footer {
+	width: 90%;
+	border-bottom: 1px solid #009BCD;
+	margin: 0 auto;
 }
 
 
@@ -1601,7 +1613,7 @@ article.post {
 	font-size: 1.125em;
 }
 
-.post footer {
+.post footer, .search footer {
 	width: 85%;
 }
 
@@ -1639,11 +1651,15 @@ article.post {
 }
 
 .sidebar-style-constant .site-scroll {
-	margin: 0;
+	margin: 3.5% 0 0;
 }
 
 .sidebar-style-constant .SidebarLink {
 	display: block;
+}
+
+.SidebarLink {
+	top: 2.5%;
 }
 
 .SidebarLink.left {
