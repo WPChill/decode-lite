@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2013-08-24\n"
-"PO-Revision-Date: 2013-08-25 09:54-0600\n"
+"PO-Revision-Date: 2013-08-26 11:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -34,7 +34,8 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Rien de trouvé à cet endroit. Essayez les liens ci-dessous ou une recherche."
+"Il semble qu'il n'y ait rien ici. Essayez les liens ci-dessous ou une "
+"nouvelle recherche."
 
 # @ decode
 #: 404.php:27
@@ -49,7 +50,7 @@ msgstr "Essayez de regarder dans les archives mensuelles."
 #: author.php:34 content-single.php:19 content-single.php:45
 #: content-single.php:72
 msgid "Website"
-msgstr ""
+msgstr "Site"
 
 # @ decode
 #: archive.php:27
@@ -125,7 +126,7 @@ msgstr "Nouveaux commentaires &rarr;"
 # @ decode
 #: comments.php:67
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés"
+msgstr "Les commentaires sont fermés."
 
 # @ decode
 #: content-page.php:16 content-single.php:64 content.php:99 image.php:95
@@ -143,14 +144,13 @@ msgstr "Éditer"
 #: content-single.php:25 content-single.php:51 content-single.php:78
 #: content.php:20 content.php:49 content.php:108
 msgid "Tagged as: "
-msgstr ""
+msgstr "Marqué avec:"
 
 # @ decode
 #: content-single.php:26 content-single.php:52 content-single.php:79
 #: content.php:23 content.php:52 content.php:111
-#, fuzzy
 msgid "Categorized in&#58; "
-msgstr "Catégories"
+msgstr "Classé dans&#58; "
 
 # @ decode
 #: content.php:10 content.php:40 content.php:98
@@ -174,13 +174,11 @@ msgstr "% Commentaires"
 
 # @ decode
 #: content.php:84
-#, fuzzy
 msgid "Read More&hellip;"
-msgstr "Recherche&hellip;"
+msgstr "Lire la suite&hellip;"
 
 # @ decode
 #: footer.php:22
-#, fuzzy
 msgid "%1$s by %2$s"
 msgstr "%1$s à %2$s"
 
@@ -192,7 +190,7 @@ msgstr "Menu de navigation"
 # @ decode
 #: functions.php:76
 msgid "Sidebar"
-msgstr "Barre latérale"
+msgstr "Colonne latérale"
 
 # @ decode
 #: header.php:336
@@ -261,87 +259,84 @@ msgstr "Les commentaires et les trackbacks sont fermés."
 
 #: inc/customizer.php:38
 msgid "Header Options"
-msgstr ""
+msgstr "Options de l'en-tête"
 
 #: inc/customizer.php:72
 msgid "Header Image"
-msgstr ""
+msgstr "Image de l'en-tête"
 
 #: inc/customizer.php:79
 msgid "Favicon Image (recommended to be a PNG)"
-msgstr ""
+msgstr "Favicon (format PNG recommandé)"
 
 #: inc/customizer.php:86
 msgid "Show Site Title"
-msgstr ""
+msgstr "Afficher le titre du site"
 
 #: inc/customizer.php:93
 msgid "Show Site Description"
-msgstr ""
+msgstr "Afficher la description du site"
 
 # @ decode
 #: inc/customizer.php:100
-#, fuzzy
 msgid "Show Navigation"
-msgstr "Navigation dans les articles"
+msgstr "Afficher le navigation"
 
 #: inc/customizer.php:107
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
 msgstr ""
+"HTML pour la description, si vous voulez remplacer la description de votre "
+"blog par une balise HTML."
 
 # @ decode
 #: inc/customizer.php:120
-#, fuzzy
 msgid "Sidebar Options"
-msgstr "Barre latérale"
+msgstr "Options de la colonne latérale"
 
 # @ decode
 #: inc/customizer.php:144
-#, fuzzy
 msgid "Enable Sidebar"
-msgstr "Barre latérale"
+msgstr "Activer la colonne latérale"
 
 # @ decode
 #: inc/customizer.php:151
-#, fuzzy
 msgid "Sidebar Position"
-msgstr "Barre latérale"
+msgstr "Position de la colonne latérale"
 
 #: inc/customizer.php:155 #: inc/customizer.php:166
 msgid "Left"
-msgstr ""
+msgstr "Gauche"
 
 #: inc/customizer.php:156 #: inc/customizer.php:167
 msgid "Right"
-msgstr ""
+msgstr "Droit"
 
 #: inc/customizer.php:162
 msgid "Sidebar Button Position"
-msgstr ""
+msgstr "Position du bouton de la colonne latérale"
 
 #: inc/customizer.php:173
 msgid "Always Visible Sidebar"
-msgstr ""
+msgstr "Colonne latérale toujours visible"
 
 #: inc/customizer.php:191
 msgid "Discussion Options"
-msgstr ""
+msgstr "Option de discussion"
 
 # @ decode
 #: inc/customizer.php:203
-#, fuzzy
 msgid "Enable Comments"
-msgstr "% Commentaires"
+msgstr "Activer les commentaires"
 
 #: inc/customizer.php:216
 msgid "Social Options"
-msgstr ""
+msgstr "Options de réseaux sociaux"
 
 #: inc/customizer.php:316
 msgid "Show Social Icons"
-msgstr ""
+msgstr "Afficher les icônes de réseaux sociaux"
 
 #: inc/customizer.php:323 inc/customizer.php:330 inc/customizer.php:337
 #: inc/customizer.php:344 inc/customizer.php:351 inc/customizer.php:358
@@ -351,68 +346,78 @@ msgstr ""
 #: inc/customizer.php:442 inc/customizer.php:449 inc/customizer.php:456
 #: inc/customizer.php:463
 msgid "Username"
-msgstr ""
+msgstr "Nom d'utilisateur"
 
 #: inc/customizer.php:344
 msgid " (or the long number in your profile URL)"
-msgstr ""
+msgstr "(ou la suite de chiffre dans l'URL de votre profil)"
 
 #: inc/customizer.php:372
 msgid "Profile ID"
-msgstr ""
+msgstr "ID du profil"
 
 #: inc/customizer.php:379
 msgid "Site URL"
-msgstr ""
+msgstr "URL du site"
 
 #: inc/customizer.php:470
 msgid "Email Address"
-msgstr ""
+msgstr "Adresse email"
 
 #: inc/customizer.php:483
 msgid "Reading Options"
-msgstr ""
+msgstr "Options de lecture"
 
 #: inc/customizer.php:524
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
+"Utiliser l'extrait à la place du texte entier sur la page d'accueil, à "
+"l'exception des articles mis en avant."
 
 #: inc/customizer.php:531
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
+"Afficher les tags sur la page d'accueil (les tags seront affichés sur la "
+"page de chaque article)"
 
 #: inc/customizer.php:538
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
 msgstr ""
+"Afficher les catégories sur la page d'accueil (les catégories seront "
+"affichées sur la page de chaque article)"
 
 #: inc/customizer.php:548
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
+"Afficher le nom de l'auteur, l'image du profil et la bio après les articles"
 
 #: inc/customizer.php:552
 msgid "Add an arrow before the title of a link post"
-msgstr ""
+msgstr "Ajouter une ombre devant le titre d'un lien d'article"
 
 #: inc/customizer.php:559
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
 msgstr ""
+"Montrer les informations sur le thème (intègre une ligne sur le nom du thème "
+"et de son créateur à la fin des pages)"
 
 #: inc/customizer.php:566
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
+"Texte (colophon, copyright, credits, etc.) pour le rooter de votre site"
 
 #: inc/customizer.php:579
 msgid "Other Options"
-msgstr ""
+msgstr "Autres options"
 
 #: inc/customizer.php:591
 msgid "Custom CSS"
-msgstr ""
+msgstr "Personnaliser le CSS"
 
 # @ decode
 #: inc/customizer.php:630
@@ -437,6 +442,8 @@ msgstr "Seconde couleur du texte"
 #: inc/customizer.php:654
 msgid "Use accent color instead of text color for icons"
 msgstr ""
+"Utiliser la couleur de soulignement à la place de la couleur du texte pour "
+"les icônes"
 
 # @ decode
 #: inc/extras.php:74
@@ -478,7 +485,7 @@ msgstr "&rarr;"
 # @ decode
 #: inc/template-tags.php:44
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Anciens articles"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles précédents"
 
 # @ decode
 #: inc/template-tags.php:48
@@ -538,15 +545,17 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, mais rien ne correspond à votre recherche. Essayez d'autres mots-"
-"clés."
+"Désolé, mais nous n'avons trouvé aucun élément correspondant à votre "
+"recherche. Essayez avec d'autres mots-clés."
 
 # @ decode
 #: no-results.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Rien de trouvé."
+msgstr ""
+"Rien ne semble correspondre à votre recherche. Nous vous conseillons "
+"d'essayer autre chose."
 
 # @ decode
 #: page-explore.php:24
@@ -565,7 +574,6 @@ msgstr "Résultats de la recherche pour: %s"
 
 # @ decode
 #: searchform.php:10
-#, fuzzy
 msgctxt "assistive text"
 msgid "Search"
 msgstr "Rechercher:"
@@ -578,14 +586,12 @@ msgstr "Rechercher:"
 
 # @ decode
 #: searchform.php:11
-#, fuzzy
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Recherche&hellip;"
 
 # @ decode
 #: searchform.php:13
-#, fuzzy
 msgctxt "submit button"
 msgid "Search"
 msgstr "Rechercher:"
@@ -607,3 +613,16 @@ msgid ""
 "send you a reply about the post using Twitter or App.net. More info here: "
 "http://scotthsmith.com/projects/decode/."
 msgstr ""
+"Un thème moderne et minimaliste, conçu en responsive design pour s'adapter "
+"parfaitement à tous les supports mobiles. Les options de Decode permettent "
+"de changer les couleurs du thème et d'afficher une élégante colonne latérale "
+"par simple tap sur son icône. Cette colonne affiche un nombre illimité de "
+"widgets, peut être placée à droite ou à gauche, être visible de façon "
+"permanente ou ponctuelle, ou encore désactivée. Decode permet les liens sur "
+"les titres d'articles, et inclut de superbes icônes dans l'en-tête afin de "
+"relier votre site aux profils de 19 réseaux sociaux de votre choix, de "
+"Twitter à AppNet, en passant par Pinterest ou LinkedIn, vous êtes sûr de "
+"trouver votre réseau préféré. Enfin, Decode peut se compléter d'un plugin "
+"qui permet à vos lecteurs de vous répondre très simplement sur un article "
+"par twitter ou App.net. Plus d'infos ici : http://scotthsmith.com/projects/"
+"decode/."
