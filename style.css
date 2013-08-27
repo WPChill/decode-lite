@@ -1313,8 +1313,8 @@ li.comment {
 }
 
 .no-touch .search .page-header input[type="search"]:hover {
-	color: #878787;
-	border-color: #878787;
+	color: #888888;
+	border-color: #888888;
 	border-radius: 3px;
 }
 
