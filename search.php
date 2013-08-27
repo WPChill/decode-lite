@@ -13,7 +13,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'decode' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<?php get_search_form(); ?>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>

@@ -4,7 +4,7 @@ Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.7.4
+Version: 2.7.5
 License: GNU General Public License
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
@@ -287,9 +287,9 @@ input[type="search"],
 input[type="tel"],
 input[type="url"],
 textarea {
-	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	-webkit-transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	-moz-transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	color: #C0C0C0;
 	padding: 0.3em;
 	border: 1px solid #C0C0C0;
@@ -1290,12 +1290,42 @@ li.comment {
 	margin-bottom: 0.5em;
 }
 
-.search-entry:hover, .search-entry:hover .entry-title {
+.no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title {
 	color: #009BCD;
 }
 
-.search-entry:active, .search-entry:active .entry-title {
+.no-touch .search-entry:active, .no-touch .search-entry:active .entry-title {
 	color: #007EA6;
+}
+
+.search .site-main .search-form {
+	margin-top: 2.5%;
+	
+}
+
+.search .page-header input[type="search"] {
+	color: #A6A6A6;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-radius: 0;
+	font-size: 1.25em;
+}
+
+.no-touch .search .page-header input[type="search"]:hover {
+	color: #878787;
+	border-color: #878787;
+	border-radius: 3px;
+}
+
+.search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
+	color: #444444;
+	border-color: #009BCD;
+	border-radius: 3px;
+}
+
+.search .page-header .search-submit {
+	font-size: 0.9em;
 }
 
 .search .post, .search .page {
