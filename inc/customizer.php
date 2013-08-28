@@ -282,6 +282,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'spotify_username', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'lastfm_username', array(
+		'default' => '',
+	) );
 
 	$wp_customize->add_setting( 'soundcloud_username', array(
 		'default' => '',
@@ -305,6 +309,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'skype_username', array(
 		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'show_rss_icon', array(
+		'default' => false,
 	) );
 	
 	$wp_customize->add_setting( 'email_address', array(
@@ -423,54 +431,68 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'text',
 		'priority'=> 16,
 	) );
+	
+	$wp_customize->add_control( 'lastfm_username', array(
+		'label'   => 'Last.fm ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 17,
+	) );
 
 	$wp_customize->add_control( 'soundcloud_username', array(
 		'label'   => 'Soundcloud ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 17,
+		'priority'=> 18,
 	) );
 
 	$wp_customize->add_control( 'vimeo_username', array(
 		'label'   => 'Vimeo ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 18,
+		'priority'=> 19,
 	) );
 
 	$wp_customize->add_control( 'youtube_username', array(
 		'label'   => 'YouTube ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 19,
+		'priority'=> 20,
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
 		'label'   => 'GitHub ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 20,
+		'priority'=> 21,
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => 'Foursquare ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 21,
+		'priority'=> 22,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 22,
+		'priority'=> 23,
+	) );
+	
+	$wp_customize->add_control( 'show_rss_icon', array(
+		'label'   => __( 'RSS Feed', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'checkbox',
+		'priority'=> 24,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 23,
+		'priority'=> 25,
 	) );
 
 
