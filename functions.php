@@ -270,7 +270,7 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 
 	foreach ($post_keys as $pkey) {
 
-	if ($pkey=='title_url' || $pkey=='url_title') {
+	if ($pkey=='title_url' || $pkey=='url_title' || $pkey=='title_link') {
 
 	$post_val = get_post_custom_values($pkey);
 
