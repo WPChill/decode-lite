@@ -268,32 +268,25 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 
 	if (!empty($post_keys)) {
 
-	foreach ($post_keys as $pkey) {
-
-	if ($pkey=='title_url' || $pkey=='url_title' || $pkey=='title_link') {
-
-	$post_val = get_post_custom_values($pkey);
-
+		foreach ($post_keys as $pkey) {
+	
+			if ($pkey=='title_url' || $pkey=='url_title' || $pkey=='title_link') {
+				$post_val = get_post_custom_values($pkey);
+			}
+		}
+	
+		if (empty($post_val)) {
+			$link = $perm;
+		}
+		
+		else {
+			$link = $post_val[0];
+		}
 	}
-
+	 
+	else {
+		$link = $perm;
 	}
-
-	if (empty($post_val)) {
-
-	$link = $perm;
-
-	} else {
-
-	$link = $post_val[0];
-
-	}
-
-	} else {
-
-	$link = $perm;
-
-	}
-
 
 	echo '<a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a>';
 
