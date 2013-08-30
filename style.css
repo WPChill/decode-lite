@@ -491,8 +491,8 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 3.5% auto 0;
 	border-bottom: 1px solid #009BCD;
+	margin: 3.5% auto 0;
 }
 
 .site-branding {
@@ -1794,5 +1794,16 @@ article.post {
 
 article.post {
 	margin-bottom: 10%;
+}
+}
+
+@media only print {
+.SidebarLink, .sociallinks, .main-navigation, .paging-navigation, .post-navigation, .comment-respond {
+	display: none;
+}
+
+.site-header {
+	padding-bottom: 2.5%;
+	margin-top: 0;
 }
 }
