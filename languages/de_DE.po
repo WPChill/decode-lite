@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.7.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2013-08-27 23:43-0600\n"
-"PO-Revision-Date: 2013-08-31 16:35-0600\n"
+"PO-Revision-Date: 2013-08-31 23:16-0600\n"
 "Last-Translator: \n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -21,9 +21,9 @@ msgstr ""
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "Description:\n"
 "X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
-"X-Textdomain-Support: yes\n"
 
 #: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -139,7 +139,7 @@ msgstr "Getaggt als: "
 #: ../content-single.php:26 ../content-single.php:52 ../content-single.php:79
 #: ../content.php:23 ../content.php:52 ../content.php:113
 msgid "Categorized in&#58; "
-msgstr "Abgelegt in&#58;"
+msgstr "Abgelegt in&#58; "
 
 #: ../content.php:15 ../content.php:44 ../content.php:105
 msgid "Leave a comment"
