@@ -837,7 +837,7 @@ article.post {
 	margin: 2.5% auto;
 }
 
-body.single-attachment .attachment {
+body.single-attachment .entry-content .attachment {
 	text-align: center;
 }
 
