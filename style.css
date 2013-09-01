@@ -761,7 +761,7 @@ article.page .entry-header {
 	margin: 2.5% auto 5%;
 }
 
-.attachment .entry-header {
+body.single-attachment .entry-header {
 	padding-top: 5%;
 	margin-top: 0;
 }
@@ -837,11 +837,15 @@ article.post {
 	margin: 2.5% auto;
 }
 
+body.single-attachment .attachment {
+	text-align: center;
+}
+
 .entry-meta {
 	clear: both;
 }
 
-.attachment .entry-meta {
+body.single-attachment .entry-meta {
 	margin-top: 1.5%;
 }
 
