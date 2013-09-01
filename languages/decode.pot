@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-08-27 23:43-0600\n"
-"PO-Revision-Date: 2013-08-27 23:43-0600\n"
+"POT-Creation-Date: 2013-09-01 13:07-0600\n"
+"PO-Revision-Date: 2013-09-01 13:08-0600\n"
 "Last-Translator: \n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -81,9 +81,14 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: ../author.php:33 ../content-single.php:18 ../content-single.php:44
+#: ../author.php:36 ../content-single.php:18 ../content-single.php:44
 #: ../content-single.php:71
 msgid "Website"
+msgstr ""
+
+#: ../author.php:45
+#, php-format
+msgid "Author: %s"
 msgstr ""
 
 #: ../comments.php:28
@@ -108,6 +113,23 @@ msgstr ""
 
 #: ../comments.php:67
 msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:71
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:72
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:73
+msgid "Cancel reply"
+msgstr ""
+
+#: ../comments.php:74
+msgid "Post Comment"
 msgstr ""
 
 #: ../content-page.php:16 ../content-single.php:11 ../content-single.php:64
@@ -166,7 +188,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: ../header.php:30 ../header.php:362
+#: ../header.php:30 ../header.php:365
 msgid "Skip to content"
 msgstr ""
 
@@ -496,14 +518,18 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:187
+#: ../inc/template-tags.php:108
+msgid "Reply"
+msgstr ""
+
+#: ../inc/template-tags.php:188
 #, php-format
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
 msgstr ""
 
-#: ../inc/template-tags.php:195
+#: ../inc/template-tags.php:196
 #, php-format
 msgid "View all posts by %s"
 msgstr ""

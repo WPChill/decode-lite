@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-08-27 23:43-0600\n"
-"PO-Revision-Date: 2013-08-31 23:16-0600\n"
+"POT-Creation-Date: 2013-09-01 13:07-0600\n"
+"PO-Revision-Date: 2013-09-01 13:12-0600\n"
 "Last-Translator: \n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -85,10 +85,14 @@ msgstr "Links"
 msgid "Archives"
 msgstr "Archive"
 
-#: ../author.php:33 ../content-single.php:18 ../content-single.php:44
+#: ../author.php:36 ../content-single.php:18 ../content-single.php:44
 #: ../content-single.php:71
 msgid "Website"
 msgstr "Webseite"
+
+#: ../author.php:45
+msgid "Author: %s"
+msgstr "Autor: %s"
 
 #: ../comments.php:28
 #, php-format
@@ -113,6 +117,23 @@ msgstr "Neuere Kommentare &rarr;"
 #: ../comments.php:67
 msgid "Comments are closed."
 msgstr "Kommentare geschlossen."
+
+#: ../comments.php:71
+msgid "Leave a Reply"
+msgstr "Schreibe eine Kommentar"
+
+#: ../comments.php:72
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:73
+msgid "Cancel reply"
+msgstr ""
+
+#: ../comments.php:74
+msgid "Post Comment"
+msgstr "1 Kommentar"
 
 #: ../content-page.php:16 ../content-single.php:11 ../content-single.php:64
 #: ../content.php:11 ../content.php:101 ../image.php:95
@@ -170,7 +191,7 @@ msgstr "Navigations Men&uuml;"
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: ../header.php:30 ../header.php:362
+#: ../header.php:30 ../header.php:365
 msgid "Skip to content"
 msgstr "Springe zu Inhalt"
 
@@ -384,8 +405,8 @@ msgid " (or the long number in your profile URL)"
 msgstr " (oder die lange Nummer in deiner Profil URL)"
 
 #: ../inc/customizer.php:380
-msgid "Profile ID"
-msgstr "Profil ID"
+msgid "Profile URL"
+msgstr "Profil URL"
 
 #: ../inc/customizer.php:387
 msgid "Site URL"
@@ -530,7 +551,11 @@ msgstr "%1$s um %2$s"
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wartet auf Moderation."
 
-#: ../inc/template-tags.php:187
+#: ../inc/template-tags.php:108
+msgid "Reply"
+msgstr "Antworten"
+
+#: ../inc/template-tags.php:188
 #, php-format
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
@@ -539,7 +564,7 @@ msgstr ""
 "<span class=\"posted-on\">Gepostet am %1$s</span><span class=\"byline\"> von "
 "%2$s</span>"
 
-#: ../inc/template-tags.php:195
+#: ../inc/template-tags.php:196
 #, php-format
 msgid "View all posts by %s"
 msgstr "Zeige alle Posts von %s"
