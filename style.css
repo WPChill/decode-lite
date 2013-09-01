@@ -630,6 +630,12 @@ object {
 	margin: 0 0.5em;
 	position: relative;
 }
+.main-navigation li:first-child {
+	margin-left: 0;
+}
+.main-navigation li:last-child {
+	margin-right: 0;
+}
 .main-navigation a {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
