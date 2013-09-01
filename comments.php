@@ -74,6 +74,15 @@ if ( post_password_required() )
 		'label_submit'         => __( 'Post Comment', 'decode' ),
 	) ); ?>
 	
+	<?php
+		_x( 'Comment', 'noun', 'decode' );
+		__( 'You must be <a href="%s">logged in</a> to post a comment.', 'decode' );
+		__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'decode' );
+		__( 'Your email address will not be published.', 'decode' );
+		__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'decode' );
+	?>
+	
+	
 	<script>
 		jQuery(document).ready(function($){
 			$("textarea#comment").click(function(){

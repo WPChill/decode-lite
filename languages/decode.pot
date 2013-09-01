@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.7.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-09-01 13:07-0600\n"
-"PO-Revision-Date: 2013-09-01 13:08-0600\n"
+"POT-Creation-Date: 2013-09-01 13:43-0600\n"
+"PO-Revision-Date: 2013-09-01 13:43-0600\n"
 "Last-Translator: \n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -130,6 +130,34 @@ msgstr ""
 
 #: ../comments.php:74
 msgid "Post Comment"
+msgstr ""
+
+#: ../comments.php:78
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:79
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:80
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Your email address will not be published."
+msgstr ""
+
+#: ../comments.php:82
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
 msgstr ""
 
 #: ../content-page.php:16 ../content-single.php:11 ../content-single.php:64
