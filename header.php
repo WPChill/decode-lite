@@ -14,22 +14,22 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if (get_theme_mod( 'favicon_image', '' )) echo '<link rel="icon" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
-<?php if (get_theme_mod( 'favicon_image', '' )) echo '<link rel="apple-touch-icon-precomposed" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
+<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="icon" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
+<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="apple-touch-icon-precomposed" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site<?php if (get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
+<div id="page" class="hfeed site<?php if ( get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
 	<?php do_action( 'before' ); ?>
-	<?php if (get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
+	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
 		
 	<header id="masthead" class="site-header" role="banner">
 		
 		<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
 		
-		<?php if (get_theme_mod( 'show_sidebar', true ) == true) : ?>
+		<?php if ( get_theme_mod( 'show_sidebar', true ) == true) : ?>
 		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
 			<svg width="240px" height="200px" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 			    <title>Menu</title>
@@ -45,27 +45,27 @@
 		
 		<div class="site-branding">
 			
-			<?php if (get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '"><img class="site-logo" src="' . get_theme_mod( 'header_image', '' ) . '"></a>'; ?>
+			<?php if ( get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '"><img class="site-logo" src="' . get_theme_mod( 'header_image', '' ) . '"></a>'; ?>
 			
-			<?php if (get_theme_mod( 'show_site_title', true ) == true ) : ?>			
+			<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
 				<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</h1>
 			<?php endif; ?>
 			
-			<?php if (get_theme_mod( 'show_site_description', true ) == true ) : ?>
-				<?php if (get_theme_mod( 'html_description', '' ) !== '' ) : ?>
+			<?php if ( get_theme_mod( 'show_site_description', true ) == true ) : ?>
+				<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
 				<h2 class="site-description"><?php echo get_theme_mod( 'html_description' ); ?></h2>
-				<?php elseif (get_theme_mod( 'html_description', '' ) == '' ) : ?>
+				<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
 				<h2 class="site-description"><?php echo get_bloginfo ( 'description' );?></h2>
 				<?php endif; ?>
 			<?php endif; ?>
 			
 		</div>
-		<?php if (get_theme_mod( 'show_social_icons', false ) == true ) : ?>
+		<?php if ( get_theme_mod( 'show_social_icons', false ) == true ) : ?>
 		<div class="sociallinks">
 			<ul>
-				<?php if (get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>
 				<a class="sociallink TwitterLink" href="<?php echo esc_url( 'https://twitter.com/' . get_theme_mod( 'twitter_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Twitter</title>
@@ -77,7 +77,7 @@
 				</a>
 				<?php endif; ?>
 
-				<?php if (get_theme_mod( 'adn_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'adn_username', '' ) !== '' ) : ?>
 				<a class="sociallink ADNLink" href="<?php echo esc_url( 'https://alpha.app.net/' . get_theme_mod( 'adn_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>ADN</title>
@@ -89,7 +89,7 @@
 				</a>
 				<?php endif; ?>
 
-				<?php if (get_theme_mod( 'facebook_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'facebook_username', '' ) !== '' ) : ?>
 				<a class="sociallink FacebookLink" href="<?php echo esc_url( 'https://facebook.com/' . get_theme_mod( 'facebook_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Facebook</title>
@@ -101,7 +101,7 @@
 				</a>
 				<?php endif; ?>
 
-				<?php if (get_theme_mod( 'google_plus_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'google_plus_username', '' ) !== '' ) : ?>
 				<a class="sociallink GooglePlusLink" href="<?php echo esc_url( 'https://plus.google.com/' . get_theme_mod( 'google_plus_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Google Plus</title>
@@ -113,7 +113,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'vk_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'vk_username', '' ) !== '' ) : ?>
 				<a class="sociallink VKLink" href="<?php echo esc_url( 'https://vk.com/' . get_theme_mod( 'vk_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>VK</title>
@@ -125,7 +125,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'dribbble_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'dribbble_username', '' ) !== '' ) : ?>
 				<a class="sociallink DribbbleLink" href="<?php echo esc_url( 'http://dribbble.com/' . get_theme_mod( 'dribbble_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Dribbble</title>
@@ -137,7 +137,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'behance_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'behance_username', '' ) !== '' ) : ?>
 				<a class="sociallink BehanceLink" href="http://behance.net/<?php echo get_theme_mod( 'behance_username' );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Behance</title>
@@ -149,8 +149,11 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'linkedin_username', '' ) !== '' ) : ?>
-				<a class="sociallink LinkedInLink" href="<?php echo esc_url( 'http://www.linkedin.com/profile/view?id=' . get_theme_mod( 'linkedin_username' ) );?>" rel="me">
+				<?php if ( get_theme_mod( 'linkedin_username', '' ) !== '' || get_theme_mod( 'linkedin_profile_url', '' ) !== '' ) : ?>
+				<a class="sociallink LinkedInLink" href="<?php 
+					if ( get_theme_mod( 'linkedin_username', '' ) && !get_theme_mod( 'linkedin_profile_url', '' ) ) { echo 'http://www.linkedin.com/profile/view?id=' . esc_url( get_theme_mod( 'linkedin_username', '' ) ); }
+					elseif ( get_theme_mod( 'linkedin_profile_url', '' ) ) { echo esc_url( get_theme_mod( 'linkedin_profile_url' ) ); }
+					?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>LinkedIn</title>
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -161,7 +164,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'tumblr_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'tumblr_username', '' ) !== '' ) : ?>
 				<a class="sociallink TumblrLink" href="<?php echo esc_url( 'http://' . get_theme_mod( 'tumblr_username' ) . '.tumblr.com' );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Tumblr</title>
@@ -173,7 +176,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'pinterest_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'pinterest_username', '' ) !== '' ) : ?>
 				<a class="sociallink PinterestLink" href="<?php echo esc_url( 'http://pinterest.com/' . get_theme_mod( 'pinterest_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Pinterest</title>
@@ -185,7 +188,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'instagram_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'instagram_username', '' ) !== '' ) : ?>
 				<a class="sociallink InstagramLink" href="<?php echo esc_url( 'http://instagram.com/' . get_theme_mod( 'instagram_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Instagram</title>
@@ -209,7 +212,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'flickr_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'flickr_username', '' ) !== '' ) : ?>
 				<a class="sociallink FlickrLink" href="<?php echo esc_url( 'http://flickr.com/photos/' . get_theme_mod( 'flickr_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Flickr</title>
@@ -221,7 +224,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'rdio_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'rdio_username', '' ) !== '' ) : ?>
 				<a class="sociallink RdioLink" href="<?php echo esc_url( 'http://rdio.com/people/' . get_theme_mod( 'rdio_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Rdio</title>
@@ -234,7 +237,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'spotify_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'spotify_username', '' ) !== '' ) : ?>
 				<a class="sociallink SpotifyLink" href="<?php echo esc_url( 'http://open.spotify.com/user/' . get_theme_mod( 'spotify_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Spotify</title>
@@ -246,7 +249,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'lastfm_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'lastfm_username', '' ) !== '' ) : ?>
 				<a class="sociallink LastFmLink" href="<?php echo esc_url( 'http://last.fm/user/' . get_theme_mod( 'lastfm_username' ) );?>">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Last.fm</title>
@@ -258,7 +261,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'soundcloud_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'soundcloud_username', '' ) !== '' ) : ?>
 				<a class="sociallink SoundcloudLink" href="<?php echo esc_url( 'http://soundcloud.com/' . get_theme_mod( 'soundcloud_username' ) );?>">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Soundcloud</title>
@@ -270,7 +273,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'vimeo_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'vimeo_username', '' ) !== '' ) : ?>
 				<a class="sociallink VimeoLink" href="<?php echo esc_url( 'http://vimeo.com/' . get_theme_mod( 'vimeo_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Vimeo</title>
@@ -282,7 +285,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'youtube_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'youtube_username', '' ) !== '' ) : ?>
 				<a class="sociallink YouTubeLink" href="<?php echo esc_url( 'http://youtube.com/user/' . get_theme_mod( 'youtube_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>YouTube</title>
@@ -294,7 +297,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'github_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'github_username', '' ) !== '' ) : ?>
 				<a class="sociallink GithubLink" href="<?php echo esc_url( 'http://github.com/' . get_theme_mod( 'github_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Github</title>
@@ -306,7 +309,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'foursquare_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'foursquare_username', '' ) !== '' ) : ?>
 				<a class="sociallink FoursquareLink" href="<?php echo esc_url( 'http://foursquare.com/' . get_theme_mod( 'foursquare_username' ) );?>" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Foursquare</title>
@@ -318,7 +321,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'skype_username', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'skype_username', '' ) !== '' ) : ?>
 				<a class="sociallink SkypeLink" href="skype:<?php echo get_theme_mod( 'skype_username' );?>?userinfo" rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Skype</title>
@@ -330,7 +333,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'show_rss_icon', false ) == true ) : ?>
+				<?php if ( get_theme_mod( 'show_rss_icon', false ) == true ) : ?>
 				<a class="sociallink RSSLink" href="<?php bloginfo('rss2_url'); ?>">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>RSS</title>
@@ -342,7 +345,7 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if (get_theme_mod( 'email_address', '' ) !== '' ) : ?>
+				<?php if ( get_theme_mod( 'email_address', '' ) !== '' ) : ?>
 				<a class="sociallink EmailLink" href="<?php echo esc_url( 'mailto:' . antispambot( get_theme_mod( 'email_address' ), 1 ) );?>">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>Email</title>
@@ -357,7 +360,7 @@
 		</div>
 		<?php endif; ?>
 
-		<?php if (get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
+		<?php if ( get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>

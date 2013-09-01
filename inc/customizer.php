@@ -251,7 +251,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 
-	$wp_customize->add_setting( 'linkedin_username', array(
+	$wp_customize->add_setting( 'linkedin_profile_url', array(
 		'default' => '',
 	) );
 
@@ -376,8 +376,8 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 8,
 	) );
 
-	$wp_customize->add_control( 'linkedin_username', array(
-		'label'   => 'Linkedin ' . __( 'Profile ID', 'decode' ),
+	$wp_customize->add_control( 'linkedin_profile_url', array(
+		'label'   => 'Linkedin ' . __( 'Profile URL', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 9,

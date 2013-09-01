@@ -359,7 +359,7 @@ msgid " (or the long number in your profile URL)"
 msgstr ""
 
 #: ../inc/customizer.php:380
-msgid "Profile ID"
+msgid "Profile URL"
 msgstr ""
 
 #: ../inc/customizer.php:387
