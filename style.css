@@ -730,10 +730,6 @@ object {
 	margin: 0 0 1.5em;
 }
 
-.entry-meta {
-	clear: both;
-}
-
 .byline {
 	display: none;
 }
@@ -758,6 +754,16 @@ object {
 .entry-header {
 	margin: 5% auto 3.5%;
 	text-align: center;
+}
+
+article.page .entry-header {
+	font-size: 1.75em;
+	margin: 2.5% auto 5%;
+}
+
+.attachment .entry-header {
+	padding-top: 5%;
+	margin-top: 0;
 }
 
 a .attachment-post-thumbnail {
@@ -787,9 +793,6 @@ a .attachment-post-thumbnail {
 	text-align: center;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-}
-
-.entry-title h2 {
 	font-size: 1.5em;
 	line-height: 1.25;
 	width: 90%;
@@ -798,11 +801,6 @@ a .attachment-post-thumbnail {
 
 .entry-title a {
 	color: #444444;
-}
-
-article.page .entry-header {
-	font-size: 1.75em;
-	margin: 2.5% auto 5%;
 }
 
 article.post {
@@ -837,6 +835,14 @@ article.post {
 
 .entry-content img {
 	margin: 2.5% auto;
+}
+
+.entry-meta {
+	clear: both;
+}
+
+.attachment .entry-meta {
+	margin-top: 1.5%;
 }
 
 .post blockquote, .page blockquote {
@@ -1051,7 +1057,7 @@ footer .date a {
 /* =Links
 ----------------------------------------------- */
 
-.format-link .entry-title h2 a {
+.format-link .entry-title a {
 	text-decoration: underline;
 	color: #444444;
 }
@@ -1611,7 +1617,7 @@ li.comment {
 	padding: 2.5%;
 }
 
-.entry-title h2 {
+.entry-title {
 	font-size: 2em;
 	width: 80%;
 }
@@ -1767,7 +1773,7 @@ article.post {
 	margin-bottom: 3.5%;
 }
 
-.entry-title h2 {
+.entry-title {
 	font-size: 2.25em;
 }
 
