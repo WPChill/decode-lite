@@ -43,7 +43,7 @@ msgstr "Meist verwendete Kategorien"
 
 #: ../404.php:43
 msgid "Try looking in the monthly archives."
-msgstr "Versuch in den Monatsarchiven."
+msgstr "Versuch es in den Monatsarchiven."
 
 #: ../archive.php:27
 #, php-format
@@ -120,20 +120,20 @@ msgstr "Kommentare geschlossen."
 
 #: ../comments.php:71
 msgid "Leave a Reply"
-msgstr "Schreibe eine Kommentar"
+msgstr "Schreibe einen Kommentar"
 
 #: ../comments.php:72
 #, php-format
 msgid "Leave a Reply to %s"
-msgstr ""
+msgstr "Hinterlasse eine Antwort an %s"
 
 #: ../comments.php:73
 msgid "Cancel reply"
-msgstr ""
+msgstr "Antwortvorgang abbrechen"
 
 #: ../comments.php:74
 msgid "Post Comment"
-msgstr "1 Kommentar"
+msgstr "Kommentar absenden"
 
 #: ../content-page.php:16 ../content-single.php:11 ../content-single.php:64
 #: ../content.php:11 ../content.php:101 ../image.php:95
