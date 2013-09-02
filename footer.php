@@ -23,11 +23,11 @@
 		</div><!-- .theme-info -->
 		<?php endif; ?>
 	</footer><!-- #colophon -->
-	<?php if (get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?><!-- .site-scroll -->
+	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?><!-- .site-scroll -->
 </div><!-- #page -->
 
 
-	<?php if (get_theme_mod( 'show_sidebar', true ) == true ) : ?>
+	<?php if ( get_theme_mod( 'show_sidebar', true ) == true ) : ?>
 	<div id="sidebar" class="sidebar <?php echo get_theme_mod( 'sidebar_position', 'left' );?> <?php echo get_theme_mod( 'constant_sidebar', 'closing' );?>">
 		<div id="sidebar_top" class="SidebarTop">
 			<div id="sidebar_close" class="SidebarClose">

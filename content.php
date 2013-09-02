@@ -35,7 +35,7 @@
 					<?php the_post_thumbnail(); ?>
 				</a>
 				<?php endif; ?>
-			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
+			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if ( get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
 		</header>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<footer class="entry-meta">

@@ -3,11 +3,12 @@ Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 19 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.  
-Version: 2.7.4
+Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 24 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
+Version: 2.7.5
+Text Domain: decode
 License: GNU General Public License
 License URI: license.txt
-Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -287,9 +288,9 @@ input[type="search"],
 input[type="tel"],
 input[type="url"],
 textarea {
-	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	-webkit-transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	-moz-transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	transition: border 0.25s ease-out, border-radius 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	color: #C0C0C0;
 	padding: 0.3em;
 	border: 1px solid #C0C0C0;
@@ -490,8 +491,8 @@ object {
 
 .site-header {
 	width: 100%;
-	margin: 3.5% auto 0;
 	border-bottom: 1px solid #009BCD;
+	margin: 3.5% auto 0;
 }
 
 .site-branding {
@@ -629,6 +630,12 @@ object {
 	margin: 0 0.5em;
 	position: relative;
 }
+.main-navigation li:first-child {
+	margin-left: 0;
+}
+.main-navigation li:last-child {
+	margin-right: 0;
+}
 .main-navigation a {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
@@ -729,10 +736,6 @@ object {
 	margin: 0 0 1.5em;
 }
 
-.entry-meta {
-	clear: both;
-}
-
 .byline {
 	display: none;
 }
@@ -757,6 +760,16 @@ object {
 .entry-header {
 	margin: 5% auto 3.5%;
 	text-align: center;
+}
+
+article.page .entry-header {
+	font-size: 1.75em;
+	margin: 2.5% auto 5%;
+}
+
+body.single-attachment .entry-header {
+	padding-top: 5%;
+	margin-top: 0;
 }
 
 a .attachment-post-thumbnail {
@@ -786,9 +799,6 @@ a .attachment-post-thumbnail {
 	text-align: center;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-}
-
-.entry-title h2 {
 	font-size: 1.5em;
 	line-height: 1.25;
 	width: 90%;
@@ -797,11 +807,6 @@ a .attachment-post-thumbnail {
 
 .entry-title a {
 	color: #444444;
-}
-
-article.page .entry-header {
-	font-size: 1.75em;
-	margin: 2.5% auto 5%;
 }
 
 article.post {
@@ -836,6 +841,18 @@ article.post {
 
 .entry-content img {
 	margin: 2.5% auto;
+}
+
+body.single-attachment .entry-content .attachment {
+	text-align: center;
+}
+
+.entry-meta {
+	clear: both;
+}
+
+body.single-attachment .entry-meta {
+	margin-top: 1.5%;
 }
 
 .post blockquote, .page blockquote {
@@ -1050,7 +1067,7 @@ footer .date a {
 /* =Links
 ----------------------------------------------- */
 
-.format-link .entry-title h2 a {
+.format-link .entry-title a {
 	text-decoration: underline;
 	color: #444444;
 }
@@ -1290,12 +1307,42 @@ li.comment {
 	margin-bottom: 0.5em;
 }
 
-.search-entry:hover, .search-entry:hover .entry-title {
+.no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title {
 	color: #009BCD;
 }
 
-.search-entry:active, .search-entry:active .entry-title {
+.no-touch .search-entry:active, .no-touch .search-entry:active .entry-title {
 	color: #007EA6;
+}
+
+.search .site-main .search-form {
+	margin-top: 2.5%;
+	
+}
+
+.search .page-header input[type="search"] {
+	color: #A6A6A6;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-radius: 0;
+	font-size: 1.25em;
+}
+
+.no-touch .search .page-header input[type="search"]:hover {
+	color: #888888;
+	border-color: #888888;
+	border-radius: 3px;
+}
+
+.search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
+	color: #444444;
+	border-color: #009BCD;
+	border-radius: 3px;
+}
+
+.search .page-header .search-submit {
+	font-size: 0.9em;
 }
 
 .search .post, .search .page {
@@ -1580,7 +1627,7 @@ li.comment {
 	padding: 2.5%;
 }
 
-.entry-title h2 {
+.entry-title {
 	font-size: 2em;
 	width: 80%;
 }
@@ -1736,7 +1783,7 @@ article.post {
 	margin-bottom: 3.5%;
 }
 
-.entry-title h2 {
+.entry-title {
 	font-size: 2.25em;
 }
 
@@ -1763,5 +1810,16 @@ article.post {
 
 article.post {
 	margin-bottom: 10%;
+}
+}
+
+@media only print {
+.SidebarLink, .sociallinks, .main-navigation, .paging-navigation, .post-navigation, .comment-respond {
+	display: none;
+}
+
+.site-header {
+	padding-bottom: 2.5%;
+	margin-top: 0;
 }
 }

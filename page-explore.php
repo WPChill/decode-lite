@@ -7,6 +7,8 @@
  *
  * @package Decode
  */
+ 
+__( 'Explore Page', 'decode' );
 
 get_header(); ?>
 
