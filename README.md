@@ -5,7 +5,7 @@ If you want to change any of the colors in your theme, enable the sidebar, socia
 
 Decode's elegant sidebar is conveniently accessed by clicking or tapping on the much-loved hamburger icon. The sidebar can hold any number of widgets you choose. The side on which the sidebar and the hamburger icon are placed is customizable. You can also disable the sidebar if you choose.
 
-Decode supports link posts, where the title can be hyperlinked. To do this, first set the post format to "Link" and then add designate where the title should link to using a custom field entitled, `title_url` or `url_title`. I also have added support for quote posts. Quote marks are automatically added, so don't use them when composing a quote.
+Decode supports link posts, where the title can be hyperlinked. To do this, first set the post format to "Link" and then add designate where the title should link to using a custom field entitled, `title_url`, `url_title`, or `title_link`. I also have added support for quote posts. Quote marks are automatically added, so don't use them when composing a quote.
 
 Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. A site-wide header image can also be set in the Header Options section of the theme customizer.
 

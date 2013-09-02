@@ -105,6 +105,7 @@ function decode_comment( $comment, $args, $depth ) {
 				'depth'     => $depth,
 				'max_depth' => $args['max_depth'],
 				'before'    => '<div class="reply">',
+				'reply_text'=> __('Reply', 'decode'),
 				'after'     => '</div>',
 				) ) );
 			?>

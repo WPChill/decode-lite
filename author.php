@@ -26,6 +26,9 @@ get_header(); ?>
 						 */
 						rewind_posts();
 					?>
+					
+				<?php if ( get_the_author_meta( 'first_name' ) && get_the_author_meta( 'last_name' ) ) : ?>
+				
 				<section class="author-section">
 					<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 300 ); ?></div>
 					<div class="author-text">
@@ -35,8 +38,17 @@ get_header(); ?>
 						<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
 					</div>
 				</section>
-			</header><!-- .page-header -->
+			
+			<?php else : ?>
+			
+			<h1 class="page-title">
+			<?php printf( __( 'Author: %s', 'decode' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?>
+			</h1>
 
+			<?php endif; ?>
+			
+			</header><!-- .page-header -->
+			
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
