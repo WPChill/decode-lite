@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.7.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2013-09-01 13:43-0600\n"
-"PO-Revision-Date: 2013-09-01 13:48-0600\n"
+"PO-Revision-Date: 2013-09-02 14:27-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -103,9 +103,9 @@ msgstr "Site"
 
 # @ decode
 #: ../author.php:45
-#, fuzzy, php-format
+#, php-format
 msgid "Author: %s"
-msgstr "Auteur"
+msgstr "Auteur: %s"
 
 # @ decode
 #: ../comments.php:28
@@ -138,36 +138,34 @@ msgstr "Les commentaires sont fermés."
 
 # @ decode
 #: ../comments.php:71
-#, fuzzy
 msgid "Leave a Reply"
-msgstr "Laissez un commentaire"
+msgstr "Répondre"
 
 #: ../comments.php:72
 #, php-format
 msgid "Leave a Reply to %s"
-msgstr ""
+msgstr "Laisser un commentaire à %s"
 
 #: ../comments.php:73
 msgid "Cancel reply"
-msgstr ""
+msgstr "Annuler la réponse"
 
 # @ decode
 #: ../comments.php:74
-#, fuzzy
 msgid "Post Comment"
-msgstr "1 Commentaire"
+msgstr "Poster le commentaire"
 
 # @ decode
 #: ../comments.php:78
-#, fuzzy
 msgctxt "noun"
 msgid "Comment"
-msgstr "1 Commentaire"
+msgstr "Commentaire"
 
 #: ../comments.php:79
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
+"Vous devez être <a href=\"%s\">connecté</a> pour publier un commentaire."
 
 #: ../comments.php:80
 #, php-format
@@ -175,10 +173,12 @@ msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
+"Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"out of this account\">Se déconnecter ?</a>"
 
 #: ../comments.php:81
 msgid "Your email address will not be published."
-msgstr ""
+msgstr "Votre adresse email ne sera pas publiée."
 
 #: ../comments.php:82
 #, php-format
@@ -186,6 +186,8 @@ msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
 "and attributes: %s"
 msgstr ""
+"Vous pouvez utiliser ces balises <abbr title=\"HyperText Markup Language"
+"\">HTML</abbr> et attributs: %s"
 
 # @ decode
 #: ../content-page.php:16 ../content-single.php:11 ../content-single.php:64
@@ -355,7 +357,7 @@ msgstr ""
 
 #: ../page-explore.php:11
 msgid "Explore Page"
-msgstr ""
+msgstr "Explorer la page"
 
 # @ decode
 #: ../page-explore.php:26
@@ -490,9 +492,8 @@ msgid " (or the long number in your profile URL)"
 msgstr "(ou la suite de chiffre dans l'URL de votre profil)"
 
 #: ../inc/customizer.php:380
-#, fuzzy
 msgid "Profile URL"
-msgstr "ID du profil"
+msgstr "URL du profil"
 
 #: ../inc/customizer.php:387
 msgid "Site URL"
@@ -500,7 +501,7 @@ msgstr "URL du site"
 
 #: ../inc/customizer.php:485
 msgid "RSS Feed"
-msgstr ""
+msgstr "Flux RSS"
 
 #: ../inc/customizer.php:492
 msgid "Email Address"
@@ -659,7 +660,7 @@ msgstr "Votre commentaire est en attente d'approbation."
 
 #: ../inc/template-tags.php:108
 msgid "Reply"
-msgstr ""
+msgstr "Répondre"
 
 # @ decode
 #: ../inc/template-tags.php:188
