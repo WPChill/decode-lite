@@ -33,7 +33,7 @@
 		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
 			<svg width="240px" height="200px" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 			    <title>Menu</title>
-		        <g class="SidebarMenuTrigger" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		        <g class="SidebarMenuTrigger" fill-rule="evenodd">
 		            <path d="M0,160 L0,200 L240,200 L240,160 L0,160 Z M0,160" id="Rectangle 3"></path>
 		            <path d="M0,80 L0,120 L240,120 L240,80 L0,80 Z M0,80" id="Rectangle 2"></path>
 		            <path d="M0,0 L0,40 L240,40 L240,0 L0,0 Z M0,0" id="Rectangle 1"></path>
