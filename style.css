@@ -423,6 +423,7 @@ img.size-full,
 .comment-content img,
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	height: auto;
 }
 
 .entry-content img,
@@ -1480,9 +1481,60 @@ li.comment {
 	display: block;
 }
 
+
+/* =Tablets
+----------------------------------------------- */
+
+@media only screen and (min-width: 35em) {
+.site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
+	width: 82.5%;
+}
+
+.SidebarLink {
+	position: fixed;
+	height: 1.75em;
+	top: 2.5%;
+}
+
+.admin-bar .SidebarLink {
+	top: 7.5%;
+}
+
+.SidebarLink svg {
+	width: 1.75em;
+	height: 1.75em;
+}
+
+.SidebarLink img {
+	width: 2em;
+	height: 1.75em;
+}
+
+.SidebarLink.left {
+	left: 3.5%;
+}
+
+.SidebarLink.right {
+	right: 3.5%;
+}
+
+.SidebarLink.left {
+	left: 2.5%;
+}
+
+.SidebarLink.right {
+	right: 2.5%;
+}
+
+.sidebar {
+	width: 45%;
+}
+}
+
+
 /* =Desktop
 ----------------------------------------------- */
-@media only screen and (min-width: 699px) {
+@media only screen and (min-width: 50em) {
 
 .site-header, .site-main, .site-footer {
 	width: 80%;
@@ -1565,35 +1617,11 @@ li.comment {
 }
 
 .SidebarLink {
-  position: fixed;
-  top: 5%;
-  height: 1.75em;
-}
-
-.SidebarLink svg {
-	width: 1.75em;
-	height: 1.75em;
-}
-
-.SidebarLink img {
-	width: 2em;
-	height: 1.75em;
-}
-
-.SidebarLink.left {
-	left: 3.5%;
-}
-
-.SidebarLink.right {
-	right: 3.5%;
+	top: 5%;
 }
 
 .sidebar-style-constant .SidebarLink {
 	display: none;
-}
-
-.admin-bar .SidebarLink {
-	top: 7.5%;
 }
 
 .sidebar.constant .SidebarTop {
@@ -1691,80 +1719,10 @@ article.post {
 }
 
 
-/* =iPad
------------------------------------------------ */
-
-/* Portrait iPad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
-	width: 82.5%;
-}
-
-.site.sidebar-style-constant {
-	width: auto;
-	height: auto;
-	position: static;
-}
-
-.sidebar-style-constant .site-scroll {
-	margin: 3.5% 0 0;
-}
-
-.sidebar-style-constant .SidebarLink {
-	display: block;
-}
-
-.SidebarLink {
-	top: 2.5%;
-}
-
-.SidebarLink.left {
-	left: 2.5%;
-}
-
-.SidebarLink.right {
-	right: 2.5%;
-}
-
-.sidebar {
-	width: 45%;
-}
-
-.sidebar.constant.left {
-	-webkit-transform: translateX(-110%);
-	-moz-transform: translateX(-110%);
-	-ms-transform: translateX(-110%);
-	transform: translateX(-110%);
-	left: 0;
-	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.sidebar.constant.right {
-	-webkit-transform: translateX(110%);
-	-moz-transform: translateX(110%);
-	-ms-transform: translateX(110%);
-	transform: translateX(110%);
-	right: 0;
-	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.sidebar.constant.left.visible, .sidebar.constant.right.visible {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
-	transform: translateX(0%);
-}
-
-.sidebar.constant .SidebarTop {
-	display: block;
-}
-}
-
-
 /* =Larger screens
 ----------------------------------------------- */
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 68.5em) {
 .site-title a {
 	font-size: 3.5em;
 }
@@ -1806,6 +1764,7 @@ article.post {
 
 .sidebar {
 	width: 25%;
+	max-width: 30em;
 }
 
 	.no-csstransforms .sidebar.left {
