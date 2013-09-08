@@ -204,10 +204,6 @@ table {
 th {
 	font-weight: bold;
 }
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
 /* Micro Clearfix */
 .cf:before, .cf:after { content: ""; display: table; }
 .cf:after { clear: both; }
@@ -419,8 +415,11 @@ object {
 /* =Media
 ----------------------------------------------- */
 
-.site-header img,
-.entry-content img,
+.site-branding img,
+.site-content img,
+.site-footer img,
+.sidebar img,
+img.size-full,
 .comment-content img,
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
@@ -431,11 +430,7 @@ img[class*="align"],
 img[class*="wp-image-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-.site-header img,
-.entry-content img,
-img.size-full {
-	max-width: 100%;
-}
+
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -843,6 +838,10 @@ article.post {
 	margin: 2.5% auto;
 }
 
+.entry-content .video-player img {
+	margin: 0;
+}
+
 body.single-attachment .entry-content .attachment {
 	text-align: center;
 }
@@ -942,13 +941,14 @@ footer .date a {
 		opacity: 0.85;
 	}
 	
-.SidebarLink svg, .SidebarLink img {
+.SidebarLink svg {
 	width: 1.5em;
 	height: 1.5em;
 }
 
-.no-mq .SidebarLink img {
-	max-width: none;
+.SidebarLink img {
+	width: 1.75em;
+	height: 1.5em;
 }
 
 .SidebarLink.left {
@@ -1570,8 +1570,13 @@ li.comment {
   height: 1.75em;
 }
 
-.SidebarLink svg, .SidebarLink img {
+.SidebarLink svg {
 	width: 1.75em;
+	height: 1.75em;
+}
+
+.SidebarLink img {
+	width: 2em;
 	height: 1.75em;
 }
 
