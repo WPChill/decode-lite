@@ -33,6 +33,11 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
+			<div class="entry-meta above-content">
+				<p class="date"><?php decode_posted_on(); ?></p>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
 		</header>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<footer class="entry-meta">
@@ -50,7 +55,9 @@
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags(__( 'Tagged as: ', 'decode' ),', '); ?></p>
 			<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
-			<p class="date"><?php decode_posted_on(); ?></p>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
+				<p class="date"><?php decode_posted_on(); ?></p>
+			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article>
 	
@@ -59,6 +66,11 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<div class="entry-title"><h2><?php the_title(); ?></h2></div>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
+			<div class="entry-meta above-content">
+				<p class="date"><?php decode_posted_on(); ?></p>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
 		</header><!-- .entry-header -->
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
@@ -77,7 +89,9 @@
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 			<p class="tags"><?php the_tags(__( 'Tagged as: ', 'decode' ),', '); ?></p>
 			<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
-			<p class="date"><?php decode_posted_on(); ?></p>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
+				<p class="date"><?php decode_posted_on(); ?></p>
+			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 

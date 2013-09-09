@@ -190,15 +190,15 @@ function decode_customize_css()
 		}
 	<?php endif; ?>
 
-		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch footer .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
+		a, .no-touch a:hover, .no-touch .main-navigation a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post footer, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
+		.no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, .no-touch button:focus, .touch button:focus, .no-touch input[type='button']:focus, .touch input[type='button']:focus, .no-touch input[type='reset']:focus, .touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .touch input[type='submit']:focus, .no-touch button:active, .touch button:active, .no-touch html input[type='button']:active, .touch html input[type='button']:active, .no-touch input[type='reset']:active, .touch input[type='reset']:active, .no-touch input[type='submit']:active, .touch input[type='submit']:active, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch a:active, .no-touch .main-navigation a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch footer .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
+		.no-touch a:active, .no-touch .main-navigation a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
 			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 
@@ -206,7 +206,7 @@ function decode_customize_css()
 			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 
-		.tags, .categories, footer .date, footer .date a, .comment-metadata a {
+		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
 		}
 		

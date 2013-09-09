@@ -759,7 +759,7 @@ object {
 }
 
 article.page .entry-header {
-	font-size: 1.75em;
+	font-size: 1.25em;
 	margin: 2.5% auto 5%;
 }
 
@@ -847,10 +847,6 @@ body.single-attachment .entry-content .attachment {
 	text-align: center;
 }
 
-.entry-meta {
-	clear: both;
-}
-
 body.single-attachment .entry-meta {
 	margin-top: 1.5%;
 }
@@ -862,40 +858,51 @@ body.single-attachment .entry-meta {
 	font-style: italic;
 }
 
-.post footer {
+.entry-meta {
+	clear: both;
+}
+
+.post .entry-meta {
 	width: 90%;
-	margin: 0 auto;
 	padding-bottom: 0.5%;
 	border-bottom: 1px solid #009BCD;
+	margin: 0 auto;
 }
 
-article footer {
-	clear: both;
+.post .entry-meta.above-content {
+	width: auto;
+	display: inline-block;
+	padding: 0 2.5% 1%;
+	margin: 0 auto 1.5%;
 }
 
-footer .date, .tags, .categories {
+.entry-meta .date, .tags, .categories {
 	font-size: 0.8em;
 	clear: both;
-	margin: 1.5% 0 0;
+	margin: 1.5% 0;
 	color: #808080;
 }
 
-footer .date a {
+.entry-meta .date {
+	margin-bottom: 0;
+}
+
+.entry-meta .date a {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #808080;
 }
 
-	.no-touch footer .date a:hover {
+	.no-touch .entry-meta .date a:hover {
 		color: #009BCD;
 	}
 	
-	.no-touch footer .date a:active {
+	.no-touch .entry-meta .date a:active {
 		color: #007EA6;
 	}
 
-	.no-touch .post footer .date a:hover, .post footer .date a:active {
+	.no-touch .post .entry-meta .date a:hover, .post .entry-meta .date a:active {
 		margin-top: 3.5%;
 		border-bottom: none;
 	}
@@ -1116,7 +1123,7 @@ footer .date a {
 	font-size: 1.3em;
 }
 
-.format-quote footer .date:before, .format-quote .reply .replytrigger:before, .format-quote  footer .date:after, .format-quote .reply .replytrigger:after {
+.format-quote .entry-meta .date:before, .format-quote .reply .replytrigger:before, .format-quote  .entry-meta .date:after, .format-quote .reply .replytrigger:after {
 	content: "";
 }
 
@@ -1690,7 +1697,7 @@ article.post {
 	font-size: 1.125em;
 }
 
-.post footer, .search footer {
+.post .entry-meta, .search footer {
 	width: 85%;
 }
 

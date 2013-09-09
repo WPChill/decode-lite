@@ -525,6 +525,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => false,
 		'transport' => 'refresh',
 	) );
+	
+	$wp_customize->add_setting( 'entry_date_position', array(
+		'default' => 'below',
+		'transport' => 'refresh',
+	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
@@ -569,26 +574,37 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'checkbox',
 		'priority'=> 4,
 	) );
+	
+	$wp_customize->add_control( 'entry_date_position', array(
+		'label'   => __( 'Entry Date Position', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'radio',
+		'choices' => array(
+			'above'  => __( 'Above Header', 'decode' ),
+			'below' => __( 'Below Header', 'decode' ),
+        ),
+		'priority'=> 5,
+	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 6,
+		'priority'=> 7,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
-		'priority'=> 7,
+		'priority'=> 8,
 	) ) );
 	
 	
