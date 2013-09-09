@@ -1493,6 +1493,7 @@ li.comment {
 .SidebarLink {
 	position: fixed;
 	height: 1.75em;
+	width: 1.75em;
 	top: 2.5%;
 }
 
@@ -1511,14 +1512,6 @@ li.comment {
 }
 
 .SidebarLink.left {
-	left: 3.5%;
-}
-
-.SidebarLink.right {
-	right: 3.5%;
-}
-
-.SidebarLink.left {
 	left: 2.5%;
 }
 
@@ -1527,7 +1520,7 @@ li.comment {
 }
 
 .sidebar {
-	width: 45%;
+	width: 55%;
 }
 }
 
@@ -1755,11 +1748,11 @@ article.post {
 }
 
 .SidebarLink.left {
-	left: 5%;
+	left: 7.5%;
 }
 
 .SidebarLink.right {
-	right: 5%;
+	right: 7.5%;
 }
 
 .sidebar {
