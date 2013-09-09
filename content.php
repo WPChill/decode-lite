@@ -36,8 +36,14 @@
 				</a>
 				<?php endif; ?>
 			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if ( get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
+			<div class="entry-meta above-content">
+				<p class="date"><?php decode_posted_on(); ?></p>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
 		</header>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
 			<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
 				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
@@ -51,7 +57,9 @@
 			<?php if (get_theme_mod( 'show_categories', false ) == true ) : ?>
 				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
 			<?php endif; ?>
-			<p class="date"><?php decode_posted_on(); ?></p>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
+				<p class="date"><?php decode_posted_on(); ?></p>
+			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 
@@ -96,10 +104,15 @@
 				</a>
 				<?php endif; ?>
 			<div class="entry-title"><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
+			<div class="entry-meta above-content">
+				<p class="date"><?php decode_posted_on(); ?></p>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
 		</header><!-- .entry-header -->
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
-		<footer class="entry-meta">
+		<footer class="entry-meta below-content">
 			<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
 				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 				<div class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?></div>
@@ -112,7 +125,9 @@
 			<?php if (get_theme_mod( 'show_categories', false ) == true ) : ?>
 				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
 			<?php endif; ?>
-			<p class="date"><?php decode_posted_on(); ?></p>
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
+				<p class="date"><?php decode_posted_on(); ?></p>
+			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 

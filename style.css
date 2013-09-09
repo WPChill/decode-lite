@@ -5,7 +5,7 @@ Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 24 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
-Version: 2.7.5
+Version: 2.7.6
 Text Domain: decode
 License: GNU General Public License
 License URI: license.txt
@@ -203,10 +203,6 @@ table {
 }
 th {
 	font-weight: bold;
-}
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
 }
 /* Micro Clearfix */
 .cf:before, .cf:after { content: ""; display: table; }
@@ -419,11 +415,15 @@ object {
 /* =Media
 ----------------------------------------------- */
 
-.site-header img,
-.entry-content img,
+.site-branding img,
+.site-content img,
+.site-footer img,
+.sidebar img,
+img.size-full,
 .comment-content img,
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	height: auto;
 }
 
 .entry-content img,
@@ -431,11 +431,7 @@ img[class*="align"],
 img[class*="wp-image-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-.site-header img,
-.entry-content img,
-img.size-full {
-	max-width: 100%;
-}
+
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -763,7 +759,7 @@ object {
 }
 
 article.page .entry-header {
-	font-size: 1.75em;
+	font-size: 1.25em;
 	margin: 2.5% auto 5%;
 }
 
@@ -843,12 +839,12 @@ article.post {
 	margin: 2.5% auto;
 }
 
-body.single-attachment .entry-content .attachment {
-	text-align: center;
+.entry-content .video-player img {
+	margin: 0;
 }
 
-.entry-meta {
-	clear: both;
+body.single-attachment .entry-content .attachment {
+	text-align: center;
 }
 
 body.single-attachment .entry-meta {
@@ -862,40 +858,51 @@ body.single-attachment .entry-meta {
 	font-style: italic;
 }
 
-.post footer {
+.entry-meta {
+	clear: both;
+}
+
+.post .entry-meta {
 	width: 90%;
-	margin: 0 auto;
 	padding-bottom: 0.5%;
 	border-bottom: 1px solid #009BCD;
+	margin: 0 auto;
 }
 
-article footer {
-	clear: both;
+.post .entry-meta.above-content {
+	width: auto;
+	display: inline-block;
+	padding: 0 2.5% 1%;
+	margin: 0 auto 1.5%;
 }
 
-footer .date, .tags, .categories {
+.entry-meta .date, .tags, .categories {
 	font-size: 0.8em;
 	clear: both;
-	margin: 1.5% 0 0;
+	margin: 1.5% 0;
 	color: #808080;
 }
 
-footer .date a {
+.entry-meta .date {
+	margin-bottom: 0;
+}
+
+.entry-meta .date a {
 	-webkit-transition: color 0.25s ease-out;
 	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #808080;
 }
 
-	.no-touch footer .date a:hover {
+	.no-touch .entry-meta .date a:hover {
 		color: #009BCD;
 	}
 	
-	.no-touch footer .date a:active {
+	.no-touch .entry-meta .date a:active {
 		color: #007EA6;
 	}
 
-	.no-touch .post footer .date a:hover, .post footer .date a:active {
+	.no-touch .post .entry-meta .date a:hover, .post .entry-meta .date a:active {
 		margin-top: 3.5%;
 		border-bottom: none;
 	}
@@ -942,8 +949,13 @@ footer .date a {
 		opacity: 0.85;
 	}
 	
-.SidebarLink svg, .SidebarLink img {
+.SidebarLink svg {
 	width: 1.5em;
+	height: 1.5em;
+}
+
+.SidebarLink img {
+	width: 1.75em;
 	height: 1.5em;
 }
 
@@ -1111,7 +1123,7 @@ footer .date a {
 	font-size: 1.3em;
 }
 
-.format-quote footer .date:before, .format-quote .reply .replytrigger:before, .format-quote  footer .date:after, .format-quote .reply .replytrigger:after {
+.format-quote .entry-meta .date:before, .format-quote .reply .replytrigger:before, .format-quote  .entry-meta .date:after, .format-quote .reply .replytrigger:after {
 	content: "";
 }
 
@@ -1476,9 +1488,53 @@ li.comment {
 	display: block;
 }
 
+
+/* =Tablets
+----------------------------------------------- */
+
+@media only screen and (min-width: 35em) {
+.site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
+	width: 82.5%;
+}
+
+.SidebarLink {
+	position: fixed;
+	height: 1.75em;
+	width: 1.75em;
+	top: 2.5%;
+}
+
+.admin-bar .SidebarLink {
+	top: 7.5%;
+}
+
+.SidebarLink svg {
+	width: 1.75em;
+	height: 1.75em;
+}
+
+.SidebarLink img {
+	width: 2em;
+	height: 1.75em;
+}
+
+.SidebarLink.left {
+	left: 2.5%;
+}
+
+.SidebarLink.right {
+	right: 2.5%;
+}
+
+.sidebar {
+	width: 55%;
+}
+}
+
+
 /* =Desktop
 ----------------------------------------------- */
-@media only screen and (min-width: 699px) {
+@media only screen and (min-width: 50em) {
 
 .site-header, .site-main, .site-footer {
 	width: 80%;
@@ -1561,30 +1617,11 @@ li.comment {
 }
 
 .SidebarLink {
-  position: fixed;
-  top: 5%;
-  height: 1.75em;
-}
-
-.SidebarLink svg, .SidebarLink img {
-	width: 1.75em;
-	height: 1.75em;
-}
-
-.SidebarLink.left {
-	left: 3.5%;
-}
-
-.SidebarLink.right {
-	right: 3.5%;
+	top: 5%;
 }
 
 .sidebar-style-constant .SidebarLink {
 	display: none;
-}
-
-.admin-bar .SidebarLink {
-	top: 7.5%;
 }
 
 .sidebar.constant .SidebarTop {
@@ -1660,7 +1697,7 @@ article.post {
 	font-size: 1.125em;
 }
 
-.post footer, .search footer {
+.post .entry-meta, .search footer {
 	width: 85%;
 }
 
@@ -1682,80 +1719,10 @@ article.post {
 }
 
 
-/* =iPad
------------------------------------------------ */
-
-/* Portrait iPad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.site-header, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer  {
-	width: 82.5%;
-}
-
-.site.sidebar-style-constant {
-	width: auto;
-	height: auto;
-	position: static;
-}
-
-.sidebar-style-constant .site-scroll {
-	margin: 3.5% 0 0;
-}
-
-.sidebar-style-constant .SidebarLink {
-	display: block;
-}
-
-.SidebarLink {
-	top: 2.5%;
-}
-
-.SidebarLink.left {
-	left: 2.5%;
-}
-
-.SidebarLink.right {
-	right: 2.5%;
-}
-
-.sidebar {
-	width: 45%;
-}
-
-.sidebar.constant.left {
-	-webkit-transform: translateX(-110%);
-	-moz-transform: translateX(-110%);
-	-ms-transform: translateX(-110%);
-	transform: translateX(-110%);
-	left: 0;
-	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.sidebar.constant.right {
-	-webkit-transform: translateX(110%);
-	-moz-transform: translateX(110%);
-	-ms-transform: translateX(110%);
-	transform: translateX(110%);
-	right: 0;
-	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
-}
-
-.sidebar.constant.left.visible, .sidebar.constant.right.visible {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
-	transform: translateX(0%);
-}
-
-.sidebar.constant .SidebarTop {
-	display: block;
-}
-}
-
-
 /* =Larger screens
 ----------------------------------------------- */
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 68.5em) {
 .site-title a {
 	font-size: 3.5em;
 }
@@ -1788,15 +1755,16 @@ article.post {
 }
 
 .SidebarLink.left {
-	left: 5%;
+	left: 7.5%;
 }
 
 .SidebarLink.right {
-	right: 5%;
+	right: 7.5%;
 }
 
 .sidebar {
 	width: 25%;
+	max-width: 30em;
 }
 
 	.no-csstransforms .sidebar.left {
