@@ -528,9 +528,9 @@ object {
 }
 
 .site-title a {
-	-webkit-transition: text-shadow 0.5s, color 0.5s;
-	-moz-transition: text-shadow 0.5s, color 0.5s;
-	transition: text-shadow 0.5s, color 0.5s;
+	-webkit-transition: text-shadow 0.5s;
+	-moz-transition: text-shadow 0.5s;
+	transition: text-shadow 0.5s;
 	font-size: 1.95em;
 	text-decoration: none;
 	color: #444444;
