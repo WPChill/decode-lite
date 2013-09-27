@@ -564,6 +564,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => 'below',
 		'transport' => 'refresh',
 	) );
+	
+	$wp_customize->add_setting( 'show_page_headers', array(
+		'default' => true,
+		'transport' => 'refresh',
+	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
@@ -619,26 +624,33 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
         ),
 		'priority'=> 5,
 	) );
+	
+	$wp_customize->add_control( 'show_page_headers', array(
+		'label'   => __( 'Show Page Headers', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 6,
+	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 6,
+		'priority'=> 7,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 7,
+		'priority'=> 8,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
-		'priority'=> 8,
+		'priority'=> 9,
 	) ) );
 	
 	
