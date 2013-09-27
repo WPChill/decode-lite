@@ -858,6 +858,10 @@ body.single-attachment .entry-meta {
 	font-style: italic;
 }
 
+.read-more {
+	color: #444444;
+}
+
 .entry-meta {
 	clear: both;
 }
