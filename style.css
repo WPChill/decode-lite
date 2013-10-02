@@ -3,9 +3,9 @@ Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 24 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.
+Description: A minimal, modern theme, designed to be mobile first and very responsive, Decode features the ability to change all the colors in the theme, an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can hold any number of widgets you choose and you can choose to have the sidebar to be on the left or right side of the page and whether it should stay visible all the time or be closeable. You can also disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 26 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. More info here: http://scotthsmith.com/projects/decode/.
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background,  custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
-Version: 2.7.6
+Version: 2.8
 Text Domain: decode
 License: GNU General Public License
 License URI: license.txt
@@ -353,31 +353,31 @@ a {
 	}
 
 /* Alignment */
-.entry-content img.alignleft {
+.entry-content .alignleft {
 	display: inline;
 	float: left;
 	margin-right: 2.5%;
 }
-.entry-content img.alignright {
+.entry-content .alignright {
 	display: inline;
 	float: right;
 	margin-left: 2.5%;
 }
-.entry-content img.aligncenter {
+.entry-content .aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto;
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text, .assistive-text {
+.screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
 
-.screen-reader-text:hover, .assistive-text:hover,
-.screen-reader-text:active, .assistive-text:active,
-.screen-reader-text:focus, .assistive-text:focus {
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -394,6 +394,32 @@ a {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -528,9 +554,9 @@ object {
 }
 
 .site-title a {
-	-webkit-transition: text-shadow 0.5s, color 0.5s;
-	-moz-transition: text-shadow 0.5s, color 0.5s;
-	transition: text-shadow 0.5s, color 0.5s;
+	-webkit-transition: text-shadow 0.5s;
+	-moz-transition: text-shadow 0.5s;
+	transition: text-shadow 0.5s;
 	font-size: 1.95em;
 	text-decoration: none;
 	color: #444444;
@@ -651,8 +677,8 @@ object {
 	display: none;
 	float: left;
 	position: absolute;
-		top: 1.25em;
-		left: 0;
+	top: 1.25em;
+	left: 0;
 	z-index: 2;
 	background: #E3E5E7;
 }
@@ -856,6 +882,10 @@ body.single-attachment .entry-meta {
 	padding: 0 0 0 5%;
 	border-left: 1px solid #009BCD;
 	font-style: italic;
+}
+
+.read-more {
+	color: #444444;
 }
 
 .entry-meta {
