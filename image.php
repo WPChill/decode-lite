@@ -5,8 +5,7 @@
  * @package Decode
  */
 
-get_header();
-?>
+get_header(); ?>
 
 	<div id="primary" class="content-area image-attachment">
 		<main id="main" class="site-main" role="main">
@@ -99,22 +98,7 @@ get_header();
 
 				</div><!-- .entry-content -->
 
-				<footer class="entry-meta">
-					<?php edit_post_link( __( 'Edit', 'decode' ), ' <div class="edit-link">', '</div>' ); ?>
-					<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
-					<?php
-						if ( comments_open() && pings_open() ) : // Comments and trackbacks open
-							printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'decode' ), esc_url( get_trackback_url() ) );
-						elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open
-							printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'decode' ), esc_url( get_trackback_url() ) );
-						elseif ( comments_open() && ! pings_open() ) : // Only comments open
-							 _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'decode' );
-						elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed
-							_e( 'Both comments and trackbacks are currently closed.', 'decode' );
-						endif;
-					?>
-					<?php endif; ?>
-				</footer><!-- .entry-meta -->
+				<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 			</article><!-- #post-<?php the_ID(); ?> -->
 
 			<?php
