@@ -544,6 +544,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'use_excerpts', array(
 		'default' => false,
 	) );
+	
+	$wp_customize->add_setting( 'show_featured_images_on_excerpts', array(	// Yep, that's the longest setting name I have.
+		'default' => false,
+	) );
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
@@ -592,26 +596,33 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
+	
+	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
+		'label'   => __( 'Displays posts\' featured images when excerpts are shown on main page.', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 2,
+	) );
 
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 2,
+		'priority'=> 3,
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
 		'label'   => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 3,
+		'priority'=> 4,
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
 		'label'   => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 4,
+		'priority'=> 5,
 	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
@@ -622,35 +633,35 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 			'above'  => __( 'Above Header', 'decode' ),
 			'below' => __( 'Below Header', 'decode' ),
         ),
-		'priority'=> 5,
+		'priority'=> 6,
 	) );
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'   => __( 'Show Page Headers', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 6,
+		'priority'=> 7,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 7,
+		'priority'=> 8,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 8,
+		'priority'=> 9,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
-		'priority'=> 9,
+		'priority'=> 10,
 	) ) );
 	
 	
