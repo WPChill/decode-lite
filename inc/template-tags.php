@@ -7,26 +7,28 @@
  * @package Decode
  */
 
-if ( ! function_exists( 'decode_content_nav' ) ) :
+if ( ! function_exists( 'decode_paging_nav' ) ) :
 /**
- * Display navigation to next/previous pages when applicable
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @return void
  */
-function _s_paging_nav() {
+function decode_paging_nav() {
         // Don't print empty markup if there's only one page.
         if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
                 return;
         }
         ?>
         <nav class="navigation paging-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', '_s' ); ?></h1>
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'decode' ); ?></h1>
                 <div class="nav-links">
 
                         <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', '_s' ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'decode' ) ); ?></div>
                         <?php endif; ?>
 
                         <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', '_s' ) ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
                         <?php endif; ?>
 
                 </div><!-- .nav-links -->
@@ -35,13 +37,13 @@ function _s_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( '_s_post_nav' ) ) :
+if ( ! function_exists( 'decode_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @return void
  */
-function _s_post_nav() {
+function decode_post_nav() {
         // Don't print empty markup if there's nowhere to navigate.
         $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
         $next     = get_adjacent_post( false, '', false );
@@ -51,11 +53,11 @@ function _s_post_nav() {
         }
         ?>
         <nav class="navigation post-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Post navigation', '_s' ); ?></h1>
+                <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
                 <div class="nav-links">
 
-                        <?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', '_s' ) ); ?>
-                        <?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     '_s' ) ); ?>
+                        <?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'decode' ) ); ?>
+                        <?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'decode' ) ); ?>
 
                 </div><!-- .nav-links -->
         </nav><!-- .navigation -->
