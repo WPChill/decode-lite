@@ -75,11 +75,11 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php decode_content_nav( 'nav-below' ); ?>
+			<?php decode_paging_nav(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'archive' ); ?>
+			<?php get_template_part( 'content-none', 'none' ); ?>
 
 		<?php endif; ?>
 

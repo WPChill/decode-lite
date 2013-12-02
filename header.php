@@ -28,7 +28,7 @@
 		
 	<header id="masthead" class="site-header" role="banner">
 		
-		<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 		
 		<?php if ( get_theme_mod( 'show_sidebar', true ) == true) : ?>
 		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
@@ -387,7 +387,7 @@
 
 		<?php if ( get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'decode' ); ?>"><?php _e( 'Skip to content', 'decode' ); ?></a></div>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>
 		</nav><!-- #site-navigation -->
 		<?php endif; ?>

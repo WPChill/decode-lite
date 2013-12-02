@@ -1,8 +1,8 @@
 body#tinymce.wp-editor { 
     font-family: Arial, Helvetica, sans-serif; 
     margin: 2.5%; 
-    background: #E3E5E7;
-    color: #444444;
+    background: #FFFFFF;
+    color: #000;
 }
 
 body#tinymce.wp-editor a {

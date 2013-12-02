@@ -58,7 +58,7 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
 /* A custom callback function that displays a meaningful title
  * depending on the page being rendered
  */
-if ( ! function_exists( 'decode_filter_wp_title' ) ) {
+if ( ! function_exists( 'decode_wp_title' ) ) {
 
 function decode_filter_wp_title($title, $sep, $sep_location) {
 
@@ -114,4 +114,4 @@ function decode_filter_wp_title($title, $sep, $sep_location) {
 /* add function 'decode_filter_wp_title()' to the
  * wp_title filter, with priority 10 and 3 args
  */
-add_filter('wp_title', 'decode_filter_wp_title', 10, 3);
+add_filter('wp_title', 'decode_wp_title', 10, 2);

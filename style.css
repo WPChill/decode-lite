@@ -222,7 +222,7 @@ input {
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
 button,
-html input[type="button"],
+input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	-webkit-transition: border 0.25s ease-out, box-shadow 0.25s ease-out;
@@ -241,7 +241,7 @@ input[type="submit"] {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 	.no-touch button:hover,
-	.no-touch html input[type="button"]:hover,
+	.no-touch input[type="button"]:hover,
 	.no-touch input[type="reset"]:hover,
 	.no-touch input[type="submit"]:hover {
 		border-color: #A6A6A6;
@@ -252,7 +252,7 @@ input[type="submit"] {
 	.no-touch input[type="reset"]:focus, .touch input[type="reset"]:focus,
 	.no-touch input[type="submit"]:focus, .touch input[type="submit"]:focus,
 	.no-touch button:active, .touch button:active,
-	.no-touch html input[type="button"]:active, .touch html input[type="button"]:active,
+	.no-touch input[type="button"]:active, .touch input[type="button"]:active,
 	.no-touch input[type="reset"]:active, .touch input[type="reset"]:active,
 	.no-touch input[type="submit"]:active, .touch input[type="submit"]:active {
 		border-color: #009BCD;

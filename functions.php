@@ -8,44 +8,43 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
+}
 
 if ( ! function_exists( 'decode_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * Note that this function is hooked into the after_setup_theme hook, which runs
- * before the init hook. The init hook is too late for some features, such as indicating
- * support post thumbnails.
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
  */
 function decode_setup() {
 
-	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on decode, use a find and replace
-	 * to change 'decode' to the name of your theme in all the template files
-	 */
+	/*
+     * Make theme available for translation.
+     * Translations can be filed in the /languages/ directory.
+     * If you're building a theme based on Decode, use a find and replace
+     * to change 'decode' to the name of your theme in all the template files.
+     */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
-	/**
-	 * Specifies for the theme to use HTML 5 tags
-	 */
+	// Specifies for the theme to use HTML 5 tags.
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', ) );
 
-	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/**
-	 * Enable support for Post Thumbnails on posts and pages
-	 */
+	/*
+     * Enable support for Post Thumbnails on posts and pages.
+     *
+     * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+     */
 	add_theme_support( 'post-thumbnails' );
 
 	/**
-	 * Enable support for Post Formats
+	 * Enable support for Post Formats.
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
 
@@ -67,7 +66,7 @@ endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
 
 /**
- * Register widgetized area and update sidebar with default widgets
+ * Register widgetized area and update sidebar with default widgets.
  */
 if ( ! function_exists( 'decode_widgets_init' ) ) {
 
@@ -85,7 +84,7 @@ function decode_widgets_init() {
 add_action( 'widgets_init', 'decode_widgets_init' );
 
 /**
- * Setup editor styles
+ * Setup editor styles.
  */
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
 
@@ -96,7 +95,7 @@ function decode_add_editor_styles() {
 add_action( 'init', 'decode_add_editor_styles' );
 
 /**
- * Add Google Profile to user contact methods
+ * Add Google Profile to user contact methods.
  */
 function decode_add_google_profile( $contactmethods ) {
 	// Add Google Profiles
@@ -106,7 +105,7 @@ function decode_add_google_profile( $contactmethods ) {
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 
 /**
- * Highlight search terms in search results
+ * Highlight search terms in search results.
  */
 if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
 
@@ -131,7 +130,7 @@ function decode_search_title_highlight() {
 }
 
 /**
- * Register styles and scripts
+ * Register styles and scripts.
  */
 
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
@@ -163,7 +162,7 @@ function decode_scripts() {
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
 /**
- * Add custom colors to CSS
+ * Add custom colors to CSS.
  */
 
 if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
@@ -257,7 +256,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 }
 
 /**
- * Link post titles link to the link URL, not the permalink for link blog-style behaviour
+ * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
 

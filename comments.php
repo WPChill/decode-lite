@@ -15,11 +15,12 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() )
+if ( post_password_required() ) {
 	return;
+}
 ?>
 	<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
-	
+
 	<div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
