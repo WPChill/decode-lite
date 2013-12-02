@@ -60,7 +60,7 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
  */
 if ( ! function_exists( 'decode_wp_title' ) ) {
 
-function decode_filter_wp_title($title, $sep, $sep_location) {
+function decode_wp_title($title, $sep, $sep_location) {
 
 	// add white space around $sep
 	$sep = ' ' . $sep . ' ';
@@ -108,10 +108,10 @@ function decode_filter_wp_title($title, $sep, $sep_location) {
 	// return full title
 	return get_bloginfo('name') . $custom . $title . $page_number;
 
-} // end of decode_filter_wp_title
+} // end of decode_wp_title
 }
 
-/* add function 'decode_filter_wp_title()' to the
+/* add function 'decode_wp_title()' to the
  * wp_title filter, with priority 10 and 3 args
  */
-add_filter('wp_title', 'decode_wp_title', 10, 2);
+add_filter('wp_title', 'decode_wp_title', 10, 3);
