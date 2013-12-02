@@ -473,8 +473,8 @@ img[class*="wp-image-"] {
 }
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 0 auto;
-	max-width: 100%;
+	margin: 1.2% auto 0;
+	max-width: 98%;
 }
 .wp-caption-text {
 	text-align: center;
