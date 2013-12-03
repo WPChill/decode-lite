@@ -1251,19 +1251,19 @@ body.single-attachment .entry-meta {
 	word-wrap: break-word;
 }
 
-.nav-previous {
+.nav-previous, .nav-links a[rel="prev"] {
 	float: left;
 	text-align: left;
 	width: 50%;
 }
 
-.nav-next {
+.nav-next, .nav-links a[rel="next"] {
 	float: right;
 	text-align: right;
 	width: 50%;
 }
 
-.nav-next a, .nav-previous a {
+.nav-links a {
 	-webkit-transition: padding 0.25s ease-out, color 0.25s ease-out;
 	-moz-transition: padding 0.25s ease-out, color 0.25s ease-out;
 	transition: padding 0.25s ease-out, color 0.25s ease-out;
@@ -1271,7 +1271,7 @@ body.single-attachment .entry-meta {
 	display: block;
 }
 
-.no-touch .nav-next a:hover, .no-touch .nav-previous a:hover {
+.no-touch .nav-links a:hover {
 	padding: 0 2.5%;
 }
 
