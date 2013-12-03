@@ -62,7 +62,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php decode_content_nav( 'nav-below' ); ?>
+			<?php decode_paging_nav(); ?>
 
 		<?php else : ?>
 

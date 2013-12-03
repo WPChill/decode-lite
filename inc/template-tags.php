@@ -7,53 +7,63 @@
  * @package Decode
  */
 
-if ( ! function_exists( 'decode_content_nav' ) ) :
+if ( ! function_exists( 'decode_paging_nav' ) ) :
 /**
- * Display navigation to next/previous pages when applicable
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @return void
  */
-function decode_content_nav( $nav_id ) {
-	global $wp_query, $post;
+function decode_paging_nav() {
+        // Don't print empty markup if there's only one page.
+        if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+                return;
+        }
+        ?>
+        <nav class="navigation paging-navigation" role="navigation">
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'decode' ); ?></h1>
+                <div class="nav-links">
 
-	// Don't print empty markup on single pages if there's nowhere to navigate.
-	if ( is_single() ) {
-		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-		$next = get_adjacent_post( false, '', false );
+                        <?php if ( get_next_posts_link() ) : ?>
+                        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'decode' ) ); ?></div>
+                        <?php endif; ?>
 
-		if ( ! $next && ! $previous )
-			return;
-	}
+                        <?php if ( get_previous_posts_link() ) : ?>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
+                        <?php endif; ?>
 
-	// Don't print empty markup in archives if there's only one page.
-	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
-		return;
-
-	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
-
-	?>
-	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
-
-	<?php if ( is_single() ) : // navigation links for single posts ?>
-
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'decode' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'decode' ) . '</span>' ); ?>
-
-	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
-
-		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'decode' ) ); ?></div>
-		<?php endif; ?>
-
-		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
-		<?php endif; ?>
-
-	<?php endif; ?>
-
-	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
-	<?php
+                </div><!-- .nav-links -->
+        </nav><!-- .navigation -->
+        <?php
 }
-endif; // decode_content_nav
+endif;
+
+if ( ! function_exists( 'decode_post_nav' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @return void
+ */
+function decode_post_nav() {
+        // Don't print empty markup if there's nowhere to navigate.
+        $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+        $next     = get_adjacent_post( false, '', false );
+
+        if ( ! $next && ! $previous ) {
+                return;
+        }
+        ?>
+        <nav class="navigation post-navigation" role="navigation">
+                <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
+                <div class="nav-links">
+
+                        <?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'decode' ) ); ?>
+                        <?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'decode' ) ); ?>
+
+                </div><!-- .nav-links -->
+        </nav><!-- .navigation -->
+        <?php
+}
+endif;
 
 if ( ! function_exists( 'decode_comment' ) ) :
 /**
@@ -77,7 +87,7 @@ function decode_comment( $comment, $args, $depth ) {
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
-					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
 					<?php printf( __( '%s <span class="says">says:</span>', 'decode' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
@@ -175,8 +185,9 @@ if ( ! function_exists( 'decode_posted_on' ) ) :
  */
 function decode_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= ' <time class="updated screen-reader-text" datetime="%3$s">%4$s</time>';
+	}
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),

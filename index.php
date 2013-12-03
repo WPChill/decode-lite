@@ -33,13 +33,13 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'no-results', 'index' ); ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
 			<?php endif; ?>
 
 			</main><!-- #main -->
 			
-			<?php decode_content_nav( 'nav-below' ); ?>
+			<?php decode_paging_nav(); ?>
 			
 		</section><!-- #primary -->
 <?php get_footer(); ?>
