@@ -1032,6 +1032,9 @@ body.single-attachment .entry-meta {
 	display: block;
 	opacity: 1;
 	height: 1.4em;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 	.no-touch .SidebarTop:hover .SidebarClose {
