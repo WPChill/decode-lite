@@ -14,8 +14,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="icon" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
-<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="apple-touch-icon-precomposed" href="' . get_theme_mod( 'favicon_image', '' ) . '">'; ?>
+<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; ?>
+<?php if ( get_theme_mod( 'favicon_image', '' )) echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; ?>
 <script type="text/javascript">var templateDir = "<?php echo get_template_directory_uri() ?>";</script>
 
 <?php wp_head(); ?>
@@ -46,7 +46,7 @@
 		
 		<div class="site-branding">
 			
-			<?php if ( get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"><img class="site-logo" src="' . get_theme_mod( 'header_image', '' ) . '"></a>'; ?>
+			<?php if ( get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"><img class="site-logo" src="' . esc_url( get_theme_mod( 'header_image', '' ) ) . '"></a>'; ?>
 			
 			<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
 				<h1 class="site-title">
