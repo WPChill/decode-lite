@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-10-23 16:06-0600\n"
-"PO-Revision-Date: 2013-10-23 16:07-0600\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-12-03 00:29-0600\n"
+"PO-Revision-Date: 2013-12-03 00:39-0600\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgid "Author: %s"
 msgstr "Auteur: %s"
 
 # @ decode
-#: ../comments.php:28
+#: ../comments.php:29
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -117,57 +117,57 @@ msgstr[0] "Une réaction dans &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s réactions dans &ldquo;%2$s&rdquo;"
 
 # @ decode
-#: ../comments.php:35 ../comments.php:55
+#: ../comments.php:36 ../comments.php:56
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
 # @ decode
-#: ../comments.php:36 ../comments.php:56
+#: ../comments.php:37 ../comments.php:57
 msgid "&larr; Older Comments"
 msgstr "&larr; Anciens commentaires"
 
 # @ decode
-#: ../comments.php:37 ../comments.php:57
+#: ../comments.php:38 ../comments.php:58
 msgid "Newer Comments &rarr;"
 msgstr "Nouveaux commentaires &rarr;"
 
 # @ decode
-#: ../comments.php:67
+#: ../comments.php:68
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
 # @ decode
-#: ../comments.php:71
+#: ../comments.php:72
 msgid "Leave a Reply"
 msgstr "Répondre"
 
-#: ../comments.php:72
+#: ../comments.php:73
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Laisser un commentaire à %s"
 
-#: ../comments.php:73
+#: ../comments.php:74
 msgid "Cancel reply"
 msgstr "Annuler la réponse"
 
 # @ decode
-#: ../comments.php:74
+#: ../comments.php:75
 msgid "Post Comment"
 msgstr "Poster le commentaire"
 
 # @ decode
-#: ../comments.php:78
+#: ../comments.php:79
 msgctxt "noun"
 msgid "Comment"
 msgstr "Commentaire"
 
-#: ../comments.php:79
+#: ../comments.php:80
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Vous devez être <a href=\"%s\">connecté</a> pour publier un commentaire."
 
-#: ../comments.php:80
+#: ../comments.php:81
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -176,11 +176,11 @@ msgstr ""
 "Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
 "out of this account\">Se déconnecter ?</a>"
 
-#: ../comments.php:81
+#: ../comments.php:82
 msgid "Your email address will not be published."
 msgstr "Votre adresse email ne sera pas publiée."
 
-#: ../comments.php:82
+#: ../comments.php:83
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -188,6 +188,37 @@ msgid ""
 msgstr ""
 "Vous pouvez utiliser ces balises <abbr title=\"HyperText Markup Language"
 "\">HTML</abbr> et attributs: %s"
+
+# @ decode
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+# @ decode
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt pour publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+
+# @ decode
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais nous n'avons trouvé aucun élément correspondant à votre "
+"recherche. Essayez avec d'autres mots-clés."
+
+# @ decode
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Rien ne semble correspondre à votre recherche. Nous vous conseillons "
+"d'essayer autre chose."
 
 # @ decode
 #: ../content-page.php:17 ../content-single.php:11 ../content-single.php:76
@@ -199,7 +230,7 @@ msgstr "Pages:"
 #: ../content-page.php:20 ../content-single.php:24 ../content-single.php:55
 #: ../content-single.php:89 ../content.php:18 ../content.php:53
 #: ../content.php:78 ../content.php:98 ../content.php:126 ../image.php:33
-#: ../image.php:101 ../inc/template-tags.php:71 ../inc/template-tags.php:90
+#: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
 msgid "Edit"
 msgstr "Éditer"
 
@@ -247,17 +278,17 @@ msgid "%1$s by %2$s"
 msgstr "%1$s à %2$s"
 
 # @ decode
-#: ../functions.php:63
+#: ../functions.php:62
 msgid "Nav Menu"
 msgstr "Menu de navigation"
 
 # @ decode
-#: ../functions.php:76
+#: ../functions.php:75
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
 # @ decode
-#: ../header.php:31 ../header.php:390
+#: ../header.php:31 ../header.php:438
 msgid "Skip to content"
 msgstr "Voir le contenu"
 
@@ -284,37 +315,6 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
 #: ../image.php:38
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
-
-# @ decode
-#: ../no-results.php:13
-msgid "Nothing Found"
-msgstr "Rien de trouvé"
-
-# @ decode
-#: ../no-results.php:19
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Prêt pour publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
-
-# @ decode
-#: ../no-results.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Désolé, mais nous n'avons trouvé aucun élément correspondant à votre "
-"recherche. Essayez avec d'autres mots-clés."
-
-# @ decode
-#: ../no-results.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Rien ne semble correspondre à votre recherche. Nous vous conseillons "
-"d'essayer autre chose."
 
 #: ../page-explore.php:11
 msgid "Explore Page"
@@ -431,66 +431,72 @@ msgstr "Activer les commentaires"
 msgid "Social Options"
 msgstr "Options de réseaux sociaux"
 
-#: ../inc/customizer.php:337
+#: ../inc/customizer.php:353
 msgid "Show Social Icons"
 msgstr "Afficher les icônes de réseaux sociaux"
 
-#: ../inc/customizer.php:344
+#: ../inc/customizer.php:360
 msgid "Open Links in New Tab/Window"
 msgstr ""
 
-#: ../inc/customizer.php:351 ../inc/customizer.php:358
-#: ../inc/customizer.php:365 ../inc/customizer.php:372
-#: ../inc/customizer.php:379 ../inc/customizer.php:386
-#: ../inc/customizer.php:393 ../inc/customizer.php:400
-#: ../inc/customizer.php:421 ../inc/customizer.php:428
-#: ../inc/customizer.php:435 ../inc/customizer.php:442
-#: ../inc/customizer.php:449 ../inc/customizer.php:456
-#: ../inc/customizer.php:463 ../inc/customizer.php:470
-#: ../inc/customizer.php:477 ../inc/customizer.php:484
-#: ../inc/customizer.php:491 ../inc/customizer.php:498
-#: ../inc/customizer.php:505 ../inc/customizer.php:512
+#: ../inc/customizer.php:367 ../inc/customizer.php:374
+#: ../inc/customizer.php:381 ../inc/customizer.php:388
+#: ../inc/customizer.php:395 ../inc/customizer.php:402
+#: ../inc/customizer.php:409 ../inc/customizer.php:416
+#: ../inc/customizer.php:437 ../inc/customizer.php:444
+#: ../inc/customizer.php:451 ../inc/customizer.php:458
+#: ../inc/customizer.php:465 ../inc/customizer.php:472
+#: ../inc/customizer.php:479 ../inc/customizer.php:486
+#: ../inc/customizer.php:493 ../inc/customizer.php:500
+#: ../inc/customizer.php:507 ../inc/customizer.php:514
+#: ../inc/customizer.php:521 ../inc/customizer.php:528
+#: ../inc/customizer.php:535 ../inc/customizer.php:542
+#: ../inc/customizer.php:549 ../inc/customizer.php:556
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: ../inc/customizer.php:372
+#: ../inc/customizer.php:388
 msgid " (or the long number in your profile URL)"
 msgstr "(ou la suite de chiffre dans l'URL de votre profil)"
 
-#: ../inc/customizer.php:407
+#: ../inc/customizer.php:423
 msgid "Profile URL"
 msgstr "URL du profil"
 
-#: ../inc/customizer.php:414
+#: ../inc/customizer.php:430
 msgid "Site URL"
 msgstr "URL du site"
 
-#: ../inc/customizer.php:519
+#: ../inc/customizer.php:563
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
-#: ../inc/customizer.php:526
+#: ../inc/customizer.php:570
 msgid "Email Address"
 msgstr "Adresse email"
 
-#: ../inc/customizer.php:539
+#: ../inc/customizer.php:583
 msgid "Reading Options"
 msgstr "Options de lecture"
 
-#: ../inc/customizer.php:590
+#: ../inc/customizer.php:638
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Utiliser l'extrait à la place du texte entier sur la page d'accueil, à "
 "l'exception des articles mis en avant."
 
-#: ../inc/customizer.php:597
+#: ../inc/customizer.php:645
+msgid "Displays posts' featured images when excerpts are shown on main page."
+msgstr ""
+
+#: ../inc/customizer.php:652
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Afficher les tags sur la page d'accueil (les tags seront affichés sur la "
 "page de chaque article)"
 
-#: ../inc/customizer.php:604
+#: ../inc/customizer.php:659
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -498,32 +504,32 @@ msgstr ""
 "Afficher les catégories sur la page d'accueil (les catégories seront "
 "affichées sur la page de chaque article)"
 
-#: ../inc/customizer.php:611
+#: ../inc/customizer.php:666
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 "Afficher le nom de l'auteur, l'image du profil et la bio après les articles"
 
-#: ../inc/customizer.php:618
+#: ../inc/customizer.php:673
 msgid "Entry Date Position"
 msgstr ""
 
-#: ../inc/customizer.php:622
+#: ../inc/customizer.php:677
 msgid "Above Header"
 msgstr ""
 
-#: ../inc/customizer.php:623
+#: ../inc/customizer.php:678
 msgid "Below Header"
 msgstr ""
 
-#: ../inc/customizer.php:629
+#: ../inc/customizer.php:684
 msgid "Show Page Headers"
 msgstr ""
 
-#: ../inc/customizer.php:636
+#: ../inc/customizer.php:691
 msgid "Add an arrow before the title of a link post"
 msgstr "Ajouter une ombre devant le titre d'un lien d'article"
 
-#: ../inc/customizer.php:643
+#: ../inc/customizer.php:698
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -531,40 +537,40 @@ msgstr ""
 "Montrer les informations sur le thème (intègre une ligne sur le nom du thème "
 "et de son créateur à la fin des pages)"
 
-#: ../inc/customizer.php:650
+#: ../inc/customizer.php:705
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Texte (colophon, copyright, credits, etc.) pour le rooter de votre site"
 
-#: ../inc/customizer.php:663
+#: ../inc/customizer.php:718
 msgid "Other Options"
 msgstr "Autres options"
 
-#: ../inc/customizer.php:675
+#: ../inc/customizer.php:730
 msgid "Custom CSS"
 msgstr "Personnaliser le CSS"
 
 # @ decode
-#: ../inc/customizer.php:714
+#: ../inc/customizer.php:769
 msgid "Accent Color"
 msgstr "Couleur du soulignement"
 
 # @ decode
-#: ../inc/customizer.php:720
+#: ../inc/customizer.php:775
 msgid "Active Link Color"
 msgstr "Couleur du lien actif"
 
 # @ decode
-#: ../inc/customizer.php:726
+#: ../inc/customizer.php:781
 msgid "Text Color"
 msgstr "Couleur du texte"
 
 # @ decode
-#: ../inc/customizer.php:732
+#: ../inc/customizer.php:787
 msgid "Secondary Text Color"
 msgstr "Seconde couleur du texte"
 
-#: ../inc/customizer.php:738
+#: ../inc/customizer.php:793
 msgid "Use accent color instead of text color for icons"
 msgstr ""
 "Utiliser la couleur de soulignement à la place de la couleur du texte pour "
@@ -591,61 +597,67 @@ msgid "Page "
 msgstr "Page"
 
 # @ decode
-#: ../inc/template-tags.php:34
-msgid "Post navigation"
+#: ../inc/template-tags.php:23
+#, fuzzy
+msgid "Posts navigation"
 msgstr "Navigation dans les articles"
 
 # @ decode
-#: ../inc/template-tags.php:38
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr "&larr;"
-
-# @ decode
-#: ../inc/template-tags.php:39
-msgctxt "Next post link"
-msgid "&rarr;"
-msgstr "&rarr;"
-
-# @ decode
-#: ../inc/template-tags.php:44
+#: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Articles précédents"
 
 # @ decode
-#: ../inc/template-tags.php:48
+#: ../inc/template-tags.php:31
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Articles suivants <span class=\"meta-nav\">&rarr;</span>"
 
 # @ decode
-#: ../inc/template-tags.php:71
+#: ../inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navigation dans les articles"
+
+# @ decode
+#: ../inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+# @ decode
+#: ../inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+# @ decode
+#: ../inc/template-tags.php:81
 msgid "Pingback:"
 msgstr "Pingback:"
 
 # @ decode
-#: ../inc/template-tags.php:81
+#: ../inc/template-tags.php:91
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">dit:</span>"
 
 # @ decode
-#: ../inc/template-tags.php:87
+#: ../inc/template-tags.php:97
 #, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
 # @ decode
-#: ../inc/template-tags.php:94
+#: ../inc/template-tags.php:104
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente d'approbation."
 
-#: ../inc/template-tags.php:108
+#: ../inc/template-tags.php:118
 msgid "Reply"
 msgstr "Répondre"
 
 # @ decode
-#: ../inc/template-tags.php:188
+#: ../inc/template-tags.php:199
 #, php-format
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
@@ -655,7 +667,7 @@ msgstr ""
 "%2$s</span>"
 
 # @ decode
-#: ../inc/template-tags.php:196
+#: ../inc/template-tags.php:207
 #, php-format
 msgid "View all posts by %s"
 msgstr "Voir tous les articles de %s"
@@ -670,7 +682,7 @@ msgid ""
 "should stay visible all the time or be closeable. You can also disable the "
 "sidebar and comment links if you choose. Decode supports link posts, where "
 "the title can be hyperlinked. Decode includes custom social icons in the "
-"header that you can easily link to your choice of 24 different social "
+"header that you can easily link to your choice of 28 different social "
 "profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be "
 "sure to find support for the network you want. Lastly, Decode is also built "
 "alongside a companion plugin that adds a sleek reply tool that lets readers "
@@ -684,7 +696,7 @@ msgstr ""
 "widgets, peut être placée à droite ou à gauche, être visible de façon "
 "permanente ou ponctuelle, ou encore désactivée. Decode permet les liens sur "
 "les titres d'articles, et inclut de superbes icônes dans l'en-tête afin de "
-"relier votre site aux profils de 26 réseaux sociaux de votre choix, de "
+"relier votre site aux profils de 28 réseaux sociaux de votre choix, de "
 "Twitter à AppNet, en passant par Pinterest ou LinkedIn, vous êtes sûr de "
 "trouver votre réseau préféré. Enfin, Decode peut se compléter d'un plugin "
 "qui permet à vos lecteurs de vous répondre très simplement sur un article "
