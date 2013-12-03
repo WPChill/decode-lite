@@ -283,6 +283,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'flickr_username', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'deviantart_username', array(
+		'default' => '',
+	) );
 
 	$wp_customize->add_setting( 'rdio_username', array(
 		'default' => '',
@@ -313,6 +317,14 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 
 	$wp_customize->add_setting( 'foursquare_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'slideshare_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'researchgate_username', array(
 		'default' => '',
 	) );
 	
@@ -444,89 +456,110 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'text',
 		'priority'=> 16,
 	) );
+	
+	$wp_customize->add_control( 'deviantart_username', array(
+		'label'   => 'DeviantART ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 17,
+	) );
 
 	$wp_customize->add_control( 'rdio_username', array(
 		'label'   => 'Rdio ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 17,
+		'priority'=> 18,
 	) );
 
 	$wp_customize->add_control( 'spotify_username', array(
 		'label'   => 'Spotify ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 18,
+		'priority'=> 19,
 	) );
 	
 	$wp_customize->add_control( 'lastfm_username', array(
 		'label'   => 'Last.fm ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 19,
+		'priority'=> 20,
 	) );
 
 	$wp_customize->add_control( 'soundcloud_username', array(
 		'label'   => 'Soundcloud ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 20,
+		'priority'=> 21,
 	) );
 
 	$wp_customize->add_control( 'vimeo_username', array(
 		'label'   => 'Vimeo ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 21,
+		'priority'=> 22,
 	) );
 
 	$wp_customize->add_control( 'youtube_username', array(
 		'label'   => 'YouTube ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 22,
+		'priority'=> 23,
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
 		'label'   => 'GitHub ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 23,
+		'priority'=> 24,
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => 'Foursquare ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 24,
+		'priority'=> 25,
+	) );
+	
+	$wp_customize->add_control( 'slideshare_username', array(
+		'label'   => 'SlideShare ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 26,
+	) );
+	
+	$wp_customize->add_control( 'researchgate_username', array(
+		'label'   => 'Research Gate ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 27,
 	) );
 	
 	$wp_customize->add_control( 'youversion_username', array(
 		'label'   => 'YouVersion ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 25,
+		'priority'=> 28,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 26,
+		'priority'=> 29,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 27,
+		'priority'=> 30,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 28,
+		'priority'=> 31,
 	) );
 
 
