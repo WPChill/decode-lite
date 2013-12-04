@@ -87,15 +87,16 @@ textarea {
 /* =Navigation
 ----------------------------------------------- */
 
-.nav-previous {
+.nav-previous, .nav-links a[rel="prev"] {
 	float: right;
 	text-align: right;
 }
 
-.nav-next {
+.nav-next, .nav-links a[rel="next"] {
 	float: left;
 	text-align: left;
 }
+
 /* =Comments
 ----------------------------------------------- */
 
