@@ -11,7 +11,7 @@ Featured Images are also supported, allowing you to display large, beautiful ima
 
 To add an explore page to your site, simply add a page with the title "Explore" and Decode does the rest, adding an easy place to find new content on your site. 
 
-Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, Google+, MySpace, VK, Dribbble, Behance, LinkedIn, Tumblr, Pinterest, Instagram, 500px, Flickr, Rdio, Spotify, Last.Fm, Soundcloud, Vimeo, YouTube, Github, Foursquare, YouVersion, and Skype profiles. These can all be configured in the Customize menu as well. 
+Lastly, Decode has social icons in the header that can link to your Twitter, App.net, Facebook, Google+, MySpace, VK, Dribbble, Behance, LinkedIn, Tumblr, Pinterest, Instagram, 500px, Flickr, deviantART, Rdio, Spotify, Last.Fm, Soundcloud, Vimeo, YouTube, Github, Strava, Foursquare, SlideShare, Research Gate, YouVersion, and Skype profiles. These can all be configured in the Customize menu as well. 
 
 
 If you desire to add Typekit fonts to your blog, I highly recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
