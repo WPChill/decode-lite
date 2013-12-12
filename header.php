@@ -214,7 +214,7 @@
 				<?php endif; ?>
 				
 				<?php if (get_theme_mod( '500px_username', '' ) !== '' ) : ?>
-				<a class="sociallink InstagramLink" href="<?php echo esc_url( 'http://500px.com/' . get_theme_mod( '500px_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<a class="sociallink 500pxLink" href="<?php echo esc_url( 'http://500px.com/' . get_theme_mod( '500px_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>500px</title>
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
