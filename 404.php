@@ -21,7 +21,12 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
+					
+					<?php
+					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives.', 'decode' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+					?>
+					
 					<?php if ( decode_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'decode' ); ?></h2>
@@ -38,13 +43,6 @@ get_header(); ?>
 						</ul>
 					</div><!-- .widget -->
 					<?php endif; ?>
-
-					<?php
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives.', 'decode' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error404 .not-found -->
