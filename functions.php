@@ -137,7 +137,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_directory_uri().'/build/style.min.css', array(), "2.8.2" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_directory_uri().'/build/style.min.css', array(), "2.8.3" );
 
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
