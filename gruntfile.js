@@ -40,16 +40,18 @@ module.exports = function(grunt) {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'ie 7']
 			},
             dist: {
-                files: {
-                    'css/style.css': 'style.css'
-                }
+            	expand: true,
+				flatten: true,
+                src: ['*.css', '!rtl.css'],
+                dest: 'css/'
             }
         },
 
         cssmin: {
 			minify: {
 				expand: true,
-				src: ['.css', '!*.min.css', '!rtl.css'],
+				flatten: true,
+				src: ['css/*.css', '!*.min.css'],
 				dest: 'css/',
 				ext: '.min.css'
 			}
