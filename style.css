@@ -3,9 +3,9 @@ Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 28 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
+Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 30 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Lastly, Decode is also built alongside a companion plugin that adds a sleek reply tool that lets readers send you a reply about the post using Twitter or App.net. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
 Tags: one-column, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
-Version: 2.8.2
+Version: 2.8.3
 Text Domain: decode
 License: GNU General Public License
 License URI: license.txt
@@ -44,8 +44,6 @@ html {
 *,
 *:before,
 *:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
 }
 article,
@@ -98,7 +96,7 @@ button,
 select,
 textarea {
 	color: #444444;
-	font: normal 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
+	font: 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
 }
 
 body {
@@ -227,13 +225,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out;
-	-moz-transition: border 0.25s ease-out, color 0.25s ease-out;
 	transition: border 0.25s ease-out, color 0.25s ease-out;
 	border: 1px solid #C0C0C0;
 	border-radius: 3px;
 	background: transparent;
-	color: #444444;
+	color: #009BCD;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	height: 2.15em;
@@ -278,8 +274,6 @@ input[type="search"],
 input[type="tel"],
 input[type="url"],
 textarea {
-	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	-moz-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	color: #C0C0C0;
 	height: 2.15em;
@@ -323,8 +317,6 @@ textarea {
 
 /* Links */
 a {
-	-webkit-transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	-moz-transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	color: #009BCD;
 	text-decoration: none;
@@ -517,8 +509,6 @@ object {
 }
 
 .site-logo {
-	-webkit-transition: opacity 0.5s ease-out;
-	-moz-transition: opacity 0.5s ease-out;
 	transition: opacity 0.5s ease-out;
 	margin: 0 auto 2%;
 	max-height: 8.5em;
@@ -529,14 +519,10 @@ object {
 }
 
 	.no-touch .site-logo:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-		filter: alpha(opacity=75);
 		opacity: 0.75;
 	}
 	
 	.no-touch .site-logo:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-		filter: alpha(opacity=85);
 		opacity: 0.85;
 	}
 
@@ -544,13 +530,10 @@ object {
 	margin: 0 0 0.5%;
 	line-height: 1;
 	text-align: center;
-	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .site-title a {
-	-webkit-transition: text-shadow 0.5s;
-	-moz-transition: text-shadow 0.5s;
 	transition: text-shadow 0.5s;
 	font-size: 1.95em;
 	text-decoration: none;
@@ -609,21 +592,15 @@ object {
 }
 
 .sociallink {
-	-webkit-transition: opacity 0.4s ease-out;
-	-moz-transition: opacity 0.4s ease-out;
 	transition: opacity 0.4s ease-out;
 	border: none;
 }
 
 	.no-touch .sociallink:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-		filter: alpha(opacity=60);
 		opacity: 0.6;
 	}
 	
 	.no-touch .sociallink:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		filter: alpha(opacity=80);
 		opacity: 0.8;
 	}
 
@@ -654,8 +631,6 @@ object {
 	margin-right: 0;
 }
 .main-navigation a {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	display: block;
 	text-decoration: none;
@@ -710,8 +685,6 @@ object {
 
 .menu li.current_page_item > a:hover,
 .main-navigation li.current-menu-item > a:hover {
-	-webkit-animation: shake 0.25s ease 0.25s;
-	-moz-animation: shake 0.25s ease 0.25s;
 	animation: shake 0.25s ease 0.25s;
 	color: #000000;
 }
@@ -765,7 +738,6 @@ object {
 .entry-content,
 .entry-summary {
 	margin: 0 0 2.5%;
-	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
@@ -790,23 +762,15 @@ body.single-attachment .entry-header {
 }
 
 a .attachment-post-thumbnail {
-	-webkit-transition: opacity 0.25s ease-out;
-	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
 	opacity: 1;
 }
 
 	.no-touch a .attachment-post-thumbnail:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		filter: alpha(opacity=80);
 		opacity: 0.8;
 	}
 	
 	.no-touch a .attachment-post-thumbnail:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-		filter: alpha(opacity=90);
 		opacity: 0.9;
 	}
 
@@ -814,7 +778,6 @@ a .attachment-post-thumbnail {
 	color: #444444;
 	text-decoration: none;
 	text-align: center;
-	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 1.5em;
 	line-height: 1.25;
@@ -913,8 +876,6 @@ body.single-attachment .entry-meta {
 }
 
 .entry-meta .date a {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #808080;
 }
@@ -949,28 +910,20 @@ body.single-attachment .entry-meta {
 ----------------------------------------------- */
 
 .SidebarLink {
-	-webkit-transition: opacity 0.25s ease-out;
-	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
 	position: relative;
 	margin-bottom: 2.5%;
 	cursor: pointer;
 	display: inline-block;
 	height: 1.5em;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
 	opacity: 1;
 }
 
 	.no-touch .SidebarLink:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-		filter: alpha(opacity=65);
 		opacity: 0.65;
 	}
 	
 	.no-touch .SidebarLink:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-		filter: alpha(opacity=85);
 		opacity: 0.85;
 	}
 	
@@ -1002,9 +955,6 @@ body.single-attachment .entry-meta {
 }
 
 .no-touch .SidebarTop {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
 	position: sticky;
 	top: 0;
 }
@@ -1013,28 +963,26 @@ body.single-attachment .entry-meta {
 	top: 32px;
 }
 
+@media screen and (max-width:782px) {
+	.admin-bar .sidebar {
+		top: 46px;
+	}
+}
+
 .SidebarClose {
-	-webkit-transition: opacity 0.25s ease-out;
-	-moz-transition: opacity 0.25s ease-out;
 	transition: opacity 0.25s ease-out;
 	padding: 3.5%;
 	display: block;
 	opacity: 1;
 	height: 1.4em;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
 	.no-touch .SidebarTop:hover .SidebarClose {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-		filter: alpha(opacity=65);
 		opacity: 0.65;
 	}
 	
 	.no-touch .SidebarTop:hover .SidebarClose:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-		filter: alpha(opacity=85);
 		opacity: 0.85;
 	}
 	
@@ -1044,9 +992,7 @@ body.single-attachment .entry-meta {
 }
 
 .sidebar {
-	-webkit-transition: -webkit-transform 0.35s ease-out;
-	-moz-transition: -moz-transform 0.35s ease-out;
-	transition: -webkit-transform 0.35s ease-out, -ms-transform 0.35s ease-out, transform 0.35s ease-out;
+	transition: transform 0.35s ease-out;
 	top: 0;
 	width: 95%;
 	font-size: 0.95em;
@@ -1059,18 +1005,12 @@ body.single-attachment .entry-meta {
 }
 
 .sidebar.left {
-	-webkit-transform: translateX(-110%);
-	-moz-transform: translateX(-110%);
-	-ms-transform: translateX(-110%);
 	transform: translateX(-110%);
 	left: 0;
 	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 }
 
 .sidebar.right {
-	-webkit-transform: translateX(110%);
-	-moz-transform: translateX(110%);
-	-ms-transform: translateX(110%);
 	transform: translateX(110%);
 	right: 0;
 	box-shadow: -1px 0px 15px rgba(0,0,0,0.5);
@@ -1081,9 +1021,6 @@ body.single-attachment .entry-meta {
 }
 
 .sidebar.left.visible, .sidebar.right.visible {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
 	transform: translateX(0%);
 }
 
@@ -1200,8 +1137,6 @@ body.single-attachment .entry-meta {
 }
 
 .explore-page .widget:not(.search) {
-	-webkit-transition: box-shadow 0.35s ease-out;
-	-moz-transition: box-shadow 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out;
 	width: 90%;
 	padding: 2.5% 5%;
@@ -1239,7 +1174,6 @@ body.single-attachment .entry-meta {
 }
 
 .nav-next, .nav-previous {
-	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
@@ -1256,8 +1190,6 @@ body.single-attachment .entry-meta {
 }
 
 .nav-links a {
-	-webkit-transition: padding 0.25s ease-out, color 0.25s ease-out;
-	-moz-transition: padding 0.25s ease-out, color 0.25s ease-out;
 	transition: padding 0.25s ease-out, color 0.25s ease-out;
 	padding: 0;
 	display: block;
@@ -1296,8 +1228,6 @@ body.single-attachment .entry-meta {
 }
 
 .comment-metadata a {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #808080;
 	font-size: 0.8em;
@@ -1336,8 +1266,6 @@ li.comment {
 }
 
 .search-entry, .search-entry .entry-title {
-	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #444444;
 	display: block;
@@ -1361,7 +1289,7 @@ li.comment {
 }
 
 .search .page-header input[type="search"] {
-	color: #A6A6A6;
+	color: #808080;
 	border-top-color: transparent;
 	border-right-color: transparent;
 	border-left-color: transparent;
@@ -1374,7 +1302,7 @@ li.comment {
 	border-radius: 3px;
 }
 
-.search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
+.search .page-header input[type="search"]:focus {
 	color: #444444;
 	border-color: #009BCD;
 	border-radius: 3px;
@@ -1404,8 +1332,6 @@ li.comment {
 /* =Author Section
 ----------------------------------------------- */
 .author-section {
-	-webkit-transition: box-shadow 0.35s ease-out;
-	-moz-transition: box-shadow 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 	padding: 3.5%;
@@ -1424,8 +1350,6 @@ li.comment {
 }
 
 .author-image img {
-	-webkit-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
-	-moz-transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 	border-radius: 50%;
 	display: block;
@@ -1666,9 +1590,6 @@ li.comment {
 }
 
 .sidebar.constant {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
 	transform: translateX(0%);
 	box-shadow: none;
 }

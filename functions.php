@@ -89,7 +89,7 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
 
 function decode_add_editor_styles() {
-	add_editor_style( 'editor-style.css' );
+	add_editor_style( 'css/editor-style.min.css' );
 }
 }
 add_action( 'init', 'decode_add_editor_styles' );
@@ -137,14 +137,18 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.8.2" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_directory_uri().'/css/style.min.css', array(), "2.8.3" );
 
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
-	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.8.1', false );
-
-	wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.8.1', false );
-
+	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
+		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/build/decode.min.js', array(), '2.8.3', false );
+	}
+	
+	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.min.js', array('jquery'), '2.8.3', true );
+	}
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -152,11 +156,7 @@ function decode_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.7.5', true );
 	}
-
-	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.7.5', true );
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
-	}
+	
 }
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
@@ -175,7 +175,7 @@ function decode_customize_css()
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 		
@@ -193,7 +193,7 @@ function decode_customize_css()
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus, .search .page-header input[type="search"]:hover:focus {
+		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
@@ -205,7 +205,7 @@ function decode_customize_css()
 			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 
-		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a {
+		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {
 			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
 		}
 		

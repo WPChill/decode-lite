@@ -336,6 +336,14 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'steam_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'steam_group_name', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'skype_username', array(
 		'default' => '',
 	) );
@@ -552,25 +560,39 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 29,
 	) );
 	
+	$wp_customize->add_control( 'steam_username', array(
+		'label'   => 'Steam ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 30,
+	) );
+	
+	$wp_customize->add_control( 'steam_group_name', array(
+		'label'   => 'Steam ' . __( 'Group Name', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 31,
+	) );
+	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 30,
+		'priority'=> 32,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 31,
+		'priority'=> 33,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 32,
+		'priority'=> 34,
 	) );
 
 
@@ -610,6 +632,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	
 	$wp_customize->add_setting( 'entry_date_position', array(
 		'default' => 'below',
+		'transport' => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'show_entry_date_on_excerpts', array(
+		'default' => false,
 		'transport' => 'refresh',
 	) );
 	
@@ -686,26 +713,33 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'type'    => 'checkbox',
 		'priority'=> 7,
 	) );
+	
+	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
+		'label'   => __( 'Show entry date for post excepts on the main page', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 8,
+	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 8,
+		'priority'=> 9,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 9,
+		'priority'=> 10,
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
-		'priority'=> 10,
+		'priority'=> 11,
 	) ) );
 	
 	
