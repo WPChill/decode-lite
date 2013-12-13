@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 			}
 		}
     });
-
+	grunt.util.normalizelf();
     // Plugin List
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
