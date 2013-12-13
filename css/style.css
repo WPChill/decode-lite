@@ -165,7 +165,7 @@ button,
 select,
 textarea {
   color: #444444;
-  font: normal 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
+  font: 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
 }
 
 body {
@@ -358,7 +358,7 @@ input[type="submit"] {
   border: 1px solid #C0C0C0;
   border-radius: 3px;
   background: transparent;
-  color: #444444;
+  color: #009BCD;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button;
@@ -1532,7 +1532,7 @@ li.comment {
 }
 
 .search .page-header input[type="search"] {
-  color: #A6A6A6;
+  color: #808080;
   border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -1545,8 +1545,7 @@ li.comment {
   border-radius: 3px;
 }
 
-.search .page-header input[type="search"]:focus,
-.search .page-header input[type="search"]:hover:focus {
+.search .page-header input[type="search"]:focus {
   color: #444444;
   border-color: #009BCD;
   border-radius: 3px;
