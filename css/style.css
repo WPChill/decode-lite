@@ -1180,6 +1180,12 @@ body.single-attachment .entry-meta {
   top: 32px;
 }
 
+@media screen and (max-width:782px) {
+  .admin-bar .sidebar {
+    top: 46px;
+  }
+}
+
 .SidebarClose {
   -webkit-transition: opacity 0.25s ease-out;
   transition: opacity 0.25s ease-out;

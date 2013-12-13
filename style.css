@@ -963,6 +963,12 @@ body.single-attachment .entry-meta {
 	top: 32px;
 }
 
+@media screen and (max-width:782px) {
+	.admin-bar .sidebar {
+		top: 46px;
+	}
+}
+
 .SidebarClose {
 	transition: opacity 0.25s ease-out;
 	padding: 3.5%;
