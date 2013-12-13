@@ -96,8 +96,8 @@ html {
 *:before,
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -697,14 +697,10 @@ object {
 }
 
 .no-touch .site-logo:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
   opacity: 0.75;
 }
 
 .no-touch .site-logo:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
   opacity: 0.85;
 }
 
@@ -712,7 +708,6 @@ object {
   margin: 0 0 0.5%;
   line-height: 1;
   text-align: center;
-  -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
 
@@ -783,14 +778,10 @@ object {
 }
 
 .no-touch .sociallink:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  filter: alpha(opacity=60);
   opacity: 0.6;
 }
 
 .no-touch .sociallink:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
   opacity: 0.8;
 }
 
@@ -954,7 +945,6 @@ object {
 .entry-content,
 .entry-summary {
   margin: 0 0 2.5%;
-  -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
 
@@ -981,20 +971,14 @@ body.single-attachment .entry-header {
 a .attachment-post-thumbnail {
   -webkit-transition: opacity 0.25s ease-out;
   transition: opacity 0.25s ease-out;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
   opacity: 1;
 }
 
 .no-touch a .attachment-post-thumbnail:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
   opacity: 0.8;
 }
 
 .no-touch a .attachment-post-thumbnail:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
   opacity: 0.9;
 }
 
@@ -1002,7 +986,6 @@ a .attachment-post-thumbnail {
   color: #444444;
   text-decoration: none;
   text-align: center;
-  -ms-word-wrap: break-word;
   word-wrap: break-word;
   font-size: 1.5em;
   line-height: 1.25;
@@ -1150,20 +1133,14 @@ body.single-attachment .entry-meta {
   cursor: pointer;
   display: inline-block;
   height: 1.5em;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
   opacity: 1;
 }
 
 .no-touch .SidebarLink:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
   opacity: 0.65;
 }
 
 .no-touch .SidebarLink:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
   opacity: 0.85;
 }
 
@@ -1195,9 +1172,6 @@ body.single-attachment .entry-meta {
 }
 
 .no-touch .SidebarTop {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
   position: sticky;
   top: 0;
 }
@@ -1213,20 +1187,16 @@ body.single-attachment .entry-meta {
   display: block;
   opacity: 1;
   height: 1.4em;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
 .no-touch .SidebarTop:hover .SidebarClose {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
   opacity: 0.65;
 }
 
 .no-touch .SidebarTop:hover .SidebarClose:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
   opacity: 0.85;
 }
 
@@ -1238,7 +1208,7 @@ body.single-attachment .entry-meta {
 
 .sidebar {
   -webkit-transition: -webkit-transform 0.35s ease-out;
-  transition: -webkit-transform 0.35s ease-out, -ms-transform 0.35s ease-out, transform 0.35s ease-out;
+  transition: transform 0.35s ease-out;
   top: 0;
   width: 95%;
   font-size: 0.95em;
@@ -1439,7 +1409,6 @@ body.single-attachment .entry-meta {
 
 .nav-next,
 .nav-previous {
-  -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
 
