@@ -89,7 +89,7 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
 
 function decode_add_editor_styles() {
-	add_editor_style( 'editor-style.css' );
+	add_editor_style( 'editor-style.min.css' );
 }
 }
 add_action( 'init', 'decode_add_editor_styles' );
@@ -137,14 +137,18 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.8.2" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_directory_uri().'/build/style.min.css', array(), "2.8.2" );
 
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
-	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.8.1', false );
-
-	wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.8.1', false );
-
+	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
+		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/build/decode.min.js', array(), '2.8.3', false );
+	}
+	
+	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.min.js', array('jquery'), '2.8.3', true );
+	}
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -152,11 +156,7 @@ function decode_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.7.5', true );
 	}
-
-	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-fastclick', get_template_directory_uri() . '/js/fastclick.js', array(), '2.7.5', true );
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '2.6', true );
-	}
+	
 }
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
