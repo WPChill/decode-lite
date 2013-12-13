@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 			},
             dist: {
                 files: {
-                    'build/style.css': 'style.css'
+                    'css/style.css': 'style.css'
                 }
             }
         },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 			minify: {
 				expand: true,
 				src: ['.css', '!*.min.css', '!rtl.css'],
-				dest: 'build/',
+				dest: 'css/',
 				ext: '.min.css'
 			}
 		},
