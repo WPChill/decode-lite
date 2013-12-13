@@ -1,29 +1,29 @@
 module.exports = function(grunt) {
 
-    // 1. All configuration goes here 
+    // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         concat: {
         	dist_decode_basic: {
 				src: [
-					'js/decode.js',
 					'js/modernizr.js',
+					'js/decode.js',
 				],
 				dest: 'js/build/decode.js',
 			},
-			
+
 			dist_decode_with_sidebar: {
 				src: [
-					'js/decode.js',
 					'js/modernizr.js',
+					'js/decode.js',
 					'js/fastclick.js',
 					'js/sidebar.js'
 				],
 				dest: 'js/build/decode-with-sidebar.js',
 			}
         },
-        
+
         uglify: {
 			build_decode_basic: {
 				src: 'js/build/decode.js',
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 				dest: 'js/build/decode-with-sidebar.min.js'
 			}
 		},
-				
+
 		autoprefixer: {
             options: {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'ie 7']
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         cssmin: {
 			minify: {
 				expand: true,
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 				ext: '.min.css'
 			}
 		},
-        
+
         watch: {
         	options: {
 				livereload: true,
@@ -87,4 +87,4 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['concat', 'uglify', 'autoprefixer', 'cssmin']);
     grunt.registerTask('dev', ['watch']);
 
-};
+}
