@@ -316,6 +316,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'runkeeper_username', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'strava_userid', array(
 		'default' => '',
 	) );
@@ -525,74 +529,81 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 24,
 	) );
 	
+	$wp_customize->add_control( 'runkeeper_username', array(
+		'label'   => 'Runkeeper ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 25,
+	) );
+	
 	$wp_customize->add_control( 'strava_userid', array(
 		'label'   => 'Strava ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 25,
+		'priority'=> 26,
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => 'Foursquare ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 26,
+		'priority'=> 27,
 	) );
 	
 	$wp_customize->add_control( 'slideshare_username', array(
 		'label'   => 'SlideShare ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 27,
+		'priority'=> 28,
 	) );
 	
 	$wp_customize->add_control( 'researchgate_username', array(
 		'label'   => 'Research Gate ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 28,
+		'priority'=> 29,
 	) );
 	
 	$wp_customize->add_control( 'youversion_username', array(
 		'label'   => 'YouVersion ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 29,
+		'priority'=> 30,
 	) );
 	
 	$wp_customize->add_control( 'steam_username', array(
 		'label'   => 'Steam ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 30,
+		'priority'=> 31,
 	) );
 	
 	$wp_customize->add_control( 'steam_group_name', array(
 		'label'   => 'Steam ' . __( 'Group Name', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 31,
+		'priority'=> 32,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 32,
+		'priority'=> 33,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 33,
+		'priority'=> 34,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 34,
+		'priority'=> 35,
 	) );
 
 
