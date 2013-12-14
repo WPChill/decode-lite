@@ -167,8 +167,7 @@ add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
 if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
 
-function decode_customize_css()
-{
+function decode_customize_css() {
     ?>
          <style type="text/css">
         body, .sidebar, .SidebarTop, .main-navigation ul ul {
@@ -251,9 +250,8 @@ if ( ! function_exists( 'new_excerpt_more' ) ) {
 function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
-
 }
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
  * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
@@ -303,4 +301,20 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 	echo '<a href="'.$link.'" rel="bookmark" title="'.$title.'">'.$title.'</a>';
 
 	}
+}
+
+/**
+ * Show all post types in main query
+ */
+if ( ! function_exists( 'add_all_post_types_to_query' ) ) {
+
+function add_all_post_types_to_query( $query ) {
+	if ( is_home() && $query->is_main_query() )
+		$query->set( 'post_type', array( get_post_types() ) );
+	return $query;
+}
+}
+
+if ( get_theme_mod( 'show_all_post_types', false ) == true ) {
+	add_action( 'pre_get_posts', 'add_all_post_types_to_query' );
 }
