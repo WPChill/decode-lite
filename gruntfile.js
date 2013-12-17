@@ -57,6 +57,17 @@ module.exports = function(grunt) {
 				ext: '.min.css'
 			}
 		},
+		
+		imageoptim: {
+			myTask: {
+				options: {
+					jpegMini: false,
+					imageAlpha: true,
+					quitAfter: true
+				},
+				src: ['screenshot.png', 'images/']
+			}
+		},
 
         watch: {
         	options: {
@@ -75,6 +86,13 @@ module.exports = function(grunt) {
 				options: {
 					spawn: false,
 				}
+			},
+			images: {
+				files: ['screenshot.png', 'images/'],
+				tasks: ['imageoptim'],
+				options: {
+					spawn: false,
+				}
 			}
 		}
     });
@@ -84,11 +102,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Workflows
 	// $grunt
-	grunt.registerTask('default', ['concat', 'uglify', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('default', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'imageoptim']);
 	
 	// $grunt dev
 	grunt.registerTask('dev', ['watch']);
