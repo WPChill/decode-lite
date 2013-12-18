@@ -64,8 +64,8 @@ module.exports = function(grunt) {
 			},
             dist: {
             	expand: true,
-				cwd: 'css/',
-                src: ['*.css', '!rtl.css'],
+            	flatten: true,
+                src: ['editor-style.css', 'css/decode.css'],
                 dest: 'css/',
                 ext: '.prefixed.css'
             }
