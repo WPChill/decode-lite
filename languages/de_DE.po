@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-12-14 07:11-0600\n"
-"PO-Revision-Date: 2013-12-14 07:17-0600\n"
+"POT-Creation-Date: 2013-12-17 20:15-0600\n"
+"PO-Revision-Date: 2013-12-17 20:17-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.2\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
@@ -75,22 +75,39 @@ msgid "Asides"
 msgstr "Nebenbemerkungen"
 
 #: ../archive.php:39
+#, fuzzy
+msgid "Galleries"
+msgstr "Kategorien"
+
+#: ../archive.php:42
 msgid "Images"
 msgstr "Bilder"
 
-#: ../archive.php:42
+#: ../archive.php:45
 msgid "Videos"
 msgstr "Videos"
 
-#: ../archive.php:45
+#: ../archive.php:48
 msgid "Quotes"
 msgstr "Zitate"
 
-#: ../archive.php:48
+#: ../archive.php:51
 msgid "Links"
 msgstr "Links"
 
-#: ../archive.php:51 ../page-explore.php:39 ../sidebar.php:17
+#: ../archive.php:54
+msgid "Statuses"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Audio Posts"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Chats"
+msgstr ""
+
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:17
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr "Archive"
