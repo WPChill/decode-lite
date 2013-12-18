@@ -34,6 +34,29 @@ module.exports = function(grunt) {
 				dest: 'js/build/decode-with-sidebar.min.js'
 			}
 		},
+		
+		'jsmin-sourcemap': {
+			build_decode_basic: {
+				// Source files to concatenate and minify (also accepts a string and minimatch items)
+				src: ['js/modernizr.js', 'js/decode.js'],
+
+				// Destination for concatenated/minified JavaScript
+				dest: 'js/build/decode.js',
+
+				// Destination for sourcemap of minified JavaScript
+				destMap: 'js/build/decode.js.map'
+			},
+			build_decode_with_sidebar: {
+				// Source files to concatenate and minify (also accepts a string and minimatch items)
+				src: ['js/modernizr.js', 'js/decode.js', 'js/fastclick.js', 'js/sidebar.js'],
+
+				// Destination for concatenated/minified JavaScript
+				dest: 'js/build/decode-with-sidebar.js',
+
+				// Destination for sourcemap of minified JavaScript
+				destMap: 'js/build/decode-with-sidebar.js.map'
+			},
+		},
 
 		autoprefixer: {
             options: {
@@ -98,18 +121,20 @@ module.exports = function(grunt) {
     });
     
     // Plugin List
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-jsmin-sourcemap');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Workflows
-	// $grunt
-	grunt.registerTask('default', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'imageoptim']);
+	// $grunt: Concencates, prefixes, minifies JS and CSS files. The works.
+	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin']);
 	
-	// $grunt dev
+	// $grunt images: Goes through all images with ImageOptim and ImageAlpha
+	grunt.registerTask('images', ['imageoptim']);
+	
+	// $grunt dev: Watches for changes while developing
 	grunt.registerTask('dev', ['watch']);
 
 }
