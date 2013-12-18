@@ -54,7 +54,7 @@ get_header(); ?>
 							_e( 'Statuses', 'decode' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audio Posts', 'decode' );
+							_e( 'Audios', 'decode' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', 'decode' );
