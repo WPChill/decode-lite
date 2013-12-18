@@ -671,22 +671,10 @@ object {
 	color: #000000;
 }
 
-@-webkit-keyframes shake {
-	0%, 54%, 90% {right: -7px;}
-	18%, 72% {right: 7px;}
-	100% {right: 0px;}
-}
-				
-@-moz-keyframes shake {
-	0%, 54%, 90% {right: -7px;}
-	18%, 72% {right: 7px;}
-	100% {right: 0px;}
-}
-
 @keyframes shake {
-	0%, 54%, 90% {right: -7px;}
-	18%, 72% {right: 7px;}
-	100% {right: 0px;}
+	0%, 54%, 90% {transform: translateX(-7px);}
+	18%, 72% {transform: translateX(7px);}
+	100% {transform: translateX(0);}
 }
 
 
