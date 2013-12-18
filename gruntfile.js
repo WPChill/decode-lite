@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['js/*.js'],
-				tasks: ['concat', 'uglify'],
+				tasks: ['jsmin-sourcemap'],
 				options: {
 					spawn: false,
 				}
