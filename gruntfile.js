@@ -3,58 +3,21 @@ module.exports = function(grunt) {
     // Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-        concat: {
-        	dist_decode_basic: {
-				src: [
-					'js/modernizr.js',
-					'js/decode.js',
-				],
-				dest: 'js/build/decode.js',
-			},
-
-			dist_decode_with_sidebar: {
-				src: [
-					'js/modernizr.js',
-					'js/decode.js',
-					'js/fastclick.js',
-					'js/sidebar.js'
-				],
-				dest: 'js/build/decode-with-sidebar.js',
-			}
-        },
-
-        uglify: {
-			build_decode_basic: {
-				src: 'js/build/decode.js',
-				dest: 'js/build/decode.min.js'
-			},
-			build_decode_with_sidebar: {
-				src: 'js/build/decode-with-sidebar.js',
-				dest: 'js/build/decode-with-sidebar.min.js'
-			}
-		},
 		
 		'jsmin-sourcemap': {
 			build_decode_basic: {
-				// Source files to concatenate and minify (also accepts a string and minimatch items)
-				src: ['js/modernizr.js', 'js/decode.js'],
-
-				// Destination for concatenated/minified JavaScript
-				dest: 'js/build/decode.js',
-
-				// Destination for sourcemap of minified JavaScript
-				destMap: 'js/build/decode.js.map'
+				cwd: 'js/',
+				src: ['modernizr.js', 'decode.js'],
+				srcRoot: '../',
+				dest: 'build/decode.js',
+				destMap: 'build/decode.js.map'
 			},
 			build_decode_with_sidebar: {
-				// Source files to concatenate and minify (also accepts a string and minimatch items)
-				src: ['js/modernizr.js', 'js/decode.js', 'js/fastclick.js', 'js/sidebar.js'],
-
-				// Destination for concatenated/minified JavaScript
-				dest: 'js/build/decode-with-sidebar.js',
-
-				// Destination for sourcemap of minified JavaScript
-				destMap: 'js/build/decode-with-sidebar.js.map'
+				cwd: 'js/',
+				src: ['modernizr.js', 'decode.js', 'sidebar.js', 'fastclick.js'],
+				srcRoot: '../',
+				dest: 'build/decode-with-sidebar.js',				
+				destMap: 'build/decode-with-sidebar.js.map'
 			},
 		},
 
