@@ -35,6 +35,9 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'decode' );
 
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', 'decode');
+
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
 							_e( 'Images', 'decode');
 
@@ -46,6 +49,15 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'decode' );
+
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+							_e( 'Statuses', 'decode' );
+
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+							_e( 'Audios', 'decode' );
+
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+							_e( 'Chats', 'decode' );
 
 						else :
 							_e( 'Archives', 'decode' );
