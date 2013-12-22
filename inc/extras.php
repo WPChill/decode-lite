@@ -119,8 +119,9 @@ add_filter('wp_title', 'decode_wp_title', 10, 3);
 /**
  * Sets the authordata global when viewing an author archive.
  *
- * This provides backwards compatibility with
- * http://core.trac.wordpress.org/changeset/25574
+ * This provides backwards compatibility for WP versions below 3.7
+ * that don't have this change:
+ * http://core.trac.wordpress.org/changeset/25574.
  *
  * It removes the need to call the_post() and rewind_posts() in an author
  * template to print information about the author.
