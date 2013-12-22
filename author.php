@@ -15,18 +15,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-					<?php
-						/* Queue the first post, that way we know
-						 * what author we're dealing with.
-						*/
-						the_post();
-						/* Since we called the_post() above, we need to
-						 * rewind the loop back to the beginning that way
-						 * we can run the loop properly, in full.
-						 */
-						rewind_posts();
-					?>
-					
+								
 				<?php if ( get_the_author_meta( 'first_name' ) && get_the_author_meta( 'last_name' ) ) : ?>
 				
 				<section class="author-section">
