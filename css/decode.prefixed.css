@@ -328,12 +328,6 @@ textarea {
 }
 
 button,
-input {
-  line-height: normal;
-  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-}
-
-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
