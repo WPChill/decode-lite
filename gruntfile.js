@@ -42,6 +42,7 @@ module.exports = function(grunt) {
 				flatten: true,
 				cwd: 'css/build/',
 				src: ['*.css', '!*.min.css'],
+				dest: 'css/build/',
 				ext: '.min.css'
 			}
 		},
