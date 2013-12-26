@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             	expand: true,
             	flatten: true,
             	cwd: 'css/',
-                src: ['*'],
+                src: ['*.css'],
                 dest: 'css/build/',
                 ext: '.prefixed.css'
             }
