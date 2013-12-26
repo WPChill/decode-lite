@@ -29,8 +29,9 @@ module.exports = function(grunt) {
             dist: {
             	expand: true,
             	flatten: true,
-                src: ['editor-style.css', 'css/decode.css'],
-                dest: 'css/',
+            	cwd: 'css/',
+                src: ['*'],
+                dest: 'css/build/',
                 ext: '.prefixed.css'
             }
         },
@@ -39,9 +40,8 @@ module.exports = function(grunt) {
 			minify: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/',
+				cwd: 'css/build/',
 				src: ['*.css', '!*.min.css'],
-				dest: 'css/',
 				ext: '.min.css'
 			}
 		},
