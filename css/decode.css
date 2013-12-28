@@ -509,6 +509,7 @@ object {
 	line-height: 1;
 	text-align: center;
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .site-title a {
@@ -705,6 +706,7 @@ object {
 .entry-summary {
 	margin: 0 0 2.5%;
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .page-links {
@@ -745,6 +747,7 @@ a .attachment-post-thumbnail {
 	text-decoration: none;
 	text-align: center;
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 	font-size: 1.5em;
 	line-height: 1.25;
 	width: 90%;
@@ -1141,6 +1144,7 @@ body.single-attachment .entry-meta {
 
 .nav-next, .nav-previous {
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .nav-previous, .nav-links a[rel="prev"] {
@@ -1186,6 +1190,7 @@ body.single-attachment .entry-meta {
 
 .comment-content a {
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .comment-author.vcard img {
