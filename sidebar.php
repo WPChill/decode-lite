@@ -5,7 +5,7 @@
  * @package Decode
  */
 ?>
-		<div id="primary" class="widget-area" role="complementary">
+		<div class="widget-area" role="complementary">
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
@@ -21,4 +21,4 @@
 				</aside>
 
 			<?php endif; // end sidebar widget area ?>
-		</div><!-- #primary .widget-area -->
+		</div><!-- .widget-area -->
