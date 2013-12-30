@@ -47,6 +47,19 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		copy: {
+			main: {
+				expand: true,
+				flatten: true,
+				src: 'css/build/decode.min.css',
+				dest: '',
+				rename: function(dest, src) {
+					return dest + src.replace("decode", "style");
+				},
+				ext: '.css'
+			},
+		},
+				
 		imageoptim: {
 			myTask: {
 				options: {
@@ -90,12 +103,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jsmin-sourcemap');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Workflows
 	// $grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy']);
 	
 	// $grunt images: Goes through all images with ImageOptim and ImageAlpha
 	grunt.registerTask('images', ['imageoptim']);
