@@ -65,7 +65,7 @@
 		</div>
 		<?php if ( get_theme_mod( 'show_social_icons', false ) == true ) : ?>
 		<div class="sociallinks">
-			<ul>
+			<div class="sociallinkscontainer">
 				<?php if ( get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>
 				<a class="sociallink TwitterLink" href="<?php echo esc_url( 'https://twitter.com/' . get_theme_mod( 'twitter_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -465,7 +465,7 @@
 				</svg>
 				</a>
 				<?php endif; ?>
-			</ul>
+			</div>
 		</div>
 		<?php endif; ?>
 

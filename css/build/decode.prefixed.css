@@ -562,8 +562,7 @@ object {
 	margin: 1% 0;
 }
 
-.sociallinks ul {
-	list-style: none;
+.sociallinkscontainer {
 	text-align: center;
 	margin: 0 auto;
 }
@@ -572,10 +571,6 @@ object {
 	height: 2em;
 	width: 2em;
 	margin: 0 0.5%;
-}
-
-.sociallink.desktop {
-	display: none;
 }
 
 .sociallink {
