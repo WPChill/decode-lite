@@ -1,7 +1,12 @@
 {
   "name": "Decode",
   "version": "2.8.5",
-  "author": "Scott Smith (http://scotthsmith.com)",
+  "author": "Scott Smith <http://scotthsmith.com>",
+  "license": "GPLv2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScottSmith95/Decode.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-cssmin": "~0.7.0",
