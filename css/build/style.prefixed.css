@@ -994,10 +994,10 @@ body.single-attachment .entry-meta {
 
 .no-inlinesvg .SidebarLink {
 	width: 30px;
-	height: 30px;
+	height: 25px;
 	background: url('images/menu.png') no-repeat center;
-	-webkit-background-size: 30px;
-	background-size: 30px;
+	-webkit-background-size: 30px 25px;
+	background-size: 30px 25px;
 }
 
 .SidebarLink.left {
