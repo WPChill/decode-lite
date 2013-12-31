@@ -1,5 +1,5 @@
 /* Modernizr 2.7.1 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-csstransforms-touch-printshiv-mq-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
+ * Build: http://modernizr.com/download/#-csstransforms-inlinesvg-touch-printshiv-mq-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
  */
 ;
 
@@ -34,6 +34,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     domPrefixes = omPrefixes.toLowerCase().split(' '),
 
+    ns = {'svg': 'http://www.w3.org/2000/svg'},
 
     tests = {},
     inputs = {},
@@ -235,7 +236,12 @@ window.Modernizr = (function( window, document, undefined ) {
     };
 
 
-    for ( var feature in tests ) {
+
+    tests['inlinesvg'] = function() {
+      var div = document.createElement('div');
+      div.innerHTML = '<svg/>';
+      return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
+    };    for ( var feature in tests ) {
         if ( hasOwnProp(tests, feature) ) {
                                     featureName  = feature.toLowerCase();
             Modernizr[featureName] = tests[feature]();
