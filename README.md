@@ -1,3 +1,5 @@
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 # Decode 2.8
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), on the great theme foundation, [Underscores](http://underscores.me). It is beautifully crafted for mobile first, and uses media queries to bring in CSS for larger screens. 
 
