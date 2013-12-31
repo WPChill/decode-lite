@@ -116,55 +116,8 @@ function decode_widgets_init() {
 add_action( 'widgets_init', 'decode_widgets_init' );
 
 /**
- * Setup editor styles.
- */
-if ( ! function_exists( 'decode_add_editor_styles' ) ) {
-
-function decode_add_editor_styles() {
-	add_editor_style( 'css/editor-style.min.css' );
-}
-}
-add_action( 'init', 'decode_add_editor_styles' );
-
-/**
- * Add Google Profile to user contact methods.
- */
-function decode_add_google_profile( $contactmethods ) {
-	// Add Google Profiles
-	$contactmethods['google_profile'] = 'Google Profile URL';
-	return $contactmethods;
-}
-add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
-
-/**
- * Highlight search terms in search results.
- */
-if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
-
-function decode_search_excerpt_highlight() {
-    $excerpt = get_the_excerpt();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
-
-    echo '<p>' . $excerpt . '</p>';
-}
-}
-
-if ( ! function_exists( 'decode_search_title_highlight' ) ) {
-
-function decode_search_title_highlight() {
-    $title = get_the_title();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
-
-    echo $title;
-}
-}
-
-/**
  * Add custom colors to CSS.
  */
-
 if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
 
 function decode_customize_css() {
@@ -241,6 +194,51 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Setup editor styles.
+ */
+if ( ! function_exists( 'decode_add_editor_styles' ) ) {
+
+function decode_add_editor_styles() {
+	add_editor_style( 'css/editor-style.min.css' );
+}
+}
+add_action( 'init', 'decode_add_editor_styles' );
+
+/**
+ * Add Google Profile to user contact methods.
+ */
+function decode_add_google_profile( $contactmethods ) {
+	// Add Google Profiles
+	$contactmethods['google_profile'] = 'Google Profile URL';
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
+
+/**
+ * Highlight search terms in search results.
+ */
+if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
+
+function decode_search_excerpt_highlight() {
+    $excerpt = get_the_excerpt();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
+
+    echo '<p>' . $excerpt . '</p>';
+}
+}
+
+if ( ! function_exists( 'decode_search_title_highlight' ) ) {
+
+function decode_search_title_highlight() {
+    $title = get_the_title();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
+
+    echo $title;
+}
+}
 
 /**
  * Link to post in excerpt [...] links.
