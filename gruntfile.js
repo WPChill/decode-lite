@@ -58,12 +58,13 @@ module.exports = function(grunt) {
 				
 		imageoptim: {
 			optimize: {
+				expand: true,
+				src: ['images'],
 				options: {
 					jpegMini: false,
 					imageAlpha: true,
 					quitAfter: true
-				},
-				src: ['images/*']
+				}
 			}
 		},
 
@@ -75,21 +76,14 @@ module.exports = function(grunt) {
 				files: ['js/*.js'],
 				tasks: ['jsmin-sourcemap'],
 				options: {
-					spawn: false,
+					spawn: false
 				}
 			},
 			css: {
 				files: ['css/*.css'],
 				tasks: ['autoprefixer', 'cssmin', 'copy'],
 				options: {
-					spawn: false,
-				}
-			},
-			images: {
-				files: ['images/*'],
-				tasks: ['imageoptim'],
-				options: {
-					spawn: false,
+					spawn: false
 				}
 			}
 		}
