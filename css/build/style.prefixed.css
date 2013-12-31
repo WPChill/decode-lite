@@ -614,13 +614,13 @@ object {
 
 .no-inlinesvg .sociallink {
 	display: inline-block;
-	height: 2em;
-	width: 2em;
+	height: 40px;
+	width: 40px;
 	margin: 0 0.5%;
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-background-size: 2em;
-	background-size: 2em;
+	-webkit-background-size: 40px;
+	background-size: 40px;
 }
 
 .no-inlinesvg .TwitterLink {background-image: url('images/Twitter.png');}
@@ -993,11 +993,11 @@ body.single-attachment .entry-meta {
 }
 
 .no-inlinesvg .SidebarLink {
-	width: 1.5em;
-	height: 1.5em;
+	width: 30px;
+	height: 30px;
 	background: url('images/menu.png') no-repeat center;
-	-webkit-background-size: 1.5em;
-	background-size: 1.5em;
+	-webkit-background-size: 30px;
+	background-size: 30px;
 }
 
 .SidebarLink.left {
@@ -1062,11 +1062,11 @@ body.single-attachment .entry-meta {
 }
 
 .no-inlinesvg .SidebarClose {
-	height: 1.4em;
-	width: 1.4em;
+	height: 30px;
+	width: 30px;
 	background: url('images/cross.png') no-repeat center;
-	-webkit-background-size: 1.4em;
-	background-size: 1.4em;
+	-webkit-background-size: 30px;
+	background-size: 30px;
 }
 
 .sidebar {
@@ -1569,13 +1569,6 @@ li.comment {
 	height: 1.75em;
 }
 
-.no-inlinesvg .SidebarLink {
-	height: 1.75em;
-	width: 1.75em;
-	-webkit-background-size: 1.75em;
-	background-size: 1.75em;
-}
-
 .SidebarLink.left {
 	left: 2.5%;
 }
@@ -1660,14 +1653,6 @@ li.comment {
 	height: 2.5em;
 	width: 2.5em;
 	margin: 0 1%;
-}
-
-.no-inlinesvg .sociallink {
-	height: 2.5em;
-	width: 2.5em;
-	margin: 0 1%;
-	-webkit-background-size: 2.5em;
-	background-size: 2.5em;
 }
 
 .main-navigation li {
@@ -1789,14 +1774,6 @@ article.post {
 	height: 2.75em;
 	width: 2.75em;
 	margin: 0 1%;
-}
-
-.no-inlinesvg .sociallink {
-	height: 2.75em;
-	width: 2.75em;
-	margin: 0 1%;
-	-webkit-background-size: 2.75em;
-	background-size: 2.75em;
 }
 
 .site-header, .site-main, .site-footer {
