@@ -14,6 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+
 /* =Reset
 -------------------------------------------------------------- */
 
@@ -572,6 +573,10 @@ object {
 	margin-bottom: 0.75%;
 }
 
+
+/* =Social Links
+----------------------------------------------- */
+
 .sociallinks {
 	display: block;
 	margin: 2.5% auto 0;
@@ -581,12 +586,6 @@ object {
 .sociallinkscontainer {
 	text-align: center;
 	margin: 0 auto;
-}
-
-.sociallink svg, .sociallink img {
-	height: 2em;
-	width: 2em;
-	margin: 0 0.5%;
 }
 
 .sociallink {
@@ -602,6 +601,61 @@ object {
 	.no-touch .sociallink:active {
 		opacity: 0.8;
 	}
+
+.sociallink svg, .sociallink img {
+	height: 2em;
+	width: 2em;
+	margin: 0 0.5%;
+}
+
+.no-inlinesvg .sociallink svg {
+	display: none;
+}
+
+.no-inlinesvg .sociallink {
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	margin: 0 0.5%;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 2em;
+	background-size: 2em;
+}
+
+.no-inlinesvg .TwitterLink {background-image: url('images/Twitter.png');}
+.no-inlinesvg .ADNLink {background-image: url('images/ADN.png');}
+.no-inlinesvg .FacebookLink {background-image: url('images/Facebook.png');}
+.no-inlinesvg .GooglePlusLink {background-image: url('images/GooglePlus.png');}
+.no-inlinesvg .MySpaceLink {background-image: url('images/MySpace.png');}
+.no-inlinesvg .VKLink {background-image: url('images/VK.png');}
+.no-inlinesvg .DribbbleLink {background-image: url('images/Dribbble.png');}
+.no-inlinesvg .BehanceLink {background-image: url('images/Behance.png');}
+.no-inlinesvg .LinkedInLink {background-image: url('images/LinkedIn.png');}
+.no-inlinesvg .TumblrLink {background-image: url('images/Tumblr.png');}
+.no-inlinesvg .PinterestLink {background-image: url('images/Pinterest.png');}
+.no-inlinesvg .InstagramLink {background-image: url('images/Instagram.png');}
+.no-inlinesvg .Five00pxLink {background-image: url('images/500px.png');}
+.no-inlinesvg .FlickrLink {background-image: url('images/Flickr.png');}
+.no-inlinesvg .DeviantARTLink {background-image: url('images/deviantART.png');}
+.no-inlinesvg .RdioLink {background-image: url('images/Rdio.png');}
+.no-inlinesvg .SpotifyLink {background-image: url('images/Spotify.png');}
+.no-inlinesvg .LastFmLink {background-image: url('images/LastFm.png');}
+.no-inlinesvg .SoundcloudLink {background-image: url('images/Soundcloud.png');}
+.no-inlinesvg .VimeoLink {background-image: url('images/Vimeo.png');}
+.no-inlinesvg .YouTubeLink {background-image: url('images/YouTube.png');}
+.no-inlinesvg .GithubLink {background-image: url('images/GitHub.png');}
+.no-inlinesvg .RunkeeperLink {background-image: url('images/Runkeeper.png');}
+.no-inlinesvg .StravaLink {background-image: url('images/Strava.png');}
+.no-inlinesvg .FoursquareLink {background-image: url('images/Foursquare.png');}
+.no-inlinesvg .SlideShareLink {background-image: url('images/SlideShare.png');}
+.no-inlinesvg .ResearchGateLink {background-image: url('images/ResearchGate.png');}
+.no-inlinesvg .YouVersionLink {background-image: url('images/YouVersion.png');}
+.no-inlinesvg .SteamUserLink {background-image: url('images/Steam.png');}
+.no-inlinesvg .SteamGroupLink {background-image: url('images/Steam.png');}
+.no-inlinesvg .SkypeLink {background-image: url('images/Skype.png');}
+.no-inlinesvg .RSSLink {background-image: url('images/RSS.png');}
+.no-inlinesvg .EmailLink {background-image: url('images/Email.png');}
 
 
 /* =Menu
@@ -906,6 +960,7 @@ body.single-attachment .entry-meta {
 		border-bottom: 1px solid #007EA6;
 	}
 
+
 /* =Sidebar
 ----------------------------------------------- */
 
@@ -928,14 +983,21 @@ body.single-attachment .entry-meta {
 		opacity: 0.85;
 	}
 	
-.SidebarLink svg {
+.SidebarLink svg, .SidebarLink img {
 	width: 1.5em;
 	height: 1.5em;
 }
 
-.SidebarLink img {
-	width: 1.75em;
+.no-inlinesvg .SidebarLink svg {
+	display: none;
+}
+
+.no-inlinesvg .SidebarLink {
+	width: 1.5em;
 	height: 1.5em;
+	background: url('images/menu.png') no-repeat center;
+	-webkit-background-size: 1.5em;
+	background-size: 1.5em;
 }
 
 .SidebarLink.left {
@@ -993,6 +1055,18 @@ body.single-attachment .entry-meta {
 .SidebarClose svg, .SidebarClose img {
 	height: 1.4em;
 	width: 1.4em;
+}
+
+.no-inlinesvg .SidebarClose svg {
+	display: none;
+}
+
+.no-inlinesvg .SidebarClose {
+	height: 1.4em;
+	width: 1.4em;
+	background: url('images/cross.png') no-repeat center;
+	-webkit-background-size: 1.4em;
+	background-size: 1.4em;
 }
 
 .sidebar {
@@ -1352,6 +1426,7 @@ li.comment {
 
 /* =Author Section
 ----------------------------------------------- */
+
 .author-section {
 	-webkit-transition: -webkit-box-shadow 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out;
@@ -1489,14 +1564,16 @@ li.comment {
 	top: 7.5%;
 }
 
-.SidebarLink svg {
+.SidebarLink svg, .SidebarLink img {
 	width: 1.75em;
 	height: 1.75em;
 }
 
-.SidebarLink img {
-	width: 2em;
+.no-inlinesvg .SidebarLink {
 	height: 1.75em;
+	width: 1.75em;
+	-webkit-background-size: 1.75em;
+	background-size: 1.75em;
 }
 
 .SidebarLink.left {
@@ -1579,18 +1656,18 @@ li.comment {
 	margin: 1.5% auto;
 }
 
-.sociallink.mobile {
-	display: none;
-}
-
-.sociallink.desktop {
-	display: inline;
-}
-
 .sociallink svg, .sociallink img {
 	height: 2.5em;
 	width: 2.5em;
 	margin: 0 1%;
+}
+
+.no-inlinesvg .sociallink {
+	height: 2.5em;
+	width: 2.5em;
+	margin: 0 1%;
+	-webkit-background-size: 2.5em;
+	background-size: 2.5em;
 }
 
 .main-navigation li {
@@ -1712,6 +1789,14 @@ article.post {
 	height: 2.75em;
 	width: 2.75em;
 	margin: 0 1%;
+}
+
+.no-inlinesvg .sociallink {
+	height: 2.75em;
+	width: 2.75em;
+	margin: 0 1%;
+	-webkit-background-size: 2.75em;
+	background-size: 2.75em;
 }
 
 .site-header, .site-main, .site-footer {

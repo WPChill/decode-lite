@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'ie 7'],
 				map: true
 			},
-            dist: {
+            prefix: {
             	expand: true,
             	flatten: true,
             	cwd: 'css/',
@@ -48,23 +48,22 @@ module.exports = function(grunt) {
 		},
 		
 		copy: {
-			main: {
+			stylecss: {
 				expand: true,
 				flatten: true,
-				src: 'css/build/decode.min.css',
-				dest: '',
+				src: 'css/build/style.min.css',
 				ext: '.css'
 			},
 		},
 				
 		imageoptim: {
-			myTask: {
+			optimize: {
 				options: {
 					jpegMini: false,
 					imageAlpha: true,
 					quitAfter: true
 				},
-				src: ['screenshot.png', 'images/']
+				src: ['images/*']
 			}
 		},
 
@@ -87,7 +86,7 @@ module.exports = function(grunt) {
 				}
 			},
 			images: {
-				files: ['screenshot.png', 'images/'],
+				files: ['images/*'],
 				tasks: ['imageoptim'],
 				options: {
 					spawn: false,
