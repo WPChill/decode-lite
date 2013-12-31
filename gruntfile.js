@@ -53,9 +53,6 @@ module.exports = function(grunt) {
 				flatten: true,
 				src: 'css/build/decode.min.css',
 				dest: '',
-				rename: function(dest, src) {
-					return dest + src.replace("decode", "style");
-				},
 				ext: '.css'
 			},
 		},
