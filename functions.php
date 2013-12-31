@@ -245,13 +245,13 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Link to post in excerpt [...] links.
  */
-if ( ! function_exists( 'new_excerpt_more' ) ) {
+if ( ! function_exists( 'link_ellipses' ) ) {
 
-function new_excerpt_more( $more ) {
+function link_ellipses( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
 }
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'link_ellipses');
 
 /**
  * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
