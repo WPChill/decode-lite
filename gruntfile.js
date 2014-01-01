@@ -55,6 +55,57 @@ module.exports = function(grunt) {
 				ext: '.css'
 			},
 		},
+		
+		modernizr: {
+
+			// [REQUIRED] Path to the build you're using for development.
+			"devFile" : "js/modernizr-dev.js",
+
+			// [REQUIRED] Path to save out the built file.
+			"outputFile" : "js/modernizr.js",
+
+			// Based on default settings on http://modernizr.com/download/
+			"extra" : {
+				"shiv" : false,
+				"printshiv" : true,
+				"load" : true,
+				"mq" : true,
+				"cssclasses" : true
+			},
+
+			// Based on default settings on http://modernizr.com/download/
+			"extensibility" : {
+				"addtest" : false,
+				"prefixed" : false,
+				"teststyles" : true,
+				"testprops" : true,
+				"testallprops" : true,
+				"hasevents" : false,
+				"prefixes" : true,
+				"domprefixes" : true
+			},
+
+			// By default, source is uglified before saving
+			"uglify" : false,
+
+			// Define any tests you want to implicitly include.
+			"tests" : ['csstransforms', 'inlinesvg', 'touch'],
+
+			// By default, this task will crawl your project for references to Modernizr tests.
+			// Set to false to disable.
+			"parseFiles" : false,
+
+			// When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
+			// You can override this by defining a "files" array below.
+			// "files" : [],
+
+			// When parseFiles = true, matchCommunityTests = true will attempt to
+			// match user-contributed tests.
+			"matchCommunityTests" : false,
+
+			// Have custom Modernizr tests? Add paths to their location here.
+			"customTests" : []
+		},
 				
 		imageoptim: {
 			optimize: {
@@ -87,6 +138,15 @@ module.exports = function(grunt) {
 				options: { livereload: true },
 				files: ['*.php', 'style.css', 'css/**', 'js/build/*.js'],
 			}
+		},
+		
+		exec: {
+			serverup: {
+				command: '/Applications/MAMP/bin/start.sh'
+			},
+			serverdown: {
+				command: '/Applications/MAMP/bin/stop.sh'
+			}
 		}
     });
     
@@ -95,17 +155,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks("grunt-modernizr");
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-exec');
 
 	// Workflows
 	// $grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy']);
+	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy', 'modernizr']);
 	
-	// $grunt images: Goes through all images with ImageOptim and ImageAlpha
+	// $grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
 	
-	// $grunt dev: Watches for changes while developing
-	grunt.registerTask('dev', ['watch']);
+	// $grunt dev: Watches for changes while developing, start MAMP server
+	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
 
 }
