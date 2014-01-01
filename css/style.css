@@ -501,6 +501,7 @@ object {
 
 .site-branding {
 	text-align: center;
+	margin: 1.5% auto 2.5%;
 }
 
 .site-logo {
@@ -1714,15 +1715,6 @@ article.post {
 ----------------------------------------------- */
 
 @media only screen and (min-width: 68.5em) {
-.site-title a {
-	font-size: 3.5em;
-}
-
-.sociallink svg, .sociallink img {
-	height: 2.75em;
-	width: 2.75em;
-	margin: 0 1%;
-}
 
 .site-header, .site-main, .site-footer {
 	width: 60%;
@@ -1733,8 +1725,14 @@ article.post {
 	max-width: 60em;
 }
 
-.site.sidebar-style-constant {
-	width: 75%;
+.site-title a {
+	font-size: 3.5em;
+}
+
+.sociallink svg, .sociallink img {
+	height: 2.75em;
+	width: 2.75em;
+	margin: 0 1%;
 }
 
 .page-header {
@@ -1743,6 +1741,10 @@ article.post {
 
 .entry-title {
 	font-size: 2.25em;
+}
+
+.site.sidebar-style-constant {
+	width: 75%;
 }
 
 .SidebarLink.left {
