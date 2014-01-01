@@ -23,8 +23,6 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php decode_paging_nav(); ?>
-
 			<?php else : ?>
 
 				<?php get_template_part( 'content', 'none' ); ?>
@@ -32,6 +30,9 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</main><!-- #main -->
+			
+			<?php decode_paging_nav(); ?>
+			
 		</section><!-- #primary -->
 
 <?php get_footer(); ?>
