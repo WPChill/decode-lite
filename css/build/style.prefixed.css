@@ -1363,7 +1363,6 @@ li.comment {
 	-webkit-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	color: #444444;
-	display: block;
 }
 .search-entry .entry-title {
 	font-size: 1.25em;
@@ -1414,7 +1413,8 @@ li.comment {
 }
 
 .search-highlight {
-	background: rgba(255,255,0,0.25);
+	background-color:rgba(255,255,0,.25);
+	color: inherit;
 }
 
 .search footer {

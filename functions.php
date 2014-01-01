@@ -218,27 +218,16 @@ add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 /**
  * Highlight search terms in search results.
  */
-if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
-
-function decode_search_excerpt_highlight() {
-    $excerpt = get_the_excerpt();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
-
-    echo '<p>' . $excerpt . '</p>';
+function decode_highlight_search_results($text){
+     if(is_search()){
+     $sr = get_search_query();
+     $keys = implode('|', explode(' ', get_search_query()));
+     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
+     }
+     return $text;
 }
-}
-
-if ( ! function_exists( 'decode_search_title_highlight' ) ) {
-
-function decode_search_title_highlight() {
-    $title = get_the_title();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
-
-    echo $title;
-}
-}
+add_filter('the_excerpt', 'decode_highlight_search_results');
+add_filter('the_title', 'decode_highlight_search_results');
 
 /**
  * Link to post in excerpt [...] links.
@@ -246,7 +235,9 @@ function decode_search_title_highlight() {
 if ( ! function_exists( 'link_ellipses' ) ) {
 
 function link_ellipses( $more ) {
+	if(!is_search()){
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
+	}
 }
 }
 add_filter('excerpt_more', 'link_ellipses');
