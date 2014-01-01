@@ -162,7 +162,7 @@ module.exports = function(grunt) {
 
 	// Workflows
 	// $grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy', 'modernizr']);
+	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy']);
 	
 	// $grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
