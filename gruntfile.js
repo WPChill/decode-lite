@@ -69,9 +69,6 @@ module.exports = function(grunt) {
 		},
 
         watch: {
-        	options: {
-				livereload: true,
-			},
 			scripts: {
 				files: ['js/*.js'],
 				tasks: ['jsmin-sourcemap'],
@@ -85,6 +82,10 @@ module.exports = function(grunt) {
 				options: {
 					spawn: false
 				}
+			},
+			livereload: {
+				options: { livereload: true },
+				files: ['*.php', 'style.css', 'css/**', 'js/build/*.js'],
 			}
 		}
     });
