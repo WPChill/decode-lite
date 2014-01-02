@@ -620,14 +620,17 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'use_excerpts', array(
 		'default' => false,
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_excerpts', array(	// Yep, that's the longest setting name I have.
 		'default' => false,
+		'transport' => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_singles', array(
 		'default' => false,
+		'transport' => 'refresh',
 	) );
 
     $wp_customize->add_setting( 'show_tags', array(
