@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-01-02 01:35-0600\n"
-"PO-Revision-Date: 2014-01-02 01:37-0600\n"
+"PO-Revision-Date: 2014-01-02 01:52-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -58,7 +58,7 @@ msgstr "Monat: %s"
 #: ../archive.php:30
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: ../archive.php:33
 #, php-format
@@ -68,7 +68,7 @@ msgstr "Jahr: %s"
 #: ../archive.php:33
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: ../archive.php:36
 msgid "Asides"
@@ -415,7 +415,7 @@ msgstr "Social Icons anzeigen"
 
 #: ../inc/customizer.php:372
 msgid "Open Links in New Tab/Window"
-msgstr ""
+msgstr "Öffne Links in einem neuen Tab/Fenster"
 
 #: ../inc/customizer.php:379 ../inc/customizer.php:386
 #: ../inc/customizer.php:393 ../inc/customizer.php:400
@@ -497,15 +497,15 @@ msgstr ""
 
 #: ../inc/customizer.php:730
 msgid "Entry Date Position"
-msgstr ""
+msgstr "Datum Position"
 
 #: ../inc/customizer.php:734
 msgid "Above Header"
-msgstr ""
+msgstr "Am Anfang"
 
 #: ../inc/customizer.php:735
 msgid "Below Header"
-msgstr ""
+msgstr "Am Ende"
 
 #: ../inc/customizer.php:741
 msgid "Show Page Headers"
@@ -534,7 +534,7 @@ msgstr ""
 #: ../inc/customizer.php:776
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
-"Text (Schlussschrift, Copyright, Abspann, etc.) fรผr die Fusszeile der Seite"
+"Text (Schlussschrift, Copyright, Abspann, etc.) die Fusszeile der Seite"
 
 #: ../inc/customizer.php:789
 msgid "Other Options"
@@ -586,11 +586,11 @@ msgstr ""
 
 #: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ltere Posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ltere posts"
 
 #: ../inc/template-tags.php:31
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Neuere Posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere posts <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:56
 msgid "Post navigation"
