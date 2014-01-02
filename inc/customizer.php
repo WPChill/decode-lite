@@ -264,10 +264,6 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 
-	$wp_customize->add_setting( 'tumblr_username', array(
-		'default' => '',
-	) );
-
 	$wp_customize->add_setting( 'pinterest_username', array(
 		'default' => '',
 	) );
@@ -283,8 +279,12 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'flickr_username', array(
 		'default' => '',
 	) );
-	
+
 	$wp_customize->add_setting( 'deviantart_username', array(
+		'default' => '',
+	) );
+
+	$wp_customize->add_setting( 'tumblr_username', array(
 		'default' => '',
 	) );
 
@@ -438,43 +438,43 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 11,
 	) );
 
-	$wp_customize->add_control( 'tumblr_username', array(
-		'label'   => 'Tumblr ' . __( 'Site URL', 'decode' ),
-		'section' => 'decode_social_options',
-		'type'    => 'text',
-		'priority'=> 12,
-	) );
-
 	$wp_customize->add_control( 'pinterest_username', array(
 		'label'   => 'Pinterest ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 13,
+		'priority'=> 12,
 	) );
 
 	$wp_customize->add_control( 'instagram_username', array(
 		'label'   => 'Instagram ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 14,
+		'priority'=> 13,
 	) );
 
 	$wp_customize->add_control( '500px_username', array(
 		'label'   => '500px ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 15,
+		'priority'=> 14,
 	) );
 
 	$wp_customize->add_control( 'flickr_username', array(
 		'label'   => 'Flickr ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 16,
+		'priority'=> 15,
 	) );
 	
 	$wp_customize->add_control( 'deviantart_username', array(
 		'label'   => 'DeviantART ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 16,
+	) );
+
+	$wp_customize->add_control( 'tumblr_username', array(
+		'label'   => 'Tumblr ' . __( 'Site URL', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 17,
