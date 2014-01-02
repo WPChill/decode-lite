@@ -32,6 +32,11 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_singles', false ) == true ) : ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+				<?php the_post_thumbnail(); ?>
+			</a>
+			<?php endif; ?>
 			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
 			<div class="entry-meta above-content">
@@ -65,6 +70,11 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_singles', false ) == true ) : ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+				<?php the_post_thumbnail(); ?>
+			</a>
+			<?php endif; ?>
 			<div class="entry-title"><h2><?php the_title(); ?></h2></div>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
 			<div class="entry-meta above-content">
