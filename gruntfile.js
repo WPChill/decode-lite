@@ -161,13 +161,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
 
 	// Workflows
-	// $grunt: Concencates, prefixes, minifies JS and CSS files. The works.
+	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
 	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy']);
 	
-	// $grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
+	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
 	
-	// $grunt dev: Watches for changes while developing, start MAMP server
+	// $ grunt dev: Watches for changes while developing, start MAMP server
 	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
 
 }
