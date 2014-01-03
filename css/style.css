@@ -1230,13 +1230,13 @@ body.single-attachment .entry-meta {
 	overflow-wrap: break-word;
 }
 
-.nav-previous, .nav-links a[rel="prev"] {
+.nav-previous {
 	float: left;
 	text-align: left;
 	width: 50%;
 }
 
-.nav-next, .nav-links a[rel="next"] {
+.nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
