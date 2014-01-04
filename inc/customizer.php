@@ -328,7 +328,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
-	$wp_customize->add_setting( 'yelp_username', array(
+	$wp_customize->add_setting( 'reddit_username', array(
 		'default' => '',
 	) );
 	
