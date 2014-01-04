@@ -324,7 +324,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
-	$wp_customize->add_setting( 'stackoverflow_username', array(
+	$wp_customize->add_setting( 'stackoverflow_userid', array(
 		'default' => '',
 	) );
 	
@@ -348,7 +348,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
-	$wp_customize->add_setting( 'yelp_username', array(
+	$wp_customize->add_setting( 'yelp_userid', array(
 		'default' => '',
 	) );
 	
@@ -567,7 +567,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 25,
 	) );
 
-	$wp_customize->add_control( 'stackoverflow_username', array(
+	$wp_customize->add_control( 'stackoverflow_userid', array(
 		'label'   => 'Kickstarter ' . __( 'User ID', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
@@ -596,7 +596,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 	
 	$wp_customize->add_control( 'strava_userid', array(
-		'label'   => 'Strava ' . __( 'Username', 'decode' ),
+		'label'   => 'Strava ' . __( 'User ID', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 30,
@@ -609,7 +609,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 31,
 	) );
 	
-	$wp_customize->add_control( 'yelp_username', array(
+	$wp_customize->add_control( 'yelp_userid', array(
 		'label'   => 'Yelp ' . __( 'User ID', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
