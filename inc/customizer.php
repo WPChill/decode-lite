@@ -284,7 +284,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 
-	$wp_customize->add_setting( 'tumblr_username', array(
+	$wp_customize->add_setting( 'soundcloud_username', array(
 		'default' => '',
 	) );
 
@@ -300,10 +300,6 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 
-	$wp_customize->add_setting( 'soundcloud_username', array(
-		'default' => '',
-	) );
-
 	$wp_customize->add_setting( 'vimeo_username', array(
 		'default' => '',
 	) );
@@ -311,7 +307,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'youtube_username', array(
 		'default' => '',
 	) );
-
+	
+	$wp_customize->add_setting( 'tumblr_username', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'github_username', array(
 		'default' => '',
 	) );
