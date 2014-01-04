@@ -3,6 +3,57 @@ module.exports = function(grunt) {
     // Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        
+        modernizr: {
+
+			// [REQUIRED] Path to the build you're using for development.
+			"devFile" : "js/modernizr-dev.js",
+
+			// [REQUIRED] Path to save out the built file.
+			"outputFile" : "js/modernizr.js",
+
+			// Based on default settings on http://modernizr.com/download/
+			"extra" : {
+				"shiv" : false,
+				"printshiv" : true,
+				"load" : true,
+				"mq" : true,
+				"cssclasses" : true
+			},
+
+			// Based on default settings on http://modernizr.com/download/
+			"extensibility" : {
+				"addtest" : false,
+				"prefixed" : false,
+				"teststyles" : true,
+				"testprops" : true,
+				"testallprops" : true,
+				"hasevents" : false,
+				"prefixes" : true,
+				"domprefixes" : true
+			},
+
+			// By default, source is uglified before saving
+			"uglify" : false,
+
+			// Define any tests you want to implicitly include.
+			"tests" : ['csstransforms', 'inlinesvg', 'touch'],
+
+			// By default, this task will crawl your project for references to Modernizr tests.
+			// Set to false to disable.
+			"parseFiles" : false,
+
+			// When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
+			// You can override this by defining a "files" array below.
+			// "files" : [],
+
+			// When parseFiles = true, matchCommunityTests = true will attempt to
+			// match user-contributed tests.
+			"matchCommunityTests" : false,
+
+			// Have custom Modernizr tests? Add paths to their location here.
+			"customTests" : []
+		},
 		
 		'jsmin-sourcemap': {
 			build_decode_basic: {
@@ -54,57 +105,6 @@ module.exports = function(grunt) {
 				src: 'css/build/style.min.css',
 				ext: '.css'
 			},
-		},
-		
-		modernizr: {
-
-			// [REQUIRED] Path to the build you're using for development.
-			"devFile" : "js/modernizr-dev.js",
-
-			// [REQUIRED] Path to save out the built file.
-			"outputFile" : "js/modernizr.js",
-
-			// Based on default settings on http://modernizr.com/download/
-			"extra" : {
-				"shiv" : false,
-				"printshiv" : true,
-				"load" : true,
-				"mq" : true,
-				"cssclasses" : true
-			},
-
-			// Based on default settings on http://modernizr.com/download/
-			"extensibility" : {
-				"addtest" : false,
-				"prefixed" : false,
-				"teststyles" : true,
-				"testprops" : true,
-				"testallprops" : true,
-				"hasevents" : false,
-				"prefixes" : true,
-				"domprefixes" : true
-			},
-
-			// By default, source is uglified before saving
-			"uglify" : false,
-
-			// Define any tests you want to implicitly include.
-			"tests" : ['csstransforms', 'inlinesvg', 'touch'],
-
-			// By default, this task will crawl your project for references to Modernizr tests.
-			// Set to false to disable.
-			"parseFiles" : false,
-
-			// When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
-			// You can override this by defining a "files" array below.
-			// "files" : [],
-
-			// When parseFiles = true, matchCommunityTests = true will attempt to
-			// match user-contributed tests.
-			"matchCommunityTests" : false,
-
-			// Have custom Modernizr tests? Add paths to their location here.
-			"customTests" : []
 		},
 				
 		imageoptim: {
