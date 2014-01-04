@@ -568,7 +568,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 
 	$wp_customize->add_control( 'stackoverflow_userid', array(
-		'label'   => 'Kickstarter ' . __( 'User ID', 'decode' ),
+		'label'   => 'Stack Overflow ' . __( 'User ID', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 26,
