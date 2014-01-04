@@ -1,6 +1,5 @@
 body#tinymce.wp-editor { 
     font-family: Arial, Helvetica, sans-serif;
-    margin: 2.5%;
     background: #FFFFFF;
     color: #000000;
 }
@@ -15,6 +14,10 @@ body#tinymce.wp-editor a {
 
 	body#tinymce.wp-editor a:hover {
 		color: #007EA6;
+	}
+	
+	body#tinymce.wp-editor a:visited {
+		color: #009BCD;
 	}
 
 h1 {
