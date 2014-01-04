@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-02 01:35-0600\n"
-"PO-Revision-Date: 2014-01-02 01:35-0600\n"
+"POT-Creation-Date: 2014-01-04 15:28-0600\n"
+"PO-Revision-Date: 2014-01-04 15:28-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: ../header.php:31 ../header.php:439
+#: ../header.php:31 ../header.php:505
 msgid "Skip to content"
 msgstr ""
 
@@ -387,149 +387,156 @@ msgstr ""
 msgid "Social Options"
 msgstr ""
 
-#: ../inc/customizer.php:365
+#: ../inc/customizer.php:389
 msgid "Show Social Icons"
 msgstr ""
 
-#: ../inc/customizer.php:372
+#: ../inc/customizer.php:396
 msgid "Open Links in New Tab/Window"
 msgstr ""
 
-#: ../inc/customizer.php:379 ../inc/customizer.php:386
-#: ../inc/customizer.php:393 ../inc/customizer.php:400
-#: ../inc/customizer.php:407 ../inc/customizer.php:414
-#: ../inc/customizer.php:421 ../inc/customizer.php:428
-#: ../inc/customizer.php:442 ../inc/customizer.php:449
-#: ../inc/customizer.php:456 ../inc/customizer.php:463
-#: ../inc/customizer.php:470 ../inc/customizer.php:484
-#: ../inc/customizer.php:491 ../inc/customizer.php:498
-#: ../inc/customizer.php:505 ../inc/customizer.php:512
-#: ../inc/customizer.php:519 ../inc/customizer.php:526
-#: ../inc/customizer.php:533 ../inc/customizer.php:540
-#: ../inc/customizer.php:547 ../inc/customizer.php:554
-#: ../inc/customizer.php:561 ../inc/customizer.php:568
-#: ../inc/customizer.php:575 ../inc/customizer.php:589
+#: ../inc/customizer.php:403 ../inc/customizer.php:410
+#: ../inc/customizer.php:417 ../inc/customizer.php:424
+#: ../inc/customizer.php:431 ../inc/customizer.php:438
+#: ../inc/customizer.php:445 ../inc/customizer.php:452
+#: ../inc/customizer.php:466 ../inc/customizer.php:473
+#: ../inc/customizer.php:480 ../inc/customizer.php:487
+#: ../inc/customizer.php:494 ../inc/customizer.php:501
+#: ../inc/customizer.php:508 ../inc/customizer.php:515
+#: ../inc/customizer.php:522 ../inc/customizer.php:529
+#: ../inc/customizer.php:536 ../inc/customizer.php:543
+#: ../inc/customizer.php:578 ../inc/customizer.php:585
+#: ../inc/customizer.php:592 ../inc/customizer.php:606
+#: ../inc/customizer.php:620 ../inc/customizer.php:627
+#: ../inc/customizer.php:634 ../inc/customizer.php:641
+#: ../inc/customizer.php:655
 msgid "Username"
 msgstr ""
 
-#: ../inc/customizer.php:400
+#: ../inc/customizer.php:424
 msgid " (or the long number in your profile URL)"
 msgstr ""
 
-#: ../inc/customizer.php:435
+#: ../inc/customizer.php:459
 msgid "Profile URL"
 msgstr ""
 
-#: ../inc/customizer.php:477
+#: ../inc/customizer.php:550 ../inc/customizer.php:557
+#: ../inc/customizer.php:564
 msgid "Site URL"
 msgstr ""
 
-#: ../inc/customizer.php:582
+#: ../inc/customizer.php:571 ../inc/customizer.php:599
+#: ../inc/customizer.php:613
+msgid "User ID"
+msgstr ""
+
+#: ../inc/customizer.php:648
 msgid "Group Name"
 msgstr ""
 
-#: ../inc/customizer.php:596
+#: ../inc/customizer.php:662
 msgid "RSS Feed"
 msgstr ""
 
-#: ../inc/customizer.php:603
+#: ../inc/customizer.php:669
 msgid "Email Address"
 msgstr ""
 
-#: ../inc/customizer.php:616
+#: ../inc/customizer.php:682
 msgid "Reading Options"
 msgstr ""
 
-#: ../inc/customizer.php:688
+#: ../inc/customizer.php:754
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 
-#: ../inc/customizer.php:695
+#: ../inc/customizer.php:761
 msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
 
-#: ../inc/customizer.php:702
+#: ../inc/customizer.php:768
 msgid "Display a post's featured image on its individual page."
 msgstr ""
 
-#: ../inc/customizer.php:709
+#: ../inc/customizer.php:775
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 
-#: ../inc/customizer.php:716
+#: ../inc/customizer.php:782
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
 msgstr ""
 
-#: ../inc/customizer.php:723
+#: ../inc/customizer.php:789
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 
-#: ../inc/customizer.php:730
+#: ../inc/customizer.php:796
 msgid "Entry Date Position"
 msgstr ""
 
-#: ../inc/customizer.php:734
+#: ../inc/customizer.php:800
 msgid "Above Header"
 msgstr ""
 
-#: ../inc/customizer.php:735
+#: ../inc/customizer.php:801
 msgid "Below Header"
 msgstr ""
 
-#: ../inc/customizer.php:741
+#: ../inc/customizer.php:807
 msgid "Show Page Headers"
 msgstr ""
 
-#: ../inc/customizer.php:748
+#: ../inc/customizer.php:814
 msgid "Show entry date for post excepts on the main page"
 msgstr ""
 
-#: ../inc/customizer.php:755
+#: ../inc/customizer.php:821
 msgid "Add an arrow before the title of a link post"
 msgstr ""
 
-#: ../inc/customizer.php:762
+#: ../inc/customizer.php:828
 msgid "Show all post types, including custom post types"
 msgstr ""
 
-#: ../inc/customizer.php:769
+#: ../inc/customizer.php:835
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
 msgstr ""
 
-#: ../inc/customizer.php:776
+#: ../inc/customizer.php:842
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 
-#: ../inc/customizer.php:789
+#: ../inc/customizer.php:855
 msgid "Other Options"
 msgstr ""
 
-#: ../inc/customizer.php:801
+#: ../inc/customizer.php:867
 msgid "Custom CSS"
 msgstr ""
 
-#: ../inc/customizer.php:840
+#: ../inc/customizer.php:906
 msgid "Accent Color"
 msgstr ""
 
-#: ../inc/customizer.php:846
+#: ../inc/customizer.php:912
 msgid "Active Link Color"
 msgstr ""
 
-#: ../inc/customizer.php:852
+#: ../inc/customizer.php:918
 msgid "Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:858
+#: ../inc/customizer.php:924
 msgid "Secondary Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:864
+#: ../inc/customizer.php:930
 msgid "Use accent color instead of text color for icons"
 msgstr ""
 
