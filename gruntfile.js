@@ -136,7 +136,7 @@ module.exports = function(grunt) {
 			},
 			livereload: {
 				options: { livereload: true },
-				files: ['*.php', 'style.css', 'css/**', 'js/build/*.js'],
+				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js'],
 			}
 		},
 		
