@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-04 15:28-0600\n"
-"PO-Revision-Date: 2014-01-04 15:28-0600\n"
+"POT-Creation-Date: 2014-01-04 17:24-0600\n"
+"PO-Revision-Date: 2014-01-04 17:24-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:17
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr ""
@@ -257,10 +257,14 @@ msgid "%1$s by %2$s"
 msgstr ""
 
 #: ../functions.php:62
-msgid "Nav Menu"
+msgid "Header Menu"
 msgstr ""
 
-#: ../functions.php:107
+#: ../functions.php:63
+msgid "Sidebar Menu"
+msgstr ""
+
+#: ../functions.php:108
 msgid "Sidebar"
 msgstr ""
 
@@ -315,6 +319,10 @@ msgstr ""
 #: ../searchform.php:13
 msgctxt "submit button"
 msgid "Search"
+msgstr ""
+
+#: ../sidebar.php:16
+msgid "Navigation"
 msgstr ""
 
 #: ../inc/customizer.php:38

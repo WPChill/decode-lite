@@ -501,10 +501,10 @@
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="header-navigation" class="main-navigation" role="navigation">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<?php wp_nav_menu( array( 'theme_location' => 'header-navigation' ) ); ?>
+		</nav><!-- #header-navigation -->
 		<?php endif; ?>
 		
 	</header><!-- #masthead -->

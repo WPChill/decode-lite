@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-04 15:28-0600\n"
-"PO-Revision-Date: 2014-01-04 15:29-0600\n"
+"POT-Creation-Date: 2014-01-04 17:24-0600\n"
+"PO-Revision-Date: 2014-01-04 17:25-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -119,7 +119,7 @@ msgid "Chats"
 msgstr ""
 
 # @ decode
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:17
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr "Archives"
@@ -305,13 +305,19 @@ msgstr "Lire la suite&hellip;"
 msgid "%1$s by %2$s"
 msgstr "%1$s à %2$s"
 
-# @ decode
 #: ../functions.php:62
-msgid "Nav Menu"
-msgstr "Menu de navigation"
+#, fuzzy
+msgid "Header Menu"
+msgstr "Image de l'en-tête"
 
 # @ decode
-#: ../functions.php:107
+#: ../functions.php:63
+#, fuzzy
+msgid "Sidebar Menu"
+msgstr "Colonne latérale"
+
+# @ decode
+#: ../functions.php:108
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
@@ -381,6 +387,12 @@ msgstr "Rechercher:"
 msgctxt "submit button"
 msgid "Search"
 msgstr "Rechercher"
+
+# @ decode
+#: ../sidebar.php:16
+#, fuzzy
+msgid "Navigation"
+msgstr "Afficher le navigation"
 
 #: ../inc/customizer.php:38
 msgid "Header Options"

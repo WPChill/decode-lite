@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-04 15:28-0600\n"
-"PO-Revision-Date: 2014-01-04 15:29-0600\n"
+"POT-Creation-Date: 2014-01-04 17:24-0600\n"
+"PO-Revision-Date: 2014-01-04 17:25-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:17
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr "Archive"
@@ -273,10 +273,16 @@ msgid "%1$s by %2$s"
 msgstr "%1$s von %2$s"
 
 #: ../functions.php:62
-msgid "Nav Menu"
-msgstr "Navigations Men&uuml;"
+#, fuzzy
+msgid "Header Menu"
+msgstr "Header Bild"
 
-#: ../functions.php:107
+#: ../functions.php:63
+#, fuzzy
+msgid "Sidebar Menu"
+msgstr "Seitenleiste"
+
+#: ../functions.php:108
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
@@ -336,6 +342,11 @@ msgstr "Suche nach:"
 msgctxt "submit button"
 msgid "Search"
 msgstr "Suchen"
+
+#: ../sidebar.php:16
+#, fuzzy
+msgid "Navigation"
+msgstr "Navigation anzeigen"
 
 #: ../inc/customizer.php:38
 msgid "Header Options"
@@ -684,6 +695,9 @@ msgstr ""
 "welches Lesern erm&ouml;glicht dir eine Antwort zu einem Post via Twitter "
 "oder App.net zu senden. Mehr Informationen findest du hier: http://"
 "scotthsmith.com/projects/decode/."
+
+#~ msgid "Nav Menu"
+#~ msgstr "Navigations Men&uuml;"
 
 #~ msgctxt "Previous post link"
 #~ msgid "&larr;"
