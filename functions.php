@@ -60,7 +60,8 @@ function decode_setup() {
 	 */
 	register_nav_menus( array(
 		'header-navigation'  => __( 'Header Menu', 'decode' ),
-		'sidebar-navigation' => __( 'Sidebar Menu', 'decode' )
+		'sidebar-navigation' => __( 'Sidebar Menu', 'decode' ),
+		'footer-navigation' => __( 'Footer Menu', 'decode' )
 	) );
 }
 endif; // decode_setup
@@ -126,7 +127,7 @@ function decode_customize_css() {
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .header-navigation a, .no-touch .navigation a:hover, .no-touch .navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .header-navigation a, .footer-navigation a, .no-touch .navigation a:hover, .no-touch .navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 		
