@@ -59,7 +59,7 @@ function decode_setup() {
 	 * This theme uses wp_nav_menu() once in header.php.
 	 */
 	register_nav_menus( array(
-		'header-navigation' => __( 'Header Menu', 'decode' ),
+		'header-navigation'  => __( 'Header Menu', 'decode' ),
 		'sidebar-navigation' => __( 'Sidebar Menu', 'decode' )
 	) );
 }

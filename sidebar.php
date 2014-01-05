@@ -5,17 +5,16 @@
  * @package Decode
  */
 ?>
+
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'sidebar-navigation',
+			'container'       => 'nav',
+			'container_class' => 'navigation sidebar-navigation',
+			'container_id'    => 'sidebar-navigation',
+			'items_wrap'      => '<h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul>'
+		) ); ?>
+
 		<div class="widget-area" role="complementary">
-		
-			<nav id="sidebar-navigation" class="sidebar-navigation" role="navigation">
-				<?php wp_nav_menu( array(
-					'theme_location' => 'sidebar-navigation',
-					'container' => 'nav',
-					'container_class' => 'sidebar-navigation',
-					'container_id'    => 'sidebar-navigation',
-					'items_wrap' => '<h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul>'
-				) ); ?>
-			</nav>
 		
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
