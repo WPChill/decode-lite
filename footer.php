@@ -23,13 +23,16 @@
 		</div><!-- .theme-info -->
 		<?php endif; ?>
 		
-		<?php wp_nav_menu( array(
-			'theme_location'  => 'footer-menu',
-			'container'       => false,
-			'menu_class' => 'menu footer-menu',
-			'menu_id'    => 'footer-menu',
-			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
-		) ); ?>
+		<?php if ( has_nav_menu( 'footer-menu' ) ) { ?>
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'footer-menu',
+				'container'       => false,
+				'menu_class' => 'menu footer-menu',
+				'menu_id'    => 'footer-menu',
+				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
+			) ); ?>
+			<!-- #footer-menu -->
+		<?php endif; ?>
 		
 	</footer><!-- #colophon -->
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?><!-- .site-scroll -->
