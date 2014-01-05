@@ -500,7 +500,7 @@
 		</div>
 		<?php endif; ?>
 
-		<?php if ( get_theme_mod( 'show_site_navigation', true ) == true ) : ?>
+		<?php if ( get_theme_mod( 'show_header_navigation', true ) == true ) : ?>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'header-navigation',
 				'container'       => false,
@@ -508,7 +508,6 @@
 				'menu_id'    => 'header-navigation',
 				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
 			) ); ?>
-			<!-- #header-navigation -->
 		<?php endif; ?>
 		
 	</header><!-- #masthead -->
