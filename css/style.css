@@ -649,74 +649,124 @@ object {
 .no-inlinesvg .EmailLink {background-image: url('images/Email.png');}
 
 
-/* =Menu
+/* =Navigation
 ----------------------------------------------- */
 
 .navigation {
 	clear: both;
 	width: 100%;
-	text-align: center;
+}
+
+.header-navigation {
 	margin: 2.5% auto 1.5%;
 }
+
+.sidebar-navigation {
+	margin: 0 auto 1.5em;
+}
+
+.header-navigation {
+	text-align: center;
+}
+
+.sidebar-navigation {
+	text-align: left;
+}
+
 .navigation ul {
 	list-style: none;
 	margin: 0 auto;
 	padding-left: 0;
 }
+
+.sidebar-navigation ul {
+	margin-left: 2em;
+}
+
 .navigation li {
-	display: inline-block;
-	margin: 0 0.5em;
 	position: relative;
 }
+
+.header-navigation li {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+.sidebar-navigation li {
+	display: block;
+}
+
 .navigation li:first-child {
 	margin-left: 0;
 }
+
 .navigation li:last-child {
 	margin-right: 0;
 }
+
 .navigation a {
 	transition: color 0.25s ease-out;
 	display: block;
 	text-decoration: none;
+}
+
+.header-navigation a {
 	color: #444444;
 }
+
+.sidebar-navigation a {
+	color: #009BCD;
+}
+
 	.no-touch .navigation a:hover {
 		color: #009BCD;
 	}
+	
 	.no-touch .navigation a:active {
 		color: #007EA6
 	}
+	
 .navigation ul ul {
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 	display: none;
 	float: left;
 	position: absolute;
 	top: 1.25em;
 	left: 0;
 	z-index: 2;
+	padding: 2.5%;
 	background: #E3E5E7;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+
 .navigation ul ul ul {
 	left: 100%;
 	top: 0;
 }
+
 .navigation ul ul a {
 	width: 12em;
 }
+
 .navigation ul ul li {
 }
+
 .navigation li:hover > a {
 }
+
 .navigation ul ul :hover > a {
 }
+
 .navigation ul ul a:hover {
 }
+
 .navigation ul li:hover > ul {
 	display: block;
 }
+
 .navigation ul ul:hover {
 	display: block;
 }
+
 .navigation .current_page_item > a,
 .navigation .current-menu-item > a {
 	color: #222222;
@@ -1469,16 +1519,14 @@ li.comment {
 	margin: 0 0 1.5em;
 }
 
+.widget ul, .widget ol {
+	margin: 0 0 1.5em 2em;
+}
+
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
 }
-
-/* Search widget */
-.widget_search .submit {
-	display: none;
-}
-
 
 /* =Infinite Scroll
 ----------------------------------------------- */
@@ -1605,7 +1653,7 @@ li.comment {
 	margin: 0 1%;
 }
 
-.navigation li {
+.header-navigation li {
 	margin: 0 1.5%;
 }
 

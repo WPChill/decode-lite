@@ -109,8 +109,6 @@ function decode_widgets_init() {
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
 	) );
 }
 }
@@ -124,11 +122,11 @@ if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
 function decode_customize_css() {
     ?>
          <style type="text/css">
-        body, .sidebar, .SidebarTop, .main-navigation ul ul {
+        body, .sidebar, .SidebarTop, .navigation ul ul {
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .header-navigation a, .no-touch .navigation a:hover, .no-touch .navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color'); ?>;
 		}
 		
@@ -142,7 +140,7 @@ function decode_customize_css() {
 		}
 	<?php endif; ?>
 
-		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .main-navigation a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
+		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .sidebar-navigation a, .no-touch .navigation a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .navigation li.current_page_item > a, .navigation li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
@@ -150,7 +148,7 @@ function decode_customize_css() {
 			border-color: <?php echo get_theme_mod('accent_color'); ?>;
 		}
 
-		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .main-navigation a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
+		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .navigation a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
 			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
 		}
 

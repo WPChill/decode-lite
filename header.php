@@ -504,7 +504,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'header-navigation',
 				'container'       => 'nav',
-				'container_class' => 'header-navigation',
+				'container_class' => 'navigation header-navigation',
 				'container_id'    => 'header-navigation',
 			) ); ?>
 			<!-- #header-navigation -->
