@@ -8,10 +8,10 @@
 
 		<?php wp_nav_menu( array(
 			'theme_location'  => 'sidebar-navigation',
-			'container'       => 'nav',
-			'container_class' => 'navigation sidebar-navigation',
-			'container_id'    => 'sidebar-navigation',
-			'items_wrap'      => '<h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul>'
+			'container'       => false,
+			'menu_class' => 'navigation sidebar-navigation',
+			'menu_id'    => 'sidebar-navigation',
+			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul></nav>'
 		) ); ?>
 
 		<div class="widget-area" role="complementary">
