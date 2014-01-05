@@ -24,10 +24,10 @@
 		<?php endif; ?>
 		
 		<?php wp_nav_menu( array(
-			'theme_location'  => 'footer-navigation',
+			'theme_location'  => 'footer-menu',
 			'container'       => false,
-			'menu_class' => 'navigation footer-navigation',
-			'menu_id'    => 'footer-navigation',
+			'menu_class' => 'menu footer-menu',
+			'menu_id'    => 'footer-menu',
 			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
 		) ); ?>
 		

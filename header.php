@@ -502,10 +502,10 @@
 
 		<?php if ( get_theme_mod( 'show_header_navigation', true ) == true ) : ?>
 			<?php wp_nav_menu( array(
-				'theme_location'  => 'header-navigation',
+				'theme_location'  => 'header-menu',
 				'container'       => false,
-				'menu_class' => 'navigation header-navigation',
-				'menu_id'    => 'header-navigation',
+				'menu_class' => 'menu header-menu',
+				'menu_id'    => 'header-menu',
 				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
 			) ); ?>
 		<?php endif; ?>

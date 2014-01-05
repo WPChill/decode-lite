@@ -652,78 +652,78 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 
-.navigation {
+.menu {
 	clear: both;
 	width: 100%;
 }
 
-.header-navigation, .footer-navigation {
+.header-menu, .footer-menu {
 	margin: 2.5% auto 1.5%;
 	text-align: center;
 }
 
-.sidebar-navigation {
+.sidebar-menu {
 	margin: 0 auto 1.5em;
 }
 
-.sidebar-navigation {
+.sidebar-menu {
 	text-align: left;
 }
 
-.navigation ul {
+.menu ul {
 	list-style: none;
 	margin: 0 auto;
 	padding-left: 0;
 }
 
-.sidebar-navigation ul {
+.sidebar-menu ul {
 	margin-left: 2em;
 }
 
-.navigation li {
+.menu li {
 	position: relative;
 }
 
-.header-navigation li, .footer-navigation li {
+.header-menu li, .footer-menu li {
 	display: inline-block;
 	margin: 0 0.5em;
 }
 
-.sidebar-navigation li {
+.sidebar-menu li {
 	display: block;
 }
 
-.navigation li:first-child {
+.menu li:first-child {
 	margin-left: 0;
 }
 
-.navigation li:last-child {
+.menu li:last-child {
 	margin-right: 0;
 }
 
-.navigation a {
+.menu a {
 	transition: color 0.25s ease-out;
 	display: block;
 	text-decoration: none;
 }
 
-.header-navigation a, .footer-navigation a {
+.header-menu a, .footer-menu a {
 	color: #444444;
 }
 
-.sidebar-navigation a {
+.sidebar-menu a {
 	color: #009BCD;
 }
 
-	.no-touch .navigation a:hover {
+	.no-touch .menu a:hover {
 		color: #009BCD;
 	}
 	
-	.no-touch .navigation a:active {
+	.no-touch .menu a:active {
 		color: #007EA6
 	}
 	
-.navigation ul ul {
+.menu ul ul {
 	display: none;
 	float: left;
 	position: absolute;
@@ -735,45 +735,49 @@ object {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navigation ul ul ul {
+.footer-menu ul ul {
+	top: -1.25em;
+}
+
+.menu ul ul ul {
 	left: 100%;
 	top: 0;
 }
 
-.navigation ul ul a {
+.menu ul ul a {
 	width: 12em;
 }
 
-.navigation ul ul li {
+.menu ul ul li {
 }
 
-.navigation li:hover > a {
+.menu li:hover > a {
 }
 
-.navigation ul ul :hover > a {
+.menu ul ul :hover > a {
 }
 
-.navigation ul ul a:hover {
+.menu ul ul a:hover {
 }
 
-.navigation ul li:hover > ul {
+.menu ul li:hover > ul {
 	display: block;
 }
 
-.navigation ul ul:hover {
+.menu ul ul:hover {
 	display: block;
 }
 
-.navigation .current_page_item > a,
-.navigation .current-menu-item > a {
+.menu .current_page_item > a,
+.menu .current-menu-item > a {
 	color: #222222;
 }
 
-.navigation li.current-menu-item > a {
+.menu li.current-menu-item > a {
 	position: relative;
 }
 
-.navigation li.current-menu-item > a:hover {
+.menu li.current-menu-item > a:hover {
 	animation: shake 0.25s ease 0.25s;
 	color: #000000;
 }
@@ -1650,7 +1654,7 @@ li.comment {
 	margin: 0 1%;
 }
 
-.header-navigation li, .footer-navigation li {
+.header-menu li, .footer-menu li {
 	margin: 0 1.5%;
 }
 
@@ -1818,7 +1822,7 @@ article.post {
 }
 
 @media only print {
-.sidebar, .SidebarLink, .sociallinks, .header-navigation, .footer-navigation, .paging-navigation, .post-navigation, .comment-respond {
+.sidebar, .SidebarLink, .sociallinks, .header-menu, .footer-menu, .paging-navigation, .post-navigation, .comment-respond {
 	display: none;
 }
 
