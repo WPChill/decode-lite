@@ -506,9 +506,8 @@
 				'container'       => false,
 				'menu_class' => 'menu header-menu',
 				'menu_id'    => 'header-menu',
-				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav>'
+				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->'
 			) ); ?>
-			<!-- #header-menu -->
 		<?php endif; ?>
 		
 	</header><!-- #masthead -->
