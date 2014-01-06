@@ -11,7 +11,9 @@
 				'container'       => false,
 				'menu_class' => 'menu sidebar-menu',
 				'menu_id'    => 'sidebar-menu',
-				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul></nav><!-- #sidebar-menu -->'
+				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul></nav><!-- #sidebar-menu -->',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker()
 			) ); 
 		} ?>
 

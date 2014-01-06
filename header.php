@@ -506,7 +506,9 @@
 				'container'       => false,
 				'menu_class' => 'menu header-menu',
 				'menu_id'    => 'header-menu',
-				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->'
+				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker()
 			) ); ?>
 		<?php endif; ?>
 		

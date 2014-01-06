@@ -145,7 +145,7 @@ function decode_customize_css() {
 		}
 	<?php endif; ?>
 
-		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .sidebar-menu a, .no-touch .menu a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .menu li.current_page_item > a, .menu li.current-menu-item > a {
+		a, .menu a:focus, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .sidebar-menu a, .no-touch .menu a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .menu li.current_page_item > a, .menu li.current-menu-item > a {
 			color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
@@ -200,6 +200,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Register Custom Navigation Walker.
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 /**
  * Load Jetpack compatibility file.

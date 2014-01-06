@@ -59,7 +59,14 @@ module.exports = function(grunt) {
 				srcRoot: '../',
 				dest: 'build/respond.js',				
 				destMap: 'build/respond.js.map'
-			}
+			},
+			dropdown: {
+				cwd: 'js/',
+				src: ['dropdown.js'],
+				srcRoot: '../',
+				dest: 'build/dropdown.js',				
+				destMap: 'build/dropdown.js.map'
+			},
 		},
 
 		autoprefixer: {

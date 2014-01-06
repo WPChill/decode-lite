@@ -317,7 +317,7 @@ a {
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
 }
-
+	
 	.no-touch a:hover {
 		color: #009BCD;
 	}
@@ -712,6 +712,11 @@ object {
 	display: block;
 	text-decoration: none;
 }
+
+	.menu a:focus {
+		outline: none;
+		color: #009BCD;
+	}
 
 /* Display a triangle to indicate that the menu has a child menu */
 .menu .menu-item-has-children > a::after,
