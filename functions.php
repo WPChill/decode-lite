@@ -127,7 +127,7 @@ function decode_customize_css() {
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .header-menu a, .footer-menu a, .no-touch .menu a:hover, .no-touch .menu a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .header-menu a, .footer-menu a, .no-touch .menu a:hover, .menu a:focus, .no-touch .menu a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
@@ -145,7 +145,7 @@ function decode_customize_css() {
 		}
 	<?php endif; ?>
 
-		a, .menu a:focus, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .sidebar-menu a, .no-touch .menu a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .menu li.current_page_item > a, .menu li.current-menu-item > a {
+		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .sidebar-menu a, .no-touch .menu a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .menu li.current_page_item > a, .menu li.current-menu-item > a, .menu ul li.open > a {
 			color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
@@ -153,7 +153,7 @@ function decode_customize_css() {
 			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 		
-		.sidebar-menu .menu-item-has-children > a::after, .sidebar-menu .page_item_has_children > a::after, .no-touch .menu .menu-item-has-children > a:hover::after, .no-touch .menu .page_item_has_children > a:hover::after {
+		.sidebar-menu .menu-item-has-children > a::after, .sidebar-menu .page_item_has_children > a::after, .no-touch .menu .menu-item-has-children > a:hover::after, .no-touch .menu .page_item_has_children > a:hover::after, .menu ul li.open > a::after {
 			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 

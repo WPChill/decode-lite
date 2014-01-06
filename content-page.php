@@ -10,6 +10,7 @@
 	<header class="entry-header">
 		
 		<h1 class="entry-title<?php if ( get_theme_mod( 'show_page_headers', true ) == false ) echo ' screen-reader-text' ?>"><?php the_title(); ?></h1>
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
