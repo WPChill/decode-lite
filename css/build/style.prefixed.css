@@ -624,6 +624,7 @@ object {
 	background-size: 40px;
 }
 
+/* Fallback Images for browsers that don't support Inline SVG */
 .no-inlinesvg .TwitterLink {background-image: url('images/Twitter.png');}
 .no-inlinesvg .ADNLink {background-image: url('images/ADN.png');}
 .no-inlinesvg .FacebookLink {background-image: url('images/Facebook.png');}
@@ -633,22 +634,27 @@ object {
 .no-inlinesvg .DribbbleLink {background-image: url('images/Dribbble.png');}
 .no-inlinesvg .BehanceLink {background-image: url('images/Behance.png');}
 .no-inlinesvg .LinkedInLink {background-image: url('images/LinkedIn.png');}
-.no-inlinesvg .TumblrLink {background-image: url('images/Tumblr.png');}
 .no-inlinesvg .PinterestLink {background-image: url('images/Pinterest.png');}
 .no-inlinesvg .InstagramLink {background-image: url('images/Instagram.png');}
 .no-inlinesvg .Five00pxLink {background-image: url('images/500px.png');}
 .no-inlinesvg .FlickrLink {background-image: url('images/Flickr.png');}
 .no-inlinesvg .DeviantARTLink {background-image: url('images/deviantART.png');}
+.no-inlinesvg .SoundcloudLink {background-image: url('images/Soundcloud.png');}
 .no-inlinesvg .RdioLink {background-image: url('images/Rdio.png');}
 .no-inlinesvg .SpotifyLink {background-image: url('images/Spotify.png');}
 .no-inlinesvg .LastFmLink {background-image: url('images/LastFm.png');}
-.no-inlinesvg .SoundcloudLink {background-image: url('images/Soundcloud.png');}
+.no-inlinesvg .VimeoLink {background-image: url('images/Vine.png');}
 .no-inlinesvg .VimeoLink {background-image: url('images/Vimeo.png');}
 .no-inlinesvg .YouTubeLink {background-image: url('images/YouTube.png');}
+.no-inlinesvg .YouTubeLink {background-image: url('images/Kickstarter.png');}
+.no-inlinesvg .TumblrLink {background-image: url('images/Tumblr.png');}
+.no-inlinesvg .TumblrLink {background-image: url('images/WordPress.png');}
+.no-inlinesvg .TumblrLink {background-image: url('images/reddit.png');}
 .no-inlinesvg .GithubLink {background-image: url('images/GitHub.png');}
 .no-inlinesvg .RunkeeperLink {background-image: url('images/Runkeeper.png');}
 .no-inlinesvg .StravaLink {background-image: url('images/Strava.png');}
 .no-inlinesvg .FoursquareLink {background-image: url('images/Foursquare.png');}
+.no-inlinesvg .FoursquareLink {background-image: url('images/Yelp.png');}
 .no-inlinesvg .SlideShareLink {background-image: url('images/SlideShare.png');}
 .no-inlinesvg .ResearchGateLink {background-image: url('images/ResearchGate.png');}
 .no-inlinesvg .YouVersionLink {background-image: url('images/YouVersion.png');}
