@@ -740,7 +740,6 @@ object {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 5px solid #444444;
-	margin-left: 0.25em;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -976,6 +975,20 @@ article.post {
 .entry-content img {
 	margin: 2.5% auto;
 }
+
+.entry-content a > img {
+	-webkit-transition: opacity 0.25s ease-out;
+	transition: opacity 0.25s ease-out;
+	opacity: 1;
+}
+
+	.no-touch .entry-content a:hover > img {
+		opacity: 0.8;
+	}
+	
+	.no-touch .entry-content a:active > img {
+		opacity: 0.9;
+	}
 
 .entry-content .video-player img {
 	margin: 0;
