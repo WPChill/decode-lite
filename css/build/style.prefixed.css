@@ -760,6 +760,10 @@ object {
 .sidebar-menu a {
 	color: #009BCD;
 }
+	
+	.sidebar-menu a:hover {
+		color: #007EA6;
+	}
 
 .sidebar-menu .menu-item-has-children > a::after,
 .sidebar-menu .page_item_has_children > a::after {
