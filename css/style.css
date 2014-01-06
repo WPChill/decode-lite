@@ -782,7 +782,6 @@ object {
 	display: none;
 	float: left;
 	position: absolute;
-	top: 1.25em;
 	left: 0;
 	z-index: 2;
 	padding: 2.5%;
