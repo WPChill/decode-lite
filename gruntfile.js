@@ -53,6 +53,13 @@ module.exports = function(grunt) {
 				dest: 'build/decode-with-sidebar.js',				
 				destMap: 'build/decode-with-sidebar.js.map'
 			},
+			respond: {
+				cwd: 'js/',
+				src: ['respond.js'],
+				srcRoot: '../',
+				dest: 'build/respond.js',				
+				destMap: 'build/respond.js.map'
+			}
 		},
 
 		autoprefixer: {

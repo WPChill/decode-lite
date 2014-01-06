@@ -1,4 +1,4 @@
 Modernizr.load({
   test: Modernizr.mq('only all'),
-  nope: templateDir + '/js/respond.js?1.4.2'
+  nope: templateDir + '/js/build/respond.js?1.4.2'
 });
