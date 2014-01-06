@@ -131,6 +131,10 @@ function decode_customize_css() {
 			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
+		.header-menu .menu-item-has-children > a::after, .header-menu .page_item_has_children > a::after, .footer-menu .menu-item-has-children > a::after, .footer-menu .page_item_has_children > a::after {
+			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
+		}
+		
 	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
 		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
 			fill: <?php echo get_theme_mod('text_color', '#444444'); ?>;
@@ -148,6 +152,10 @@ function decode_customize_css() {
 		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
 			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
+		
+		.sidebar-menu .menu-item-has-children > a::after, .sidebar-menu .page_item_has_children > a::after, .no-touch .menu .menu-item-has-children > a:hover::after, .no-touch .menu .page_item_has_children > a:hover::after {
+			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
+		}
 
 		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .menu li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
 			color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
@@ -155,6 +163,10 @@ function decode_customize_css() {
 
 		.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
 			border-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
+		}
+		
+		.no-touch .menu .menu-item-has-children > a:active::after, .no-touch .menu .page_item_has_children > a:active::after {
+			border-top-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
 		}
 
 		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {

@@ -724,20 +724,59 @@ object {
 	text-decoration: none;
 }
 
+/* Display a triangle to indicate that the menu has a child menu */
+.menu .menu-item-has-children > a::after,
+.menu .page_item_has_children > a::after {
+	-webkit-transition: border-top-color 0.25s ease-out;
+	transition: border-top-color 0.25s ease-out;
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #444444;
+	margin-left: 0.25em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
 .header-menu a, .footer-menu a {
 	color: #444444;
+}
+
+.header-menu .menu-item-has-children > a::after,
+.header-menu .page_item_has_children > a::after,
+.footer-menu .menu-item-has-children > a::after,
+.footer-menu .page_item_has_children > a::after {
+	border-top-color: #444444;
 }
 
 .sidebar-menu a {
 	color: #009BCD;
 }
 
+.sidebar-menu .menu-item-has-children > a::after,
+.sidebar-menu .page_item_has_children > a::after {
+	border-top-color: #009BCD;
+}
+
 	.no-touch .menu a:hover {
 		color: #009BCD;
 	}
 	
+	.no-touch .menu .menu-item-has-children > a:hover::after,
+	.no-touch .menu .page_item_has_children > a:hover::after {
+		border-top-color: #009BCD;
+	}
+	
 	.no-touch .menu a:active {
 		color: #007EA6
+	}
+	
+	.no-touch .menu .menu-item-has-children > a:active::after,
+	.no-touch .menu .page_item_has_children > a:active::after {
+		border-top-color: #007EA6;
 	}
 	
 .menu ul ul {
@@ -778,7 +817,8 @@ object {
 .menu ul ul a:hover {
 }
 
-.menu ul li:hover > ul {
+.no-touch .menu ul li:hover > ul,
+.menu ul li.open > ul {
 	display: block;
 }
 
