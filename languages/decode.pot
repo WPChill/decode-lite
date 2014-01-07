@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-04 17:24-0600\n"
-"PO-Revision-Date: 2014-01-04 17:24-0600\n"
+"POT-Creation-Date: 2014-01-06 22:16-0600\n"
+"PO-Revision-Date: 2014-01-06 22:16-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr ""
@@ -208,12 +208,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: ../content-page.php:17 ../content-single.php:11 ../content-single.php:86
+#: ../content-page.php:18 ../content-single.php:11 ../content-single.php:86
 #: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
 msgid "Pages:"
 msgstr ""
 
-#: ../content-page.php:20 ../content-single.php:24 ../content-single.php:60
+#: ../content-page.php:21 ../content-single.php:24 ../content-single.php:60
 #: ../content-single.php:99 ../content.php:18 ../content.php:53
 #: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
 #: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
@@ -264,11 +264,15 @@ msgstr ""
 msgid "Sidebar Menu"
 msgstr ""
 
-#: ../functions.php:108
+#: ../functions.php:64
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:109
 msgid "Sidebar"
 msgstr ""
 
-#: ../header.php:31 ../header.php:505
+#: ../header.php:31
 msgid "Skip to content"
 msgstr ""
 
@@ -321,7 +325,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: ../sidebar.php:16
+#: ../sidebar.php:14
 msgid "Navigation"
 msgstr ""
 
@@ -346,7 +350,7 @@ msgid "Show Site Description"
 msgstr ""
 
 #: ../inc/customizer.php:100
-msgid "Show Navigation"
+msgid "Show Header Menu"
 msgstr ""
 
 #: ../inc/customizer.php:107

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-04 17:24-0600\n"
-"PO-Revision-Date: 2014-01-04 17:25-0600\n"
+"POT-Creation-Date: 2014-01-06 22:16-0600\n"
+"PO-Revision-Date: 2014-01-06 22:17-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -119,7 +119,7 @@ msgid "Chats"
 msgstr ""
 
 # @ decode
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr "Archives"
@@ -249,13 +249,13 @@ msgstr ""
 "d'essayer autre chose."
 
 # @ decode
-#: ../content-page.php:17 ../content-single.php:11 ../content-single.php:86
+#: ../content-page.php:18 ../content-single.php:11 ../content-single.php:86
 #: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
 msgid "Pages:"
 msgstr "Pages:"
 
 # @ decode
-#: ../content-page.php:20 ../content-single.php:24 ../content-single.php:60
+#: ../content-page.php:21 ../content-single.php:24 ../content-single.php:60
 #: ../content-single.php:99 ../content.php:18 ../content.php:53
 #: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
 #: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
@@ -316,13 +316,18 @@ msgstr "Image de l'en-tête"
 msgid "Sidebar Menu"
 msgstr "Colonne latérale"
 
+#: ../functions.php:64
+#, fuzzy
+msgid "Footer Menu"
+msgstr "Image de l'en-tête"
+
 # @ decode
-#: ../functions.php:108
+#: ../functions.php:109
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
 # @ decode
-#: ../header.php:31 ../header.php:505
+#: ../header.php:31
 msgid "Skip to content"
 msgstr "Voir le contenu"
 
@@ -389,7 +394,7 @@ msgid "Search"
 msgstr "Rechercher"
 
 # @ decode
-#: ../sidebar.php:16
+#: ../sidebar.php:14
 #, fuzzy
 msgid "Navigation"
 msgstr "Afficher le navigation"
@@ -414,10 +419,10 @@ msgstr "Afficher le titre du site"
 msgid "Show Site Description"
 msgstr "Afficher la description du site"
 
-# @ decode
 #: ../inc/customizer.php:100
-msgid "Show Navigation"
-msgstr "Afficher le navigation"
+#, fuzzy
+msgid "Show Header Menu"
+msgstr "Image de l'en-tête"
 
 #: ../inc/customizer.php:107
 msgid ""
@@ -745,7 +750,7 @@ msgid ""
 "elegent two-column experience. You can even disable the sidebar and comment "
 "links if you choose. Decode supports link posts, where the title can be "
 "hyperlinked. Decode includes custom social icons in the header that you can "
-"easily link to your choice of 30 different social profiles from Twitter, and "
+"easily link to your choice of 38 different social profiles from Twitter, and "
 "App.net, to Pinterest and LinkedIn, you will be sure to find support for the "
 "network you want alongside a bevy of customizations to make your site "
 "unique. Lastly, Decode is also built alongside a companion plugin that adds "
