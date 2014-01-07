@@ -58,7 +58,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'transport' => 'refresh',
 	) );
 	
-	$wp_customize->add_setting( 'show_header_navigation', array(
+	$wp_customize->add_setting( 'show_header_menu', array(
 		'default' => true,
 		'transport' => 'refresh',
 	) );
@@ -96,8 +96,8 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 4,
 	) );
 	
-	$wp_customize->add_control( 'show_header_navigation', array(
-		'label'   => __( 'Show Header Navigation', 'decode' ),
+	$wp_customize->add_control( 'show_header_menu', array(
+		'label'   => __( 'Show Header Menu', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
 		'priority'=> 5,
