@@ -70,8 +70,10 @@ function decode_wp_title($title, $sep, $sep_location) {
 	if ( is_feed() )
 		return $title;
  
-	if ($site_description && (is_home() || is_front_page()))
+	if ($site_description && (is_home() || is_front_page())) {
 		$custom = $sep . $site_description;
+		$title = '';
+	}
 
 	elseif(is_category())
 		$custom = $sep . __('Category', 'decode');
