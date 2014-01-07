@@ -3,7 +3,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Decode v2.8.5\n"
+"Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-01-06 22:16-0600\n"
 "PO-Revision-Date: 2014-01-06 22:17-0600\n"
