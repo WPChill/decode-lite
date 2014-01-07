@@ -500,7 +500,7 @@
 		</div>
 		<?php endif; ?>
 
-		<?php if ( get_theme_mod( 'show_header_navigation', true ) == true ) : ?>
+		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) : ?>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'header-menu',
 				'container'       => false,
