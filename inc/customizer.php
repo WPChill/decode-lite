@@ -364,6 +364,14 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'psn_username', array(
+		'default' => '',
+	) );
+	
+	$wp_customize->add_setting( 'xbox_live_username', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'steam_username', array(
 		'default' => '',
 	) );
@@ -637,39 +645,53 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 35,
 	) );
 	
+	$wp_customize->add_control( 'psn_username', array(
+		'label'   => 'Playstation Network ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 36,
+	) );
+	
+	$wp_customize->add_control( 'xbox_live_username', array(
+		'label'   => 'Xbox Live ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 37,
+	) );
+	
 	$wp_customize->add_control( 'steam_username', array(
 		'label'   => 'Steam ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 36,
+		'priority'=> 38,
 	) );
 	
 	$wp_customize->add_control( 'steam_group_name', array(
 		'label'   => 'Steam ' . __( 'Group Name', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 37,
+		'priority'=> 39,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => 'Skype ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 38,
+		'priority'=> 40,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 39,
+		'priority'=> 41,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 40,
+		'priority'=> 42,
 	) );
 
 
