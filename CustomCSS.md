@@ -7,7 +7,7 @@
 ### Remove the border between the header and the main section of the site:
 `.site-header { border-bottom: none; }`
 
-### Remove the the borders from hovered links in an entry:
+### Remove the the border under hovered links in an entry:
 `.no-touch .entry-content a:hover { border-bottom: none; }`
 
 ### Hide Page Titles on archive pages:
