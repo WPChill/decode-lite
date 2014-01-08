@@ -702,11 +702,11 @@ object {
 	display: block;
 }
 
-.menu li:first-child {
+.menu > ul > li:first-child {
 	margin-left: 0;
 }
 
-.menu li:last-child {
+.menu > ul > li:last-child {
 	margin-right: 0;
 }
 
