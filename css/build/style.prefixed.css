@@ -809,7 +809,11 @@ object {
 }
 
 .footer-menu ul ul {
-	top: -1.25em;
+	bottom: 100%;
+}
+
+.footer-menu ul ul ul {
+	bottom: auto;
 }
 
 .menu ul ul ul {
