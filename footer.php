@@ -11,18 +11,7 @@
 	 </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php if ( get_theme_mod( 'site_colophon', '' ) !== '' ) : ?>
-		<div class="site-colophon">
-			<p><?php echo get_theme_mod( 'site_colophon' ); ?></p>
-		</div><!-- .site-colophon -->
-		<?php endif; ?>
-		
-		<?php if ( get_theme_mod( 'show_theme_info', true ) == true ) : ?>
-		<div class="theme-info">
-			<p><?php printf(__( '%1$s by %2$s', 'decode' ), '<a href="http://ScottHSmith.com/projects/decode/">Decode</a>', 'Scott Smith') ?></p>
-		</div><!-- .theme-info -->
-		<?php endif; ?>
-		
+	
 		<?php if ( has_nav_menu( 'footer-menu' ) ) {
 			wp_nav_menu( array(
 				'theme_location'  => 'footer-menu',
@@ -34,6 +23,18 @@
 				'walker'            => new wp_bootstrap_navwalker()
 			) ); 
 		} ?>
+	
+		<?php if ( get_theme_mod( 'site_colophon', '' ) !== '' ) : ?>
+		<div class="site-colophon">
+			<p><?php echo get_theme_mod( 'site_colophon' ); ?></p>
+		</div><!-- .site-colophon -->
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'show_theme_info', true ) == true ) : ?>
+		<div class="theme-info">
+			<p><?php printf(__( '%1$s by %2$s', 'decode' ), '<a href="http://ScottHSmith.com/projects/decode/">Decode</a>', 'Scott Smith') ?></p>
+		</div><!-- .theme-info -->
+		<?php endif; ?>
 		
 	</footer><!-- #colophon -->
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?>
