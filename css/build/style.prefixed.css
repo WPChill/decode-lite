@@ -683,9 +683,6 @@ object {
 
 .sidebar-menu {
 	margin: 0 auto 1.5em;
-}
-
-.sidebar-menu {
 	text-align: left;
 }
 
@@ -695,7 +692,7 @@ object {
 	padding-left: 0;
 }
 
-.sidebar-menu ul {
+.sidebar-menu > ul {
 	margin-left: 2em;
 }
 
@@ -799,8 +796,9 @@ object {
 	position: absolute;
 	left: 0;
 	z-index: 2;
-	padding: 0 0.25em 0.25em;
 	background: #E3E5E7;
+	padding: 0 0.25em 0.25em;
+	border-bottom: 2px solid #009BCD;
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -817,6 +815,11 @@ object {
 .menu ul ul ul {
 	left: 100%;
 	top: 0;
+}
+
+.sidebar-menu ul ul ul {
+	left: -0.25em;
+	top: 100%;
 }
 
 .menu ul ul a {
