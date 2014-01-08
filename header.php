@@ -153,11 +153,8 @@
 				</a>
 				<?php endif; ?>
 				
-				<?php if ( get_theme_mod( 'linkedin_username', '' ) !== '' || get_theme_mod( 'linkedin_profile_url', '' ) !== '' ) : ?>
-				<a class="sociallink LinkedInLink" href="<?php 
-					if ( get_theme_mod( 'linkedin_username', '' ) && !get_theme_mod( 'linkedin_profile_url', '' ) ) { echo 'http://www.linkedin.com/profile/view?id=' . esc_url( get_theme_mod( 'linkedin_username', '' ) ); }
-					elseif ( get_theme_mod( 'linkedin_profile_url', '' ) ) { echo esc_url( get_theme_mod( 'linkedin_profile_url' ) ); }
-					?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<?php if ( get_theme_mod( 'linkedin_profile_url', '' ) !== '' ) : ?>
+				<a class="sociallink LinkedInLink" href="<?php echo esc_url( get_theme_mod( 'linkedin_profile_url' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>LinkedIn</title>
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -443,7 +440,7 @@
 				<?php endif; ?>
 				
 				<?php if ( get_theme_mod( 'psn_username', '' ) !== '' ) : ?>
-				<a class="sociallink PSNLink" href="<?php echo esc_url( 'http://profiles.us.playstation.com/playstation/psn/profiles/' . get_theme_mod( 'psn_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<a class="sociallink PSNLink" href="<?php echo esc_url( 'http://us.playstation.com/publictrophy/index.htm?onlinename=' . get_theme_mod( 'psn_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>PSN</title>
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -454,7 +451,7 @@
 				<?php endif; ?>
 				
 				<?php if ( get_theme_mod( 'xbox_live_username', '' ) !== '' ) : ?>
-				<a class="sociallink XboxLiveLink" href="<?php echo esc_url( 'http://live.xbox.com/en-US/profile/profile.aspx?GamerTag=' . get_theme_mod( 'xbox_live_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<a class="sociallink XboxLiveLink" href="<?php echo esc_url( 'http://live.xbox.com/Profile?GamerTag=' . str_replace(' ' , '%20', get_theme_mod( 'xbox_live_username' ) ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<title>XboxLive</title>
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
