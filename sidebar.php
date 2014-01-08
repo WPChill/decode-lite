@@ -9,7 +9,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'sidebar-menu',
 				'container'       => false,
-				'menu_class' => 'menu sidebar-menu',
+				'menu_class' => 'menu vertical-menu sidebar-menu',
 				'menu_id'    => 'sidebar-menu',
 				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul></nav><!-- #sidebar-menu -->',
 				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',

@@ -523,7 +523,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'header-menu',
 				'container'       => false,
-				'menu_class' => 'menu header-menu',
+				'menu_class' => 'menu horizontal-menu header-menu',
 				'menu_id'    => 'header-menu',
 				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
 				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
