@@ -803,17 +803,13 @@ object {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.menu ul li.open ul {
-	float: none;
-	position: relative;
-}
-
 .footer-menu ul ul {
 	bottom: 100%;
 }
 
-.footer-menu ul ul ul {
-	bottom: auto;
+.menu ul li.open ul {
+	float: none;
+	position: relative;
 }
 
 .menu ul ul ul {
@@ -824,6 +820,10 @@ object {
 .sidebar-menu ul ul ul {
 	left: -0.25em;
 	top: 100%;
+}
+
+.footer-menu ul ul ul {
+	bottom: auto;
 }
 
 .menu ul ul a {
