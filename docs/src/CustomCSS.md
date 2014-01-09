@@ -1,5 +1,5 @@
 # Helpful Custom CSS entries
-## A collection of CSS snippets that anyone can use in Decode's Custom CSS feature in the Other Options section of the theme Customize menu.
+*A collection of CSS snippets that anyone can use in Decode's Custom CSS feature in the Other Options section of the theme Customize menu.*
 
 ### Change the size of the header image:
 `.site-logo { max-height: 8.5em; }`
