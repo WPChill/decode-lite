@@ -95,15 +95,6 @@ module.exports = function(grunt) {
 			}
 		},
 		
-		copy: {
-			stylecss: {
-				expand: true,
-				flatten: true,
-				src: 'css/build/style.min.css',
-				ext: '.css'
-			},
-		},
-				
 		imageoptim: {
 			optimize: {
 				expand: true,
@@ -113,6 +104,34 @@ module.exports = function(grunt) {
 					imageAlpha: true,
 					quitAfter: true
 				}
+			}
+		},
+		
+		markdown: {
+			docs: {
+				expand: true,
+				flatten: true,
+				cwd: 'docs/',
+				src: 'src/*.md',
+				dest: 'docs/',
+				ext: '.html',
+				options: {
+					 template: 'docs/src/DocsTemplate.html'
+				}
+			}
+		},
+		
+		copy: {
+			stylecss: {
+				expand: true,
+				flatten: true,
+				src: 'css/build/style.min.css',
+				ext: '.css'
+			},
+			readme: {
+				expand: true,
+				flatten: true,
+				src: 'docs/src/README.md'
 			}
 		},
 
@@ -127,6 +146,13 @@ module.exports = function(grunt) {
 			css: {
 				files: ['css/*.css'],
 				tasks: ['autoprefixer', 'cssmin', 'copy'],
+				options: {
+					spawn: false
+				}
+			},
+			docs: {
+				files: ['docs/src/*.md'],
+				tasks: ['markdown'],
 				options: {
 					spawn: false
 				}
@@ -154,12 +180,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks("grunt-modernizr");
     grunt.loadNpmTasks('grunt-imageoptim');
+    grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
 
 	// Workflows
 	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'copy']);
+	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
 	
 	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
