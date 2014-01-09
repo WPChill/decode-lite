@@ -152,7 +152,7 @@ module.exports = function(grunt) {
 			},
 			docs: {
 				files: ['docs/src/*.md'],
-				tasks: ['markdown'],
+				tasks: ['markdown', 'copy'],
 				options: {
 					spawn: false
 				}
