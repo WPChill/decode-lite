@@ -1267,6 +1267,10 @@ body.single-attachment .entry-meta {
 	margin: 0 5%;
 }
 
+.no-touch .SidebarContent a:hover {
+	color: #007EA6;
+}
+
 .sidebar.left.visible, .sidebar.right.visible {
 	transform: translateX(0%);
 }

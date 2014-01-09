@@ -1304,6 +1304,10 @@ body.single-attachment .entry-meta {
 	margin: 0 5%;
 }
 
+.no-touch .SidebarContent a:hover {
+	color: #007EA6;
+}
+
 .sidebar.left.visible, .sidebar.right.visible {
 	-webkit-transform: translateX(0%);
 	-ms-transform: translateX(0%);
