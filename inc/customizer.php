@@ -267,6 +267,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	$wp_customize->add_setting( 'pinterest_username', array(
 		'default' => '',
 	) );
+	
+	$wp_customize->add_setting( 'fancy_username', array(
+		'default' => '',
+	) );
 
 	$wp_customize->add_setting( 'instagram_username', array(
 		'default' => '',
@@ -472,6 +476,13 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_control( 'pinterest_username', array(
 		'label'   => 'Pinterest ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 12,
+	) );
+	
+	$wp_customize->add_control( 'fancy_username', array(
+		'label'   => 'Fancy ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 12,

@@ -175,6 +175,17 @@
 				</a>
 				<?php endif; ?>
 				
+				<?php if ( get_theme_mod( 'fancy_username', '' ) !== '' ) : ?>
+				<a class="sociallink FancyLink" href="<?php echo esc_url( 'http://fancy.com/' . get_theme_mod( 'fancy_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<title>Fancy</title>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<path class="SocialIconFill" d="M100,0 C44.7714,0 0,44.7714 0,100 C0,155.2286 44.7714,200 100,200 C155.2286,200 200,155.2286 200,100 C200,44.7714 155.2286,0 100,0 Z M99.075,20.3126 C102.2932,20.329 105.8914,20.7546 110,21.6002 C118.1104,23.269 122.302,24.851 127.15,28.069 C135.7624,33.7856 140.836,41.5684 144.1876,54.2002 C145.348,58.5736 145.461,62.0684 145.4626,93.619 C145.4648,130.8112 145.5186,130.242 141.8626,132.9566 C140.0906,134.2722 138.8208,134.3924 124.2126,134.6442 L108.4688,134.913 L108.425,151.8006 C108.3746,172.6596 108.0866,174.708 104.7938,177.7256 C102.689,179.6548 101.824,179.9938 99.05,179.9568 C97.2536,179.9328 95.1666,179.6562 94.4124,179.3444 C93.6582,179.0326 92.2866,177.964 91.3624,176.9694 C89.1306,174.5674 88.6632,170.073 88.6186,150.4318 L88.5874,134.9194 L73.8562,134.6382 C60.326,134.3758 58.9722,134.237 57.2312,132.9444 C53.592,130.2424 53.642,130.8036 53.6312,93.4382 C53.6216,60.4038 53.6926,58.363 55.0374,53.3444 C57.182,45.3414 60.7218,39.2126 66.6436,33.232 C73.6946,26.111 77.0564,24.5046 92.1936,21.0196 C94.2974,20.5346 96.5718,20.2998 99.075,20.3126 Z" id="Fancy" fill="#444444"></path>
+					</g>
+				</svg>
+				</a>
+				<?php endif; ?>
+				
 				<?php if ( get_theme_mod( 'instagram_username', '' ) !== '' ) : ?>
 				<a class="sociallink InstagramLink" href="<?php echo esc_url( 'http://instagram.com/' . get_theme_mod( 'instagram_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
