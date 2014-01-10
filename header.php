@@ -120,6 +120,22 @@
 				</a>
 				<?php endif; ?>
 				
+				<?php if ( get_theme_mod( 'diaspora_id', '' ) !== '' ) : ?>
+				<a class="sociallink DiasporaLink" href="<?php
+					list($user, $host) = explode('@', get_theme_mod( 'diaspora_id' ));
+					$profileUrl = 'https://'.$host.'/u/'.$user;
+					echo esc_url( $profileUrl ); ?>" 
+				
+				<?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<title>Diaspora</title>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<path class="SocialIconFill" d="M100,0 C44.7714,0 0,44.7714 0,100 C0,155.2286 44.7714,200 100,200 C155.2286,200 200,155.2286 200,100 C200,44.7714 155.2286,0 100,0 Z M43.919708,67.9159292 L83.5839416,80.8539823 L83.5839416,35 L116.416058,35 L116.416058,80.8539823 L156.080292,67.9159292 L165,96.2654867 L124.576642,108.823009 L150.956204,146.685841 L126.664234,164 L100.284672,128.230088 L73.1459854,164 L48.8540146,146.685841 L75.4233577,108.823009 L35,96.2654867 L43.919708,67.9159292 Z" id="Diaspora" fill="#444444"></path>
+					</g>
+				</svg>
+				</a>
+				<?php endif; ?>
+								
 				<?php if ( get_theme_mod( 'vk_username', '' ) !== '' ) : ?>
 				<a class="sociallink VKLink" href="<?php echo esc_url( 'https://vk.com/' . get_theme_mod( 'vk_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 				<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">

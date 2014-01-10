@@ -248,6 +248,10 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'diaspora_id', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'vk_username', array(
 		'default' => '',
 	) );
@@ -446,39 +450,46 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 7,
 	) );
 	
+	$wp_customize->add_control( 'diaspora_id', array(
+		'label'   => 'Diaspora ' . __( 'Username', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 8,
+	) );
+	
 	$wp_customize->add_control( 'vk_username', array(
 		'label'   => 'VK ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 8,
+		'priority'=> 9,
 	) );
 
 	$wp_customize->add_control( 'dribbble_username', array(
 		'label'   => 'Dribbble ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 9,
+		'priority'=> 10,
 	) );
 
 	$wp_customize->add_control( 'behance_username', array(
 		'label'   => 'Behance ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 10,
+		'priority'=> 11,
 	) );
 
 	$wp_customize->add_control( 'linkedin_profile_url', array(
 		'label'   => 'Linkedin ' . __( 'Profile URL', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 11,
+		'priority'=> 12,
 	) );
 
 	$wp_customize->add_control( 'pinterest_username', array(
 		'label'   => 'Pinterest ' . __( 'Username', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 12,
+		'priority'=> 13,
 	) );
 	
 	$wp_customize->add_control( 'fancy_username', array(
