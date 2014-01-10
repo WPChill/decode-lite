@@ -54,6 +54,12 @@ function decode_setup() {
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
 	) ) );
+	
+	/**
+	 * Remove old, now unused theme modifications so that conflicts do not occur.
+	 */
+	remove_theme_mod ( 'show_site_navigation' );
+	remove_theme_mod ( 'linkedin_username' );
 
 	/**
 	 * This theme uses wp_nav_menu() once in header.php.
@@ -221,7 +227,7 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Register Custom Navigation Walker.
+ * Custom navigation walker to support Dropdown.js.
  */
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
