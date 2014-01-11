@@ -2,7 +2,7 @@
   "name": "Decode",
   "version": "2.9.0",
   "author": "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)",
-  "license": "GPLv2",
+  "license": "GPLv3",
   "repository": {
     "type": "git",
     "url": "https://github.com/ScottSmith95/Decode.git"
