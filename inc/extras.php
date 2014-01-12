@@ -70,8 +70,10 @@ function decode_wp_title($title, $sep, $sep_location) {
 	if ( is_feed() )
 		return $title;
  
-	if ($site_description && (is_home() || is_front_page()))
+	if ($site_description && (is_home() || is_front_page())) {
 		$custom = $sep . $site_description;
+		$title = '';
+	}
 
 	elseif(is_category())
 		$custom = $sep . __('Category', 'decode');
@@ -115,3 +117,28 @@ function decode_wp_title($title, $sep, $sep_location) {
  * wp_title filter, with priority 10 and 3 args
  */
 add_filter('wp_title', 'decode_wp_title', 10, 3);
+
+/**
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility for WP versions below 3.7
+ * that don't have this change:
+ * http://core.trac.wordpress.org/changeset/25574.
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @global WP_Query $wp_query WordPress Query object.
+ * @return void
+ */
+if ( ! function_exists( 'decode_setup_author' ) ) {
+
+function decode_setup_author() {
+        global $wp_query;
+
+        if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+                $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+        }
+}
+}
+add_action( 'wp', 'decode_setup_author' );

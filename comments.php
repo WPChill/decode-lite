@@ -47,7 +47,11 @@ if ( post_password_required() ) {
 				 * define decode_comment() and that will be used instead.
 				 * See decode_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'decode_comment', 'format' => 'html5' ) );
+				wp_list_comments( array(
+					'style'       => 'ol',
+					'short_ping'  => true,
+					'avatar_size' => 64
+				) );
 			?>
 		</ol><!-- .comment-list -->
 

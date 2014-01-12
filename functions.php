@@ -30,7 +30,7 @@ function decode_setup() {
      */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
-	// Specifies for the theme to use HTML 5 tags.
+	// Sets output for these items to HTML 5 markup.
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', ) );
 
 	// Add default posts and comments RSS feed links to head.
@@ -54,80 +54,24 @@ function decode_setup() {
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
 	) ) );
+	
+	/**
+	 * Remove old, now unused theme modifications so that conflicts do not occur.
+	 */
+	remove_theme_mod ( 'show_site_navigation' );
+	remove_theme_mod ( 'linkedin_username' );
 
 	/**
 	 * This theme uses wp_nav_menu() once in header.php.
 	 */
 	register_nav_menus( array(
-		'navigation' => __( 'Nav Menu', 'decode' ),
+		'header-menu'  => __( 'Header Menu', 'decode' ),
+		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
+		'footer-menu' => __( 'Footer Menu', 'decode' )
 	) );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
-
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
-if ( ! function_exists( 'decode_widgets_init' ) ) {
-
-function decode_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'decode' ),
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-}
-add_action( 'widgets_init', 'decode_widgets_init' );
-
-/**
- * Setup editor styles.
- */
-if ( ! function_exists( 'decode_add_editor_styles' ) ) {
-
-function decode_add_editor_styles() {
-	add_editor_style( 'css/editor-style.min.css' );
-}
-}
-add_action( 'init', 'decode_add_editor_styles' );
-
-/**
- * Add Google Profile to user contact methods.
- */
-function decode_add_google_profile( $contactmethods ) {
-	// Add Google Profiles
-	$contactmethods['google_profile'] = 'Google Profile URL';
-	return $contactmethods;
-}
-add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
-
-/**
- * Highlight search terms in search results.
- */
-if ( ! function_exists( 'decode_search_excerpt_highlight' ) ) {
-
-function decode_search_excerpt_highlight() {
-    $excerpt = get_the_excerpt();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
-
-    echo '<p>' . $excerpt . '</p>';
-}
-}
-
-if ( ! function_exists( 'decode_search_title_highlight' ) ) {
-
-function decode_search_title_highlight() {
-    $title = get_the_title();
-    $keys = implode('|', explode(' ', get_search_query()));
-    $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
-
-    echo $title;
-}
-}
 
 /**
  * Register styles and scripts.
@@ -137,16 +81,16 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.8.4" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.9" );
 
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 
 	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
-		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/build/decode.js', array(), '2.8.4', false );
+		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/build/decode.js', array(), '2.9', true );
 	}
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.js', array('jquery'), '2.8.4', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.js', array('jquery'), '2.9', true );
 	}
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
@@ -162,50 +106,96 @@ function decode_scripts() {
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
 /**
+ * Register widgetized area and update sidebar with default widgets.
+ */
+if ( ! function_exists( 'decode_widgets_init' ) ) {
+
+function decode_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'decode' ),
+		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+	) );
+}
+}
+add_action( 'widgets_init', 'decode_widgets_init' );
+
+/**
  * Add custom colors to CSS.
  */
-
 if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
 
 function decode_customize_css() {
     ?>
          <style type="text/css">
-        body, .sidebar, .SidebarTop, .main-navigation ul ul {
+        body, .sidebar, .SidebarTop, .menu ul ul {
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .main-navigation a, .no-touch .main-navigation a:hover, .no-touch .main-navigation a:active, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
-			color: <?php echo get_theme_mod('text_color'); ?>;
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, 
+		.menu a,
+		
+		.entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
+		}
+		
+		.menu .menu-item-has-children > a::after, .menu .page_item_has_children > a::after {
+			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
 	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
 		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('text_color'); ?>;
+			fill: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 	<?php else : ?>
 		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('accent_color'); ?>;
+			fill: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 	<?php endif; ?>
 
-		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .main-navigation a:hover, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover, .main-navigation li.current_page_item > a, .main-navigation li.current-menu-item > a {
-			color: <?php echo get_theme_mod('accent_color'); ?>;
+		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover {
+			color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
-		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
-			border-color: <?php echo get_theme_mod('accent_color'); ?>;
+		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
+			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
+		}
+		
+		.no-touch .menu > ul > .menu-item-has-children > a:hover::after, .no-touch .menu > ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after {
+			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
+		}
+		
+		.horizontal-menu ul ul .menu-item-has-children > a:hover::after, .horizontal-menu ul ul .page_item_has_children > a:hover::after, .horizontal-menu ul ul li.open > a::after {
+			border-left-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
+		}
+		
+		.footer-menu > ul > .menu-item-has-children > a:hover::after, .footer-menu > ul > .page_item_has_children > a:hover::after, .footer-menu > ul > li.open > a::after {
+			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
-		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .main-navigation a:active, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .menu li.current_page_item > a:hover, .main-navigation li.current-menu-item > a:hover, .no-touch .decode-reply-tool-plugin .replylink:active {
-			color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
+		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .no-touch .SidebarContent a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active {
+			color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
 		}
 
 		.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
-			border-color: <?php echo get_theme_mod('secondary_accent_color'); ?>;
+			border-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
+		}
+		
+		.no-touch .menu > ul > .menu-item-has-children > a:active::after, .no-touch .menu > ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after {
+			border-top-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
+		}
+		
+		.horizontal-menu ul ul .menu-item-has-children > a:active::after, .horizontal-menu ul ul .page_item_has_children > a:active::after {
+			border-left-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
+		}
+		
+		.footer-menu > ul > .menu-item-has-children > a:active::after, .footer-menu > ul > .page_item_has_children > a:active::after {
+			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
 		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {
-			color: <?php echo get_theme_mod('secondary_text_color'); ?>;
+			color: <?php echo get_theme_mod('secondary_text_color', '#808080'); ?>;
 		}
 		
 		<?php echo get_theme_mod('custom_css', ''); ?>
@@ -237,21 +227,62 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Custom navigation walker to support Dropdown.js.
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Setup editor styles.
+ */
+if ( ! function_exists( 'decode_add_editor_styles' ) ) {
+
+function decode_add_editor_styles() {
+	add_editor_style( 'css/build/editor-style.min.css' );
+}
+}
+add_action( 'init', 'decode_add_editor_styles' );
+
+/**
+ * Add Google Profile to user contact methods.
+ */
+function decode_add_google_profile( $contactmethods ) {
+	// Add Google Profiles
+	$contactmethods['google_profile'] = 'Google Profile URL';
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
+
+/**
+ * Highlight search terms in search results.
+ */
+function decode_highlight_search_results($text){
+     if(is_search()){
+     $sr = get_search_query();
+     $keys = implode('|', explode(' ', get_search_query()));
+     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
+     }
+     return $text;
+}
+add_filter('the_excerpt', 'decode_highlight_search_results');
+add_filter('the_title', 'decode_highlight_search_results');
 
 /**
  * Link to post in excerpt [...] links.
  */
-if ( ! function_exists( 'new_excerpt_more' ) ) {
+if ( ! function_exists( 'link_ellipses' ) ) {
 
-function new_excerpt_more( $more ) {
+function link_ellipses( $more ) {
+	if(!is_search()){
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
+	}
 }
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'link_ellipses');
 
 /**
  * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
