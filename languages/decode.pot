@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Decode v2.9.0\n"
+"Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-10 16:56-0600\n"
-"PO-Revision-Date: 2014-01-10 16:56-0600\n"
+"POT-Creation-Date: 2014-01-12 14:28-0600\n"
+"PO-Revision-Date: 2014-01-12 14:28-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -125,61 +125,61 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:36 ../comments.php:56
+#: ../comments.php:36 ../comments.php:60
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:37 ../comments.php:57
+#: ../comments.php:37 ../comments.php:61
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: ../comments.php:38 ../comments.php:58
+#: ../comments.php:38 ../comments.php:62
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: ../comments.php:68
+#: ../comments.php:72
 msgid "Comments are closed."
 msgstr ""
 
-#: ../comments.php:72
+#: ../comments.php:76
 msgid "Leave a Reply"
 msgstr ""
 
-#: ../comments.php:73
+#: ../comments.php:77
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: ../comments.php:74
+#: ../comments.php:78
 msgid "Cancel reply"
 msgstr ""
 
-#: ../comments.php:75
+#: ../comments.php:79
 msgid "Post Comment"
 msgstr ""
 
-#: ../comments.php:79
+#: ../comments.php:83
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: ../comments.php:80
+#: ../comments.php:84
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../comments.php:81
+#: ../comments.php:85
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../comments.php:82
+#: ../comments.php:86
 msgid "Your email address will not be published."
 msgstr ""
 
-#: ../comments.php:83
+#: ../comments.php:87
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -216,7 +216,7 @@ msgstr ""
 #: ../content-page.php:21 ../content-single.php:24 ../content-single.php:60
 #: ../content-single.php:99 ../content.php:18 ../content.php:53
 #: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
-#: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
+#: ../image.php:101
 msgid "Edit"
 msgstr ""
 
@@ -303,26 +303,6 @@ msgstr ""
 
 #: ../page-explore.php:46
 msgid "Categories"
-msgstr ""
-
-#: ../searchform.php:10
-msgctxt "assistive text"
-msgid "Search"
-msgstr ""
-
-#: ../searchform.php:11
-msgctxt "placeholder"
-msgid "Search&hellip;"
-msgstr ""
-
-#: ../searchform.php:11
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: ../searchform.php:13
-msgctxt "submit button"
-msgid "Search"
 msgstr ""
 
 #: ../sidebar.php:14
@@ -596,37 +576,14 @@ msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../inc/template-tags.php:81
-msgid "Pingback:"
-msgstr ""
-
-#: ../inc/template-tags.php:91
-#, php-format
-msgid "%s <span class=\"says\">says:</span>"
-msgstr ""
-
-#: ../inc/template-tags.php:97
-#, php-format
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: ../inc/template-tags.php:104
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: ../inc/template-tags.php:118
-msgid "Reply"
-msgstr ""
-
-#: ../inc/template-tags.php:199
+#: ../inc/template-tags.php:138
 #, php-format
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
 msgstr ""
 
-#: ../inc/template-tags.php:207
+#: ../inc/template-tags.php:146
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
