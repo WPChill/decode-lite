@@ -133,15 +133,16 @@ function decode_customize_css() {
 			background: <?php echo '#' . get_background_color(); ?>;
 		}
 
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, 
-		.menu a,
-		
-		.entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
 			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
-		.menu .menu-item-has-children > a::after, .menu .page_item_has_children > a::after {
+		.menu > ul > .menu-item-has-children > a::after, .menu > ul > .page_item_has_children > a::after {
 			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
+		}
+		
+		.footer-menu > ul > .menu-item-has-children > a::after, .footer-menu > ul > .page_item_has_children > a::after {
+			border-bottom-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
 	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
@@ -191,7 +192,7 @@ function decode_customize_css() {
 		}
 		
 		.footer-menu > ul > .menu-item-has-children > a:active::after, .footer-menu > ul > .page_item_has_children > a:active::after {
-			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
+			border-bottom-color: <?php echo get_theme_mod('secondary_accent_color', '#009BCD'); ?>;
 		}
 
 		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {
