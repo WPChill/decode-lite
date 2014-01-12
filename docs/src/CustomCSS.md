@@ -28,6 +28,9 @@ This is hidden until the form is clicked on, but this will hide it at all times.
 ### Remove the border between the header and the main section of the site:
 `.site-header { border-bottom: none; }`
 
+### Remove the the border from below posts:
+`.post .entry-meta { border-bottom: none; }`
+
 ### Remove the the border under hovered links in an entry:
 `.no-touch .entry-content a:hover { border-bottom: none; }`
 
