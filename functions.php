@@ -141,6 +141,10 @@ function decode_customize_css() {
 			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
+		.horizontal-menu ul ul .menu-item-has-children > a::after, .horizontal-menu ul ul .page_item_has_children > a::after {
+			border-left-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
+		}
+		
 		.footer-menu > ul > .menu-item-has-children > a::after, .footer-menu > ul > .page_item_has_children > a::after {
 			border-bottom-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}

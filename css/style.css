@@ -772,8 +772,8 @@ object {
 	color: #444444;
 }
 
-.menu .menu-item-has-children > a::after,
-.menu .page_item_has_children > a::after {
+.menu > ul > .menu-item-has-children > a::after,
+.menu > ul > .page_item_has_children > a::after {
 	border-top-color: #444444;
 }
 
@@ -795,6 +795,11 @@ object {
 	.no-touch .menu > ul > .menu-item-has-children > a:active::after,
 	.no-touch .menu > ul > .page_item_has_children > a:active::after {
 		border-top-color: #007EA6;
+	}
+	
+	.horizontal-menu ul ul .menu-item-has-children > a::after,
+	.horizontal-menu ul ul .page_item_has_children > a::after {
+		border-left-color: #444444;
 	}
 
 	.horizontal-menu ul ul .menu-item-has-children > a:hover::after,
@@ -827,7 +832,11 @@ object {
 	.sidebar-menu ul li.open > a::after {
 		border-top-color: #007EA6;
 	}
-	
+
+.footer-menu > ul > .menu-item-has-children > a::after,
+.footer-menu > ul > .page_item_has_children > a::after {
+	border-bottom-color: #444444;
+}
 
 .footer-menu > ul > .menu-item-has-children > a:hover::after,
 .footer-menu > ul > .page_item_has_children > a:hover::after,
