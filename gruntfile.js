@@ -6,9 +6,9 @@ module.exports = function(grunt) {
         
         modernizr: {
 
-			"devFile" : "js/modernizr-dev.js",
+			"devFile" : "js/src/modernizr-dev.js",
 
-			"outputFile" : "js/modernizr.js",
+			"outputFile" : "js/src/modernizr.js",
 
 			"extra" : {
 				"shiv" : false,
@@ -41,31 +41,31 @@ module.exports = function(grunt) {
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
-				src: ['modernizr.js', 'decode.js'],
+				src: ['src/modernizr.js', 'src/decode.js'],
 				srcRoot: '../',
-				dest: 'build/decode.js',
-				destMap: 'build/decode.js.map'
+				dest: 'decode.js',
+				destMap: 'srcmaps/decode.js.map'
 			},
 			build_decode_with_sidebar: {
 				cwd: 'js/',
-				src: ['modernizr.js', 'decode.js', 'sidebar.js', 'fastclick.js'],
+				src: ['src/modernizr.js', 'src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
 				srcRoot: '../',
-				dest: 'build/decode-with-sidebar.js',				
-				destMap: 'build/decode-with-sidebar.js.map'
+				dest: 'decode-with-sidebar.js',				
+				destMap: 'srcmaps/decode-with-sidebar.js.map'
 			},
 			respond: {
 				cwd: 'js/',
-				src: ['respond.js'],
+				src: ['src/respond.js'],
 				srcRoot: '../',
-				dest: 'build/respond.js',				
-				destMap: 'build/respond.js.map'
+				dest: 'respond.js',				
+				destMap: 'srcmaps/respond.js.map'
 			},
 			dropdown: {
 				cwd: 'js/',
-				src: ['dropdown.js'],
+				src: ['src/dropdown.js'],
 				srcRoot: '../',
-				dest: 'build/dropdown.js',				
-				destMap: 'build/dropdown.js.map'
+				dest: 'dropdown.js',				
+				destMap: 'srcmaps/dropdown.js.map'
 			},
 		},
 
