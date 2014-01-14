@@ -1743,7 +1743,13 @@ li.comment {
 }
 
 .admin-bar .SidebarLink {
-	top: 7.5%;
+	top: calc(2.5% + 32px);
+}
+
+@media screen and (max-width:782px) {
+	.admin-bar .SidebarLink {
+	top: calc(2.5% + 46px);
+}
 }
 
 .SidebarLink svg, .SidebarLink img {
