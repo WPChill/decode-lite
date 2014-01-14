@@ -137,7 +137,7 @@ module.exports = function(grunt) {
 
         watch: {
 			scripts: {
-				files: ['js/*.js'],
+				files: ['js/src/*.js'],
 				tasks: ['jsmin-sourcemap'],
 				options: {
 					spawn: false
