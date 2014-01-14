@@ -1582,6 +1582,10 @@ li.comment {
 	margin-top: 7.5%;
 }
 
+textarea#comment {
+	height: 7em;
+}
+
 .form-allowed-tags {
 	display: none;
 	font-size: 0.9em;

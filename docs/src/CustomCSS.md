@@ -19,7 +19,7 @@
 
 ### Increase size of comment box by default:
 `textarea#comment { height: 4em; }`<br>
-2.15em is the default and fits one line of text, so gems will fit about two lines, etc.
+7em is the default.
 
 ### Hide note about allowed tags under comment form:
 `.form-allowed-tags { display: none !important; }`<br>
