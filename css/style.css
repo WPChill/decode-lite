@@ -1543,9 +1543,21 @@ textarea#comment {
 }
 
 .form-allowed-tags {
-	display: none;
+	transition: max-height 0.35s ease-out, opacity 0.35s ease-out, margin-bottom 0.35s ease-out;
 	font-size: 0.9em;
+	max-height: 0;
+	opacity: 0;
+	margin-bottom: 0;
+	overflow: hidden;
 }
+
+.form-allowed-tags.visible {
+	max-height: 7em;
+	opacity: 1;
+	margin-bottom: 1em;
+}
+
+
 
 
 /* =Search

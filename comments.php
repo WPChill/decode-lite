@@ -88,12 +88,18 @@ if ( post_password_required() ) {
 	?>
 	
 	
-	<script>
-		jQuery(document).ready(function($){
-			$("textarea#comment").click(function(){
-				$('.form-allowed-tags').slideDown('250');
-			});
-		});
+	<script>		
+		function hasClass(el, cls) {
+			return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+		}
+		
+		var target = document.querySelector('.form-allowed-tags');
+		
+		document.querySelector('textarea#comment').addEventListener('click', function() {
+			if (!hasClass(target, 'visible')) {
+				target.className += ' ' + 'visible';
+			}
+		}, false);
 	</script>
 
 </div><!-- #comments -->
