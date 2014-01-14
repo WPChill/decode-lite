@@ -38,6 +38,10 @@ module.exports = function(grunt) {
 			"matchCommunityTests" : false,
 		},
 		
+		jshint: {
+			all: ['Gruntfile.js', 'js/src/sidebar.js']
+		},
+		
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
@@ -74,15 +78,15 @@ module.exports = function(grunt) {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'firefox 24', 'opera 12.1'],
 				map: true
 			},
-            prefix: {
-            	expand: true,
-            	flatten: true,
-            	cwd: 'css/',
-                src: ['*.css'],
-                dest: 'css/build/',
-                ext: '.prefixed.css'
-            }
-        },
+			prefix: {
+				expand: true,
+				flatten: true,
+				cwd: 'css/',
+				src: ['*.css'],
+				dest: 'css/build/',
+				ext: '.prefixed.css'
+			}
+		},
 
         cssmin: {
 			minify: {
@@ -116,7 +120,7 @@ module.exports = function(grunt) {
 				dest: 'docs/',
 				ext: '.html',
 				options: {
-					 template: 'docs/src/DocsTemplate.html'
+					template: 'docs/src/DocsTemplate.html'
 				}
 			}
 		},
@@ -174,6 +178,7 @@ module.exports = function(grunt) {
     });
     
     // Plugin List
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jsmin-sourcemap');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -186,7 +191,7 @@ module.exports = function(grunt) {
 
 	// Workflows
 	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
+	grunt.registerTask('default', ['modernizr', 'jshint', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
 	
 	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
@@ -194,4 +199,4 @@ module.exports = function(grunt) {
 	// $ grunt dev: Watches for changes while developing, start MAMP server
 	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
 
-}
+};

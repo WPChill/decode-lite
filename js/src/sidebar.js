@@ -1,29 +1,3 @@
-// Aliases both addEventListener and attachEvent so legacy IE (> 8) is supported
-var addEvent = (function () {
-   var filter = function(el, type, fn) {
-      for ( var i = 0, len = el.length; i < len; i++ ) {
-         addEvent(el[i], type, fn);
-      }
-   };
-   if ( document.addEventListener ) {
-      return function (el, type, fn) {
-         if ( el && el.nodeName || el === window ) {
-            el.addEventListener(type, fn, false);
-         } else if (el && el.length) {
-            filter(el, type, fn);
-         }
-      };
-   }
- 
-   return function (el, type, fn) {
-      if ( el && el.nodeName || el === window ) {
-         el.attachEvent('on' + type, function () { return fn.call(el, window.event); });
-      } else if ( el && el.length ) {
-         filter(el, type, fn);
-      }
-   };
-})();
-
 // Just a nice function to toggle classes
 function toggleClass(element, className){
     if (!element || !className){
@@ -40,13 +14,13 @@ function toggleClass(element, className){
     element.className = classString;
 }
 
-// Calls functions on each element
-addEvent( document.getElementById('sidebar_link'), 'click', function() {
-	toggleClass(document.getElementById('sidebar'), 'visible')}
-);
+// Runs FastClick on body
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
 
-addEvent( document.getElementById('sidebar_top'), 'click', function() {
-	toggleClass(document.getElementById('sidebar'), 'visible')}
-);
-
-// 50 lines of JS is the price of compatibility with IE 8. Curse you. 
+[].forEach.call( document.querySelectorAll("#sidebar_link, #sidebar_top"), function(el) {
+	el.addEventListener('click', function() {
+		toggleClass(document.getElementById('sidebar'), 'visible');
+	}, false);
+});
