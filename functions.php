@@ -90,7 +90,7 @@ function decode_scripts() {
 	}
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.js', array('jquery'), '2.9', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.js', array(), '2.9', true );
 	}
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
