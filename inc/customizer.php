@@ -36,35 +36,36 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
  	$wp_customize->add_section( 'decode_header_options', array(
     	'title'   => __( 'Header Options', 'decode' ),
-		'priority'=> 32,
+		'priority'=> 32
 	) );
 
 
 	$wp_customize->add_setting( 'header_image', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'favicon_image', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'show_site_title', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_site_description', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_header_menu', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'html_description', array(
 		'default' => '',
+		'transport' => 'postMessage'
 	) );
 
 
@@ -735,73 +736,73 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_section( 'decode_reading_options', array(
     	'title'   => __( 'Reading Options', 'decode' ),
-		'priority'=> 37,
+		'priority'=> 37
     ) );
 
 
 	$wp_customize->add_setting( 'use_excerpts', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_excerpts', array(	// Yep, that's the longest setting name I have.
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_singles', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_author_section', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'entry_date_position', array(
 		'default' => 'below',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_entry_date_on_excerpts', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_page_headers', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_all_post_types', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
 		'default' => '',
-		'transport' => 'postMessage',
+		'transport' => 'postMessage'
 	) );
 
 
@@ -809,42 +810,42 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'label'   => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 1,
+		'priority'=> 1
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
 		'label'   => __( 'Display posts\' featured images when excerpts are shown on main page.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 2,
+		'priority'=> 2
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_singles', array(
 		'label'   => __( 'Display a post\'s featured image on its individual page.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 3,
+		'priority'=> 3
 	) );
 
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 4,
+		'priority'=> 4
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
 		'label'   => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 5,
+		'priority'=> 5
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
 		'label'   => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 6,
+		'priority'=> 6
 	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
@@ -855,49 +856,49 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 			'above'  => __( 'Above Header', 'decode' ),
 			'below' => __( 'Below Header', 'decode' ),
         ),
-		'priority'=> 7,
+		'priority'=> 7
 	) );
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'   => __( 'Show Page Headers', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 8,
+		'priority'=> 8
 	) );
 	
 	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
 		'label'   => __( 'Show entry date for post excepts on the main page', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 9,
+		'priority'=> 9
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 10,
+		'priority'=> 10
 	) );
 	
 	$wp_customize->add_control( 'show_all_post_types', array(
 		'label'   => __( 'Show all post types, including custom post types', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 11,
+		'priority'=> 11
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 12,
+		'priority'=> 12
 	) );
 	
 	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
 		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 		'section' => 'decode_reading_options',
 		'settings'=> 'site_colophon',
-		'priority'=> 13,
+		'priority'=> 13
 	) ) );
 	
 	
@@ -908,13 +909,13 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
  
  	$wp_customize->add_section( 'decode_other_options', array(
     	'title'   => __( 'Other Options', 'decode' ),
-		'priority'=> 38,
+		'priority'=> 38
     ) );
     
     
     $wp_customize->add_setting( 'custom_css', array(
 		'default' => '',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	
@@ -922,7 +923,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'label'   => __( 'Custom CSS', 'decode' ),
 		'section' => 'decode_other_options',
 		'settings'=> 'custom_css',
-		'priority'=> 1,
+		'priority'=> 1
 	) ) );
 
 
@@ -933,58 +934,58 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 	$wp_customize->add_setting( 'accent_color', array(
 		'default'   => '#009BCD',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'secondary_accent_color', array(
 		'default'   => '#007EA6',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'text_color', array(
 		'default'   => '#444444',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'secondary_text_color', array(
 		'default'   => '#808080',
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'accent_color_icons', array(
 		'default'   => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
 		'label'      => __( 'Accent Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'accent_color',
+		'settings'   => 'accent_color'
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
 		'label'      => __( 'Active Link Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'secondary_accent_color',
+		'settings'   => 'secondary_accent_color'
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
 		'label'      => __( 'Text Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'text_color',
+		'settings'   => 'text_color'
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
 		'label'      => __( 'Secondary Text Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'secondary_text_color',
+		'settings'   => 'secondary_text_color'
 	) ) );
 	
 	$wp_customize->add_control( 'accent_color_icons', array(
 		'label'   => __( 'Use accent color instead of text color for icons', 'decode' ),
 		'section' => 'colors',
-		'type'    => 'checkbox',
+		'type'    => 'checkbox'
 	) );
 
 }

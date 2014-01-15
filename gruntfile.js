@@ -71,6 +71,13 @@ module.exports = function(grunt) {
 				dest: 'dropdown.js',				
 				destMap: 'srcmaps/dropdown.js.map'
 			},
+			customizer: {
+				cwd: 'js/',
+				src: ['src/customizer.js'],
+				srcRoot: '../',
+				dest: 'customizer.js',				
+				destMap: 'srcmaps/customizer.js.map'
+			}
 		},
 
 		autoprefixer: {
