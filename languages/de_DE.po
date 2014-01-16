@@ -3,10 +3,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Decode v2.9\n"
+"Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-01-12 14:28-0600\n"
-"PO-Revision-Date: 2014-01-12 14:29-0600\n"
+"PO-Revision-Date: 2014-01-16 13:06-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -34,7 +34,7 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Sieht so aus als g&auml;be es hier nichts. Wie w&auml;r&rsquo;s mit einem "
+"Sieht so aus, als g&auml;be es hier nichts. Wie w&auml;r&rsquo;s mit einem "
 "der nachfolgenden Links oder einer Suche?"
 
 #: ../404.php:26
@@ -43,7 +43,7 @@ msgstr "Versuch es in den Monatsarchiven."
 
 #: ../404.php:32
 msgid "Most Used Categories"
-msgstr "Meist verwendete Kategorien"
+msgstr "Am häufigsten verwendete Kategorien"
 
 #: ../archive.php:27
 #, php-format
@@ -58,7 +58,7 @@ msgstr "Monat: %s"
 #: ../archive.php:30
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "F Y"
+msgstr ""
 
 #: ../archive.php:33
 #, php-format
@@ -68,7 +68,7 @@ msgstr "Jahr: %s"
 #: ../archive.php:33
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "Y"
+msgstr ""
 
 #: ../archive.php:36
 msgid "Asides"
@@ -97,15 +97,16 @@ msgstr "Links"
 
 #: ../archive.php:54
 msgid "Statuses"
-msgstr ""
+msgstr "Status"
 
 #: ../archive.php:57
+#, fuzzy
 msgid "Audios"
-msgstr ""
+msgstr "Audio-Posts"
 
 #: ../archive.php:60
 msgid "Chats"
-msgstr ""
+msgstr "Chats"
 
 #: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
 #: ../inc/extras.php:88
@@ -144,7 +145,7 @@ msgstr "Neuere Kommentare &rarr;"
 
 #: ../comments.php:72
 msgid "Comments are closed."
-msgstr "Kommentare geschlossen."
+msgstr "Kommentare geschlossen"
 
 #: ../comments.php:76
 msgid "Leave a Reply"
@@ -172,7 +173,7 @@ msgstr "Kommentar"
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
-"Du musst <a href=\"%s\">angemeldet sein</a> um einen Kommentar zu schreiben."
+"Du musst <a href=\"%s\">angemeldet sein</a>, um einen Kommentar zu schreiben."
 
 #: ../comments.php:85
 #, php-format
@@ -185,7 +186,7 @@ msgstr ""
 
 #: ../comments.php:86
 msgid "Your email address will not be published."
-msgstr "Deine Email Adresse wird nicht verรถffentlicht."
+msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
 
 #: ../comments.php:87
 #, php-format
@@ -193,7 +194,7 @@ msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
 "and attributes: %s"
 msgstr ""
-"Du kannst folgende <abbr title=\"Hyper Text Markup Language\">HTML</abbr> "
+"Du kannst folgende <abbr title=\"Hyper Text Markup Language\">HTML</abbr>-"
 "Schnipsel verwenden: %s"
 
 #: ../content-none.php:13
@@ -205,24 +206,24 @@ msgstr "Nichts gefunden"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit deinen Posts zu ver&ouml;ffentlichen? <a href=\"%1$s\">Beginne hier</"
-"a>."
+"Bereit, deinen ersten Post zu ver&ouml;ffentlichen? <a href=\"%1$s\">Beginne "
+"hier</a>."
 
 #: ../content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber nichts passt auf deine Suche. Bitte versuche es mit "
-"anderen Suchbegriffen."
+"Entschuldigung, aber es gibt keine Treffer für deine Suche. Bitte versuche "
+"es mit anderen Suchbegriffen."
 
 #: ../content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Sieht so aus als k&ouml;nnten wir nicht finden nach was du suchst. "
-"Vielleicht hilft die Suche weiter."
+"Sieht so aus, als k&ouml;nnten wir nicht finden, was du suchst. Vielleicht "
+"hilft die Suche weiter."
 
 #: ../content-page.php:18 ../content-single.php:11 ../content-single.php:86
 #: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
@@ -253,7 +254,7 @@ msgstr "Abgelegt in&#58; "
 
 #: ../content.php:15 ../content.php:50 ../content.php:131
 msgid "Leave a comment"
-msgstr "Schreibe eine Kommentar"
+msgstr "Schreibe einen Kommentar"
 
 #: ../content.php:15 ../content.php:50 ../content.php:131
 msgid "1 Comment"
@@ -275,7 +276,7 @@ msgstr "%1$s von %2$s"
 #: ../functions.php:68
 #, fuzzy
 msgid "Header Menu"
-msgstr "Header Bild"
+msgstr "Header-Bild"
 
 #: ../functions.php:69
 #, fuzzy
@@ -283,9 +284,8 @@ msgid "Sidebar Menu"
 msgstr "Seitenleiste"
 
 #: ../functions.php:70
-#, fuzzy
 msgid "Footer Menu"
-msgstr "Header Bild"
+msgstr ""
 
 #: ../functions.php:115
 msgid "Sidebar"
@@ -335,11 +335,11 @@ msgstr "Navigation anzeigen"
 
 #: ../inc/customizer.php:38
 msgid "Header Options"
-msgstr "Header Einstellungen"
+msgstr "Header-Einstellungen"
 
 #: ../inc/customizer.php:72
 msgid "Header Image"
-msgstr "Header Bild"
+msgstr "Header-Bild"
 
 #: ../inc/customizer.php:79
 msgid "Favicon Image (recommended to be a PNG)"
@@ -356,27 +356,27 @@ msgstr "Seitenbeschreibung anzeigen"
 #: ../inc/customizer.php:100
 #, fuzzy
 msgid "Show Header Menu"
-msgstr "Header Bild"
+msgstr "Zeige Seiten-Header"
 
 #: ../inc/customizer.php:107
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
 msgstr ""
-"HTML f&uuml;r die Beschreibung. Falls du willst ersetze deine Blog "
-"Beschreibung mit HTML Code."
+"HTML f&uuml;r die Beschreibung, falls du deine Blog-Beschreibung durch HTML-"
+"Code ersetzen möchtest"
 
 #: ../inc/customizer.php:120
 msgid "Sidebar Options"
-msgstr "Sidebar-Einstellungen"
+msgstr "Seitenleisten-Einstellungen"
 
 #: ../inc/customizer.php:144
 msgid "Enable Sidebar"
-msgstr "Sidebar aktivieren"
+msgstr "Seitenleiste aktivieren"
 
 #: ../inc/customizer.php:151
 msgid "Sidebar Position"
-msgstr "Sidebar Position"
+msgstr "Position der Seitenleiste"
 
 #: ../inc/customizer.php:155
 msgid "Left"
@@ -388,11 +388,11 @@ msgstr "Rechts"
 
 #: ../inc/customizer.php:162
 msgid "Sidebar Button Position"
-msgstr "Sidebar Button Position"
+msgstr "Seitenleiste Button Position"
 
 #: ../inc/customizer.php:173
 msgid "Always Visible Sidebar"
-msgstr "Sidebar immer sichtbar"
+msgstr "Seitenleiste immer sichtbar"
 
 #: ../inc/customizer.php:191
 msgid "Discussion Options"
@@ -412,7 +412,7 @@ msgstr "Social Icons anzeigen"
 
 #: ../inc/customizer.php:416
 msgid "Open Links in New Tab/Window"
-msgstr "Öffne Links in einem neuen Tab/Fenster"
+msgstr "Links in neuem Tab/Fenster öffnen"
 
 #: ../inc/customizer.php:423 ../inc/customizer.php:430
 #: ../inc/customizer.php:437 ../inc/customizer.php:444
@@ -436,16 +436,16 @@ msgstr "Benutzername"
 
 #: ../inc/customizer.php:444
 msgid " (or the long number in your profile URL)"
-msgstr " (oder die lange Nummer in deiner Profil URL)"
+msgstr " (oder die lange Nummer in deiner Profil-URL)"
 
 #: ../inc/customizer.php:486
 msgid "Profile URL"
-msgstr "Profil URL"
+msgstr "Profil-URL"
 
 #: ../inc/customizer.php:591 ../inc/customizer.php:598
 #: ../inc/customizer.php:605
 msgid "Site URL"
-msgstr "Seiten URL"
+msgstr "Seiten-URL"
 
 #: ../inc/customizer.php:612 ../inc/customizer.php:640
 #: ../inc/customizer.php:654
@@ -454,15 +454,15 @@ msgstr ""
 
 #: ../inc/customizer.php:703
 msgid "Group Name"
-msgstr ""
+msgstr "Gruppen-Name"
 
 #: ../inc/customizer.php:717
 msgid "RSS Feed"
-msgstr "RSS Feed"
+msgstr "RSS-Feed"
 
 #: ../inc/customizer.php:724
 msgid "Email Address"
-msgstr "Email Adresse"
+msgstr "E-Mail-Adresse"
 
 #: ../inc/customizer.php:737
 msgid "Reading Options"
@@ -475,12 +475,16 @@ msgstr ""
 "Zeige Ausschnitte anstelle des vollen Textes an. Haftnotizen ausgenommen."
 
 #: ../inc/customizer.php:816
+#, fuzzy
 msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
+"Post-Bilder anzeigen, wenn Ausschnitte auf der Hauptseite angezeigt werden"
 
 #: ../inc/customizer.php:823
+#, fuzzy
 msgid "Display a post's featured image on its individual page."
 msgstr ""
+"Post-Bilder anzeigen, wenn Ausschnitte auf der Hauptseite angezeigt werden"
 
 #: ../inc/customizer.php:830
 msgid "Show tags on front page (tags will be shown on post's individual page)"
@@ -503,23 +507,23 @@ msgstr ""
 
 #: ../inc/customizer.php:851
 msgid "Entry Date Position"
-msgstr "Datum Position"
+msgstr "Datums-Position eingeben"
 
 #: ../inc/customizer.php:855
 msgid "Above Header"
-msgstr "Am Anfang"
+msgstr "Über dem Header"
 
 #: ../inc/customizer.php:856
 msgid "Below Header"
-msgstr "Am Ende"
+msgstr "Unter dem Header"
 
 #: ../inc/customizer.php:862
 msgid "Show Page Headers"
-msgstr ""
+msgstr "Zeige Seiten-Header"
 
 #: ../inc/customizer.php:869
 msgid "Show entry date for post excepts on the main page"
-msgstr ""
+msgstr "Zeige Eintrags-Datum für Post-Ausschnitte auf der Hauptseite"
 
 #: ../inc/customizer.php:876
 msgid "Add an arrow before the title of a link post"
@@ -527,20 +531,21 @@ msgstr "F&uuml;ge einen Pfeil vor Titeln eines Link-Posts ein"
 
 #: ../inc/customizer.php:883
 msgid "Show all post types, including custom post types"
-msgstr ""
+msgstr "Zeige alle Post-Typen, inklusive benutzerdefinierter Typen"
 
 #: ../inc/customizer.php:890
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
 msgstr ""
-"Zeige Theme Info (zeige ein Zeile รผber das Theme und dessen Entwickler am "
-"unteren Seitenrand an)"
+"Zeige Theme-Info (zeige ein Zeile Text &uuml;ber das Theme und dessen "
+"Entwickler am unteren Seitenrand an)"
 
 #: ../inc/customizer.php:897
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
-"Text (Schlussschrift, Copyright, Abspann, etc.) die Fusszeile der Seite"
+"Text (Schlussschrift, Copyright, Abspann, etc.) f&uuml;r die Fusszeile der "
+"Seite"
 
 #: ../inc/customizer.php:910
 msgid "Other Options"
@@ -568,7 +573,7 @@ msgstr "Zweite Textfarbe"
 
 #: ../inc/customizer.php:985
 msgid "Use accent color instead of text color for icons"
-msgstr "Verwende Akzentfarbe anstelle der Textfarbe fรผr die Icons"
+msgstr "Verwende Akzentfarbe anstelle der Textfarbe f&uuml;r die Icons"
 
 #: ../inc/extras.php:79
 msgid "Category"
@@ -588,19 +593,19 @@ msgstr "Seite"
 
 #: ../inc/template-tags.php:23
 msgid "Posts navigation"
-msgstr ""
+msgstr "Posts-Navigation"
 
 #: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ltere posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ltere Posts"
 
 #: ../inc/template-tags.php:31
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Neuere posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Posts <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:56
 msgid "Post navigation"
-msgstr "Post Navigation"
+msgstr "Post-Navigation"
 
 #: ../inc/template-tags.php:59
 msgctxt "Previous post link"
@@ -645,22 +650,25 @@ msgid ""
 "Twitter or App.net. <a href=\"http://scotthsmith.com/projects/decode/\">More "
 "info here</a>"
 msgstr ""
-"Ein einfaches, modernes, speziell für Mobilger&auml;te designtes Theme, "
-"welches die M&ouml;glichkeit bietet alle Farben im Theme zu &auml;ndern und "
-"eine elegante Seitenleiste bietet, die bequem per Klick auf das Men&uuml; "
-"con erreicht werden kann. Die Seitenleiser kann eine unbegrenzte Anzahl von "
-"frei w&auml;hlbaren Widgets enthalten. Ebenfalls frei gew&auml;hlt werden "
-"kann die Position der Seitenleiste (links oder rechts) und ob sie immer "
-"sichtbar sein soll oder geschlossen werden kann. Wenn du willst, kannst du "
-"die Seitenleiste und Kommentare deaktivieren. Decoder unterst&uuml;tzt Link "
+"Ein einfaches, modernes, speziell für Mobilger&auml;te designtes Theme, das "
+"die M&ouml;glichkeit bietet, alle Farben im Theme zu &auml;ndern, ebenso wie "
+"eine elegante Seitenleiste, die bequem per Klick auf das Men&uuml;-Icon "
+"erreicht werden kann. Die Seitenleiste kann eine unbegrenzte Anzahl von frei "
+"w&auml;hlbaren Widgets enthalten. Ebenfalls frei gew&auml;hlt werden kann "
+"die Position der Seitenleiste (links oder rechts) und ob sie immer sichtbar "
+"sein soll oder geschlossen werden kann. Wenn du willst, kannst du die "
+"Seitenleiste und Kommentare deaktivieren. Decoder unterst&uuml;tzt Link-"
 "Posts, bei denen der Titel ein Link sein kann. Decoder beinhaltet spezielle "
 "Social Ions im Header, welche du einfach auf 26 verschiedene soziale Profile "
 "von Twitter und App.net bis Pinterest und LinkedIn verlinken kannst. Du "
-"wirst sicher das Profil finden, das du willst. Zu guter Letzt wurde Decoder "
-"zusammen mit einem Plugin erstellt, das ein Antwort-Tool bereitstellt, "
-"welches Lesern erm&ouml;glicht dir eine Antwort zu einem Post via Twitter "
-"oder App.net zu senden. Mehr Informationen findest du hier: http://"
-"scotthsmith.com/projects/decode/."
+"wirst sicher das Profil finden, das du brauchst. Zu guter Letzt wurde "
+"Decoder zusammen mit einem Plugin erstellt, das ein Antwort-Tool "
+"bereitstellt, welches Lesern erm&ouml;glicht, dir eine Antwort zu einem Post "
+"via Twitter oder App.net zu senden. Mehr Informationen findest du hier: "
+"http://scotthsmith.com/projects/decode/."
+
+#~ msgid "Nav Menu"
+#~ msgstr "Navigations-Men&uuml;"
 
 #~ msgctxt "assistive text"
 #~ msgid "Search"
@@ -693,12 +701,6 @@ msgstr ""
 
 #~ msgid "Reply"
 #~ msgstr "Antworten"
-
-#~ msgid "Show Navigation"
-#~ msgstr "Navigation anzeigen"
-
-#~ msgid "Nav Menu"
-#~ msgstr "Navigations Men&uuml;"
 
 #~ msgctxt "Previous post link"
 #~ msgid "&larr;"
