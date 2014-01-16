@@ -1,6 +1,8 @@
 # Decode 2.9
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
+Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
+
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), on the great theme foundation, [Underscores](http://underscores.me). It is beautifully crafted for mobile first, and uses media queries to bring in CSS for larger screens. 
 
 If you want to change any of the colors in your theme, enable the sidebar, social links, and more, access the Customize menu in Appearance > Customize. From here you can access all the settings available for this theme. 
@@ -50,10 +52,10 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - YouVersion
 - Steam User
 - Steam Groups
-
+- Email
 
 The Custom CSS feature allows you to change virtually anything about the style of your site. Refer to the "CustomCSS.md" file in the "docs" folder theme for common and helpful entries and experiment with creating your own to make Decode yours.
 
-If you desire to add Typekit fonts to your blog, I highly recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
+If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 
 *The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*

@@ -119,17 +119,28 @@ module.exports = function(grunt) {
 		},
 		
 		markdown: {
-			docs: {
+			readme: {
 				expand: true,
 				flatten: true,
 				cwd: 'docs/',
-				src: 'src/*.md',
+				src: 'src/README.md',
 				dest: 'docs/',
 				ext: '.html',
 				options: {
-					template: 'docs/src/DocsTemplate.html'
+					template: 'docs/src/READMETemplate.html'
 				}
-			}
+			},
+			customcss: {
+				expand: true,
+				flatten: true,
+				cwd: 'docs/',
+				src: 'src/CustomCSS.md',
+				dest: 'docs/',
+				ext: '.html',
+				options: {
+					template: 'docs/src/CustomCSSTemplate.html'
+				}
+			},
 		},
 		
 		copy: {
