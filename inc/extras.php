@@ -67,13 +67,11 @@ function decode_wp_title($title, $sep, $sep_location) {
 
 	$site_description = get_bloginfo('description');
 	
-	if ( is_feed() )
+	if (is_feed())
 		return $title;
  
-	if ($site_description && (is_home() || is_front_page())) {
+	elseif ($site_description && is_front_page())
 		$custom = $sep . $site_description;
-		$title = '';
-	}
 
 	elseif(is_category())
 		$custom = $sep . __('Category', 'decode');
@@ -102,7 +100,7 @@ function decode_wp_title($title, $sep, $sep_location) {
 		$page_number = '';
 
 	// Comment the 4 lines of code below and see how odd the title format becomes
-	if($sep_location == 'right' && !(is_home() || is_front_page())) {
+	if($sep_location == 'right' && !(is_front_page())) {
 		$custom = $custom . $sep;
 		$title = substr($title, 0, -2);
 	}
