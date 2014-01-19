@@ -18,9 +18,7 @@
 			'container'       => false,
 			'menu_class' => 'menu horizontal-menu footer-menu',
 			'menu_id'    => 'footer-menu',
-			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->',
-			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-			'walker'            => new wp_bootstrap_navwalker()
+			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->'
 		) ); 
 	} ?>
 

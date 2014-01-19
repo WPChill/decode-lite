@@ -1839,6 +1839,11 @@ textarea#comment {
 .sidebar {
 	width: 55%;
 }
+
+.menu ul li.open ul {
+	float: left;
+	position: absolute;
+}
 }
 
 

@@ -5,5 +5,5 @@ Modernizr.load([{
 	
 	{
 	test: Modernizr.touch,
-	yep : templateDir + '/js/dropdown.js?3.0.3' }
+	yep : templateDir + '/js/dropdown.js?2.9.1' }
 ]);
