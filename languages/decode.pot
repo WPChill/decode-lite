@@ -1,6 +1,6 @@
 # LANGUAGE (LOCALE) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
-# FIRST AUTHOR mateusz.j.wozniak@gmail.com, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
@@ -24,45 +24,45 @@ msgstr ""
 "X-Poedit-SearchPath-1: ..\n"
 
 #: ../404.php:15
-msgid "Przepraszamy, strony nie znaleziono."
+msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: ../404.php:19
 msgid ""
-"Wygląda na to, że nic tu nie zneleziono. Może spróbuj jednego z linków  "
-"poniżej albo wyszukaj?"
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
 #: ../404.php:26
-msgid "Spróbuj sprawdzić miesięczne archiwa"
+msgid "Try looking in the monthly archives."
 msgstr ""
 
 #: ../404.php:32
-msgid "Najpopularniejsze kategorie"
+msgid "Most Used Categories"
 msgstr ""
 
 #: ../archive.php:27
 #, php-format
-msgid "Dzień: %s"
+msgid "Day: %s"
 msgstr ""
 
 #: ../archive.php:30
 #, php-format
-msgid "Miesiąc: %s"
+msgid "Month: %s"
 msgstr ""
 
 #: ../archive.php:30
-msgctxt "format daty archiwów miesięcznych"
+msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
 #: ../archive.php:33
 #, php-format
-msgid "Rok: %s"
+msgid "Year: %s"
 msgstr ""
 
 #: ../archive.php:33
-msgctxt "format daty archiwów rocznych"
+msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
@@ -71,19 +71,19 @@ msgid "Asides"
 msgstr ""
 
 #: ../archive.php:39
-msgid "Galerie"
+msgid "Galleries"
 msgstr ""
 
 #: ../archive.php:42
-msgid "Zdjęcia"
+msgid "Images"
 msgstr ""
 
 #: ../archive.php:45
-msgid "Filmy"
+msgid "Videos"
 msgstr ""
 
 #: ../archive.php:48
-msgid "Cytaty"
+msgid "Quotes"
 msgstr ""
 
 #: ../archive.php:51
@@ -91,181 +91,181 @@ msgid "Links"
 msgstr ""
 
 #: ../archive.php:54
-msgid "Statusy"
+msgid "Statuses"
 msgstr ""
 
 #: ../archive.php:57
-msgid "Audio"
+msgid "Audios"
 msgstr ""
 
 #: ../archive.php:60
-msgid "Chat"
+msgid "Chats"
 msgstr ""
 
 #: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
 #: ../inc/extras.php:88
-msgid "Archiwa"
+msgid "Archives"
 msgstr ""
 
 #: ../author.php:25 ../content-single.php:18 ../content-single.php:54
 #: ../content-single.php:93
-msgid "Strona www"
+msgid "Website"
 msgstr ""
 
 #: ../author.php:34
 #, php-format
-msgid "Autor: %s"
+msgid "Author: %s"
 msgstr ""
 
 #: ../comments.php:29
 #, php-format
-msgctxt "tytuły komentarzy"
-msgid "1 skomentował &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s skomentowało &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
 #: ../comments.php:36 ../comments.php:60
-msgid "Nawigacja komentarzy"
+msgid "Comment navigation"
 msgstr ""
 
 #: ../comments.php:37 ../comments.php:61
-msgid "&larr; Starsze komentarze"
+msgid "&larr; Older Comments"
 msgstr ""
 
 #: ../comments.php:38 ../comments.php:62
-msgid "Nowsze komentarze &rarr;"
+msgid "Newer Comments &rarr;"
 msgstr ""
 
 #: ../comments.php:72
-msgid "Komentarze wyłączone."
+msgid "Comments are closed."
 msgstr ""
 
 #: ../comments.php:76
-msgid "Skomentuj"
+msgid "Leave a Reply"
 msgstr ""
 
 #: ../comments.php:77
 #, php-format
-msgid "Skomentuj %s"
+msgid "Leave a Reply to %s"
 msgstr ""
 
 #: ../comments.php:78
-msgid "Anuluj komentarz"
+msgid "Cancel reply"
 msgstr ""
 
 #: ../comments.php:79
-msgid "Opublikuj komentarz"
+msgid "Post Comment"
 msgstr ""
 
 #: ../comments.php:83
 msgctxt "noun"
-msgid "Komentarz"
+msgid "Comment"
 msgstr ""
 
 #: ../comments.php:84
 #, php-format
-msgid "Musisz być <a href=\"%s\">zalogowany</a>, by skomentować."
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
 #: ../comments.php:85
 #, php-format
 msgid ""
-"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Wyloguj się z "
-"tego konta\">Wylogować?</a>"
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
 msgstr ""
 
 #: ../comments.php:86
-msgid "Twój e-mail nie będzie opublikowany."
+msgid "Your email address will not be published."
 msgstr ""
 
 #: ../comments.php:87
 #, php-format
 msgid ""
-"Możesz użyć tych tagów <abbr title=\"HyperText Markup Language\">HTML</abbr> "
-"i znaczników: %s"
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
 msgstr ""
 
 #: ../content-none.php:13
-msgid "Nic nie znaleziono"
+msgid "Nothing Found"
 msgstr ""
 
 #: ../content-none.php:19
 #, php-format
 msgid ""
-"Gotowy do publikacji? <a href=\"%1$s\">Zacznij tutaj</a>."
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: ../content-none.php:23
 msgid ""
-"Przepraszamy, nic nie znaleziono. Spróbuj ponownie "
-"z innymi hasłami ."
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: ../content-none.php:28
 msgid ""
-"Wygląda na to, że nie mamy tego, czego szukasz. Może "
-"skorzystaj z wyszukiwania?"
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: ../content-page.php:18 ../content-single.php:11 ../content-single.php:86
 #: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
-msgid "Stron:"
+msgid "Pages:"
 msgstr ""
 
 #: ../content-page.php:21 ../content-single.php:24 ../content-single.php:60
 #: ../content-single.php:99 ../content.php:18 ../content.php:53
 #: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
 #: ../image.php:101
-msgid "Edytuj"
+msgid "Edit"
 msgstr ""
 
 #: ../content-single.php:10 ../content-single.php:47 ../content-single.php:85
 #: ../content.php:10 ../content.php:45 ../content.php:126
-msgid "Czytaj dalej<span class=\"meta-nav\">&rarr;</span>"
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../content-single.php:25 ../content-single.php:61 ../content-single.php:100
 #: ../content.php:20 ../content.php:55 ../content.php:136
-msgid "Tagi: "
+msgid "Tagged as: "
 msgstr ""
 
 #: ../content-single.php:26 ../content-single.php:62 ../content-single.php:101
 #: ../content.php:23 ../content.php:58 ../content.php:139
-msgid "Kategoria&#58; "
+msgid "Categorized in&#58; "
 msgstr ""
 
 #: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "Skomentuj"
+msgid "Leave a comment"
 msgstr ""
 
 #: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "1 skomentował"
+msgid "1 Comment"
 msgstr ""
 
 #: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "% skomentowało"
+msgid "% Comments"
 msgstr ""
 
 #: ../content.php:102
-msgid "Czytaj dalej&hellip;"
+msgid "Read More&hellip;"
 msgstr ""
 
 #: ../footer.php:35
 #, php-format
-msgid "%1$s przez %2$s"
+msgid "%1$s by %2$s"
 msgstr ""
 
 #: ../functions.php:68
-msgid "Menu górne"
+msgid "Header Menu"
 msgstr ""
 
 #: ../functions.php:69
-msgid "Menu boczne"
+msgid "Sidebar Menu"
 msgstr ""
 
 #: ../functions.php:70
-msgid "Menu dolne"
+msgid "Footer Menu"
 msgstr ""
 
 #: ../functions.php:115
@@ -273,24 +273,24 @@ msgid "Sidebar"
 msgstr ""
 
 #: ../header.php:31
-msgid "Przejdź do treści"
+msgid "Skip to content"
 msgstr ""
 
 #: ../image.php:22
 #, php-format
 msgid ""
-"Opublikowano <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> w <a href=\"%3$s\" title=\"Link do pełnego rozmiaru "
-"image\">%4$s &times; %5$s</a> w <a href=\"%6$s\" title=\"Wróć do %7$s\" "
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
 "rel=\"gallery\">%8$s</a>"
 msgstr ""
 
 #: ../image.php:37
-msgid "<span class=\"meta-nav\">&larr;</span> Poprzednie"
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr ""
 
 #: ../image.php:38
-msgid "Następne <span class=\"meta-nav\">&rarr;</span>"
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../page-explore.php:11
@@ -298,93 +298,93 @@ msgid "Explore Page"
 msgstr ""
 
 #: ../page-explore.php:26
-msgid "Ostatnie wpisy"
+msgid "Recent Posts"
 msgstr ""
 
 #: ../page-explore.php:46
-msgid "Kategorie"
+msgid "Categories"
 msgstr ""
 
 #: ../sidebar.php:14
-msgid "Nawigacja"
+msgid "Navigation"
 msgstr ""
 
 #: ../inc/customizer.php:38
-msgid "Opcje nagłówka"
+msgid "Header Options"
 msgstr ""
 
 #: ../inc/customizer.php:72
-msgid "Obrazek nagłówka"
+msgid "Header Image"
 msgstr ""
 
 #: ../inc/customizer.php:79
-msgid "Favicon (rekomendowany format PNG)"
+msgid "Favicon Image (recommended to be a PNG)"
 msgstr ""
 
 #: ../inc/customizer.php:86
-msgid "Pokaż tytuł strony"
+msgid "Show Site Title"
 msgstr ""
 
 #: ../inc/customizer.php:93
-msgid "Pokaż opis strony"
+msgid "Show Site Description"
 msgstr ""
 
 #: ../inc/customizer.php:100
-msgid "Pokaż menu górne"
+msgid "Show Header Menu"
 msgstr ""
 
 #: ../inc/customizer.php:107
 msgid ""
-"HTML dla opisu, jeśli chcesz zastąpić opis bloga HTML "
+"HTML for description, if you wish to replace your blog description with HTML "
 "markup"
 msgstr ""
 
 #: ../inc/customizer.php:120
-msgid "Opcje menu bocznego"
+msgid "Sidebar Options"
 msgstr ""
 
 #: ../inc/customizer.php:144
-msgid "Uaktywnij menu boczne"
+msgid "Enable Sidebar"
 msgstr ""
 
 #: ../inc/customizer.php:151
-msgid "Położenie menu bocznego"
+msgid "Sidebar Position"
 msgstr ""
 
 #: ../inc/customizer.php:155
-msgid "Lewa"
+msgid "Left"
 msgstr ""
 
 #: ../inc/customizer.php:156
-msgid "Prawa"
+msgid "Right"
 msgstr ""
 
 #: ../inc/customizer.php:162
-msgid "Położenie przycisków menu bocznego"
+msgid "Sidebar Button Position"
 msgstr ""
 
 #: ../inc/customizer.php:173
-msgid "Menu boczne zawsze widoczne"
+msgid "Always Visible Sidebar"
 msgstr ""
 
 #: ../inc/customizer.php:191
-msgid "Opcje dyskusji"
+msgid "Discussion Options"
 msgstr ""
 
 #: ../inc/customizer.php:203
-msgid "Komentarze włączone"
+msgid "Enable Comments"
 msgstr ""
 
 #: ../inc/customizer.php:216
-msgid "Opcje społecznościowe"
+msgid "Social Options"
 msgstr ""
 
 #: ../inc/customizer.php:409
-msgid "Pokaż ikony"
+msgid "Show Social Icons"
 msgstr ""
 
 #: ../inc/customizer.php:416
-msgid "Otwórz linki w nowej karcie / oknie"
+msgid "Open Links in New Tab/Window"
 msgstr ""
 
 #: ../inc/customizer.php:423 ../inc/customizer.php:430
@@ -404,29 +404,29 @@ msgstr ""
 #: ../inc/customizer.php:668 ../inc/customizer.php:675
 #: ../inc/customizer.php:682 ../inc/customizer.php:689
 #: ../inc/customizer.php:696 ../inc/customizer.php:710
-msgid "Użytkownik"
+msgid "Username"
 msgstr ""
 
 #: ../inc/customizer.php:444
-msgid " (albo długi numer w adresie twojego profilu)"
+msgid " (or the long number in your profile URL)"
 msgstr ""
 
 #: ../inc/customizer.php:486
-msgid "Adres profilu"
+msgid "Profile URL"
 msgstr ""
 
 #: ../inc/customizer.php:591 ../inc/customizer.php:598
 #: ../inc/customizer.php:605
-msgid "Adres strony"
+msgid "Site URL"
 msgstr ""
 
 #: ../inc/customizer.php:612 ../inc/customizer.php:640
 #: ../inc/customizer.php:654
-msgid "ID użytkownika"
+msgid "User ID"
 msgstr ""
 
 #: ../inc/customizer.php:703
-msgid "Nazwa grupy"
+msgid "Group Name"
 msgstr ""
 
 #: ../inc/customizer.php:717
@@ -434,158 +434,158 @@ msgid "RSS Feed"
 msgstr ""
 
 #: ../inc/customizer.php:724
-msgid "Adres Email"
+msgid "Email Address"
 msgstr ""
 
 #: ../inc/customizer.php:737
-msgid "Opcje czytania"
+msgid "Reading Options"
 msgstr ""
 
 #: ../inc/customizer.php:809
 msgid ""
-"Użyj fragmentów wpisów zamiast pełnej treści na stronie domowej. Z wyjątkiem wpisów przyklejonych."
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 
 #: ../inc/customizer.php:816
-msgid "Wyświetlaj obrazki wpisów, gdy na głównej stronie wyświetlane są fragmenty treści."
+msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
 
 #: ../inc/customizer.php:823
-msgid "Wyświetlaj obrazki wpisów na stronach wpisów."
+msgid "Display a post's featured image on its individual page."
 msgstr ""
 
 #: ../inc/customizer.php:830
-msgid "Pokazuj tagi na stronie głównej (tagi będą pokazywane na stronach wpisów)"
+msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 
 #: ../inc/customizer.php:837
 msgid ""
-"Pokazuj kategorie na stronie głównej (kategorie będą pokazywane na  "
-"stronach wpisów)"
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
 msgstr ""
 
 #: ../inc/customizer.php:844
-msgid "Po wpisach pokazuj nazwę, obrazek, bio autora"
+msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 
 #: ../inc/customizer.php:851
-msgid "Pozycja daty wpisu"
+msgid "Entry Date Position"
 msgstr ""
 
 #: ../inc/customizer.php:855
-msgid "Nad nagłówkiem"
+msgid "Above Header"
 msgstr ""
 
 #: ../inc/customizer.php:856
-msgid "Pod nagłówkiem"
+msgid "Below Header"
 msgstr ""
 
 #: ../inc/customizer.php:862
-msgid "Pokazuj nagłówki stron"
+msgid "Show Page Headers"
 msgstr ""
 
 #: ../inc/customizer.php:869
-msgid "Pokazuj daty dla fragmentów wpisów na stronie głównej"
+msgid "Show entry date for post excepts on the main page"
 msgstr ""
 
 #: ../inc/customizer.php:876
-msgid "Dodawaj strzałkę przed tytułem linku wpisu"
+msgid "Add an arrow before the title of a link post"
 msgstr ""
 
 #: ../inc/customizer.php:883
-msgid "Pokaż wszystkie typy wpisów, łącznie z własnymi typami wpisów"
+msgid "Show all post types, including custom post types"
 msgstr ""
 
 #: ../inc/customizer.php:890
 msgid ""
-"Pokaż informacje o motywie (wyświetlaj linię tekstu z informacją o motywie i jego autorze na "
-"dole strony)"
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
 msgstr ""
 
 #: ../inc/customizer.php:897
-msgid "Tekst (informacje, prawa autorskie etc.) na stopkę strony"
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 
 #: ../inc/customizer.php:910
-msgid "Inne opcje"
+msgid "Other Options"
 msgstr ""
 
 #: ../inc/customizer.php:922
-msgid "Własny CSS"
+msgid "Custom CSS"
 msgstr ""
 
 #: ../inc/customizer.php:961
-msgid "Kolor podkreślenia"
+msgid "Accent Color"
 msgstr ""
 
 #: ../inc/customizer.php:967
-msgid "Kolor aktywnego linka"
+msgid "Active Link Color"
 msgstr ""
 
 #: ../inc/customizer.php:973
-msgid "Kolor tekstu"
+msgid "Text Color"
 msgstr ""
 
 #: ../inc/customizer.php:979
-msgid "Kolor drugiego tekstu"
+msgid "Secondary Text Color"
 msgstr ""
 
 #: ../inc/customizer.php:985
-msgid "Użyj kolorów podkreślenia zamiast kolorów tekstu dla ikon"
+msgid "Use accent color instead of text color for icons"
 msgstr ""
 
 #: ../inc/extras.php:79
-msgid "Kategoria"
+msgid "Category"
 msgstr ""
 
 #: ../inc/extras.php:82
-msgid "Tagi"
+msgid "Tag"
 msgstr ""
 
 #: ../inc/extras.php:85
-msgid "Autor"
+msgid "Author"
 msgstr ""
 
 #: ../inc/extras.php:95 ../inc/extras.php:99
-msgid "Strona "
+msgid "Page "
 msgstr ""
 
 #: ../inc/template-tags.php:23
-msgid "Nawigacja wpisów"
+msgid "Posts navigation"
 msgstr ""
 
 #: ../inc/template-tags.php:27
-msgid "<span class=\"meta-nav\">&larr;</span> Starsze wpisy"
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
 #: ../inc/template-tags.php:31
-msgid "Nowsze wpisy <span class=\"meta-nav\">&rarr;</span>"
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../inc/template-tags.php:56
-msgid "Nawigacja wpisów"
+msgid "Post navigation"
 msgstr ""
 
 #: ../inc/template-tags.php:59
-msgctxt "Link do poprzedniego wpisu"
+msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr ""
 
 #: ../inc/template-tags.php:60
-msgctxt "Link do następnego wpisu"
+msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../inc/template-tags.php:138
 #, php-format
 msgid ""
-"<span class=\"posted-on\">Napisany %1$s</span><span class=\"byline\"> przez "
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
 msgstr ""
 
 #: ../inc/template-tags.php:146
 #, php-format
-msgid "Zobacz wszystkie wpisy: %s"
+msgid "View all posts by %s"
 msgstr ""
 
 #. Theme Description
