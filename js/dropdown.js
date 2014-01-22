@@ -1,4 +1,0 @@
-
-[].forEach.call(document.querySelectorAll(".menu-item-has-children, .page_item_has_children"),function(element){element.firstChild.addEventListener('click',function(event){if(document.querySelector('.open')&&!(element.parentElement.parentElement.classList.contains('open'))&&!(element.classList.contains('open'))){document.querySelector('.open').classList.remove('open');}
-if(!(element.classList.contains('open'))){element.classList.toggle('open');event.preventDefault();}},false);});var matches;(function(doc){matches=doc.matches||doc.matchesSelector||doc.webkitMatchesSelector||doc.mozMatchesSelector||doc.oMatchesSelector||doc.msMatchesSelector;})(document.documentElement);if(!(document.querySelector('.open'))){document.addEventListener('click',function(event){if(!(matches.call(event.target,'.menu *'))){document.querySelector('.open').classList.toggle('open');}},false);}
-//@ sourceMappingURL=srcmaps/dropdown.js.map

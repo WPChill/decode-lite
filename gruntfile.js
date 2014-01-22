@@ -64,13 +64,6 @@ module.exports = function(grunt) {
 				dest: 'respond.js',				
 				destMap: 'srcmaps/respond.js.map'
 			},
-			dropdown: {
-				cwd: 'js/',
-				src: ['src/dropdown.js'],
-				srcRoot: '../',
-				dest: 'dropdown.js',				
-				destMap: 'srcmaps/dropdown.js.map'
-			},
 			customizer: {
 				cwd: 'js/',
 				src: ['src/customizer.js'],
