@@ -63,7 +63,7 @@
 		</div>
 		
 		<?php if ( get_theme_mod( 'show_social_icons', false ) == true ) : ?>
-			<?php get_template_part( 'sociallinks' ); ?>
+			<?php get_template_part( 'social-links' ); ?>
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) : ?>
