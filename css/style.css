@@ -866,7 +866,7 @@ object {
 	bottom: 100%;
 }
 
-.menu ul li.open ul {
+.sidebar-menu ul li.open ul {
 	float: none;
 	position: relative;
 }
