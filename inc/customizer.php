@@ -425,14 +425,14 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 
 
 	$wp_customize->add_control( 'show_header_social_icons', array(
-		'label'   => __( 'Show Social Icons', 'decode' ) . __( 'in Header', 'decode' ),
+		'label'   => __( 'Show Social Icons', 'decode' ) . ' '  . __( 'in Header', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
 		'priority'=> 1,
 	) );
 	
 	$wp_customize->add_control( 'show_footer_social_icons', array(
-		'label'   => __( 'Show Social Icons', 'decode' ) . __( 'in Footer', 'decode' ),
+		'label'   => __( 'Show Social Icons', 'decode' ) . ' ' . __( 'in Footer', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
 		'priority'=> 2,
