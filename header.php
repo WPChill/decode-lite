@@ -62,9 +62,9 @@
 			
 		</div>
 		
-		<?php if ( get_theme_mod( 'show_header_social_icons', false ) == true ) : ?>
-			<?php get_template_part( 'social-links' ); ?>
-		<?php endif; ?>
+		<?php if ( get_theme_mod( 'show_header_social_icons', false ) == true ) {
+			get_template_part( 'social-links' );
+		} ?>
 
 		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) : ?>
 			<?php wp_nav_menu( array(

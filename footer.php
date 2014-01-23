@@ -12,9 +12,9 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 
-	<?php if ( get_theme_mod( 'show_footer_social_icons', false ) == true ) : ?>
-		<?php get_template_part( 'social-links' ); ?>
-	<?php endif; ?>
+	<?php if ( get_theme_mod( 'show_header_social_icons', false ) == true ) {
+		get_template_part( 'social-links' );
+	} ?>
 
 	<?php if ( has_nav_menu( 'footer-menu' ) ) {
 		wp_nav_menu( array(
