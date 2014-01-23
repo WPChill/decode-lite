@@ -818,6 +818,7 @@ object {
 	.no-touch .horizontal-menu ul ul .page_item_has_children > a:hover::after,
 	.horizontal-menu ul ul li.open > a::after {
 		border-left-color: #009BCD;
+		border-top-color: transparent;
 	}
 	
 	.no-touch .horizontal-menu ul ul .menu-item-has-children > a:active::after,
