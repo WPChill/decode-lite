@@ -56,12 +56,6 @@ function decode_setup() {
 	) ) );
 	
 	/**
-	 * Remove old, now unused theme modifications so that conflicts do not occur.
-	 */
-	remove_theme_mod ( 'show_site_navigation' );
-	remove_theme_mod ( 'linkedin_username' );
-
-	/**
 	 * This theme uses wp_nav_menu() once in header.php.
 	 */
 	register_nav_menus( array(
