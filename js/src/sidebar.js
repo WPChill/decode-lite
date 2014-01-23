@@ -13,15 +13,3 @@ function toggleClass(element, className){
     }
     element.className = classString;
 }
-
-// Runs FastClick on body
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
-
-// Where the magic happens
-[].forEach.call( document.querySelectorAll("#sidebar_link, #sidebar_top"), function(el) {
-	el.addEventListener('click', function() {
-		toggleClass(document.getElementById('sidebar'), 'visible');
-	}, false);
-});
