@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-23 12:44-0600\n"
-"PO-Revision-Date: 2014-01-23 12:45-0600\n"
+"POT-Creation-Date: 2014-01-23 17:21-0600\n"
+"PO-Revision-Date: 2014-01-23 17:28-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -435,51 +435,61 @@ msgid "Open Links in New Tab/Window"
 msgstr "Links in neuem Tab/Fenster öffnen"
 
 #: ../inc/customizer.php:449 ../inc/customizer.php:456
-#: ../inc/customizer.php:463 ../inc/customizer.php:470
-#: ../inc/customizer.php:477 ../inc/customizer.php:484
-#: ../inc/customizer.php:491 ../inc/customizer.php:498
-#: ../inc/customizer.php:505 ../inc/customizer.php:519
-#: ../inc/customizer.php:526 ../inc/customizer.php:533
-#: ../inc/customizer.php:540 ../inc/customizer.php:547
-#: ../inc/customizer.php:554 ../inc/customizer.php:561
-#: ../inc/customizer.php:568 ../inc/customizer.php:575
-#: ../inc/customizer.php:582 ../inc/customizer.php:589
-#: ../inc/customizer.php:596 ../inc/customizer.php:603
-#: ../inc/customizer.php:610 ../inc/customizer.php:617
-#: ../inc/customizer.php:652 ../inc/customizer.php:659
-#: ../inc/customizer.php:666 ../inc/customizer.php:680
-#: ../inc/customizer.php:694 ../inc/customizer.php:701
-#: ../inc/customizer.php:708 ../inc/customizer.php:715
-#: ../inc/customizer.php:722 ../inc/customizer.php:729
-#: ../inc/customizer.php:743
-msgid "Username"
-msgstr "Benutzername"
+#: ../inc/customizer.php:463 ../inc/customizer.php:477
+#: ../inc/customizer.php:484 ../inc/customizer.php:491
+#: ../inc/customizer.php:498 ../inc/customizer.php:505
+#: ../inc/customizer.php:519 ../inc/customizer.php:526
+#: ../inc/customizer.php:533 ../inc/customizer.php:540
+#: ../inc/customizer.php:547 ../inc/customizer.php:554
+#: ../inc/customizer.php:561 ../inc/customizer.php:568
+#: ../inc/customizer.php:575 ../inc/customizer.php:582
+#: ../inc/customizer.php:589 ../inc/customizer.php:596
+#: ../inc/customizer.php:603 ../inc/customizer.php:610
+#: ../inc/customizer.php:617 ../inc/customizer.php:652
+#: ../inc/customizer.php:659 ../inc/customizer.php:666
+#: ../inc/customizer.php:680 ../inc/customizer.php:694
+#: ../inc/customizer.php:701 ../inc/customizer.php:708
+#: ../inc/customizer.php:715 ../inc/customizer.php:722
+#: ../inc/customizer.php:729 ../inc/customizer.php:743
+#, php-format
+msgid "%s Username"
+msgstr "%s Benutzername"
+
+#: ../inc/customizer.php:470
+#, php-format
+msgctxt "[noun] [translation string] (explanation)"
+msgid "%1$s Username %2$s"
+msgstr "%1$s Benutzername %2$s"
 
 #: ../inc/customizer.php:470
 msgid " (or the long number in your profile URL)"
 msgstr " (oder die lange Nummer in deiner Profil-URL)"
 
 #: ../inc/customizer.php:512 ../inc/customizer.php:687
-msgid "Profile URL"
-msgstr "Profil-URL"
+#, php-format
+msgid "%s Profile URL"
+msgstr "%s Profil-URL"
 
 #: ../inc/customizer.php:624 ../inc/customizer.php:631
 #: ../inc/customizer.php:638
-msgid "Site URL"
-msgstr "Seiten-URL"
+#, php-format
+msgid "%s Site URL"
+msgstr "%s Seiten-URL"
 
 #: ../inc/customizer.php:645 ../inc/customizer.php:673
-msgid "User ID"
+#, php-format
+msgid "%s User ID"
 msgstr ""
 
 #: ../inc/customizer.php:736
-msgid "Group Name"
-msgstr "Gruppen-Name"
+#, php-format
+msgid "%s Group Name"
+msgstr "%s Gruppen-Name"
 
 #: ../inc/customizer.php:750
-#, fuzzy
-msgid "Link"
-msgstr "Links"
+#, php-format
+msgid "%s Link"
+msgstr "%s Links"
 
 #: ../inc/customizer.php:757
 msgid "RSS Feed"
@@ -716,10 +726,6 @@ msgstr "Zeige alle Posts von %s"
 
 #~ msgid "%s <span class=\"says\">says:</span>"
 #~ msgstr "%s <span class=\"says\">sagt:</span>"
-
-#~ msgctxt "1: date, 2: time"
-#~ msgid "%1$s at %2$s"
-#~ msgstr "%1$s um %2$s"
 
 #~ msgid "Your comment is awaiting moderation."
 #~ msgstr "Dein Kommentar wartet auf Moderation."

@@ -467,7 +467,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 
 	$wp_customize->add_control( 'google_plus_username', array(
-		'label'   => sprintf( __( '%1$s Username %2$s', 'decode' ), 'Google+',  __(' (or the long number in your profile URL)', 'decode') ),
+		'label'   => sprintf( _x( '%1$s Username %2$s', '[noun] [translation string] (explanation)', 'decode' ), 'Google+',  __(' (or the long number in your profile URL)', 'decode') ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
 		'priority'=> 7,
