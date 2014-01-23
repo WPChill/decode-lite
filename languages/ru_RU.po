@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-23 09:39-0600\n"
-"PO-Revision-Date: 2014-01-23 09:40-0600\n"
+"POT-Creation-Date: 2014-01-23 12:44-0600\n"
+"PO-Revision-Date: 2014-01-23 12:45-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -308,31 +308,31 @@ msgid "Read More&hellip;"
 msgstr "Читать еще&hellip;"
 
 # @ decode
-#: ../footer.php:33
+#: ../footer.php:37
 #, php-format
 msgid "%1$s by %2$s"
 msgstr ""
 
 # @ decode
-#: ../functions.php:68
+#: ../functions.php:62
 #, fuzzy
 msgid "Header Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:69
+#: ../functions.php:63
 #, fuzzy
 msgid "Sidebar Menu"
 msgstr "Боковая колонка"
 
 # @ decode
-#: ../functions.php:70
+#: ../functions.php:64
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:115
+#: ../functions.php:109
 msgid "Sidebar"
 msgstr "Боковая колонка"
 
@@ -387,39 +387,39 @@ msgid "Navigation"
 msgstr "Показать навигацию"
 
 # @ decode
-#: ../inc/customizer.php:38
+#: ../inc/customizer.php:45
 msgid "Header Options"
 msgstr "Параметры заголовка"
 
 # @ decode
-#: ../inc/customizer.php:73
+#: ../inc/customizer.php:80
 msgid "Header Image"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:80
+#: ../inc/customizer.php:87
 #, fuzzy
 msgid "Favicon Image (recommended to be a PNG)"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:87
+#: ../inc/customizer.php:94
 msgid "Show Site Title"
 msgstr "Показать заголовок сайта"
 
 # @ decode
-#: ../inc/customizer.php:94
+#: ../inc/customizer.php:101
 msgid "Show Site Description"
 msgstr "Короткое описание сайта"
 
 # @ decode
-#: ../inc/customizer.php:101
+#: ../inc/customizer.php:108
 #, fuzzy
 msgid "Show Header Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:108
+#: ../inc/customizer.php:115
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
@@ -428,151 +428,179 @@ msgstr ""
 "помощью HTML разметки"
 
 # @ decode
-#: ../inc/customizer.php:121
+#: ../inc/customizer.php:128
 msgid "Sidebar Options"
 msgstr "Параметры сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:145
+#: ../inc/customizer.php:152
 msgid "Enable Sidebar"
 msgstr "Включить сайдбар"
 
 # @ decode
-#: ../inc/customizer.php:152
+#: ../inc/customizer.php:159
 msgid "Sidebar Position"
 msgstr "Позиция сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:156
+#: ../inc/customizer.php:163 ../inc/customizer.php:174
 msgid "Left"
 msgstr "Слева"
 
 # @ decode
-#: ../inc/customizer.php:157
+#: ../inc/customizer.php:164 ../inc/customizer.php:175
 msgid "Right"
 msgstr "Справа"
 
 # @ decode
-#: ../inc/customizer.php:163
+#: ../inc/customizer.php:170
 msgid "Sidebar Button Position"
 msgstr "Расположение кнопки сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:174
+#: ../inc/customizer.php:181
 msgid "Always Visible Sidebar"
 msgstr "Всегда показывать сайдбар"
 
+#: ../inc/customizer.php:185
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr ""
+
+#: ../inc/customizer.php:186
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr ""
+
 # @ decode
-#: ../inc/customizer.php:192
+#: ../inc/customizer.php:199
 msgid "Discussion Options"
 msgstr "Параметры обсуждения"
 
 # @ decode
-#: ../inc/customizer.php:204
+#: ../inc/customizer.php:211
 msgid "Enable Comments"
 msgstr "Включить комментарии"
 
 # @ decode
-#: ../inc/customizer.php:217
+#: ../inc/customizer.php:224
 msgid "Social Options"
 msgstr "Социальные опции"
 
 # @ decode
-#: ../inc/customizer.php:410
+#: ../inc/customizer.php:428 ../inc/customizer.php:435
 msgid "Show Social Icons"
 msgstr "Показывать социальные иконки "
 
 # @ decode
-#: ../inc/customizer.php:417
+#: ../inc/customizer.php:428
+#, fuzzy
+msgid "in Header"
+msgstr "Над заголовком"
+
+# @ decode
+#: ../inc/customizer.php:435
+#, fuzzy
+msgid "in Footer"
+msgstr "Изображение в заголовке"
+
+# @ decode
+#: ../inc/customizer.php:442
 msgid "Open Links in New Tab/Window"
 msgstr "Открывать ссылки в новом окне/вкладке"
 
 # @ decode
-#: ../inc/customizer.php:424 ../inc/customizer.php:431
-#: ../inc/customizer.php:438 ../inc/customizer.php:445
-#: ../inc/customizer.php:452 ../inc/customizer.php:459
-#: ../inc/customizer.php:466 ../inc/customizer.php:473
-#: ../inc/customizer.php:480 ../inc/customizer.php:494
-#: ../inc/customizer.php:501 ../inc/customizer.php:508
-#: ../inc/customizer.php:515 ../inc/customizer.php:522
-#: ../inc/customizer.php:529 ../inc/customizer.php:536
-#: ../inc/customizer.php:543 ../inc/customizer.php:550
-#: ../inc/customizer.php:557 ../inc/customizer.php:564
-#: ../inc/customizer.php:571 ../inc/customizer.php:578
-#: ../inc/customizer.php:585 ../inc/customizer.php:620
-#: ../inc/customizer.php:627 ../inc/customizer.php:634
-#: ../inc/customizer.php:648 ../inc/customizer.php:662
-#: ../inc/customizer.php:669 ../inc/customizer.php:676
-#: ../inc/customizer.php:683 ../inc/customizer.php:690
-#: ../inc/customizer.php:697 ../inc/customizer.php:711
+#: ../inc/customizer.php:449 ../inc/customizer.php:456
+#: ../inc/customizer.php:463 ../inc/customizer.php:470
+#: ../inc/customizer.php:477 ../inc/customizer.php:484
+#: ../inc/customizer.php:491 ../inc/customizer.php:498
+#: ../inc/customizer.php:505 ../inc/customizer.php:519
+#: ../inc/customizer.php:526 ../inc/customizer.php:533
+#: ../inc/customizer.php:540 ../inc/customizer.php:547
+#: ../inc/customizer.php:554 ../inc/customizer.php:561
+#: ../inc/customizer.php:568 ../inc/customizer.php:575
+#: ../inc/customizer.php:582 ../inc/customizer.php:589
+#: ../inc/customizer.php:596 ../inc/customizer.php:603
+#: ../inc/customizer.php:610 ../inc/customizer.php:617
+#: ../inc/customizer.php:652 ../inc/customizer.php:659
+#: ../inc/customizer.php:666 ../inc/customizer.php:680
+#: ../inc/customizer.php:694 ../inc/customizer.php:701
+#: ../inc/customizer.php:708 ../inc/customizer.php:715
+#: ../inc/customizer.php:722 ../inc/customizer.php:729
+#: ../inc/customizer.php:743
 msgid "Username"
 msgstr "Имя пользователя"
 
 # @ decode
-#: ../inc/customizer.php:445
+#: ../inc/customizer.php:470
 msgid " (or the long number in your profile URL)"
 msgstr "(или длинный номер в URL вашего профиля)"
 
 # @ decode
-#: ../inc/customizer.php:487
+#: ../inc/customizer.php:512 ../inc/customizer.php:687
 msgid "Profile URL"
 msgstr "URL профиля"
 
 # @ decode
-#: ../inc/customizer.php:592 ../inc/customizer.php:599
-#: ../inc/customizer.php:606
+#: ../inc/customizer.php:624 ../inc/customizer.php:631
+#: ../inc/customizer.php:638
 msgid "Site URL"
 msgstr "URL сайта"
 
-#: ../inc/customizer.php:613 ../inc/customizer.php:641
-#: ../inc/customizer.php:655
+#: ../inc/customizer.php:645 ../inc/customizer.php:673
 msgid "User ID"
 msgstr ""
 
-#: ../inc/customizer.php:704
+#: ../inc/customizer.php:736
 msgid "Group Name"
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:718
+#: ../inc/customizer.php:750
+#, fuzzy
+msgid "Link"
+msgstr "Ссылки"
+
+# @ decode
+#: ../inc/customizer.php:757
 msgid "RSS Feed"
 msgstr "RSS Feed"
 
 # @ decode
-#: ../inc/customizer.php:725
+#: ../inc/customizer.php:764
 msgid "Email Address"
 msgstr "Адрес электронной почты"
 
 # @ decode
-#: ../inc/customizer.php:738
+#: ../inc/customizer.php:777
 msgid "Reading Options"
 msgstr "Параметры чтения"
 
 # @ decode
-#: ../inc/customizer.php:810
+#: ../inc/customizer.php:849
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Использовать цитаты вместо текста на главной странице сайта. За исключением "
 "прилепленных сообщений."
 
-#: ../inc/customizer.php:817
+#: ../inc/customizer.php:856
 msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
 
-#: ../inc/customizer.php:824
+#: ../inc/customizer.php:863
 msgid "Display a post's featured image on its individual page."
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:831
+#: ../inc/customizer.php:870
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Показывать метки на главной странице (метки всегда показываются на отдельной "
 "странице записи)"
 
 # @ decode
-#: ../inc/customizer.php:838
+#: ../inc/customizer.php:877
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -581,45 +609,45 @@ msgstr ""
 "отдельной странице записи)"
 
 # @ decode
-#: ../inc/customizer.php:845
+#: ../inc/customizer.php:884
 msgid "Show author's name, profile image, and bio after posts"
 msgstr "Показывать имя автора, изображение профиля и описание в публикации"
 
 # @ decode
-#: ../inc/customizer.php:852
+#: ../inc/customizer.php:891
 msgid "Entry Date Position"
 msgstr "Позиция даты"
 
 # @ decode
-#: ../inc/customizer.php:856
+#: ../inc/customizer.php:895
 msgid "Above Header"
 msgstr "Над заголовком"
 
 # @ decode
-#: ../inc/customizer.php:857
+#: ../inc/customizer.php:896
 msgid "Below Header"
 msgstr "Ниже заголовка"
 
 # @ decode
-#: ../inc/customizer.php:863
+#: ../inc/customizer.php:902
 msgid "Show Page Headers"
 msgstr "Показывать заголовки страниц"
 
-#: ../inc/customizer.php:870
+#: ../inc/customizer.php:909
 msgid "Show entry date for post excepts on the main page"
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:877
+#: ../inc/customizer.php:916
 msgid "Add an arrow before the title of a link post"
 msgstr "Добавить стрелочку перед ссылкой на запись"
 
-#: ../inc/customizer.php:884
+#: ../inc/customizer.php:923
 msgid "Show all post types, including custom post types"
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:891
+#: ../inc/customizer.php:930
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -628,43 +656,43 @@ msgstr ""
 "страниц)"
 
 # @ decode
-#: ../inc/customizer.php:898
+#: ../inc/customizer.php:937
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Текст (выходные данные, копирайты, благодарности и т.д) в подвале сайта"
 
 # @ decode
-#: ../inc/customizer.php:911
+#: ../inc/customizer.php:950
 msgid "Other Options"
 msgstr "Прочие параметры"
 
 # @ decode
-#: ../inc/customizer.php:923
+#: ../inc/customizer.php:962
 msgid "Custom CSS"
 msgstr "Свой CSS"
 
 # @ decode
-#: ../inc/customizer.php:962
+#: ../inc/customizer.php:1001
 msgid "Accent Color"
 msgstr "Цвет выделения"
 
 # @ decode
-#: ../inc/customizer.php:968
+#: ../inc/customizer.php:1007
 msgid "Active Link Color"
 msgstr "Цвет активной ссылки"
 
 # @ decode
-#: ../inc/customizer.php:974
+#: ../inc/customizer.php:1013
 msgid "Text Color"
 msgstr "Цвет текста"
 
 # @ decode
-#: ../inc/customizer.php:980
+#: ../inc/customizer.php:1019
 msgid "Secondary Text Color"
 msgstr "Цвет второстепенного текста"
 
 # @ decode
-#: ../inc/customizer.php:986
+#: ../inc/customizer.php:1025
 msgid "Use accent color instead of text color for icons"
 msgstr "Использовать цвет выделения вместо цвет текста для иконок"
 
@@ -736,22 +764,3 @@ msgstr ""
 #, php-format
 msgid "View all posts by %s"
 msgstr "Смотреть все записи %s"
-
-#. Theme Description
-msgid ""
-"A minimal, modern theme, designed to be mobile first and fully responsive, "
-"Decode features the ability to change all the colors in the theme and an "
-"elegant sidebar conveniently accessed by tapping on the menu icon. The "
-"sidebar can fit all of your widgets and its position can be customized. You "
-"can also choose to keep the sidebar always visible on larger screens for an "
-"elegent two-column experience. You can even disable the sidebar and comment "
-"links if you choose. Decode supports link posts, where the title can be "
-"hyperlinked. Decode includes custom social icons in the header that you can "
-"easily link to your choice of 42 different social profiles from Twitter, and "
-"App.net, to Pinterest and LinkedIn, you will be sure to find support for the "
-"network you want alongside a bevy of customizations to make your site "
-"unique. Lastly, Decode is also built alongside a companion plugin that adds "
-"a sleek reply tool that lets readers send you a reply about the post using "
-"Twitter or App.net. <a href=\"http://scotthsmith.com/projects/decode/\">More "
-"info here</a>"
-msgstr ""
