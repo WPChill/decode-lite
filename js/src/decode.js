@@ -5,17 +5,19 @@ Modernizr.load({
 
 if ( Modernizr.touch ) {
 	
+	var activeDropdownClass = 'open';
+	
 	[].forEach.call( document.querySelectorAll(".menu-item-has-children, .page_item_has_children"), function(element) {
 		element.firstChild.addEventListener('click', function(event) {
 			
 			// Close other dropdowns unless they are a parent
-			if ( document.querySelector('.open') && !(element.parentElement.parentElement.classList.contains('open')) && !(element.classList.contains('open')) ) {
-				document.querySelector('.open').classList.remove('open');
+			if ( document.querySelector('.' + activeDropdownClass) && !(element.parentElement.parentElement.classList.contains(activeDropdownClass)) && !(element.classList.contains(activeDropdownClass)) ) {
+				document.querySelector('.' + activeDropdownClass).classList.remove(activeDropdownClass);
 			}
 			
 			// Open the dropdown and don't open the link
-			if ( !(element.classList.contains('open')) ) {
-				element.classList.toggle('open');
+			if ( !(element.classList.contains(activeDropdownClass)) ) {
+				element.classList.toggle(activeDropdownClass);
 				event.preventDefault();
 			}
 							
@@ -36,10 +38,10 @@ if ( Modernizr.touch ) {
 	})(document.documentElement);
 	
 	// Dismiss dropdowns after a tap on any non-menu element
-	if ( !(document.querySelector('.open')) ) {
+	if ( !(document.querySelector('.' + activeDropdownClass)) ) {
 		document.addEventListener('click', function(event) {
 			if ( !(matches.call( event.target, '.menu *' ) ) ) {
-				document.querySelector('.open').classList.toggle('open');
+				document.querySelector('.' + activeDropdownClass).classList.remove(activeDropdownClass);
 			}
 		}, false);
 	}
