@@ -27,7 +27,7 @@ get_header(); ?>
 						printf( __( 'Day: %s', 'decode' ), '<span>' . get_the_date() . '</span>' );
 
 					elseif ( is_month() ) :
-						printf( __( 'Month: %s', '_s' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'decode' ) ) . '</span>' );
+						printf( __( 'Month: %s', 'decode' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'decode' ) ) . '</span>' );
 
 					elseif ( is_year() ) :
 						printf( __( 'Year: %s', 'decode' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'decode' ) ) . '</span>' );
