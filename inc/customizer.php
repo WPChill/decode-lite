@@ -171,8 +171,8 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
-			'left'  => 'Left',
-			'right' => 'Right',
+			'left'  => __( 'Left', 'decode' ),
+			'right' => __( 'Right', 'decode' ),
         ),
 		'priority'=> 3,
 	) );
@@ -182,8 +182,8 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
-			'constant'  => 'Always open',
-			'closing' => 'Closed by default',
+			'constant'  => _x( 'Always open', 'Sidebar option', 'decode' ),
+			'closing' => _x( 'Closed by default', 'Sidebar option', 'decode' ),
         ),
         'priority'=> 4,
 
