@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js'],
+				src: ['src/modernizr.js', 'src/decode.js', 'src/fastclick.js'],
 				srcRoot: '../',
 				dest: 'decode.js',
 				destMap: 'srcmaps/decode.js.map'
