@@ -13,6 +13,8 @@ var activeDropdownClass = 'open';
 			element.classList.toggle(activeDropdownClass);
 			event.preventDefault();
 		}
+		
+		// Anything else and the link will open as normal
 						
 	}, false);
 });
