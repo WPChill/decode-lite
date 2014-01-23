@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'js/src/sidebar.js']
+			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/decode.js']
 		},
 		
 		'jsmin-sourcemap': {

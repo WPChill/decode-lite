@@ -436,7 +436,7 @@
 	<?php endif; ?>
 	
 	<?php if ( get_theme_mod( 'email_address', '' ) !== '' ) : ?>
-	<a class="sociallink EmailLink" href="<?php echo esc_url( 'mailto:' . antispambot( get_theme_mod( 'email_address' ), 1 ) );?>">
+	<a class="sociallink EmailLink" href="<?php echo esc_url( 'mailto:' . antispambot( get_theme_mod( 'email_address' ), 1 ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> >
 	<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		<path class="SocialIconFill" d="M47.525,58.4312 C44.0017303,58.4312 40.8759923,60.0775002 38.8740909,62.6461034 L99.75,94.8175812 L163.968171,60.8797969 C162.084984,59.347607 159.678721,58.4312 157.05,58.4312 Z M36.8768341,66.781991 C36.6754591,67.614632 36.5688,68.4849911 36.5688,69.3812 L36.5688,129.6188 C36.5688,135.6864 41.4574,140.5688 47.525,140.5688 L157.05,140.5688 C163.1176,140.5688 168,135.6864 168,129.6188 L168,69.3812 C168,67.6380936 167.597054,65.9928022 166.878815,64.5329757 L99.7671275,100 L99.75,99.9564542 L99.7328725,100 Z M100,0 C155.2286,0 200,44.7714 200,100 C200,155.2286 155.2286,200 100,200 C44.7714,200 0,155.2286 0,100 C0,44.7714 44.7714,0 100,0 Z M173,61.2980665 L171.309648,57 Z M173,61.2980665" id="Email" fill="#444444"></path>

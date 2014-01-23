@@ -25,6 +25,13 @@
 `.form-allowed-tags { display: none !important; }`<br>
 This is hidden until the form is clicked on, but this will hide it at all times.
 
+### Prevent current menu item from shaking on hover:
+`.menu .current-menu-item > a:hover,
+.menu .current_page_item > a:hover {
+	-webkit-animation: none;
+	animation: none;
+}`
+
 ### Remove the border between the header and the main section of the site:
 `.site-header { border-bottom: none; }`
 

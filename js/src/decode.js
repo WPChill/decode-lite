@@ -20,7 +20,7 @@ if ( Modernizr.touch ) {
 				element.classList.toggle(activeDropdownClass);
 				event.preventDefault();
 			}
-							
+				
 		}, false);
 	});
 	
