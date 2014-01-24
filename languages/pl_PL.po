@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-01-23 17:21-0600\n"
-"PO-Revision-Date: 2014-01-23 17:24-0600\n"
+"PO-Revision-Date: 2014-01-24 09:37-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: pl_PL\n"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../archive.php:36
 msgid "Asides"
-msgstr ""
+msgstr "Notki (asides)"
 
 #: ../archive.php:39
 msgid "Galleries"
@@ -106,7 +106,6 @@ msgstr "Audio"
 msgid "Chats"
 msgstr "Chat"
 
-# Archiwum
 #: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
 #: ../inc/extras.php:86
 msgid "Archives"
@@ -387,12 +386,12 @@ msgstr "Pasek boczny zawsze widoczny"
 #: ../inc/customizer.php:185
 msgctxt "Sidebar option"
 msgid "Always open"
-msgstr ""
+msgstr "Zawsze otwarty"
 
 #: ../inc/customizer.php:186
 msgctxt "Sidebar option"
 msgid "Closed by default"
-msgstr ""
+msgstr "Domyślnie zamknięty"
 
 #: ../inc/customizer.php:199
 msgid "Discussion Options"
@@ -411,14 +410,12 @@ msgid "Show Social Icons"
 msgstr "Pokaż ikony"
 
 #: ../inc/customizer.php:428
-#, fuzzy
 msgid "in Header"
-msgstr "Nad nagłówkiem"
+msgstr "w nagłówku"
 
 #: ../inc/customizer.php:435
-#, fuzzy
 msgid "in Footer"
-msgstr "Menu dolne"
+msgstr "w stopce"
 
 #: ../inc/customizer.php:442
 msgid "Open Links in New Tab/Window"
@@ -446,10 +443,10 @@ msgid "%s Username"
 msgstr "Profil %s"
 
 #: ../inc/customizer.php:470
-#, fuzzy, php-format
+#, php-format
 msgctxt "[noun] [translation string] (explanation)"
 msgid "%1$s Username %2$s"
-msgstr "%1$s przez %2$s"
+msgstr "%1$s Profil %2$s"
 
 #: ../inc/customizer.php:470
 msgid " (or the long number in your profile URL)"
