@@ -76,6 +76,18 @@
 			) ); ?>
 		<?php endif; ?>
 		
+		<?php if( function_exists( 'bcn_display' ) ) : ?>
+			<div class="breadcrumbs">
+				<?php bcn_display(); ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if( function_exists( 'breadcrumb_trail' ) ) : ?>
+			<div class="breadcrumbs">
+				<?php breadcrumb_trail(); ?>
+			</div>
+		<?php endif; ?>
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
