@@ -76,18 +76,26 @@
 			) ); ?>
 		<?php endif; ?>
 		
-		<?php if( function_exists( 'bcn_display' ) ) : ?>
-			<div class="breadcrumbs">
-				<?php bcn_display(); ?>
-			</div>
-		<?php endif; ?>
-
-		<?php if( function_exists( 'breadcrumb_trail' ) ) : ?>
-			<div class="breadcrumbs">
-				<?php breadcrumb_trail(); ?>
-			</div>
-		<?php endif; ?>
-		
 	</header><!-- #masthead -->
+	
+		<?php if ( function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' ) ) : ?>
+		
+			<nav class="site-breadcrumbs" role="navigation">
+				
+				<div class="site-breadcrumbs-container">
+				
+				<?php if( function_exists( 'bcn_display' ) ) {
+					bcn_display();
+				}
+		
+				if( function_exists( 'breadcrumb_trail' ) ) {
+					breadcrumb_trail();
+				} ?>
+				
+				</div>
+				
+			</nav><!-- .breadcrumbs -->
+			
+		<?php endif; ?>
 
 	<div id="content" class="site-content">
