@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
 			"devFile" : "js/src/modernizr-dev.js",
 
-			"outputFile" : "js/src/modernizr.js",
+			"outputFile" : "js/modernizr.js",
 
 			"extra" : {
 				"shiv" : false,
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 				"domprefixes" : true
 			},
 
-			"uglify" : false,
+			"uglify" : true,
 
 			"tests" : ['csstransforms', 'inlinesvg', 'touch'],
 
@@ -45,14 +45,14 @@ module.exports = function(grunt) {
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/fastclick.js'],
+				src: ['src/decode.js', 'src/fastclick.js'],
 				srcRoot: '../',
 				dest: 'decode.js',
 				destMap: 'srcmaps/decode.js.map'
 			},
 			build_decode_with_sidebar: {
 				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
+				src: ['src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
 				srcRoot: '../',
 				dest: 'decode-with-sidebar.js',				
 				destMap: 'srcmaps/decode-with-sidebar.js.map'

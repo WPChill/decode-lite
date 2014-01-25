@@ -79,6 +79,8 @@ function decode_scripts() {
 	
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 	
+	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.9.1', false );
+	
 	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
 		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.9.1', true );
 	}
