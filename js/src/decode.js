@@ -49,13 +49,16 @@ if ( Modernizr.touch ) {
 }
 
 // Runs FastClick on body
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
-
-// Where the magic happens
-[].forEach.call( document.querySelectorAll("#sidebar_link, #sidebar_top"), function(el) {
-	el.addEventListener('click', function() {
-		toggleClass(document.getElementById('sidebar'), 'visible');
+// If it's a modern browser:
+if (window.addEventListener) {
+	window.addEventListener('load', function() {
+		FastClick.attach(document.body);
 	}, false);
-});
+}
+
+// If it's IE 8 or some crap like that:
+else if (window.attachEvent)  {
+	window.attachEvent('onload', function() {
+		FastClick.attach(document.body);
+	});
+}
