@@ -1886,6 +1886,10 @@ textarea#comment {
 	margin: 0 1%;
 }
 
+.no-inlinesvg .sociallink {
+	margin: 0 1%;
+}
+
 .horizontal-menu li {
 	margin: 0 1.5%;
 }
@@ -2011,7 +2015,6 @@ article.post {
 .sociallink svg, .sociallink img {
 	height: 2.75em;
 	width: 2.75em;
-	margin: 0 1%;
 }
 
 .page-header {

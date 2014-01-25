@@ -650,7 +650,7 @@ object {
 .no-inlinesvg .PinterestLink {background-image: url('images/Pinterest.png');}
 .no-inlinesvg .FancyLink {background-image: url('images/Fancy.png');}
 .no-inlinesvg .EtsyLink {background-image: url('images/Etsy.png');}
-.no-inlinesvg .EmailLink {background-image: url('images/Delicious.png');}
+.no-inlinesvg .DeliciousLink {background-image: url('images/Delicious.png');}
 .no-inlinesvg .InstagramLink {background-image: url('images/Instagram.png');}
 .no-inlinesvg .Five00pxLink {background-image: url('images/500px.png');}
 .no-inlinesvg .FlickrLink {background-image: url('images/Flickr.png');}
@@ -682,7 +682,7 @@ object {
 .no-inlinesvg .SkypeLink {background-image: url('images/Skype.png');}
 .no-inlinesvg .RSSLink {background-image: url('images/RSS.png');}
 .no-inlinesvg .EmailLink {background-image: url('images/Email.png');}
-.no-inlinesvg .EmailLink {background-image: url('images/Website.png');}
+.no-inlinesvg .WebsiteLink {background-image: url('images/Website.png');}
 
 
 /* =Navigation
@@ -1941,6 +1941,10 @@ textarea#comment {
 	margin: 0 1%;
 }
 
+.no-inlinesvg .sociallink {
+	margin: 0 1%;
+}
+
 .horizontal-menu li {
 	margin: 0 1.5%;
 }
@@ -2069,7 +2073,6 @@ article.post {
 .sociallink svg, .sociallink img {
 	height: 2.75em;
 	width: 2.75em;
-	margin: 0 1%;
 }
 
 .page-header {
