@@ -1876,6 +1876,11 @@ textarea#comment {
 	position: relative;
 }
 
+.header-menu ul ul {
+	left: auto;
+	right: auto;
+}
+
 .menu ul ul a {
 	width: 12em;
 }
