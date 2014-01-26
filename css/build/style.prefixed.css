@@ -695,6 +695,7 @@ object {
 
 .horizontal-menu {
 	text-align: center;
+	position: relative; /* Sets context for absolutely positoned submenus */
 }
 
 .header-menu {
@@ -720,10 +721,6 @@ object {
 	margin-left: 2em;
 }
 
-.menu li {
-	position: relative;
-}
-
 .horizontal-menu li {
 	display: inline-block;
 	margin: 0 0.5em;
@@ -731,6 +728,7 @@ object {
 
 .vertical-menu li {
 	display: block;
+	position: relative; /* Set context for dropdowns*/
 }
 
 .menu > ul > li:first-child {
@@ -917,10 +915,11 @@ object {
 }
 
 .menu ul ul a {
-	width: 12em;
 }
 
 .menu ul ul li {
+	display: block;
+	width: auto;
 }
 
 .menu li:hover > a {
@@ -933,17 +932,27 @@ object {
 }
 
 .no-touch .menu ul li:hover > ul,
+.no-touch .menu ul ul:hover, 
 .menu ul li.open > ul {
 	display: block;
 }
 
-.menu ul ul:hover {
-	display: block;
+.header-menu ul ul { /* Sets the width of the submenus same as the content */
+	left: 3.75%;
+	right: 3.75%;
+}
+.footer-menu ul ul { /* Sets the width of the submenus same as the content */
+	width: 100%;
+}
+
+.vertical-menu ul ul a {
+	width: 12em;
 }
 
 /* Current Menu Item Madness */
 .menu .current-menu-item > a,
 .menu .current_page_item > a {
+	position: relative;
 	color: #009BCD;
 }
 
@@ -1621,8 +1630,6 @@ textarea#comment {
 }
 
 
-
-
 /* =Search
 ----------------------------------------------- */
 
@@ -1799,6 +1806,7 @@ textarea#comment {
 	max-width: 100%;
 }
 
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -1860,6 +1868,22 @@ textarea#comment {
 
 .sidebar {
 	width: 55%;
+}
+
+/* The CSS below causes the absolutely positioned dropdowns */
+/* to display relative to the menu items that they are children of. */
+.menu li {
+	position: relative;
+}
+
+.menu ul ul a {
+	width: 12em;
+}
+
+.no-touch .menu ul li:hover > ul,
+.no-touch .menu ul ul:hover, 
+.menu ul li.open > ul {
+	width: auto;
 }
 
 .menu ul li.open ul {
