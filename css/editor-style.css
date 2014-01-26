@@ -46,11 +46,13 @@ h6 {
 
 img {
 	margin: 2.5% auto;
+	max-width: 100%; /* Fluid images */
+	height: auto;
 }
 
 blockquote {
 	margin: 1% 0;
 	padding: 0 0 0 2.55%;
-	border-left: 1px solid #009BCD;
+	border-left: 1px solid #000;
 	font-style: italic;
 }
