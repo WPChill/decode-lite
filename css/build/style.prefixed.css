@@ -867,7 +867,7 @@ object {
 	bottom: 100%;
 }
 
-.sidebar-menu ul li.open ul {
+.vertical-menu ul li.open ul {
 	float: none;
 	position: relative;
 }
@@ -877,8 +877,8 @@ object {
 	top: 0;
 }
 
-.sidebar-menu ul ul ul {
-	left: -0.25em;
+.vertical-menu ul ul ul {
+	left: -0.5em;
 	top: 100%;
 }
 
@@ -1847,23 +1847,6 @@ textarea#comment {
 	position: relative;
 }
 
-.header-menu ul ul {
-	left: auto;
-	right: auto;
-}
-
-.horizontal-menu ul ul ul {
-	left: -3.75%;
-}
-
-.footer-menu ul ul ul {
-	top: auto;
-}
-
-.menu ul ul a {
-	width: 12em;
-}
-
 .no-touch .menu ul li:hover > ul,
 .no-touch .menu ul ul:hover, 
 .menu ul li.open > ul {
@@ -1873,6 +1856,31 @@ textarea#comment {
 .menu ul li.open ul {
 	float: left;
 	position: absolute;
+}
+
+.header-menu ul ul {
+	left: auto;
+	right: auto;
+}
+
+.menu ul ul {
+	padding: 0 0.5em .25em;
+}
+
+.vertical-menu ul ul {
+	padding: 0.25em 0.5em;
+}
+
+.menu ul ul a {
+	width: 10em;
+}
+
+.horizontal-menu ul ul ul {
+	left: -6%;
+}
+
+.footer-menu ul ul ul {
+	top: auto;
 }
 }
 
