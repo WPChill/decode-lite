@@ -16,6 +16,7 @@ function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
+/* Adds Textarea Control*/
 class Decode_Customize_Textarea_Control extends WP_Customize_Control {
     public $type = 'textarea';
  
@@ -27,6 +28,11 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
         </label>
         <?php
     }
+}
+
+/* Adds a favicon image uploader control that only allows .ico and .png files to be uploaded */
+class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
+	public $extensions = array( 'ico', 'png' );
 }
 
 /**
@@ -76,18 +82,22 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
-		'label'   => __( 'Header Image', 'decode' ),
-		'section' => 'decode_header_options',
-		'settings'=> 'header_image',
-		'priority'=> 1,
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+		$wp_customize, 'header_image', array(
+			'label'   => __( 'Header Image', 'decode' ),
+			'section' => 'decode_header_options',
+			'settings'=> 'header_image',
+			'priority'=> 1,
 	) ) );
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'favicon_image', array(
-		'label'   => __( 'Favicon Image (recommended to be a PNG)', 'decode' ),
-		'section' => 'decode_header_options',
-		'settings'=> 'favicon_image',
-		'priority'=> 2,
+	$wp_customize->add_control(
+		new Decode_Customize_Favicon_Image_Control(
+		$wp_customize, 'favicon_image', array(
+			'label'   => __( 'Favicon Image (recommended to be a PNG)', 'decode' ),
+			'section' => 'decode_header_options',
+			'settings'=> 'favicon_image',
+			'priority'=> 2,
 	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
@@ -933,11 +943,13 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 		'priority'=> 12
 	) );
 	
-	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'site_colophon', array(
-		'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
-		'section' => 'decode_reading_options',
-		'settings'=> 'site_colophon',
-		'priority'=> 13
+	$wp_customize->add_control(
+		new Decode_Customize_Textarea_Control(
+		$wp_customize, 'site_colophon', array(
+			'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
+			'section' => 'decode_reading_options',
+			'settings'=> 'site_colophon',
+			'priority'=> 13
 	) ) );
 	
 	
@@ -958,11 +970,13 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	) );
 	
 	
-	$wp_customize->add_control( new Decode_Customize_Textarea_Control( $wp_customize, 'custom_css', array(
-		'label'   => __( 'Custom CSS', 'decode' ),
-		'section' => 'decode_other_options',
-		'settings'=> 'custom_css',
-		'priority'=> 1
+	$wp_customize->add_control(
+		new Decode_Customize_Textarea_Control(
+		$wp_customize, 'custom_css', array(
+			'label'   => __( 'Custom CSS', 'decode' ),
+			'section' => 'decode_other_options',
+			'settings'=> 'custom_css',
+			'priority'=> 1
 	) ) );
 
 
