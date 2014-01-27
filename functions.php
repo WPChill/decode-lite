@@ -242,33 +242,6 @@ function decode_add_google_profile( $contactmethods ) {
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 
 /**
- * Highlight search terms in search results.
- */
-function decode_highlight_search_results($text){
-     if(is_search()){
-     $sr = get_search_query();
-     $keys = implode('|', explode(' ', get_search_query()));
-     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
-     }
-     return $text;
-}
-add_filter('the_excerpt', 'decode_highlight_search_results');
-add_filter('the_title', 'decode_highlight_search_results');
-
-/**
- * Link to post in excerpt [...] links.
- */
-if ( ! function_exists( 'link_ellipses' ) ) {
-
-function link_ellipses( $more ) {
-	if(!is_search()){
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
-	}
-}
-}
-add_filter('excerpt_more', 'link_ellipses');
-
-/**
  * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
