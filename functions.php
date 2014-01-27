@@ -133,15 +133,11 @@ function decode_customize_css() {
 			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
-		.menu > ul > .menu-item-has-children > a::after, .menu > ul > .page_item_has_children > a::after {
+		.menu ul > .menu-item-has-children > a::after, .menu ul > .page_item_has_children > a::after {
 			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
-		
-		.horizontal-menu ul ul .menu-item-has-children > a::after, .horizontal-menu ul ul .page_item_has_children > a::after {
-			border-left-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-		
-		.footer-menu > ul > .menu-item-has-children > a::after, .footer-menu > ul > .page_item_has_children > a::after {
+				
+		.footer-menu ul > .menu-item-has-children > a::after, .footer-menu ul > .page_item_has_children > a::after {
 			border-bottom-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
 		}
 		
@@ -163,15 +159,11 @@ function decode_customize_css() {
 			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 		
-		.no-touch .menu > ul > .menu-item-has-children > a:hover::after, .no-touch .menu > ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after, .menu > ul > .current_page_item.menu-item-has-children > a::after, .menu > ul > .current_page_item.page_item_has_children > a::after {
+		.no-touch .menu ul > .menu-item-has-children > a:hover::after, .no-touch .menu ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after, .menu ul > .current_page_item.menu-item-has-children > a::after, .menu ul > .current_page_item.page_item_has_children > a::after {
 			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
-		
-		.no-touch .horizontal-menu ul ul .menu-item-has-children > a:hover::after, .no-touch .horizontal-menu ul ul .page_item_has_children > a:hover::after, .horizontal-menu ul ul li.open > a::after, .horizontal-menu ul ul .current_page_item.menu-item-has-children > a::after, .horizontal-menu ul ul .current_page_item.page_item_has_children > a::after {
-			border-left-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-		
-		.no-touch .footer-menu > ul > .menu-item-has-children > a:hover::after, .no-touch .footer-menu > ul > .page_item_has_children > a:hover::after, .footer-menu > ul > li.open > a::after, .footer-menu > ul > .current_page_item.menu-item-has-children > a::after, .footer-menu > ul > .current_page_item.page_item_has_children > a::after {
+				
+		.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after, .no-touch .footer-menu ul > .page_item_has_children > a:hover::after, .footer-menu ul > li.open > a::after, .footer-menu ul > .current_page_item.menu-item-has-children > a::after, .footer-menu ul > .current_page_item.page_item_has_children > a::after {
 			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
 		}
 
@@ -183,15 +175,11 @@ function decode_customize_css() {
 			border-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
 		}
 		
-		.no-touch .menu > ul > .menu-item-has-children > a:active::after, .no-touch .menu > ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after, .sidebar-menu ul .current_page_item.menu-item-has-children > a::after, .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
+		.no-touch .menu ul > .menu-item-has-children > a:active::after, .no-touch .menu ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after, .sidebar-menu ul .current_page_item.menu-item-has-children > a::after, .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
 			border-top-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
 		}
-		
-		.no-touch .horizontal-menu ul ul .menu-item-has-children > a:active::after, .no-touch .horizontal-menu ul ul .page_item_has_children > a:active::after {
-			border-left-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-		
-		.no-touch .footer-menu > ul > .menu-item-has-children > a:active::after, .no-touch .footer-menu > ul > .page_item_has_children > a:active::after {
+				
+		.no-touch .footer-menu ul > .menu-item-has-children > a:active::after, .no-touch .footer-menu ul > .page_item_has_children > a:active::after {
 			border-bottom-color: <?php echo get_theme_mod('secondary_accent_color', '#009BCD'); ?>;
 		}
 

@@ -765,8 +765,8 @@ object {
 }
 
 /* Down Arrow */
-.menu > ul > .menu-item-has-children > a::after,
-.menu > ul > .page_item_has_children > a::after,
+.menu ul .menu-item-has-children > a::after,
+.menu ul .page_item_has_children > a::after,
 .sidebar-menu ul .menu-item-has-children > a::after,
 .sidebar-menu ul .page_item_has_children > a::after {
 	border-top: 5px solid #444444;
@@ -775,19 +775,9 @@ object {
 	border-left: 5px solid transparent;
 }
 
-/* Right Arrow */
-.horizontal-menu ul ul .menu-item-has-children > a::after,
-.horizontal-menu ul ul .page_item_has_children > a::after {
-	border-top: 5px solid transparent;
-	border-right: none;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid #444444;
-	vertical-align: baseline;
-}
-
 /* Up Arrow */
-.footer-menu > ul > .menu-item-has-children > a::after,
-.footer-menu > ul > .page_item_has_children > a::after {
+.footer-menu ul .menu-item-has-children > a::after,
+.footer-menu ul .page_item_has_children > a::after {
 	border-top: none;
 	border-right: 5px solid transparent;
 	border-bottom: 5px solid #444444;
@@ -799,8 +789,8 @@ object {
 	color: #444444;
 }
 
-.menu > ul > .menu-item-has-children > a::after,
-.menu > ul > .page_item_has_children > a::after {
+.menu ul > .menu-item-has-children > a::after,
+.menu ul > .page_item_has_children > a::after {
 	border-top-color: #444444;
 }
 
@@ -809,8 +799,8 @@ object {
 		color: #009BCD;
 	}
 	
-	.no-touch .menu > ul > .menu-item-has-children > a:hover::after,
-	.no-touch .menu > ul > .page_item_has_children > a:hover::after,
+	.no-touch .menu ul > .menu-item-has-children > a:hover::after,
+	.no-touch .menu ul > .page_item_has_children > a:hover::after,
 	.menu ul li.open > a::after {
 		border-top-color: #009BCD;
 	}
@@ -819,28 +809,10 @@ object {
 		color: #007EA6
 	}
 	
-	.no-touch .menu > ul > .menu-item-has-children > a:active::after,
-	.no-touch .menu > ul > .page_item_has_children > a:active::after {
+	.no-touch .menu ul > .menu-item-has-children > a:active::after,
+	.no-touch .menu ul > .page_item_has_children > a:active::after {
 		border-top-color: #007EA6;
 	}
-	
-	.horizontal-menu ul ul .menu-item-has-children > a::after,
-	.horizontal-menu ul ul .page_item_has_children > a::after {
-		border-left-color: #444444;
-	}
-
-	.no-touch .horizontal-menu ul ul .menu-item-has-children > a:hover::after,
-	.no-touch .horizontal-menu ul ul .page_item_has_children > a:hover::after,
-	.horizontal-menu ul ul li.open > a::after {
-		border-left-color: #009BCD;
-		border-top-color: transparent;
-	}
-	
-	.no-touch .horizontal-menu ul ul .menu-item-has-children > a:active::after,
-	.no-touch .horizontal-menu ul ul .page_item_has_children > a:active::after {
-		border-left-color: #007EA6;
-	}
-
 	
 .sidebar-menu a {
 	color: #009BCD;
@@ -861,19 +833,19 @@ object {
 		border-top-color: #007EA6;
 	}
 
-.footer-menu > ul > .menu-item-has-children > a::after,
-.footer-menu > ul > .page_item_has_children > a::after {
+.footer-menu ul > .menu-item-has-children > a::after,
+.footer-menu ul > .page_item_has_children > a::after {
 	border-bottom-color: #444444;
 }
 
-.no-touch .footer-menu > ul > .menu-item-has-children > a:hover::after,
-.no-touch .footer-menu > ul > .page_item_has_children > a:hover::after,
-.footer-menu > ul > li.open > a::after {
+.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after,
+.no-touch .footer-menu ul > .page_item_has_children > a:hover::after,
+.footer-menu ul > li.open > a::after {
 	border-bottom-color: #009BCD;
 }
 
-.no-touch .footer-menu > ul > .menu-item-has-children > a:active::after,
-.no-touch .footer-menu > ul > .page_item_has_children > a:active::after {
+.no-touch .footer-menu ul > .menu-item-has-children > a:active::after,
+.no-touch .footer-menu ul > .page_item_has_children > a:active::after {
 	border-bottom-color: #007EA6;
 }
 
@@ -910,10 +882,6 @@ object {
 	top: 100%;
 }
 
-.footer-menu ul ul ul {
-	bottom: auto;
-}
-
 .menu ul ul a {
 }
 
@@ -941,6 +909,14 @@ object {
 	left: 3.75%;
 	right: 3.75%;
 }
+
+.header-menu ul ul ul { /* Super-submenus won't like the above so we need to reset it */
+	left: 0;
+	right: auto;
+	top: 90%;
+	width: 100%;
+}
+
 .footer-menu ul ul { /* Sets the width of the submenus same as the content */
 	width: 100%;
 }
@@ -1879,6 +1855,14 @@ textarea#comment {
 .header-menu ul ul {
 	left: auto;
 	right: auto;
+}
+
+.horizontal-menu ul ul ul {
+	left: -3.75%;
+}
+
+.footer-menu ul ul ul {
+	top: auto;
 }
 
 .menu ul ul a {
