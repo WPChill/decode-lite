@@ -826,16 +826,16 @@ object {
 	border-bottom-color: #444444;
 }
 
-.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after,
-.no-touch .footer-menu ul > .page_item_has_children > a:hover::after,
-.footer-menu ul > li.open > a::after {
-	border-bottom-color: #009BCD;
-}
-
-.no-touch .footer-menu ul > .menu-item-has-children > a:active::after,
-.no-touch .footer-menu ul > .page_item_has_children > a:active::after {
-	border-bottom-color: #007EA6;
-}
+	.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after,
+	.no-touch .footer-menu ul > .page_item_has_children > a:hover::after,
+	.footer-menu ul > li.open > a::after {
+		border-bottom-color: #009BCD;
+	}
+	
+	.no-touch .footer-menu ul > .menu-item-has-children > a:active::after,
+	.no-touch .footer-menu ul > .page_item_has_children > a:active::after {
+		border-bottom-color: #007EA6;
+	}
 
 
 .menu ul ul {
@@ -932,11 +932,6 @@ object {
 .sidebar-menu ul .current_page_item.menu-item-has-children > a::after,
 .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
 	border-top-color: #007EA6;
-}
-
-.horizontal-menu ul ul .current_page_item.menu-item-has-children > a::after,
-.horizontal-menu ul ul .current_page_item.page_item_has_children > a::after {
-	border-left-color: #009BCD;
 }
 
 .footer-menu > ul > .current_page_item.menu-item-has-children > a::after,
