@@ -845,7 +845,7 @@ object {
 	left: 0;
 	z-index: 2;
 	background: #E3E5E7;
-	padding: 0 0.25em 0.25em;
+	padding: 0.25em;
 	border-bottom: 2px solid #009BCD;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -1809,10 +1809,6 @@ textarea#comment {
 }
 
 .menu ul ul {
-	padding: 0 0.5em .25em;
-}
-
-.vertical-menu ul ul {
 	padding: 0.25em 0.5em;
 }
 
