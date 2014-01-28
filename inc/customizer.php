@@ -31,7 +31,7 @@ class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 }
 
 /* Adds a favicon image uploader control that only allows .ico and .png files to be uploaded */
-class Decode_Customize_Favicon_Image_Control extends WP_Customize_Upload_Control {
+class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
 	public $extensions = array( 'ico', 'png', 'image/x-icon' );
 }
 
