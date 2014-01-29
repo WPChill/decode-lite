@@ -1159,7 +1159,7 @@ public static function decode_customize_register( $wp_customize ) {
 		$return = '';
 		$mod = get_theme_mod($mod_name);
 		if ( ! empty( $mod ) ) {
-			$return = sprintf('%s { %s:%s; }',
+			$return = sprintf('%s { %s: %s; }',
 			$selector,
 			$style,
 			$prefix.$mod.$postfix
