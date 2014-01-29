@@ -1054,7 +1054,7 @@ public static function decode_customize_register( $wp_customize ) {
 	* 
 	* @see add_action('wp_head',$func)
 	*/
-	public static function header_output() {
+	public static function decode_output_color_css() {
 		?>
 		<!-- Decode Custom Colors CSS -->
 		<style type="text/css">
@@ -1177,7 +1177,7 @@ public static function decode_customize_register( $wp_customize ) {
 add_action( 'customize_register', array( 'Decode_Customize', 'decode_customize_register' ) );
 
 // Output custom CSS to live site
-add_action( 'wp_head' , array( 'Decode_Customize', 'header_output' ) );
+add_action( 'wp_head' , array( 'Decode_Customize', 'decode_output_color_css' ) );
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function decode_customize_preview_js() {
