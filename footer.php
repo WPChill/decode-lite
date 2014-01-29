@@ -12,11 +12,12 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 
-	<?php if ( get_theme_mod( 'show_header_social_icons', false ) == true ) {
+	<?php
+	if ( get_theme_mod( 'show_footer_social_icons', false ) == true ) {
 		get_template_part( 'social-links' );
-	} ?>
+	}
 
-	<?php if ( has_nav_menu( 'footer-menu' ) ) {
+	if ( has_nav_menu( 'footer-menu' ) ) {
 		wp_nav_menu( array(
 			'theme_location'  => 'footer-menu',
 			'container'       => false,
@@ -24,7 +25,8 @@
 			'menu_id'    => 'footer-menu',
 			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->'
 		) ); 
-	} ?>
+	}
+	?>
 
 	<?php if ( get_theme_mod( 'site_colophon', '' ) !== '' ) : ?>
 	<div class="site-colophon">
