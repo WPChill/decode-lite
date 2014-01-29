@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-23 17:21-0600\n"
-"PO-Revision-Date: 2014-01-23 17:28-0600\n"
+"POT-Creation-Date: 2014-01-28 21:59-0600\n"
+"PO-Revision-Date: 2014-01-28 21:59-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -109,7 +109,7 @@ msgid "Chats"
 msgstr "Chats"
 
 #: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
-#: ../inc/extras.php:86
+#: ../inc/extras.php:113
 msgid "Archives"
 msgstr "Archive"
 
@@ -288,7 +288,7 @@ msgstr "Seitenleiste"
 msgid "Footer Menu"
 msgstr ""
 
-#: ../functions.php:109
+#: ../functions.php:111
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
@@ -334,32 +334,33 @@ msgstr "Kategorien"
 msgid "Navigation"
 msgstr "Navigation anzeigen"
 
-#: ../inc/customizer.php:45
+#: ../inc/customizer.php:56
 msgid "Header Options"
 msgstr "Header-Einstellungen"
 
-#: ../inc/customizer.php:80
+#: ../inc/customizer.php:93
 msgid "Header Image"
 msgstr "Header-Bild"
 
-#: ../inc/customizer.php:87
-msgid "Favicon Image (recommended to be a PNG)"
+#: ../inc/customizer.php:102
+#, fuzzy
+msgid "Favicon Image (must be a PNG)"
 msgstr "Favicon Bild (PNG empfohlen)"
 
-#: ../inc/customizer.php:94
+#: ../inc/customizer.php:109
 msgid "Show Site Title"
 msgstr "Seitentitel anzeigen"
 
-#: ../inc/customizer.php:101
+#: ../inc/customizer.php:116
 msgid "Show Site Description"
 msgstr "Seitenbeschreibung anzeigen"
 
-#: ../inc/customizer.php:108
+#: ../inc/customizer.php:123
 #, fuzzy
 msgid "Show Header Menu"
 msgstr "Zeige Seiten-Header"
 
-#: ../inc/customizer.php:115
+#: ../inc/customizer.php:130
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
@@ -367,167 +368,167 @@ msgstr ""
 "HTML f&uuml;r die Beschreibung, falls du deine Blog-Beschreibung durch HTML-"
 "Code ersetzen möchtest"
 
-#: ../inc/customizer.php:128
+#: ../inc/customizer.php:143
 msgid "Sidebar Options"
 msgstr "Seitenleisten-Einstellungen"
 
-#: ../inc/customizer.php:152
+#: ../inc/customizer.php:167
 msgid "Enable Sidebar"
 msgstr "Seitenleiste aktivieren"
 
-#: ../inc/customizer.php:159
+#: ../inc/customizer.php:174
 msgid "Sidebar Position"
 msgstr "Position der Seitenleiste"
 
-#: ../inc/customizer.php:163 ../inc/customizer.php:174
+#: ../inc/customizer.php:178 ../inc/customizer.php:189
 msgid "Left"
 msgstr "Links"
 
-#: ../inc/customizer.php:164 ../inc/customizer.php:175
+#: ../inc/customizer.php:179 ../inc/customizer.php:190
 msgid "Right"
 msgstr "Rechts"
 
-#: ../inc/customizer.php:170
+#: ../inc/customizer.php:185
 msgid "Sidebar Button Position"
 msgstr "Seitenleiste Button Position"
 
-#: ../inc/customizer.php:181
+#: ../inc/customizer.php:196
 msgid "Always Visible Sidebar"
 msgstr "Seitenleiste immer sichtbar"
 
-#: ../inc/customizer.php:185
+#: ../inc/customizer.php:200
 msgctxt "Sidebar option"
 msgid "Always open"
 msgstr ""
 
-#: ../inc/customizer.php:186
+#: ../inc/customizer.php:201
 msgctxt "Sidebar option"
 msgid "Closed by default"
 msgstr ""
 
-#: ../inc/customizer.php:199
+#: ../inc/customizer.php:214
 msgid "Discussion Options"
 msgstr "Diskussionseinstellungen"
 
-#: ../inc/customizer.php:211
+#: ../inc/customizer.php:226
 msgid "Enable Comments"
 msgstr "Kommentare aktivieren"
 
-#: ../inc/customizer.php:224
+#: ../inc/customizer.php:239
 msgid "Social Options"
 msgstr "Social-Einstellung"
 
-#: ../inc/customizer.php:428 ../inc/customizer.php:435
+#: ../inc/customizer.php:443 ../inc/customizer.php:450
 msgid "Show Social Icons"
 msgstr "Social Icons anzeigen"
 
-#: ../inc/customizer.php:428
+#: ../inc/customizer.php:443
 #, fuzzy
 msgid "in Header"
 msgstr "Über dem Header"
 
-#: ../inc/customizer.php:435
+#: ../inc/customizer.php:450
 msgid "in Footer"
 msgstr ""
 
-#: ../inc/customizer.php:442
+#: ../inc/customizer.php:457
 msgid "Open Links in New Tab/Window"
 msgstr "Links in neuem Tab/Fenster öffnen"
 
-#: ../inc/customizer.php:449 ../inc/customizer.php:456
-#: ../inc/customizer.php:463 ../inc/customizer.php:477
-#: ../inc/customizer.php:484 ../inc/customizer.php:491
-#: ../inc/customizer.php:498 ../inc/customizer.php:505
-#: ../inc/customizer.php:519 ../inc/customizer.php:526
-#: ../inc/customizer.php:533 ../inc/customizer.php:540
-#: ../inc/customizer.php:547 ../inc/customizer.php:554
-#: ../inc/customizer.php:561 ../inc/customizer.php:568
-#: ../inc/customizer.php:575 ../inc/customizer.php:582
-#: ../inc/customizer.php:589 ../inc/customizer.php:596
-#: ../inc/customizer.php:603 ../inc/customizer.php:610
-#: ../inc/customizer.php:617 ../inc/customizer.php:652
-#: ../inc/customizer.php:659 ../inc/customizer.php:666
-#: ../inc/customizer.php:680 ../inc/customizer.php:694
-#: ../inc/customizer.php:701 ../inc/customizer.php:708
-#: ../inc/customizer.php:715 ../inc/customizer.php:722
-#: ../inc/customizer.php:729 ../inc/customizer.php:743
+#: ../inc/customizer.php:464 ../inc/customizer.php:471
+#: ../inc/customizer.php:478 ../inc/customizer.php:492
+#: ../inc/customizer.php:499 ../inc/customizer.php:506
+#: ../inc/customizer.php:513 ../inc/customizer.php:520
+#: ../inc/customizer.php:534 ../inc/customizer.php:541
+#: ../inc/customizer.php:548 ../inc/customizer.php:555
+#: ../inc/customizer.php:562 ../inc/customizer.php:569
+#: ../inc/customizer.php:576 ../inc/customizer.php:583
+#: ../inc/customizer.php:590 ../inc/customizer.php:597
+#: ../inc/customizer.php:604 ../inc/customizer.php:611
+#: ../inc/customizer.php:618 ../inc/customizer.php:625
+#: ../inc/customizer.php:632 ../inc/customizer.php:667
+#: ../inc/customizer.php:674 ../inc/customizer.php:681
+#: ../inc/customizer.php:695 ../inc/customizer.php:709
+#: ../inc/customizer.php:716 ../inc/customizer.php:723
+#: ../inc/customizer.php:730 ../inc/customizer.php:737
+#: ../inc/customizer.php:744 ../inc/customizer.php:758
 #, php-format
 msgid "%s Username"
 msgstr "%s Benutzername"
 
-#: ../inc/customizer.php:470
+#: ../inc/customizer.php:485
 #, php-format
 msgctxt "[noun] [translation string] (explanation)"
 msgid "%1$s Username %2$s"
 msgstr "%1$s Benutzername %2$s"
 
-#: ../inc/customizer.php:470
+#: ../inc/customizer.php:485
 msgid " (or the long number in your profile URL)"
 msgstr " (oder die lange Nummer in deiner Profil-URL)"
 
-#: ../inc/customizer.php:512 ../inc/customizer.php:687
+#: ../inc/customizer.php:527 ../inc/customizer.php:702
 #, php-format
 msgid "%s Profile URL"
 msgstr "%s Profil-URL"
 
-#: ../inc/customizer.php:624 ../inc/customizer.php:631
-#: ../inc/customizer.php:638
+#: ../inc/customizer.php:639 ../inc/customizer.php:646
+#: ../inc/customizer.php:653
 #, php-format
 msgid "%s Site URL"
 msgstr "%s Seiten-URL"
 
-#: ../inc/customizer.php:645 ../inc/customizer.php:673
+#: ../inc/customizer.php:660 ../inc/customizer.php:688
 #, php-format
 msgid "%s User ID"
 msgstr ""
 
-#: ../inc/customizer.php:736
+#: ../inc/customizer.php:751
 #, php-format
 msgid "%s Group Name"
 msgstr "%s Gruppen-Name"
 
-#: ../inc/customizer.php:750
+#: ../inc/customizer.php:765
 #, php-format
 msgid "%s Link"
 msgstr "%s Links"
 
-#: ../inc/customizer.php:757
+#: ../inc/customizer.php:772
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: ../inc/customizer.php:764
+#: ../inc/customizer.php:779
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
-#: ../inc/customizer.php:777
+#: ../inc/customizer.php:792
 msgid "Reading Options"
 msgstr "Lese-Einstellungen"
 
-#: ../inc/customizer.php:849
+#: ../inc/customizer.php:864
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Zeige Ausschnitte anstelle des vollen Textes an. Haftnotizen ausgenommen."
 
-#: ../inc/customizer.php:856
+#: ../inc/customizer.php:871
 #, fuzzy
 msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
 "Post-Bilder anzeigen, wenn Ausschnitte auf der Hauptseite angezeigt werden"
 
-#: ../inc/customizer.php:863
+#: ../inc/customizer.php:878
 #, fuzzy
 msgid "Display a post's featured image on its individual page."
 msgstr ""
 "Post-Bilder anzeigen, wenn Ausschnitte auf der Hauptseite angezeigt werden"
 
-#: ../inc/customizer.php:870
+#: ../inc/customizer.php:885
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Zeige Tags auf der Startseite (Tags werden auf der Detailseite eines Posts "
 "angezeigt)"
 
-#: ../inc/customizer.php:877
+#: ../inc/customizer.php:892
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -535,40 +536,40 @@ msgstr ""
 "Zeige Kategorien auf der Startseite (Kategorien werden auf der Detailseite "
 "eines Posts angezeigt)"
 
-#: ../inc/customizer.php:884
+#: ../inc/customizer.php:899
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 "Zeige den Namen des Autors, dessen Profilbild und Biographie nach den Posts"
 
-#: ../inc/customizer.php:891
+#: ../inc/customizer.php:906
 msgid "Entry Date Position"
 msgstr "Datums-Position eingeben"
 
-#: ../inc/customizer.php:895
+#: ../inc/customizer.php:910
 msgid "Above Header"
 msgstr "Über dem Header"
 
-#: ../inc/customizer.php:896
+#: ../inc/customizer.php:911
 msgid "Below Header"
 msgstr "Unter dem Header"
 
-#: ../inc/customizer.php:902
+#: ../inc/customizer.php:917
 msgid "Show Page Headers"
 msgstr "Zeige Seiten-Header"
 
-#: ../inc/customizer.php:909
+#: ../inc/customizer.php:924
 msgid "Show entry date for post excepts on the main page"
 msgstr "Zeige Eintrags-Datum für Post-Ausschnitte auf der Hauptseite"
 
-#: ../inc/customizer.php:916
+#: ../inc/customizer.php:931
 msgid "Add an arrow before the title of a link post"
 msgstr "F&uuml;ge einen Pfeil vor Titeln eines Link-Posts ein"
 
-#: ../inc/customizer.php:923
+#: ../inc/customizer.php:938
 msgid "Show all post types, including custom post types"
 msgstr "Zeige alle Post-Typen, inklusive benutzerdefinierter Typen"
 
-#: ../inc/customizer.php:930
+#: ../inc/customizer.php:945
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -576,53 +577,53 @@ msgstr ""
 "Zeige Theme-Info (zeige ein Zeile Text &uuml;ber das Theme und dessen "
 "Entwickler am unteren Seitenrand an)"
 
-#: ../inc/customizer.php:937
+#: ../inc/customizer.php:954
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Text (Schlussschrift, Copyright, Abspann, etc.) f&uuml;r die Fusszeile der "
 "Seite"
 
-#: ../inc/customizer.php:950
+#: ../inc/customizer.php:967
 msgid "Other Options"
 msgstr "Weitere Einstellungen"
 
-#: ../inc/customizer.php:962
+#: ../inc/customizer.php:981
 msgid "Custom CSS"
 msgstr "Benutzerdefiniertes CSS"
 
-#: ../inc/customizer.php:1001
+#: ../inc/customizer.php:1020
 msgid "Accent Color"
 msgstr "Akzentfarbe"
 
-#: ../inc/customizer.php:1007
+#: ../inc/customizer.php:1026
 msgid "Active Link Color"
 msgstr "Farbe aktiver Links"
 
-#: ../inc/customizer.php:1013
+#: ../inc/customizer.php:1032
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: ../inc/customizer.php:1019
+#: ../inc/customizer.php:1038
 msgid "Secondary Text Color"
 msgstr "Zweite Textfarbe"
 
-#: ../inc/customizer.php:1025
+#: ../inc/customizer.php:1044
 msgid "Use accent color instead of text color for icons"
 msgstr "Verwende Akzentfarbe anstelle der Textfarbe f&uuml;r die Icons"
 
-#: ../inc/extras.php:77
+#: ../inc/extras.php:104
 msgid "Category"
 msgstr "Kategorie"
 
-#: ../inc/extras.php:80
+#: ../inc/extras.php:107
 msgid "Tag"
 msgstr "Tag"
 
-#: ../inc/extras.php:83
+#: ../inc/extras.php:110
 msgid "Author"
 msgstr "Autor"
 
-#: ../inc/extras.php:93 ../inc/extras.php:97
+#: ../inc/extras.php:120 ../inc/extras.php:124
 msgid "Page "
 msgstr "Seite"
 
