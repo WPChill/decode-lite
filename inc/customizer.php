@@ -1063,23 +1063,23 @@ public static function decode_customize_register( $wp_customize ) {
 				'background',
 				'background_color',
 				'#');
-			?> 
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger',
 				'color',
 				'text_color' );
-			?> 
-			<?php self::generate_css( 
+			
+			self::generate_css( 
 				'.menu ul > .menu-item-has-children > a::after, .menu ul > .page_item_has_children > a::after',
 				'border-top-color',
 				'text_color');
-			?>
-			<?php self::generate_css( 
+			
+			self::generate_css( 
 				'.footer-menu ul > .menu-item-has-children > a::after, .footer-menu ul > .page_item_has_children > a::after',
 				'border-bottom-color',
 				'text_color' );
-			?>
-			<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) :
+			
+			if (get_theme_mod( 'accent_color_icons', false ) == false ) :
 				self::generate_css( 
 					'.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill',
 					'fill',
@@ -1091,48 +1091,49 @@ public static function decode_customize_register( $wp_customize ) {
 					'fill',
 					'accent_color'
 				);
-			endif; ?>
-			<?php self::generate_css(
+			endif;
+			
+			self::generate_css(
 				'a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover',
 				'color',
 				'accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type=\'text\']:focus, .touch input[type=\'text\']:focus, .no-touch input[type=\'email\']:focus, .touch input[type=\'email\']:focus, .no-touch input[type=\'password\']:focus, .touch input[type=\'password\']:focus, .no-touch input[type=\'search\']:focus, .touch input[type=\'search\']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus',
 				'border-color',
 				'accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch .menu ul > .menu-item-has-children > a:hover::after, .no-touch .menu ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after, .menu ul > .current_page_item.menu-item-has-children > a::after, .menu ul > .current_page_item.page_item_has_children > a::after',
 				'border-top-color',
 				'accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after, .no-touch .footer-menu ul > .page_item_has_children > a:hover::after, .footer-menu ul > li.open > a::after, .footer-menu ul > .current_page_item.menu-item-has-children > a::after, .footer-menu ul > .current_page_item.page_item_has_children > a::after',
 				'border-bottom-color',
 				'accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current_page_item > a, .sidebar-menu ul .current_page_item > a, .no-touch .SidebarContent a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active',
 				'color',
 				'secondary_accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active',
 				'border-color',
 				'secondary_accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch .menu ul > .menu-item-has-children > a:active::after, .no-touch .menu ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after, .sidebar-menu ul .current_page_item.menu-item-has-children > a::after, .sidebar-menu ul .current_page_item.page_item_has_children > a::after',
 				'border-top-color',
 				'secondary_accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.no-touch .footer-menu ul > .menu-item-has-children > a:active::after, .no-touch .footer-menu ul > .page_item_has_children > a:active::after',
 				'border-bottom-color',
 				'secondary_accent_color' );
-			?>
-			<?php self::generate_css(
+			
+			self::generate_css(
 				'.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"]',
 				'color',
 				'secondary_text_color' );
