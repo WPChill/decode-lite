@@ -118,82 +118,22 @@ function decode_widgets_init() {
 add_action( 'widgets_init', 'decode_widgets_init' );
 
 /**
- * Add custom colors to CSS.
+ * Add Custom CSS to page.
  */
-if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
+if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
-function decode_customize_css() {
-    ?>
-         <style type="text/css">
-        body, .sidebar, .SidebarTop, .menu ul ul {
-			background: <?php echo '#' . get_background_color(); ?>;
-		}
-
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
-			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-		
-		.menu ul > .menu-item-has-children > a::after, .menu ul > .page_item_has_children > a::after {
-			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-				
-		.footer-menu ul > .menu-item-has-children > a::after, .footer-menu ul > .page_item_has_children > a::after {
-			border-bottom-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-		
-	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
-		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-	<?php else : ?>
-		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-	<?php endif; ?>
-
-		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover {
-			color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-
-		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
-			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-		
-		.no-touch .menu ul > .menu-item-has-children > a:hover::after, .no-touch .menu ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after, .menu ul > .current_page_item.menu-item-has-children > a::after, .menu ul > .current_page_item.page_item_has_children > a::after {
-			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-				
-		.no-touch .footer-menu ul > .menu-item-has-children > a:hover::after, .no-touch .footer-menu ul > .page_item_has_children > a:hover::after, .footer-menu ul > li.open > a::after, .footer-menu ul > .current_page_item.menu-item-has-children > a::after, .footer-menu ul > .current_page_item.page_item_has_children > a::after {
-			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-
-		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current_page_item > a, .sidebar-menu ul .current_page_item > a, .no-touch .SidebarContent a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active {
-			color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-
-		.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
-			border-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-		
-		.no-touch .menu ul > .menu-item-has-children > a:active::after, .no-touch .menu ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after, .sidebar-menu ul .current_page_item.menu-item-has-children > a::after, .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
-			border-top-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-				
-		.no-touch .footer-menu ul > .menu-item-has-children > a:active::after, .no-touch .footer-menu ul > .page_item_has_children > a:active::after {
-			border-bottom-color: <?php echo get_theme_mod('secondary_accent_color', '#009BCD'); ?>;
-		}
-
-		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {
-			color: <?php echo get_theme_mod('secondary_text_color', '#808080'); ?>;
-		}
-		
-		<?php echo get_theme_mod('custom_css', ''); ?>
-		
-         </style>
-    <?php
+function decode_custom_css() {
+	?>
+		<!--Custom CSS-->
+		<style type="text/css">
+			<?php echo get_theme_mod('custom_css', ''); ?>
+		</style>
+	<?php
 }
 }
-add_action( 'wp_head', 'decode_customize_css');
+if ( get_theme_mod('custom_css', '') !== '' ) {
+	add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
+}
 
 /**
  * Implement the Custom Header feature.
