@@ -124,7 +124,7 @@ if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
 function decode_custom_css() {
 	?>
-		<!--Custom CSS-->
+		<!-- Decode Custom CSS -->
 		<style type="text/css">
 			<?php echo get_theme_mod('custom_css', ''); ?>
 		</style>

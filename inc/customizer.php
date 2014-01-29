@@ -1056,7 +1056,7 @@ public static function decode_customize_register( $wp_customize ) {
 	*/
 	public static function header_output() {
 		?>
-		<!--Customizer CSS-->
+		<!-- Decode Custom Colors CSS -->
 		<style type="text/css">
 			<?php self::generate_css(
 				'body, .sidebar, .SidebarTop, .menu ul ul',
