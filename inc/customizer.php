@@ -1174,10 +1174,10 @@ public static function decode_customize_register( $wp_customize ) {
 }
 
 // Adds settings to Customize menu
-add_action( 'customize_register', array( 'Decode_Customize' , 'decode_customize_register' ) );
+add_action( 'customize_register', array( 'Decode_Customize', 'decode_customize_register' ) );
 
 // Output custom CSS to live site
-add_action( 'wp_head' , array( 'Decode_Customize' , 'header_output' ) );
+add_action( 'wp_head' , array( 'Decode_Customize', 'header_output' ) );
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function decode_customize_preview_js() {
