@@ -843,11 +843,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'default' => false,
 		'transport' => 'refresh'
 	) );
-	
-	$wp_customize->add_setting( 'show_all_post_types', array(
-		'default' => false,
-		'transport' => 'refresh'
-	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default' => true,
@@ -933,19 +928,12 @@ public static function decode_customize_register( $wp_customize ) {
 		'type'    => 'checkbox',
 		'priority'=> 10
 	) );
-	
-	$wp_customize->add_control( 'show_all_post_types', array(
-		'label'   => __( 'Show all post types, including custom post types', 'decode' ),
-		'section' => 'decode_reading_options',
-		'type'    => 'checkbox',
-		'priority'=> 11
-	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
-		'priority'=> 12
+		'priority'=> 11
 	) );
 	
 	$wp_customize->add_control(
@@ -954,7 +942,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 			'section' => 'decode_reading_options',
 			'settings'=> 'site_colophon',
-			'priority'=> 13
+			'priority'=> 12
 	) ) );
 	
 	
@@ -974,6 +962,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'transport' => 'refresh'
 	) );
 	
+	$wp_customize->add_setting( 'add_custom_post_types', array(
+		'default' => '',
+		'transport' => 'refresh'
+	) );
+	
 	
 	$wp_customize->add_control(
 		new Decode_Customize_Textarea_Control(
@@ -983,6 +976,13 @@ public static function decode_customize_register( $wp_customize ) {
 			'settings'=> 'custom_css',
 			'priority'=> 1
 	) ) );
+	
+	$wp_customize->add_control( 'add_custom_post_types', array(
+		'label'   => __( 'Show the following post types on home blog page', 'decode' ),
+		'section' => 'decode_other_options',
+		'type'    => 'text',
+		'priority'=> 11
+	) );
 
 
 

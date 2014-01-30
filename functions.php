@@ -234,15 +234,15 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 /**
  * Show all post types in main query
  */
-if ( ! function_exists( 'add_all_post_types_to_query' ) ) {
+if ( ! function_exists( 'add_post_types_to_query' ) ) {
 
-function add_all_post_types_to_query( $query ) {
+function add_post_types_to_query( $query ) {
 	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( get_post_types() ) );
+		$query->set( 'post_type', array( 'post', get_theme_mod( 'add_custom_post_types', '' ) ) );
 	return $query;
 }
 }
 
-if ( get_theme_mod( 'show_all_post_types', false ) == true ) {
-	add_action( 'pre_get_posts', 'add_all_post_types_to_query' );
+if ( get_theme_mod( 'show_all_post_types', '' ) !== '' ) {
+	add_action( 'pre_get_posts', 'add_post_types_to_query' );
 }
