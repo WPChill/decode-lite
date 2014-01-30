@@ -238,7 +238,9 @@ if ( ! function_exists( 'add_post_types_to_query' ) ) {
 
 function add_post_types_to_query( $query ) {
 	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', get_theme_mod( 'add_custom_post_types', '' ) ) );
+		$typelist = explode(", ", get_theme_mod( 'add_custom_post_types', '' ));
+		$typelist = implode("','", $typelist);
+		$query->set( 'post_type', array( 'post', "'" . $typelist . "'" ) );
 	return $query;
 }
 }

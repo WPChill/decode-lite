@@ -979,7 +979,7 @@ public static function decode_customize_register( $wp_customize ) {
 	) ) );
 	
 	$wp_customize->add_control( 'add_custom_post_types', array(
-		'label'   => __( 'Show the following post types on home blog page', 'decode' ),
+		'label'   => __( 'Show the following post types on home blog page. (Separate with commas)', 'decode' ),
 		'section' => 'decode_other_options',
 		'type'    => 'text',
 		'priority'=> 11
