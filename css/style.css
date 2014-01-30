@@ -1284,6 +1284,7 @@ article .entry-meta.above-content {
 
 .sidebar.left {
 	transform: translateX(-110%);
+	/* animation: pop-closed 0.75s 0.75s; */ Add this for a nice pop as the sdiebar loads
 	left: 0;
 	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 }
@@ -1321,6 +1322,16 @@ article .entry-meta.above-content {
 	.no-csstransforms .sidebar.right.visible, .no-csstransforms .sidebar.constant.right {
 		right: 0;
 	}
+	
+@keyframes pop-closed {
+	0% {transform: translateX(-95%);}
+	25% {transform: translateX(-80%);}
+	40% {transform: translateX(-100%);}
+	60% {transform: translateX(-90%);}
+	75% {transform: translateX(-105%);}
+	90% {transform: translateX(-95%);}
+	100% {transform: translateX(-110%);}
+}
 
 
 /* =Links
