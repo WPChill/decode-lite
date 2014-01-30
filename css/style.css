@@ -1109,14 +1109,14 @@ body.single-attachment .entry-meta {
 	clear: both;
 }
 
-.post .entry-meta {
+article .entry-meta {
 	width: 90%;
 	padding-bottom: 0.5%;
 	border-bottom: 1px solid #009BCD;
 	margin: 0 auto;
 }
 
-.post .entry-meta.above-content {
+article .entry-meta.above-content {
 	width: auto;
 	display: inline-block;
 	padding: 0 2.5% 1%;
