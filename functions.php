@@ -241,13 +241,11 @@ function add_post_types_to_query( $query ) {
 	$typelist = explode( ", ", $typelist );
 	$typelist = implode( "','", $typelist );
 	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', "'" . $typelist . "'" ) );
-	return $query;
-	
-	
+		$query->set( 'post_type', array( 'post', $typelist ) );
+	return $query;	
 }
 }
 
-if ( get_theme_mod( 'show_all_post_types', '' ) !== '' ) {
+if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 	add_action( 'pre_get_posts', 'add_post_types_to_query' );
 }
