@@ -1243,6 +1243,7 @@ body.single-attachment .entry-meta {
 	margin-bottom: 7.5%;
 	border-bottom: 1px solid #009BCD;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .no-touch .SidebarTop {
