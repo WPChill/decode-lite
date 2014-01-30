@@ -96,7 +96,7 @@ textarea {
 }
 
 body {
-	background: #E3E5E7;
+	background-color: #E3E5E7;
 	text-align: left;
 	margin: 0;
 	-webkit-overflow-scrolling: touch;
@@ -844,7 +844,7 @@ object {
 	position: absolute;
 	left: 0;
 	z-index: 2;
-	background: #E3E5E7;
+	background-color: #E3E5E7;
 	padding: 0.25em;
 	border-bottom: 2px solid #009BCD;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -1213,7 +1213,7 @@ body.single-attachment .entry-meta {
 }
 
 .SidebarTop {
-	background: #E3E5E7;
+	background-color: #E3E5E7;
 	width: 100%;
 	margin-bottom: 7.5%;
 	border-bottom: 1px solid #009BCD;
@@ -1274,7 +1274,7 @@ body.single-attachment .entry-meta {
 	top: 0;
 	width: 95%;
 	font-size: 0.95em;
-	background: #E3E5E7;
+	background-color: #E3E5E7;
 	position: fixed;
 	height: 100%;
 	overflow-y: scroll;
@@ -1617,7 +1617,7 @@ textarea#comment {
 }
 
 .search-highlight {
-	background-color:rgba(255,255,0,.25);
+	background-color:rgba(255, 255, 0, 0.25);
 	color: inherit;
 }
 

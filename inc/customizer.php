@@ -1061,7 +1061,7 @@ public static function decode_customize_register( $wp_customize ) {
 		<style type="text/css">
 			<?php self::generate_css(
 				'body, .sidebar, .SidebarTop, .menu ul ul',
-				'background',
+				'background-color',
 				'background_color',
 				'#');
 			
