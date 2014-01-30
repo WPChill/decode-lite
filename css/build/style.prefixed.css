@@ -1170,7 +1170,7 @@ article .entry-meta.above-content {
 		color: #007EA6;
 	}
 
-	.no-touch .post .entry-meta .date a:hover, .post .entry-meta .date a:active {
+	.no-touch article .entry-meta .date a:hover, article .entry-meta .date a:active {
 		margin-top: 3.5%;
 		border-bottom: none;
 	}
@@ -1658,7 +1658,7 @@ textarea#comment {
 	padding: 0 1em;
 }
 
-.search .post, .search .page {
+.search article {
 	margin-bottom: 10%;
 }
 
@@ -2015,7 +2015,7 @@ textarea#comment {
 	width: 80%;
 }
 
-article.post {
+.content-area article {
 	margin: 2.5% auto 5%;
 }
 
@@ -2043,11 +2043,11 @@ article.post {
 	font-size: 1.125em;
 }
 
-.post .entry-meta, .search footer {
+article .entry-meta, .search footer {
 	width: 85%;
 }
 
-.search .post, .search .page {
+.search article {
 	margin-bottom: 5%;
 }
 
@@ -2122,7 +2122,7 @@ article.post {
 	}
 
 
-article.post {
+.content-area article {
 	margin-bottom: 10%;
 }
 }
