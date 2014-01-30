@@ -47,6 +47,7 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod ( 'show_social_icons' );
 	remove_theme_mod ( 'linkedin_username' );
 	remove_theme_mod ( 'yelp_userid' );
+	remove_theme_mod ( 'show_all_post_types' );
 
 /**
  * Header Options
