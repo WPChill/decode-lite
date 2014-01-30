@@ -7,10 +7,9 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-01-28 21:58-0600\n"
-"PO-Revision-Date: 2014-01-28 21:59-0600\n"
+"PO-Revision-Date: 2014-01-30 09:36-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
-"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,12 +20,13 @@ msgstr ""
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "Description:\n"
 "X-Poedit-Basepath: .\n"
+"Language: es_ES\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
 #: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "¡Ups! No se encuentra la p&aacute;gina. "
+msgstr "¡Vaya! No se encuentra la p&aacute;gina. "
 
 #: ../404.php:19
 msgid ""
@@ -125,8 +125,8 @@ msgstr "Autor: %s"
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Un pensamiento por &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s pensamientos por &ldquo;%2$s&rdquo;"
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
 
 #: ../comments.php:36 ../comments.php:60
 msgid "Comment navigation"
@@ -164,7 +164,7 @@ msgstr "Publicar comentario"
 #: ../comments.php:83
 msgctxt "noun"
 msgid "Comment"
-msgstr "Comentar"
+msgstr "Comentario"
 
 #: ../comments.php:84
 #, php-format
@@ -333,9 +333,8 @@ msgid "Header Image"
 msgstr "Imagen de encabezado"
 
 #: ../inc/customizer.php:102
-#, fuzzy
 msgid "Favicon Image (must be a PNG)"
-msgstr "Favicon (se recomienda que sea PNG)"
+msgstr "Favicon (tiene que ser un PNG)"
 
 #: ../inc/customizer.php:109
 msgid "Show Site Title"
@@ -388,12 +387,12 @@ msgstr "Barra lateral siempre visible"
 #: ../inc/customizer.php:200
 msgctxt "Sidebar option"
 msgid "Always open"
-msgstr ""
+msgstr "Siempre visible"
 
 #: ../inc/customizer.php:201
 msgctxt "Sidebar option"
 msgid "Closed by default"
-msgstr ""
+msgstr "Cerrado por defecto"
 
 #: ../inc/customizer.php:214
 msgid "Discussion Options"
@@ -412,14 +411,12 @@ msgid "Show Social Icons"
 msgstr "Mostrar iconos sociales"
 
 #: ../inc/customizer.php:443
-#, fuzzy
 msgid "in Header"
-msgstr "Encabezado superior"
+msgstr "en encabezado"
 
 #: ../inc/customizer.php:450
-#, fuzzy
 msgid "in Footer"
-msgstr "Men&uacute; inferior"
+msgstr "en pi&eacute; de p&aacute;gina"
 
 #: ../inc/customizer.php:457
 msgid "Open Links in New Tab/Window"
@@ -655,68 +652,3 @@ msgstr ""
 #, php-format
 msgid "View all posts by %s"
 msgstr "Ver todos los posts de %s"
-
-#~ msgid ""
-#~ "A minimal, modern theme, designed to be mobile first and fully "
-#~ "responsive, Decode features the ability to change all the colors in the "
-#~ "theme and an elegant sidebar conveniently accessed by tapping on the menu "
-#~ "icon. The sidebar can fit all of your widgets and its position can be "
-#~ "customized. You can also choose to keep the sidebar always visible on "
-#~ "larger screens for an elegent two-column experience. You can even disable "
-#~ "the sidebar and comment links if you choose. Decode supports link posts, "
-#~ "where the title can be hyperlinked. Decode includes custom social icons "
-#~ "in the header that you can easily link to your choice of 42 different "
-#~ "social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you "
-#~ "will be sure to find support for the network you want alongside a bevy of "
-#~ "customizations to make your site unique. Lastly, Decode is also built "
-#~ "alongside a companion plugin that adds a sleek reply tool that lets "
-#~ "readers send you a reply about the post using Twitter or App.net. <a href="
-#~ "\"http://scotthsmith.com/projects/decode/\">More info here</a>"
-#~ msgstr ""
-#~ "Un tema minimalista y moderno, preparado para funcionar en dispositivos "
-#~ "móviles. Podr&aacute; cmabiar los colores del tema, una elegante barra "
-#~ "lateral accesible pulsando el icono de men&uacute;. Puede contener todos "
-#~ "sus widgets cuya posici&oacute;n puede ser personalizada. Tambi&eacute;n "
-#~ "puede elegir si mantener la barra siempre visible on pantallas grandes "
-#~ "para una elegante experiencia a dos columnas. Incluso puede deshabilitar "
-#~ "la barra y los comentarios si prefiere. Soporta enlaces a posts, donde el "
-#~ "t&iacute;tulo puede ser hiperenlazado. Incluye iconos sociales "
-#~ "personalizados para enlazar a 42 perfiles sociales desde Twitter a App."
-#~ "net pasando por Pinterest y LinkedIn para as&iacute; encontrar el apoyo "
-#~ "que desea junto con un grupo de personalizaciones para hacer que su sitio "
-#~ "sea &uacute;nico. Por &uacute;ltimo, Decode tambi&eacute;n incluye un "
-#~ "plugin asociado que añade una elegante herramienta de respuesta que "
-#~ "permite a los lectores enviarle una respuesta sobre el mensaje utilizando "
-#~ "Twitter o App.net.<a href=\"http://scotthsmith.com/projects/decode/"
-#~ "\">M&aacute;s informaci&oacute;n aqu&iacute; (Ingl&eacute;s)</a>"
-
-#~ msgid "Nav Menu"
-#~ msgstr "Men&uacute; de navegaci&oacute;n"
-
-#~ msgctxt "assistive text"
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgctxt "placeholder"
-#~ msgid "Search&hellip;"
-#~ msgstr "Buscar&hellip;"
-
-#~ msgctxt "label"
-#~ msgid "Search for:"
-#~ msgstr "Buscar:"
-
-#~ msgctxt "submit button"
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgid "Pingback:"
-#~ msgstr "Pingback"
-
-#~ msgid "%s <span class=\"says\">says:</span>"
-#~ msgstr "%s <span class=\"says\">dice:</span>"
-
-#~ msgid "Your comment is awaiting moderation."
-#~ msgstr "Su comentario esta pendiente de moderación"
-
-#~ msgid "Reply"
-#~ msgstr "Contestar"
