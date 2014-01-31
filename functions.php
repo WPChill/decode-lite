@@ -237,11 +237,13 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 if ( ! function_exists( 'add_post_types_to_query' ) ) {
 
 function add_post_types_to_query( $query ) {
-	$typelist = get_theme_mod( 'add_custom_post_types', '' );
-	$typelist = explode( ", ", $typelist );
-	$typelist = implode( "','", $typelist );
+		$typelist = 'post';
+		if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
+			$typelist .= ', ' . get_theme_mod( 'add_custom_post_types', '' );
+			$typelist = explode( ", ", $typelist );
+		}
 	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', $typelist ) );
+		$query->set( 'post_type', $typelist );
 	return $query;	
 }
 }
