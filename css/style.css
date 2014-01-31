@@ -1277,7 +1277,7 @@ article .entry-meta.above-content {
 	background-color: #E3E5E7;
 	position: fixed;
 	height: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	z-index: 5;
 }
