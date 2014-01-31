@@ -1284,7 +1284,7 @@ article .entry-meta.above-content {
 
 .sidebar.left {
 	transform: translateX(-110%);
-	/* animation: pop-closed 0.75s 0.75s; */ Add this for a nice pop as the sdiebar loads
+	/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
 	left: 0;
 	box-shadow: 1px 0px 15px rgba(0,0,0,0.5);
 }
