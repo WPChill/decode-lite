@@ -33,6 +33,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Pinterest
 - Fancy
 - Etsy
+- Pinboard
 - Delicious
 - Instagram
 - 500px
@@ -47,6 +48,8 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - YouTube
 - Kickstarter
 - Tumblr
+- Medium
+- Svbtle
 - WordPress.com
 - Stack Overflow
 - reddit
