@@ -25,6 +25,11 @@
 `.form-allowed-tags { display: none !important; }`<br>
 This is hidden until the form is clicked on, but this will hide it at all times.
 
+### Make the sidebar pop closed when the page loads
+`.sidebar.left {
+	animation: pop-closed 0.75s 0.75s;
+}`
+
 ### Prevent current menu item from shaking on hover:
 `.menu .current-menu-item > a:hover,
 .menu .current_page_item > a:hover {
