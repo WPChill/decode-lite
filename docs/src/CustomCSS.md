@@ -5,6 +5,10 @@
 `.site-logo { max-height: 8.5em; }`<br>
 8.5ems is the default. Raise or lower this amount to what suits you.
 
+### Change the size of the social icons:
+`.sociallink svg { height: 2.5em; width: 2.5em; }`<br>
+I suggest that you do not change this without using media queries because the social icons are responsively sized.
+
 ### Change the font size of posts and pages:
 `.entry-content { font-size: 1em; }`<br>
 1em is the default.
