@@ -881,7 +881,7 @@ object {
 }
 
 .vertical-menu ul ul ul {
-	left: -0.5em;
+	left: -0.25em;
 	top: 100%;
 }
 
@@ -1902,6 +1902,10 @@ textarea#comment {
 
 .footer-menu ul ul ul {
 	top: auto;
+}
+
+.vertical-menu ul ul ul {
+	left: -0.5em;
 }
 }
 
