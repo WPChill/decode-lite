@@ -59,14 +59,14 @@ module.exports = function(grunt) {
 			},
 			respond: {
 				cwd: 'js/',
-				src: ['src/respond.js'],
+				src: 'src/respond.js',
 				srcRoot: '../',
 				dest: 'respond.js',				
 				destMap: 'srcmaps/respond.js.map'
 			},
 			customizer: {
 				cwd: 'js/',
-				src: ['src/customizer.js'],
+				src: 'src/customizer.js',
 				srcRoot: '../',
 				dest: 'customizer.js',				
 				destMap: 'srcmaps/customizer.js.map'
