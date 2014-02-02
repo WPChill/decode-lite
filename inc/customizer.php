@@ -1210,15 +1210,9 @@ public static function decode_customize_register( $wp_customize ) {
 // Adds settings to Customize menu
 add_action( 'customize_register', array( 'Decode_Customize', 'decode_customize_register' ) );
 
-if ( get_theme_mod( 'background_color', 'e3e5e7' ) !== 'e3e5e7' ||
-     get_theme_mod( 'text_color', '#444444' ) !== '#444444' ||
-     get_theme_mod( 'accent_color', '#009bcd' ) !== '#009bcd' ||
-     get_theme_mod( 'secondary_accent_color', '#007ea6' ) !== '#007ea6' ||
-     get_theme_mod( 'secondary_text_color', '#808080' ) !== '#808080' )
-{
-	// Output custom CSS to live site
-	add_action( 'wp_head' , array( 'Decode_Customize', 'decode_output_color_css' ) );
-}
+
+// Output custom CSS to live site
+add_action( 'wp_head' , array( 'Decode_Customize', 'decode_output_color_css' ) );
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function decode_customize_preview_js() {
