@@ -11,6 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <?php tha_head_top(); ?>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -20,7 +21,7 @@
 <?php if ( get_theme_mod( 'favicon_image', '' )) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
 <script type="text/javascript">var templateDir = "<?php echo get_template_directory_uri() ?>";</script>
 
-	<?php tha_head_bottom(); ?>
+<?php tha_head_bottom(); ?>
 <?php wp_head(); ?>
 </head>
 
