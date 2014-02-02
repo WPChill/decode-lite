@@ -31,18 +31,6 @@ textarea {
 	padding-right: 3px;
 }
 
-/* Alignment */
-.alignleft {
-	float: right;
-	margin-right: auto;
-	margin-left: 1.5em;
-}
-.alignright {
-	float: left;
-	margin-left: auto;
-	margin-right: 1.5em;
-}
-
 .screen-reader-text:hover, .assistive-text:hover,
 .screen-reader-text:active, .assistive-text:active,
 .screen-reader-text:focus, .assistive-text:focus {
@@ -53,46 +41,60 @@ textarea {
 /* =Menu
 ----------------------------------------------- */
 
-.navigation-main ul {
+.menu ul {
 	padding-right: 0;
 }
-.navigation-main ul ul {
+
+.menu > ul > li:first-child {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.menu > ul > li:last-child {
+	margin-right: auto;
+	margin-left: 0;
+}
+
+.menu ul ul {
 	float: right;
-	top: 1.5em;
 	left: auto;
 	right: 0;
 }
-.navigation-main ul ul ul {
-	left: auto;
-	right: 100%;
+
+.menu .menu-item-has-children > a::after,
+.menu .page_item_has_children > a::after {
+	margin-left: auto;
+	margin-right: 0.25em;
+}
+
+.sidebar-menu > ul {
+	margin-left: auto;
+	margin-right: 2em;
 }
 
 /* =Content
 ----------------------------------------------- */
 
-.post blockquote {
+.entry-content blockquote {
 	padding: 0 5% 0 0;
 	border-left: none;
 	border-right: 1px solid #009BCD;
 }
 
-/* =Reply Tool
------------------------------------------------ */
-
-.social-reply {
-	right: auto;
-	left: 10px;
+.format-quote .entry-content blockquote {
+	padding-right: 0;
+	border-right: none;
 }
 
 /* =Navigation
 ----------------------------------------------- */
 
-.nav-previous, .nav-links a[rel="prev"] {
+.nav-previous {
 	float: right;
 	text-align: right;
 }
 
-.nav-next, .nav-links a[rel="next"] {
+.nav-next {
 	float: left;
 	text-align: left;
 }
@@ -103,22 +105,4 @@ textarea {
 .comment-metadata a {
 	margin-right: auto;
 	margin-left: 1.5%
-}
-
-/* =Desktop
------------------------------------------------ */
-@media only screen and (min-width: 699px) {
-.social-reply {
-	right: auto;
-	left: 5px;
-}
-.site-content .nav-next a:hover, .site-navigation .nav-previous a:hover {
-	padding-left: auto;
-	padding-right: 2.5%
-}
-
-.site-content .nav-previous a:hover, .site-navigation .nav-next a:hover {
-	padding-left: auto;
-	padding-right: 2.5%;
-}
 }

@@ -900,7 +900,7 @@ object {
 	right: 3.75%;
 }
 
-.header-menu ul ul ul { /* Super-submenus won't like the above so we need to reset it */
+.header-menu ul ul ul { /* Sub-submenus won't like the above so we need to reset it */
 	left: 0;
 	right: auto;
 	top: 90%;
@@ -1097,7 +1097,7 @@ body.single-attachment .entry-meta {
 	margin-top: 1.5%;
 }
 
-.post blockquote, .page blockquote {
+.entry-content blockquote {
 	margin: 1.5% 0;
 	padding: 0 0 0 5%;
 	border-left: 1px solid #009BCD;
