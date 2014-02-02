@@ -4,7 +4,9 @@
  */
 ?>
 
+	<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 
 	<header class="entry-header">
 			<?php if ( has_post_thumbnail() ) : ?>
@@ -41,5 +43,7 @@
 			<p class="date"><?php decode_posted_on(); ?></p>
 		<?php endif; ?>
 	</footer><!-- .entry-meta -->
-
+		
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+	<?php tha_entry_after(); ?>

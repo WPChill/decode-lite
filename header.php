@@ -7,8 +7,10 @@
  * @package Decode
  */
 ?><!DOCTYPE html>
+	<?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
+<?php tha_head_top(); ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -18,15 +20,21 @@
 <?php if ( get_theme_mod( 'favicon_image', '' )) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
 <script type="text/javascript">var templateDir = "<?php echo get_template_directory_uri() ?>";</script>
 
+	<?php tha_head_bottom(); ?>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<?php tha_body_top(); ?>
+
 <div id="page" class="hfeed site<?php if ( get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
+	<?php tha_header_before(); ?>
 	<?php do_action( 'before' ); ?>
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
 		
 	<header id="masthead" class="site-header" role="banner">
+		
+		<?php tha_header_top(); ?>
 		
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 		
@@ -76,7 +84,11 @@
 			) ); ?>
 		<?php endif; ?>
 		
+		<?php tha_header_bottom(); ?>
+		
 	</header><!-- #masthead -->
+	
+		<?php tha_header_after(); ?>
 	
 		<?php if ( function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' ) ) : ?>
 		
@@ -99,3 +111,4 @@
 		<?php endif; ?>
 
 	<div id="content" class="site-content">
+		<?php tha_content_top(); ?>

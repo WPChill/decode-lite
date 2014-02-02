@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
 
-    // Configuration
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        
-        modernizr: {
+	// Configuration
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		
+		modernizr: {
 
 			"devFile" : "js/src/modernizr-dev.js",
 

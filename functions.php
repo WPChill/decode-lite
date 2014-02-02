@@ -156,6 +156,11 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Theme Hook Alliance functions.
+ */
+require get_template_directory() . '/inc/tha-theme-hooks.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';

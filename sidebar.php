@@ -14,9 +14,11 @@
 				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><h2 class="menu-title">' . __( 'Navigation', 'decode' ) . '</h2><ul>%3$s</ul></nav><!-- #sidebar-menu -->'
 			) ); 
 		} ?>
-
+		
+		<?php tha_sidebars_before(); ?>
 		<div class="widget-area" role="complementary">
 		
+			<?php tha_sidebar_top(); ?>
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
@@ -32,4 +34,6 @@
 				</aside>
 
 			<?php endif; // end sidebar widget area ?>
+			<?php tha_sidebar_bottom(); ?>
 		</div><!-- .widget-area -->
+		<?php tha_sidebars_after(); ?>

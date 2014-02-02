@@ -4,7 +4,9 @@
  */
 ?>
 
+	<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?>
@@ -25,5 +27,7 @@
 		<?php endif; ?>
 		<p class="date"><?php decode_posted_on(); ?></p>
 	</footer><!-- .entry-meta -->
-
+	
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+	<?php tha_entry_after(); ?>
