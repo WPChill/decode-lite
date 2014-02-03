@@ -439,16 +439,16 @@ public static function decode_customize_register( $wp_customize ) {
 		'default' => '',
 	) );
 	
+	$wp_customize->add_setting( 'email_address', array(
+		'default' => '',
+	) );
+	
 	$wp_customize->add_setting( 'website_link', array(
 		'default' => '',
 	) );
 	
 	$wp_customize->add_setting( 'show_rss_icon', array(
 		'default' => false,
-	) );
-	
-	$wp_customize->add_setting( 'email_address', array(
-		'default' => '',
 	) );
 
 
@@ -795,24 +795,24 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 49,
 	) );
 	
+	$wp_customize->add_control( 'email_address', array(
+		'label'   => __( 'Email Address', 'decode' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 50,
+	) );
+	
 	$wp_customize->add_control( 'website_link', array(
 		'label'   => sprintf( __( '%s Link', 'decode' ), 'Website' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 50,
+		'priority'=> 51,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 51,
-	) );
-	
-	$wp_customize->add_control( 'email_address', array(
-		'label'   => __( 'Email Address', 'decode' ),
-		'section' => 'decode_social_options',
-		'type'    => 'text',
 		'priority'=> 52,
 	) );
 
