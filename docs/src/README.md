@@ -3,7 +3,7 @@
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-*Note: This is will be the last version of Decode to support Internet Explorer 8*
+*Note: This is will be the last version of Decode to support Internet Explorer 8* An Internet Explorer 8-compatible version will be kept available for download on GitHub.
 
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
 
