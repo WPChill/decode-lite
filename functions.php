@@ -131,9 +131,7 @@ function decode_custom_css() {
 	<?php
 }
 }
-if ( get_theme_mod('custom_css', '') !== '' ) {
-	add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
-}
+add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
 
 /**
  * Implement the Custom Header feature.
