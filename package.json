@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-modernizr": "~0.4.1",
+    "grunt-modernizr": "~0.5.1",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-jsmin-sourcemap": "~1.10.0",
     "grunt-autoprefixer": "~0.6.5",
