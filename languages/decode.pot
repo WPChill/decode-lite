@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-31 16:25-0600\n"
-"PO-Revision-Date: 2014-01-31 16:25-0600\n"
+"POT-Creation-Date: 2014-02-06 21:36-0600\n"
+"PO-Revision-Date: 2014-02-06 21:37-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -102,13 +102,13 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:28
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
 #: ../inc/extras.php:113
 msgid "Archives"
 msgstr ""
 
-#: ../author.php:25 ../content-single.php:18 ../content-single.php:54
-#: ../content-single.php:93
+#: ../author.php:25 ../content-single.php:21 ../content-single.php:63
+#: ../content-single.php:108
 msgid "Website"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr ""
 msgid "Author: %s"
 msgstr ""
 
-#: ../comments.php:29
+#: ../comments.php:30
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -125,108 +125,108 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:36 ../comments.php:60
+#: ../comments.php:37 ../comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:37 ../comments.php:61
+#: ../comments.php:38 ../comments.php:62
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: ../comments.php:38 ../comments.php:62
+#: ../comments.php:39 ../comments.php:63
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: ../comments.php:72
+#: ../comments.php:73
 msgid "Comments are closed."
 msgstr ""
 
-#: ../comments.php:76
+#: ../comments.php:77
 msgid "Leave a Reply"
 msgstr ""
 
-#: ../comments.php:77
+#: ../comments.php:78
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: ../comments.php:78
+#: ../comments.php:79
 msgid "Cancel reply"
 msgstr ""
 
-#: ../comments.php:79
+#: ../comments.php:80
 msgid "Post Comment"
 msgstr ""
 
-#: ../comments.php:83
+#: ../comments.php:84
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: ../comments.php:84
+#: ../comments.php:85
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../comments.php:85
+#: ../comments.php:86
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../comments.php:86
+#: ../comments.php:87
 msgid "Your email address will not be published."
 msgstr ""
 
-#: ../comments.php:87
+#: ../comments.php:88
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
 "and attributes: %s"
 msgstr ""
 
-#: ../content-excerpt.php:27
+#: ../content-excerpt.php:30
 msgid "Read More&hellip;"
 msgstr ""
 
-#: ../content-excerpt.php:28 ../content-link.php:33 ../content-page.php:21
-#: ../content-quote.php:19 ../content-search.php:19 ../content-single.php:24
-#: ../content-single.php:60 ../content-single.php:99 ../content.php:32
-#: ../image.php:33 ../image.php:101
+#: ../content-excerpt.php:31 ../content-link.php:35 ../content-page.php:24
+#: ../content-quote.php:21 ../content-search.php:19 ../content-single.php:27
+#: ../content-single.php:69 ../content-single.php:114 ../content.php:35
+#: ../image.php:30 ../image.php:98
 msgid "Edit"
 msgstr ""
 
-#: ../content-link.php:24 ../content-quote.php:10 ../content-single.php:10
-#: ../content-single.php:47 ../content-single.php:85 ../content.php:23
+#: ../content-link.php:26 ../content-quote.php:12 ../content-single.php:13
+#: ../content-single.php:56 ../content-single.php:100 ../content.php:26
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../content-link.php:27 ../content-page.php:18 ../content-quote.php:13
-#: ../content-single.php:11 ../content-single.php:86 ../content.php:26
-#: ../image.php:94
+#: ../content-link.php:29 ../content-page.php:21 ../content-quote.php:15
+#: ../content-single.php:14 ../content-single.php:101 ../content.php:29
+#: ../image.php:91
 msgid "Pages:"
 msgstr ""
 
-#: ../content-link.php:31 ../content-quote.php:17 ../content.php:30
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
 msgid "Leave a comment"
 msgstr ""
 
-#: ../content-link.php:31 ../content-quote.php:17 ../content.php:30
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
 msgid "1 Comment"
 msgstr ""
 
-#: ../content-link.php:31 ../content-quote.php:17 ../content.php:30
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
 msgid "% Comments"
 msgstr ""
 
-#: ../content-link.php:35 ../content-quote.php:21 ../content-single.php:25
-#: ../content-single.php:61 ../content-single.php:100 ../content.php:34
+#: ../content-link.php:37 ../content-quote.php:23 ../content-single.php:28
+#: ../content-single.php:70 ../content-single.php:115 ../content.php:37
 msgid "Tagged as: "
 msgstr ""
 
-#: ../content-link.php:38 ../content-quote.php:24 ../content-single.php:26
-#: ../content-single.php:62 ../content-single.php:101 ../content.php:37
+#: ../content-link.php:40 ../content-quote.php:26 ../content-single.php:29
+#: ../content-single.php:71 ../content-single.php:116 ../content.php:40
 msgid "Categorized in&#58; "
 msgstr ""
 
@@ -252,7 +252,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: ../footer.php:39
+#: ../footer.php:43
 #, php-format
 msgid "%1$s by %2$s"
 msgstr ""
@@ -273,7 +273,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: ../header.php:31
+#: ../header.php:40
 msgid "Skip to content"
 msgstr ""
 
@@ -281,16 +281,15 @@ msgstr ""
 #, php-format
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
-"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
-"rel=\"gallery\">%8$s</a>"
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
 msgstr ""
 
-#: ../image.php:37
+#: ../image.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr ""
 
-#: ../image.php:38
+#: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -460,16 +459,16 @@ msgid "%s Group Name"
 msgstr ""
 
 #: ../inc/customizer.php:799
+msgid "Email Address"
+msgstr ""
+
+#: ../inc/customizer.php:806
 #, php-format
 msgid "%s Link"
 msgstr ""
 
-#: ../inc/customizer.php:806
-msgid "RSS Feed"
-msgstr ""
-
 #: ../inc/customizer.php:813
-msgid "Email Address"
+msgid "RSS Feed"
 msgstr ""
 
 #: ../inc/customizer.php:826
