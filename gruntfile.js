@@ -5,29 +5,31 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		
 		modernizr: {
-			"devFile": "js/src/modernizr-dev.js",
-			"outputFile": "js/modernizr.js",
-			"extra": {
-				"shiv": false,
-				"printshiv": true,
-				"load": true,
-				"mq": true,
-				"cssclasses": true
-			},
-			"extensibility": {
-				"addtest": false,
-				"prefixed": false,
-				"teststyles": true,
-				"testprops": true,
-				"testallprops": true,
-				"hasevents": false,
-				"prefixes": true,
-				"domprefixes": true
-			},
-			"uglify": true,
-			"tests": ['csstransforms', 'inlinesvg', 'touch'],
-			"parseFiles": false,
-			"matchCommunityTests": false,
+			makefile: {
+				"devFile": "js/src/modernizr-dev.js",
+				"outputFile": "js/modernizr.js",
+				"extra": {
+					"shiv": false,
+					"printshiv": true,
+					"load": true,
+					"mq": true,
+					"cssclasses": true
+				},
+				"extensibility": {
+					"addtest": false,
+					"prefixed": false,
+					"teststyles": true,
+					"testprops": true,
+					"testallprops": true,
+					"hasevents": false,
+					"prefixes": true,
+					"domprefixes": true
+				},
+				"uglify": true,
+				"tests": ['csstransforms', 'inlinesvg', 'touch'],
+				"parseFiles": false,
+				"matchCommunityTests": false,
+			}
 		},
 		
 		jshint: {
