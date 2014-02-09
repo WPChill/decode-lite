@@ -904,6 +904,7 @@ object {
 }
 
 .footer-menu ul ul {
+	width: 100%; /* Sets the width of the submenus same as the content */
 	bottom: 100%;
 }
 
@@ -912,14 +913,8 @@ object {
 	position: relative;
 }
 
-.horizontal-menu ul ul ul {
-	left: 100%;
-	top: 0;
-}
-
-.vertical-menu ul ul ul {
-	left: -0.25em;
-	top: 100%;
+.vertical-menu ul ul a {
+	width: 12em;
 }
 
 .menu ul ul a {
@@ -945,6 +940,11 @@ object {
 	display: block;
 }
 
+.vertical-menu ul ul ul {
+	left: -0.25em;
+	top: 100%;
+}
+
 .header-menu ul ul { /* Sets the width of the submenus same as the content */
 	left: 3.75%;
 	right: 3.75%;
@@ -955,14 +955,6 @@ object {
 	right: auto;
 	top: 90%;
 	width: 100%;
-}
-
-.footer-menu ul ul { /* Sets the width of the submenus same as the content */
-	width: 100%;
-}
-
-.vertical-menu ul ul a {
-	width: 12em;
 }
 
 /* Current Menu Item Madness */
@@ -1459,7 +1451,7 @@ textarea#comment {
 }
 
 .form-allowed-tags.visible {
-	max-height: 7em;
+	max-height: 12em;
 	opacity: 1;
 	margin-bottom: 1em;
 }
@@ -1912,6 +1904,10 @@ textarea#comment {
 
 .vertical-menu ul ul ul {
 	left: -0.5em;
+}
+
+.form-allowed-tags.visible {
+	max-height: 7em;
 }
 }
 
