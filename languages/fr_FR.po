@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-02-06 21:36-0600\n"
-"PO-Revision-Date: 2014-02-06 21:41-0600\n"
+"POT-Creation-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-09 17:48-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -119,8 +119,8 @@ msgid "Chats"
 msgstr ""
 
 # @ decode
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
-#: ../inc/extras.php:113
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:39
+#: ../sidebar.php:31
 msgid "Archives"
 msgstr "Archives"
 
@@ -136,7 +136,7 @@ msgid "Author: %s"
 msgstr "Auteur: %s"
 
 # @ decode
-#: ../comments.php:30
+#: ../comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -145,57 +145,57 @@ msgstr[0] "Une réaction dans &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s réactions dans &ldquo;%2$s&rdquo;"
 
 # @ decode
-#: ../comments.php:37 ../comments.php:61
+#: ../comments.php:35 ../comments.php:59
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
 # @ decode
-#: ../comments.php:38 ../comments.php:62
+#: ../comments.php:36 ../comments.php:60
 msgid "&larr; Older Comments"
 msgstr "&larr; Anciens commentaires"
 
 # @ decode
-#: ../comments.php:39 ../comments.php:63
+#: ../comments.php:37 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr "Nouveaux commentaires &rarr;"
 
 # @ decode
-#: ../comments.php:73
+#: ../comments.php:71
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
 # @ decode
-#: ../comments.php:77
+#: ../comments.php:75
 msgid "Leave a Reply"
 msgstr "Répondre"
 
-#: ../comments.php:78
+#: ../comments.php:76
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Laisser un commentaire à %s"
 
-#: ../comments.php:79
+#: ../comments.php:77
 msgid "Cancel reply"
 msgstr "Annuler la réponse"
 
 # @ decode
-#: ../comments.php:80
+#: ../comments.php:78
 msgid "Post Comment"
 msgstr "Poster le commentaire"
 
 # @ decode
-#: ../comments.php:84
+#: ../comments.php:82
 msgctxt "noun"
 msgid "Comment"
 msgstr "Commentaire"
 
-#: ../comments.php:85
+#: ../comments.php:83
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Vous devez être <a href=\"%s\">connecté</a> pour publier un commentaire."
 
-#: ../comments.php:86
+#: ../comments.php:84
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -204,11 +204,11 @@ msgstr ""
 "Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
 "out of this account\">Se déconnecter ?</a>"
 
-#: ../comments.php:87
+#: ../comments.php:85
 msgid "Your email address will not be published."
 msgstr "Votre adresse email ne sera pas publiée."
 
-#: ../comments.php:88
+#: ../comments.php:86
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -301,29 +301,29 @@ msgstr ""
 "d'essayer autre chose."
 
 # @ decode
-#: ../footer.php:43
+#: ../footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
 msgstr "%1$s à %2$s"
 
-#: ../functions.php:62
+#: ../functions.php:59
 #, fuzzy
 msgid "Header Menu"
 msgstr "Image de l'en-tête"
 
 # @ decode
-#: ../functions.php:63
+#: ../functions.php:60
 #, fuzzy
 msgid "Sidebar Menu"
 msgstr "Colonne latérale"
 
-#: ../functions.php:64
+#: ../functions.php:61
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Image de l'en-tête"
 
 # @ decode
-#: ../functions.php:111
+#: ../functions.php:107
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
@@ -354,26 +354,6 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
-
-#: ../page-explore.php:11
-msgid "Explore Page"
-msgstr "Explorer la page"
-
-# @ decode
-#: ../page-explore.php:26
-msgid "Recent Posts"
-msgstr "Articles récents"
-
-# @ decode
-#: ../page-explore.php:46
-msgid "Categories"
-msgstr "Catégories"
-
-# @ decode
-#: ../sidebar.php:14
-#, fuzzy
-msgid "Navigation"
-msgstr "Afficher le navigation"
 
 #: ../inc/customizer.php:57
 msgid "Header Options"
@@ -716,10 +696,10 @@ msgstr ""
 
 # @ decode
 #: ../inc/template-tags.php:138
-#, php-format
+#, fuzzy, php-format
 msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 "<span class=\"posted-on\">Posté le %1$s</span><span class=\"byline\"> par "
 "%2$s</span>"
@@ -729,3 +709,23 @@ msgstr ""
 #, php-format
 msgid "View all posts by %s"
 msgstr "Voir tous les articles de %s"
+
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr "Explorer la page"
+
+# @ decode
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+# @ decode
+#: ../page-explore.php:46
+msgid "Categories"
+msgstr "Catégories"
+
+# @ decode
+#: ../sidebar.php:15
+#, fuzzy
+msgid "Navigation"
+msgstr "Afficher le navigation"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-02-06 21:36-0600\n"
-"PO-Revision-Date: 2014-02-06 21:40-0600\n"
+"POT-Creation-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-09 17:47-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -116,8 +116,8 @@ msgid "Chats"
 msgstr ""
 
 # @ decode
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
-#: ../inc/extras.php:113
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:39
+#: ../sidebar.php:31
 msgid "Archives"
 msgstr "Архивы"
 
@@ -134,7 +134,7 @@ msgid "Author: %s"
 msgstr "Автор: %s"
 
 # @ decode
-#: ../comments.php:30
+#: ../comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -144,54 +144,54 @@ msgstr[1] "%1$s комментария к &ldquo;%2$s&rdquo;"
 msgstr[2] "%1$s комментариев к &ldquo;%2$s&rdquo;"
 
 # @ decode
-#: ../comments.php:37 ../comments.php:61
+#: ../comments.php:35 ../comments.php:59
 msgid "Comment navigation"
 msgstr "Навигация комментария"
 
 # @ decode
-#: ../comments.php:38 ../comments.php:62
+#: ../comments.php:36 ../comments.php:60
 msgid "&larr; Older Comments"
 msgstr "&larr; Предыдущие комментарии"
 
 # @ decode
-#: ../comments.php:39 ../comments.php:63
+#: ../comments.php:37 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr "Новые комментарии &rarr;"
 
 # @ decode
-#: ../comments.php:73
+#: ../comments.php:71
 msgid "Comments are closed."
 msgstr "Комментарии запрещены"
 
 # @ decode
-#: ../comments.php:77
+#: ../comments.php:75
 msgid "Leave a Reply"
 msgstr "Оставить ответ"
 
 # @ decode
-#: ../comments.php:78
+#: ../comments.php:76
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Оставить ответ к %s"
 
 # @ decode
-#: ../comments.php:79
+#: ../comments.php:77
 msgid "Cancel reply"
 msgstr "Отменить ответ"
 
 # @ decode
-#: ../comments.php:80
+#: ../comments.php:78
 msgid "Post Comment"
 msgstr "Отправить комментарий"
 
 # @ decode
-#: ../comments.php:84
+#: ../comments.php:82
 msgctxt "noun"
 msgid "Comment"
 msgstr "Комментарий"
 
 # @ decode
-#: ../comments.php:85
+#: ../comments.php:83
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
@@ -199,7 +199,7 @@ msgstr ""
 "комментарии."
 
 # @ decode
-#: ../comments.php:86
+#: ../comments.php:84
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -209,12 +209,12 @@ msgstr ""
 "этого аккаунта\">Выйти?</a>"
 
 # @ decode
-#: ../comments.php:87
+#: ../comments.php:85
 msgid "Your email address will not be published."
 msgstr "Адрес вашей электронной почты не будет опубликован."
 
 # @ decode
-#: ../comments.php:88
+#: ../comments.php:86
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -308,31 +308,31 @@ msgstr ""
 "сможет. "
 
 # @ decode
-#: ../footer.php:43
+#: ../footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
 msgstr ""
 
 # @ decode
-#: ../functions.php:62
+#: ../functions.php:59
 #, fuzzy
 msgid "Header Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:63
+#: ../functions.php:60
 #, fuzzy
 msgid "Sidebar Menu"
 msgstr "Боковая колонка"
 
 # @ decode
-#: ../functions.php:64
+#: ../functions.php:61
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:111
+#: ../functions.php:107
 msgid "Sidebar"
 msgstr "Боковая колонка"
 
@@ -363,27 +363,6 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Назад"
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Вперед <span class=\"meta-nav\">&rarr;</span>"
-
-# @ decode
-#: ../page-explore.php:11
-msgid "Explore Page"
-msgstr "Страница познания"
-
-# @ decode
-#: ../page-explore.php:26
-msgid "Recent Posts"
-msgstr "Недавние записи"
-
-# @ decode
-#: ../page-explore.php:46
-msgid "Categories"
-msgstr "Категории"
-
-# @ decode
-#: ../sidebar.php:14
-#, fuzzy
-msgid "Navigation"
-msgstr "Показать навигацию"
 
 # @ decode
 #: ../inc/customizer.php:57
@@ -761,10 +740,10 @@ msgstr ""
 
 # @ decode
 #: ../inc/template-tags.php:138
-#, php-format
+#, fuzzy, php-format
 msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 "<span class=\"posted-on\">Опубликовано %1$s</span><span class=\"byline\"> "
 "%2$s</span>"
@@ -774,3 +753,24 @@ msgstr ""
 #, php-format
 msgid "View all posts by %s"
 msgstr "Смотреть все записи %s"
+
+# @ decode
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr "Страница познания"
+
+# @ decode
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr "Недавние записи"
+
+# @ decode
+#: ../page-explore.php:46
+msgid "Categories"
+msgstr "Категории"
+
+# @ decode
+#: ../sidebar.php:15
+#, fuzzy
+msgid "Navigation"
+msgstr "Показать навигацию"

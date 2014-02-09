@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-02-06 21:36-0600\n"
-"PO-Revision-Date: 2014-02-06 21:41-0600\n"
+"POT-Creation-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-09 17:48-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
@@ -108,8 +108,8 @@ msgstr "Audio-Posts"
 msgid "Chats"
 msgstr "Chats"
 
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
-#: ../inc/extras.php:113
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:39
+#: ../sidebar.php:31
 msgid "Archives"
 msgstr "Archive"
 
@@ -123,7 +123,7 @@ msgstr "Webseite"
 msgid "Author: %s"
 msgstr "Autor: %s"
 
-#: ../comments.php:30
+#: ../comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -131,51 +131,51 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Ein Gedanke zu &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s Gedanken zu &ldquo;%2$s&rdquo;"
 
-#: ../comments.php:37 ../comments.php:61
+#: ../comments.php:35 ../comments.php:59
 msgid "Comment navigation"
 msgstr "Kommentar-Navigation"
 
-#: ../comments.php:38 ../comments.php:62
+#: ../comments.php:36 ../comments.php:60
 msgid "&larr; Older Comments"
 msgstr "&larr; &Auml;ltere Kommentare"
 
-#: ../comments.php:39 ../comments.php:63
+#: ../comments.php:37 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr "Neuere Kommentare &rarr;"
 
-#: ../comments.php:73
+#: ../comments.php:71
 msgid "Comments are closed."
 msgstr "Kommentare geschlossen"
 
-#: ../comments.php:77
+#: ../comments.php:75
 msgid "Leave a Reply"
 msgstr "Schreibe einen Kommentar"
 
-#: ../comments.php:78
+#: ../comments.php:76
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Hinterlasse eine Antwort an %s"
 
-#: ../comments.php:79
+#: ../comments.php:77
 msgid "Cancel reply"
 msgstr "Antwortvorgang abbrechen"
 
-#: ../comments.php:80
+#: ../comments.php:78
 msgid "Post Comment"
 msgstr "Kommentar absenden"
 
-#: ../comments.php:84
+#: ../comments.php:82
 msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: ../comments.php:85
+#: ../comments.php:83
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Du musst <a href=\"%s\">angemeldet sein</a>, um einen Kommentar zu schreiben."
 
-#: ../comments.php:86
+#: ../comments.php:84
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -184,11 +184,11 @@ msgstr ""
 "Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Abmelden"
 "\">Abmelden?</a>"
 
-#: ../comments.php:87
+#: ../comments.php:85
 msgid "Your email address will not be published."
 msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
 
-#: ../comments.php:88
+#: ../comments.php:86
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -269,26 +269,26 @@ msgstr ""
 "Sieht so aus, als k&ouml;nnten wir nicht finden, was du suchst. Vielleicht "
 "hilft die Suche weiter."
 
-#: ../footer.php:43
+#: ../footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
 msgstr "%1$s von %2$s"
 
-#: ../functions.php:62
+#: ../functions.php:59
 #, fuzzy
 msgid "Header Menu"
 msgstr "Header-Bild"
 
-#: ../functions.php:63
+#: ../functions.php:60
 #, fuzzy
 msgid "Sidebar Menu"
 msgstr "Seitenleiste"
 
-#: ../functions.php:64
+#: ../functions.php:61
 msgid "Footer Menu"
 msgstr ""
 
-#: ../functions.php:111
+#: ../functions.php:107
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
@@ -315,23 +315,6 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Vorherige"
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "N&auml;chste <span class=\"meta-nav\">&rarr;</span>"
-
-#: ../page-explore.php:11
-msgid "Explore Page"
-msgstr "&Uuml;bersichtsseite"
-
-#: ../page-explore.php:26
-msgid "Recent Posts"
-msgstr "Letzte Posts"
-
-#: ../page-explore.php:46
-msgid "Categories"
-msgstr "Kategorien"
-
-#: ../sidebar.php:14
-#, fuzzy
-msgid "Navigation"
-msgstr "Navigation anzeigen"
 
 #: ../inc/customizer.php:57
 msgid "Header Options"
@@ -654,10 +637,10 @@ msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../inc/template-tags.php:138
-#, php-format
+#, fuzzy, php-format
 msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 "<span class=\"posted-on\">Gepostet am %1$s</span><span class=\"byline\"> von "
 "%2$s</span>"
@@ -666,6 +649,23 @@ msgstr ""
 #, php-format
 msgid "View all posts by %s"
 msgstr "Zeige alle Posts von %s"
+
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr "&Uuml;bersichtsseite"
+
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr "Letzte Posts"
+
+#: ../page-explore.php:46
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ../sidebar.php:15
+#, fuzzy
+msgid "Navigation"
+msgstr "Navigation anzeigen"
 
 #~ msgid "Show all post types, including custom post types"
 #~ msgstr "Zeige alle Post-Typen, inklusive benutzerdefinierter Typen"
