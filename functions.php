@@ -67,7 +67,6 @@ add_action( 'after_setup_theme', 'decode_setup' );
 /**
  * Register styles and scripts.
  */
-
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
@@ -146,7 +145,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * Customize Menu additions.
  */
 require get_template_directory() . '/inc/customizer.php';
 
@@ -156,7 +155,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/tha-theme-hooks.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
 
@@ -182,7 +181,7 @@ function decode_add_google_profile( $contactmethods ) {
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 
 /**
- * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
+ * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
 
