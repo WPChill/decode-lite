@@ -23,11 +23,12 @@
 
 	if ( has_nav_menu( 'footer-menu' ) ) {
 		wp_nav_menu( array(
-			'theme_location'  => 'footer-menu',
-			'container'       => false,
-			'menu_class' => 'menu horizontal-menu footer-menu',
-			'menu_id'    => 'footer-menu',
-			'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->'
+			'theme_location' => 'footer-menu',
+			'container'      => false,
+			'menu_class'     => 'menu horizontal-menu footer-menu',
+			'menu_id'        => 'footer-menu',
+			'fallback_cb'     => false,
+			'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->'
 		) ); 
 	}
 	?>

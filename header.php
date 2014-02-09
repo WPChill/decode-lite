@@ -77,11 +77,11 @@
 
 		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) : ?>
 			<?php wp_nav_menu( array(
-				'theme_location'  => 'header-menu',
-				'container'       => false,
-				'menu_class' => 'menu horizontal-menu header-menu',
-				'menu_id'    => 'header-menu',
-				'items_wrap'      => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->'
+				'theme_location' => 'header-menu',
+				'container'      => false,
+				'menu_class'     => 'menu horizontal-menu header-menu',
+				'menu_id'        => 'header-menu',
+				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->'
 			) ); ?>
 		<?php endif; ?>
 		
