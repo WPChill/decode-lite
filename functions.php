@@ -55,9 +55,6 @@ function decode_setup() {
 		'default-color' => 'E3E5E7',
 	) ) );
 	
-	/**
-	 * This theme uses wp_nav_menu() once in header.php.
-	 */
 	register_nav_menus( array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
