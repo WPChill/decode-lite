@@ -5,6 +5,9 @@
 `.site-logo { max-height: 8.5em; }`<br>
 8.5ems is the default. Raise or lower this amount to what suits you.
 
+### Fit background image to page width:
+`body.custom-background { background-size: cover; }`
+
 ### Change the size of the social icons:
 `.sociallink svg { height: 2.5em; width: 2.5em; }`<br>
 I suggest that you do not change this without using media queries because the social icons are responsively sized.
