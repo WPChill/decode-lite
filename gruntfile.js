@@ -51,13 +51,6 @@ module.exports = function(grunt) {
 				dest: 'decode-with-sidebar.js',				
 				destMap: 'srcmaps/decode-with-sidebar.js.map'
 			},
-			respond: {
-				cwd: 'js/',
-				src: 'src/respond.js',
-				srcRoot: '../',
-				dest: 'respond.js',				
-				destMap: 'srcmaps/respond.js.map'
-			},
 			customizer: {
 				cwd: 'js/',
 				src: 'src/customizer.js',

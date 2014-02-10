@@ -83,10 +83,6 @@ function decode_scripts() {
 		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/decode-with-sidebar.js', array(), '2.9.1', true );
 	}
 	
-	if ( Modernizr.mq('only all') ) {
-		wp_enqueue_script( 'decode-respond', get_template_directory_uri() . '/js/respond.js', array(), '2.9.2', false );
-	}
-	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
