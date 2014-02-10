@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Decode Custom CSS Snippets</title>
+	<meta charset="UTF-8">
+	
+	<style>
+		body {
+			background: #E3E5E7;
+			color: #444444;
+			margin: 0;
+			font: normal 300 100% sans-serif; }
+		
+		::selection {
+			background: rgba(0, 155, 205, 0.25); }
+		
+		::-moz-selection {
+			background: rgba(0, 155, 205, 0.25); }
+		
+		a {
+			-webkit-transition: color 0.35s ease-out;
+			-moz-transition: color 0.35s ease-out;
+			transition: color 0.35s ease-out;
+			text-decoration: none;
+			color: #009BCD; }
+		
+		a:hover {
+			color: #007EA6; }
+		
+		a:active {
+			color: #444444; }
+		
+		img {
+			border: none; }
+		
+		ul {
+			margin: 0;
+			padding: 0; }
+		
+		header p {
+			text-align: justify; }
+		
+		main {
+			margin: 0 auto 5%;;
+			width: 70%; }
+		
+		main img {
+			max-width: 100%;
+			box-shadow: 0 0 5px rgba(0,0,0,0.35); }
+						
+		main p {
+			margin-bottom: 5%; }
+			
+		main code {
+			background: #d3d3d3;
+			padding: 0.3em;
+			border-radius: 3px;
+			display: inline-block;; }
+		
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+	
+		<%=content%>
+		
+	<main>
+
+</body>
+</html>

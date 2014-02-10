@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-01-10 16:56-0600\n"
-"PO-Revision-Date: 2014-01-10 16:59-0600\n"
+"POT-Creation-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-09 17:47-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n"
-"+9)%10>3 ? 2 : 1;\n"
-"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -116,14 +116,14 @@ msgid "Chats"
 msgstr ""
 
 # @ decode
-#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:30
-#: ../inc/extras.php:88
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:39
+#: ../sidebar.php:31
 msgid "Archives"
 msgstr "Архивы"
 
 # @ decode
-#: ../author.php:25 ../content-single.php:18 ../content-single.php:54
-#: ../content-single.php:93
+#: ../author.php:25 ../content-single.php:21 ../content-single.php:63
+#: ../content-single.php:108
 msgid "Website"
 msgstr "Сайты"
 
@@ -134,7 +134,7 @@ msgid "Author: %s"
 msgstr "Автор: %s"
 
 # @ decode
-#: ../comments.php:29
+#: ../comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -144,54 +144,54 @@ msgstr[1] "%1$s комментария к &ldquo;%2$s&rdquo;"
 msgstr[2] "%1$s комментариев к &ldquo;%2$s&rdquo;"
 
 # @ decode
-#: ../comments.php:36 ../comments.php:56
+#: ../comments.php:35 ../comments.php:59
 msgid "Comment navigation"
 msgstr "Навигация комментария"
 
 # @ decode
-#: ../comments.php:37 ../comments.php:57
+#: ../comments.php:36 ../comments.php:60
 msgid "&larr; Older Comments"
 msgstr "&larr; Предыдущие комментарии"
 
 # @ decode
-#: ../comments.php:38 ../comments.php:58
+#: ../comments.php:37 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr "Новые комментарии &rarr;"
 
 # @ decode
-#: ../comments.php:68
+#: ../comments.php:71
 msgid "Comments are closed."
 msgstr "Комментарии запрещены"
 
 # @ decode
-#: ../comments.php:72
+#: ../comments.php:75
 msgid "Leave a Reply"
 msgstr "Оставить ответ"
 
 # @ decode
-#: ../comments.php:73
+#: ../comments.php:76
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Оставить ответ к %s"
 
 # @ decode
-#: ../comments.php:74
+#: ../comments.php:77
 msgid "Cancel reply"
 msgstr "Отменить ответ"
 
 # @ decode
-#: ../comments.php:75
+#: ../comments.php:78
 msgid "Post Comment"
 msgstr "Отправить комментарий"
 
 # @ decode
-#: ../comments.php:79
+#: ../comments.php:82
 msgctxt "noun"
 msgid "Comment"
 msgstr "Комментарий"
 
 # @ decode
-#: ../comments.php:80
+#: ../comments.php:83
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
@@ -199,7 +199,7 @@ msgstr ""
 "комментарии."
 
 # @ decode
-#: ../comments.php:81
+#: ../comments.php:84
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -209,12 +209,12 @@ msgstr ""
 "этого аккаунта\">Выйти?</a>"
 
 # @ decode
-#: ../comments.php:82
+#: ../comments.php:85
 msgid "Your email address will not be published."
 msgstr "Адрес вашей электронной почты не будет опубликован."
 
 # @ decode
-#: ../comments.php:83
+#: ../comments.php:86
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -222,6 +222,60 @@ msgid ""
 msgstr ""
 "Вы можете использовать эти <abbr title=\"HyperText Markup Language\">HTML</"
 "abbr> тэги и атрибуты: %s"
+
+# @ decode
+#: ../content-excerpt.php:30
+msgid "Read More&hellip;"
+msgstr "Читать еще&hellip;"
+
+# @ decode
+# @ _s
+#: ../content-excerpt.php:31 ../content-link.php:35 ../content-page.php:24
+#: ../content-quote.php:21 ../content-search.php:19 ../content-single.php:27
+#: ../content-single.php:69 ../content-single.php:114 ../content.php:35
+#: ../image.php:30 ../image.php:98
+msgid "Edit"
+msgstr "Редактировать"
+
+# @ decode
+#: ../content-link.php:26 ../content-quote.php:12 ../content-single.php:13
+#: ../content-single.php:56 ../content-single.php:100 ../content.php:26
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#: ../content-link.php:29 ../content-page.php:21 ../content-quote.php:15
+#: ../content-single.php:14 ../content-single.php:101 ../content.php:29
+#: ../image.php:91
+msgid "Pages:"
+msgstr "Страницы:"
+
+# @ decode
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+# @ decode
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+# @ decode
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "% Comments"
+msgstr "Есть комментарии"
+
+# @ decode
+#: ../content-link.php:37 ../content-quote.php:23 ../content-single.php:28
+#: ../content-single.php:70 ../content-single.php:115 ../content.php:37
+msgid "Tagged as: "
+msgstr "Метки: "
+
+# @ decode
+#: ../content-link.php:40 ../content-quote.php:26 ../content-single.php:29
+#: ../content-single.php:71 ../content-single.php:116 ../content.php:40
+msgid "Categorized in&#58; "
+msgstr "Рубрики&#58; "
 
 # @ decode
 #: ../content-none.php:13
@@ -254,100 +308,46 @@ msgstr ""
 "сможет. "
 
 # @ decode
-#: ../content-page.php:18 ../content-single.php:11 ../content-single.php:86
-#: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
-msgid "Pages:"
-msgstr "Страницы:"
-
-# @ decode
-# @ _s
-#: ../content-page.php:21 ../content-single.php:24 ../content-single.php:60
-#: ../content-single.php:99 ../content.php:18 ../content.php:53
-#: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
-#: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
-msgid "Edit"
-msgstr "Редактировать"
-
-# @ decode
-#: ../content-single.php:10 ../content-single.php:47 ../content-single.php:85
-#: ../content.php:10 ../content.php:45 ../content.php:126
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
-
-# @ decode
-#: ../content-single.php:25 ../content-single.php:61 ../content-single.php:100
-#: ../content.php:20 ../content.php:55 ../content.php:136
-msgid "Tagged as: "
-msgstr "Метки: "
-
-# @ decode
-#: ../content-single.php:26 ../content-single.php:62 ../content-single.php:101
-#: ../content.php:23 ../content.php:58 ../content.php:139
-msgid "Categorized in&#58; "
-msgstr "Рубрики&#58; "
-
-# @ decode
-#: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "Leave a comment"
-msgstr "Оставить комментарий"
-
-# @ decode
-#: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "1 Comment"
-msgstr "1 комментарий"
-
-# @ decode
-#: ../content.php:15 ../content.php:50 ../content.php:131
-msgid "% Comments"
-msgstr "Есть комментарии"
-
-# @ decode
-#: ../content.php:102
-msgid "Read More&hellip;"
-msgstr "Читать еще&hellip;"
-
-# @ decode
-#: ../footer.php:35
+#: ../footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
 msgstr ""
 
 # @ decode
-#: ../functions.php:68
+#: ../functions.php:59
 #, fuzzy
 msgid "Header Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:69
+#: ../functions.php:60
 #, fuzzy
 msgid "Sidebar Menu"
 msgstr "Боковая колонка"
 
 # @ decode
-#: ../functions.php:70
+#: ../functions.php:61
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../functions.php:115
+#: ../functions.php:107
 msgid "Sidebar"
 msgstr "Боковая колонка"
 
 # @ decode
-#: ../header.php:31
+#: ../header.php:40
 msgid "Skip to content"
 msgstr "Перейти к контенту"
 
 # @ decode
 #: ../image.php:22
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
-"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
-"rel=\"gallery\">%8$s</a>"
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
 msgstr ""
 "Опубликовано <span class=\"entry-date\"><time class=\"entry-date\" datetime="
 "\"%1$s\">%2$s</time></span> в <a href=\"%3$s\" title=\"Link to full-size "
@@ -355,94 +355,49 @@ msgstr ""
 "rel=\"gallery\">%8$s</a>"
 
 # @ decode
-#: ../image.php:37
+#: ../image.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr "<span class=\"meta-nav\">&larr;</span> Назад"
 
 # @ decode
-#: ../image.php:38
+#: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Вперед <span class=\"meta-nav\">&rarr;</span>"
 
 # @ decode
-#: ../page-explore.php:11
-msgid "Explore Page"
-msgstr "Страница познания"
-
-# @ decode
-#: ../page-explore.php:26
-msgid "Recent Posts"
-msgstr "Недавние записи"
-
-# @ decode
-#: ../page-explore.php:46
-msgid "Categories"
-msgstr "Категории"
-
-# @ decode
-#: ../searchform.php:10
-msgctxt "assistive text"
-msgid "Search"
-msgstr "Поиск"
-
-# @ decode
-#: ../searchform.php:11
-msgctxt "placeholder"
-msgid "Search&hellip;"
-msgstr "Поиск&hellip;"
-
-# @ decode
-#: ../searchform.php:11
-msgctxt "label"
-msgid "Search for:"
-msgstr "Поиск:"
-
-# @ decode
-#: ../searchform.php:13
-msgctxt "submit button"
-msgid "Search"
-msgstr "Искать"
-
-# @ decode
-#: ../sidebar.php:14
-#, fuzzy
-msgid "Navigation"
-msgstr "Показать навигацию"
-
-# @ decode
-#: ../inc/customizer.php:38
+#: ../inc/customizer.php:57
 msgid "Header Options"
 msgstr "Параметры заголовка"
 
 # @ decode
-#: ../inc/customizer.php:72
+#: ../inc/customizer.php:94
 msgid "Header Image"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:79
+#: ../inc/customizer.php:103
 #, fuzzy
-msgid "Favicon Image (recommended to be a PNG)"
+msgid "Favicon Image (must be a PNG)"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:86
+#: ../inc/customizer.php:110
 msgid "Show Site Title"
 msgstr "Показать заголовок сайта"
 
 # @ decode
-#: ../inc/customizer.php:93
+#: ../inc/customizer.php:117
 msgid "Show Site Description"
 msgstr "Короткое описание сайта"
 
 # @ decode
-#: ../inc/customizer.php:100
+#: ../inc/customizer.php:124
 #, fuzzy
 msgid "Show Header Menu"
 msgstr "Изображение в заголовке"
 
 # @ decode
-#: ../inc/customizer.php:107
+#: ../inc/customizer.php:131
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
@@ -451,151 +406,191 @@ msgstr ""
 "помощью HTML разметки"
 
 # @ decode
-#: ../inc/customizer.php:120
+#: ../inc/customizer.php:144
 msgid "Sidebar Options"
 msgstr "Параметры сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:144
+#: ../inc/customizer.php:168
 msgid "Enable Sidebar"
 msgstr "Включить сайдбар"
 
 # @ decode
-#: ../inc/customizer.php:151
+#: ../inc/customizer.php:175
 msgid "Sidebar Position"
 msgstr "Позиция сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:155
+#: ../inc/customizer.php:179 ../inc/customizer.php:190
 msgid "Left"
 msgstr "Слева"
 
 # @ decode
-#: ../inc/customizer.php:156
+#: ../inc/customizer.php:180 ../inc/customizer.php:191
 msgid "Right"
 msgstr "Справа"
 
 # @ decode
-#: ../inc/customizer.php:162
+#: ../inc/customizer.php:186
 msgid "Sidebar Button Position"
 msgstr "Расположение кнопки сайдбара"
 
 # @ decode
-#: ../inc/customizer.php:173
+#: ../inc/customizer.php:197
 msgid "Always Visible Sidebar"
 msgstr "Всегда показывать сайдбар"
 
+#: ../inc/customizer.php:201
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr ""
+
+#: ../inc/customizer.php:202
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr ""
+
 # @ decode
-#: ../inc/customizer.php:191
+#: ../inc/customizer.php:215
 msgid "Discussion Options"
 msgstr "Параметры обсуждения"
 
 # @ decode
-#: ../inc/customizer.php:203
+#: ../inc/customizer.php:227
 msgid "Enable Comments"
 msgstr "Включить комментарии"
 
 # @ decode
-#: ../inc/customizer.php:216
+#: ../inc/customizer.php:240
 msgid "Social Options"
 msgstr "Социальные опции"
 
 # @ decode
-#: ../inc/customizer.php:409
+#: ../inc/customizer.php:456 ../inc/customizer.php:463
 msgid "Show Social Icons"
 msgstr "Показывать социальные иконки "
 
 # @ decode
-#: ../inc/customizer.php:416
+#: ../inc/customizer.php:456
+#, fuzzy
+msgid "in Header"
+msgstr "Над заголовком"
+
+# @ decode
+#: ../inc/customizer.php:463
+#, fuzzy
+msgid "in Footer"
+msgstr "Изображение в заголовке"
+
+# @ decode
+#: ../inc/customizer.php:470
 msgid "Open Links in New Tab/Window"
 msgstr "Открывать ссылки в новом окне/вкладке"
 
 # @ decode
-#: ../inc/customizer.php:423 ../inc/customizer.php:430
-#: ../inc/customizer.php:437 ../inc/customizer.php:444
-#: ../inc/customizer.php:451 ../inc/customizer.php:458
-#: ../inc/customizer.php:465 ../inc/customizer.php:472
-#: ../inc/customizer.php:479 ../inc/customizer.php:493
-#: ../inc/customizer.php:500 ../inc/customizer.php:507
-#: ../inc/customizer.php:514 ../inc/customizer.php:521
-#: ../inc/customizer.php:528 ../inc/customizer.php:535
-#: ../inc/customizer.php:542 ../inc/customizer.php:549
-#: ../inc/customizer.php:556 ../inc/customizer.php:563
-#: ../inc/customizer.php:570 ../inc/customizer.php:577
-#: ../inc/customizer.php:584 ../inc/customizer.php:619
-#: ../inc/customizer.php:626 ../inc/customizer.php:633
-#: ../inc/customizer.php:647 ../inc/customizer.php:661
-#: ../inc/customizer.php:668 ../inc/customizer.php:675
-#: ../inc/customizer.php:682 ../inc/customizer.php:689
-#: ../inc/customizer.php:696 ../inc/customizer.php:710
-msgid "Username"
-msgstr "Имя пользователя"
+#: ../inc/customizer.php:477 ../inc/customizer.php:484
+#: ../inc/customizer.php:491 ../inc/customizer.php:505
+#: ../inc/customizer.php:512 ../inc/customizer.php:519
+#: ../inc/customizer.php:526 ../inc/customizer.php:533
+#: ../inc/customizer.php:547 ../inc/customizer.php:554
+#: ../inc/customizer.php:561 ../inc/customizer.php:568
+#: ../inc/customizer.php:575 ../inc/customizer.php:582
+#: ../inc/customizer.php:589 ../inc/customizer.php:596
+#: ../inc/customizer.php:603 ../inc/customizer.php:610
+#: ../inc/customizer.php:617 ../inc/customizer.php:624
+#: ../inc/customizer.php:631 ../inc/customizer.php:638
+#: ../inc/customizer.php:645 ../inc/customizer.php:652
+#: ../inc/customizer.php:673 ../inc/customizer.php:701
+#: ../inc/customizer.php:708 ../inc/customizer.php:715
+#: ../inc/customizer.php:729 ../inc/customizer.php:743
+#: ../inc/customizer.php:750 ../inc/customizer.php:757
+#: ../inc/customizer.php:764 ../inc/customizer.php:771
+#: ../inc/customizer.php:778 ../inc/customizer.php:792
+#, php-format
+msgid "%s Username"
+msgstr "%s Имя пользователя"
 
 # @ decode
-#: ../inc/customizer.php:444
+#: ../inc/customizer.php:498
+#, php-format
+msgctxt "[noun] [translation string] (explanation)"
+msgid "%1$s Username %2$s"
+msgstr "%1$s Имя пользователя %2$s"
+
+# @ decode
+#: ../inc/customizer.php:498
 msgid " (or the long number in your profile URL)"
 msgstr "(или длинный номер в URL вашего профиля)"
 
 # @ decode
-#: ../inc/customizer.php:486
-msgid "Profile URL"
-msgstr "URL профиля"
+#: ../inc/customizer.php:540 ../inc/customizer.php:736
+#, php-format
+msgid "%s Profile URL"
+msgstr "%s URL профиля"
 
 # @ decode
-#: ../inc/customizer.php:591 ../inc/customizer.php:598
-#: ../inc/customizer.php:605
-msgid "Site URL"
-msgstr "URL сайта"
+#: ../inc/customizer.php:659 ../inc/customizer.php:666
+#: ../inc/customizer.php:680 ../inc/customizer.php:687
+#, php-format
+msgid "%s Site URL"
+msgstr "%s URL сайта"
 
-#: ../inc/customizer.php:612 ../inc/customizer.php:640
-#: ../inc/customizer.php:654
-msgid "User ID"
+#: ../inc/customizer.php:694 ../inc/customizer.php:722
+#, php-format
+msgid "%s User ID"
 msgstr ""
 
-#: ../inc/customizer.php:703
-msgid "Group Name"
+#: ../inc/customizer.php:785
+#, php-format
+msgid "%s Group Name"
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:717
-msgid "RSS Feed"
-msgstr "RSS Feed"
-
-# @ decode
-#: ../inc/customizer.php:724
+#: ../inc/customizer.php:799
 msgid "Email Address"
 msgstr "Адрес электронной почты"
 
 # @ decode
-#: ../inc/customizer.php:737
+#: ../inc/customizer.php:806
+#, php-format
+msgid "%s Link"
+msgstr "%s Ссылки"
+
+# @ decode
+#: ../inc/customizer.php:813
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+# @ decode
+#: ../inc/customizer.php:826
 msgid "Reading Options"
 msgstr "Параметры чтения"
 
 # @ decode
-#: ../inc/customizer.php:809
+#: ../inc/customizer.php:893
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Использовать цитаты вместо текста на главной странице сайта. За исключением "
 "прилепленных сообщений."
 
-#: ../inc/customizer.php:816
+#: ../inc/customizer.php:900
 msgid "Display posts' featured images when excerpts are shown on main page."
 msgstr ""
 
-#: ../inc/customizer.php:823
+#: ../inc/customizer.php:907
 msgid "Display a post's featured image on its individual page."
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:830
+#: ../inc/customizer.php:914
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Показывать метки на главной странице (метки всегда показываются на отдельной "
 "странице записи)"
 
 # @ decode
-#: ../inc/customizer.php:837
+#: ../inc/customizer.php:921
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -604,45 +599,41 @@ msgstr ""
 "отдельной странице записи)"
 
 # @ decode
-#: ../inc/customizer.php:844
+#: ../inc/customizer.php:928
 msgid "Show author's name, profile image, and bio after posts"
 msgstr "Показывать имя автора, изображение профиля и описание в публикации"
 
 # @ decode
-#: ../inc/customizer.php:851
+#: ../inc/customizer.php:935
 msgid "Entry Date Position"
 msgstr "Позиция даты"
 
 # @ decode
-#: ../inc/customizer.php:855
+#: ../inc/customizer.php:939
 msgid "Above Header"
 msgstr "Над заголовком"
 
 # @ decode
-#: ../inc/customizer.php:856
+#: ../inc/customizer.php:940
 msgid "Below Header"
 msgstr "Ниже заголовка"
 
 # @ decode
-#: ../inc/customizer.php:862
+#: ../inc/customizer.php:946
 msgid "Show Page Headers"
 msgstr "Показывать заголовки страниц"
 
-#: ../inc/customizer.php:869
+#: ../inc/customizer.php:953
 msgid "Show entry date for post excepts on the main page"
 msgstr ""
 
 # @ decode
-#: ../inc/customizer.php:876
+#: ../inc/customizer.php:960
 msgid "Add an arrow before the title of a link post"
 msgstr "Добавить стрелочку перед ссылкой на запись"
 
-#: ../inc/customizer.php:883
-msgid "Show all post types, including custom post types"
-msgstr ""
-
 # @ decode
-#: ../inc/customizer.php:890
+#: ../inc/customizer.php:967
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -651,69 +642,72 @@ msgstr ""
 "страниц)"
 
 # @ decode
-#: ../inc/customizer.php:897
+#: ../inc/customizer.php:976
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Текст (выходные данные, копирайты, благодарности и т.д) в подвале сайта"
 
 # @ decode
-#: ../inc/customizer.php:910
+#: ../inc/customizer.php:989
 msgid "Other Options"
 msgstr "Прочие параметры"
 
 # @ decode
-#: ../inc/customizer.php:922
+#: ../inc/customizer.php:1008
 msgid "Custom CSS"
 msgstr "Свой CSS"
 
+#: ../inc/customizer.php:1015
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr ""
+
 # @ decode
-#: ../inc/customizer.php:961
+#: ../inc/customizer.php:1054
 msgid "Accent Color"
 msgstr "Цвет выделения"
 
 # @ decode
-#: ../inc/customizer.php:967
+#: ../inc/customizer.php:1060
 msgid "Active Link Color"
 msgstr "Цвет активной ссылки"
 
 # @ decode
-#: ../inc/customizer.php:973
+#: ../inc/customizer.php:1066
 msgid "Text Color"
 msgstr "Цвет текста"
 
 # @ decode
-#: ../inc/customizer.php:979
+#: ../inc/customizer.php:1072
 msgid "Secondary Text Color"
 msgstr "Цвет второстепенного текста"
 
 # @ decode
-#: ../inc/customizer.php:985
+#: ../inc/customizer.php:1078
 msgid "Use accent color instead of text color for icons"
 msgstr "Использовать цвет выделения вместо цвет текста для иконок"
 
 # @ decode
-#: ../inc/extras.php:79
+#: ../inc/extras.php:104
 msgid "Category"
 msgstr "Категория"
 
 # @ decode
-#: ../inc/extras.php:82
+#: ../inc/extras.php:107
 msgid "Tag"
 msgstr "Метка"
 
 # @ decode
-#: ../inc/extras.php:85
+#: ../inc/extras.php:110
 msgid "Author"
 msgstr "Автор"
 
 # @ decode
-#: ../inc/extras.php:95 ../inc/extras.php:99
+#: ../inc/extras.php:120 ../inc/extras.php:124
 msgid "Page "
 msgstr "Страница "
 
 # @ decode
 #: ../inc/template-tags.php:23
-#, fuzzy
 msgid "Posts navigation"
 msgstr "Навигация комментария"
 
@@ -745,64 +739,38 @@ msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 # @ decode
-#: ../inc/template-tags.php:81
-msgid "Pingback:"
-msgstr "Обратная ссылка"
-
-# @ decode
-#: ../inc/template-tags.php:91
-#, php-format
-msgid "%s <span class=\"says\">says:</span>"
-msgstr "%s <span class=\"says\">сказал:</span>"
-
-# @ decode
-#: ../inc/template-tags.php:97
-#, php-format
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr "%1$s в %2$s"
-
-# @ decode
-#: ../inc/template-tags.php:104
-msgid "Your comment is awaiting moderation."
-msgstr "Ваш комментарий ожидает модерации"
-
-# @ decode
-#: ../inc/template-tags.php:118
-msgid "Reply"
-msgstr "Ответ"
-
-# @ decode
-#: ../inc/template-tags.php:199
-#, php-format
+#: ../inc/template-tags.php:138
+#, fuzzy, php-format
 msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 "<span class=\"posted-on\">Опубликовано %1$s</span><span class=\"byline\"> "
 "%2$s</span>"
 
 # @ decode
-#: ../inc/template-tags.php:207
+#: ../inc/template-tags.php:146
 #, php-format
 msgid "View all posts by %s"
 msgstr "Смотреть все записи %s"
 
-#. Theme Description
-msgid ""
-"A minimal, modern theme, designed to be mobile first and fully responsive, "
-"Decode features the ability to change all the colors in the theme and an "
-"elegant sidebar conveniently accessed by tapping on the menu icon. The "
-"sidebar can fit all of your widgets and its position can be customized. You "
-"can also choose to keep the sidebar always visible on larger screens for an "
-"elegent two-column experience. You can even disable the sidebar and comment "
-"links if you choose. Decode supports link posts, where the title can be "
-"hyperlinked. Decode includes custom social icons in the header that you can "
-"easily link to your choice of 42 different social profiles from Twitter, and "
-"App.net, to Pinterest and LinkedIn, you will be sure to find support for the "
-"network you want alongside a bevy of customizations to make your site "
-"unique. Lastly, Decode is also built alongside a companion plugin that adds "
-"a sleek reply tool that lets readers send you a reply about the post using "
-"Twitter or App.net. <a href=\"http://scotthsmith.com/projects/decode/\">More "
-"info here</a>"
-msgstr ""
+# @ decode
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr "Страница познания"
+
+# @ decode
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr "Недавние записи"
+
+# @ decode
+#: ../page-explore.php:46
+msgid "Categories"
+msgstr "Категории"
+
+# @ decode
+#: ../sidebar.php:15
+#, fuzzy
+msgid "Navigation"
+msgstr "Показать навигацию"

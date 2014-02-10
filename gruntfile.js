@@ -1,72 +1,70 @@
 module.exports = function(grunt) {
 
-    // Configuration
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        
-        modernizr: {
-
-			"devFile" : "js/modernizr-dev.js",
-
-			"outputFile" : "js/modernizr.js",
-
-			"extra" : {
-				"shiv" : false,
-				"printshiv" : true,
-				"load" : true,
-				"mq" : true,
-				"cssclasses" : true
-			},
-
-			"extensibility" : {
-				"addtest" : false,
-				"prefixed" : false,
-				"teststyles" : true,
-				"testprops" : true,
-				"testallprops" : true,
-				"hasevents" : false,
-				"prefixes" : true,
-				"domprefixes" : true
-			},
-
-			"uglify" : false,
-
-			"tests" : ['csstransforms', 'inlinesvg', 'touch'],
-
-			"parseFiles" : false,
-
-			"matchCommunityTests" : false,
+	// Configuration
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		
+		modernizr: {
+			makefile: {
+				"devFile": "js/src/modernizr-dev.js",
+				"outputFile": "js/modernizr.js",
+				"extra": {
+					"shiv": false,
+					"printshiv": true,
+					"load": true,
+					"mq": true,
+					"cssclasses": true
+				},
+				"extensibility": {
+					"addtest": false,
+					"prefixed": false,
+					"teststyles": true,
+					"testprops": true,
+					"testallprops": true,
+					"hasevents": false,
+					"prefixes": true,
+					"domprefixes": true
+				},
+				"uglify": true,
+				"tests": ['csstransforms', 'inlinesvg', 'touch'],
+				"parseFiles": false,
+				"matchCommunityTests": false,
+			}
+		},
+		
+		jshint: {
+			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/decode.js']
 		},
 		
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
-				src: ['modernizr.js', 'decode.js'],
+				src: ['src/decode.js', 'src/fastclick.js'],
 				srcRoot: '../',
-				dest: 'build/decode.js',
-				destMap: 'build/decode.js.map'
+				dest: 'decode.js',
+				destMap: 'srcmaps/decode.js.map'
 			},
 			build_decode_with_sidebar: {
 				cwd: 'js/',
-				src: ['modernizr.js', 'decode.js', 'sidebar.js', 'fastclick.js'],
+				src: ['src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
 				srcRoot: '../',
-				dest: 'build/decode-with-sidebar.js',				
-				destMap: 'build/decode-with-sidebar.js.map'
+				dest: 'decode-with-sidebar.js',				
+				destMap: 'srcmaps/decode-with-sidebar.js.map'
 			},
 			respond: {
 				cwd: 'js/',
-				src: ['respond.js'],
+				src: 'src/respond.js',
 				srcRoot: '../',
-				dest: 'build/respond.js',				
-				destMap: 'build/respond.js.map'
+				dest: 'respond.js',				
+				destMap: 'srcmaps/respond.js.map'
 			},
-			dropdown: {
+			customizer: {
 				cwd: 'js/',
-				src: ['dropdown.js'],
+				src: 'src/customizer.js',
 				srcRoot: '../',
-				dest: 'build/dropdown.js',				
-				destMap: 'build/dropdown.js.map'
-			},
+				dest: 'customizer.js',				
+				destMap: 'srcmaps/customizer.js.map'
+			}
 		},
 
 		autoprefixer: {
@@ -74,15 +72,15 @@ module.exports = function(grunt) {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'firefox 24', 'opera 12.1'],
 				map: true
 			},
-            prefix: {
-            	expand: true,
-            	flatten: true,
-            	cwd: 'css/',
-                src: ['*.css'],
-                dest: 'css/build/',
-                ext: '.prefixed.css'
-            }
-        },
+			prefix: {
+				expand: true,
+				flatten: true,
+				cwd: 'css/',
+				src: ['*.css'],
+				dest: 'css/build/',
+				ext: '.prefixed.css'
+			}
+		},
 
         cssmin: {
 			minify: {
@@ -108,17 +106,28 @@ module.exports = function(grunt) {
 		},
 		
 		markdown: {
-			docs: {
+			readme: {
 				expand: true,
 				flatten: true,
 				cwd: 'docs/',
-				src: 'src/*.md',
+				src: 'src/README.md',
 				dest: 'docs/',
 				ext: '.html',
 				options: {
-					 template: 'docs/src/DocsTemplate.html'
+					template: 'docs/src/READMETemplate.html'
 				}
-			}
+			},
+			customcss: {
+				expand: true,
+				flatten: true,
+				cwd: 'docs/',
+				src: 'src/CustomCSS.md',
+				dest: 'docs/',
+				ext: '.html',
+				options: {
+					template: 'docs/src/CustomCSSTemplate.html'
+				}
+			},
 		},
 		
 		copy: {
@@ -137,7 +146,7 @@ module.exports = function(grunt) {
 
         watch: {
 			scripts: {
-				files: ['js/*.js'],
+				files: ['js/src/*.js'],
 				tasks: ['jsmin-sourcemap'],
 				options: {
 					spawn: false
@@ -174,6 +183,7 @@ module.exports = function(grunt) {
     });
     
     // Plugin List
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jsmin-sourcemap');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -186,7 +196,7 @@ module.exports = function(grunt) {
 
 	// Workflows
 	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
+	grunt.registerTask('default', ['modernizr', 'jshint', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
 	
 	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
@@ -194,4 +204,4 @@ module.exports = function(grunt) {
 	// $ grunt dev: Watches for changes while developing, start MAMP server
 	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
 
-}
+};

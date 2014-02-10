@@ -55,6 +55,33 @@ function decode_enhanced_image_navigation( $url, $id ) {
 }
 add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
 
+/**
+ * Highlight search terms in search results.
+ */
+function decode_highlight_search_results($text){
+     if(is_search()){
+     $sr = get_search_query();
+     $keys = implode('|', explode(' ', get_search_query()));
+     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
+     }
+     return $text;
+}
+add_filter('the_excerpt', 'decode_highlight_search_results');
+add_filter('the_title', 'decode_highlight_search_results');
+
+/**
+ * Link to post in excerpt [...] links.
+ */
+if ( ! function_exists( 'link_ellipses' ) ) {
+
+function link_ellipses( $more ) {
+	if(!is_search()){
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
+	}
+}
+}
+add_filter('excerpt_more', 'link_ellipses');
+
 /* A custom callback function that displays a meaningful title
  * depending on the page being rendered
  */
@@ -67,13 +94,11 @@ function decode_wp_title($title, $sep, $sep_location) {
 
 	$site_description = get_bloginfo('description');
 	
-	if ( is_feed() )
+	if (is_feed())
 		return $title;
  
-	if ($site_description && (is_home() || is_front_page())) {
+	elseif ($site_description && is_front_page())
 		$custom = $sep . $site_description;
-		$title = '';
-	}
 
 	elseif(is_category())
 		$custom = $sep . __('Category', 'decode');
@@ -102,7 +127,7 @@ function decode_wp_title($title, $sep, $sep_location) {
 		$page_number = '';
 
 	// Comment the 4 lines of code below and see how odd the title format becomes
-	if($sep_location == 'right' && !(is_home() || is_front_page())) {
+	if($sep_location == 'right' && !(is_front_page())) {
 		$custom = $custom . $sep;
 		$title = substr($title, 0, -2);
 	}

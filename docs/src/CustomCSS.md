@@ -5,6 +5,10 @@
 `.site-logo { max-height: 8.5em; }`<br>
 8.5ems is the default. Raise or lower this amount to what suits you.
 
+### Change the size of the social icons:
+`.sociallink svg { height: 2.5em; width: 2.5em; }`<br>
+I suggest that you do not change this without using media queries because the social icons are responsively sized.
+
 ### Change the font size of posts and pages:
 `.entry-content { font-size: 1em; }`<br>
 1em is the default.
@@ -19,11 +23,23 @@
 
 ### Increase size of comment box by default:
 `textarea#comment { height: 4em; }`<br>
-2.15em is the default and fits one line of text, so gems will fit about two lines, etc.
+7em is the default.
 
 ### Hide note about allowed tags under comment form:
 `.form-allowed-tags { display: none !important; }`<br>
 This is hidden until the form is clicked on, but this will hide it at all times.
+
+### Make the sidebar pop closed when the page loads
+`.sidebar.left {
+	animation: pop-closed 0.75s 0.75s;
+}`
+
+### Prevent current menu item from shaking on hover:
+`.menu .current-menu-item > a:hover,
+.menu .current_page_item > a:hover {
+	-webkit-animation: none;
+	animation: none;
+}`
 
 ### Remove the border between the header and the main section of the site:
 `.site-header { border-bottom: none; }`

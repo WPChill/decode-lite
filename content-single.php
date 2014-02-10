@@ -5,8 +5,11 @@
 ?>
 
 <?php if ( has_post_format( 'quote' ) ) : ?>
-
+	
+		<?php tha_entry_before(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php tha_entry_top(); ?>
+		
 			<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 		<footer class="entry-meta">
@@ -26,11 +29,17 @@
 			<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
 			<p class="date"><?php decode_posted_on(); ?></p>
 		</footer><!-- .entry-meta -->
+		
+		<?php tha_entry_bottom(); ?>
 	</article><!-- #post-<?php the_ID(); ?> -->
+		<?php tha_entry_after(); ?>
 		
 <?php elseif ( has_post_format( 'link' )): ?>
 
+		<?php tha_entry_before(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php tha_entry_top(); ?>
+		
 		<header class="entry-header">
 			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_singles', false ) == true ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -64,11 +73,17 @@
 				<p class="date"><?php decode_posted_on(); ?></p>
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
+		
+		<?php tha_entry_bottom(); ?>
 	</article>
+		<?php tha_entry_after(); ?>
 	
 <?php else : ?>
 
+		<?php tha_entry_before(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php tha_entry_top(); ?>
+		
 		<header class="entry-header">
 			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_singles', false ) == true ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -103,6 +118,9 @@
 				<p class="date"><?php decode_posted_on(); ?></p>
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
+		
+		<?php tha_entry_bottom(); ?>
 	</article><!-- #post-<?php the_ID(); ?> -->
+		<?php tha_entry_after(); ?>
 
 <?php endif; ?>

@@ -1,0 +1,653 @@
+# LANGUAGE (LOCALE) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR mateusz.j.wozniak@gmail.com, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode v2.9.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-09 17:47-0600\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"Description:\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Przepraszamy, strony nie znaleziono."
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Wygląda na to, że nic tu nie zneleziono. Może spróbuj jednego z linków  "
+"\"\"poniżej albo wyszukaj?"
+
+#: ../404.php:26
+msgid "Try looking in the monthly archives."
+msgstr "Spróbuj sprawdzić miesięczne archiwa"
+
+#: ../404.php:32
+msgid "Most Used Categories"
+msgstr "Najpopularniejsze kategorie"
+
+#: ../archive.php:27
+#, php-format
+msgid "Day: %s"
+msgstr "Dzień: %s"
+
+#: ../archive.php:30
+#, php-format
+msgid "Month: %s"
+msgstr "Miesiąc: %s"
+
+#: ../archive.php:30
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../archive.php:33
+#, php-format
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: ../archive.php:33
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../archive.php:36
+msgid "Asides"
+msgstr "Notki (asides)"
+
+#: ../archive.php:39
+msgid "Galleries"
+msgstr "Galerie"
+
+#: ../archive.php:42
+msgid "Images"
+msgstr "Zdjęcia"
+
+#: ../archive.php:45
+msgid "Videos"
+msgstr "Filmy"
+
+#: ../archive.php:48
+msgid "Quotes"
+msgstr "Cytaty"
+
+#: ../archive.php:51
+msgid "Links"
+msgstr "Links"
+
+#: ../archive.php:54
+msgid "Statuses"
+msgstr "Statusy"
+
+#: ../archive.php:57
+msgid "Audios"
+msgstr "Audio"
+
+#: ../archive.php:60
+msgid "Chats"
+msgstr "Chat"
+
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:39
+#: ../sidebar.php:31
+msgid "Archives"
+msgstr "Archiwum"
+
+#: ../author.php:25 ../content-single.php:21 ../content-single.php:63
+#: ../content-single.php:108
+msgid "Website"
+msgstr "Strona www"
+
+#: ../author.php:34
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "1 skomentował &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s skomentowało &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s skomentowało &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:35 ../comments.php:59
+msgid "Comment navigation"
+msgstr "Nawigacja komentarzy"
+
+#: ../comments.php:36 ../comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; Starsze komentarze"
+
+#: ../comments.php:37 ../comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Nowsze komentarze &rarr;"
+
+#: ../comments.php:71
+msgid "Comments are closed."
+msgstr "Komentarze wyłączone."
+
+#: ../comments.php:75
+msgid "Leave a Reply"
+msgstr "Skomentuj"
+
+#: ../comments.php:76
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Skomentuj %s"
+
+#: ../comments.php:77
+msgid "Cancel reply"
+msgstr "Anuluj komentarz"
+
+#: ../comments.php:78
+msgid "Post Comment"
+msgstr "Opublikuj komentarz"
+
+#: ../comments.php:82
+msgctxt "noun"
+msgid "Comment"
+msgstr "Komentarz"
+
+#: ../comments.php:83
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Musisz być <a href=\"%s\">zalogowany</a>, by skomentować."
+
+#: ../comments.php:84
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Zalogowany jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Wyloguj "
+"się z tego konta\">Wylogować?</a>"
+
+#: ../comments.php:85
+msgid "Your email address will not be published."
+msgstr "Twój e-mail nie będzie opublikowany."
+
+#: ../comments.php:86
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Możesz użyć tych tagów <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr>: %s"
+
+#: ../content-excerpt.php:30
+msgid "Read More&hellip;"
+msgstr "Czytaj dalej&hellip;"
+
+#: ../content-excerpt.php:31 ../content-link.php:35 ../content-page.php:24
+#: ../content-quote.php:21 ../content-search.php:19 ../content-single.php:27
+#: ../content-single.php:69 ../content-single.php:114 ../content.php:35
+#: ../image.php:30 ../image.php:98
+msgid "Edit"
+msgstr "Edytuj"
+
+#: ../content-link.php:26 ../content-quote.php:12 ../content-single.php:13
+#: ../content-single.php:56 ../content-single.php:100 ../content.php:26
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Czytaj dalej<span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-link.php:29 ../content-page.php:21 ../content-quote.php:15
+#: ../content-single.php:14 ../content-single.php:101 ../content.php:29
+#: ../image.php:91
+msgid "Pages:"
+msgstr "Stron:"
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "Leave a comment"
+msgstr "Skomentuj"
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "1 Comment"
+msgstr "1 skomentował"
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "% Comments"
+msgstr "% skomentowało"
+
+#: ../content-link.php:37 ../content-quote.php:23 ../content-single.php:28
+#: ../content-single.php:70 ../content-single.php:115 ../content.php:37
+msgid "Tagged as: "
+msgstr "Tagi: "
+
+#: ../content-link.php:40 ../content-quote.php:26 ../content-single.php:29
+#: ../content-single.php:71 ../content-single.php:116 ../content.php:40
+msgid "Categorized in&#58; "
+msgstr "Kategoria&#58; "
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Nic nie znaleziono"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Gotowy do publikacji? <a href=\"%1$s\">Zacznij tutaj</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Przepraszamy, nic nie znaleziono. Spróbuj ponownie z innymi hasłami."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Wygląda na to, że nie mamy tego, czego szukasz. Może skorzystaj z "
+"wyszukiwania?"
+
+#: ../footer.php:44
+#, php-format
+msgid "%1$s by %2$s"
+msgstr "%1$s przez %2$s"
+
+#: ../functions.php:59
+msgid "Header Menu"
+msgstr "Menu górne"
+
+#: ../functions.php:60
+msgid "Sidebar Menu"
+msgstr "Pasek boczny"
+
+#: ../functions.php:61
+msgid "Footer Menu"
+msgstr "Menu dolne"
+
+#: ../functions.php:107
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: ../header.php:40
+msgid "Skip to content"
+msgstr "Przejdź do treści"
+
+#: ../image.php:22
+#, fuzzy, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
+msgstr ""
+"Opublikowano <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"\"%1$s\">%2$s</time></span> w <a href=\"%3$s\" title=\"Link do pełnego "
+"rozmiaru obrazka\">%4$s &times; %5$s</a> w <a href=\"%6$s\" title=\"Wróć do "
+"%7$s\" rel=\"gallery\">%8$s</a>"
+
+#: ../image.php:34
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Poprzednie"
+
+#: ../image.php:35
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Następne <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/customizer.php:57
+msgid "Header Options"
+msgstr "Opcje nagłówka"
+
+#: ../inc/customizer.php:94
+msgid "Header Image"
+msgstr "Obrazek nagłówka"
+
+#: ../inc/customizer.php:103
+#, fuzzy
+msgid "Favicon Image (must be a PNG)"
+msgstr "Favicon (rekomendowany format PNG)"
+
+#: ../inc/customizer.php:110
+msgid "Show Site Title"
+msgstr "Pokaż tytuł strony"
+
+#: ../inc/customizer.php:117
+msgid "Show Site Description"
+msgstr "Pokaż opis strony"
+
+#: ../inc/customizer.php:124
+msgid "Show Header Menu"
+msgstr "Pokaż menu górne"
+
+#: ../inc/customizer.php:131
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr "HTML dla opisu, jeśli chcesz zastąpić opis znacznikiem HTML"
+
+#: ../inc/customizer.php:144
+msgid "Sidebar Options"
+msgstr "Opcje paska bocznego"
+
+#: ../inc/customizer.php:168
+msgid "Enable Sidebar"
+msgstr "Pasek boczny aktywny"
+
+#: ../inc/customizer.php:175
+msgid "Sidebar Position"
+msgstr "Położenie paska bocznego"
+
+#: ../inc/customizer.php:179 ../inc/customizer.php:190
+msgid "Left"
+msgstr "Lewa"
+
+#: ../inc/customizer.php:180 ../inc/customizer.php:191
+msgid "Right"
+msgstr "Prawa"
+
+#: ../inc/customizer.php:186
+msgid "Sidebar Button Position"
+msgstr "Położenie przycisku paska bocznego"
+
+#: ../inc/customizer.php:197
+msgid "Always Visible Sidebar"
+msgstr "Pasek boczny zawsze widoczny"
+
+#: ../inc/customizer.php:201
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr "Zawsze otwarty"
+
+#: ../inc/customizer.php:202
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr "Domyślnie zamknięty"
+
+#: ../inc/customizer.php:215
+msgid "Discussion Options"
+msgstr "Opcje dyskusji"
+
+#: ../inc/customizer.php:227
+msgid "Enable Comments"
+msgstr "Komentarze włączone"
+
+#: ../inc/customizer.php:240
+msgid "Social Options"
+msgstr "Opcje społecznościowe"
+
+#: ../inc/customizer.php:456 ../inc/customizer.php:463
+msgid "Show Social Icons"
+msgstr "Pokaż ikony"
+
+#: ../inc/customizer.php:456
+msgid "in Header"
+msgstr "w nagłówku"
+
+#: ../inc/customizer.php:463
+msgid "in Footer"
+msgstr "w stopce"
+
+#: ../inc/customizer.php:470
+msgid "Open Links in New Tab/Window"
+msgstr "Otwórz linki w nowej karcie / oknie"
+
+#: ../inc/customizer.php:477 ../inc/customizer.php:484
+#: ../inc/customizer.php:491 ../inc/customizer.php:505
+#: ../inc/customizer.php:512 ../inc/customizer.php:519
+#: ../inc/customizer.php:526 ../inc/customizer.php:533
+#: ../inc/customizer.php:547 ../inc/customizer.php:554
+#: ../inc/customizer.php:561 ../inc/customizer.php:568
+#: ../inc/customizer.php:575 ../inc/customizer.php:582
+#: ../inc/customizer.php:589 ../inc/customizer.php:596
+#: ../inc/customizer.php:603 ../inc/customizer.php:610
+#: ../inc/customizer.php:617 ../inc/customizer.php:624
+#: ../inc/customizer.php:631 ../inc/customizer.php:638
+#: ../inc/customizer.php:645 ../inc/customizer.php:652
+#: ../inc/customizer.php:673 ../inc/customizer.php:701
+#: ../inc/customizer.php:708 ../inc/customizer.php:715
+#: ../inc/customizer.php:729 ../inc/customizer.php:743
+#: ../inc/customizer.php:750 ../inc/customizer.php:757
+#: ../inc/customizer.php:764 ../inc/customizer.php:771
+#: ../inc/customizer.php:778 ../inc/customizer.php:792
+#, php-format
+msgid "%s Username"
+msgstr "Profil %s"
+
+#: ../inc/customizer.php:498
+#, php-format
+msgctxt "[noun] [translation string] (explanation)"
+msgid "%1$s Username %2$s"
+msgstr "Profil %1$s %2$s"
+
+#: ../inc/customizer.php:498
+msgid " (or the long number in your profile URL)"
+msgstr " (albo długi numer w adresie twojego profilu)"
+
+#: ../inc/customizer.php:540 ../inc/customizer.php:736
+#, php-format
+msgid "%s Profile URL"
+msgstr "Adres profilu %s"
+
+#: ../inc/customizer.php:659 ../inc/customizer.php:666
+#: ../inc/customizer.php:680 ../inc/customizer.php:687
+#, php-format
+msgid "%s Site URL"
+msgstr "Adres strony %s"
+
+#: ../inc/customizer.php:694 ../inc/customizer.php:722
+#, php-format
+msgid "%s User ID"
+msgstr "ID użytkownika %s"
+
+#: ../inc/customizer.php:785
+#, php-format
+msgid "%s Group Name"
+msgstr "Nazwa grupy %s"
+
+#: ../inc/customizer.php:799
+msgid "Email Address"
+msgstr "Adres Email"
+
+#: ../inc/customizer.php:806
+#, php-format
+msgid "%s Link"
+msgstr "Links %s"
+
+#: ../inc/customizer.php:813
+msgid "RSS Feed"
+msgstr "Kanał RSS"
+
+#: ../inc/customizer.php:826
+msgid "Reading Options"
+msgstr "Opcje czytania"
+
+#: ../inc/customizer.php:893
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+"Użyj fragmentów wpisów zamiast pełnej treści na stronie domowej. Z wyjątkiem "
+"wpisów przyklejonych."
+
+#: ../inc/customizer.php:900
+msgid "Display posts' featured images when excerpts are shown on main page."
+msgstr ""
+"Wyświetlaj obrazki wpisów, gdy na głównej stronie wyświetlane są fragmenty "
+"treści."
+
+#: ../inc/customizer.php:907
+msgid "Display a post's featured image on its individual page."
+msgstr "Wyświetlaj obrazki wpisów na stronach wpisów."
+
+#: ../inc/customizer.php:914
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+"Pokazuj tagi na stronie głównej (tagi będą pokazywane na stronach wpisów)"
+
+#: ../inc/customizer.php:921
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+"Pokazuj kategorie na stronie głównej (kategorie będą pokazywane na stronach "
+"wpisów)"
+
+#: ../inc/customizer.php:928
+msgid "Show author's name, profile image, and bio after posts"
+msgstr "Po wpisach pokazuj nazwę, obrazek, bio autora"
+
+#: ../inc/customizer.php:935
+msgid "Entry Date Position"
+msgstr "Pozycja daty wpisu"
+
+#: ../inc/customizer.php:939
+msgid "Above Header"
+msgstr "Nad nagłówkiem"
+
+#: ../inc/customizer.php:940
+msgid "Below Header"
+msgstr "Pod nagłówkiem"
+
+#: ../inc/customizer.php:946
+msgid "Show Page Headers"
+msgstr "Pokazuj nagłówki stron"
+
+#: ../inc/customizer.php:953
+msgid "Show entry date for post excepts on the main page"
+msgstr "Pokazuj daty dla fragmentów wpisów na stronie głównej"
+
+#: ../inc/customizer.php:960
+msgid "Add an arrow before the title of a link post"
+msgstr "Dodawaj strzałkę przed tytułem linku wpisu"
+
+#: ../inc/customizer.php:967
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+"Pokaż informacje o motywie (wyświetlaj linię tekstu z informacją o motywie i "
+"jego autorze w stopce)"
+
+#: ../inc/customizer.php:976
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr "Tekst (informacje, prawa autorskie etc.) na stopkę strony"
+
+#: ../inc/customizer.php:989
+msgid "Other Options"
+msgstr "Inne opcje"
+
+#: ../inc/customizer.php:1008
+msgid "Custom CSS"
+msgstr "Własny CSS"
+
+#: ../inc/customizer.php:1015
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr ""
+
+#: ../inc/customizer.php:1054
+msgid "Accent Color"
+msgstr "Kolor podkreślenia"
+
+#: ../inc/customizer.php:1060
+msgid "Active Link Color"
+msgstr "Kolor aktywnego linka"
+
+#: ../inc/customizer.php:1066
+msgid "Text Color"
+msgstr "Kolor tekstu"
+
+#: ../inc/customizer.php:1072
+msgid "Secondary Text Color"
+msgstr "Kolor drugiego tekstu"
+
+#: ../inc/customizer.php:1078
+msgid "Use accent color instead of text color for icons"
+msgstr "Użyj kolorów podkreślenia zamiast kolorów tekstu dla ikon"
+
+#: ../inc/extras.php:104
+msgid "Category"
+msgstr "Kategoria"
+
+#: ../inc/extras.php:107
+msgid "Tag"
+msgstr "Tagi"
+
+#: ../inc/extras.php:110
+msgid "Author"
+msgstr "Autor"
+
+#: ../inc/extras.php:120 ../inc/extras.php:124
+msgid "Page "
+msgstr "Strona "
+
+#: ../inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Nawigacja wpisów"
+
+#: ../inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starsze wpisy"
+
+#: ../inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nowsze wpisy <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Nawigacja wpisów"
+
+#: ../inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: ../inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:138
+#, fuzzy, php-format
+msgid ""
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+"<span class=\"posted-on\">Napisany %1$s</span><span class=\"byline\"> przez "
+"%2$s</span>"
+
+#: ../inc/template-tags.php:146
+#, php-format
+msgid "View all posts by %s"
+msgstr "Zobacz wszystkie wpisy: %s"
+
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr "Strona wyszukiwania"
+
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr "Ostatnie wpisy"
+
+#: ../page-explore.php:46
+msgid "Categories"
+msgstr "Kategorie"
+
+#: ../sidebar.php:15
+msgid "Navigation"
+msgstr "Nawigacja"
+
+#~ msgid "Show all post types, including custom post types"
+#~ msgstr "Pokaż wszystkie typy wpisów, łącznie z własnymi typami wpisów"

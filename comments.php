@@ -3,9 +3,7 @@
  * The template for displaying Comments.
  *
  * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to decode_comment() which is
- * located in the inc/template-tags.php file.
+ * and the comment form.
  *
  * @package Decode
  */
@@ -21,7 +19,8 @@ if ( post_password_required() ) {
 ?>
 	<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
 
-	<div id="comments" class="comments-area">
+	<?php tha_comments_before(); ?>
+<div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -88,14 +87,21 @@ if ( post_password_required() ) {
 	?>
 	
 	
-	<script>
-		jQuery(document).ready(function($){
-			$("textarea#comment").click(function(){
-				$('.form-allowed-tags').slideDown('250');
-			});
-		});
+	<script>		
+		function hasClass(el, cls) {
+			return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+		}
+		
+		var target = document.querySelector('.form-allowed-tags');
+		
+		document.querySelector('textarea#comment').addEventListener('click', function() {
+			if (!hasClass(target, 'visible')) {
+				target.className += ' ' + 'visible';
+			}
+		}, false);
 	</script>
 
 </div><!-- #comments -->
+	<?php tha_comments_after(); ?>
 
 <?php endif; ?>

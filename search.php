@@ -7,32 +7,32 @@
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+<section id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-			<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<?php get_search_form(); ?>
-				</header><!-- .page-header -->
+		<header class="page-header">
+			<?php get_search_form(); ?>
+		</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'search' ); ?>
+			<?php get_template_part( 'content', 'search' ); ?>
 
-				<?php endwhile; ?>
+		<?php endwhile; ?>
 
-			<?php else : ?>
+	<?php else : ?>
 
-				<?php get_template_part( 'content', 'none' ); ?>
+		<?php get_template_part( 'content', 'none' ); ?>
 
-			<?php endif; ?>
+	<?php endif; ?>
 
-			</main><!-- #main -->
-			
-			<?php decode_paging_nav(); ?>
-			
-		</section><!-- #primary -->
+	</main><!-- #main -->
+	
+	<?php decode_paging_nav(); ?>
+	
+</section><!-- #primary -->
 
 <?php get_footer(); ?>

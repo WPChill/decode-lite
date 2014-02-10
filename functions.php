@@ -55,15 +55,6 @@ function decode_setup() {
 		'default-color' => 'E3E5E7',
 	) ) );
 	
-	/**
-	 * Remove old, now unused theme modifications so that conflicts do not occur.
-	 */
-	remove_theme_mod ( 'show_site_navigation' );
-	remove_theme_mod ( 'linkedin_username' );
-
-	/**
-	 * This theme uses wp_nav_menu() once in header.php.
-	 */
 	register_nav_menus( array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
@@ -76,27 +67,28 @@ add_action( 'after_setup_theme', 'decode_setup' );
 /**
  * Register styles and scripts.
  */
-
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.9" );
-
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.9.1" );
+	
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
-
+	
+	wp_enqueue_script( 'decode-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.9.1', false );
+	
 	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
-		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/build/decode.js', array(), '2.9', true );
+		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.9.1', true );
 	}
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/build/decode-with-sidebar.js', array('jquery'), '2.9', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/decode-with-sidebar.js', array(), '2.9.1', true );
 	}
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
+	
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'decode-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '2.7.5', true );
 	}
@@ -122,89 +114,20 @@ function decode_widgets_init() {
 add_action( 'widgets_init', 'decode_widgets_init' );
 
 /**
- * Add custom colors to CSS.
+ * Add Custom CSS to page.
  */
-if ( ! is_admin() && ! function_exists( 'decode_customize_css' ) ) {
+if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
-function decode_customize_css() {
-    ?>
-         <style type="text/css">
-        body, .sidebar, .SidebarTop, .menu ul ul {
-			background: <?php echo '#' . get_background_color(); ?>;
-		}
-
-		body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, 
-		.menu a,
-		
-		.entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
-			color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-		
-		.menu .menu-item-has-children > a::after, .menu .page_item_has_children > a::after {
-			border-top-color: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-		
-	<?php if (get_theme_mod( 'accent_color_icons', false ) == false ) : ?>
-		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('text_color', '#444444'); ?>;
-		}
-	<?php else : ?>
-		.SidebarMenuTrigger, .SidebarMenuClose, .SocialIconFill {
-			fill: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-	<?php endif; ?>
-
-		a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch .entry-meta .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover {
-			color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-
-		.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus {
-			border-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-		
-		.no-touch .menu > ul > .menu-item-has-children > a:hover::after, .no-touch .menu > ul > .page_item_has_children > a:hover::after, .menu ul li.open > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after {
-			border-top-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-		
-		.horizontal-menu ul ul .menu-item-has-children > a:hover::after, .horizontal-menu ul ul .page_item_has_children > a:hover::after, .horizontal-menu ul ul li.open > a::after {
-			border-left-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-		
-		.footer-menu > ul > .menu-item-has-children > a:hover::after, .footer-menu > ul > .page_item_has_children > a:hover::after, .footer-menu > ul > li.open > a::after {
-			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-
-		.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .no-touch .SidebarContent a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch .entry-meta .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active {
-			color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-
-		.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active {
-			border-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-		
-		.no-touch .menu > ul > .menu-item-has-children > a:active::after, .no-touch .menu > ul > .page_item_has_children > a:active::after, .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after, .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after {
-			border-top-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-		
-		.horizontal-menu ul ul .menu-item-has-children > a:active::after, .horizontal-menu ul ul .page_item_has_children > a:active::after {
-			border-left-color: <?php echo get_theme_mod('secondary_accent_color', '#007EA6'); ?>;
-		}
-		
-		.footer-menu > ul > .menu-item-has-children > a:active::after, .footer-menu > ul > .page_item_has_children > a:active::after {
-			border-bottom-color: <?php echo get_theme_mod('accent_color', '#009BCD'); ?>;
-		}
-
-		.tags, .categories, .entry-meta .date, .entry-meta .date a, .comment-metadata a, .search .page-header input[type="search"] {
-			color: <?php echo get_theme_mod('secondary_text_color', '#808080'); ?>;
-		}
-		
-		<?php echo get_theme_mod('custom_css', ''); ?>
-		
-         </style>
-    <?php
+function decode_custom_css() {
+	?>
+		<!-- Decode Custom CSS -->
+		<style type="text/css">
+			<?php echo get_theme_mod('custom_css', ''); ?>
+		</style>
+	<?php
 }
 }
-add_action( 'wp_head', 'decode_customize_css');
+add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
 
 /**
  * Implement the Custom Header feature.
@@ -222,17 +145,17 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * Customize Menu additions.
  */
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Custom navigation walker to support Dropdown.js.
+ * Theme Hook Alliance functions.
  */
-require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+require get_template_directory() . '/inc/tha-theme-hooks.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
 
@@ -258,34 +181,7 @@ function decode_add_google_profile( $contactmethods ) {
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 
 /**
- * Highlight search terms in search results.
- */
-function decode_highlight_search_results($text){
-     if(is_search()){
-     $sr = get_search_query();
-     $keys = implode('|', explode(' ', get_search_query()));
-     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
-     }
-     return $text;
-}
-add_filter('the_excerpt', 'decode_highlight_search_results');
-add_filter('the_title', 'decode_highlight_search_results');
-
-/**
- * Link to post in excerpt [...] links.
- */
-if ( ! function_exists( 'link_ellipses' ) ) {
-
-function link_ellipses( $more ) {
-	if(!is_search()){
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
-	}
-}
-}
-add_filter('excerpt_more', 'link_ellipses');
-
-/**
- * Link post titles link to the link URL, not the permalink for link blog-style behaviour.
+ * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
 
@@ -337,15 +233,20 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 /**
  * Show all post types in main query
  */
-if ( ! function_exists( 'add_all_post_types_to_query' ) ) {
+if ( ! function_exists( 'add_post_types_to_query' ) ) {
 
-function add_all_post_types_to_query( $query ) {
+function add_post_types_to_query( $query ) {
+		$typelist = 'post';
+		if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
+			$typelist .= ', ' . get_theme_mod( 'add_custom_post_types', '' );
+			$typelist = explode( ", ", $typelist );
+		}
 	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( get_post_types() ) );
-	return $query;
+		$query->set( 'post_type', $typelist );
+	return $query;	
 }
 }
 
-if ( get_theme_mod( 'show_all_post_types', false ) == true ) {
-	add_action( 'pre_get_posts', 'add_all_post_types_to_query' );
+if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
+	add_action( 'pre_get_posts', 'add_post_types_to_query' );
 }
