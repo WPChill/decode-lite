@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-02-09 17:47-0600\n"
-"PO-Revision-Date: 2014-02-09 17:47-0600\n"
+"PO-Revision-Date: 2014-02-10 08:26-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: pl_PL\n"
@@ -620,13 +620,13 @@ msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:138
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
 "\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
-"<span class=\"posted-on\">Napisany %1$s</span><span class=\"byline\"> przez "
-"%2$s</span>"
+"<span class=\"posted-on-text\">Napisany </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> przez %2$s</span>"
 
 #: ../inc/template-tags.php:146
 #, php-format
