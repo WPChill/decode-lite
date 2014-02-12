@@ -823,7 +823,7 @@ public static function decode_customize_register( $wp_customize ) {
  */
 
 	$wp_customize->add_section( 'decode_reading_options', array(
-    	'title'   => __( 'Reading Options', 'decode' ),
+    	'title'   => __( 'Content Options', 'decode' ),
 		'priority'=> 37
     ) );
 
