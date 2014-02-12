@@ -29,7 +29,6 @@
 
 <div id="page" class="hfeed site<?php if ( get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
 	<?php tha_header_before(); ?>
-	<?php do_action( 'before' ); ?>
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
 		
 	<header id="masthead" class="site-header" role="banner">

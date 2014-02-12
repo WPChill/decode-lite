@@ -20,7 +20,6 @@
 	<div class="widget-area" role="complementary">
 	
 		<?php tha_sidebar_top(); ?>
-		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
