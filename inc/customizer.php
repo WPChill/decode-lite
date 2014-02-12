@@ -1133,7 +1133,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type=\'text\']:focus, .touch input[type=\'text\']:focus, .no-touch input[type=\'email\']:focus, .touch input[type=\'email\']:focus, .no-touch input[type=\'password\']:focus, .touch input[type=\'password\']:focus, .no-touch input[type=\'search\']:focus, .touch input[type=\'search\']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus',
+				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .site-description a:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .explore-page .widget h1, button:focus, .no-touch input[type=\'text\']:focus, .touch input[type=\'text\']:focus, .no-touch input[type=\'email\']:focus, .touch input[type=\'email\']:focus, .no-touch input[type=\'password\']:focus, .touch input[type=\'password\']:focus, .no-touch input[type=\'search\']:focus, .touch input[type=\'search\']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus',
 				'border-color',
 				'accent_color' );
 			
@@ -1153,7 +1153,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'secondary_accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active',
+				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .site-description a:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
 				'border-color',
 				'secondary_accent_color' );
 			
