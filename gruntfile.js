@@ -68,10 +68,10 @@ module.exports = function(grunt) {
 			prefix: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/',
+				cwd: 'css/src/',
 				src: ['*.css'],
-				dest: 'css/build/',
-				ext: '.prefixed.css'
+				dest: 'css/',
+				ext: '.css'
 			}
 		},
 
@@ -79,10 +79,9 @@ module.exports = function(grunt) {
 			minify: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/build/',
-				src: ['*.css', '!*.min.css'],
-				dest: 'css/build/',
-				ext: '.min.css'
+				cwd: 'css/',
+				src: ['*.css'],
+				ext: '.css'
 			}
 		},
 		
@@ -146,7 +145,7 @@ module.exports = function(grunt) {
 				}
 			},
 			css: {
-				files: ['css/*.css'],
+				files: ['css/src/*.css'],
 				tasks: ['autoprefixer', 'cssmin', 'copy'],
 				options: {
 					spawn: false

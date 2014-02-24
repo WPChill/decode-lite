@@ -163,7 +163,7 @@ require get_template_directory() . '/inc/jetpack.php';
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
 
 function decode_add_editor_styles() {
-	add_editor_style( 'css/build/editor-style.min.css' );
+	add_editor_style( 'editor-style.css' );
 }
 }
 add_action( 'init', 'decode_add_editor_styles' );
