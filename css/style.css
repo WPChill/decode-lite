@@ -261,7 +261,7 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	vertical-align: middle; /* Improves appearance and consistency in IE6/IE7 */
+	vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
 button,
 input[type="button"],
@@ -553,7 +553,8 @@ img[class*="wp-image-"] {
 	max-width: 90%;
 }
 
-.site-main .gallery dd {
+.site-main .gallery dd, /* For before WP 3.9 */
+.site-main .gallery figcaption { /* For < WP 3.9 */
 	margin: 0;
 }
 

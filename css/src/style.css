@@ -546,7 +546,8 @@ img[class*="wp-image-"] {
 	max-width: 90%;
 }
 
-.site-main .gallery dd {
+.site-main .gallery dd, /* For before WP 3.9 */
+.site-main .gallery figcaption { /* For < WP 3.9 */
 	margin: 0;
 }
 

@@ -31,7 +31,7 @@ function decode_setup() {
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
 	// Sets output for these items to HTML 5 markup.
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', ) );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery' ) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
