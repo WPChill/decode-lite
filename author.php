@@ -40,26 +40,31 @@ get_header(); ?>
 		
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', 'excerpt' );
+		
+			<?php 
+				if ( get_theme_mod( 'use_excerpts_on_archives', true ) == true ) : 
+					get_template_part( 'content', 'excerpt' );
+				
+				else :
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+					
+				endif;
 			?>
 
-		<?php endwhile; ?>
-
-		<?php decode_paging_nav(); ?>
-
-	<?php else : ?>
-
-		<?php get_template_part( 'no-results', 'archive' ); ?>
-
-	<?php endif; ?>
+		<?php endwhile; else : ?>
+	
+			<?php get_template_part( 'content-none', 'none' ); ?>
+	
+		<?php endif; ?>
 
 	</main><!-- #main -->
+	
+	<?php decode_paging_nav(); ?>
+	
 </section><!-- #primary -->
 
 <?php get_footer(); ?>

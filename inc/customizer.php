@@ -833,6 +833,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'transport' => 'refresh'
 	) );
 	
+	$wp_customize->add_setting( 'use_excerpts_on_archives', array(
+		'default' => true,
+		'transport' => 'refresh'
+	) );
+	
 	$wp_customize->add_setting( 'show_featured_images_on_excerpts', array(	// Yep, that's the longest setting name I have.
 		'default' => false,
 		'transport' => 'refresh'
@@ -891,6 +896,13 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'use_excerpts', array(
 		'label'   => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 1
+	) );
+	
+	$wp_customize->add_control( 'use_excerpts_on_archives', array(
+		'label'   => __( 'Use entry excerpts on archive, category, and author pages.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 1
