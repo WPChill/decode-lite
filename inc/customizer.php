@@ -909,7 +909,7 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
-		'label'   => __( 'Display posts\' featured images when excerpts are shown on main page.', 'decode' ),
+		'label'   => __( 'Display posts\' featured images when excerpts are shown.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 2
