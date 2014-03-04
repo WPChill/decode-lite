@@ -737,6 +737,7 @@ object {
 .no-inlinesvg .VimeoLink {background-image: url('images/Vimeo.png');}
 .no-inlinesvg .YouTubeLink {background-image: url('images/YouTube.png');}
 .no-inlinesvg .KickstarterLink {background-image: url('images/Kickstarter.png');}
+.no-inlinesvg .GittipLink {background-image: url('images/Gittip.png');}
 .no-inlinesvg .TumblrLink {background-image: url('images/Tumblr.png');}
 .no-inlinesvg .MediumLink {background-image: url('images/Medium.png');}
 .no-inlinesvg .SvbtleLink {background-image: url('images/Svbtle.png');}
@@ -744,6 +745,7 @@ object {
 .no-inlinesvg .StackOverflowLink {background-image: url('images/StackOverflow.png');}
 .no-inlinesvg .redditLink {background-image: url('images/reddit.png');}
 .no-inlinesvg .GithubLink {background-image: url('images/GitHub.png');}
+.no-inlinesvg .BitbucketLink {background-image: url('images/Bitbucket.png');}
 .no-inlinesvg .RunkeeperLink {background-image: url('images/Runkeeper.png');}
 .no-inlinesvg .StravaLink {background-image: url('images/Strava.png');}
 .no-inlinesvg .FoursquareLink {background-image: url('images/Foursquare.png');}

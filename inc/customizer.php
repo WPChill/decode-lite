@@ -363,6 +363,10 @@ public static function decode_customize_register( $wp_customize ) {
 		'default' => ''
 	) );
 	
+	$wp_customize->add_setting( 'gittip_username', array(
+		'default' => ''
+	) );
+	
 	$wp_customize->add_setting( 'tumblr_username', array(
 		'default' => ''
 	) );
@@ -388,6 +392,10 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_setting( 'github_username', array(
+		'default' => ''
+	) );
+	
+	$wp_customize->add_setting( 'bitbucket_username', array(
 		'default' => ''
 	) );
 	
@@ -662,158 +670,172 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 30
 	) );
 	
+	$wp_customize->add_control( 'gittip_username', array(
+		'label'   => sprintf( __( '%s Username', 'decode' ), 'Gittip' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 31
+	) );
+	
 	$wp_customize->add_control( 'tumblr_username', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'Tumblr' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 31
+		'priority'=> 32
 	) );
 	
 	$wp_customize->add_control( 'medium_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Medium' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 32
+		'priority'=> 33
 	) );
 	
 	$wp_customize->add_control( 'svbtle_url', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'Svbtle' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 33
+		'priority'=> 34
 	) );
 	
 	$wp_customize->add_control( 'wordpress_url', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'WordPress' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 34
+		'priority'=> 35
 	) );
 
 	$wp_customize->add_control( 'stackoverflow_userid', array(
 		'label'   => sprintf( __( '%s User ID', 'decode' ), 'Stack Overflow' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 35
+		'priority'=> 36
 	) );
 	
 	$wp_customize->add_control( 'reddit_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Reddit' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 36
+		'priority'=> 37
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'GitHub' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 37
+		'priority'=> 38
+	) );
+	
+	$wp_customize->add_control( 'bitbucket_username', array(
+		'label'   => sprintf( __( '%s Username', 'decode' ), 'Bitbucket' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 39
 	) );
 	
 	$wp_customize->add_control( 'runkeeper_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Runkeeper' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 38
+		'priority'=> 40
 	) );
 	
 	$wp_customize->add_control( 'strava_userid', array(
 		'label'   => sprintf( __( '%s User ID', 'decode' ), 'Strava' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 39
+		'priority'=> 41
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Foursquare' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 40
+		'priority'=> 42
 	) );
 	
 	$wp_customize->add_control( 'yelp_url', array(
 		'label'   => sprintf( __( '%s Profile URL', 'decode' ), 'Yelp' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 41
+		'priority'=> 43
 	) );
 	
 	$wp_customize->add_control( 'slideshare_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'SlideShare' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 42
+		'priority'=> 44
 	) );
 	
 	$wp_customize->add_control( 'researchgate_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Research Gate' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 43
+		'priority'=> 45
 	) );
 	
 	$wp_customize->add_control( 'youversion_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'YouVersion' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 44
+		'priority'=> 46
 	) );
 	
 	$wp_customize->add_control( 'psn_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Playstation Network' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 45
+		'priority'=> 47
 	) );
 	
 	$wp_customize->add_control( 'xbox_live_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Xbox Live' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 46
+		'priority'=> 48
 	) );
 	
 	$wp_customize->add_control( 'steam_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Steam' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 47
+		'priority'=> 49
 	) );
 	
 	$wp_customize->add_control( 'steam_group_name', array(
 		'label'   => sprintf( __( '%s Group Name', 'decode' ), 'Steam' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 48
+		'priority'=> 50
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Skype' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 49
+		'priority'=> 51
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 50
+		'priority'=> 52
 	) );
 	
 	$wp_customize->add_control( 'website_link', array(
 		'label'   => sprintf( __( '%s Link', 'decode' ), 'Website' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 51
+		'priority'=> 53
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 52
+		'priority'=> 54
 	) );
 
 
