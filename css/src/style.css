@@ -84,8 +84,8 @@ html {
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 *,
-*:before,
-*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*::before,
+*::after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
         box-sizing: border-box;
 }
 article,
@@ -111,8 +111,8 @@ caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote::before, blockquote::after,
+q::before, q::after {
 	content: "";
 }
 blockquote, q {
@@ -455,29 +455,29 @@ a {
 2.4 - Clearing
 --------------------------------------------------------------*/
 /* Micro Clearfix */
-.cf:before, .cf:after { content: ""; display: table; }
-.cf:after { clear: both; }
+.cf::before, .cf::after { content: ""; display: table; }
+.cf::after { clear: both; }
 .cf { zoom: 1; } /* For IE 6-7, but why not keep them around? */
 
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.entry-content::before,
+.entry-content::after,
+.comment-content::before,
+.comment-content::after,
+.site-header::before,
+.site-header::after,
+.site-content::before,
+.site-content::after,
+.site-footer::before,
+.site-footer::after {
 	content: '';
 	display: table;
 }
 
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.entry-content::after,
+.comment-content::after,
+.site-header::after,
+.site-content::after,
+.site-footer::after {
 	clear: both;
 }
 
@@ -1281,17 +1281,17 @@ article .entry-meta.above-content {
 	border-left: none;
 }
 
-.format-quote p:before { 
+.format-quote p::before { 
 	content: '\201C'; 
 	font-size: 1.3em;
 }
 
-.format-quote p:after { 
+.format-quote p::after { 
 	content: '\201D';
 	font-size: 1.3em;
 }
 
-.format-quote .entry-meta .date:before, .format-quote .reply .replytrigger:before, .format-quote  .entry-meta .date:after, .format-quote .reply .replytrigger:after {
+.format-quote .entry-meta .date::before, .format-quote .reply .replytrigger::before, .format-quote  .entry-meta .date::after, .format-quote .reply .replytrigger::after {
 	content: "";
 }
 
