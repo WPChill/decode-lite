@@ -4,7 +4,7 @@
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-*Note: This is will be the last version of Decode to support Internet Explorer 8* An Internet Explorer 8-compatible version will be kept available for download on GitHub.
+*Note: This version of Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
 
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
 
@@ -71,6 +71,8 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Email
 
 The Custom CSS feature allows you to change virtually anything about the style of your site. Refer to the "CustomCSS.md" file in the "docs" folder theme for common and helpful entries and experiment with creating your own to make Decode yours.
+
+To find un-minified, vendor-prefixed CSS, look no further than the .css files in the CSS directory. No seriously, don't look any further because the css/src directory bass files that you may not want to work with.
 
 If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 

@@ -6,7 +6,6 @@ body#tinymce.wp-editor {
 
 body#tinymce.wp-editor a {
 	-webkit-transition: color 0.25s ease-out;
-	-moz-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
 	text-decoration: underline;
 	color: #009BCD;
@@ -56,3 +55,4 @@ blockquote {
 	border-left: 1px solid #000;
 	font-style: italic;
 }
+/*# sourceMappingURL=editor-style.css.map */

@@ -94,7 +94,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'label'   => __( 'Header Image', 'decode' ),
 			'section' => 'decode_header_options',
 			'settings'=> 'header_image',
-			'priority'=> 1,
+			'priority'=> 1
 	) ) );
 	
 	$wp_customize->add_control(
@@ -103,35 +103,35 @@ public static function decode_customize_register( $wp_customize ) {
 			'label'   => __( 'Favicon Image (must be a PNG)', 'decode' ),
 			'section' => 'decode_header_options',
 			'settings'=> 'favicon_image',
-			'priority'=> 2,
+			'priority'=> 2
 	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
 		'label'   => __( 'Show Site Title', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 3,
+		'priority'=> 3
 	) );
 	
 	$wp_customize->add_control( 'show_site_description', array(
 		'label'   => __( 'Show Site Description', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 4,
+		'priority'=> 4
 	) );
 	
 	$wp_customize->add_control( 'show_header_menu', array(
 		'label'   => __( 'Show Header Menu', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 5,
+		'priority'=> 5
 	) );
 	
 	$wp_customize->add_control( 'html_description', array(
 		'label'   => __( 'HTML for description, if you wish to replace your blog description with HTML markup', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'text',
-		'priority'=> 6,
+		'priority'=> 6
 	) );
 
 
@@ -142,25 +142,25 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'decode_sidebar_options', array(
     	'title'    => __( 'Sidebar Options', 'decode' ),
-		'priority' => 33,
+		'priority' => 33
     ) );
 
 
     $wp_customize->add_setting( 'show_sidebar', array(
 		'default'  => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'sidebar_position', array(
-		'default'  => 'left',
+		'default'  => 'left'
 	) );
 
 	$wp_customize->add_setting( 'sidebar_button_position', array(
-		'default'  => 'left',
+		'default'  => 'left'
 	) );
 	
 	$wp_customize->add_setting( 'constant_sidebar', array(
-		'default'  => 'closing',
+		'default'  => 'closing'
 	) );
 
 
@@ -168,7 +168,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'   => __( 'Enable Sidebar', 'decode' ),
 		'section' => 'decode_sidebar_options',
 		'type'    => 'checkbox',
-		'priority'=> 1,
+		'priority'=> 1
 	) );
 
 	$wp_customize->add_control( 'sidebar_position', array(
@@ -179,7 +179,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'left'  => __( 'Left', 'decode' ),
 			'right' => __( 'Right', 'decode' ),
         ),
-		'priority'=> 2,
+		'priority'=> 2
 	) );
 
 	$wp_customize->add_control( 'sidebar_button_position', array(
@@ -190,7 +190,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'left'  => __( 'Left', 'decode' ),
 			'right' => __( 'Right', 'decode' ),
         ),
-		'priority'=> 3,
+		'priority'=> 3
 	) );
 	
 	$wp_customize->add_control( 'constant_sidebar', array(
@@ -201,7 +201,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'constant'  => _x( 'Always open', 'Sidebar option', 'decode' ),
 			'closing' => _x( 'Closed by default', 'Sidebar option', 'decode' ),
         ),
-        'priority'=> 4,
+        'priority'=> 4
 
 	) );
 
@@ -213,13 +213,13 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'decode_discussion_options', array(
     	'title'   => __( 'Discussion Options', 'decode' ),
-		'priority'=> 34,
+		'priority'=> 34
     ) );
 
 
 	$wp_customize->add_setting( 'enable_comments', array(
 		'default' => true,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 
 
@@ -227,7 +227,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'   => __( 'Enable Comments', 'decode' ),
 		'section' => 'decode_discussion_options',
 		'type'    => 'checkbox',
-		'priority'=> 1,
+		'priority'=> 1
 	) );
 
 
@@ -238,17 +238,17 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'decode_social_options', array(
     	'title'   => __( 'Social Options', 'decode' ),
-		'priority'=> 35,
+		'priority'=> 35
     ) );
 
 	$wp_customize->add_setting( 'show_header_social_icons', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'show_footer_social_icons', array(
 		'default' => false,
-		'transport' => 'refresh',
+		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'open_links_in_new_tab', array(
@@ -256,199 +256,207 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'twitter_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'adn_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'facebook_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'google_plus_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'myspace_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'diaspora_id', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'vk_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'dribbble_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'behance_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'linkedin_profile_url', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'pinterest_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'fancy_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'etsy_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'pinboard_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'delicious_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'instagram_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( '500px_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'flickr_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'deviantart_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'soundcloud_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'rdio_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'spotify_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'lastfm_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'vine_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'vimeo_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'youtube_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'kickstarter_url', array(
-		'default' => '',
+		'default' => ''
+	) );
+	
+	$wp_customize->add_setting( 'gittip_username', array(
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'tumblr_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'medium_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'svbtle_url', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'wordpress_url', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'stackoverflow_userid', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'reddit_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'github_username', array(
-		'default' => '',
+		'default' => ''
+	) );
+	
+	$wp_customize->add_setting( 'bitbucket_username', array(
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'runkeeper_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'strava_userid', array(
-		'default' => '',
+		'default' => ''
 	) );
 
 	$wp_customize->add_setting( 'foursquare_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'yelp_url', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'slideshare_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'researchgate_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'youversion_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'psn_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'xbox_live_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'steam_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'steam_group_name', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'skype_username', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'email_address', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'website_link', array(
-		'default' => '',
+		'default' => ''
 	) );
 	
 	$wp_customize->add_setting( 'show_rss_icon', array(
-		'default' => false,
+		'default' => false
 	) );
 
 
@@ -456,364 +464,378 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'   => __( 'Show Social Icons', 'decode' ) . ' '  . __( 'in Header', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 1,
+		'priority'=> 1
 	) );
 	
 	$wp_customize->add_control( 'show_footer_social_icons', array(
 		'label'   => __( 'Show Social Icons', 'decode' ) . ' ' . __( 'in Footer', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 2,
+		'priority'=> 2
 	) );
 	
 	$wp_customize->add_control( 'open_links_in_new_tab', array(
 		'label'   => __( 'Open Links in New Tab/Window', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 3,
+		'priority'=> 3
 	) );
 
 	$wp_customize->add_control( 'twitter_username', array(
 		'label'   =>  sprintf( __( '%s Username', 'decode' ), 'Twitter' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 4,
+		'priority'=> 4
 	) );
 
 	$wp_customize->add_control( 'adn_username', array(
     	'label'   => sprintf( __( '%s Username', 'decode' ), 'App.net' ),
         'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 5,
+		'priority'=> 5
 	) );
 
 	$wp_customize->add_control( 'facebook_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Facebook' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 6,
+		'priority'=> 6
 	) );
 
 	$wp_customize->add_control( 'google_plus_username', array(
 		'label'   => sprintf( _x( '%1$s Username %2$s', '[noun] [translation string] (explanation)', 'decode' ), 'Google+',  __(' (or the long number in your profile URL)', 'decode') ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 7,
+		'priority'=> 7
 	) );
 	
 	$wp_customize->add_control( 'myspace_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'MySpace' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 8,
+		'priority'=> 8
 	) );
 	
 	$wp_customize->add_control( 'diaspora_id', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Diaspora' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 9,
+		'priority'=> 9
 	) );
 	
 	$wp_customize->add_control( 'vk_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'VK' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 10,
+		'priority'=> 10
 	) );
 
 	$wp_customize->add_control( 'dribbble_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Dribbble' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 11,
+		'priority'=> 11
 	) );
 
 	$wp_customize->add_control( 'behance_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Behance' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 12,
+		'priority'=> 12
 	) );
 
 	$wp_customize->add_control( 'linkedin_profile_url', array(
 		'label'   => sprintf( __( '%s Profile URL', 'decode' ), 'LinkedIn' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 13,
+		'priority'=> 13
 	) );
 
 	$wp_customize->add_control( 'pinterest_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Pinterest' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 14,
+		'priority'=> 14
 	) );
 	
 	$wp_customize->add_control( 'fancy_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Fancy' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 15,
+		'priority'=> 15
 	) );
 	
 	$wp_customize->add_control( 'etsy_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Etsy' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 16,
+		'priority'=> 16
 	) );
 	
 	$wp_customize->add_control( 'pinboard_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Pinboard' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 17,
+		'priority'=> 17
 	) );
 	
 	$wp_customize->add_control( 'delicious_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Delicious' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 18,
+		'priority'=> 18
 	) );
 
 	$wp_customize->add_control( 'instagram_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Instagram' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 19,
+		'priority'=> 19
 	) );
 
 	$wp_customize->add_control( '500px_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), '500px' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 20,
+		'priority'=> 20
 	) );
 
 	$wp_customize->add_control( 'flickr_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Flickr' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 21,
+		'priority'=> 21
 	) );
 	
 	$wp_customize->add_control( 'deviantart_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'DeviantART' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 22,
+		'priority'=> 22
 	) );
 	
 	$wp_customize->add_control( 'soundcloud_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Soundcloud' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 23,
+		'priority'=> 23
 	) );
 
 	$wp_customize->add_control( 'rdio_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Rdio' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 24,
+		'priority'=> 24
 	) );
 
 	$wp_customize->add_control( 'spotify_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Spotify' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 25,
+		'priority'=> 25
 	) );
 	
 	$wp_customize->add_control( 'lastfm_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Last.fm' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 26,
+		'priority'=> 26
 	) );
 
 	$wp_customize->add_control( 'vine_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Vine' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 27,
+		'priority'=> 27
 	) );
 
 	$wp_customize->add_control( 'vimeo_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Vimeo' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 28,
+		'priority'=> 28
 	) );
 
 	$wp_customize->add_control( 'youtube_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'YouTube' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 29,
+		'priority'=> 29
 	) );
 	
 	$wp_customize->add_control( 'kickstarter_url', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'Kickstarter' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 30,
+		'priority'=> 30
+	) );
+	
+	$wp_customize->add_control( 'gittip_username', array(
+		'label'   => sprintf( __( '%s Username', 'decode' ), 'Gittip' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 31
 	) );
 	
 	$wp_customize->add_control( 'tumblr_username', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'Tumblr' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 31,
+		'priority'=> 32
 	) );
 	
 	$wp_customize->add_control( 'medium_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Medium' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 32,
+		'priority'=> 33
 	) );
 	
 	$wp_customize->add_control( 'svbtle_url', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'Svbtle' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 33,
+		'priority'=> 34
 	) );
 	
 	$wp_customize->add_control( 'wordpress_url', array(
 		'label'   => sprintf( __( '%s Site URL', 'decode' ), 'WordPress' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 34,
+		'priority'=> 35
 	) );
 
 	$wp_customize->add_control( 'stackoverflow_userid', array(
 		'label'   => sprintf( __( '%s User ID', 'decode' ), 'Stack Overflow' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 35,
+		'priority'=> 36
 	) );
 	
 	$wp_customize->add_control( 'reddit_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Reddit' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 36,
+		'priority'=> 37
 	) );
 
 	$wp_customize->add_control( 'github_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'GitHub' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 37,
+		'priority'=> 38
+	) );
+	
+	$wp_customize->add_control( 'bitbucket_username', array(
+		'label'   => sprintf( __( '%s Username', 'decode' ), 'Bitbucket' ),
+		'section' => 'decode_social_options',
+		'type'    => 'text',
+		'priority'=> 39
 	) );
 	
 	$wp_customize->add_control( 'runkeeper_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Runkeeper' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 38,
+		'priority'=> 40
 	) );
 	
 	$wp_customize->add_control( 'strava_userid', array(
 		'label'   => sprintf( __( '%s User ID', 'decode' ), 'Strava' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 39,
+		'priority'=> 41
 	) );
 
 	$wp_customize->add_control( 'foursquare_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Foursquare' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 40,
+		'priority'=> 42
 	) );
 	
 	$wp_customize->add_control( 'yelp_url', array(
 		'label'   => sprintf( __( '%s Profile URL', 'decode' ), 'Yelp' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 41,
+		'priority'=> 43
 	) );
 	
 	$wp_customize->add_control( 'slideshare_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'SlideShare' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 42,
+		'priority'=> 44
 	) );
 	
 	$wp_customize->add_control( 'researchgate_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Research Gate' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 43,
+		'priority'=> 45
 	) );
 	
 	$wp_customize->add_control( 'youversion_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'YouVersion' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 44,
+		'priority'=> 46
 	) );
 	
 	$wp_customize->add_control( 'psn_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Playstation Network' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 45,
+		'priority'=> 47
 	) );
 	
 	$wp_customize->add_control( 'xbox_live_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Xbox Live' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 46,
+		'priority'=> 48
 	) );
 	
 	$wp_customize->add_control( 'steam_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Steam' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 47,
+		'priority'=> 49
 	) );
 	
 	$wp_customize->add_control( 'steam_group_name', array(
 		'label'   => sprintf( __( '%s Group Name', 'decode' ), 'Steam' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 48,
+		'priority'=> 50
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
 		'label'   => sprintf( __( '%s Username', 'decode' ), 'Skype' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 49,
+		'priority'=> 51
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
 		'label'   => __( 'Email Address', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 50,
+		'priority'=> 52
 	) );
 	
 	$wp_customize->add_control( 'website_link', array(
 		'label'   => sprintf( __( '%s Link', 'decode' ), 'Website' ),
 		'section' => 'decode_social_options',
 		'type'    => 'text',
-		'priority'=> 51,
+		'priority'=> 53
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
 		'label'   => __( 'RSS Feed', 'decode' ),
 		'section' => 'decode_social_options',
 		'type'    => 'checkbox',
-		'priority'=> 52,
+		'priority'=> 54
 	) );
 
 
@@ -823,13 +845,18 @@ public static function decode_customize_register( $wp_customize ) {
  */
 
 	$wp_customize->add_section( 'decode_reading_options', array(
-    	'title'   => __( 'Reading Options', 'decode' ),
+    	'title'   => __( 'Content Options', 'decode' ),
 		'priority'=> 37
     ) );
 
 
 	$wp_customize->add_setting( 'use_excerpts', array(
 		'default' => false,
+		'transport' => 'refresh'
+	) );
+	
+	$wp_customize->add_setting( 'use_excerpts_on_archives', array(
+		'default' => true,
 		'transport' => 'refresh'
 	) );
 	
@@ -896,8 +923,15 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 1
 	) );
 	
+	$wp_customize->add_control( 'use_excerpts_on_archives', array(
+		'label'   => __( 'Use entry excerpts on archive, category, and author pages.', 'decode' ),
+		'section' => 'decode_reading_options',
+		'type'    => 'checkbox',
+		'priority'=> 1
+	) );
+	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
-		'label'   => __( 'Display posts\' featured images when excerpts are shown on main page.', 'decode' ),
+		'label'   => __( 'Display posts\' featured images when excerpts are shown.', 'decode' ),
 		'section' => 'decode_reading_options',
 		'type'    => 'checkbox',
 		'priority'=> 2
@@ -1133,7 +1167,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .no-touch .theme-info a:hover, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .no-touch .site-description a:hover, .explore-page .widget h1, button:focus, .no-touch input[type=\'text\']:focus, .touch input[type=\'text\']:focus, .no-touch input[type=\'email\']:focus, .touch input[type=\'email\']:focus, .no-touch input[type=\'password\']:focus, .touch input[type=\'password\']:focus, .no-touch input[type=\'search\']:focus, .touch input[type=\'search\']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus',
+				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .site-description a:hover, .no-touch .entry-content a:hover, .no-touch .entry-meta a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .post .entry-meta, .search footer, .SidebarTop, .sidebar.constant.left, .sidebar.constant.right, .explore-page .widget h1, button:focus, .no-touch input[type=\'text\']:focus, .touch input[type=\'text\']:focus, .no-touch input[type=\'email\']:focus, .touch input[type=\'email\']:focus, .no-touch input[type=\'password\']:focus, .touch input[type=\'password\']:focus, .no-touch input[type=\'search\']:focus, .touch input[type=\'search\']:focus, .no-touch input[type="tel"]:focus, .touch input[type="tel"]:focus, .no-touch input[type="url"]:focus, .touch input[type="url"]:focus, .no-touch textarea:focus, .touch textarea:focus, .search .page-header input[type="search"]:focus',
 				'border-color',
 				'accent_color' );
 			
@@ -1153,7 +1187,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'secondary_accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-description a:active',
+				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .site-description a:active, .no-touch .entry-content a:active, .no-touch .entry-meta a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
 				'border-color',
 				'secondary_accent_color' );
 			

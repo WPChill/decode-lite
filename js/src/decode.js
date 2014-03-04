@@ -1,8 +1,3 @@
-Modernizr.load({
-	test: Modernizr.mq('only all'),
-	nope: templateDir + '/js/respond.js?1.4.2'
-});
-
 if ( Modernizr.touch ) {
 	
 	var activeDropdownClass="open";

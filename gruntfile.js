@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		modernizr: {
 			makefile: {
 				"devFile": "js/src/modernizr-dev.js",
-				"outputFile": "js/modernizr.js",
+				"outputFile": "js/src/modernizr.js",
 				"extra": {
 					"shiv": false,
 					"printshiv": true,
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 					"prefixes": true,
 					"domprefixes": true
 				},
-				"uglify": true,
+				"uglify": false,
 				"tests": ['csstransforms', 'inlinesvg', 'touch'],
 				"parseFiles": false,
 				"matchCommunityTests": false,
@@ -33,30 +33,23 @@ module.exports = function(grunt) {
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/decode.js']
+			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/dropdown.js']
 		},
 		
 		'jsmin-sourcemap': {
 			build_decode_basic: {
 				cwd: 'js/',
-				src: ['src/decode.js', 'src/fastclick.js'],
+				src: ['src/modernizr.js', 'src/decode.js', 'src/fastclick.js'],
 				srcRoot: '../',
 				dest: 'decode.js',
 				destMap: 'srcmaps/decode.js.map'
 			},
 			build_decode_with_sidebar: {
 				cwd: 'js/',
-				src: ['src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
+				src: ['src/modernizr.js', 'src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
 				srcRoot: '../',
 				dest: 'decode-with-sidebar.js',				
 				destMap: 'srcmaps/decode-with-sidebar.js.map'
-			},
-			respond: {
-				cwd: 'js/',
-				src: 'src/respond.js',
-				srcRoot: '../',
-				dest: 'respond.js',				
-				destMap: 'srcmaps/respond.js.map'
 			},
 			customizer: {
 				cwd: 'js/',
@@ -75,10 +68,10 @@ module.exports = function(grunt) {
 			prefix: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/',
+				cwd: 'css/src/',
 				src: ['*.css'],
-				dest: 'css/build/',
-				ext: '.prefixed.css'
+				dest: 'css/',
+				ext: '.css'
 			}
 		},
 
@@ -86,10 +79,9 @@ module.exports = function(grunt) {
 			minify: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/build/',
-				src: ['*.css', '!*.min.css'],
-				dest: 'css/build/',
-				ext: '.min.css'
+				cwd: 'css/',
+				src: ['*.css'],
+				ext: '.css'
 			}
 		},
 		
@@ -153,7 +145,7 @@ module.exports = function(grunt) {
 				}
 			},
 			css: {
-				files: ['css/*.css'],
+				files: ['css/src/*.css'],
 				tasks: ['autoprefixer', 'cssmin', 'copy'],
 				options: {
 					spawn: false
