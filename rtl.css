@@ -86,6 +86,13 @@ textarea {
 	border-right: none;
 }
 
+/* =Galleries
+----------------------------------------------- */
+.gallery-item {
+	float: right;
+	margin: 0 0 4px 4px;
+}
+
 /* =Navigation
 ----------------------------------------------- */
 
