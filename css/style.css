@@ -668,6 +668,7 @@ img[class*="wp-image-"] {
 	opacity: 1;
 }
 
+.gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
