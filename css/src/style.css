@@ -323,7 +323,7 @@ textarea {
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
 	-webkit-appearance: none;
-	width: 100%;
+	max-width: 100%;
 }
 	.no-touch input[type="text"]:hover,
 	.no-touch input[type="email"]:hover,
@@ -350,10 +350,10 @@ textarea {
 	}
 
 textarea {
+	width: 100%;
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 98%;
 }
 
 
@@ -1556,6 +1556,16 @@ li.comment {
 	margin-top: 7.5%;
 }
 
+.comment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.comment-form > p {
+	flex: 1 100%;
+}
+
 textarea#comment {
 	height: 7em;
 }
@@ -2036,6 +2046,13 @@ textarea#comment {
 .sociallink svg, .sociallink img {
 	height: 2.25em;
 	width: 2.25em;
+}
+
+.comment-form p.comment-form-author,
+.comment-form p.comment-form-email,
+.comment-form p.comment-form-url {
+	flex: 0 auto;
+	width: 32.5%;
 }
 
 .form-allowed-tags.visible {
