@@ -1655,6 +1655,7 @@ textarea#comment {
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	margin: 0 auto 2.5%;
+	max-width: 25em;
 }
 
 .search-form label {
@@ -1685,7 +1686,6 @@ textarea#comment {
 
 .search .site-main .search-form {
 	margin-top: 2.5%;
-	max-width: 25em;
 }
 
 .search .page-header input[type="search"] {
