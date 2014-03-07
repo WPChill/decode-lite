@@ -758,13 +758,21 @@ img[class*="wp-image-"] {
 }
 
 .sociallinkscontainer {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	flex-wrap: wrap;
 	margin: 0 auto;
+}
+
+.no-flexbox .sociallinkscontainer {
+	text-align: center;
 }
 
 .sociallink {
 	transition: opacity 0.4s ease-out;
 	border: none;
+	margin: 1%;
 }
 
 	.no-touch .sociallink:hover {
@@ -778,7 +786,7 @@ img[class*="wp-image-"] {
 .sociallink svg, .sociallink img {
 	height: 2em;
 	width: 2em;
-	margin: 0 0.5%;
+	display: block;
 }
 
 .no-inlinesvg .sociallink svg {
@@ -2020,6 +2028,11 @@ textarea#comment {
 	left: -0.5em;
 }
 
+.sociallink svg, .sociallink img {
+	height: 2.25em;
+	width: 2.25em;
+}
+
 .form-allowed-tags.visible {
 	max-height: 7em;
 }
@@ -2086,11 +2099,10 @@ textarea#comment {
 .sociallink svg, .sociallink img {
 	height: 2.5em;
 	width: 2.5em;
-	margin: 0 1%;
 }
 
 .no-inlinesvg .sociallink {
-	margin: 0 1%;
+	margin: 1%;
 }
 
 .horizontal-menu li {
