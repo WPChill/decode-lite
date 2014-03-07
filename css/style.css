@@ -1678,7 +1678,7 @@ textarea#comment {
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	margin: 0 auto 2.5%;
-	max-width: 25em;
+	max-width: 27.5em;
 }
 
 .search-form label {
