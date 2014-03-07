@@ -48,6 +48,11 @@
 		});
 	});
 	
+	// Open sidebar when widgets are updated
+	wp.customize.bind( 'sidebar-updated', function ( sidebar_id ) {
+		$( '#sidebar' ).addClass('visible');
+	});
+	
 	// Show/Hide site title
 	wp.customize( 'show_site_title', function( value ) {
 		value.bind( function( to ) {
