@@ -12,7 +12,7 @@
 		
 			<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
-		<footer class="entry-meta">
+		<footer class="entry-footer">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
 					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
@@ -28,7 +28,7 @@
 			<p class="tags"><?php the_tags(__( 'Tagged as: ', 'decode' ),', '); ?></p>
 			<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
 			<p class="date"><?php decode_posted_on(); ?></p>
-		</footer><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
 		
 		<?php tha_entry_bottom(); ?>
 	</article><!-- #post-<?php the_ID(); ?> -->
@@ -48,13 +48,13 @@
 			<?php endif; ?>
 			<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if (get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
-			<div class="entry-meta above-content">
+			<div class="entry-meta">
 				<p class="date"><?php decode_posted_on(); ?></p>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header>
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
-		<footer class="entry-meta">
+		<footer class="entry-footer">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
 					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
@@ -72,7 +72,7 @@
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
 				<p class="date"><?php decode_posted_on(); ?></p>
 			<?php endif; ?>
-		</footer><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
 		
 		<?php tha_entry_bottom(); ?>
 	</article>
@@ -92,14 +92,14 @@
 			<?php endif; ?>
 			<div class="entry-title"><h2><?php the_title(); ?></h2></div>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
-			<div class="entry-meta above-content">
+			<div class="entry-meta">
 				<p class="date"><?php decode_posted_on(); ?></p>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 		<div class="entry-content"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
-		<footer class="entry-meta">
+		<footer class="entry-footer">
 			<?php if (get_theme_mod( 'show_author_section', false ) == true ) : ?>
 				<section class="author-section cf">
 					<div class="author-image"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
@@ -117,7 +117,7 @@
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
 				<p class="date"><?php decode_posted_on(); ?></p>
 			<?php endif; ?>
-		</footer><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
 		
 		<?php tha_entry_bottom(); ?>
 	</article><!-- #post-<?php the_ID(); ?> -->

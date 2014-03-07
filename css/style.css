@@ -327,7 +327,7 @@ textarea {
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
 	-webkit-appearance: none;
-	width: 60%;
+	width: 100%;
 }
 	.no-touch input[type="text"]:hover,
 	.no-touch input[type="email"]:hover,
@@ -367,8 +367,8 @@ textarea {
 2.1 - Links
 --------------------------------------------------------------*/
 a {
-	-webkit-transition: color 0.4s ease-in-out;
-	transition: color 0.4s ease-in-out;
+	-webkit-transition: color 0.4s ease;
+	transition: color 0.4s ease;
 	color: #009BCD;
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
@@ -383,18 +383,20 @@ a {
 	}
 
 .no-touch .site-description a,
-.no-touch .entry-content a,
 .no-touch .entry-meta a,
+.no-touch .entry-content a,
+.no-touch .entry-footer a,
 .no-touch .author-site a,
 .no-touch .theme-info a,
 .no-touch .site-colophon a {
-	-webkit-transition: border-bottom 0.4s ease-in-out;
-	transition: border-bottom 0.4s ease-in-out;
+	-webkit-transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 }
 
 	.no-touch .site-description a:hover,
-	.no-touch .entry-content a:hover,
 	.no-touch .entry-meta a:hover,
+	.no-touch .entry-content a:hover,
+	.no-touch .entry-footer a:hover,
 	.no-touch .author-site a:hover,
 	.no-touch .theme-info a:hover,
 	.no-touch .site-colophon a:hover {
@@ -402,8 +404,9 @@ a {
 	}
 	
 	.no-touch .site-description a:active,
-	.no-touch .entry-content a:active,
 	.no-touch .entry-meta a:active,
+	.no-touch .entry-content a:active,
+	.no-touch .entry-footer a:active,
 	.no-touch .author-site a:active,
 	.no-touch .theme-info a:active,
 	.no-touch .site-colophon a:active {
@@ -922,8 +925,8 @@ img[class*="wp-image-"] {
 }
 
 .menu a {
-	-webkit-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
+	-webkit-transition: color 0.25s ease;
+	transition: color 0.25s ease;
 	display: block;
 	text-decoration: none;
 }
@@ -1316,53 +1319,50 @@ body.single-attachment .entry-meta {
 	color: #444444;
 }
 
-.entry-meta {
-	clear: both;
-}
-
-article .entry-meta {
+.entry-footer {
 	width: 90%;
 	padding-bottom: 0.5%;
 	border-bottom: 1px solid #009BCD;
 	margin: 0 auto;
 }
 
-article .entry-meta.above-content {
-	width: auto;
+.entry-header .entry-meta {
 	display: inline-block;
+	width: auto;
 	padding: 0 2.5% 1%;
+	border-bottom: 1px solid #009BCD;
 	margin: 0 auto 1.5%;
 }
 
-.entry-meta .date,
-.entry-meta .tags,
-.entry-meta .categories {
+article .date,
+article .tags,
+article .categories {
 	font-size: 0.8em;
 	clear: both;
 	margin: 1.5% 0;
 	color: #808080;
 }
 
-.entry-meta .date {
+article .date {
 	margin-bottom: 0;
 }
 
-.entry-meta .date a {
-	-webkit-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
+article .date a {
+	-webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
 	color: #808080;
 }
 
-	.no-touch .entry-meta .date a:hover {
+	.no-touch article .date a:hover {
 		color: #009BCD;
 	}
 	
-	.no-touch .entry-meta .date a:active {
+	.no-touch article .date a:active {
 		color: #007EA6;
 	}
 
-	.no-touch .entry-meta .date a:hover,
-	.no-touch .entry-meta .date a:active {
+	.no-touch article .date a:hover,
+	.no-touch article .date a:active {
 		border-bottom: none;
 	}
 
@@ -1399,7 +1399,7 @@ article .entry-meta.above-content {
 /*--------------------------------------------------------------
 6.2 - Quote Posts
 --------------------------------------------------------------*/
-.blog .format-quote .entry-content, .single .format-quote .entry-content, .archive .format-quote .entry-content {
+.format-quote .entry-content {
 	margin-top: 3%;
 	font-size: 2em;
 	line-height: 1.5;
@@ -1410,18 +1410,14 @@ article .entry-meta.above-content {
 	border-left: none;
 }
 
-.format-quote p::before { 
+.format-quote blockquote p::before { 
 	content: '\201C'; 
 	font-size: 1.3em;
 }
 
-.format-quote p::after { 
+.format-quote blockquote p::after { 
 	content: '\201D';
 	font-size: 1.3em;
-}
-
-.format-quote .entry-meta .date::before, .format-quote .reply .replytrigger::before, .format-quote  .entry-meta .date::after, .format-quote .reply .replytrigger::after {
-	content: "";
 }
 
 /*--------------------------------------------------------------
@@ -1566,8 +1562,6 @@ article .entry-meta.above-content {
 }
 
 .comment-metadata a {
-	-webkit-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
 	color: #808080;
 	font-size: 0.8em;
 	margin-right: 1.5%;
@@ -1653,30 +1647,45 @@ textarea#comment {
 10.0 - Search
 --------------------------------------------------------------*/
 .search-form {
-	margin-bottom: 2.5%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	margin: 0 auto 2.5%;
+}
+
+.search-form label {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.search-submit {
+	margin-left: 0.25em;
+}
+
+.no-flexbox .search-form input[type="search"] {
+	width: 60%;
 }
 
 .search-entry, .search-entry .entry-title {
-	-webkit-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
+	-webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
 	color: #444444;
 }
+
 .search-entry .entry-title {
 	font-size: 1.25em;
 	margin-bottom: 0.5em;
 }
 
-.no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title {
-	color: #009BCD;
-}
-
-.no-touch .search-entry:active, .no-touch .search-entry:active .entry-title {
-	color: #007EA6;
-}
-
 .search .site-main .search-form {
 	margin-top: 2.5%;
-	
+	max-width: 25em;
 }
 
 .search .page-header input[type="search"] {
@@ -1702,7 +1711,7 @@ textarea#comment {
 .search .page-header .search-submit {
 	font-size: 1.25em;
 	border-color: transparent;
-	padding: 0 1em;
+	padding: 0 0.5em;
 }
 
 .search article {
@@ -1714,7 +1723,7 @@ textarea#comment {
 	color: inherit;
 }
 
-.search footer {
+.search .entry-footer {
 	width: 90%;
 	border-bottom: 1px solid #009BCD;
 	margin: 0 auto;
@@ -2253,7 +2262,7 @@ textarea#comment {
 	font-size: 1.125em;
 }
 
-article .entry-meta, .search footer {
+.entry-footer {
 	width: 85%;
 }
 

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 					"domprefixes": true
 				},
 				"uglify": false,
-				"tests": ['csstransforms', 'inlinesvg', 'touch'],
+				"tests": ['csstransforms', 'inlinesvg', 'touch', 'flexbox'],
 				"parseFiles": false,
 				"matchCommunityTests": false,
 			}

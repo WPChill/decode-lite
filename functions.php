@@ -55,6 +55,8 @@ function decode_setup() {
 		'default-color' => 'E3E5E7',
 	) ) );
 	
+	add_theme_support( 'widget-customizer' );
+	
 	register_nav_menus( array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),

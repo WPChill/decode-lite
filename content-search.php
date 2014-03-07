@@ -15,8 +15,7 @@
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 	</a>
-	<footer class="entry-meta">
-		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
-	</footer>
+	
+	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
