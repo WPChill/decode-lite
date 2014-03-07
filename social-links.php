@@ -515,4 +515,4 @@
 	</a>
 	<?php endif; ?>
 </div>
-</div>
+</div><!-- .sociallinks -->
