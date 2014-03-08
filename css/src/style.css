@@ -553,7 +553,7 @@ img[class*="wp-image-"] {
 3.1 - Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin: auto;
+	margin: auto auto 1.5em;
 }
 
 .gallery-item {
@@ -642,11 +642,7 @@ img[class*="wp-image-"] {
 	display: none;
 }
 
-.site-main .gallery {
-	margin-bottom: 1.5em;
-}
-
-.site-main .gallery a img {
+.gallery a img {
 	display: block;
 	border: none;
 	height: auto;
