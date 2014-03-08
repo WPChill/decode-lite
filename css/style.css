@@ -1294,12 +1294,16 @@ article.post {
 	margin: 0;
 }
 
+body.single-attachment .entry-meta {
+	margin-top: 1.5%;
+}
+
 body.single-attachment .entry-content .attachment {
 	text-align: center;
 }
 
-body.single-attachment .entry-meta {
-	margin-top: 1.5%;
+.single-attachment .entry-content .attachment img {
+	margin: 0 auto 2.5%;
 }
 
 .entry-content blockquote {
@@ -1605,24 +1609,39 @@ li.comment {
 	flex: 1 100%;
 }
 
+.comment-form-comment {
+	margin-bottom: 0;
+}
+
 textarea#comment {
 	height: 7em;
+	border-radius: 3px 3px 3px 0;
 }
 
 .form-allowed-tags {
-	-webkit-transition: max-height 0.35s ease-out, opacity 0.35s ease-out, margin-bottom 0.35s ease-out;
-	transition: max-height 0.35s ease-out, opacity 0.35s ease-out, margin-bottom 0.35s ease-out;
+	-webkit-transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
+	transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
 	font-size: 0.9em;
 	max-height: 0;
 	opacity: 0;
 	margin-bottom: 0;
 	overflow: hidden;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid transparent;
 }
 
 .form-allowed-tags.visible {
 	max-height: 12em;
 	opacity: 1;
-	margin-bottom: 1em;
+	border-bottom-color: #C0C0C0;
+}
+
+.form-submit input[type=submit] {
+	position: relative;
+	top: -1px;
+	border-top-color: transparent;
+	border-radius: 0 0 3px 3px;
 }
 
 

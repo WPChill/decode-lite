@@ -221,6 +221,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'default' => true,
 		'transport' => 'refresh'
 	) );
+	
+	$wp_customize->add_setting( 'show_allowed_tags', array(
+		'default' => false,
+		'transport' => 'refresh'
+	) );
 
 
 	$wp_customize->add_control( 'enable_comments', array(
@@ -228,6 +233,13 @@ public static function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_discussion_options',
 		'type'    => 'checkbox',
 		'priority'=> 1
+	) );
+	
+	$wp_customize->add_control( 'show_allowed_tags', array(
+		'label'   => __( 'Show allowed HTML tags on comment form', 'decode' ),
+		'section' => 'decode_discussion_options',
+		'type'    => 'checkbox',
+		'priority'=> 2
 	) );
 
 
