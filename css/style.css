@@ -636,39 +636,18 @@ img[class*="wp-image-"] {
 	margin-right: 0;
 }
 
+/* Overwrites Core's default styles (≥ WP 3.8) */
+#content .gallery dd.gallery-caption {
+	margin: auto;
+}
+
 .gallery-caption {
-	-webkit-transition: opacity 0.4s ease;
-	transition: opacity 0.4s ease;
-	background-color: rgba(0, 0, 0, 0.7);
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	color: #fff;
-	font-size: 0.9em;
-	line-height: 1.3;
-	margin: 0;
-	max-height: 50%;
-	opacity: 0;
-	padding: 6px 8px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	text-align: left;
-	width: 100%;
+	text-align: center;
+	margin: auto;
 }
 
-.gallery-caption:before {
-	content: "";
-	height: 100%;
-	min-height: 49px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-.gallery-item:hover .gallery-caption {
-	opacity: 1;
+.gallery-columns-1 .gallery-caption {
+	max-width: 20em;
 }
 
 .gallery-columns-6 .gallery-caption,
