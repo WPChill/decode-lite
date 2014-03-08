@@ -89,6 +89,23 @@ textarea {
 }
 
 
+/* =Author Card
+----------------------------------------------- */
+.author-section {
+	text-align: right;
+}
+
+.author-image {
+	float: right;
+}
+
+.author-text {
+	float: right;
+	margin-right: 5%;
+}
+
+
+
 /* =Galleries
 ----------------------------------------------- */
 .gallery-item {
