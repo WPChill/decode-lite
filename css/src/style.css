@@ -1555,32 +1555,33 @@ li.comment {
 
 textarea#comment {
 	height: 7em;
-	border-radius: 3px 3px 3px 0;
+	border-radius: 3px 3px 0px 3px;
 }
 
 .form-allowed-tags {
 	transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
 	font-size: 0.9em;
-	max-height: 0;
 	opacity: 0;
+	max-height: 0;
 	overflow: hidden;
 	border-left: 1px solid #C0C0C0;
 	border-right: 1px solid #C0C0C0;
 	border-bottom: 1px solid transparent;
-	border-radius: 0px 0px 3px 0px;
+	border-radius: 0px 0px 0px 3px;
 	margin-bottom: 0;
 }
 
 .form-allowed-tags.visible {
+	opacity: 1;
 	max-height: 12em;
 	padding: 1%;
-	opacity: 1;
 	border-bottom-color: #C0C0C0;
 }
 
 .form-submit input[type=submit] {
 	position: relative;
 	top: -1px;
+	float: right;
 	border-top-color: transparent;
 	border-radius: 0 0 3px 3px;
 }
