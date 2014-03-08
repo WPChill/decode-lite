@@ -1563,15 +1563,17 @@ textarea#comment {
 	font-size: 0.9em;
 	max-height: 0;
 	opacity: 0;
-	margin-bottom: 0;
 	overflow: hidden;
 	border-left: 1px solid #C0C0C0;
 	border-right: 1px solid #C0C0C0;
 	border-bottom: 1px solid transparent;
+	border-radius: 0px 0px 3px 0px;
+	margin-bottom: 0;
 }
 
 .form-allowed-tags.visible {
 	max-height: 12em;
+	padding: 1%;
 	opacity: 1;
 	border-bottom-color: #C0C0C0;
 }
