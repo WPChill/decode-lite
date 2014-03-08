@@ -8,7 +8,7 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.3",
     "grunt-modernizr": "~0.5.1",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-jsmin-sourcemap": "~1.10.0",
