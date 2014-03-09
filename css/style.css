@@ -327,7 +327,7 @@ textarea {
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
 	-webkit-appearance: none;
-	max-width: 100%;
+	width: 100%;
 }
 	.no-touch input[type="text"]:hover,
 	.no-touch input[type="email"]:hover,
@@ -354,10 +354,9 @@ textarea {
 	}
 
 textarea {
-	width: 100%;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
 }
 
 
@@ -749,30 +748,12 @@ img[class*="wp-image-"] {
 --------------------------------------------------------------*/
 .sociallinks {
 	display: block;
-	margin: 2.5% auto 0;
 	margin: 1% 0;
 }
 
 .sociallinkscontainer {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-align-content: space-around;
-	-ms-flex-line-pack: distribute;
-	align-content: space-around;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	margin: 0 auto;
-}
-
-.no-flexbox .sociallinkscontainer {
 	text-align: center;
+	margin: 0 auto;
 }
 
 .sociallink {
@@ -789,11 +770,18 @@ img[class*="wp-image-"] {
 	.no-touch .sociallink:active {
 		opacity: 0.8;
 	}
+	
+	.sociallink:first-child {
+		margin-left: 0;
+	}
+	
+	.sociallink:last-child {
+		margin-right: 0;
+	}
 
 .sociallink svg, .sociallink img {
 	height: 2em;
 	width: 2em;
-	display: block;
 }
 
 .no-inlinesvg .sociallink svg {
@@ -2056,7 +2044,7 @@ textarea#comment {
 /*--------------------------------------------------------------
 15.0 - Media Queries
 ----------------------------------------------------------------
-15.1 - Tablets (<35ems)
+15.1 - Tablet (<35ems)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 35em) {
 
@@ -2104,8 +2092,17 @@ textarea#comment {
 	width: 55%;
 }
 
-/* The CSS below causes the absolutely positioned dropdowns */
-/* to display relative to the menu items that they are children of. */
+.sociallinks {
+	margin: 1.5% auto;
+}
+
+.sociallink svg, .sociallink img {
+	height: 2.25em;
+	width: 2.25em;
+}
+
+/* The CSS below causes the absolutely positioned dropdowns
+   to display relative to the menu items that they are children of. */
 .menu li {
 	position: relative;
 }
@@ -2146,19 +2143,21 @@ textarea#comment {
 	left: -0.5em;
 }
 
-.sociallink svg, .sociallink img {
-	height: 2.25em;
-	width: 2.25em;
-}
-
 .comment-form p.comment-form-author,
 .comment-form p.comment-form-email,
 .comment-form p.comment-form-url {
-	-webkit-box-flex: 0;
-	-webkit-flex: 0 auto;
-	-ms-flex: 0 auto;
-	flex: 0 auto;
-	width: 32.5%;
+	-webkit-flex-basis: 30%;
+	-ms-flex-preferred-size: 30%;
+	flex-basis: 30%;
+	margin: 0 0.25em;
+}
+
+.comment-form p.comment-form-author {
+	margin-left: 0;
+}
+
+.comment-form p.comment-form-url {
+	margin-right: 0;
 }
 
 .form-allowed-tags.visible {
@@ -2218,10 +2217,6 @@ textarea#comment {
 	max-width: 100%;
 	font-size: 1.25em;
 	margin-top: 3.5%;
-}
-	
-.sociallinks {
-	margin: 1.5% auto;
 }
 
 .sociallink svg, .sociallink img {
@@ -2340,7 +2335,7 @@ textarea#comment {
 }
 
 /*--------------------------------------------------------------
-15.3 - Large Screens (<68.5ems)
+15.3 - Large Screen (<68.5ems)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 68.5em) {
 
