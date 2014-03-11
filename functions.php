@@ -43,20 +43,18 @@ function decode_setup() {
      */
 	add_theme_support( 'post-thumbnails' );
 
-	/**
-	 * Enable support for Post Formats.
-	 */
+	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
 
-	/**
-	 * Setup the WordPress core custom background feature.
-	 */
+	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
 	) ) );
 	
+	// This theme supports live-updating of widgets in the customizer. 
 	add_theme_support( 'widget-customizer' );
 	
+	// Register all three menus. 
 	register_nav_menus( array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
