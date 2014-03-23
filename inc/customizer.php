@@ -22,7 +22,7 @@ function decode_add_customize_controls( $wp_customize ) {
 	
 	/* Adds a favicon image uploader control that only allows .ico and .png files to be uploaded */
 	class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
-		public $extensions = array( 'ico', 'png', 'image/x-icon' );
+		public $extensions = array( 'png', 'ico', 'image/x-icon' );
 	}
 }
 add_action( 'customize_register', 'decode_add_customize_controls' );
