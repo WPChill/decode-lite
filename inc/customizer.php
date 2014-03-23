@@ -198,8 +198,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'section' => 'decode_sidebar_options',
 		'type'    => 'radio',
 		'choices' => array(
-			'constant'  => _x( 'Always open', 'Sidebar option', 'decode' ),
-			'closing' => _x( 'Closed by default', 'Sidebar option', 'decode' ),
+			'constant' => _x( 'Always open', 'Sidebar option', 'decode' ),
+			'closing'  => _x( 'Closed by default', 'Sidebar option', 'decode' ),
         ),
         'priority'=> 4
 
