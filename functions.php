@@ -31,7 +31,9 @@ function decode_setup() {
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
 	// Sets output for these items to HTML 5 markup.
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery' ) );
+	add_theme_support( 'html5', array(
+		'caption', 'comment-form', 'comment-list', 'gallery', 'search-form'
+	) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +46,9 @@ function decode_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
+	add_theme_support( 'post-formats', array(
+		'aside', 'image', 'video', 'quote', 'link'
+	) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
