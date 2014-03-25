@@ -50,6 +50,16 @@ function decode_setup() {
 		'aside', 'image', 'video', 'quote', 'link'
 	) );
 
+	// Setup the WordPress core custom header feature.
+	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
+		'default-image'          => '',
+		'default-text-color'     => '444444',
+		'flex-width'            => true,
+		'height'                 => 300,
+		'flex-height'            => true,
+		'header-text'            => false
+	) ) );
+
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
@@ -130,11 +140,6 @@ function decode_custom_css() {
 }
 }
 add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

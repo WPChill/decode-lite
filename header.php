@@ -51,7 +51,10 @@
 		
 		<div class="site-branding">
 			
-			<?php if ( get_theme_mod( 'header_image', '' )) echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"><img class="site-logo" src="' . esc_url( get_theme_mod( 'header_image', '' ) ) . '"></a>'; ?>
+			<?php if ( get_header_image() != '' ) : ?>
+				<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			<?php endif; ?>
+			
 			
 			<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
 				<h1 class="site-title">

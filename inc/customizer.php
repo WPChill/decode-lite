@@ -43,6 +43,7 @@ public static function decode_customize_register( $wp_customize ) {
 /**
  * Remove old, now unused theme modifications so that conflicts do not occur.
  */
+ 	remove_theme_mod ( 'header_image' );
 	remove_theme_mod ( 'show_site_navigation' );
 	remove_theme_mod ( 'show_social_icons' );
 	remove_theme_mod ( 'linkedin_username' );
@@ -58,10 +59,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 32
 	) );
 
-
-	$wp_customize->add_setting( 'header_image', array(
-		'default' => ''
-	) );
 	
 	$wp_customize->add_setting( 'favicon_image', array(
 		'default' => ''
@@ -87,15 +84,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'transport' => 'postMessage'
 	) );
 
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-		$wp_customize, 'header_image', array(
-			'label'   => __( 'Header Image', 'decode' ),
-			'section' => 'decode_header_options',
-			'settings'=> 'header_image',
-			'priority'=> 1
-	) ) );
 	
 	$wp_customize->add_control(
 		new Decode_Customize_Favicon_Image_Control(
@@ -103,35 +91,35 @@ public static function decode_customize_register( $wp_customize ) {
 			'label'   => __( 'Favicon Image (must be a PNG)', 'decode' ),
 			'section' => 'decode_header_options',
 			'settings'=> 'favicon_image',
-			'priority'=> 2
+			'priority'=> 1
 	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
 		'label'   => __( 'Show Site Title', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 3
+		'priority'=> 2
 	) );
 	
 	$wp_customize->add_control( 'show_site_description', array(
 		'label'   => __( 'Show Site Description', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 4
+		'priority'=> 3
 	) );
 	
 	$wp_customize->add_control( 'show_header_menu', array(
 		'label'   => __( 'Show Header Menu', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'checkbox',
-		'priority'=> 5
+		'priority'=> 4
 	) );
 	
 	$wp_customize->add_control( 'html_description', array(
 		'label'   => __( 'HTML for description, if you wish to replace your blog description with HTML markup', 'decode' ),
 		'section' => 'decode_header_options',
 		'type'    => 'text',
-		'priority'=> 6
+		'priority'=> 5
 	) );
 
 
