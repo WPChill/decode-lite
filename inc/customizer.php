@@ -43,7 +43,7 @@ public static function decode_customize_register( $wp_customize ) {
 /**
  * Remove old, now unused theme modifications so that conflicts do not occur.
  */
- 	remove_theme_mod ( 'header_image' );
+	remove_theme_mod ( 'header_image' );
 	remove_theme_mod ( 'show_site_navigation' );
 	remove_theme_mod ( 'show_social_icons' );
 	remove_theme_mod ( 'linkedin_username' );
