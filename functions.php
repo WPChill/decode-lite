@@ -32,7 +32,11 @@ function decode_setup() {
 
 	// Sets output for these items to HTML 5 markup.
 	add_theme_support( 'html5', array(
-		'caption', 'comment-form', 'comment-list', 'gallery', 'search-form'
+		'caption',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'search-form'
 	) );
 
 	// Add default posts and comments RSS feed links to head.
@@ -47,7 +51,11 @@ function decode_setup() {
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link'
 	) );
 
 	// Setup the WordPress core custom header feature.
