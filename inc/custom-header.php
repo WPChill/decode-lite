@@ -46,6 +46,7 @@ function decode_admin_header_style() {
 		.decode-custom-header-preview .site-title a {
 			transition: text-shadow 0.5s;
 			font-size: 1.95em;
+			font-weight: normal;
 			color: <?php echo get_theme_mod( 'text_color', '#444444' ); ?>;
 			text-decoration: none;
 			-webkit-font-smoothing: subpixel-antialiased;
