@@ -61,11 +61,12 @@ function decode_setup() {
 	// Setup the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '444444',
 		'flex-width'            => true,
 		'height'                 => 300,
 		'flex-height'            => true,
-		'header-text'            => false
+		'header-text'            => false,
+		'admin-head-callback'    => 'decode_admin_header_style',
+		'admin-preview-callback' => 'decode_admin_header_image',
 	) ) );
 
 	// Setup the WordPress core custom background feature.
@@ -163,6 +164,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customize Menu additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Header callbacks.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Theme Hook Alliance functions.
