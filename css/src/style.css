@@ -610,7 +610,7 @@ img[class*="wp-image-"] {
 	margin: auto;
 }
 
-.gallery-caption {
+.gallery .gallery-caption {
 	text-align: center;
 	margin: auto;
 }
