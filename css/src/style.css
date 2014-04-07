@@ -641,15 +641,18 @@ img[class*="wp-image-"] {
 	float: left;
 	margin-right: 2.5%;
 }
+
 .entry-content .alignright {
 	display: inline;
 	float: right;
 	margin-left: 2.5%;
 }
+
 .entry-content .aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 

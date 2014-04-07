@@ -62,15 +62,18 @@ blockquote {
 	float: left;
 	margin-right: 2.5%;
 }
+
 .alignright, .wp-caption.alignright {
 	display: inline;
 	float: right;
 	margin-left: 2.5%;
 }
+
 .aligncenter, .wp-caption.aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* Captions */
