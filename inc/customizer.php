@@ -43,7 +43,6 @@ public static function decode_customize_register( $wp_customize ) {
 /**
  * Remove old, now unused theme modifications so that conflicts do not occur.
  */
-	remove_theme_mod ( 'header_image' );
 	remove_theme_mod ( 'show_site_navigation' );
 	remove_theme_mod ( 'show_social_icons' );
 	remove_theme_mod ( 'linkedin_username' );
@@ -1087,31 +1086,35 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
 		'label'      => __( 'Accent Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'accent_color'
+		'settings'   => 'accent_color',
+		'priority'=> 1
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
 		'label'      => __( 'Active Link Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'secondary_accent_color'
+		'settings'   => 'secondary_accent_color',
+		'priority'=> 2
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
 		'label'      => __( 'Text Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'text_color'
+		'settings'   => 'text_color',
+		'priority'=> 3
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
 		'label'      => __( 'Secondary Text Color', 'decode' ),
 		'section'    => 'colors',
-		'settings'   => 'secondary_text_color'
+		'settings'   => 'secondary_text_color',
+		'priority'=> 4
 	) ) );
 	
 	$wp_customize->add_control( 'accent_color_icons', array(
 		'label'   => __( 'Use accent color instead of text color for icons', 'decode' ),
 		'section' => 'colors',
-		'type'    => 'checkbox'
+		'type'    => 'checkbox',
 	) );
 }
 	
