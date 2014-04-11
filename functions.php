@@ -120,6 +120,8 @@ add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 if ( ! function_exists( 'decode_widgets_init' ) ) {
 
