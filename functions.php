@@ -127,6 +127,7 @@ function decode_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'decode' ),
 		'id'            => 'sidebar-1',
+		'description'   => __( 'Only displayed if sidebar remains enabled in the Customize menu.', 'decode' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 	) );
