@@ -839,6 +839,7 @@ img[class*="wp-image-"] {
 .no-inlinesvg .YouTubeLink {background-image: url('images/YouTube.png');}
 .no-inlinesvg .KickstarterLink {background-image: url('images/Kickstarter.png');}
 .no-inlinesvg .GittipLink {background-image: url('images/Gittip.png');}
+.no-inlinesvg .GittipLink {background-image: url('images/Goodreads.png');}
 .no-inlinesvg .TumblrLink {background-image: url('images/Tumblr.png');}
 .no-inlinesvg .MediumLink {background-image: url('images/Medium.png');}
 .no-inlinesvg .SvbtleLink {background-image: url('images/Svbtle.png');}
