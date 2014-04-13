@@ -411,8 +411,12 @@ a {
 2.2 - Screen Readers
 --------------------------------------------------------------*/
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
+	height: 1px;
+	width: 1px !important; /* I never want a hidden element to cause the page to scroll horizontally. */
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 .screen-reader-text:hover,
