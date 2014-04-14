@@ -634,6 +634,9 @@ img[class*="wp-image-"] {
 	max-width: 20em;
 }
 
+.gallery-columns-3 .gallery-caption,
+.gallery-columns-4 .gallery-caption,
+.gallery-columns-5 .gallery-caption,
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
@@ -2156,6 +2159,11 @@ textarea#comment {
 	left: -0.5em;
 }
 
+.gallery-columns-3 .gallery-caption,
+.gallery-columns-4 .gallery-caption {
+	display: block; /* Show galleries that will fit on tablet-sized screens. */
+}
+
 .comment-form p.comment-form-author,
 .comment-form p.comment-form-email,
 .comment-form p.comment-form-url {
@@ -2324,6 +2332,10 @@ textarea#comment {
 
 .entry-content h6 {
 	font-size: 1.125em;
+}
+
+.gallery-columns-5 .gallery-caption {
+	display: block; /* Show galleries that will fit on desktop-sized screens. */
 }
 
 .entry-footer {
