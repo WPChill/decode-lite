@@ -5,13 +5,6 @@
  * @package Decode
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'decode_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -83,6 +76,13 @@ function decode_setup() {
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
 		'footer-menu' => __( 'Footer Menu', 'decode' )
 	) );
+	
+	/**
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
