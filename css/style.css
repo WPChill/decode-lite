@@ -552,16 +552,11 @@ img[class*="wp-image-"] {
 }
 
 .gallery-item {
-	float: left;
+	display: inline-block;
 	text-align: center;
-	margin: 0 4px 4px 0;
-	overflow: hidden;
-	position: relative;
 	width: 100%;
-}
-
-.gallery-columns-1 .gallery-item {
-	max-width: 100%;
+	vertical-align: top;
+	margin: 0 4px 4px 0;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -645,11 +640,16 @@ img[class*="wp-image-"] {
 	display: none;
 }
 
+.gallery-columns-6 .gallery-item img,
+.gallery-columns-7 .gallery-item img,
+.gallery-columns-8 .gallery-item img,
+.gallery-columns-9 .gallery-item img {
+	margin: 0 auto;
+}
+
 .gallery a img {
 	display: block;
 	border: none;
-	height: auto;
-	max-width: 90%;
 }
 
 /*--------------------------------------------------------------
