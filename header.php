@@ -89,7 +89,7 @@
 	
 		<?php tha_header_after(); ?>
 	
-		<?php if ( function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' ) ) : ?>
+		<?php if ( (function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' )) && !is_front_page() ) : ?>
 		
 			<nav class="site-breadcrumbs" role="navigation">
 				
