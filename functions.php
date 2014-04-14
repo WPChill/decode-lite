@@ -5,13 +5,6 @@
  * @package Decode
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'decode_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -31,7 +24,13 @@ function decode_setup() {
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
 	// Sets output for these items to HTML 5 markup.
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery' ) );
+	add_theme_support( 'html5', array(
+		'caption',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'search-form'
+	) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -43,23 +42,47 @@ function decode_setup() {
      */
 	add_theme_support( 'post-thumbnails' );
 
-	/**
-	 * Enable support for Post Formats.
-	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', ) );
+	// Enable support for Post Formats.
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link'
+	) );
 
-	/**
-	 * Setup the WordPress core custom background feature.
-	 */
+	// Setup the WordPress core custom header feature.
+	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
+		'default-image'          => '',
+		'flex-width'            => true,
+		'height'                 => 300,
+		'flex-height'            => true,
+		'header-text'            => false,
+		'admin-head-callback'    => 'decode_admin_header_style',
+		'admin-preview-callback' => 'decode_admin_header_image',
+	) ) );
+
+	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
 		'default-color' => 'E3E5E7',
 	) ) );
 	
+	// This theme supports live-updating of widgets in the customizer. 
+	add_theme_support( 'widget-customizer' );
+	
+	// Register all three menus. 
 	register_nav_menus( array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
 		'footer-menu' => __( 'Footer Menu', 'decode' )
 	) );
+	
+	/**
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
@@ -71,16 +94,16 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.9.2" );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), "2.9.3" );
 	
 	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
-		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.9.2', true );
+		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.9.3', true );
 	}
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
-		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/decode-with-sidebar.js', array(), '2.9.2', true );
+		wp_enqueue_script( 'decode-sidebar', get_template_directory_uri() . '/js/decode-with-sidebar.js', array(), '2.9.3', true );
 	}
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
@@ -97,6 +120,8 @@ add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 if ( ! function_exists( 'decode_widgets_init' ) ) {
 
@@ -104,6 +129,7 @@ function decode_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'decode' ),
 		'id'            => 'sidebar-1',
+		'description'   => _x( 'Only displayed if sidebar remains enabled in the Customize menu.', 'sidebar description', 'decode' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 	) );
@@ -128,11 +154,6 @@ function decode_custom_css() {
 add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
 
 /**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -146,6 +167,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customize Menu additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Header callbacks.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Theme Hook Alliance functions.

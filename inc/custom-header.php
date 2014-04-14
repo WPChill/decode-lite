@@ -1,106 +1,60 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
- * http://codex.wordpress.org/Custom_Headers
- *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-	
- *
  * @package Decode
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses decode_header_style()
  * @uses decode_admin_header_style()
  * @uses decode_admin_header_image()
- *
- * @package Decode
  */
-function decode_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'decode_header_style',
-		'admin-head-callback'    => 'decode_admin_header_style',
-		'admin-preview-callback' => 'decode_admin_header_image',
-	) ) );
-}
-add_action( 'after_setup_theme', 'decode_custom_header_setup' );
-
-if ( ! function_exists( 'decode_header_style' ) ) :
-/**
- * Styles the header image and text displayed on the blog
- *
- * @see decode_custom_header_setup().
- */
-function decode_header_style() {
-	$header_text_color = get_header_textcolor();
-
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
-	}
-
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
-	?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-	<?php
-		// If the user has set a custom color for the text use that
-		else :
-	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo $header_text_color; ?>;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
-}
-endif; // decode_header_style
 
 if ( ! function_exists( 'decode_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * @see decode_custom_header_setup().
  */
 function decode_admin_header_style() {
 ?>
 	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
+		.decode-custom-header-preview.site-branding {
+			text-align: center;
+			font-size: 1rem;
+			padding: 1%;
+			color: <?php echo get_theme_mod( 'text_color', '#444444' ); ?>;
+			background: #<?php echo get_theme_mod( 'background_color', 'E3E5E7' ); ?>;
 		}
-		#headimg h1,
-		#desc {
+		
+		.decode-custom-header-preview .site-logo {
+			transition: opacity 0.5s ease-out;
+			margin: 0 auto 2%;
+			max-height: 8.5em;
+			width: auto;
+			opacity: 1;
+			-webkit-user-drag: none;
+			user-drag: none;
 		}
-		#headimg h1 {
+		
+		.decode-custom-header-preview .site-title {
+			margin: 0 0 0.5%;
+			line-height: 1;
+			text-align: center;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
 		}
-		#headimg h1 a {
+		
+		.decode-custom-header-preview .site-title a {
+			transition: text-shadow 0.5s;
+			font-size: 1.95em;
+			font-weight: normal;
+			color: <?php echo get_theme_mod( 'text_color', '#444444' ); ?>;
+			text-decoration: none;
+			-webkit-font-smoothing: subpixel-antialiased;
 		}
-		#desc {
-		}
-		#headimg img {
+				
+		.decode-custom-header-preview .site-description {
+			text-align: center;
+			margin-bottom: 0.75%;
 		}
 	</style>
 <?php
@@ -110,19 +64,34 @@ endif; // decode_admin_header_style
 if ( ! function_exists( 'decode_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * @see decode_custom_header_setup().
  */
 function decode_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
+
+<div class="decode-custom-header-preview site-branding">
+
+	<?php if ( get_header_image() != '' ) : ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%" alt="" />
+		</a>
+	<?php endif; ?>
+	
+	<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
+		<h1 class="site-title">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</h1>
+	<?php endif; ?>
+	
+	<?php if ( get_theme_mod( 'show_site_description', true ) == true ) : ?>
+		<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
+		<h2 class="site-description"><?php echo get_theme_mod( 'html_description' ); ?></h2>
+		<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
+		<h2 class="site-description"><?php echo get_bloginfo ( 'description' );?></h2>
 		<?php endif; ?>
-	</div>
+	<?php endif; ?>
+	
+</div>
+
 <?php
 }
 endif; // decode_admin_header_image

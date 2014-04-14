@@ -70,13 +70,29 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'decode' ); ?></p>
 	<?php endif; ?>
+	
+	<?php
+	if (get_theme_mod( 'show_allowed_tags', false ) == true ) {
+		$comments_args = array(
+			'title_reply'          => __( 'Leave a Reply', 'decode' ),
+			'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
+			'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
+			'label_submit'         => __( 'Post Comment', 'decode' ),
+		);
+	}
+	
+	else {
+		$comments_args = array(
+			'comment_notes_after'  => '',
+			'title_reply'          => __( 'Leave a Reply', 'decode' ),
+			'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
+			'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
+			'label_submit'         => __( 'Post Comment', 'decode' ),
+		);
+	}
+	?>
 
-	<?php comment_form( array(
-		'title_reply'          => __( 'Leave a Reply', 'decode' ),
-		'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
-		'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
-		'label_submit'         => __( 'Post Comment', 'decode' ),
-	) ); ?>
+	<?php comment_form( $comments_args ); ?>
 	
 	<?php
 		_x( 'Comment', 'noun', 'decode' );
@@ -86,20 +102,21 @@ if ( post_password_required() ) {
 		__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'decode' );
 	?>
 	
-	
-	<script>		
-		function hasClass(el, cls) {
-			return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
-		}
-		
-		var target = document.querySelector('.form-allowed-tags');
-		
-		document.querySelector('textarea#comment').addEventListener('click', function() {
-			if (!hasClass(target, 'visible')) {
-				target.className += ' ' + 'visible';
+	<?php if (get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
+		<script>		
+			function hasClass(el, cls) {
+				return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
 			}
-		}, false);
-	</script>
+			
+			var target = document.querySelector('.form-allowed-tags');
+			
+			document.querySelector('textarea#comment').addEventListener('click', function() {
+				if (!hasClass(target, 'visible')) {
+					target.className += ' ' + 'visible';
+				}
+			}, false);
+		</script>
+	<?php endif; ?>
 
 </div><!-- #comments -->
 	<?php tha_comments_after(); ?>

@@ -17,7 +17,7 @@
 		});
 	});
 	
-	// Update site background color
+	// Update site background color.
 	wp.customize( 'html_description', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).html( to );
@@ -41,91 +41,98 @@
 		});
 	});
 	
-	// Update site background color
+	// Update site background color.
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('body, .sidebar, .SidebarTop, .menu ul ul').css('background-color', newval );
 		});
 	});
 	
-	// Show/Hide site title
+	// Open sidebar when sidebar widgets are updated.
+	wp.customize.bind( 'sidebar-updated', function( sidebar_id ) { 
+		if ( 'sidebar-1' === sidebar_id ) { 
+			$( '#sidebar' ).addClass( 'visible' );
+		}
+	});
+	
+	// Show/Hide site title.
 	wp.customize( 'show_site_title', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-title' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide site description
+	// Show/Hide site description.
 	wp.customize( 'show_site_description', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide social links
+	// Show/Hide social links.
 	wp.customize( 'show_social_icons', function( value ) {
 		value.bind( function( to ) {
 			$( '.sociallinks' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide site navigation
+	// Show/Hide site navigation.
 	wp.customize( 'show_site_navigation', function( value ) {
 		value.bind( function( to ) {
 			$( '.main-navigation' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide sidebar
+	// Show/Hide sidebar.
 	wp.customize( 'show_sidebar', function( value ) {
 		value.bind( function( to ) {
 			$( '.SidebarLink' ).fadeToggle(250);
 		});
 	});
 		
-	// Show/Hide comments
+	// Show/Hide comments.
 	wp.customize( 'enable_comments', function( value ) {
 		value.bind( function( to ) {
 			$( '.comments-link, #comments' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide tags
+	// Show/Hide tags.
 	wp.customize( 'show_tags', function( value ) {
 		value.bind( function( to ) {
 			$( '.tags' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide categories
+	// Show/Hide categories.
 	wp.customize( 'show_categories', function( value ) {
 		value.bind( function( to ) {
 			$( '.categories' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide author section
+	// Show/Hide author section.
 	wp.customize( 'show_author_section', function( value ) {
 		value.bind( function( to ) {
 			$( '.author-section' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide theme credit
+	// Show/Hide theme credit.
 	wp.customize( 'show_theme_info', function( value ) {
 		value.bind( function( to ) {
 			$( '.theme-info' ).slideToggle(250);
 		});
 	});
 	
-	// Show/Hide arrows in link post title
+	// Show/Hide arrows in link post title.
 	wp.customize( 'link_post_title_arrow', function( value ) {
 		value.bind( function( to ) {
 			$( '.link-title-arrow' ).toggle(250);
 		});
 	});
 	
-	// Update site footer text
+	// Update site footer text.
 	wp.customize( 'site_colophon', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-colophon p' ).html( to );

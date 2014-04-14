@@ -16,9 +16,9 @@
 		<?php endif; ?>
 		<div class="entry-title"><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
 		<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
-		<div class="entry-meta above-content">
+		<div class="entry-meta">
 			<p class="date"><?php decode_posted_on(); ?></p>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 	
@@ -26,13 +26,13 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	
-	<footer class="entry-meta">
+	<footer class="entry-footer">
 	<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php _e('Read More&hellip;', 'decode'); ?></a>
 	<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 	<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
 			<p class="date"><?php decode_posted_on(); ?></p>
 		<?php endif; ?>
-	</footer><!-- .entry-meta -->
+	</footer><!-- .entry-footer -->
 		
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

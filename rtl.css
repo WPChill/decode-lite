@@ -38,6 +38,7 @@ textarea {
 	right: 5px;
 }
 
+
 /* =Menu
 ----------------------------------------------- */
 
@@ -72,6 +73,7 @@ textarea {
 	margin-right: 2em;
 }
 
+
 /* =Content
 ----------------------------------------------- */
 
@@ -86,6 +88,32 @@ textarea {
 	border-right: none;
 }
 
+
+/* =Author Card
+----------------------------------------------- */
+.author-section {
+	text-align: right;
+}
+
+.author-image {
+	float: right;
+}
+
+.author-text {
+	float: right;
+	margin-right: 5%;
+}
+
+
+
+/* =Galleries
+----------------------------------------------- */
+.gallery-item {
+	float: right;
+	margin: 0 0 4px 4px;
+}
+
+
 /* =Navigation
 ----------------------------------------------- */
 
@@ -99,10 +127,23 @@ textarea {
 	text-align: left;
 }
 
+
 /* =Comments
 ----------------------------------------------- */
 
 .comment-metadata a {
 	margin-right: auto;
 	margin-left: 1.5%
+}
+
+textarea#comment {
+	border-radius: 3px 3px 3px 0;
+}
+
+.form-allowed-tags {
+	border-radius: 3px 3px 3px 0;
+}
+
+.form-submit input[type=submit] {
+	float: left;
 }
