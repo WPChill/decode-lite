@@ -18,8 +18,6 @@ function decode_setup() {
 	/*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
-     * If you're building a theme based on Decode, use a find and replace
-     * to change 'decode' to the name of your theme in all the template files.
      */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 
@@ -79,6 +77,8 @@ function decode_setup() {
 	
 	/**
 	 * Set the content width based on the theme's design and stylesheet.
+	 *
+	 * @link http://codex.wordpress.org/Content_Width
 	 */
 	if ( ! isset( $content_width ) ) {
 		$content_width = 640; /* pixels */
