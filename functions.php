@@ -80,6 +80,7 @@ function decode_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Content_Width
 	 */
+	global $content_width;
 	if ( ! isset( $content_width ) ) {
 		$content_width = 640; /* pixels */
 	}
