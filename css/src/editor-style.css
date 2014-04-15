@@ -55,29 +55,8 @@ blockquote {
 	font-style: italic;
 }
 
-/* Alignment */
-.alignleft, .wp-caption.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 2.5%;
-}
-
-.alignright, .wp-caption.alignright {
-	display: inline;
-	float: right;
-	margin-left: 2.5%;
-}
-
-.aligncenter, .wp-caption.aligncenter {
-	clear: both;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-
 /* Captions */
 .wp-caption, .html5-captions .wp-caption {
-	border: 1px solid #ccc;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
@@ -89,7 +68,7 @@ blockquote {
 }
 
 .wp-caption .wp-caption-dd {
-	font-size: 1em;
+	font-size: 0.85em;
 	line-height: 1.65;
 	padding: 0;
 	margin: 0.8075em 0;
@@ -101,13 +80,11 @@ blockquote {
 }
 
 .gallery-item {
-	float: left;
+	display: inline-block;
 	text-align: center;
 	width: 100%;
-	padding: 0;
+	vertical-align: top;
 	margin: 0 4px 4px 0;
-	overflow: hidden;
-	position: relative;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -167,6 +144,7 @@ blockquote {
 }
 
 .gallery .gallery-caption {
+	font-size: 0.85em;
 	text-align: center;
 	margin: auto;
 }
@@ -175,6 +153,9 @@ blockquote {
 	max-width: 20em;
 }
 
+.gallery-columns-3 .gallery-caption,
+.gallery-columns-4 .gallery-caption,
+.gallery-columns-5 .gallery-caption,
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
@@ -182,9 +163,40 @@ blockquote {
 	display: none;
 }
 
+@media only screen and (min-width: 35em) {
+.gallery-columns-3 .gallery-caption,
+.gallery-columns-4 .gallery-caption {
+	display: block; /* Show galleries that will fit on tablet-sized screens. */
+}
+}
+
+@media only screen and (min-width: 50em) {
+.gallery-columns-5 .gallery-caption {
+	display: block; /* Show galleries that will fit on desktop-sized screens. */
+}
+}
+
 .gallery a img {
 	display: block;
 	border: none;
-	height: auto;
-	max-width: 90%;
+}
+
+/* Alignment */
+.alignleft, .wp-caption.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 2.5%;
+}
+
+.alignright, .wp-caption.alignright {
+	display: inline;
+	float: right;
+	margin-left: 2.5%;
+}
+
+.aligncenter, .wp-caption.aligncenter {
+	clear: both;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
