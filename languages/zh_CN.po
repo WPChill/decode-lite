@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-05-14 18:00+0800\n"
+"PO-Revision-Date: 2014-05-14 19:02+0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "Description:\n"
 "X-Poedit-Basepath: .\n"
-"Language: zh_Hans_CN\n"
+"Language: zh_CN\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
@@ -332,41 +332,41 @@ msgstr ""
 
 #: ../inc/customizer.php:131
 msgid "Sidebar Options"
-msgstr ""
+msgstr "边栏设置"
 
 #: ../inc/customizer.php:155
 msgid "Enable Sidebar"
-msgstr ""
+msgstr "使用边栏"
 
 #: ../inc/customizer.php:162
 msgid "Sidebar Position"
-msgstr ""
+msgstr "边栏位置"
 
 #: ../inc/customizer.php:166 ../inc/customizer.php:177
 msgid "Left"
-msgstr ""
+msgstr "靠左"
 
 #: ../inc/customizer.php:167 ../inc/customizer.php:178
 msgid "Right"
-msgstr ""
+msgstr "靠右"
 
 #: ../inc/customizer.php:173
 msgid "Sidebar Button Position"
-msgstr ""
+msgstr "边栏按钮位置"
 
 #: ../inc/customizer.php:184
 msgid "Always Visible Sidebar"
-msgstr ""
+msgstr "边栏始终可见"
 
 #: ../inc/customizer.php:188
 msgctxt "Sidebar option"
 msgid "Always open"
-msgstr ""
+msgstr "总是打开 [边栏选项]"
 
 #: ../inc/customizer.php:189
 msgctxt "Sidebar option"
 msgid "Closed by default"
-msgstr ""
+msgstr "默认关闭 [边栏选项]"
 
 #: ../inc/customizer.php:202
 msgid "Discussion Options"
