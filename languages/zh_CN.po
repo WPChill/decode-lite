@@ -1,0 +1,642 @@
+# LANGUAGE (LOCALE) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode v2.9.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2014-04-14 16:53-0600\n"
+"PO-Revision-Date: 2014-05-14 18:00+0800\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"Description:\n"
+"X-Poedit-Basepath: .\n"
+"Language: zh_Hans_CN\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "糟糕！该页面无法找到。"
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "访问错误。尝试下面的一个链接或搜索吧"
+
+#: ../404.php:26
+msgid "Try looking in the monthly archives."
+msgstr "试试访问每月归档"
+
+#: ../404.php:32
+msgid "Most Used Categories"
+msgstr "常用分类"
+
+#: ../archive.php:27
+#, php-format
+msgid "Day: %s"
+msgstr "日：%s"
+
+#: ../archive.php:30
+#, php-format
+msgid "Month: %s"
+msgstr "月：%s"
+
+#: ../archive.php:30
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: ../archive.php:33
+#, php-format
+msgid "Year: %s"
+msgstr "年：%s"
+
+#: ../archive.php:33
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: ../archive.php:36
+msgid "Asides"
+msgstr "旁白"
+
+#: ../archive.php:39
+msgid "Galleries"
+msgstr "图像"
+
+#: ../archive.php:42
+msgid "Images"
+msgstr "图片"
+
+#: ../archive.php:45
+msgid "Videos"
+msgstr "视频"
+
+#: ../archive.php:48
+msgid "Quotes"
+msgstr "引用"
+
+#: ../archive.php:51
+msgid "Links"
+msgstr "链接"
+
+#: ../archive.php:54
+msgid "Statuses"
+msgstr "状态"
+
+#: ../archive.php:57
+msgid "Audios"
+msgstr "音频"
+
+#: ../archive.php:60
+msgid "Chats"
+msgstr "讨论"
+
+#: ../archive.php:63 ../inc/extras.php:113 ../page-explore.php:37
+#: ../sidebar.php:30
+msgid "Archives"
+msgstr "归档"
+
+#: ../author.php:25 ../content-single.php:21 ../content-single.php:63
+#: ../content-single.php:108
+msgid "Website"
+msgstr "网站"
+
+#: ../author.php:34
+#, php-format
+msgid "Author: %s"
+msgstr "作者: %s"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:35 ../comments.php:59
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: ../comments.php:36 ../comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; 老评论"
+
+#: ../comments.php:37 ../comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "最新评论"
+
+#: ../comments.php:71
+msgid "Comments are closed."
+msgstr "评论已关闭"
+
+#: ../comments.php:77 ../comments.php:87
+msgid "Leave a Reply"
+msgstr "发表回复"
+
+#: ../comments.php:78 ../comments.php:88
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "发表回复给 %s"
+
+#: ../comments.php:79 ../comments.php:89
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: ../comments.php:80 ../comments.php:90
+msgid "Post Comment"
+msgstr "发送评论"
+
+#: ../comments.php:98
+msgctxt "noun"
+msgid "Comment"
+msgstr "评论"
+
+#: ../comments.php:99
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "评论之前你必须 <a href=\"%s\">登录</a>"
+
+#: ../comments.php:100
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"已登录 <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
+"account\">退出?</a>"
+
+#: ../comments.php:101
+msgid "Your email address will not be published."
+msgstr "你的邮件地址不会被公开"
+
+#: ../comments.php:102
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"你可以使用以下<abbr title=\"HyperText Markup Language\">HTML</abbr> 标签和属"
+"性: %s"
+
+#: ../content-excerpt.php:30
+msgid "Read More&hellip;"
+msgstr "阅读更多&hellip;"
+
+#: ../content-excerpt.php:31 ../content-link.php:35 ../content-page.php:26
+#: ../content-quote.php:21 ../content-search.php:19 ../content-single.php:27
+#: ../content-single.php:69 ../content-single.php:114 ../content.php:35
+#: ../image.php:30
+msgid "Edit"
+msgstr "编辑"
+
+#: ../content-link.php:26 ../content-quote.php:12 ../content-single.php:13
+#: ../content-single.php:56 ../content-single.php:100 ../content.php:26
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "继续阅读 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-link.php:29 ../content-page.php:22 ../content-quote.php:15
+#: ../content-single.php:14 ../content-single.php:101 ../content.php:29
+#: ../image.php:91
+msgid "Pages:"
+msgstr "页面："
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "Leave a comment"
+msgstr "发表评论"
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "1 Comment"
+msgstr "1 个评论"
+
+#: ../content-link.php:33 ../content-quote.php:19 ../content.php:33
+msgid "% Comments"
+msgstr "% 个评论"
+
+#: ../content-link.php:37 ../content-quote.php:23 ../content-single.php:28
+#: ../content-single.php:70 ../content-single.php:115 ../content.php:37
+msgid "Tagged as: "
+msgstr "标记为："
+
+#: ../content-link.php:40 ../content-quote.php:26 ../content-single.php:29
+#: ../content-single.php:71 ../content-single.php:116 ../content.php:40
+msgid "Categorized in&#58; "
+msgstr "分类 in&#58; "
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "未找到"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备发布你的第一个POST？<a href=\"%1$s\">点击开始</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Sorry，没找到搜索结果，请尝试其他关键字。"
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../footer.php:44
+#, php-format
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: ../functions.php:82
+msgid "Header Menu"
+msgstr ""
+
+#: ../functions.php:83
+msgid "Sidebar Menu"
+msgstr ""
+
+#: ../functions.php:84
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:130
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:132
+msgctxt "sidebar description"
+msgid "Only displayed if sidebar remains enabled in the Customize menu."
+msgstr ""
+
+#: ../header.php:38
+msgid "Skip to content"
+msgstr ""
+
+#: ../image.php:22
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
+msgstr ""
+
+#: ../image.php:34
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: ../image.php:35
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/customizer.php:57
+msgid "Header Options"
+msgstr ""
+
+#: ../inc/customizer.php:90
+msgid "Favicon Image (must be a PNG)"
+msgstr ""
+
+#: ../inc/customizer.php:97
+msgid "Show Site Title"
+msgstr ""
+
+#: ../inc/customizer.php:104
+msgid "Show Site Description"
+msgstr ""
+
+#: ../inc/customizer.php:111
+msgid "Show Header Menu"
+msgstr ""
+
+#: ../inc/customizer.php:118
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr ""
+
+#: ../inc/customizer.php:131
+msgid "Sidebar Options"
+msgstr ""
+
+#: ../inc/customizer.php:155
+msgid "Enable Sidebar"
+msgstr ""
+
+#: ../inc/customizer.php:162
+msgid "Sidebar Position"
+msgstr ""
+
+#: ../inc/customizer.php:166 ../inc/customizer.php:177
+msgid "Left"
+msgstr ""
+
+#: ../inc/customizer.php:167 ../inc/customizer.php:178
+msgid "Right"
+msgstr ""
+
+#: ../inc/customizer.php:173
+msgid "Sidebar Button Position"
+msgstr ""
+
+#: ../inc/customizer.php:184
+msgid "Always Visible Sidebar"
+msgstr ""
+
+#: ../inc/customizer.php:188
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr ""
+
+#: ../inc/customizer.php:189
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr ""
+
+#: ../inc/customizer.php:202
+msgid "Discussion Options"
+msgstr ""
+
+#: ../inc/customizer.php:219
+msgid "Enable Comments"
+msgstr ""
+
+#: ../inc/customizer.php:226
+msgid "Show allowed HTML tags on comment form"
+msgstr ""
+
+#: ../inc/customizer.php:239
+msgid "Social Options"
+msgstr ""
+
+#: ../inc/customizer.php:467 ../inc/customizer.php:474
+msgid "Show Social Icons"
+msgstr ""
+
+#: ../inc/customizer.php:467
+msgid "in Header"
+msgstr ""
+
+#: ../inc/customizer.php:474
+msgid "in Footer"
+msgstr ""
+
+#: ../inc/customizer.php:481
+msgid "Open Links in New Tab/Window"
+msgstr ""
+
+#: ../inc/customizer.php:488 ../inc/customizer.php:495
+#: ../inc/customizer.php:502 ../inc/customizer.php:516
+#: ../inc/customizer.php:523 ../inc/customizer.php:530
+#: ../inc/customizer.php:537 ../inc/customizer.php:544
+#: ../inc/customizer.php:558 ../inc/customizer.php:565
+#: ../inc/customizer.php:572 ../inc/customizer.php:579
+#: ../inc/customizer.php:586 ../inc/customizer.php:593
+#: ../inc/customizer.php:600 ../inc/customizer.php:607
+#: ../inc/customizer.php:614 ../inc/customizer.php:621
+#: ../inc/customizer.php:628 ../inc/customizer.php:635
+#: ../inc/customizer.php:642 ../inc/customizer.php:649
+#: ../inc/customizer.php:656 ../inc/customizer.php:663
+#: ../inc/customizer.php:677 ../inc/customizer.php:684
+#: ../inc/customizer.php:698 ../inc/customizer.php:726
+#: ../inc/customizer.php:733 ../inc/customizer.php:740
+#: ../inc/customizer.php:747 ../inc/customizer.php:761
+#: ../inc/customizer.php:775 ../inc/customizer.php:782
+#: ../inc/customizer.php:789 ../inc/customizer.php:796
+#: ../inc/customizer.php:803 ../inc/customizer.php:810
+#: ../inc/customizer.php:824
+#, php-format
+msgid "%s Username"
+msgstr ""
+
+#: ../inc/customizer.php:509
+#, php-format
+msgctxt "[noun] [translation string] (explanation)"
+msgid "%1$s Username %2$s"
+msgstr ""
+
+#: ../inc/customizer.php:509
+msgid " (or the long number in your profile URL)"
+msgstr ""
+
+#: ../inc/customizer.php:551 ../inc/customizer.php:768
+#, php-format
+msgid "%s Profile URL"
+msgstr ""
+
+#: ../inc/customizer.php:670 ../inc/customizer.php:691
+#: ../inc/customizer.php:705 ../inc/customizer.php:712
+#, php-format
+msgid "%s Site URL"
+msgstr ""
+
+#: ../inc/customizer.php:719 ../inc/customizer.php:754
+#, php-format
+msgid "%s User ID"
+msgstr ""
+
+#: ../inc/customizer.php:817
+#, php-format
+msgid "%s Group Name"
+msgstr ""
+
+#: ../inc/customizer.php:831
+msgid "Email Address"
+msgstr ""
+
+#: ../inc/customizer.php:838
+#, php-format
+msgid "%s Link"
+msgstr ""
+
+#: ../inc/customizer.php:845
+msgid "RSS Feed"
+msgstr ""
+
+#: ../inc/customizer.php:858
+msgid "Content Options"
+msgstr ""
+
+#: ../inc/customizer.php:930
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+
+#: ../inc/customizer.php:937
+msgid "Use entry excerpts on archive, category, and author pages."
+msgstr ""
+
+#: ../inc/customizer.php:944
+msgid "Display posts' featured images when excerpts are shown."
+msgstr ""
+
+#: ../inc/customizer.php:951
+msgid "Display a post's featured image on its individual page."
+msgstr ""
+
+#: ../inc/customizer.php:958
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+
+#: ../inc/customizer.php:965
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+
+#: ../inc/customizer.php:972
+msgid "Show author's name, profile image, and bio after posts"
+msgstr ""
+
+#: ../inc/customizer.php:979
+msgid "Entry Date Position"
+msgstr ""
+
+#: ../inc/customizer.php:983
+msgid "Above Header"
+msgstr ""
+
+#: ../inc/customizer.php:984
+msgid "Below Header"
+msgstr ""
+
+#: ../inc/customizer.php:990
+msgid "Show Page Headers"
+msgstr ""
+
+#: ../inc/customizer.php:997
+msgid "Show entry date for post excepts on the main page"
+msgstr ""
+
+#: ../inc/customizer.php:1004
+msgid "Add an arrow before the title of a link post"
+msgstr ""
+
+#: ../inc/customizer.php:1011
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+
+#: ../inc/customizer.php:1020
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr ""
+
+#: ../inc/customizer.php:1033
+msgid "Other Options"
+msgstr ""
+
+#: ../inc/customizer.php:1052
+msgid "Custom CSS"
+msgstr ""
+
+#: ../inc/customizer.php:1059
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr ""
+
+#: ../inc/customizer.php:1098
+msgid "Accent Color"
+msgstr ""
+
+#: ../inc/customizer.php:1105
+msgid "Active Link Color"
+msgstr ""
+
+#: ../inc/customizer.php:1112
+msgid "Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:1119
+msgid "Secondary Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:1126
+msgid "Use accent color instead of text color for icons"
+msgstr ""
+
+#: ../inc/extras.php:104
+msgid "Category"
+msgstr ""
+
+#: ../inc/extras.php:107
+msgid "Tag"
+msgstr ""
+
+#: ../inc/extras.php:110
+msgid "Author"
+msgstr "作者"
+
+#: ../inc/extras.php:120 ../inc/extras.php:124
+msgid "Page "
+msgstr ""
+
+#: ../inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: ../inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:138
+#, php-format
+msgid ""
+"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
+"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+"<span class=\"posted-on-text\">发表于 </span><span class=\"posted-on-date\">"
+"%1$s</span><span class=\"byline\"> by %2$s</span>"
+
+#: ../inc/template-tags.php:146
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../page-explore.php:11
+msgid "Explore Page"
+msgstr ""
+
+#: ../page-explore.php:26
+msgid "Recent Posts"
+msgstr ""
+
+#: ../page-explore.php:44
+msgid "Categories"
+msgstr ""
+
+#: ../sidebar.php:15
+msgid "Navigation"
+msgstr ""
