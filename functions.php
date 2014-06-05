@@ -27,35 +27,17 @@ function decode_setup() {
      * Translations can be filed in the /languages/ directory.
      */
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
-
-	// Sets output for these items to HTML 5 markup.
-	add_theme_support( 'html5', array(
-		'caption',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'search-form'
+	
+	// Register all three menus. 
+	register_nav_menus( array(
+		'header-menu'  => __( 'Header Menu', 'decode' ),
+		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
+		'footer-menu' => __( 'Footer Menu', 'decode' )
 	) );
-
+	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
-	/*
-     * Enable support for Post Thumbnails on posts and pages.
-     *
-     * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-     */
-	add_theme_support( 'post-thumbnails' );
-
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link'
-	) );
-
+	
 	// Setup the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
 		'default-image'          => '',
@@ -72,15 +54,31 @@ function decode_setup() {
 		'default-color' => 'E3E5E7',
 	) ) );
 	
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'caption', 'comment-form', 'comment-list', 'gallery', 'search-form'
+	) );
+
+	/*
+     * Enable support for Post Thumbnails on posts and pages.
+     *
+     * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+     */
+	add_theme_support( 'post-thumbnails' );
+	
+	/*
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside', 'image', 'video', 'quote', 'link'
+	) );
+	
 	// This theme supports live-updating of widgets in the customizer. 
 	add_theme_support( 'widget-customizer' );
-	
-	// Register all three menus. 
-	register_nav_menus( array(
-		'header-menu'  => __( 'Header Menu', 'decode' ),
-		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
-		'footer-menu' => __( 'Footer Menu', 'decode' )
-	) );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
