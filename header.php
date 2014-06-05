@@ -28,14 +28,14 @@
 	<?php tha_body_top(); ?>
 
 <div id="page" class="hfeed site<?php if ( get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
-	<?php tha_header_before(); ?>
+	
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
+	
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
-		
+	
+	<?php tha_header_before(); ?>	
 	<header id="masthead" class="site-header" role="banner">
-		
 		<?php tha_header_top(); ?>
-		
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 		
 		<?php if ( get_theme_mod( 'show_sidebar', true ) == true) : ?>
 		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
