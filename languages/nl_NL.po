@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-05-19 02:34+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-06-04 23:57-0600\n"
+"PO-Revision-Date: 2014-06-04 23:58-0600\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +21,6 @@ msgstr ""
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "Description:\n"
 "X-Poedit-Basepath: .\n"
-"Language: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
@@ -144,34 +144,34 @@ msgstr "Nieuwere reacties &rarr;"
 msgid "Comments are closed."
 msgstr "Geen mogelijkheid om reacties te plaatsen."
 
-#: ../comments.php:77 ../comments.php:87
+#: ../comments.php:76
 msgid "Leave a Reply"
 msgstr "Laat een reactie achter"
 
-#: ../comments.php:78 ../comments.php:88
+#: ../comments.php:77
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Laat een reactie aan %s achter"
 
-#: ../comments.php:79 ../comments.php:89
+#: ../comments.php:78
 msgid "Cancel reply"
 msgstr "Annuleer reactie"
 
-#: ../comments.php:80 ../comments.php:90
+#: ../comments.php:79
 msgid "Post Comment"
 msgstr "Plaats reactie"
 
-#: ../comments.php:98
+#: ../comments.php:91
 msgctxt "noun"
 msgid "Comment"
 msgstr "Reactie"
 
-#: ../comments.php:99
+#: ../comments.php:92
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Je moet <a href=\"%s\">ingelogged</a> zijn om een reactie te plaatsen."
 
-#: ../comments.php:100
+#: ../comments.php:93
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -180,11 +180,11 @@ msgstr ""
 "Ingelogd als: <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Wil je uitloggen?</a>"
 
-#: ../comments.php:101
+#: ../comments.php:94
 msgid "Your email address will not be published."
 msgstr "Je email adres is niet zichtbaar voor anderen."
 
-#: ../comments.php:102
+#: ../comments.php:95
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -268,29 +268,29 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr "%1$s door %2$s"
 
-#: ../functions.php:82
+#: ../functions.php:33
 msgid "Header Menu"
 msgstr "Header menu"
 
-#: ../functions.php:83
+#: ../functions.php:34
 msgid "Sidebar Menu"
 msgstr "Sidebar menu"
 
-#: ../functions.php:84
+#: ../functions.php:35
 msgid "Footer Menu"
 msgstr "Footer menu"
 
-#: ../functions.php:130
+#: ../functions.php:126
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: ../functions.php:132
+#: ../functions.php:128
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr ""
 "Wordt alleen getoond wanneer de sidebar aanstaat in het Customize menu."
 
-#: ../header.php:38
+#: ../header.php:32
 msgid "Skip to content"
 msgstr "Ga door naar content"
 
@@ -459,7 +459,7 @@ msgstr "%s Site-URL"
 #: ../inc/customizer.php:719 ../inc/customizer.php:754
 #, php-format
 msgid "%s User ID"
-msgstr "% Gebruikers-ID"
+msgstr "%s Gebruikers-ID"
 
 #: ../inc/customizer.php:817
 #, php-format
@@ -631,19 +631,17 @@ msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%titel <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:138
+#: ../inc/template-tags.php:139
 #, php-format
-msgid ""
-"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
-"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+msgctxt "post date"
+msgid "Posted on %s"
 msgstr ""
-"<span class=\"posted-on-text\">Geplaatst op </span><span class=\"posted-on-"
-"date\">%1$s</span><span class=\"byline\"> door %2$s</span>"
 
-#: ../inc/template-tags.php:146
+#: ../inc/template-tags.php:144
 #, php-format
-msgid "View all posts by %s"
-msgstr "Toon alle posts door %s"
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
 
 #: ../page-explore.php:11
 msgid "Explore Page"
@@ -660,3 +658,13 @@ msgstr "Categorieën"
 #: ../sidebar.php:15
 msgid "Navigation"
 msgstr "Navigatie"
+
+#~ msgid ""
+#~ "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-"
+#~ "date\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+#~ msgstr ""
+#~ "<span class=\"posted-on-text\">Geplaatst op </span><span class=\"posted-"
+#~ "on-date\">%1$s</span><span class=\"byline\"> door %2$s</span>"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "Toon alle posts door %s"

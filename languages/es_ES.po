@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-04-14 16:54-0600\n"
+"POT-Creation-Date: 2014-06-04 23:58-0600\n"
+"PO-Revision-Date: 2014-06-04 23:58-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: es_ES\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
@@ -144,34 +144,34 @@ msgstr "Comentarios nuevos &rarr;"
 msgid "Comments are closed."
 msgstr "Los comentarios estan cerrados"
 
-#: ../comments.php:77 ../comments.php:87
+#: ../comments.php:76
 msgid "Leave a Reply"
 msgstr "Responder"
 
-#: ../comments.php:78 ../comments.php:88
+#: ../comments.php:77
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Responder a %s"
 
-#: ../comments.php:79 ../comments.php:89
+#: ../comments.php:78
 msgid "Cancel reply"
 msgstr "Cancelar respuesta"
 
-#: ../comments.php:80 ../comments.php:90
+#: ../comments.php:79
 msgid "Post Comment"
 msgstr "Publicar comentario"
 
-#: ../comments.php:98
+#: ../comments.php:91
 msgctxt "noun"
 msgid "Comment"
 msgstr "Comentario"
 
-#: ../comments.php:99
+#: ../comments.php:92
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Tienes que <a href=\"%s\">iniciar sesi&oacute;n</a> para comentar."
 
-#: ../comments.php:100
+#: ../comments.php:93
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -180,11 +180,11 @@ msgstr ""
 "Has iniciado sesi&oacute;n como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" "
 "title=\"Log out of this account\">Cerrar sesi&oacute;n</a>"
 
-#: ../comments.php:101
+#: ../comments.php:94
 msgid "Your email address will not be published."
 msgstr "No se mostrar&aacute; tu email."
 
-#: ../comments.php:102
+#: ../comments.php:95
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -267,28 +267,28 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr "%1$s por %2$s"
 
-#: ../functions.php:82
+#: ../functions.php:33
 msgid "Header Menu"
 msgstr "Men&uacute; de encabezado"
 
-#: ../functions.php:83
+#: ../functions.php:34
 msgid "Sidebar Menu"
 msgstr "Men&uacute; lateral"
 
-#: ../functions.php:84
+#: ../functions.php:35
 msgid "Footer Menu"
 msgstr "Men&uacute; inferior"
 
-#: ../functions.php:130
+#: ../functions.php:126
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: ../functions.php:132
+#: ../functions.php:128
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr ""
 
-#: ../header.php:38
+#: ../header.php:32
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
@@ -636,19 +636,17 @@ msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:138
-#, fuzzy, php-format
-msgid ""
-"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
-"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
-msgstr ""
-"<span class=\"posted-on\">Publicado el %1$s</span><span class=\"byline\"> "
-"por %2$s</span>"
-
-#: ../inc/template-tags.php:146
+#: ../inc/template-tags.php:139
 #, php-format
-msgid "View all posts by %s"
-msgstr "Ver todos los posts de %s"
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: ../inc/template-tags.php:144
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
 
 #: ../page-explore.php:11
 msgid "Explore Page"
@@ -665,6 +663,17 @@ msgstr "Categor&iacute;as"
 #: ../sidebar.php:15
 msgid "Navigation"
 msgstr "Men&uacute; de navegaci&oacute;n"
+
+#, fuzzy
+#~ msgid ""
+#~ "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-"
+#~ "date\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+#~ msgstr ""
+#~ "<span class=\"posted-on\">Publicado el %1$s</span><span class=\"byline\"> "
+#~ "por %2$s</span>"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "Ver todos los posts de %s"
 
 #~ msgid "Header Image"
 #~ msgstr "Imagen de encabezado"
