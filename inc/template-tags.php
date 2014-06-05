@@ -125,7 +125,7 @@ if ( ! function_exists( 'decode_posted_on' ) ) :
 function decode_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= ' <time class="updated screen-reader-text" datetime="%3$s">%4$s</time>';
+		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -135,18 +135,18 @@ function decode_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on-text">Posted on </span><span class="posted-on-date">%1$s</span><span class="byline"> by %2$s</span>', 'decode' ),
-		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			$time_string
-		),
-		sprintf( '<span class="vcard author"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'decode' ), get_the_author() ) ),
-			esc_html( get_the_author() )
-		)
+	$posted_on = sprintf(
+		_x( 'Posted on %s', 'post date', 'decode' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
+
+	$byline = sprintf(
+		_x( 'by %s', 'post author', 'decode' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+
 }
 endif;
 

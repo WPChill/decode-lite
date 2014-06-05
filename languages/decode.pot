@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-04-28 10:17-0600\n"
-"PO-Revision-Date: 2014-04-28 10:17-0600\n"
+"POT-Creation-Date: 2014-06-04 23:52-0600\n"
+"PO-Revision-Date: 2014-06-04 23:52-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -252,28 +252,28 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:33
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:34
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:75
+#: functions.php:35
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:126
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:128
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr ""
 
-#: header.php:38
+#: header.php:32
 msgid "Skip to content"
 msgstr ""
 
@@ -593,16 +593,16 @@ msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:139
 #, php-format
-msgid ""
-"<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
-"\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+msgctxt "post date"
+msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:146
+#: inc/template-tags.php:144
 #, php-format
-msgid "View all posts by %s"
+msgctxt "post author"
+msgid "by %s"
 msgstr ""
 
 #: page-explore.php:11
