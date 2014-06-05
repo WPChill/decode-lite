@@ -2418,7 +2418,7 @@ textarea#comment {
 --------------------------------------------------------------*/
 @media only print {
 
-.sidebar, .SidebarLink, .sociallinks, .menu, .paging-navigation, .post-navigation, .comment-respond, .site-breadcrumbs {
+.sidebar, .SidebarLink, .sociallinks, .menu, .paging-navigation, .comments-link, .edit-link, .post-navigation, .comments-area, .site-breadcrumbs {
 	display: none;
 }
 
