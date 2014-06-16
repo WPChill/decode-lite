@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-05-14 19:02+0800\n"
+"PO-Revision-Date: 2014-06-16 18:12+0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -124,8 +124,8 @@ msgstr "作者: %s"
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "在 &ldquo;%2$s&rdquo; 上有一个观点"
+msgstr[1] "在 &ldquo;%2$s&rdquo; 上有%1$s个观点"
 
 #: ../comments.php:35 ../comments.php:59
 msgid "Comment navigation"
@@ -229,12 +229,12 @@ msgstr "% 个评论"
 #: ../content-link.php:37 ../content-quote.php:23 ../content-single.php:28
 #: ../content-single.php:70 ../content-single.php:115 ../content.php:37
 msgid "Tagged as: "
-msgstr "标记为："
+msgstr "标签："
 
 #: ../content-link.php:40 ../content-quote.php:26 ../content-single.php:29
 #: ../content-single.php:71 ../content-single.php:116 ../content.php:40
 msgid "Categorized in&#58; "
-msgstr "分类 in&#58; "
+msgstr "分类："
 
 #: ../content-none.php:13
 msgid "Nothing Found"
@@ -256,7 +256,7 @@ msgstr "Sorry，没找到搜索结果，请尝试其他关键字。"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "对不起，似乎不能找到你想要的内容，试试搜索吧"
 
 #: ../footer.php:44
 #, php-format
@@ -265,28 +265,28 @@ msgstr ""
 
 #: ../functions.php:82
 msgid "Header Menu"
-msgstr ""
+msgstr "页头菜单"
 
 #: ../functions.php:83
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "侧边菜单"
 
 #: ../functions.php:84
 msgid "Footer Menu"
-msgstr ""
+msgstr "页脚菜单"
 
 #: ../functions.php:130
 msgid "Sidebar"
-msgstr ""
+msgstr "侧边栏"
 
 #: ../functions.php:132
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
-msgstr ""
+msgstr "仅当侧边栏在自定义菜单中开启时显示"
 
 #: ../header.php:38
 msgid "Skip to content"
-msgstr ""
+msgstr "跳到内容"
 
 #: ../image.php:22
 #, php-format
@@ -295,40 +295,43 @@ msgid ""
 "\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
 "\"gallery\">%5$s</a>"
 msgstr ""
+"发布 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
+"%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
+"\">%5$s</a>"
 
 #: ../image.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
 
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/customizer.php:57
 msgid "Header Options"
-msgstr ""
+msgstr "页首设置"
 
 #: ../inc/customizer.php:90
 msgid "Favicon Image (must be a PNG)"
-msgstr ""
+msgstr "网站图标(必须是PNG)"
 
 #: ../inc/customizer.php:97
 msgid "Show Site Title"
-msgstr ""
+msgstr "显示站点标题"
 
 #: ../inc/customizer.php:104
 msgid "Show Site Description"
-msgstr ""
+msgstr "显示站点描述"
 
 #: ../inc/customizer.php:111
 msgid "Show Header Menu"
-msgstr ""
+msgstr "首先头部菜单"
 
 #: ../inc/customizer.php:118
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
-msgstr ""
+msgstr "介绍的HTML，如果你想用HTML替换你的博客介绍"
 
 #: ../inc/customizer.php:131
 msgid "Sidebar Options"
@@ -370,35 +373,35 @@ msgstr "默认关闭 [边栏选项]"
 
 #: ../inc/customizer.php:202
 msgid "Discussion Options"
-msgstr ""
+msgstr "评论设置"
 
 #: ../inc/customizer.php:219
 msgid "Enable Comments"
-msgstr ""
+msgstr "开启评论"
 
 #: ../inc/customizer.php:226
 msgid "Show allowed HTML tags on comment form"
-msgstr ""
+msgstr "显示允许评论中允许的html标签"
 
 #: ../inc/customizer.php:239
 msgid "Social Options"
-msgstr ""
+msgstr "社交设置"
 
 #: ../inc/customizer.php:467 ../inc/customizer.php:474
 msgid "Show Social Icons"
-msgstr ""
+msgstr "显示社交图标"
 
 #: ../inc/customizer.php:467
 msgid "in Header"
-msgstr ""
+msgstr "在页首"
 
 #: ../inc/customizer.php:474
 msgid "in Footer"
-msgstr ""
+msgstr "在页脚"
 
 #: ../inc/customizer.php:481
 msgid "Open Links in New Tab/Window"
-msgstr ""
+msgstr "在新标签中打开链接"
 
 #: ../inc/customizer.php:488 ../inc/customizer.php:495
 #: ../inc/customizer.php:502 ../inc/customizer.php:516
@@ -422,160 +425,160 @@ msgstr ""
 #: ../inc/customizer.php:824
 #, php-format
 msgid "%s Username"
-msgstr ""
+msgstr "%s 用户名"
 
 #: ../inc/customizer.php:509
 #, php-format
 msgctxt "[noun] [translation string] (explanation)"
 msgid "%1$s Username %2$s"
-msgstr ""
+msgstr "%1$s 用户名  %2$s"
 
 #: ../inc/customizer.php:509
 msgid " (or the long number in your profile URL)"
-msgstr ""
+msgstr "或你个人资料页的长号码"
 
 #: ../inc/customizer.php:551 ../inc/customizer.php:768
 #, php-format
 msgid "%s Profile URL"
-msgstr ""
+msgstr "%s 资料 URL"
 
 #: ../inc/customizer.php:670 ../inc/customizer.php:691
 #: ../inc/customizer.php:705 ../inc/customizer.php:712
 #, php-format
 msgid "%s Site URL"
-msgstr ""
+msgstr "%s 站点 URL"
 
 #: ../inc/customizer.php:719 ../inc/customizer.php:754
 #, php-format
 msgid "%s User ID"
-msgstr ""
+msgstr "%s 用户ID"
 
 #: ../inc/customizer.php:817
 #, php-format
 msgid "%s Group Name"
-msgstr ""
+msgstr "%s 组名"
 
 #: ../inc/customizer.php:831
 msgid "Email Address"
-msgstr ""
+msgstr "邮箱"
 
 #: ../inc/customizer.php:838
 #, php-format
 msgid "%s Link"
-msgstr ""
+msgstr "%s 链接"
 
 #: ../inc/customizer.php:845
 msgid "RSS Feed"
-msgstr ""
+msgstr "RSS 订阅"
 
 #: ../inc/customizer.php:858
 msgid "Content Options"
-msgstr ""
+msgstr "内容设置"
 
 #: ../inc/customizer.php:930
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
-msgstr ""
+msgstr "首页显示摘要而不是全文，除了置顶文章"
 
 #: ../inc/customizer.php:937
 msgid "Use entry excerpts on archive, category, and author pages."
-msgstr ""
+msgstr "在归档、分类和个人页上显示摘要"
 
 #: ../inc/customizer.php:944
 msgid "Display posts' featured images when excerpts are shown."
-msgstr ""
+msgstr "显示摘要时也展示文章特色图片"
 
 #: ../inc/customizer.php:951
 msgid "Display a post's featured image on its individual page."
-msgstr ""
+msgstr "在个人页展示文章的特色图片"
 
 #: ../inc/customizer.php:958
 msgid "Show tags on front page (tags will be shown on post's individual page)"
-msgstr ""
+msgstr "在个人页显示标签"
 
 #: ../inc/customizer.php:965
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
-msgstr ""
+msgstr "在个人页显示分类"
 
 #: ../inc/customizer.php:972
 msgid "Show author's name, profile image, and bio after posts"
-msgstr ""
+msgstr "在文章后显示作者名字，个人资料图片"
 
 #: ../inc/customizer.php:979
 msgid "Entry Date Position"
-msgstr ""
+msgstr "发表时间位置"
 
 #: ../inc/customizer.php:983
 msgid "Above Header"
-msgstr ""
+msgstr "在页头上"
 
 #: ../inc/customizer.php:984
 msgid "Below Header"
-msgstr ""
+msgstr "在页头下"
 
 #: ../inc/customizer.php:990
 msgid "Show Page Headers"
-msgstr ""
+msgstr "显示页头"
 
 #: ../inc/customizer.php:997
 msgid "Show entry date for post excepts on the main page"
-msgstr ""
+msgstr "除了首页，显示文章的发表日期"
 
 #: ../inc/customizer.php:1004
 msgid "Add an arrow before the title of a link post"
-msgstr ""
+msgstr "在文章标题链接前加一个箭头"
 
 #: ../inc/customizer.php:1011
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
-msgstr ""
+msgstr "显示主题信息(在页面底部显示主题和他的作者)"
 
 #: ../inc/customizer.php:1020
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
-msgstr ""
+msgstr "页脚文本(可以是版权、捐献等)"
 
 #: ../inc/customizer.php:1033
 msgid "Other Options"
-msgstr ""
+msgstr "其他选项"
 
 #: ../inc/customizer.php:1052
 msgid "Custom CSS"
-msgstr ""
+msgstr "自定义CSS"
 
 #: ../inc/customizer.php:1059
 msgid "Show the following post types on home blog page. (Separate with commas)"
-msgstr ""
+msgstr "在首页显示以下类型的文章(用逗号分隔)"
 
 #: ../inc/customizer.php:1098
 msgid "Accent Color"
-msgstr ""
+msgstr "已访问链接颜色"
 
 #: ../inc/customizer.php:1105
 msgid "Active Link Color"
-msgstr ""
+msgstr "未访问链接颜色"
 
 #: ../inc/customizer.php:1112
 msgid "Text Color"
-msgstr ""
+msgstr "文本颜色"
 
 #: ../inc/customizer.php:1119
 msgid "Secondary Text Color"
-msgstr ""
+msgstr "二级文字颜色"
 
 #: ../inc/customizer.php:1126
 msgid "Use accent color instead of text color for icons"
-msgstr ""
+msgstr "使用最近颜色取代标签文本颜色"
 
 #: ../inc/extras.php:104
 msgid "Category"
-msgstr ""
+msgstr "分类"
 
 #: ../inc/extras.php:107
 msgid "Tag"
-msgstr ""
+msgstr "标签"
 
 #: ../inc/extras.php:110
 msgid "Author"
@@ -583,23 +586,23 @@ msgstr "作者"
 
 #: ../inc/extras.php:120 ../inc/extras.php:124
 msgid "Page "
-msgstr ""
+msgstr "页面"
 
 #: ../inc/template-tags.php:23
 msgid "Posts navigation"
-msgstr ""
+msgstr "文章导航"
 
 #: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> 前面的文章"
 
 #: ../inc/template-tags.php:31
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "最近文章 <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:56
 msgid "Post navigation"
-msgstr ""
+msgstr "文章导航"
 
 #: ../inc/template-tags.php:59
 msgctxt "Previous post link"
@@ -623,20 +626,20 @@ msgstr ""
 #: ../inc/template-tags.php:146
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "查看 %s 的所有文章"
 
 #: ../page-explore.php:11
 msgid "Explore Page"
-msgstr ""
+msgstr "浏览页"
 
 #: ../page-explore.php:26
 msgid "Recent Posts"
-msgstr ""
+msgstr "最近文章"
 
 #: ../page-explore.php:44
 msgid "Categories"
-msgstr ""
+msgstr "分类"
 
 #: ../sidebar.php:15
 msgid "Navigation"
-msgstr ""
+msgstr "导航"
