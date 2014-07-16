@@ -828,6 +828,7 @@ img[class*="wp-image-"] {
 .no-inlinesvg .FlickrLink {background-image: url('images/Flickr.png');}
 .no-inlinesvg .DeviantARTLink {background-image: url('images/deviantART.png');}
 .no-inlinesvg .SoundcloudLink {background-image: url('images/Soundcloud.png');}
+.no-inlinesvg .SoundcloudLink {background-image: url('images/Bandcamp.png');}
 .no-inlinesvg .RdioLink {background-image: url('images/Rdio.png');}
 .no-inlinesvg .SpotifyLink {background-image: url('images/Spotify.png');}
 .no-inlinesvg .LastFmLink {background-image: url('images/LastFm.png');}
