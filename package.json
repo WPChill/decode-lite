@@ -8,16 +8,16 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.3",
-    "grunt-autoprefixer": "~0.7.2",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^0.8.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-exec": "~0.4.3",
-    "grunt-imageoptim": "~1.4.1",
-    "grunt-jsmin-sourcemap": "~1.10.0",
-    "grunt-markdown": "~0.5.0",
-    "grunt-modernizr": "~0.5.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.3",
+    "grunt-imageoptim": "^1.4.1",
+    "grunt-jsmin-sourcemap": "^1.10.0",
+    "grunt-markdown": "^0.6.1",
+    "grunt-modernizr": "^0.5.1"
   }
 }
