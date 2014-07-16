@@ -6,7 +6,7 @@ body#tinymce.wp-editor {
 
 body#tinymce.wp-editor a {
 	-webkit-transition: color 0.25s ease-out;
-	transition: color 0.25s ease-out;
+	        transition: color 0.25s ease-out;
 	text-decoration: underline;
 	color: #009BCD;
 }
@@ -94,49 +94,41 @@ blockquote {
 
 .gallery-columns-2 .gallery-item {
 	max-width: 48%;
-	max-width: -webkit-calc(50% - 4px);
 	max-width: calc(50% - 4px);
 }
 
 .gallery-columns-3 .gallery-item {
 	max-width: 32%;
-	max-width: -webkit-calc(33.3% - 4px);
 	max-width: calc(33.3% - 4px);
 }
 
 .gallery-columns-4 .gallery-item {
 	max-width: 23%;
-	max-width: -webkit-calc(25% - 4px);
 	max-width: calc(25% - 4px);
 }
 
 .gallery-columns-5 .gallery-item {
 	max-width: 19%;
-	max-width: -webkit-calc(20% - 4px);
 	max-width: calc(20% - 4px);
 }
 
 .gallery-columns-6 .gallery-item {
 	max-width: 15%;
-	max-width: -webkit-calc(16.7% - 4px);
 	max-width: calc(16.7% - 4px);
 }
 
 .gallery-columns-7 .gallery-item {
 	max-width: 13%;
-	max-width: -webkit-calc(14.28% - 4px);
 	max-width: calc(14.28% - 4px);
 }
 
 .gallery-columns-8 .gallery-item {
 	max-width: 11%;
-	max-width: -webkit-calc(12.5% - 4px);
 	max-width: calc(12.5% - 4px);
 }
 
 .gallery-columns-9 .gallery-item {
 	max-width: 9%;
-	max-width: -webkit-calc(11.1% - 4px);
 	max-width: calc(11.1% - 4px);
 }
 

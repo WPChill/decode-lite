@@ -41,6 +41,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Flickr
 - deviantART
 - SoundCloud
+- Bandcamp
 - Rdio
 - Spotify
 - Last.Fm
@@ -48,6 +49,8 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Vimeo
 - YouTube
 - Kickstarter
+- Gittip
+- Goodreads
 - Tumblr
 - Medium
 - Svbtle
@@ -55,6 +58,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Stack Overflow
 - reddit
 - GitHub
+- Bitbucket
 - Runkeeper
 - Strava
 - Foursquare
