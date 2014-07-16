@@ -36,27 +36,33 @@ module.exports = function(grunt) {
 			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/dropdown.js']
 		},
 		
-		'jsmin-sourcemap': {
+		uglify: {
+			options: {
+				sourceMap: true
+			},
 			build_decode_basic: {
-				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/fastclick.js'],
-				srcRoot: '../',
-				dest: 'decode.js',
-				destMap: 'srcmaps/decode.js.map'
+				options: {
+					sourceMapName: 'js/srcmaps/decode.js.map'
+				},
+				files: {
+					'js/decode.js': ['js/src/modernizr.js', 'js/src/decode.js', 'js/src/fastclick.js'],
+				}
 			},
 			build_decode_with_sidebar: {
-				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
-				srcRoot: '../',
-				dest: 'decode-with-sidebar.js',				
-				destMap: 'srcmaps/decode-with-sidebar.js.map'
+				options: {
+					sourceMapName: 'js/srcmaps/decode-with-sidebar.js.map'
+				},
+				files: {
+					'js/decode-with-sidebar.js': ['js/src/modernizr.js', 'js/src/decode.js', 'js/src/sidebar.js', 'js/src/fastclick.js'],
+				}
 			},
 			customizer: {
-				cwd: 'js/',
-				src: 'src/customizer.js',
-				srcRoot: '../',
-				dest: 'customizer.js',				
-				destMap: 'srcmaps/customizer.js.map'
+				options: {
+					sourceMapName: 'js/srcmaps/customizer.js.map'
+				},
+				files: {
+					'js/customizer.js': ['js/src/customizer.js'],
+				}
 			}
 		},
 
@@ -139,7 +145,7 @@ module.exports = function(grunt) {
         watch: {
 			scripts: {
 				files: ['js/src/*.js'],
-				tasks: ['jsmin-sourcemap'],
+				tasks: ['uglify'],
 				options: {
 					spawn: false
 				}
@@ -176,7 +182,7 @@ module.exports = function(grunt) {
     
     // Plugin List
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -188,7 +194,7 @@ module.exports = function(grunt) {
 
 	// Workflows
 	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jshint', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
+	grunt.registerTask('default', ['modernizr', 'jshint', 'uglify', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
 	
 	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
 	grunt.registerTask('images', ['imageoptim']);
