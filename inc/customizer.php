@@ -779,7 +779,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'Svbtle' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'text',
+		'type'            => 'url',
 		'priority'        => 36
 	) );
 	
