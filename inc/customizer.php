@@ -1025,14 +1025,12 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 11
 	) );
 	
-	$wp_customize->add_control(
-		new Decode_Customize_Textarea_Control(
-		$wp_customize, 'site_colophon', array(
+	$wp_customize->add_control( 'site_colophon', array(
 			'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
 			'section' => 'decode_reading_options',
-			'settings'=> 'site_colophon',
+			'type'=> 'textarea',
 			'priority'=> 12
-	) ) );
+	) );
 	
 	
 
@@ -1057,20 +1055,18 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	
-	$wp_customize->add_control(
-		new Decode_Customize_Textarea_Control(
-		$wp_customize, 'custom_css', array(
+	$wp_customize->add_control( 'custom_css', array(
 			'label'   => __( 'Custom CSS', 'decode' ),
 			'section' => 'decode_other_options',
-			'settings'=> 'custom_css',
+			'type'=> 'textarea',
 			'priority'=> 1
-	) ) );
+	) );
 	
 	$wp_customize->add_control( 'add_custom_post_types', array(
 		'label'   => __( 'Show the following post types on home blog page. (Separate with commas)', 'decode' ),
 		'section' => 'decode_other_options',
 		'type'    => 'text',
-		'priority'=> 11
+		'priority'=> 2
 	) );
 
 
