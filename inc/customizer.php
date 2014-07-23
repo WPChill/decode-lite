@@ -942,16 +942,17 @@ public static function decode_customize_register( $wp_customize ) {
 		'type'            => 'checkbox',
 		'priority'        => 56
 	) );
-
+	
 
 
 /**
  * Reading Options
  */
 
-	$wp_customize->add_section( 'decode_reading_options', array(
+	$wp_customize->add_section( 'decode_content_options', array(
     	'title'   => __( 'Content Options', 'decode' ),
-		'priority'=> 37
+		'priority'=> 37,
+		'description' => sprintf( _x( 'These options change the display of %s\'s content', '(blog name)\'s content.' ,'decode'), get_bloginfo( 'name', 'display' ) )
     ) );
 
 
@@ -1023,56 +1024,56 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'use_excerpts', array(
 		'label'   => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 1
 	) );
 	
 	$wp_customize->add_control( 'use_excerpts_on_archives', array(
 		'label'   => __( 'Use entry excerpts on archive, category, and author pages.', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 1
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
 		'label'   => __( 'Display posts\' featured images when excerpts are shown.', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 2
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_singles', array(
 		'label'   => __( 'Display a post\'s featured image on its individual page.', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 3
 	) );
 
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 4
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
 		'label'   => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 5
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
 		'label'   => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 6
 	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
 		'label'   => __( 'Entry Date Position', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'radio',
 		'choices' => array(
 			'above'  => __( 'Above Header', 'decode' ),
@@ -1083,35 +1084,35 @@ public static function decode_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'   => __( 'Show Page Headers', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 8
 	) );
 	
 	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
 		'label'   => __( 'Show entry date for post excepts on the main page', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 9
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 10
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
-		'section' => 'decode_reading_options',
+		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
 		'priority'=> 11
 	) );
 	
 	$wp_customize->add_control( 'site_colophon', array(
 			'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
-			'section' => 'decode_reading_options',
+			'section' => 'decode_content_options',
 			'type'=> 'textarea',
 			'priority'=> 12
 	) );
@@ -1187,6 +1188,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
 		'label'      => __( 'Accent Color', 'decode' ),
+		'description' => __( 'The main color used for links, borders, buttons, and more.', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'accent_color',
 		'priority'=> 1
@@ -1194,6 +1196,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_accent_color', array(
 		'label'      => __( 'Active Link Color', 'decode' ),
+		'description' => __( 'The color for currently clicked links.<br>(Try using a darker color than the Accent Color.)', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_accent_color',
 		'priority'=> 2
@@ -1201,6 +1204,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
 		'label'      => __( 'Text Color', 'decode' ),
+		'description' => __( 'The main text color.', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'text_color',
 		'priority'=> 3
@@ -1208,6 +1212,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
 		'label'      => __( 'Secondary Text Color', 'decode' ),
+		'description' => __( 'Text color used for text of secondary importance.<br>(Try using a lighter color than the main Text Color.)', 'decode' ),
 		'section'    => 'colors',
 		'settings'   => 'secondary_text_color',
 		'priority'=> 4
