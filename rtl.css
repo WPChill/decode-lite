@@ -39,6 +39,20 @@ textarea {
 }
 
 
+/* =Social Links
+----------------------------------------------- */
+
+.sociallink:first-child {
+	margin-left: 1%;
+	margin-right: 0;
+}
+
+.sociallink:last-child {
+	margin-right: 1%;
+	margin-left: 0;
+}
+
+
 /* =Menu
 ----------------------------------------------- */
 

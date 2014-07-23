@@ -760,7 +760,7 @@ img[class*="wp-image-"] {
 	-webkit-transition: opacity 0.4s ease-out;
 	        transition: opacity 0.4s ease-out;
 	border: none;
-	margin: 1%;
+	margin: 0 1%;
 }
 
 	.no-touch .sociallink:hover {
