@@ -544,7 +544,8 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'google_plus_username', array(
-		'label'           => sprintf( _x( '%1$s Username %2$s', '[noun] [translation string] (explanation)', 'decode' ), 'Google+',  __(' (or the long number in your profile URL)', 'decode') ),
+		'label'           => sprintf( __( '%s Username', 'decode' ), 'Google+' ),
+		'description'     => __(' (or the long number in your profile URL)', 'decode'),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
