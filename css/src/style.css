@@ -241,6 +241,7 @@ button, input, select, textarea {
 }
 button, input[type='button'], input[type='reset'], input[type='submit'] {
 	transition: border 0.25s ease-out, color 0.25s ease-out;
+
 	height: 2.15em;
 	padding: 0 0.7em;
 	border: 1px solid #C0C0C0;
@@ -275,6 +276,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 input[type='text'], input[type='email'], input[type='password'], input[type='search'], input[type='tel'], input[type='url'], textarea {
 	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+
 	width: 100%;
 	height: 2.15em;
 	padding: 0.3em;
@@ -312,6 +314,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	transition: color 0.4s ease;
+
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
 	color: #009BCD;
 	text-decoration: none;
@@ -366,7 +369,7 @@ a {
 --------------------------------------------------------------*/
 /* Micro Clearfix */
 .cf::before, .cf::after {
-	display: table; 
+	display: table;
 	content: '';
 }
 .cf::after {
@@ -563,6 +566,7 @@ embed, iframe, object {
 
 .site-logo {
 	transition: opacity 0.5s ease-out;
+
 	width: auto;
 	max-height: 8.5em;
 	margin: 0 auto 2%;
@@ -591,6 +595,7 @@ embed, iframe, object {
 
 .site-title a {
 	transition: text-shadow 0.5s;
+
 	color: #444444;
 	font-size: 1.95em;
 
@@ -640,6 +645,7 @@ embed, iframe, object {
 
 .sociallink {
 	transition: opacity 0.4s ease-out;
+
 	border: none;
 	margin: 0 1%;
 }
@@ -896,6 +902,7 @@ embed, iframe, object {
 
 .menu a {
 	transition: color 0.25s ease;
+
 	display: block;
 	text-decoration: none;
 }
@@ -908,6 +915,7 @@ embed, iframe, object {
 /* Display a triangle to indicate that the menu has a child menu. */
 .menu .menu-item-has-children > a::after, .menu .page_item_has_children > a::after {
 	transition: border-color 0.25s ease-out;
+
 	display: inline-block;
 	width: 0;
 	height: 0;
@@ -1071,6 +1079,7 @@ embed, iframe, object {
 
 .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover {
 	animation: shake 0.25s ease 0.25s;
+
 	color: #007EA6;
 }
 
@@ -1156,6 +1165,7 @@ body.single-attachment .entry-header {
 
 a .attachment-post-thumbnail {
 	transition: opacity 0.25s ease-out;
+
 	opacity: 1;
 }
 
@@ -1220,6 +1230,7 @@ article.post {
 
 .entry-content a > img {
 	transition: opacity 0.25s ease-out;
+
 	opacity: 1;
 }
 
@@ -1286,6 +1297,7 @@ article .date {
 
 article .date a {
 	transition-duration: 0.25s;
+
 	color: #808080;
 }
 
@@ -1386,6 +1398,7 @@ article .date a {
 --------------------------------------------------------------*/
 .author-section {
 	transition: box-shadow 0.35s ease-out;
+
 	padding: 3.5%;
 	margin: 0 auto 3.5%;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -1404,6 +1417,7 @@ article .date a {
 
 .author-image img {
 	transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+
 	display: block;
 	border-radius: 50%;
 	opacity: 1;
@@ -1540,6 +1554,7 @@ textarea#comment {
 
 .form-allowed-tags {
 	transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
+
 	overflow: hidden;
 	max-height: 0;
 	border-right: 1px solid #C0C0C0;
@@ -1595,6 +1610,7 @@ textarea#comment {
 
 .nav-links a {
 	transition: padding 0.25s ease-out, color 0.25s ease-out;
+
 	display: block;
 	padding: 0;
 }
@@ -1628,6 +1644,7 @@ textarea#comment {
 
 .search-entry, .search-entry .entry-title {
 	transition-duration: 0.25s;
+
 	color: #444444;
 }
 
@@ -1687,6 +1704,7 @@ textarea#comment {
 --------------------------------------------------------------*/
 .SidebarLink {
 	transition: opacity 0.25s ease-out;
+
 	display: inline-block;
 	position: relative;
 	height: 1.5em;
@@ -1754,6 +1772,7 @@ textarea#comment {
 
 .SidebarClose {
 	transition: opacity 0.25s ease-out;
+
 	display: block;
 	box-sizing: content-box;
 	height: 1.4em;
@@ -1787,6 +1806,7 @@ textarea#comment {
 
 .sidebar {
 	transition: transform 0.35s ease-out;
+
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	position: fixed;
@@ -1801,12 +1821,14 @@ textarea#comment {
 .sidebar.left {
 	transform: translateX(-110%);
 	/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
+
 	left: 0;
 	box-shadow: 1px 0 15px rgba(0,0,0,0.5);
 }
 
 .sidebar.right {
 	transform: translateX(110%);
+
 	right: 0;
 	box-shadow: -1px 0 15px rgba(0,0,0,0.5);
 }
@@ -1905,6 +1927,7 @@ textarea#comment {
 
 .explore-page .widget:not(.search) {
 	transition: box-shadow 0.35s ease-out;
+
 	width: 90%;
 	padding: 2.5% 5%;
 	margin: 0 auto 5%;
@@ -2157,6 +2180,7 @@ textarea#comment {
 
 	.sidebar.constant {
 		transform: translateX(0%);
+
 		box-shadow: none;
 	}
 

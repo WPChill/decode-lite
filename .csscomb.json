@@ -22,10 +22,10 @@
     "unitless-zero": true,
     "vendor-prefix-align": true,
     "sort-order": [
-        "$variable",
-        "$include",
+        ["$variable",
+        "$include"],
         
-        "-webkit-animation",
+        ["-webkit-animation",
         "-moz-animation",
         "-ms-animation",
         "-o-animation",
@@ -99,9 +99,9 @@
         "-moz-transform-origin",
         "-ms-transform-origin",
         "-o-transform-origin",
-        "transform-origin",
+        "transform-origin"],
 
-        "display",
+        ["display",
         "visibility",
         "float",
         "clear",
@@ -315,6 +315,6 @@
         "nav-right",
         "nav-down",
         "nav-left",
-        "pointer-events"
+        "pointer-events"]
     ]
 }

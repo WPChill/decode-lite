@@ -246,6 +246,7 @@ button, input, select, textarea {
 button, input[type='button'], input[type='reset'], input[type='submit'] {
 	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out;
 	        transition: border 0.25s ease-out, color 0.25s ease-out;
+
 	height: 2.15em;
 	padding: 0 0.7em;
 	border: 1px solid #C0C0C0;
@@ -281,6 +282,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 input[type='text'], input[type='email'], input[type='password'], input[type='search'], input[type='tel'], input[type='url'], textarea {
 	-webkit-transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	        transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+
 	width: 100%;
 	height: 2.15em;
 	padding: 0.3em;
@@ -319,6 +321,7 @@ textarea {
 a {
 	-webkit-transition: color 0.4s ease;
 	        transition: color 0.4s ease;
+
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
 	color: #009BCD;
 	text-decoration: none;
@@ -374,7 +377,7 @@ a {
 --------------------------------------------------------------*/
 /* Micro Clearfix */
 .cf::before, .cf::after {
-	display: table; 
+	display: table;
 	content: '';
 }
 .cf::after {
@@ -572,6 +575,7 @@ embed, iframe, object {
 .site-logo {
 	-webkit-transition: opacity 0.5s ease-out;
 	        transition: opacity 0.5s ease-out;
+
 	width: auto;
 	max-height: 8.5em;
 	margin: 0 auto 2%;
@@ -601,6 +605,7 @@ embed, iframe, object {
 .site-title a {
 	-webkit-transition: text-shadow 0.5s;
 	        transition: text-shadow 0.5s;
+
 	color: #444444;
 	font-size: 1.95em;
 
@@ -651,6 +656,7 @@ embed, iframe, object {
 .sociallink {
 	-webkit-transition: opacity 0.4s ease-out;
 	        transition: opacity 0.4s ease-out;
+
 	border: none;
 	margin: 0 1%;
 }
@@ -909,6 +915,7 @@ embed, iframe, object {
 .menu a {
 	-webkit-transition: color 0.25s ease;
 	        transition: color 0.25s ease;
+
 	display: block;
 	text-decoration: none;
 }
@@ -922,6 +929,7 @@ embed, iframe, object {
 .menu .menu-item-has-children > a::after, .menu .page_item_has_children > a::after {
 	-webkit-transition: border-color 0.25s ease-out;
 	        transition: border-color 0.25s ease-out;
+
 	display: inline-block;
 	width: 0;
 	height: 0;
@@ -1087,6 +1095,7 @@ embed, iframe, object {
 .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover {
 	-webkit-animation: shake 0.25s ease 0.25s;
 	        animation: shake 0.25s ease 0.25s;
+
 	color: #007EA6;
 }
 
@@ -1191,6 +1200,7 @@ body.single-attachment .entry-header {
 a .attachment-post-thumbnail {
 	-webkit-transition: opacity 0.25s ease-out;
 	        transition: opacity 0.25s ease-out;
+
 	opacity: 1;
 }
 
@@ -1256,6 +1266,7 @@ article.post {
 .entry-content a > img {
 	-webkit-transition: opacity 0.25s ease-out;
 	        transition: opacity 0.25s ease-out;
+
 	opacity: 1;
 }
 
@@ -1323,6 +1334,7 @@ article .date {
 article .date a {
 	-webkit-transition-duration: 0.25s;
 	        transition-duration: 0.25s;
+
 	color: #808080;
 }
 
@@ -1424,6 +1436,7 @@ article .date a {
 .author-section {
 	-webkit-transition: -webkit-box-shadow 0.35s ease-out;
 	        transition: box-shadow 0.35s ease-out;
+
 	padding: 3.5%;
 	margin: 0 auto 3.5%;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -1445,6 +1458,7 @@ article .date a {
 .author-image img {
 	-webkit-transition: -webkit-box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 	        transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
+
 	display: block;
 	border-radius: 50%;
 	opacity: 1;
@@ -1598,6 +1612,7 @@ textarea#comment {
 .form-allowed-tags {
 	-webkit-transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
 	        transition: max-height 0.35s ease-out, opacity 0.35s ease-out, border-color 0.35s ease-out;
+
 	overflow: hidden;
 	max-height: 0;
 	border-right: 1px solid #C0C0C0;
@@ -1654,6 +1669,7 @@ textarea#comment {
 .nav-links a {
 	-webkit-transition: padding 0.25s ease-out, color 0.25s ease-out;
 	        transition: padding 0.25s ease-out, color 0.25s ease-out;
+
 	display: block;
 	padding: 0;
 }
@@ -1696,6 +1712,7 @@ textarea#comment {
 .search-entry, .search-entry .entry-title {
 	-webkit-transition-duration: 0.25s;
 	        transition-duration: 0.25s;
+
 	color: #444444;
 }
 
@@ -1756,6 +1773,7 @@ textarea#comment {
 .SidebarLink {
 	-webkit-transition: opacity 0.25s ease-out;
 	        transition: opacity 0.25s ease-out;
+
 	display: inline-block;
 	position: relative;
 	height: 1.5em;
@@ -1826,6 +1844,7 @@ textarea#comment {
 .SidebarClose {
 	-webkit-transition: opacity 0.25s ease-out;
 	        transition: opacity 0.25s ease-out;
+
 	display: block;
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
@@ -1863,6 +1882,7 @@ textarea#comment {
 .sidebar {
 	-webkit-transition: -webkit-transform 0.35s ease-out;
 	        transition: transform 0.35s ease-out;
+
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	position: fixed;
@@ -1879,6 +1899,7 @@ textarea#comment {
 	    -ms-transform: translateX(-110%);
 	        transform: translateX(-110%);
 	/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
+
 	left: 0;
 	-webkit-box-shadow: 1px 0 15px rgba(0,0,0,0.5);
 	        box-shadow: 1px 0 15px rgba(0,0,0,0.5);
@@ -1888,6 +1909,7 @@ textarea#comment {
 	-webkit-transform: translateX(110%);
 	    -ms-transform: translateX(110%);
 	        transform: translateX(110%);
+
 	right: 0;
 	-webkit-box-shadow: -1px 0 15px rgba(0,0,0,0.5);
 	        box-shadow: -1px 0 15px rgba(0,0,0,0.5);
@@ -2028,6 +2050,7 @@ textarea#comment {
 .explore-page .widget:not(.search) {
 	-webkit-transition: -webkit-box-shadow 0.35s ease-out;
 	        transition: box-shadow 0.35s ease-out;
+
 	width: 90%;
 	padding: 2.5% 5%;
 	margin: 0 auto 5%;
@@ -2288,7 +2311,9 @@ textarea#comment {
 		-webkit-transform: translateX(0%);
 		    -ms-transform: translateX(0%);
 		        transform: translateX(0%);
+
 		-webkit-box-shadow: none;
+
 		        box-shadow: none;
 	}
 
