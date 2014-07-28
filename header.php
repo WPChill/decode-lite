@@ -13,6 +13,7 @@
 <?php tha_head_top(); ?>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
