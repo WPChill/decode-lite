@@ -3,7 +3,7 @@
  *
  * Template Name: Explore Page
  *
- * The template for displaying the explore page.
+ * Description: The template for displaying the Explore page, which displays search, recent posts, categories, and archives.
  *
  * @package Decode
  */
