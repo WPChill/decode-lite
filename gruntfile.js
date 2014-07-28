@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+	
 	// Configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -65,6 +65,17 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		
+		csscomb: {
+			comb: {
+				expand: true,
+				flatten: true,
+				cwd: 'css/src/',
+				src: ['*.css'],
+				dest: 'css/src/',
+				ext: '.css'
+			}
+		},
 
 		autoprefixer: {
             options: {
@@ -81,7 +92,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-        cssmin: {
+		cssmin: {
 			minify: {
 				expand: true,
 				flatten: true,
@@ -129,12 +140,6 @@ module.exports = function(grunt) {
 		},
 		
 		copy: {
-			stylecss: {
-				expand: true,
-				flatten: true,
-				src: 'css/build/style.min.css',
-				ext: '.css'
-			},
 			readme: {
 				expand: true,
 				flatten: true,
@@ -152,7 +157,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['css/src/*.css'],
-				tasks: ['autoprefixer', 'cssmin', 'copy'],
+				tasks: ['csscomb', 'autoprefixer', 'cssmin'],
 				options: {
 					spawn: false
 				}
@@ -183,6 +188,7 @@ module.exports = function(grunt) {
     // Plugin List
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -192,14 +198,30 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
 
+    
 	// Workflows
 	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jshint', 'uglify', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
+	grunt.registerTask('default', [
+		'modernizr',
+		'jshint',
+		'uglify',
+		'csscomb',
+		'autoprefixer',
+		'cssmin',
+		'markdown',
+		'copy'
+	]);
 	
 	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
-	grunt.registerTask('images', ['imageoptim']);
+	grunt.registerTask('images', [
+		'imageoptim'
+	]);
 	
 	// $ grunt dev: Watches for changes while developing, start MAMP server
-	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
+	grunt.registerTask('dev', [
+		'exec:serverup',
+		'watch',
+		'exec:serverdown'
+	]);
 
 };

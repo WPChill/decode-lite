@@ -1,23 +1,23 @@
-body#tinymce.wp-editor { 
-	font: 300 100%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
-	background: #FFFFFF;
+body#tinymce.wp-editor {
 	color: #000000;
+	background: #FFFFFF;
+	font: 300 100%/1.5 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 body#tinymce.wp-editor a {
 	-webkit-transition: color 0.25s ease-out;
 	        transition: color 0.25s ease-out;
-	text-decoration: underline;
 	color: #009BCD;
+	text-decoration: underline;
 }
 
-	body#tinymce.wp-editor a:hover {
-		color: #007EA6;
-	}
-	
-	body#tinymce.wp-editor a:visited {
-		color: #009BCD;
-	}
+body#tinymce.wp-editor a:hover {
+	color: #007EA6;
+}
+
+body#tinymce.wp-editor a:visited {
+	color: #009BCD;
+}
 
 h1 {
 	font-size: 2em;
@@ -44,35 +44,35 @@ h6 {
 }
 
 img {
-	margin: 2.5% auto;
 	max-width: 100%; /* Fluid images */
 	height: auto;
+	margin: 2.5% auto;
 }
 
 blockquote {
-	margin: 1% 0;
 	padding: 0 0 0 2.55%;
-	border-left: 1px solid #000;
+	border-left: 1px solid #000000;
+	margin: 1% 0;
 	font-style: italic;
 }
 
 /* Captions */
 .wp-caption, .html5-captions .wp-caption {
-	margin-bottom: 1.5em;
 	max-width: 100%;
+	margin-bottom: 1.5em;
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
 	display: block;
-	margin: 0 auto;
 	max-width: 100%;
+	margin: 0 auto;
 }
 
 .wp-caption .wp-caption-dd {
-	font-size: 0.85em;
-	line-height: 1.65;
 	padding: 0;
 	margin: 0.8075em 0;
+	font-size: 0.85em;
+	line-height: 1.65;
 }
 
 /* Galleries */
@@ -82,10 +82,10 @@ blockquote {
 
 .gallery-item {
 	display: inline-block;
-	text-align: center;
 	width: 100%;
-	vertical-align: top;
 	margin: 0 4px 4px 0;
+	text-align: center;
+	vertical-align: top;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -132,49 +132,34 @@ blockquote {
 	max-width: calc(11.1% - 4px);
 }
 
-.gallery-columns-1 .gallery-item:nth-of-type(1n),
-.gallery-columns-2 .gallery-item:nth-of-type(2n),
-.gallery-columns-3 .gallery-item:nth-of-type(3n),
-.gallery-columns-4 .gallery-item:nth-of-type(4n),
-.gallery-columns-5 .gallery-item:nth-of-type(5n),
-.gallery-columns-6 .gallery-item:nth-of-type(6n),
-.gallery-columns-7 .gallery-item:nth-of-type(7n),
-.gallery-columns-8 .gallery-item:nth-of-type(8n),
-.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+.gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
 	margin-right: 0;
 }
 
 .gallery .gallery-caption {
+	margin: auto;
 	font-size: 0.85em;
 	text-align: center;
-	margin: auto;
 }
 
 .gallery-columns-1 .gallery-caption {
 	max-width: 20em;
 }
 
-.gallery-columns-3 .gallery-caption,
-.gallery-columns-4 .gallery-caption,
-.gallery-columns-5 .gallery-caption,
-.gallery-columns-6 .gallery-caption,
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
+.gallery-columns-3 .gallery-caption, .gallery-columns-4 .gallery-caption, .gallery-columns-5 .gallery-caption, .gallery-columns-6 .gallery-caption, .gallery-columns-7 .gallery-caption, .gallery-columns-8 .gallery-caption, .gallery-columns-9 .gallery-caption {
 	display: none;
 }
 
 @media only screen and (min-width: 35em) {
-.gallery-columns-3 .gallery-caption,
-.gallery-columns-4 .gallery-caption {
-	display: block; /* Show galleries that will fit on tablet-sized screens. */
-}
+	.gallery-columns-3 .gallery-caption, .gallery-columns-4 .gallery-caption {
+		display: block; /* Show galleries that will fit on tablet-sized screens. */
+	}
 }
 
 @media only screen and (min-width: 50em) {
-.gallery-columns-5 .gallery-caption {
-	display: block; /* Show galleries that will fit on desktop-sized screens. */
-}
+	.gallery-columns-5 .gallery-caption {
+		display: block; /* Show galleries that will fit on desktop-sized screens. */
+	}
 }
 
 .gallery a img {
@@ -196,8 +181,8 @@ blockquote {
 }
 
 .aligncenter, .wp-caption.aligncenter {
-	clear: both;
 	display: block;
+	clear: both;
 	margin-right: auto;
 	margin-left: auto;
 }
