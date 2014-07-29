@@ -7,7 +7,6 @@ body#tinymce.wp-editor {
 body#tinymce.wp-editor a {
 	-webkit-transition: color 0.25s ease-out;
 	        transition: color 0.25s ease-out;
-
 	color: #009BCD;
 	text-decoration: underline;
 }
