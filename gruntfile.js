@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		
 		modernizr: {
 			makefile: {
-				"devFile": "js/src/modernizr-dev.js",
+				"devFile": "remote", // Skip check for dev file
 				"outputFile": "js/src/modernizr.js",
 				"extra": {
 					"shiv": false,
