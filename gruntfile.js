@@ -68,8 +68,8 @@ module.exports = function(grunt) {
 		
 		csscomb: {
 			options: {
-                config: 'csscomb.json'
-            },
+				config: 'csscomb.json'
+			},
 			comb: {
 				expand: true,
 				flatten: true,
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
-            options: {
+			options: {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'firefox 24', 'opera 12.1'],
 				map: true
 			},
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-        watch: {
+		watch: {
 			scripts: {
 				files: ['js/src/*.js'],
 				tasks: ['uglify'],
@@ -180,24 +180,25 @@ module.exports = function(grunt) {
 				command: '/Applications/MAMP/bin/stop.sh'
 			}
 		}
-    });
-    
-    // Plugin List
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-csscomb');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks("grunt-modernizr");
-    grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.loadNpmTasks('grunt-markdown');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-exec');
+	});
+	
+	// Plugin List
+	grunt.loadNpmTasks("grunt-modernizr");
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-csscomb');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-imageoptim');
+	grunt.loadNpmTasks('grunt-markdown');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-exec');
 
-    
+	
 	// Workflows
-	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
+	// $ grunt: Concencates, prefixes, minifies JS and CSS files, shrinks images, and generates docs. The works.
 	grunt.registerTask('default', [
 		'modernizr',
 		'jshint',
@@ -205,15 +206,11 @@ module.exports = function(grunt) {
 		'csscomb',
 		'autoprefixer',
 		'cssmin',
+		'newer:imageoptim',
 		'markdown',
 		'copy'
 	]);
-	
-	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
-	grunt.registerTask('images', [
-		'imageoptim'
-	]);
-	
+		
 	// $ grunt dev: Watches for changes while developing, start MAMP server
 	grunt.registerTask('dev', [
 		'exec:serverup',
