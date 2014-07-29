@@ -1,4 +1,4 @@
-# LANGUAGE (de_DE) translation for WordPress.
+# German (de_DE) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
 #
 msgid ""

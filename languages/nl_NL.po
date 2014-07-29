@@ -1,4 +1,4 @@
-# LANGUAGE (LOCALE) translation for WordPress.
+# Dutch (Nederlands) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #

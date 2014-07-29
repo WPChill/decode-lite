@@ -1,4 +1,4 @@
-# LANGUAGE (fr_FR) translation for Decode.
+# French (fr_FR) translation for Decode.
 # This file is distributed under the same license as the WordPress package.
 # Stéphane Bataillon <sbataillon@yahoo.fr>, 2013.
 #

@@ -1,4 +1,4 @@
-# LANGUAGE (LOCALE) translation for WordPress.
+# Spanish (es_ES) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #

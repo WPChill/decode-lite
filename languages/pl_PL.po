@@ -1,4 +1,4 @@
-# LANGUAGE (LOCALE) translation for WordPress.
+# Polish (pl_PL) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
 # FIRST AUTHOR mateusz.j.wozniak@gmail.com, 2014.
 #
