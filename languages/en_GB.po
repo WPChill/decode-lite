@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-07-22 23:35-0600\n"
-"PO-Revision-Date: 2014-07-29 00:55-0600\n"
+"PO-Revision-Date: 2014-07-29 01:09-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -225,7 +225,7 @@ msgstr ""
 #: content-link.php:40 content-quote.php:26 content-single.php:29
 #: content-single.php:71 content-single.php:116 content.php:40
 msgid "Categorized in&#58; "
-msgstr ""
+msgstr "Categorised in&#58; "
 
 #: content-none.php:13
 msgid "Nothing Found"
@@ -273,7 +273,7 @@ msgstr ""
 #: functions.php:128
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
-msgstr ""
+msgstr "Only displayed if sidebar remains enabled in the Customise menu."
 
 #: header.php:32
 msgid "Skip to content"
