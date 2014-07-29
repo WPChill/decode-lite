@@ -39,7 +39,7 @@
 		<?php tha_header_top(); ?>
 		
 		<?php if ( get_theme_mod( 'show_sidebar', true ) == true) : ?>
-		<div id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>">
+		<button id="sidebar_link" class="SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php _e( 'Show sidebar', 'decode' )?>">
 			<svg width="100%" height="100%" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 				<g class="SidebarMenuTrigger" fill-rule="evenodd">
 					<path d="M0,160 L0,200 L240,200 L240,160 L0,160 Z M0,160"></path>
@@ -47,7 +47,7 @@
 					<path d="M0,0 L0,40 L240,40 L240,0 L0,0 Z M0,0"></path>
 				</g>
 			</svg>
-		</div>
+		</button>
 		<?php endif; ?>
 		
 		<div class="site-branding">

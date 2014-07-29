@@ -1759,16 +1759,20 @@ textarea#comment {
 	display: inline-block;
 	position: relative;
 	height: 1.5em;
+	padding: 0;
+	border: none;
 	margin-bottom: 2.5%;
 	opacity: 1;
 	cursor: pointer;
 }
 
 .no-touch .SidebarLink:hover {
+	border: none;
 	opacity: 0.65;
 }
 
 .no-touch .SidebarLink:active {
+	border: none;
 	opacity: 0.85;
 }
 
@@ -1832,14 +1836,17 @@ textarea#comment {
 	        box-sizing: content-box;
 	height: 1.4em;
 	padding: 3.5%;
+	border: none;
 	opacity: 1;
 }
 
 .no-touch .SidebarTop:hover .SidebarClose {
+	border: none;
 	opacity: 0.65;
 }
 
 .no-touch .SidebarTop:hover .SidebarClose:active {
+	border: none;
 	opacity: 0.85;
 }
 
