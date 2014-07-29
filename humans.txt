@@ -5,10 +5,9 @@
 	Twitter: @ScottSmith95
 
 /* Translation Credits */
-	Chinese Translation: Christoph Purschke
-	Email:               christoph@purschke.info
-	URI:                 purschke.info
-	Twitter:             @cpu_inside
+	Chinese Translation: Daihui Gu
+	Email:               yhzhtk@gmail.com
+	URI:                 http://yhzhtk.info/
 	
 	Dutch Translation: Tom van den Kieboom
 	Email:             tvdkieboom@sharp-edge.nl
@@ -21,7 +20,7 @@
 	
 	German Translation: Christoph Purschke
 	Email:              christoph@purschke.info
-	URI:                purschke.info
+	URI:                http://purschke.info
 	Twitter:            @cpu_inside
 	
 	Polish Translation: Mateusz Wozniak
