@@ -1,5 +1,6 @@
 # German (de_DE) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
+# Christoph Purschke <christoph@purschke.info>, 2014.
 #
 msgid ""
 msgstr ""

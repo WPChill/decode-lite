@@ -1,6 +1,6 @@
-# Dutch (Nederlands) translation for WordPress.
+# Dutch (nl_NL) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Tom v.d. Kieboom <tvdkieboom@sharp-edge.nl>, 2014.
 #
 msgid ""
 msgstr ""
