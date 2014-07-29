@@ -99,9 +99,9 @@
         "-moz-transform-origin",
         "-ms-transform-origin",
         "-o-transform-origin",
-        "transform-origin"],
+        "transform-origin",
 
-        ["display",
+        "display",
         "visibility",
         "float",
         "clear",

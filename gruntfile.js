@@ -67,6 +67,9 @@ module.exports = function(grunt) {
 		},
 		
 		csscomb: {
+			options: {
+                config: 'csscomb.json'
+            },
 			comb: {
 				expand: true,
 				flatten: true,
