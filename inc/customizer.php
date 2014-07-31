@@ -1098,24 +1098,24 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
-		'label'   => __( 'Add an arrow before the title of a link post', 'decode' ),
-		'section' => 'decode_content_options',
-		'type'    => 'checkbox',
-		'priority'=> 10
+		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 10
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
-		'label'   => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
-		'section' => 'decode_content_options',
-		'type'    => 'checkbox',
-		'priority'=> 11
+		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 11
 	) );
 	
 	$wp_customize->add_control( 'site_colophon', array(
-			'label'   => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
-			'section' => 'decode_content_options',
-			'type'=> 'textarea',
-			'priority'=> 12
+			'label'    => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
+			'section'  => 'decode_content_options',
+			'type'     => 'textarea',
+			'priority' => 12
 	) );
 	
 	
@@ -1125,27 +1125,30 @@ public static function decode_customize_register( $wp_customize ) {
  */
  
  	$wp_customize->add_section( 'decode_other_options', array(
-    	'title'   => __( 'Other Options', 'decode' ),
-		'priority'=> 38
+    	'title'    => __( 'Other Options', 'decode' ),
+		'priority' => 38
     ) );
     
     
     $wp_customize->add_setting( 'custom_css', array(
-		'default' => '',
+		'default'   => '',
 		'transport' => 'refresh'
 	) );
 	
 	$wp_customize->add_setting( 'add_custom_post_types', array(
-		'default' => '',
+		'default'   => '',
 		'transport' => 'refresh'
 	) );
 	
 	
 	$wp_customize->add_control( 'custom_css', array(
-			'label'   => __( 'Custom CSS', 'decode' ),
-			'section' => 'decode_other_options',
-			'type'=> 'textarea',
-			'priority'=> 1
+			'label'       => __( 'Custom CSS', 'decode' ),
+			'section'     => 'decode_other_options',
+			'type'        => 'textarea',
+			'priority'    => 1,
+			'input_attrs' => array(
+				'spellcheck'  => 'false'
+			),
 	) );
 	
 	$wp_customize->add_control( 'add_custom_post_types', array(
