@@ -24,7 +24,9 @@
 	Twitter:            @cpu_inside
 	
 	Polish Translation: Mateusz Wozniak
-	Email:              mateusz.j.wozniak@gmail.com
+	Email:              m.wozniak@gmx.net
+	URI;                multilingua.pl
+	Twitter:            @MateuszJWozniak
 	
 	Russian Translation: Michael Yesutin
 	Email:               michael@yesutin.com
