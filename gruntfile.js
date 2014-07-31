@@ -211,7 +211,7 @@ module.exports = function(grunt) {
 		'copy'
 	]);
 		
-	// $ grunt dev: Watches for changes while developing, start MAMP server
+	// $ grunt dev: Starts MAMP server, watches for changes while developing.
 	grunt.registerTask('dev', [
 		'exec:serverup',
 		'watch',
