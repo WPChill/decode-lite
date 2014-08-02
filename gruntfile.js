@@ -79,6 +79,24 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
+		
+		csslint: {
+			options: {
+				'adjoining-classes': false,
+				'box-model': false,
+				'box-sizing': false,
+				'unique-headings': false,
+				'qualified-headings': false
+			},
+			lint: {
+				expand: true,
+				flatten: true,
+				cwd: 'css/src/',
+				src: ['*.css'],
+				dest: 'css/src/',
+				ext: '.css'
+			}
+		},
 
 		autoprefixer: {
 			options: {
