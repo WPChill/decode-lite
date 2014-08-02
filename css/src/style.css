@@ -68,7 +68,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	border: 0;
 	margin: 0;
-	outline: 0;
 	font-family: inherit;
 	font-size: 100%;
 	font-weight: inherit;
@@ -109,7 +108,7 @@ a:focus {
 	outline: thin dotted;
 }
 a:hover, a:active {
-	outline: 0;
+	outline: 0; /* Improve readability when focused and also mouse hovered in all browsers. */
 }
 a img {
 	border: 0;
@@ -828,10 +827,7 @@ embed, iframe, object {
 .no-inlinesvg .XboxLiveLink {
 	background-image: url('images/XboxLive.png');
 }
-.no-inlinesvg .SteamUserLink {
-	background-image: url('images/Steam.png');
-}
-.no-inlinesvg .SteamGroupLink {
+.no-inlinesvg .SteamUserLink, .no-inlinesvg .SteamGroupLink {
 	background-image: url('images/Steam.png');
 }
 .no-inlinesvg .SkypeLink {
@@ -908,7 +904,6 @@ embed, iframe, object {
 }
 
 .menu a:focus {
-	outline: none;
 	color: #009BCD;
 }
 
@@ -1381,8 +1376,10 @@ article .date a {
 /*--------------------------------------------------------------
 6.4 - Audio Posts
 --------------------------------------------------------------*/
+/* The WP audio player (before 3.6) has a hardcoded width of 400px, which is BS.
+	The player in WordPress 3.6 and up doesn't need this. (≥ WP 3.6) */
 .mejs-container {
-	max-width: 100% !important; /* The WP audio player (before 3.6) has a hardcoded width of 400px, which is BS. The player in WordPress 3.6 and up doesn't need this. */
+	max-width: 100% !important; 
 }
 
 
@@ -1519,9 +1516,7 @@ li.comment {
 	list-style: none;
 }
 
-
-
-#respond {
+.comment-respond {
 	margin-top: 7.5%;
 }
 
@@ -1540,7 +1535,7 @@ li.comment {
 	margin-bottom: 0;
 }
 
-textarea#comment {
+.comment-form-comment textarea {
 	height: 7em;
 	border-radius: 3px 3px 0 3px;
 }
@@ -2064,17 +2059,17 @@ textarea#comment {
 		display: block; /* Show galleries that will fit on tablet-sized screens. */
 	}
 
-	.comment-form p.comment-form-author, .comment-form p.comment-form-email, .comment-form p.comment-form-url {
+	.comment-form .comment-form-author, .comment-form .comment-form-email, .comment-form .comment-form-url {
 		margin: 0 0.25em;
 
 		flex-basis: 30%;
 	}
 
-	.comment-form p.comment-form-author {
+	.comment-form .comment-form-author {
 		margin-left: 0;
 	}
 
-	.comment-form p.comment-form-url {
+	.comment-form .comment-form-url {
 		margin-right: 0;
 	}
 
@@ -2321,8 +2316,8 @@ textarea#comment {
 		display: none;
 	}
 
-	body.custom-background {
-		background: none;
+	.custom-background {
+		background: none; /* Remove custom background on body element. */
 	}
 
 	.site-header {

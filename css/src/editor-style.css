@@ -1,21 +1,17 @@
-body#tinymce.wp-editor {
+.wp-editor {
 	color: #000000;
 	background: #FFFFFF;
 	font: 300 100%/1.5 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
-body#tinymce.wp-editor a {
+.wp-editor a, .wp-editor a:visited {
 	transition: color 0.25s ease-out;
 	color: #009BCD;
 	text-decoration: underline;
 }
 
-body#tinymce.wp-editor a:hover {
+.wp-editor a:hover {
 	color: #007EA6;
-}
-
-body#tinymce.wp-editor a:visited {
-	color: #009BCD;
 }
 
 h1 {
