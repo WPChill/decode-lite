@@ -156,7 +156,9 @@ module.exports = function(grunt) {
 		/* Copy Readme.md to project root */
 		copy: {
 			copy_readme: {
-				'README.md': ['docs/src/README.md']
+				files: {
+					'README.md': ['docs/src/README.md']
+				}
 			}
 		},
 
