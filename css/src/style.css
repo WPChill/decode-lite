@@ -636,7 +636,6 @@ embed, iframe, object {
 	line-height: 1;
 	text-align: center;
 	word-wrap: break-word;
-
 	overflow-wrap: break-word;
 }
 
@@ -1169,7 +1168,6 @@ embed, iframe, object {
 .page-content, .entry-content, .entry-summary {
 	margin: 0 0 2.5%;
 	word-wrap: break-word;
-
 	overflow-wrap: break-word;
 }
 
@@ -1215,7 +1213,6 @@ a .attachment-post-thumbnail {
 	text-align: center;
 	text-decoration: none;
 	word-wrap: break-word;
-
 	overflow-wrap: break-word;
 }
 
@@ -1420,7 +1417,7 @@ article .date a {
 /* The WP audio player (before 3.6) has a hardcoded width of 400px, which is BS.
 	The player in WordPress 3.6 and up doesn't need this. (≥ WP 3.6) */
 .mejs-container {
-	max-width: 100% !important; 
+	max-width: 100% !important;
 }
 
 
@@ -1529,7 +1526,6 @@ article .date a {
 
 .comment-content a {
 	word-wrap: break-word;
-
 	overflow-wrap: break-word;
 }
 
@@ -1622,7 +1618,6 @@ li.comment {
 
 .nav-next, .nav-previous {
 	word-wrap: break-word;
-
 	overflow-wrap: break-word;
 }
 
