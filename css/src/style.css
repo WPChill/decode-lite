@@ -74,42 +74,53 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-style: inherit;
 	vertical-align: baseline;
 }
+
 html {
 	box-sizing: border-box; /* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	    -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+
 article, aside, details, figcaption, figure, footer, header, main, nav, section {
 	display: block;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 table {
 	border-spacing: 0;
 	/* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 }
+
 caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote::before, blockquote::after, q::before, q::after {
 	content: '';
 }
+
 blockquote, q {
 	quotes: '' '';
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 a:hover, a:active {
 	outline: 0; /* Improve readability when focused and also mouse hovered in all browsers. */
 }
+
 a img {
 	border: 0;
 }
@@ -148,37 +159,48 @@ hr {
 p {
 	margin-bottom: 1.5em;
 }
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
+
 ul {
 	list-style: disc;
 }
+
 ol {
 	list-style: decimal;
 }
+
 li > ul, li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+
 dt {
 	font-weight: bold;
 }
+
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 dfn, cite, em, i {
 	font-style: italic;
 }
+
 blockquote {
 	margin: 0 1.5em;
 }
+
 address {
 	margin: 0 0 1.5em;
 }
+
 pre {
 	overflow: auto;
 	max-width: 100%;
@@ -188,17 +210,21 @@ pre {
 	font-family: 'Courier 10 Pitch', Courier, monospace;
 	line-height: 1.6;
 }
+
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 }
+
 abbr, acronym {
 	border-bottom: 1px dotted #666666;
 	cursor: help;
 }
+
 mark, ins {
 	background: #FFF9C0;
 	text-decoration: none;
 }
+
 sup, sub {
 	position: relative;
 	height: 0;
@@ -206,25 +232,32 @@ sup, sub {
 	line-height: 0;
 	vertical-align: baseline;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: 0.5ex;
 }
+
 small {
 	font-size: 75%;
 }
+
 big {
 	font-size: 125%;
 }
+
 figure {
 	margin: 0;
 }
+
 table {
 	width: 100%;
 	margin: 0 0 1.5em;
 }
+
 th {
 	font-weight: bold;
 }
@@ -238,6 +271,7 @@ button, input, select, textarea {
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
+
 button, input[type='button'], input[type='reset'], input[type='submit'] {
 	transition: border 0.25s ease-out, color 0.25s ease-out;
 	height: 2.15em;
@@ -250,28 +284,35 @@ button, input[type='button'], input[type='reset'], input[type='submit'] {
 
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 }
+
 .no-touch button:hover, .no-touch input[type='button']:hover, .no-touch input[type='reset']:hover, .no-touch input[type='submit']:hover {
 	border: 1px solid #009BCD;
 }
+
 .no-touch button:focus, .no-touch input[type='button']:focus, .no-touch input[type='reset']:focus, .no-touch input[type='submit']:focus, .no-touch button:active, .no-touch input[type='button']:active, .no-touch input[type='reset']:active, .no-touch input[type='submit']:active {
 	border-color: #007EA6;
 	color: #007EA6;
 }
+
 input[type='checkbox'], input[type='radio'] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
+
 input[type='search'] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 }
+
 input[type='search']::-webkit-search-decoration {
 	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
+
 button::-moz-focus-inner, input::-moz-focus-inner {
 	padding: 0;
 	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 }
+
 input[type='text'], input[type='email'], input[type='password'], input[type='search'], input[type='tel'], input[type='url'] {
 	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
 	width: 100%;
@@ -284,11 +325,13 @@ input[type='text'], input[type='email'], input[type='password'], input[type='sea
 
 	-webkit-appearance: none;
 }
+
 .no-touch input[type='text']:hover, .no-touch input[type='email']:hover, .no-touch input[type='password']:hover, .no-touch input[type='search']:hover, .no-touch input[type='tel']:hover, .no-touch input[type='url']:hover, .no-touch textarea:hover {
 	border-color: #A6A6A6;
 	color: #A6A6A6;
 	background: rgba(255,255,255,0.35);
 }
+
 .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type='tel']:focus, .touch input[type='tel']:focus, .no-touch input[type='url']:focus, .touch input[type='url']:focus, .no-touch textarea:focus, .touch textarea:focus {
 	border-color: #009BCD;
 	outline: none;
@@ -375,9 +418,11 @@ a {
 	display: table;
 	content: '';
 }
+
 .cf::after {
 	clear: both;
 }
+
 .cf {
 	zoom: 1;
 } /* For IE 6-7, but why not keep them around? */
@@ -1013,18 +1058,10 @@ embed, iframe, object {
 	width: 12em;
 }
 
-
-
 .menu ul ul li {
 	display: block;
 	width: auto;
 }
-
-
-
-
-
-
 
 .no-touch .menu ul li:hover > ul, .no-touch .menu ul ul:hover, .menu ul li.open > ul {
 	display: block;
@@ -1115,7 +1152,6 @@ embed, iframe, object {
 .site-footer {
 	margin-bottom: 3.5%;
 }
-
 
 
 .hentry {
@@ -2301,7 +2337,6 @@ li.comment {
 	.no-csstransforms .sidebar.right {
 		right: -30%;
 	}
-
 
 	.content-area article {
 		margin-bottom: 10%;
