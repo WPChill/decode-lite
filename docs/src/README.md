@@ -1,6 +1,6 @@
 # Decode 2.9
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![devDependency Status](https://david-dm.org/ScottSmith95/Decode/dev-status.png)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
+[![Built with Grunt](http://img.shields.io/badge/built_with-GRUNT-orange.svg?style=flat)](http://gruntjs.com/)
+[![devDependency Status](http://img.shields.io/david/dev/ScottSmith95/Decode.svg?style=flat)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
