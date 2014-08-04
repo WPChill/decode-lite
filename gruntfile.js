@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 				"uglify": false,
 				"tests": ['csstransforms', 'inlinesvg', 'touch', 'flexbox'],
 				"parseFiles": false,
-				"matchCommunityTests": false,
+				"matchCommunityTests": false
 			}
 		},
 		
@@ -72,11 +72,7 @@ module.exports = function(grunt) {
 			},
 			comb: {
 				expand: true,
-				flatten: true,
-				cwd: 'css/src/',
-				src: ['*.css'],
-				dest: 'css/src/',
-				ext: '.css'
+				src: ['css/src/*.css']
 			}
 		},
 		
@@ -90,11 +86,7 @@ module.exports = function(grunt) {
 			},
 			lint: {
 				expand: true,
-				flatten: true,
-				cwd: 'css/src/',
-				src: ['*.css'],
-				dest: 'css/src/',
-				ext: '.css'
+				src: ['css/src/*.css']
 			}
 		},
 
@@ -141,7 +133,7 @@ module.exports = function(grunt) {
 					template: 'docs/src/READMETemplate.html'
 				},
 				files: {
-					'docs/README.html': ['docs/src/README.md'],
+					'docs/README.html': ['docs/src/README.md']
 				}
 			},
 			customcss: {
@@ -149,44 +141,34 @@ module.exports = function(grunt) {
 					template: 'docs/src/CustomCSSTemplate.html'
 				},
 				files: {
-					'docs/CustomCSS.html': ['docs/src/CustomCSS.md'],
+					'docs/CustomCSS.html': ['docs/src/CustomCSS.md']
 				}
 			}
 		},
 		
+		/* Copy Readme.md to project root */
 		copy: {
-			readme: {
-				expand: true,
-				flatten: true,
-				src: 'docs/src/README.md'
+			copy_readme: {
+				'README.md': ['docs/src/README.md']
 			}
 		},
 
 		watch: {
 			scripts: {
 				files: ['js/src/*.js'],
-				tasks: ['uglify'],
-				options: {
-					spawn: false
-				}
+				tasks: ['uglify']
 			},
 			css: {
 				files: ['css/src/*.css'],
-				tasks: ['csscomb', 'autoprefixer', 'cssmin'],
-				options: {
-					spawn: false
-				}
+				tasks: ['csscomb', 'autoprefixer', 'cssmin']
 			},
 			docs: {
 				files: ['docs/src/*.md'],
-				tasks: ['markdown', 'copy'],
-				options: {
-					spawn: false
-				}
+				tasks: ['markdown', 'copy']
 			},
 			livereload: {
 				options: { livereload: true },
-				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js'],
+				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js']
 			}
 		},
 		
