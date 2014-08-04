@@ -1,3 +1,10 @@
+var exec = require('child_process').exec;
+process.on('SIGINT', function () {
+	exec('/Applications/MAMP/bin/stop.sh', function () {
+		process.exit();
+	});
+});
+
 module.exports = function(grunt) {
 	
 	// Configuration
