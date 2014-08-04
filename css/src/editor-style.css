@@ -1,7 +1,7 @@
 .wp-editor {
 	color: #000000;
-	background: #FFFFFF;
 	font: 300 100%/1.5 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
+	background: #FFFFFF;
 }
 
 .wp-editor a, .wp-editor a:visited {
@@ -45,10 +45,10 @@ img {
 }
 
 blockquote {
+	font-style: italic;
 	padding: 0 0 0 2.55%;
 	border-left: 1px solid #000000;
 	margin: 1% 0;
-	font-style: italic;
 }
 
 /* Captions */
@@ -64,10 +64,10 @@ blockquote {
 }
 
 .wp-caption .wp-caption-dd {
-	padding: 0;
-	margin: 0.8075em 0;
 	font-size: 0.85em;
 	line-height: 1.65;
+	padding: 0;
+	margin: 0.8075em 0;
 }
 
 /* Galleries */
@@ -77,10 +77,10 @@ blockquote {
 
 .gallery-item {
 	display: inline-block;
-	width: 100%;
-	margin: 0 4px 4px 0;
 	text-align: center;
 	vertical-align: top;
+	width: 100%;
+	margin: 0 4px 4px 0;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -132,9 +132,9 @@ blockquote {
 }
 
 .gallery .gallery-caption {
-	margin: auto;
 	font-size: 0.85em;
 	text-align: center;
+	margin: auto;
 }
 
 .gallery-columns-1 .gallery-caption {
