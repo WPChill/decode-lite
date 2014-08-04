@@ -4,7 +4,7 @@
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-*Note: This version of Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
+*Note: Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
 
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
 
