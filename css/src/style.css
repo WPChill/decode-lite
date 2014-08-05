@@ -787,11 +787,14 @@ embed, iframe, object {
 .no-inlinesvg .DeviantARTLink {
 	background-image: url('images/deviantART.png');
 }
+.no-inlinesvg .BandcampLink {
+	background-image: url('images/Bandcamp.png');
+}
 .no-inlinesvg .SoundcloudLink {
 	background-image: url('images/Soundcloud.png');
 }
-.no-inlinesvg .SoundcloudLink {
-	background-image: url('images/Bandcamp.png');
+.no-inlinesvg .iTunesLink {
+	background-image: url('images/iTunes.png');
 }
 .no-inlinesvg .RdioLink {
 	background-image: url('images/Rdio.png');
