@@ -1863,11 +1863,11 @@ li.comment {
 	box-shadow: -1px 0 15px rgba(0,0,0,0.5);
 }
 
-.SidebarContent {
+.sidebar-content {
 	margin: 0 5%;
 }
 
-.no-touch .SidebarContent a:hover {
+.no-touch .sidebar-content a:hover {
 	color: #007EA6;
 }
 
@@ -2203,7 +2203,7 @@ li.comment {
 		width: 33%;
 	}
 
-	.sidebar.constant .SidebarContent {
+	.sidebar.constant .sidebar-content {
 		margin-top: 5%;
 	}
 
