@@ -42,12 +42,12 @@ textarea {
 /* =Social Links
 ----------------------------------------------- */
 
-.sociallink:first-child {
+.social-link:first-child {
 	margin-left: 1%;
 	margin-right: 0;
 }
 
-.sociallink:last-child {
+.social-link:last-child {
 	margin-right: 1%;
 	margin-left: 0;
 }

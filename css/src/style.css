@@ -678,48 +678,48 @@ embed, iframe, object {
 /*--------------------------------------------------------------
 4.2 - Social Links
 --------------------------------------------------------------*/
-.sociallinks {
+.social-links {
 	display: block;
 	margin: 1% 0;
 }
 
-.sociallinkscontainer {
+.social-links-container {
 	text-align: center;
 	margin: 0 auto;
 }
 
-.sociallink {
+.social-link {
 	transition: opacity 0.4s ease-out;
 	border: none;
 	margin: 0 1%;
 }
 
-.no-touch .sociallink:hover {
+.no-touch .social-link:hover {
 	opacity: 0.6;
 }
 
-.no-touch .sociallink:active {
+.no-touch .social-link:active {
 	opacity: 0.8;
 }
 
-.sociallink:first-child {
+.social-link:first-child {
 	margin-left: 0;
 }
 
-.sociallink:last-child {
+.social-link:last-child {
 	margin-right: 0;
 }
 
-.sociallink svg, .sociallink img {
+.social-link svg, .social-link img {
 	width: 2em;
 	height: 2em;
 }
 
-.no-inlinesvg .sociallink svg {
+.no-inlinesvg .social-link svg {
 	display: none;
 }
 
-.no-inlinesvg .sociallink {
+.no-inlinesvg .social-link {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
@@ -2049,11 +2049,11 @@ li.comment {
 		width: 55%;
 	}
 
-	.sociallinks {
+	.social-links {
 		margin: 1.5% auto;
 	}
 
-	.sociallink svg, .sociallink img {
+	.social-link svg, .social-link img {
 		width: 2.25em;
 		height: 2.25em;
 	}
@@ -2174,12 +2174,12 @@ li.comment {
 		margin-top: 3.5%;
 	}
 
-	.sociallink svg, .sociallink img {
+	.social-link svg, .social-link img {
 		width: 2.5em;
 		height: 2.5em;
 	}
 
-	.no-inlinesvg .sociallink {
+	.no-inlinesvg .social-link {
 		margin: 1%;
 	}
 
@@ -2307,7 +2307,7 @@ li.comment {
 		font-size: 3.5em;
 	}
 
-	.sociallink svg, .sociallink img {
+	.social-link svg, .social-link img {
 		width: 2.75em;
 		height: 2.75em;
 	}
@@ -2354,7 +2354,7 @@ li.comment {
 15.4 - Print
 --------------------------------------------------------------*/
 @media only print {
-	.sidebar, .sidebar-link, .sociallinks, .menu, .paging-navigation, .comments-link, .edit-link, .post-navigation, .comments-area, .site-breadcrumbs {
+	.sidebar, .sidebar-link, .social-links, .menu, .paging-navigation, .comments-link, .edit-link, .post-navigation, .comments-area, .site-breadcrumbs {
 		display: none;
 	}
 
