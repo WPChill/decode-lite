@@ -1730,7 +1730,7 @@ li.comment {
 /*--------------------------------------------------------------
 11.0 - Sidebar
 --------------------------------------------------------------*/
-.SidebarLink {
+.sidebar-link {
 	transition: opacity 0.25s ease-out;
 	display: inline-block;
 	position: relative;
@@ -1742,42 +1742,42 @@ li.comment {
 	cursor: pointer;
 }
 
-.no-touch .SidebarLink:hover {
+.no-touch .sidebar-link:hover {
 	border: none;
 	opacity: 0.65;
 }
 
-.no-touch .SidebarLink:active {
+.no-touch .sidebar-link:active {
 	border: none;
 	opacity: 0.85;
 }
 
-.SidebarLink svg, .SidebarLink img {
+.sidebar-link svg, .sidebar-link img {
 	width: 1.5em;
 	height: 1.5em;
 }
 
-.no-inlinesvg .SidebarLink svg {
+.no-inlinesvg .sidebar-link svg {
 	display: none;
 }
 
-.no-inlinesvg .SidebarLink {
+.no-inlinesvg .sidebar-link {
 	width: 30px;
 	height: 25px;
 	background: url('images/menu.png') no-repeat center;
 	background-size: 30px 25px;
 }
 
-.SidebarLink.left {
+.sidebar-link.left {
 	left: 5%;
 }
 
-.SidebarLink.right {
+.sidebar-link.right {
 	float: right;
 	right: 5%;
 }
 
-.SidebarTop {
+.sidebar-top {
 	z-index: 1;
 	width: 100%;
 	border-bottom: 1px solid #009BCD;
@@ -1786,7 +1786,7 @@ li.comment {
 	cursor: pointer;
 }
 
-.no-touch .SidebarTop {
+.no-touch .sidebar-top {
 	position: sticky;
 	top: 0;
 }
@@ -1801,7 +1801,7 @@ li.comment {
 	}
 }
 
-.SidebarClose {
+.sidebar-close {
 	transition: opacity 0.25s ease-out;
 	display: block;
 	box-sizing: content-box;
@@ -1811,26 +1811,26 @@ li.comment {
 	opacity: 1;
 }
 
-.no-touch .SidebarTop:hover .SidebarClose {
+.no-touch .sidebar-top:hover .sidebar-close {
 	border: none;
 	opacity: 0.65;
 }
 
-.no-touch .SidebarTop:hover .SidebarClose:active {
+.no-touch .sidebar-top:hover .sidebar-close:active {
 	border: none;
 	opacity: 0.85;
 }
 
-.SidebarClose svg, .SidebarClose img {
+.sidebar-close svg, .sidebar-close img {
 	width: 1.4em;
 	height: 1.4em;
 }
 
-.no-inlinesvg .SidebarClose svg {
+.no-inlinesvg .sidebar-close svg {
 	display: none;
 }
 
-.no-inlinesvg .SidebarClose {
+.no-inlinesvg .sidebar-close {
 	width: 30px;
 	height: 30px;
 	background: url('images/cross.png') no-repeat center;
@@ -2015,33 +2015,33 @@ li.comment {
 		width: 100%;
 	}
 
-	.SidebarLink {
+	.sidebar-link {
 		position: fixed;
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
 	}
 
-	.admin-bar .SidebarLink {
+	.admin-bar .sidebar-link {
 		top: calc(2.5% + 32px);
 	}
 
 	@media screen and (max-width:782px) {
-		.admin-bar .SidebarLink {
+		.admin-bar .sidebar-link {
 			top: calc(2.5% + 46px);
 		}
 	}
 
-	.SidebarLink svg, .SidebarLink img {
+	.sidebar-link svg, .sidebar-link img {
 		width: 1.75em;
 		height: 1.75em;
 	}
 
-	.SidebarLink.left {
+	.sidebar-link.left {
 		left: 2.5%;
 	}
 
-	.SidebarLink.right {
+	.sidebar-link.right {
 		right: 2.5%;
 	}
 
@@ -2187,15 +2187,15 @@ li.comment {
 		margin: 0 1.5%;
 	}
 
-	.SidebarLink {
+	.sidebar-link {
 		top: 5%;
 	}
 
-	.sidebar-style-constant .SidebarLink {
+	.sidebar-style-constant .sidebar-link {
 		display: none;
 	}
 
-	.sidebar.constant .SidebarTop {
+	.sidebar.constant .sidebar-top {
 		display: none;
 	}
 
@@ -2228,7 +2228,7 @@ li.comment {
 		right: -40%;
 	}
 
-	.SidebarClose {
+	.sidebar-close {
 		padding: 2.5%;
 	}
 
@@ -2324,11 +2324,11 @@ li.comment {
 		width: 75%;
 	}
 
-	.SidebarLink.left {
+	.sidebar-link.left {
 		left: 7.5%;
 	}
 
-	.SidebarLink.right {
+	.sidebar-link.right {
 		right: 7.5%;
 	}
 
@@ -2354,7 +2354,7 @@ li.comment {
 15.4 - Print
 --------------------------------------------------------------*/
 @media only print {
-	.sidebar, .SidebarLink, .sociallinks, .menu, .paging-navigation, .comments-link, .edit-link, .post-navigation, .comments-area, .site-breadcrumbs {
+	.sidebar, .sidebar-link, .sociallinks, .menu, .paging-navigation, .comments-link, .edit-link, .post-navigation, .comments-area, .site-breadcrumbs {
 		display: none;
 	}
 
