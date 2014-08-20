@@ -142,12 +142,12 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
 function decode_custom_css() {
-	?>
+	if ( get_theme_mod('custom_css', '') !== '' ) { ?>
 		<!-- Decode Custom CSS -->
 		<style type="text/css">
 			<?php echo get_theme_mod('custom_css', ''); ?>
 		</style>
-	<?php
+	<?php }
 }
 }
 add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
