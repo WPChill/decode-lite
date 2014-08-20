@@ -1253,7 +1253,7 @@ public static function decode_customize_register( $wp_customize ) {
 		<!-- Decode Custom Colors CSS -->
 		<style type="text/css">
 			<?php self::generate_css(
-				'body, .sidebar, .sidebar-top, .menu ul ul',
+				'body, .sidebar, .sidebar-top, .menu ul ul, .header-style-ghost.sidebar-style-constant .page-scroll',
 				'background-color',
 				'background_color',
 				'#');
@@ -1376,6 +1376,6 @@ add_action( 'wp_head' , array( 'Decode_Customize', 'decode_output_color_css' ) )
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'jquery' ), '2.9.1', true );
+	wp_enqueue_script( 'decode-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'jquery' ), '2.9.4', true );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );
