@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 	<?php tha_body_top(); ?>
 
-<div id="page" class="hfeed site<?php if ( get_theme_mod( 'show_sidebar', true ) == true) { echo ' sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' ) . ' sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' ); }?>">
+<div id="page" class="hfeed site">
 	
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 	

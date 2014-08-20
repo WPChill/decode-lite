@@ -2131,7 +2131,7 @@ li.comment {
 		width: 80%;
 	}
 
-	.site.sidebar-style-constant {
+	.sidebar-style-constant .site {
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 		position: fixed;
@@ -2140,11 +2140,11 @@ li.comment {
 		margin: 0 auto;
 	}
 
-	.site.sidebar-style-left {
+	.sidebar-style-left .site {
 		right: 0;
 	}
 
-	.site.sidebar-style-right {
+	.sidebar-style-right .site {
 		left: 0;
 	}
 
@@ -2156,7 +2156,7 @@ li.comment {
 		margin-top: 0;
 	}
 
-	.sidebar-style-constant .site-header, .site-breadcrumbs, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
+	.site-breadcrumbs, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
 		width: 100%;
 		max-width: 45em;
 	}
@@ -2322,7 +2322,7 @@ li.comment {
 		font-size: 2.25em;
 	}
 
-	.site.sidebar-style-constant {
+	.sidebar-style-constant .site {
 		width: 75%;
 	}
 

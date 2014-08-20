@@ -13,7 +13,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 if ( ! function_exists( 'decode_setup' ) ) :
-/**
+/*
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which
@@ -86,7 +86,7 @@ function decode_setup() {
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
 
-/**
+/*
  * Register styles and scripts.
  */
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
@@ -117,7 +117,7 @@ function decode_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
-/**
+/*
  * Register widgetized area and update sidebar with default widgets.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -136,7 +136,7 @@ function decode_widgets_init() {
 }
 add_action( 'widgets_init', 'decode_widgets_init' );
 
-/**
+/*
  * Add Custom CSS to page.
  */
 if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
@@ -152,42 +152,42 @@ function decode_custom_css() {
 }
 add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
 
-/**
+/*
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
-/**
+/*
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
 
-/**
+/*
  * Customize Menu additions.
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
+/*
  * Custom Header callbacks.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
-/**
+/*
  * Decode Theme Hook functions.
  */
 require get_template_directory() . '/inc/decode-theme-hooks.php';
 
-/**
+/*
  * Theme Hook Alliance functions.
  */
 require get_template_directory() . '/inc/tha-theme-hooks.php';
 
-/**
+/*
  * Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/**
+/*
  * Setup editor styles.
  */
 if ( ! function_exists( 'decode_add_editor_styles' ) ) {
@@ -198,7 +198,21 @@ function decode_add_editor_styles() {
 }
 add_action( 'init', 'decode_add_editor_styles' );
 
-/**
+/*
+ * Add body classes for sidebar layout options.
+ */
+function decode_add_body_classes( $classes ) {
+	if ( get_theme_mod( 'show_sidebar', true ) == true) {
+		// Add 'ghost-header-style' to the $classes array.
+		$classes[] = 'sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' );
+		$classes[] = 'sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' );
+	}
+	// Return the $classes array.
+	return $classes;
+}
+add_filter( 'body_class', 'decode_add_body_classes' );
+
+/*
  * Add Google Profile to user contact methods.
  */
 function decode_add_google_profile( $contactmethods ) {
@@ -208,7 +222,7 @@ function decode_add_google_profile( $contactmethods ) {
 }
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
 
-/**
+/*
  * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
@@ -258,7 +272,7 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 	}
 }
 
-/**
+/*
  * Show all post types in main query
  */
 if ( ! function_exists( 'add_post_types_to_query' ) ) {
