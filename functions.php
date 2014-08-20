@@ -39,20 +39,24 @@ function decode_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	
 	// Setup the WordPress core custom header feature.
-	add_theme_support( 'custom-header', apply_filters( 'decode_custom_header_args', array(
+	$args = array(
 		'default-image'          => '',
-		'flex-width'            => true,
+		'flex-width'             => true,
 		'height'                 => 300,
 		'flex-height'            => true,
 		'header-text'            => false,
 		'admin-head-callback'    => 'decode_admin_header_style',
 		'admin-preview-callback' => 'decode_admin_header_image',
-	) ) );
+	); 
+	$args = apply_filters( 'decode_custom_header_args', $args );
+	add_theme_support( 'custom-header', $args );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'decode_custom_background_args', array(
+	$args = array(
 		'default-color' => 'E3E5E7',
-	) ) );
+	); 
+	$args = apply_filters( 'decode_custom_background_args', $args );
+	add_theme_support( 'custom-background', $args );
 	
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -73,12 +77,11 @@ function decode_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	$args = array(
 		'aside', 'image', 'video', 'quote', 'link'
-	) );
-	
-	// This theme supports live-updating of widgets in the customizer. 
-	add_theme_support( 'widget-customizer' );
+	); 
+	$args = apply_filters( 'decode_post_format_args', $args );
+	add_theme_support( 'post-formats', $args );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
@@ -168,6 +171,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom Header callbacks.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Decode Theme Hook functions.
+ */
+require get_template_directory() . '/inc/decode-theme-hooks.php';
 
 /**
  * Theme Hook Alliance functions.

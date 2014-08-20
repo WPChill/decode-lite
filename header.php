@@ -52,11 +52,15 @@
 		
 		<div class="site-branding">
 			
-			<?php if ( get_header_image() != '' ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%" alt="" />
-				</a>
-			<?php endif; ?>
+			<?php function decode_create_header_image() {
+				if ( get_header_image() != '' ) : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%" alt="" />
+					</a>
+				<?php endif;
+			}
+			add_action( 'decode_header_image', 'decode_create_header_image' ); ?>
+			<?php decode_header_image(); ?>
 				
 			<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
 				<h1 class="site-title">
