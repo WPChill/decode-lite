@@ -47,8 +47,8 @@
 	
 	<?php tha_footer_bottom(); ?>
 </footer><!-- #colophon -->
-	<?php tha_footer_after(); ?>
 <?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '</div><!-- .site-scroll -->'; } ?>
+	<?php tha_footer_after(); ?>
 </div><!-- #page -->
 
 

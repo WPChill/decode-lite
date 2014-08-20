@@ -44,9 +44,8 @@
 		</button>
 		<?php endif; ?>
 	
-	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
-	
 	<?php tha_header_before(); ?>
+	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php tha_header_top(); ?>
 		
