@@ -1733,7 +1733,8 @@ li.comment {
 .sidebar-link {
 	transition: opacity 0.25s ease-out;
 	display: inline-block;
-	position: relative;
+	position: absolute;
+	top: 10%;
 	height: 1.5em;
 	padding: 0;
 	border: none;
@@ -2017,6 +2018,7 @@ li.comment {
 
 	.sidebar-link {
 		position: fixed;
+		z-index: 1;
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
