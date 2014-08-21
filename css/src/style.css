@@ -1880,7 +1880,7 @@ li.comment {
 	left: -100%;
 }
 
-.no-csstransforms .sidebar.left.visible, .no-csstransforms .sidebar.constant.left {
+.no-csstransforms .sidebar.left.visible, .no-csstransforms .sidebar-style-constant .sidebar.left {
 	left: 0;
 }
 
@@ -1888,7 +1888,7 @@ li.comment {
 	right: -100%;
 }
 
-.no-csstransforms .sidebar.right.visible, .no-csstransforms .sidebar.constant.right {
+.no-csstransforms .sidebar.right.visible, .no-csstransforms .sidebar-style-constant .sidebar.right {
 	right: 0;
 }
 
@@ -2193,32 +2193,32 @@ li.comment {
 		top: 5%;
 	}
 
-	.sidebar-style-constant .sidebar-link {
-		display: none;
-	}
-
-	.sidebar.constant .sidebar-top {
-		display: none;
-	}
-
 	.sidebar {
 		width: 33%;
 	}
 
-	.sidebar.constant .sidebar-content {
-		margin-top: 5%;
+	.sidebar-style-constant .sidebar-link {
+		display: none;
 	}
 
-	.sidebar.constant {
+	.sidebar-style-constant .sidebar .sidebar-top {
+		display: none;
+	}
+
+	.sidebar-style-constant .sidebar {
 		transform: translateX(0%);
 		box-shadow: none;
 	}
 
-	.sidebar.constant.left {
+	.sidebar-style-constant .sidebar .sidebar-content {
+		margin-top: 5%;
+	}
+
+	.sidebar-style-constant .sidebar.left {
 		border-right: 1px solid #009BCD;
 	}
 
-	.sidebar.constant.right {
+	.sidebar-style-constant .sidebar.right {
 		border-left: 1px solid #009BCD;
 	}
 
