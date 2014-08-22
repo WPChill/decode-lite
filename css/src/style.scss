@@ -316,26 +316,32 @@ a {
 	color: #009BCD;
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
+	
+	.no-touch &:hover {
+		color: #009BCD;
+	}
+	
+	.no-touch &:active {
+		color: #007EA6;
+	}
 }
 
-.no-touch a:hover {
-	color: #009BCD;
-}
-
-.no-touch a:active {
-	color: #007EA6;
-}
-
-.no-touch .site-description a, .no-touch .entry-meta a, .no-touch .entry-content a, .no-touch .entry-footer a, .no-touch .author-site a, .no-touch .theme-info a, .no-touch .site-colophon a {
+.no-touch .site-description a,
+.no-touch .entry-meta a,
+.no-touch .entry-content a,
+.no-touch .entry-footer a,
+.no-touch .author-site a,
+.no-touch .theme-info a,
+.no-touch .site-colophon a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-}
-
-.no-touch .site-description a:hover, .no-touch .entry-meta a:hover, .no-touch .entry-content a:hover, .no-touch .entry-footer a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover {
-	border-bottom: 1px solid #009BCD;
-}
-
-.no-touch .site-description a:active, .no-touch .entry-meta a:active, .no-touch .entry-content a:active, .no-touch .entry-footer a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active {
-	border-bottom: 1px solid #007EA6;
+	
+	&:hover {
+		border-bottom: 1px solid #009BCD;
+	}
+	
+	&:active {
+		border-bottom: 1px solid #007EA6;
+	}
 }
 
 /*--------------------------------------------------------------
