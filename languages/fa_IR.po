@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fa-Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-08-22 06:39+0330\n"
+"PO-Revision-Date: 2014-08-22 08:01+0330\n"
 "Last-Translator: BenYamin Salimi <benyamin.salimi@gmail.com>\n"
 "Language-Team: BenYamin Salimi <benyamin.salimi@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -271,7 +271,7 @@ msgstr "منوی هدر "
 
 #: ../functions.php:83
 msgid "Sidebar Menu"
-msgstr "منوی ساید بار"
+msgstr "منوی نوار کناری"
 
 #: ../functions.php:84
 msgid "Footer Menu"
@@ -279,7 +279,7 @@ msgstr "منوی فوتر"
 
 #: ../functions.php:130
 msgid "Sidebar"
-msgstr "ساید بار"
+msgstr "نوار کناری"
 
 #: ../functions.php:132
 msgctxt "sidebar description"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../image.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> بازگشت"
 
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
@@ -327,7 +327,7 @@ msgstr "نمایش توضیحات سایت"
 
 #: ../inc/customizer.php:111
 msgid "Show Header Menu"
-msgstr ""
+msgstr "نمایش منوی هدر"
 
 #: ../inc/customizer.php:118
 msgid ""
@@ -337,7 +337,7 @@ msgstr ""
 
 #: ../inc/customizer.php:131
 msgid "Sidebar Options"
-msgstr ""
+msgstr "تنظیمات ساید بار"
 
 #: ../inc/customizer.php:155
 msgid "Enable Sidebar"
@@ -345,7 +345,7 @@ msgstr "فعال سازی ساید بار"
 
 #: ../inc/customizer.php:162
 msgid "Sidebar Position"
-msgstr ""
+msgstr "حالت نوار کناری"
 
 #: ../inc/customizer.php:166 ../inc/customizer.php:177
 msgid "Left"
@@ -357,25 +357,25 @@ msgstr "راست"
 
 #: ../inc/customizer.php:173
 msgid "Sidebar Button Position"
-msgstr ""
+msgstr "تنظیم حالت دکمه نوار کناری"
 
 #: ../inc/customizer.php:184
 msgid "Always Visible Sidebar"
-msgstr ""
+msgstr "نوار کناری همیشه نمایش داده شود"
 
 #: ../inc/customizer.php:188
 msgctxt "Sidebar option"
 msgid "Always open"
-msgstr ""
+msgstr "همیشه باز"
 
 #: ../inc/customizer.php:189
 msgctxt "Sidebar option"
 msgid "Closed by default"
-msgstr ""
+msgstr "به صورت پیشفرض بسته باشد"
 
 #: ../inc/customizer.php:202
 msgid "Discussion Options"
-msgstr ""
+msgstr "تنظیمات گفتگو"
 
 #: ../inc/customizer.php:219
 msgid "Enable Comments"
@@ -383,7 +383,7 @@ msgstr "فعال کردن نظرات"
 
 #: ../inc/customizer.php:226
 msgid "Show allowed HTML tags on comment form"
-msgstr ""
+msgstr "نمایش تگهای مجاز HTML  در فرم نظرات"
 
 #: ../inc/customizer.php:239
 msgid "Social Options"
@@ -475,7 +475,7 @@ msgstr "خوراک RSS"
 
 #: ../inc/customizer.php:858
 msgid "Content Options"
-msgstr ""
+msgstr "تنظیمات محتوا"
 
 #: ../inc/customizer.php:930
 msgid ""
@@ -492,21 +492,25 @@ msgstr ""
 
 #: ../inc/customizer.php:951
 msgid "Display a post's featured image on its individual page."
-msgstr ""
+msgstr "نمایش تصویر شاخص پست در صفحات فردی"
 
 #: ../inc/customizer.php:958
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
+"نمای برچسب ها در پایین صفحه ( در صورت غیر فعال بودن نیز برچسب ها در صفحات "
+"فردی نمایش داده میشوند)"
 
 #: ../inc/customizer.php:965
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
 msgstr ""
+"نمایش ظبقه بندی در پایین صفحه ( در صورت  غیر فعال بودن نیز طبقه بندی در "
+"صفحات فردی نمایش داده میشود)   "
 
 #: ../inc/customizer.php:972
 msgid "Show author's name, profile image, and bio after posts"
-msgstr ""
+msgstr "نمایش نام،عکس پروفایل،و بیو بعد از پست ها "
 
 #: ../inc/customizer.php:979
 msgid "Entry Date Position"
@@ -514,7 +518,7 @@ msgstr "حالت ورودی تاریخ"
 
 #: ../inc/customizer.php:983
 msgid "Above Header"
-msgstr "بالاتر از خدر"
+msgstr "بالاتر از هدر"
 
 #: ../inc/customizer.php:984
 msgid "Below Header"
@@ -542,7 +546,7 @@ msgstr ""
 
 #: ../inc/customizer.php:1020
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
-msgstr ""
+msgstr "متن (شرایط کپی رایت،نام پیدید آورنده و...)"
 
 #: ../inc/customizer.php:1033
 msgid "Other Options"
