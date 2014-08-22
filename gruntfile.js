@@ -73,6 +73,20 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		sass: {
+			options: {
+                sourceMap: true
+            },
+            files: {
+	        	expand: true,
+				flatten: true,
+				cwd: 'css/src/',
+				src: ['*.scss'],
+				dest: 'css/',
+				ext: '.css'
+			}
+    	},
+		
 		csscomb: {
 			options: {
 				config: 'csscomb.json'
@@ -104,11 +118,7 @@ module.exports = function(grunt) {
 			},
 			prefix: {
 				expand: true,
-				flatten: true,
-				cwd: 'css/src/',
-				src: ['*.css'],
-				dest: 'css/',
-				ext: '.css'
+				src: ['css/src/*.css']
 			}
 		},
 
@@ -169,7 +179,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['css/src/*.css'],
-				tasks: ['csscomb', 'autoprefixer', 'cssmin']
+				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			docs: {
 				files: ['docs/src/*.md'],
@@ -195,6 +205,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-modernizr");
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-csscomb');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -212,6 +223,7 @@ module.exports = function(grunt) {
 		'modernizr',
 		'jshint',
 		'uglify',
+		'sass',
 		'csscomb',
 		'autoprefixer',
 		'cssmin',

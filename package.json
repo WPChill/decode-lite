@@ -20,6 +20,7 @@
     "grunt-imageoptim": "^1.4.1",
     "grunt-markdown": "^0.6.1",
     "grunt-modernizr": "^0.5.1",
-    "grunt-newer": "^0.7.0"
+    "grunt-newer": "^0.7.0",
+    "grunt-sass": "^0.14.0"
   }
 }

@@ -1213,6 +1213,12 @@ a .attachment-post-thumbnail {
 	opacity: 0.9;
 }
 
+.post {
+	line-height: 1.65;
+	width: 100%;
+	margin: 5% auto 10%;
+}
+
 .entry-title {
 	color: #444444;
 	font-size: 1.5em;
@@ -1227,12 +1233,6 @@ a .attachment-post-thumbnail {
 
 .entry-title a {
 	color: #444444;
-}
-
-article.post {
-	line-height: 1.65;
-	width: 100%;
-	margin: 5% auto 10%;
 }
 
 .entry-content h1 {
@@ -2240,15 +2240,17 @@ li.comment {
 		padding: 2.5%;
 	}
 
-	.entry-title {
-		font-size: 2em;
-		width: 80%;
-	}
-
-	.content-area article {
+	.post {
+		font-size: 1.5em;
 		margin: 2.5% auto 5%;
 	}
 
+	.entry-title {
+		/* 		font-size: 2em; */
+		width: 80%;
+	}
+
+	/*
 	.entry-content h1 {
 		font-size: 2.5em;
 	}
@@ -2272,6 +2274,7 @@ li.comment {
 	.entry-content h6 {
 		font-size: 1.125em;
 	}
+*/
 
 	.gallery-columns-5 .gallery-caption {
 		display: block; /* Show galleries that will fit on desktop-sized screens. */
