@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 	        	expand: true,
 				flatten: true,
 				cwd: 'css/src/',
-				src: ['*.scss'],
+				src: '*.scss',
 				dest: 'css/',
 				ext: '.css'
 			}
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 			},
 			comb: {
 				expand: true,
-				src: ['css/src/*.css']
+				src: 'css/src/*.scss'
 			}
 		},
 		
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 			},
 			lint: {
 				expand: true,
-				src: ['css/src/*.css']
+				src: 'css/*.css'
 			}
 		},
 
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 			},
 			prefix: {
 				expand: true,
-				src: ['css/src/*.css']
+				src: 'css/*.css'
 			}
 		},
 
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
 				expand: true,
 				flatten: true,
 				cwd: 'css/',
-				src: ['*.css'],
+				src: '*.css',
 				ext: '.css'
 			}
 		},
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
 				tasks: ['uglify']
 			},
 			css: {
-				files: ['css/src/*.css'],
+				files: ['css/src/*.scss'],
 				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			docs: {
