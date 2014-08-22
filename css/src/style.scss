@@ -129,7 +129,7 @@ a img {
 1.2 - Typography
 --------------------------------------------------------------*/
 body, button, select, textarea {
-	color: #444444;
+	color: #444;
 	font: 300 110%/1.5 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -152,7 +152,7 @@ hr {
 	height: 1px;
 	border: 0;
 	margin-bottom: 1.5em;
-	background-color: #CCCCCC;
+	background-color: #CCC;
 }
 
 /* Text elements */
@@ -208,7 +208,7 @@ pre {
 	max-width: 100%;
 	padding: 1.6em;
 	margin-bottom: 1.6em;
-	background: #EEEEEE;
+	background: #EEE;
 }
 
 code, kbd, tt, var {
@@ -216,7 +216,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted #666666;
+	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
@@ -333,7 +333,7 @@ input[type='text'], input[type='email'], input[type='password'], input[type='sea
 }
 
 .no-touch input[type='text']:focus, .touch input[type='text']:focus, .no-touch input[type='email']:focus, .touch input[type='email']:focus, .no-touch input[type='password']:focus, .touch input[type='password']:focus, .no-touch input[type='search']:focus, .touch input[type='search']:focus, .no-touch input[type='tel']:focus, .touch input[type='tel']:focus, .no-touch input[type='url']:focus, .touch input[type='url']:focus, .no-touch textarea:focus, .touch textarea:focus {
-	color: #444444;
+	color: #444;
 	border-color: #009BCD;
 	outline: none;
 	background: rgba(255,255,255,1);
@@ -646,19 +646,19 @@ embed, iframe, object {
 
 .site-title a {
 	transition: text-shadow 0.5s;
-	color: #444444;
+	color: #444;
 	font-size: 1.95em;
 
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .no-touch .site-title a:hover {
-	color: #444444;
+	color: #444;
 	text-shadow: 0 0 6px rgba(75,75,75,0.5);
 }
 
 .no-touch .site-title a:active {
-	color: #444444;
+	color: #444;
 	text-shadow: 0 -2px 12px rgba(75,75,75,0.85);
 }
 
@@ -972,7 +972,7 @@ embed, iframe, object {
 
 /* Down Arrow */
 .menu ul .menu-item-has-children > a::after, .menu ul .page_item_has_children > a::after, .sidebar-menu ul .menu-item-has-children > a::after, .sidebar-menu ul .page_item_has_children > a::after {
-	border-top: 5px solid #444444;
+	border-top: 5px solid #444;
 	border-right: 5px solid transparent;
 	border-bottom: none;
 	border-left: 5px solid transparent;
@@ -982,17 +982,17 @@ embed, iframe, object {
 .footer-menu ul .menu-item-has-children > a::after, .footer-menu ul .page_item_has_children > a::after {
 	border-top: none;
 	border-right: 5px solid transparent;
-	border-bottom: 5px solid #444444;
+	border-bottom: 5px solid #444;
 	border-left: 5px solid transparent;
 }
 
 
 .menu a {
-	color: #444444;
+	color: #444;
 }
 
 .menu ul > .menu-item-has-children > a::after, .menu ul > .page_item_has_children > a::after {
-	border-top-color: #444444;
+	border-top-color: #444;
 }
 
 .no-touch .menu a:hover, .menu ul li.open > a {
@@ -1027,7 +1027,7 @@ embed, iframe, object {
 }
 
 .footer-menu ul > .menu-item-has-children > a::after, .footer-menu ul > .page_item_has_children > a::after {
-	border-bottom-color: #444444;
+	border-bottom-color: #444;
 }
 
 .no-touch .footer-menu ul > .menu-item-has-children > a:hover::after, .no-touch .footer-menu ul > .page_item_has_children > a:hover::after, .footer-menu ul > li.open > a::after {
@@ -1220,7 +1220,7 @@ a .attachment-post-thumbnail {
 }
 
 .entry-title {
-	color: #444444;
+	color: #444;
 	font-size: 1.5em;
 	line-height: 1.25;
 	text-align: center;
@@ -1300,7 +1300,7 @@ body.single-attachment .entry-content .attachment {
 }
 
 .read-more {
-	color: #444444;
+	color: #444;
 }
 
 .entry-footer {
@@ -1479,6 +1479,9 @@ article .date a {
 
 .author-name {
 	font-size: 1.4em;
+	a {
+		color: #444;
+	}
 }
 
 .author-name a {
