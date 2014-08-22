@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-04-14 16:53-0600\n"
-"PO-Revision-Date: 2014-08-22 05:17+0330\n"
+"PO-Revision-Date: 2014-08-22 06:02+0330\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -190,19 +190,19 @@ msgstr ""
 
 #: ../content-excerpt.php:30
 msgid "Read More&hellip;"
-msgstr ""
+msgstr "ادامه متن&hellip;"
 
 #: ../content-excerpt.php:31 ../content-link.php:35 ../content-page.php:26
 #: ../content-quote.php:21 ../content-search.php:19 ../content-single.php:27
 #: ../content-single.php:69 ../content-single.php:114 ../content.php:35
 #: ../image.php:30
 msgid "Edit"
-msgstr ""
+msgstr "ویرایش"
 
 #: ../content-link.php:26 ../content-quote.php:12 ../content-single.php:13
 #: ../content-single.php:56 ../content-single.php:100 ../content.php:26
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "ادامه مطلب <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../content-link.php:29 ../content-page.php:22 ../content-quote.php:15
 #: ../content-single.php:14 ../content-single.php:101 ../content.php:29
@@ -241,12 +241,16 @@ msgstr "هیچی پیدا نشد!!"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"آماده اید تا اولین پست خود را منتشر کنید؟ <a href=\"%1$s\">از اینجا شورع "
+"کنید</a>."
 
 #: ../content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"متاسفم، ولی هیچ نتیجه ای برای جست و جوی شما پیدا نشد. لطفا با واژه های کلیدی "
+"دیگر امتحان کنید"
 
 #: ../content-none.php:28
 msgid ""
@@ -257,23 +261,23 @@ msgstr ""
 #: ../footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
-msgstr ""
+msgstr "%1$s توسط %2$s"
 
 #: ../functions.php:82
 msgid "Header Menu"
-msgstr ""
+msgstr "منوی هدر "
 
 #: ../functions.php:83
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "منوی ساید بار"
 
 #: ../functions.php:84
 msgid "Footer Menu"
-msgstr ""
+msgstr "منوی فوتر"
 
 #: ../functions.php:130
 msgid "Sidebar"
-msgstr ""
+msgstr "ساید بار"
 
 #: ../functions.php:132
 msgctxt "sidebar description"
@@ -291,6 +295,9 @@ msgid ""
 "\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
 "\"gallery\">%5$s</a>"
 msgstr ""
+"منتشر شده <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> در <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
 
 #: ../image.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
@@ -298,11 +305,11 @@ msgstr ""
 
 #: ../image.php:35
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "بعدی <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/customizer.php:57
 msgid "Header Options"
-msgstr ""
+msgstr "تنظیمات هدر"
 
 #: ../inc/customizer.php:90
 msgid "Favicon Image (must be a PNG)"
@@ -310,11 +317,11 @@ msgstr ""
 
 #: ../inc/customizer.php:97
 msgid "Show Site Title"
-msgstr ""
+msgstr "نمایش عنوان  سایت"
 
 #: ../inc/customizer.php:104
 msgid "Show Site Description"
-msgstr ""
+msgstr "نمایش توضیحات سایت"
 
 #: ../inc/customizer.php:111
 msgid "Show Header Menu"
@@ -332,7 +339,7 @@ msgstr ""
 
 #: ../inc/customizer.php:155
 msgid "Enable Sidebar"
-msgstr ""
+msgstr "فعال سازی ساید بار"
 
 #: ../inc/customizer.php:162
 msgid "Sidebar Position"
@@ -340,11 +347,11 @@ msgstr ""
 
 #: ../inc/customizer.php:166 ../inc/customizer.php:177
 msgid "Left"
-msgstr ""
+msgstr "چپ"
 
 #: ../inc/customizer.php:167 ../inc/customizer.php:178
 msgid "Right"
-msgstr ""
+msgstr "راست"
 
 #: ../inc/customizer.php:173
 msgid "Sidebar Button Position"
@@ -370,7 +377,7 @@ msgstr ""
 
 #: ../inc/customizer.php:219
 msgid "Enable Comments"
-msgstr ""
+msgstr "فعال کردن نظرات"
 
 #: ../inc/customizer.php:226
 msgid "Show allowed HTML tags on comment form"
@@ -433,13 +440,13 @@ msgstr ""
 #: ../inc/customizer.php:551 ../inc/customizer.php:768
 #, php-format
 msgid "%s Profile URL"
-msgstr ""
+msgstr "%s آدرس پروفایل"
 
 #: ../inc/customizer.php:670 ../inc/customizer.php:691
 #: ../inc/customizer.php:705 ../inc/customizer.php:712
 #, php-format
 msgid "%s Site URL"
-msgstr ""
+msgstr "%s آدرس سایت"
 
 #: ../inc/customizer.php:719 ../inc/customizer.php:754
 #, php-format
@@ -458,11 +465,11 @@ msgstr "ادرس ایمیل"
 #: ../inc/customizer.php:838
 #, php-format
 msgid "%s Link"
-msgstr ""
+msgstr "%s پیوند"
 
 #: ../inc/customizer.php:845
 msgid "RSS Feed"
-msgstr ""
+msgstr "خوراک RSS"
 
 #: ../inc/customizer.php:858
 msgid "Content Options"
@@ -501,33 +508,35 @@ msgstr ""
 
 #: ../inc/customizer.php:979
 msgid "Entry Date Position"
-msgstr ""
+msgstr "حالت ورودی تاریخ"
 
 #: ../inc/customizer.php:983
 msgid "Above Header"
-msgstr ""
+msgstr "بالاتر از خدر"
 
 #: ../inc/customizer.php:984
 msgid "Below Header"
-msgstr ""
+msgstr "پایین هدر"
 
 #: ../inc/customizer.php:990
 msgid "Show Page Headers"
-msgstr ""
+msgstr "نمایش عنوان صفحه "
 
 #: ../inc/customizer.php:997
 msgid "Show entry date for post excepts on the main page"
-msgstr ""
+msgstr "نمایش تاریخ ارسال پست به جز در صفحه اصلی "
 
 #: ../inc/customizer.php:1004
 msgid "Add an arrow before the title of a link post"
-msgstr ""
+msgstr "اضافه کردن کمان  قبل از عنوان لینک نوشته"
 
 #: ../inc/customizer.php:1011
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
 msgstr ""
+"نمایش اطلاعات قالب(نمایش نام سازنده قالب ته صفحه) \"متعرجم : بی فرهنگی در "
+"نیاز این تیک رو ور ندار\""
 
 #: ../inc/customizer.php:1020
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
@@ -535,11 +544,11 @@ msgstr ""
 
 #: ../inc/customizer.php:1033
 msgid "Other Options"
-msgstr ""
+msgstr "دیگر تنظیمات"
 
 #: ../inc/customizer.php:1052
 msgid "Custom CSS"
-msgstr ""
+msgstr "CSS کاستوم"
 
 #: ../inc/customizer.php:1059
 msgid "Show the following post types on home blog page. (Separate with commas)"
@@ -555,11 +564,11 @@ msgstr ""
 
 #: ../inc/customizer.php:1112
 msgid "Text Color"
-msgstr ""
+msgstr "رنگ متن"
 
 #: ../inc/customizer.php:1119
 msgid "Secondary Text Color"
-msgstr ""
+msgstr "رنگ دوم متن "
 
 #: ../inc/customizer.php:1126
 msgid "Use accent color instead of text color for icons"
@@ -587,11 +596,11 @@ msgstr ""
 
 #: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> پست های قدیمی تر "
 
 #: ../inc/template-tags.php:31
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "پست های جدیدتر <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:56
 msgid "Post navigation"
@@ -613,15 +622,17 @@ msgid ""
 "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-date"
 "\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
+"<span class=\"posted-on-text\">منتشر شده در  </span><span class=\"posted-on-"
+"date\">%1$s</span><span class=\"byline\"> توسط %2$s</span>"
 
 #: ../inc/template-tags.php:146
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "نمایش تمام پست های %s"
 
 #: ../page-explore.php:11
 msgid "Explore Page"
-msgstr ""
+msgstr "کاوش صفحه"
 
 #: ../page-explore.php:26
 msgid "Recent Posts"
@@ -633,4 +644,4 @@ msgstr "دسته بندی ها"
 
 #: ../sidebar.php:15
 msgid "Navigation"
-msgstr ""
+msgstr "ناوبری"
