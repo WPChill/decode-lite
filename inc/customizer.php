@@ -54,6 +54,15 @@ function decode_social_icons_are_enabled() {
 	}
 }
 
+function decode_plus_electric_slide_sidebar_is_not_enabled() {
+	if ( get_theme_mod( 'sidebar_style', 'original' ) != 'slide' && decode_sidebar_is_enabled()  ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 class Decode_Customize {
 
 /**
@@ -213,7 +222,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'constant_sidebar', array(
 		'label'           => __( 'Always Visible Sidebar', 'decode' ),
 		'section'         => 'decode_sidebar_options',
-		'active_callback' => 'decode_sidebar_is_enabled',
+		'active_callback' => 'decode_plus_electric_slide_sidebar_is_not_enabled',
 		'type'            => 'radio',
 		'choices'         => array(
 			'constant'       => _x( 'Always open', 'Sidebar option', 'decode' ),
