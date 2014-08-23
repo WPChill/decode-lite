@@ -1,12 +1,12 @@
 # Decode 2.9
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![devDependency Status](https://david-dm.org/ScottSmith95/Decode/dev-status.png)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
+قالب ساده و خوبی برای وبلاگ های ضخصی که فارسی شده و فونتشم به یکان تغییر کرده 
 
-Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
+منبع اصلی قالب [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-*Note: This version of Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
+این ورژن از قالب با اینترنت اکسپلور ورژن 8 سازگاری ندارد
 
-I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
 
 If you want to change any of the colors in your theme, enable the sidebar, social links, and more, access the Customize menu in Admin > Appearance > Customize. From here you can access all the settings available for this theme. 
 
@@ -20,7 +20,7 @@ To add an explore page to your site, simply add a page with the title that you w
 
 Breadcrumbs are supported via the [Breadcrumb Trail](http://wordpress.org/plugins/breadcrumb-trail/) or [Breadcrumb NavXT](http://wordpress.org/plugins/breadcrumb-navxt/) plugins. Simply activate either plugin and enjoy beautiful breadcrumbs across your site.
 
-Lastly, Decode has social icons in the header that can link to your profiles from every side of the Internet. These can all be configured in the Customize menu and are listed below.
+ایکن شبکه های اجتماعی که میتونید توی قالب قرار بدید :
 - Twitter
 - ADN
 - Facebook
@@ -78,6 +78,3 @@ If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts 
 
 *The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*
 
-واسه اضافه مردن زبان فارسی میتونید فقط فایل های فارسی رو از پوشه language وردارید و به پوشه مربوطه رو سی ام اس تون انقال یدید 
-به زودی فونت فارسی هم بهش اضافه میکنم.
-با تشکر 
