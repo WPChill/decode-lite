@@ -1047,8 +1047,9 @@ embed, iframe, object {
 	border-top-color: #009BCD;
 }
 
-.sidebar-menu ul .current_page_item > a, .sidebar-menu ul .current_page_item > a {
-	color: #007EA6;
+.sidebar-menu ul .current-menu-item > a,
+.sidebar-menu ul .current_page_item > a {
+	color: $accent-color-secondary;
 }
 
 .sidebar-menu ul .current_page_item.menu-item-has-children > a::after, .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
