@@ -29,11 +29,13 @@ function decode_setup() {
 	load_theme_textdomain( 'decode', get_template_directory() . '/languages' );
 	
 	// Register all three menus. 
-	register_nav_menus( array(
+	$args = array(
 		'header-menu'  => __( 'Header Menu', 'decode' ),
 		'sidebar-menu' => __( 'Sidebar Menu', 'decode' ),
 		'footer-menu' => __( 'Footer Menu', 'decode' )
-	) );
+	);
+	$args = apply_filters( 'decode_register_nav_menus_args', $args );
+	register_nav_menus( $args );
 	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -62,9 +64,15 @@ function decode_setup() {
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', array(
-		'caption', 'comment-form', 'comment-list', 'gallery', 'search-form'
-	) );
+	$args = array(
+		'caption',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'search-form'
+	);
+	$args = apply_filters( 'decode_html5_args', $args );
+	add_theme_support( 'html5', $args );
 
 	/*
      * Enable support for Post Thumbnails on posts and pages.
@@ -78,9 +86,13 @@ function decode_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	$args = array(
-		'aside', 'image', 'video', 'quote', 'link'
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link'
 	); 
-	$args = apply_filters( 'decode_post_format_args', $args );
+	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
 }
 endif; // decode_setup
