@@ -16,7 +16,6 @@
 	"space-after-opening-brace": "\n",
 	"space-before-selector-delimiter": "",
 	"space-before-closing-brace": "\n",
-	"strip-spaces": true,
 	"unitless-zero": true,
 	"vendor-prefix-align": true,
 	"sort-order": [
