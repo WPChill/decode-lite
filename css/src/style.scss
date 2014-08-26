@@ -241,25 +241,28 @@ input[type='submit'] {
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-}
-
-.no-touch button:hover,
-.no-touch input[type='button']:hover,
-.no-touch input[type='reset']:hover,
-.no-touch input[type='submit']:hover {
-	border: 1px solid $accent-color-secondary;
-}
-
-.no-touch button:focus,
-.no-touch input[type='button']:focus,
-.no-touch input[type='reset']:focus,
-.no-touch input[type='submit']:focus,
-.no-touch button:active,
-.no-touch input[type='button']:active,
-.no-touch input[type='reset']:active,
-.no-touch input[type='submit']:active {
-	color: $accent-color-secondary;
+	
+	.no-touch &:hover {
+		border: 1px solid $accent-color-secondary;
+	}
+	
+	.no-touch &:focus,
+	.no-touch &:active {
+		color: $accent-color-secondary;
 	border-color: $accent-color-secondary;
+	}
+}
+
+textarea {
+	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	color: #C0C0C0;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
+	padding: 0.3em;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	background: rgba(255,255,255,0);
 }
 
 input[type='checkbox'],
@@ -269,11 +272,10 @@ input[type='radio'] {
 
 input[type='search'] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-}
-
-input[type='search']::-webkit-search-decoration {
-	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-	-webkit-appearance: none;
+	
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	}
 }
 
 button::-moz-focus-inner,
@@ -297,54 +299,27 @@ input[type='url'] {
 	border: 1px solid #C0C0C0;
 	border-radius: 3px;
 	background: rgba(255,255,255,0);
-
-	-webkit-appearance: none;
 }
 
-.no-touch input[type='text']:hover,
-.no-touch input[type='email']:hover,
-.no-touch input[type='password']:hover,
-.no-touch input[type='search']:hover,
-.no-touch input[type='tel']:hover,
-.no-touch input[type='url']:hover,
-.no-touch textarea:hover {
-	color: #A6A6A6;
-	border-color: #A6A6A6;
-	background: rgba(255,255,255,0.35);
-}
-
-.no-touch input[type='text']:focus,
-   .touch input[type='text']:focus,
-.no-touch input[type='email']:focus,
-   .touch input[type='email']:focus,
-.no-touch input[type='password']:focus,
-   .touch input[type='password']:focus,
-.no-touch input[type='search']:focus,
-   .touch input[type='search']:focus,
-.no-touch input[type='tel']:focus,
-   .touch input[type='tel']:focus,
-.no-touch input[type='url']:focus,
-   .touch input[type='url']:focus,
-.no-touch textarea:focus,
-   .touch textarea:focus {
-	color: $text-color;
-	border-color: $accent-color-secondary;
-	outline: none;
-	background: rgba(255,255,255,1);
-}
-
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
 textarea {
-	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	color: #C0C0C0;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 100%;
-	padding: 0.3em;
-	border: 1px solid #C0C0C0;
-	border-radius: 3px;
-	background: rgba(255,255,255,0);
-
-	-webkit-appearance: none;
+	&:hover {
+		color: #A6A6A6;
+		border-color: #A6A6A6;
+		background: rgba(255,255,255,0.35);
+	}
+	
+	&:focus {
+		color: $text-color;
+		border-color: $accent-color-secondary;
+		outline: none;
+		background: rgba(255,255,255,1);
+	}
 }
 
 
@@ -1888,8 +1863,8 @@ li.comment {
 	border: none;
 	opacity: 1;
 	
-	.sidebar-close svg,
-	.sidebar-close img {
+	svg,
+	img {
 		width: 1.4em;
 		height: 1.4em;
 	}
