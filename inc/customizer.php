@@ -6,7 +6,7 @@
  */
 
 function decode_add_customize_controls( $wp_customize ) {
-	/* Adds Textarea Control*/
+	/* Adds Textarea Control (Required until WP 4.4) */
 	class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	    public $type = 'textarea';
 	 
@@ -976,66 +976,58 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'=> 37,
 		'description' => sprintf( _x( 'These options change the display of %s\'s content', '(blog name)\'s content.' ,'decode'), get_bloginfo( 'name', 'display' ) )
     ) );
-
+    
+    
+    $wp_customize->add_setting( 'latin_extended_font', array(
+		'default' => false
+	) );
 
 	$wp_customize->add_setting( 'use_excerpts', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 	
 	$wp_customize->add_setting( 'use_excerpts_on_archives', array(
-		'default' => true,
-		'transport' => 'refresh'
+		'default' => true
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_excerpts', array(	// Yep, that's the longest setting name I have.
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 	
 	$wp_customize->add_setting( 'show_featured_images_on_singles', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 
     $wp_customize->add_setting( 'show_tags', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 	
 	$wp_customize->add_setting( 'show_author_section', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 	
 	$wp_customize->add_setting( 'entry_date_position', array(
-		'default' => 'below',
-		'transport' => 'refresh'
+		'default' => 'below'
 	) );
 	
 	$wp_customize->add_setting( 'show_entry_date_on_excerpts', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 	
 	$wp_customize->add_setting( 'show_page_headers', array(
-		'default' => true,
-		'transport' => 'refresh'
+		'default' => true
 	) );
 
 	$wp_customize->add_setting( 'link_post_title_arrow', array(
-		'default' => false,
-		'transport' => 'refresh'
+		'default' => false
 	) );
 
     $wp_customize->add_setting( 'show_theme_info', array(
-		'default' => true,
-		'transport' => 'refresh'
+		'default' => true
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
@@ -1044,53 +1036,60 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 
+	$wp_customize->add_control( 'latin_extended_font', array(
+		'label'   => __( 'Load Latin Extended character set. This will increase page load times.', 'decode' ),
+		'section' => 'decode_content_options',
+		'type'    => 'checkbox',
+		'priority'=> 1
+	) );
+
 	$wp_customize->add_control( 'use_excerpts', array(
 		'label'   => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 1
+		'priority'=> 2
 	) );
 	
 	$wp_customize->add_control( 'use_excerpts_on_archives', array(
 		'label'   => __( 'Use entry excerpts on archive, category, and author pages.', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 1
+		'priority'=> 3
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
 		'label'   => __( 'Display posts\' featured images when excerpts are shown.', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 2
+		'priority'=> 4
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_singles', array(
 		'label'   => __( 'Display a post\'s featured image on its individual page.', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 3
+		'priority'=> 5
 	) );
 
 	$wp_customize->add_control( 'show_tags', array(
 		'label'   => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 4
+		'priority'=> 6
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
 		'label'   => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 5
+		'priority'=> 7
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
 		'label'   => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 6
+		'priority'=> 8
 	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
@@ -1101,42 +1100,35 @@ public static function decode_customize_register( $wp_customize ) {
 			'above'  => __( 'Above Header', 'decode' ),
 			'below' => __( 'Below Header', 'decode' ),
         ),
-		'priority'=> 7
+		'priority'=> 9
 	) );
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'   => __( 'Show Page Headers', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 8
+		'priority'=> 10
 	) );
 	
 	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
 		'label'   => __( 'Show entry date for post excepts on the main page', 'decode' ),
 		'section' => 'decode_content_options',
 		'type'    => 'checkbox',
-		'priority'=> 9
+		'priority'=> 11
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 12
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 11
-	) );
-	
-	$wp_customize->add_control( 'site_colophon', array(
-			'label'    => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
-			'section'  => 'decode_content_options',
-			'type'     => 'textarea',
-			'priority' => 12
+		'priority' => 13
 	) );
 	
 	$wp_customize->add_control(
@@ -1146,7 +1138,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'section' => 'decode_content_options',
 			'settings'=> 'site_colophon',
 			'type'=> 'textarea',
-			'priority'=> 12
+			'priority'=> 14
 	) ) );
 	
 	
@@ -1172,15 +1164,6 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	
-	$wp_customize->add_control( 'custom_css', array(
-			'label'       => __( 'Custom CSS', 'decode' ),
-			'section'     => 'decode_other_options',
-			'type'        => 'textarea',
-			'priority'    => 1,
-			'input_attrs' => array(
-				'spellcheck'  => 'false'
-			),
-	) );
 	$wp_customize->add_control(
 		new Decode_Customize_Textarea_Control(
 		$wp_customize, 'custom_css', array(

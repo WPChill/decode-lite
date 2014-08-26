@@ -95,7 +95,12 @@ function decode_scripts() {
 
 	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '2.9.3' );
 	
-	wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
+	if ( get_theme_mod( 'latin_extended_font', false ) == true ) {
+		wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
+	}
+	else {
+		wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen' );
+	}
 	
 	if ( get_theme_mod( 'show_sidebar', true ) == false ) {
 		wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/js/decode.js', array(), '2.9.3', true );
