@@ -1,13 +1,20 @@
-module.exports = function(grunt) {
+var exec = require('child_process').exec;
+process.on('SIGINT', function () {
+	exec('/Applications/MAMP/bin/stop.sh', function () {
+		process.exit();
+	});
+});
 
+module.exports = function(grunt) {
+	
 	// Configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
 		modernizr: {
 			makefile: {
-				"devFile": "js/src/modernizr-dev.js",
-				"outputFile": "js/src/modernizr.js",
+				"devFile": "remote", // Skip check for dev file
+				"outputFile": "scripts/src/modernizr.js",
 				"extra": {
 					"shiv": false,
 					"printshiv": true,
@@ -28,59 +35,99 @@ module.exports = function(grunt) {
 				"uglify": false,
 				"tests": ['csstransforms', 'inlinesvg', 'touch', 'flexbox'],
 				"parseFiles": false,
-				"matchCommunityTests": false,
+				"matchCommunityTests": false
 			}
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/dropdown.js']
+			all: ['Gruntfile.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
 		},
 		
-		'jsmin-sourcemap': {
+		uglify: {
+			options: {
+				sourceMap: true
+			},
 			build_decode_basic: {
-				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/fastclick.js'],
-				srcRoot: '../',
-				dest: 'decode.js',
-				destMap: 'srcmaps/decode.js.map'
+				options: {
+					sourceMapName: 'scripts/srcmaps/decode.js.map'
+				},
+				files: {
+					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/fastclick.js'],
+				}
 			},
 			build_decode_with_sidebar: {
-				cwd: 'js/',
-				src: ['src/modernizr.js', 'src/decode.js', 'src/sidebar.js', 'src/fastclick.js'],
-				srcRoot: '../',
-				dest: 'decode-with-sidebar.js',				
-				destMap: 'srcmaps/decode-with-sidebar.js.map'
+				options: {
+					sourceMapName: 'scripts/srcmaps/decode-with-sidebar.js.map'
+				},
+				files: {
+					'scripts/decode-with-sidebar.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/fastclick.js'],
+				}
 			},
 			customizer: {
-				cwd: 'js/',
-				src: 'src/customizer.js',
-				srcRoot: '../',
-				dest: 'customizer.js',				
-				destMap: 'srcmaps/customizer.js.map'
+				options: {
+					sourceMapName: 'scripts/srcmaps/customizer.js.map'
+				},
+				files: {
+					'scripts/customizer.js': ['scripts/src/customizer.js'],
+				}
+			}
+		},
+		
+		sass: {
+			options: {
+                sourceMap: true
+            },
+            files: {
+	        	expand: true,
+				flatten: true,
+				cwd: 'styles/src/',
+				src: '*.scss',
+				dest: 'styles/',
+				ext: '.css'
+			}
+    	},
+		
+		csscomb: {
+			options: {
+				config: 'csscomb.json'
+			},
+			comb: {
+				expand: true,
+				src: 'styles/src/*.scss'
+			}
+		},
+		
+		csslint: {
+			options: {
+				'adjoining-classes': false,
+				'box-model': false,
+				'box-sizing': false,
+				'unique-headings': false,
+				'qualified-headings': false
+			},
+			lint: {
+				expand: true,
+				src: 'styles/*.css'
 			}
 		},
 
 		autoprefixer: {
-            options: {
+			options: {
 				browsers: ['> 1%', 'last 2 versions', 'ie 9', 'ie 8', 'firefox 24', 'opera 12.1'],
 				map: true
 			},
 			prefix: {
 				expand: true,
-				flatten: true,
-				cwd: 'css/src/',
-				src: ['*.css'],
-				dest: 'css/',
-				ext: '.css'
+				src: 'styles/*.css'
 			}
 		},
 
-        cssmin: {
+		cssmin: {
 			minify: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/',
-				src: ['*.css'],
+				cwd: 'styles/',
+				src: '*.css',
 				ext: '.css'
 			}
 		},
@@ -99,68 +146,48 @@ module.exports = function(grunt) {
 		
 		markdown: {
 			readme: {
-				expand: true,
-				flatten: true,
-				cwd: 'docs/',
-				src: 'src/README.md',
-				dest: 'docs/',
-				ext: '.html',
 				options: {
 					template: 'docs/src/READMETemplate.html'
+				},
+				files: {
+					'docs/README.html': ['docs/src/README.md']
 				}
 			},
 			customcss: {
-				expand: true,
-				flatten: true,
-				cwd: 'docs/',
-				src: 'src/CustomCSS.md',
-				dest: 'docs/',
-				ext: '.html',
 				options: {
 					template: 'docs/src/CustomCSSTemplate.html'
+				},
+				files: {
+					'docs/CustomCSS.html': ['docs/src/CustomCSS.md']
 				}
-			},
+			}
 		},
 		
+		/* Copy Readme.md to project root */
 		copy: {
-			stylecss: {
-				expand: true,
-				flatten: true,
-				src: 'css/build/style.min.css',
-				ext: '.css'
-			},
-			readme: {
-				expand: true,
-				flatten: true,
-				src: 'docs/src/README.md'
+			copy_readme: {
+				files: {
+					'README.md': ['docs/src/README.md']
+				}
 			}
 		},
 
-        watch: {
+		watch: {
 			scripts: {
-				files: ['js/src/*.js'],
-				tasks: ['jsmin-sourcemap'],
-				options: {
-					spawn: false
-				}
+				files: ['scripts/src/*.js'],
+				tasks: ['uglify']
 			},
 			css: {
-				files: ['css/src/*.css'],
-				tasks: ['autoprefixer', 'cssmin', 'copy'],
-				options: {
-					spawn: false
-				}
+				files: ['styles/src/**/*.scss'],
+				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			docs: {
 				files: ['docs/src/*.md'],
-				tasks: ['markdown', 'copy'],
-				options: {
-					spawn: false
-				}
+				tasks: ['markdown', 'copy']
 			},
 			livereload: {
 				options: { livereload: true },
-				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js'],
+				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js']
 			}
 		},
 		
@@ -172,28 +199,44 @@ module.exports = function(grunt) {
 				command: '/Applications/MAMP/bin/stop.sh'
 			}
 		}
-    });
-    
-    // Plugin List
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-jsmin-sourcemap');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks("grunt-modernizr");
-    grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.loadNpmTasks('grunt-markdown');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-exec');
+	});
+	
+	// Plugin List
+	grunt.loadNpmTasks("grunt-modernizr");
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-csscomb');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-imageoptim');
+	grunt.loadNpmTasks('grunt-markdown');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-exec');
 
+	
 	// Workflows
-	// $ grunt: Concencates, prefixes, minifies JS and CSS files. The works.
-	grunt.registerTask('default', ['modernizr', 'jshint', 'jsmin-sourcemap', 'autoprefixer', 'cssmin', 'markdown', 'copy']);
-	
-	// $ grunt images: Goes through all images with ImageOptim and ImageAlpha (Requires ImageOptim and ImageAlpha to work)
-	grunt.registerTask('images', ['imageoptim']);
-	
-	// $ grunt dev: Watches for changes while developing, start MAMP server
-	grunt.registerTask('dev', ['exec:serverup', 'watch', 'exec:serverdown']);
+	// $ grunt: Concencates, prefixes, minifies JS and CSS files, shrinks images, and generates docs. The works.
+	grunt.registerTask('default', [
+		'modernizr',
+		'jshint',
+		'uglify',
+		'sass',
+		'csscomb',
+		'autoprefixer',
+		'cssmin',
+		'newer:imageoptim',
+		'markdown',
+		'copy'
+	]);
+		
+	// $ grunt dev: Starts MAMP server, watches for changes while developing.
+	grunt.registerTask('dev', [
+		'exec:serverup',
+		'watch',
+		'exec:serverdown'
+	]);
 
 };

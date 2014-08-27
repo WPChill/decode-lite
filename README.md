@@ -1,10 +1,11 @@
-# Decode 2.9
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![devDependency Status](https://david-dm.org/ScottSmith95/Decode/dev-status.png)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
+# Decode 3.0
+[![GitHub Release](http://img.shields.io/github/release/ScottSmith95/Decode.svg?style=flat)](https://github.com/ScottSmith95/Decode/releases/latest)
+[![Built with Grunt](http://img.shields.io/badge/built_with-GRUNT-orange.svg?style=flat)](http://gruntjs.com/)
+[![devDependency Status](http://img.shields.io/david/dev/ScottSmith95/Decode.svg?style=flat)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-*Note: This version of Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
+*Note: Decode does not support Internet Explorer 8* An Internet Explorer 8-compatible version is available for download [on GitHub](https://github.com/ScottSmith95/Decode/tree/IE8-Support) and via [direct download](https://github.com/ScottSmith95/Decode/archive/IE8-Support.zip).
 
 I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
 
@@ -41,6 +42,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Flickr
 - deviantART
 - SoundCloud
+- Bandcamp
 - Rdio
 - Spotify
 - Last.Fm
@@ -48,6 +50,8 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Vimeo
 - YouTube
 - Kickstarter
+- Gittip
+- Goodreads
 - Tumblr
 - Medium
 - Svbtle
@@ -55,6 +59,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - Stack Overflow
 - reddit
 - GitHub
+- Bitbucket
 - Runkeeper
 - Strava
 - Foursquare
@@ -72,7 +77,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 
 The Custom CSS feature allows you to change virtually anything about the style of your site. Refer to the "CustomCSS.md" file in the "docs" folder theme for common and helpful entries and experiment with creating your own to make Decode yours.
 
-To find un-minified, vendor-prefixed CSS, look no further than the .css files in the CSS directory. No seriously, don't look any further because the css/src directory bass files that you may not want to work with.
+To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory containes un-prefixed sass files that you may not want to work with.
 
 If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 

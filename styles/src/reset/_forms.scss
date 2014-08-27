@@ -1,0 +1,107 @@
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	transition: border 0.25s ease-out, color 0.25s ease-out;
+	color: $accent-color;
+	height: 2.15em;
+	padding: 0 0.7em;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	
+	.no-touch &:hover {
+		border: 1px solid $accent-color;
+	}
+	
+	.no-touch &:focus,
+	.touch &:focus,
+	.no-touch &:active,
+	.touch &:active {
+		color: $accent-color-secondary;
+		border-color: $accent-color-secondary;
+	}
+}
+
+textarea {
+	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	color: #C0C0C0;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
+	padding: 0.3em;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	background: rgba(255,255,255,0);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+
+input[type='search'] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	}
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'] {
+	transition: border 0.25s ease-out, color 0.25s ease-out, background 0.25s ease-out;
+	color: #C0C0C0;
+	width: 100%;
+	height: 2.15em;
+	padding: 0.3em;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	background: rgba(255,255,255,0);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+textarea {
+	.no-touch &:hover {
+		color: $text-color-secondary;
+		border-color: $text-color-secondary;
+		background: rgba(255,255,255,0.35);
+	}
+	
+	.no-touch &:focus,
+	.touch &:focus {
+		color: $text-color;
+		border-color: $accent-color;
+		outline: none;
+		background: rgba(255,255,255,1);
+	}
+}

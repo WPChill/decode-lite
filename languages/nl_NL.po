@@ -1,0 +1,700 @@
+# Dutch (nl_NL) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# Tom v.d. Kieboom <tvdkieboom@sharp-edge.nl>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode v2.9.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2014-08-27 00:43-0600\n"
+"PO-Revision-Date: 2014-08-27 00:49-0600\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"Description:\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! Deze pagina kan niet worden gevonden."
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Het ziet ernaar uit dat er op deze locatie niets is gevonden. Probeer een "
+"van onderstaande links, of gebruik de zoekfunctie."
+
+#: 404.php:26
+msgid "Try looking in the monthly archives."
+msgstr "Kijk eens in de maandelijkse archieven."
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr "Meest gebruikte categorieën."
+
+#: archive.php:27
+#, php-format
+msgid "Day: %s"
+msgstr "Dag: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Month: %s"
+msgstr "Maand: %s"
+
+#: archive.php:30
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:33
+#, php-format
+msgid "Year: %s"
+msgstr "Jaar: %s"
+
+#: archive.php:33
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:36
+msgid "Asides"
+msgstr "Erbij"
+
+#: archive.php:39
+msgid "Galleries"
+msgstr "Gallerijen"
+
+#: archive.php:42
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: archive.php:45
+msgid "Videos"
+msgstr "Video's"
+
+#: archive.php:48
+msgid "Quotes"
+msgstr "Qoutes"
+
+#: archive.php:51
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:54
+msgid "Statuses"
+msgstr "Status'"
+
+#: archive.php:57
+msgid "Audios"
+msgstr "Audio"
+
+#: archive.php:60
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:63 inc/extras.php:113 page-explore.php:37 sidebar.php:41
+msgid "Archives"
+msgstr "Archieven"
+
+#: author.php:25 content-single.php:25 content-single.php:73
+#: content-single.php:125
+msgid "Website"
+msgstr "Website"
+
+#: author.php:34
+#, php-format
+msgid "Author: %s"
+msgstr "Auteur: %s"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:59
+msgid "Comment navigation"
+msgstr "Navigeer door reacties"
+
+#: comments.php:36 comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; Oudere reacties"
+
+#: comments.php:37 comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Nieuwere reacties &rarr;"
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr "Geen mogelijkheid om reacties te plaatsen."
+
+#: comments.php:76
+msgid "Leave a Reply"
+msgstr "Laat een reactie achter"
+
+#: comments.php:77
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Laat een reactie aan %s achter"
+
+#: comments.php:78
+msgid "Cancel reply"
+msgstr "Annuleer reactie"
+
+#: comments.php:79
+msgid "Post Comment"
+msgstr "Plaats reactie"
+
+#: comments.php:91
+msgctxt "noun"
+msgid "Comment"
+msgstr "Reactie"
+
+#: comments.php:92
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Je moet <a href=\"%s\">ingelogged</a> zijn om een reactie te plaatsen."
+
+#: comments.php:93
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Ingelogd als: <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Wil je uitloggen?</a>"
+
+#: comments.php:94
+msgid "Your email address will not be published."
+msgstr "Je email adres is niet zichtbaar voor anderen."
+
+#: comments.php:95
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Je kan de volgende tags en attributen gebruiken: <abbr title=\"HyperText "
+"markeer taal\">HTML</abbr> %s"
+
+#: content-excerpt.php:30
+msgid "Read More&hellip;"
+msgstr "Lees meer&hellip;"
+
+#: content-excerpt.php:31 content-link.php:34 content-page.php:27
+#: content-quote.php:21 content-search.php:19 content-single.php:31
+#: content-single.php:79 content-single.php:131 content.php:37 image.php:30
+msgid "Edit"
+msgstr "Bewerk"
+
+#: content-link.php:26 content-quote.php:12 content-single.php:14
+#: content-single.php:64 content-single.php:114 content.php:26
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lees verder <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-link.php:28 content-page.php:23 content-quote.php:15
+#: content-single.php:17 content-single.php:117 content.php:29 image.php:91
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: content-link.php:32 content-quote.php:19 content.php:34
+msgid "Leave a comment"
+msgstr "Laat een reactie achter"
+
+#: content-link.php:32 content-quote.php:19 content.php:34
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: content-link.php:32 content-quote.php:19 content.php:34
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: content-link.php:37 content-quote.php:24 content-single.php:33
+#: content-single.php:81 content-single.php:133 content.php:40
+msgid "Tagged as: "
+msgstr "Getagged als:"
+
+#: content-link.php:40 content-quote.php:27 content-single.php:34
+#: content-single.php:82 content-single.php:134 content.php:43
+msgid "Categorized in&#58; "
+msgstr "Geplaatst in categorie:&#58;"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klaar om je eerste post te plaatsen? <a href=\"%1$s\">Begin hier</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, er is niets gevonden dat voldoet aan je zoekcriteria. Probeer het "
+"opnieuw met andere zoektermen."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Het lijkt erop dat hier niet meer staat wat jij zoekt. Misschien helpt de "
+"zoekfunctie je?"
+
+#: footer.php:44
+#, php-format
+msgid "%1$s by %2$s"
+msgstr "%1$s door %2$s"
+
+#: functions.php:33
+msgid "Header Menu"
+msgstr "Header menu"
+
+#: functions.php:34
+msgid "Sidebar Menu"
+msgstr "Sidebar menu"
+
+#: functions.php:35
+msgid "Footer Menu"
+msgstr "Footer menu"
+
+#: functions.php:146
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:148
+msgctxt "sidebar description"
+msgid "Only displayed if sidebar remains enabled in the Customize menu."
+msgstr ""
+"Wordt alleen getoond wanneer de sidebar aanstaat in het Customize menu."
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Ga door naar content"
+
+#: header.php:37
+#, fuzzy
+msgid "Show sidebar"
+msgstr "Sidebar"
+
+#: image.php:22
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
+msgstr ""
+"Geplaatst <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
+
+#: image.php:34
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Vorige"
+
+#: image.php:35
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Volgende <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/customizer.php:93
+msgid "Header Options"
+msgstr "Header opties"
+
+#: inc/customizer.php:126
+msgid "Favicon Image (must be a PNG)"
+msgstr "Favicon afbeelding (moet een .PNG zijn)"
+
+#: inc/customizer.php:133
+msgid "Show Site Title"
+msgstr "Toon site titel"
+
+#: inc/customizer.php:140
+msgid "Show Site Description"
+msgstr "Toon site beschrijving"
+
+#: inc/customizer.php:147
+msgid "Show Header Menu"
+msgstr "Toon header menu"
+
+#: inc/customizer.php:154
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr ""
+"HTML voor omschrijving, als je je blog omschrijving wilt vervangen door HTML "
+"markering"
+
+#: inc/customizer.php:168
+msgid "Sidebar Options"
+msgstr "Sidebar opties"
+
+#: inc/customizer.php:192
+msgid "Enable Sidebar"
+msgstr "Activeer sidebar"
+
+#: inc/customizer.php:199
+msgid "Sidebar Position"
+msgstr "Sidebar positie"
+
+#: inc/customizer.php:204 inc/customizer.php:216
+msgid "Left"
+msgstr "Links"
+
+#: inc/customizer.php:205 inc/customizer.php:217
+msgid "Right"
+msgstr "Rechts"
+
+#: inc/customizer.php:211
+msgid "Sidebar Button Position"
+msgstr "Sidebar knop positie"
+
+#: inc/customizer.php:223
+msgid "Always Visible Sidebar"
+msgstr "Sidebar altijd zichtbaar"
+
+#: inc/customizer.php:228
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr "Altijd geopend"
+
+#: inc/customizer.php:229
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr "Standaard gesloten"
+
+#: inc/customizer.php:241
+msgid "Discussion Options"
+msgstr "Discussie opties"
+
+#: inc/customizer.php:258
+msgid "Enable Comments"
+msgstr "Activeer reacties"
+
+#: inc/customizer.php:265
+msgid "Show allowed HTML tags on comment form"
+msgstr "Toon toegestane HTML tags op reacties formulier"
+
+#: inc/customizer.php:278
+msgid "Social Options"
+msgstr "Social media opties"
+
+#: inc/customizer.php:514 inc/customizer.php:521
+msgid "Show Social Icons"
+msgstr "Toon social media iconen"
+
+#: inc/customizer.php:514
+msgid "in Header"
+msgstr "in header"
+
+#: inc/customizer.php:521
+msgid "in Footer"
+msgstr "in footer"
+
+#: inc/customizer.php:528
+msgid "Open Links in New Tab/Window"
+msgstr "Open links in een nieuw tabblad / scherm"
+
+#: inc/customizer.php:536 inc/customizer.php:544 inc/customizer.php:552
+#: inc/customizer.php:560 inc/customizer.php:569 inc/customizer.php:577
+#: inc/customizer.php:585 inc/customizer.php:593 inc/customizer.php:601
+#: inc/customizer.php:617 inc/customizer.php:625 inc/customizer.php:633
+#: inc/customizer.php:641 inc/customizer.php:649 inc/customizer.php:657
+#: inc/customizer.php:665 inc/customizer.php:673 inc/customizer.php:681
+#: inc/customizer.php:697 inc/customizer.php:713 inc/customizer.php:721
+#: inc/customizer.php:729 inc/customizer.php:737 inc/customizer.php:745
+#: inc/customizer.php:753 inc/customizer.php:769 inc/customizer.php:777
+#: inc/customizer.php:793 inc/customizer.php:825 inc/customizer.php:833
+#: inc/customizer.php:841 inc/customizer.php:849 inc/customizer.php:865
+#: inc/customizer.php:881 inc/customizer.php:889 inc/customizer.php:897
+#: inc/customizer.php:905 inc/customizer.php:913 inc/customizer.php:921
+#: inc/customizer.php:937
+#, php-format
+msgid "%s Username"
+msgstr "%s Gebruikersnaam"
+
+#: inc/customizer.php:561
+msgid " (or the long number in your profile URL)"
+msgstr "(of het lange nummer in je profiel-URL)"
+
+#: inc/customizer.php:609 inc/customizer.php:873
+#, php-format
+msgid "%s Profile URL"
+msgstr "%s Profiel-URL"
+
+#: inc/customizer.php:689 inc/customizer.php:761 inc/customizer.php:785
+#: inc/customizer.php:801 inc/customizer.php:809
+#, php-format
+msgid "%s Site URL"
+msgstr "%s Site-URL"
+
+#: inc/customizer.php:705 inc/customizer.php:953
+#, php-format
+msgid "%s Link"
+msgstr "%s Link"
+
+#: inc/customizer.php:817 inc/customizer.php:857
+#, php-format
+msgid "%s User ID"
+msgstr "%s Gebruikers-ID"
+
+#: inc/customizer.php:929
+#, php-format
+msgid "%s Group Name"
+msgstr "%s Groepsnaam"
+
+#: inc/customizer.php:945
+msgid "Email Address"
+msgstr "Email adres"
+
+#: inc/customizer.php:961
+msgid "RSS Feed"
+msgstr "RSS feed"
+
+#: inc/customizer.php:975
+msgid "Content Options"
+msgstr "Content opties"
+
+#: inc/customizer.php:977
+#, php-format
+msgctxt "(blog name)'s content."
+msgid "These options change the display of %s's content"
+msgstr ""
+
+#: inc/customizer.php:1040
+msgid "Load Latin Extended character set. This will increase page load times."
+msgstr ""
+
+#: inc/customizer.php:1047
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+"Gebruik entry excerpten inplaats van volledige tekst op thuispagina. "
+"Exclusief sticky posts."
+
+#: inc/customizer.php:1054
+msgid "Use entry excerpts on archive, category, and author pages."
+msgstr "Gebruik entry excerpten in archief, categorie en auteur pagina's."
+
+#: inc/customizer.php:1061
+msgid "Display posts' featured images when excerpts are shown."
+msgstr "Toon post afbeeldingen wanneer excerpten getoond worden."
+
+#: inc/customizer.php:1068
+msgid "Display a post's featured image on its individual page."
+msgstr "Toon een post afbeelding op zijn individuele pagina."
+
+#: inc/customizer.php:1075
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+"Toon tags op frontpagina (tags worden getoond op de individuele post pagina)."
+
+#: inc/customizer.php:1082
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+"Toon categorieën op frontpagina (categorieën worden getoond op de "
+"individuele post pagina)."
+
+#: inc/customizer.php:1089
+msgid "Show author's name, profile image, and bio after posts"
+msgstr "Toon auteurs naam, profiel afbeelding en biografie na posts"
+
+#: inc/customizer.php:1096
+msgid "Entry Date Position"
+msgstr "Plaatsingsdatum positie"
+
+#: inc/customizer.php:1100
+msgid "Above Header"
+msgstr "Boven header"
+
+#: inc/customizer.php:1101
+msgid "Below Header"
+msgstr "Onder header"
+
+#: inc/customizer.php:1107
+msgid "Show Page Headers"
+msgstr "Toon pagina headers"
+
+#: inc/customizer.php:1114
+msgid "Show entry date for post excepts on the main page"
+msgstr "Toon plaatsingsdatum van post excerpten op hoofdpagina"
+
+#: inc/customizer.php:1121
+msgid "Add an arrow before the title of a link post"
+msgstr "Voeg een pijl toe voor de titel van een link-post"
+
+#: inc/customizer.php:1128
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+"Toon thema info (voegt een regel tekst over het thema en de ontwerper toe "
+"aan de footer van de pagina's)"
+
+#: inc/customizer.php:1137
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr ""
+"Text (kolofoon, copyright, credits, etcetera) voor de folter van de site"
+
+#: inc/customizer.php:1151
+msgid "Other Options"
+msgstr "Andere opties"
+
+#: inc/customizer.php:1170
+msgid "Custom CSS"
+msgstr "Aangepaste CSS"
+
+#: inc/customizer.php:1181
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr ""
+"Toon de volgende post types op de thuis-blog pagina. (Scheiden met komma's)"
+
+#: inc/customizer.php:1220
+msgid "Accent Color"
+msgstr "Accent kleur"
+
+#: inc/customizer.php:1221
+msgid "The main color used for links, borders, buttons, and more."
+msgstr ""
+
+#: inc/customizer.php:1228
+msgid "Active Link Color"
+msgstr "Actieve link kleur"
+
+#: inc/customizer.php:1229
+msgid ""
+"The color for currently clicked links.<br>(Try using a darker color than the "
+"Accent Color.)"
+msgstr ""
+
+#: inc/customizer.php:1236
+msgid "Text Color"
+msgstr "Tekst kleur"
+
+#: inc/customizer.php:1237
+#, fuzzy
+msgid "The main text color."
+msgstr "Tekst kleur"
+
+#: inc/customizer.php:1244
+msgid "Secondary Text Color"
+msgstr "Secundaire tekst kleur"
+
+#: inc/customizer.php:1245
+msgid ""
+"Text color used for text of secondary importance.<br>(Try using a lighter "
+"color than the main Text Color.)"
+msgstr ""
+
+#: inc/customizer.php:1252
+msgid "Use accent color instead of text color for icons"
+msgstr "Gebruik accentkleur in plaats van tekst kleur voor iconen"
+
+#: inc/extras.php:104
+msgid "Category"
+msgstr "Categorie"
+
+#: inc/extras.php:107
+msgid "Tag"
+msgstr "Tag"
+
+#: inc/extras.php:110
+msgid "Author"
+msgstr "Auteur"
+
+#: inc/extras.php:120 inc/extras.php:124
+msgid "Page "
+msgstr "Pagina"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Post navigatie"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;Oudere posts"
+
+#: inc/template-tags.php:31
+msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nieuwere posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Post navigatie"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:139
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:144
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: page-explore.php:11
+msgid "Explore Page"
+msgstr "Ontdek pagina"
+
+#: page-explore.php:26
+msgid "Recent Posts"
+msgstr "Recente posts"
+
+#: page-explore.php:44
+msgid "Categories"
+msgstr "Categorieën"
+
+#: sidebar.php:11
+#, fuzzy
+msgid "Hide sidebar"
+msgstr "Sidebar"
+
+#: sidebar.php:26
+msgid "Navigation"
+msgstr "Navigatie"
+
+#~ msgctxt "[noun] [translation string] (explanation)"
+#~ msgid "%1$s Username %2$s"
+#~ msgstr "%1$s Gebruikersnaam %2$s"
+
+#~ msgid ""
+#~ "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-"
+#~ "date\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+#~ msgstr ""
+#~ "<span class=\"posted-on-text\">Geplaatst op </span><span class=\"posted-"
+#~ "on-date\">%1$s</span><span class=\"byline\"> door %2$s</span>"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "Toon alle posts door %s"

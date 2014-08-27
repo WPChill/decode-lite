@@ -1,0 +1,37 @@
+/* Author */
+	Name:    Scott Smith
+	Email: mail@ScottHSmith.com
+	URI:     http://ScottHSmith.com
+	Twitter: @ScottSmith95
+
+/* Translation Credits */
+	Chinese Translation: Daihui Gu
+	Email:               yhzhtk@gmail.com
+	URI:                 http://yhzhtk.info/
+	
+	Dutch Translation: Tom van den Kieboom
+	Email:             tvdkieboom@sharp-edge.nl
+	URI:               http://www.sharp-edge.nl
+	
+	French Translation: Stéphane Bataillon
+	Email:              sbataillon@yahoo.fr
+	URI:                http://www.stephanebataillon.com
+	Twitter:            @sbataillon
+	
+	German Translation: Christoph Purschke
+	Email:              christoph@purschke.info
+	URI:                http://purschke.info
+	Twitter:            @cpu_inside
+	
+	Polish Translation: Mateusz Wozniak
+	Email:              m.wozniak@gmx.net
+	URI;                multilingua.pl
+	Twitter:            @MateuszJWozniak
+	
+	Russian Translation: Michael Yesutin
+	Email:               michael@yesutin.com
+	URI:                 http://about.me/yesutin
+	Twitter:             @yesutin
+	
+	Spanish Translation: Xabier Obanos
+	Email:               xobanos@gmail.com

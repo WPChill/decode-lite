@@ -29,9 +29,11 @@
 	<footer class="entry-footer">
 	<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php _e('Read More&hellip;', 'decode'); ?></a>
 	<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
-	<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
-			<p class="date"><?php decode_posted_on(); ?></p>
-		<?php endif; ?>
+		<div class="entry-meta">
+			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
+				<p class="date"><?php decode_posted_on(); ?></p>
+			<?php endif; ?>
+		</div>
 	</footer><!-- .entry-footer -->
 		
 	<?php tha_entry_bottom(); ?>

@@ -39,6 +39,20 @@ textarea {
 }
 
 
+/* =Social Links
+----------------------------------------------- */
+
+.social-link:first-child {
+	margin-left: 1%;
+	margin-right: 0;
+}
+
+.social-link:last-child {
+	margin-right: 1%;
+	margin-left: 0;
+}
+
+
 /* =Menu
 ----------------------------------------------- */
 
@@ -47,13 +61,22 @@ textarea {
 }
 
 .menu > ul > li:first-child {
-	margin-left: auto;
+	margin-left: 0.5em;
 	margin-right: 0;
 }
 
 .menu > ul > li:last-child {
-	margin-right: auto;
+	margin-right: 0.5em;
 	margin-left: 0;
+}
+
+@media only screen and (min-width: 50em) {
+	.menu > ul > li:first-child {
+		margin-left: 1.5%;
+	}
+	.menu > ul > li:last-child {
+		margin-right: 1.5%;
+	}
 }
 
 .menu ul ul {
