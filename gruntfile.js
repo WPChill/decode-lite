@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		modernizr: {
 			makefile: {
 				"devFile": "remote", // Skip check for dev file
-				"outputFile": "js/src/modernizr.js",
+				"outputFile": "scripts/src/modernizr.js",
 				"extra": {
 					"shiv": false,
 					"printshiv": true,
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'js/src/sidebar.js', 'js/src/dropdown.js']
+			all: ['Gruntfile.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
 		},
 		
 		uglify: {
@@ -49,26 +49,26 @@ module.exports = function(grunt) {
 			},
 			build_decode_basic: {
 				options: {
-					sourceMapName: 'js/srcmaps/decode.js.map'
+					sourceMapName: 'scripts/srcmaps/decode.js.map'
 				},
 				files: {
-					'js/decode.js': ['js/src/modernizr.js', 'js/src/decode.js', 'js/src/fastclick.js'],
+					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/fastclick.js'],
 				}
 			},
 			build_decode_with_sidebar: {
 				options: {
-					sourceMapName: 'js/srcmaps/decode-with-sidebar.js.map'
+					sourceMapName: 'scripts/srcmaps/decode-with-sidebar.js.map'
 				},
 				files: {
-					'js/decode-with-sidebar.js': ['js/src/modernizr.js', 'js/src/decode.js', 'js/src/sidebar.js', 'js/src/fastclick.js'],
+					'scripts/decode-with-sidebar.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/fastclick.js'],
 				}
 			},
 			customizer: {
 				options: {
-					sourceMapName: 'js/srcmaps/customizer.js.map'
+					sourceMapName: 'scripts/srcmaps/customizer.js.map'
 				},
 				files: {
-					'js/customizer.js': ['js/src/customizer.js'],
+					'scripts/customizer.js': ['scripts/src/customizer.js'],
 				}
 			}
 		},
@@ -80,9 +80,9 @@ module.exports = function(grunt) {
             files: {
 	        	expand: true,
 				flatten: true,
-				cwd: 'css/src/',
+				cwd: 'styles/src/',
 				src: '*.scss',
-				dest: 'css/',
+				dest: 'styles/',
 				ext: '.css'
 			}
     	},
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 			},
 			comb: {
 				expand: true,
-				src: 'css/src/*.scss'
+				src: 'styles/src/*.scss'
 			}
 		},
 		
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 			},
 			lint: {
 				expand: true,
-				src: 'css/*.css'
+				src: 'styles/*.css'
 			}
 		},
 
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 			},
 			prefix: {
 				expand: true,
-				src: 'css/*.css'
+				src: 'styles/*.css'
 			}
 		},
 
@@ -126,7 +126,7 @@ module.exports = function(grunt) {
 			minify: {
 				expand: true,
 				flatten: true,
-				cwd: 'css/',
+				cwd: 'styles/',
 				src: '*.css',
 				ext: '.css'
 			}
@@ -174,11 +174,11 @@ module.exports = function(grunt) {
 
 		watch: {
 			scripts: {
-				files: ['js/src/*.js'],
+				files: ['scripts/src/*.js'],
 				tasks: ['uglify']
 			},
 			css: {
-				files: ['css/src/**/*.scss'],
+				files: ['styles/src/**/*.scss'],
 				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			docs: {

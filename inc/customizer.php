@@ -1408,6 +1408,6 @@ add_action( 'wp_head' , array( 'Decode_Customize', 'decode_output_color_css' ) )
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function decode_customize_preview_js() {
-	wp_enqueue_script( 'decode-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'jquery' ), '2.9.4', true );
+	wp_enqueue_script( 'decode-customizer', get_template_directory_uri() . '/scripts/customizer.js', array( 'customize-preview', 'jquery' ), '3.0.0', true );
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );

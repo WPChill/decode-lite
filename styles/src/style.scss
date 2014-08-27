@@ -4,7 +4,7 @@
 /*!
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
-Version: 2.9.3
+Version: 3.0.0
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 48 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Decode has been translated into Chinese, Dutch, French, German, Polish, Russian, and Spanish. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
@@ -78,11 +78,9 @@ a {
 	color: $accent-color;
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
-	
 	.no-touch &:hover {
 		color: $accent-color;
 	}
-	
 	.no-touch &:active {
 		color: $accent-color-secondary;
 	}
@@ -98,11 +96,9 @@ a {
 .no-touch .theme-info a,
 .no-touch .site-colophon a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	
 	&:hover {
 		border-bottom: 1px solid $accent-color;
 	}
-	
 	&:active {
 		border-bottom: 1px solid $accent-color-secondary;
 	}
@@ -324,13 +320,11 @@ embed, iframe, object {
 		float: left;
 		margin-right: 2.5%;
 	}
-	
 	.alignright {
 		display: inline;
 		float: right;
 		margin-left: 2.5%;
 	}
-	
 	.aligncenter {
 		display: block;
 		clear: both;
@@ -385,7 +379,6 @@ embed, iframe, object {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	margin: 0 0 0.5%;
-	
 	a {
 		transition: text-shadow 0.5s;
 		color: $text-color;
@@ -393,12 +386,10 @@ embed, iframe, object {
 
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
-	
 	.no-touch & a:hover {
 		color: $text-color;
 		text-shadow: 0 0 6px rgba(75,75,75,0.5);
 	}
-	
 	.no-touch & a:active {
 		color: $text-color;
 		text-shadow: 0 -2px 12px rgba(75,75,75,0.85);
@@ -440,33 +431,26 @@ embed, iframe, object {
 	transition: opacity 0.4s ease-out;
 	border: none;
 	margin: 0 1%;
-	
 	.no-touch &:hover {
 		opacity: 0.6;
 	}
-	
 	.no-touch &:active {
 		opacity: 0.8;
 	}
-	
 	&:first-child {
 		margin-left: 0;
 	}
-	
 	&:last-child {
 		margin-right: 0;
 	}
-	
 	svg,
 	img {
 		width: 2em;
 		height: 2em;
 	}
-	
 	.no-inlinesvg & svg {
 		display: none;
 	}
-	
 	.no-inlinesvg & {
 		display: inline-block;
 		width: 50px;
@@ -977,11 +961,9 @@ body.single-attachment .entry-header {
 a .attachment-post-thumbnail {
 	transition: opacity 0.25s ease-out;
 	opacity: 1;
-	
 	.no-touch &:hover {
 		opacity: 0.8;
 	}
-	
 	.no-touch &:active {
 		opacity: 0.8;
 	}
@@ -1002,7 +984,6 @@ a .attachment-post-thumbnail {
 	overflow-wrap: break-word;
 	width: 90%;
 	margin: 0 auto;
-	
 	a {
 		color: $text-color;
 	}
@@ -1010,52 +991,40 @@ a .attachment-post-thumbnail {
 
 .entry-content {
 	font-size: 1em;
-	
 	h1 {
 		font-size: 2.35em;
 	}
-	
 	h2 {
 		font-size: 2em;
 	}
-	
 	h3 {
 		font-size: 1.65em;
 	}
-	
 	h4 {
 		font-size: 1.375em;
 	}
-	
 	h5 {
 		font-size: 1.25em;
 	}
-	
 	h6 {
 		font-size: 1.125em;
 	}
-	
 	img {
 		margin: 2.5% auto;
 	}
-	
 	a > img {
 		transition: opacity 0.25s ease-out;
 		opacity: 1;
 	}
-	
 	.no-touch & a:hover > img {
 		opacity: 0.8;
 	}
-	
 	.no-touch & a:active > img {
 		opacity: 0.8;
 	}
-	
 	.video-player img {
 		margin: 0;
 	}
-	
 	blockquote {
 		font-style: italic;
 		padding: 0 0 0 5%;
@@ -1105,18 +1074,14 @@ article {
 		font-size: 0.8em;
 		margin: 1.5% 0;
 	}
-
 	.date {
 		margin-bottom: 0;
-		
 		a {
 			transition-duration: 0.25s;
 			color: $text-color-secondary;
-			
 			.no-touch &:hover {
 				color: $accent-color;
 			}
-			
 			.no-touch &:active {
 				color: $accent-color-secondary;
 			}
@@ -1129,7 +1094,6 @@ article {
 	font-size: 0.8em;
 	text-align: center;
 	margin-top: 1em;
-	
 	p {
 		margin-bottom: 0;
 	}
@@ -1145,12 +1109,10 @@ article {
 	.entry-title a {
 		color: $text-color;
 		text-decoration: underline;
-		
 		.no-touch &:hover {
 			color: $accent-color;
 			border-bottom: none;
 		}
-		
 		.no-touch &:active {
 			color: $accent-color-secondary;
 			border-bottom: none;
@@ -1174,12 +1136,10 @@ article {
 	blockquote {
 		padding-left: 0;
 		border-left: none;
-		
 		p::before {
 			font-size: 1.3em;
 			content: '\201C';
 		}
-		
 		p::after {
 			font-size: 1.3em;
 			content: '\201D';
@@ -1223,7 +1183,6 @@ article {
 	padding: 3.5%;
 	margin: 0 auto 3.5%;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-	
 	&:hover {
 		box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 	}
@@ -1233,7 +1192,6 @@ article {
 	float: left;
 	width: 25%;
 	max-width: 125px;
-	
 	img {
 		transition: box-shadow 0.35s ease-out, opacity 0.35s ease-out;
 		display: block;
@@ -1241,12 +1199,10 @@ article {
 		opacity: 1;
 		box-shadow: 0 0 5px rgba(0,0,0,0);
 	}
-	
 	.no-touch &:hover {
 		opacity: 1;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 	}
-	
 	.no-touch &:active {
 		opacity: 0.85;
 		box-shadow: 0 1px 4px rgba(0,0,0,0.4);
@@ -1261,7 +1217,6 @@ article {
 
 .author-name {
 	font-size: 1.4em;
-	
 	a {
 		color: $text-color;
 	}
@@ -1284,14 +1239,12 @@ article {
 		padding: 2.5%;
 		margin: 7.5% auto 0;
 	}
-	
 	.author-image {
 		float: none;
 		width: 33%;
 		max-width: 175px;
 		margin: 0 auto;
 	}
-	
 	.author-text {
 		float: none;
 		width: 95%;
@@ -1335,11 +1288,9 @@ article {
 	color: $text-color-secondary;
 	font-size: 0.8em;
 	margin-right: 1.5%;
-	
 	.no-touch &:hover {
 		color: $accent-color;
 	}
-	
 	.no-touch &:active {
 		color: $accent-color-secondary;
 	}
@@ -1387,7 +1338,6 @@ li.comment {
 	border-radius: 0 0 0 3px;
 	margin-bottom: 0;
 	opacity: 0;
-	
 	&.visible {
 		max-height: 12em;
 		padding: 1%;
@@ -1437,7 +1387,6 @@ li.comment {
 	transition: padding 0.25s ease-out, color 0.25s ease-out;
 	display: block;
 	padding: 0;
-	
 	.no-touch &:hover {
 		padding: 0 2.5%;
 	}
@@ -1488,12 +1437,10 @@ li.comment {
 	border-right-color: transparent;
 	border-left-color: transparent;
 	border-radius: 0;
-	
 	.no-touch &:hover {
 		border-color: $text-color-secondary;
 		border-radius: 3px;
 	}
-	
 	.no-touch &:focus,
 	.touch &:focus {
 		border-color: $accent-color;
@@ -1538,37 +1485,30 @@ li.comment {
 	outline: none;
 	opacity: 1;
 	cursor: pointer;
-	
 	&.left {
 		left: 5%;
 	}
-	
 	&.right {
 		float: right;
 		right: 5%;
 	}
-	
 	.no-touch &:hover {
 		border: none;
 		opacity: 0.65;
 	}
-	
 	.no-touch &:active {
 		border: none;
 		opacity: 0.85;
 	}
-	
 	.no-inlinesvg & {
 		width: 30px;
 		height: 25px;
 		background: url('images/menu.png') no-repeat center;
 		background-size: 30px 25px;
 	}
-	
 	.no-inlinesvg & svg {
 		display: none;
 	}
-
 	svg,
 	img {
 		width: 1.5em;
@@ -1583,7 +1523,6 @@ li.comment {
 	margin-bottom: 7.5%;
 	background-color: #E3E5E7;
 	cursor: pointer;
-	
 	.no-touch & {
 		position: sticky;
 		top: 0;
@@ -1608,20 +1547,17 @@ li.comment {
 	padding: 3.5%;
 	border: none;
 	opacity: 1;
-	
 	svg,
 	img {
 		width: 1.4em;
 		height: 1.4em;
 	}
-	
 	.no-inlinesvg & {
 		width: 30px;
 		height: 30px;
 		background: url('images/cross.png') no-repeat center;
 		background-size: 30px;
 	}
-	
 	.no-inlinesvg & svg {
 		display: none;
 	}
@@ -1648,14 +1584,12 @@ li.comment {
 	width: 95%;
 	height: 100%;
 	background-color: #E3E5E7;
-	
 	&.left {
 		transform: translateX(-110%);
 		/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
 		left: 0;
 		box-shadow: 1px 0 15px rgba(0,0,0,0.5);
 	}
-	
 	&.right {
 		transform: translateX(110%);
 		right: 0;
@@ -1665,7 +1599,6 @@ li.comment {
 
 .sidebar-content {
 	margin: 0 5%;
-	
 	.no-touch & a:hover {
 		color: $accent-color-secondary;
 	}
@@ -1947,7 +1880,6 @@ li.comment {
 			width: 100%;
 			max-width: 45em;
 		}
-		
 		.site {
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
@@ -1956,27 +1888,21 @@ li.comment {
 			height: 100%;
 			margin: 0 auto;
 		}
-		
 		.sidebar-link {
 			display: none;
 		}
-		
 		.sidebar {
 			transform: translateX(0%);
 			box-shadow: none;
-			
 			.sidebar-top {
 				display: none;
 			}
-			
 			.sidebar-content {
 				margin-top: 5%;
 			}
-			
 			&.left {
 				border-right: 1px solid $accent-color;
 			}
-			
 			&.right {
 				border-left: 1px solid $accent-color;
 			}
@@ -2033,11 +1959,9 @@ li.comment {
 
 	.sidebar {
 		width: 33%;
-		
 		.no-csstransforms &.left {
 			left: -40%;
 		}
-		
 		.no-csstransforms &.right {
 			right: -40%;
 		}
@@ -2134,11 +2058,9 @@ li.comment {
 	.sidebar {
 		width: 25%;
 		max-width: 30em;
-		
 		.no-csstransforms &.right {
 			right: -30%;
 		}
-		
 		.no-csstransforms &.left {
 			left: -30%;
 		}
