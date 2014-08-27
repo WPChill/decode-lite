@@ -178,7 +178,7 @@ module.exports = function(grunt) {
 				tasks: ['uglify']
 			},
 			css: {
-				files: ['css/src/*.scss'],
+				files: ['css/src/**/*.scss'],
 				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			docs: {
