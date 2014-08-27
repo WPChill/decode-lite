@@ -44,7 +44,7 @@
 	// Update site background color.
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( newval ) {
-			$('body, .sidebar, .SidebarTop, .menu ul ul, .header-style-ghost.sidebar-style-constant .page-scroll').css('background-color', newval );
+			$('body, .sidebar, .SidebarTop, .menu ul ul, .header-style-ghost .site').css('background-color', newval );
 		});
 	});
 	
