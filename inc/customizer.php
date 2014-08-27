@@ -1191,22 +1191,22 @@ public static function decode_customize_register( $wp_customize ) {
  */
 
 	$wp_customize->add_setting( 'accent_color', array(
-		'default'   => '#009BCD',
+		'default'   => '#00B0CC',
 		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'secondary_accent_color', array(
-		'default'   => '#007EA6',
+		'default'   => '#008094',
 		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'text_color', array(
-		'default'   => '#444444',
+		'default'   => '#4C4C4C',
 		'transport' => 'refresh'
 	) );
 
 	$wp_customize->add_setting( 'secondary_text_color', array(
-		'default'   => '#808080',
+		'default'   => '#8C8C8C',
 		'transport' => 'refresh'
 	) );
 	
