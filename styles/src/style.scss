@@ -797,7 +797,7 @@ embed, iframe, object {
 	left: 0;
 	padding: 0.25em;
 	border-bottom: 2px solid $accent-color;
-	background-color: #E3E5E7;
+	background-color: $background-color;
 	box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
@@ -1521,7 +1521,7 @@ li.comment {
 	width: 100%;
 	border-bottom: 1px solid $accent-color;
 	margin-bottom: 7.5%;
-	background-color: #E3E5E7;
+	background-color: $background-color;
 	cursor: pointer;
 	.no-touch & {
 		position: sticky;
@@ -1583,7 +1583,7 @@ li.comment {
 	font-size: 0.95em;
 	width: 95%;
 	height: 100%;
-	background-color: #E3E5E7;
+	background-color: $background-color;
 	&.left {
 		transform: translateX(-110%);
 		/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
