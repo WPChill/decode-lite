@@ -1273,7 +1273,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'#');
 			
 			self::generate_css(
-				'body, button, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .search .page-header input[type="search"]:focus, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger',
+				'body, button, input, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger',
 				'color',
 				'text_color' );
 			
@@ -1300,14 +1300,15 @@ public static function decode_customize_register( $wp_customize ) {
 					'accent_color'
 				);
 			endif;
+
 			
 			self::generate_css(
-				'a, .no-touch a:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch article .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover',
+				'a, .no-touch a:hover, button, input[type=button], input[type=reset], input[type=submit], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch article .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover',
 				'color',
 				'accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:hover, .no-touch input[type="button"]:hover, .no-touch input[type="reset"]:hover, .no-touch input[type="submit"]:hover, .no-touch .site-description a:hover, .no-touch .entry-meta a:hover, .no-touch .entry-content a:hover, .no-touch .entry-footer a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .entry-footer, .entry-header .entry-meta, .search .entry-footer, .sidebar-top, .sidebar-style-constant .sidebar.left, .sidebar-style-constant .sidebar.right, .explore-page .widget h1, button:focus, input[type=\'text\']:focus, input[type=\'email\']:focus, input[type=\'password\']:focus, input[type=\'search\']:focus, input[type="tel"]:focus, input[type="url"]:focus, textarea:focus, .search .page-header input[type="search"]:focus',
+				'.no-touch button:hover, .no-touch input[type=button]:hover, .no-touch input[type=reset]:hover, .no-touch input[type=submit]:hover, .no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .site-description a:hover, .no-touch .entry-content a:hover, .no-touch .categories a:hover, .no-touch .tags a:hover, .no-touch .comments-link a:hover, .no-touch .edit-link a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .entry-footer, .entry-header .entry-meta, .search .entry-footer, .sidebar-top, .sidebar-style-constant .sidebar.left, .sidebar-style-constant .sidebar.right, .explore-page .widget h1',
 				'border-color',
 				'accent_color' );
 			
@@ -1322,12 +1323,12 @@ public static function decode_customize_register( $wp_customize ) {
 				'accent_color' );
 			
 			self::generate_css(
-				'.no-touch a:active, .no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current-menu-item > a, .sidebar-menu ul .current_page_item > a, .no-touch .sidebar-content a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch article .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active',
+				'.no-touch a:active, .no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current-menu-item > a, .sidebar-menu ul .current_page_item > a, .no-touch .sidebar-content a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch article .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active',
 				'color',
 				'secondary_accent_color' );
 			
 			self::generate_css(
-				'.no-touch button:focus, .no-touch input[type="button"]:focus, .no-touch input[type="reset"]:focus, .no-touch input[type="submit"]:focus, .no-touch button:active, .no-touch input[type="button"]:active, .no-touch input[type="reset"]:active, .no-touch input[type="submit"]:active, .no-touch .site-description a:active, .no-touch .entry-meta a:active, .no-touch .entry-content a:active, .no-touch .entry-footer a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
+				'.no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .site-description a:active, .no-touch .entry-content a:active, .no-touch .categories a:active, .no-touch .tags a:active, .no-touch .comments-link a:active, .no-touch .edit-link a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
 				'border-color',
 				'secondary_accent_color' );
 			
@@ -1342,9 +1343,26 @@ public static function decode_customize_register( $wp_customize ) {
 				'secondary_accent_color' );
 			
 			self::generate_css(
-				'article .tags, article .categories, article .date, article .date a, .comment-metadata a, .search .page-header input[type="search"]',
+				'.no-touch input[type=text]:hover, .no-touch input[type=email]:hover, .no-touch input[type=password]:hover, .no-touch input[type=search]:hover, .no-touch input[type=tel]:hover, .no-touch input[type=url]:hover, .no-touch textarea:hover, article .tags, article .categories, article .date, article .date a, .comment-metadata a, .search .page-header input[type=search]',
 				'color',
 				'secondary_text_color' );
+				
+			self::generate_css(
+				'.no-touch input[type=text]:hover, .no-touch input[type=email]:hover, .no-touch input[type=password]:hover, .no-touch input[type=search]:hover, .no-touch input[type=tel]:hover, .no-touch input[type=url]:hover, .no-touch textarea:hover, .no-touch .search .page-header input[type=search]:hover',
+				'border-color',
+				'secondary_text_color' );
+			
+			/* Adding these properties later because they need to override their :hover counterparts */
+			self::generate_css(
+				'.no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus',
+				'color',
+				'text_color' );
+				
+				self::generate_css(
+				'.no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .search .page-header input[type=search]:focus, .touch .search .page-header input[type=search]:focus',
+				'border-color',
+				'accent_color' );
+			
 			?>
 		</style>
 		<?php

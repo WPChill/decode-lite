@@ -75,12 +75,12 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 --------------------------------------------------------------*/
 a {
 	transition: color 0.4s ease;
-	color: $accent-color-secondary;
+	color: $accent-color;
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
 	
 	.no-touch &:hover {
-		color: $accent-color-secondary;
+		color: $accent-color;
 	}
 	
 	.no-touch &:active {
@@ -100,7 +100,7 @@ a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	
 	&:hover {
-		border-bottom: 1px solid $accent-color-secondary;
+		border-bottom: 1px solid $accent-color;
 	}
 	
 	&:active {
@@ -352,7 +352,7 @@ embed, iframe, object {
 
 .site-header {
 	width: 100%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin: 3.5% auto 0;
 }
 
@@ -415,7 +415,7 @@ embed, iframe, object {
 	font-size: 1.65em;
 	text-align: center;
 	padding: 1.5%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 }
 
 .site-description {
@@ -703,7 +703,7 @@ embed, iframe, object {
 }
 
 .menu a:focus {
-	color: $accent-color-secondary;
+	color: $accent-color;
 }
 
 /* Display a triangle to indicate that the menu has a child menu. */
@@ -748,8 +748,9 @@ embed, iframe, object {
 	border-top-color: $text-color;
 }
 
-.no-touch .menu a:hover, .menu ul li.open > a {
-	color: $accent-color-secondary;
+.no-touch .menu a:hover,
+.menu ul li.open > a {
+	color: $accent-color;
 }
 
 .no-touch .menu ul > .menu-item-has-children > a:hover::after,
@@ -768,7 +769,7 @@ embed, iframe, object {
 }
 
 .sidebar-menu a {
-	color: $accent-color-secondary;
+	color: $accent-color;
 }
 
 .no-touch .sidebar-menu a:hover,
@@ -778,11 +779,12 @@ embed, iframe, object {
 
 .sidebar-menu ul .menu-item-has-children > a::after,
 .sidebar-menu ul .page_item_has_children > a::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: $accent-color;
 }
 
 .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after,
-.no-touch .sidebar-menu ul .page_item_has_children > a:hover::after, .sidebar-menu ul li.open > a::after {
+.no-touch .sidebar-menu ul .page_item_has_children > a:hover::after,
+.sidebar-menu ul li.open > a::after {
 	border-top-color: $accent-color-secondary;
 }
 
@@ -792,8 +794,9 @@ embed, iframe, object {
 }
 
 .no-touch .footer-menu ul > .menu-item-has-children > a:hover::after,
-.no-touch .footer-menu ul > .page_item_has_children > a:hover::after, .footer-menu ul > li.open > a::after {
-	border-bottom-color: $accent-color-secondary;
+.no-touch .footer-menu ul > .page_item_has_children > a:hover::after,
+.footer-menu ul > li.open > a::after {
+	border-bottom-color: $accent-color;
 }
 
 .no-touch .footer-menu ul > .menu-item-has-children > a:active::after,
@@ -809,7 +812,7 @@ embed, iframe, object {
 	z-index: 2;
 	left: 0;
 	padding: 0.25em;
-	border-bottom: 2px solid $accent-color-secondary;
+	border-bottom: 2px solid $accent-color;
 	background-color: #E3E5E7;
 	box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
@@ -862,12 +865,12 @@ embed, iframe, object {
 .menu .current-menu-item > a,
 .menu .current_page_item > a {
 	position: relative;
-	color: $accent-color-secondary;
+	color: $accent-color;
 }
 
 .menu > ul > .current_page_item.menu-item-has-children > a::after,
 .menu > ul > .current_page_item.page_item_has_children > a::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: $accent-color;
 }
 
 .sidebar-menu ul .current-menu-item > a,
@@ -882,7 +885,7 @@ embed, iframe, object {
 
 .footer-menu > ul > .current_page_item.menu-item-has-children > a::after,
 .footer-menu > ul > .current_page_item.page_item_has_children > a::after {
-	border-bottom-color: $accent-color-secondary;
+	border-bottom-color: $accent-color;
 }
 
 .menu .current-menu-item > a:hover,
@@ -909,7 +912,7 @@ embed, iframe, object {
 .site-breadcrumbs {
 	width: 100%;
 	padding: 1.5% 0;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin: 0 auto;
 }
 
@@ -1056,7 +1059,7 @@ a .attachment-post-thumbnail {
 	blockquote {
 		font-style: italic;
 		padding: 0 0 0 5%;
-		border-left: 0.15em solid $accent-color-secondary;
+		border-left: 0.15em solid $accent-color;
 		margin: 1.5% 0;
 	}
 }
@@ -1081,7 +1084,7 @@ body.single-attachment .entry-content .attachment {
 .entry-footer {
 	width: 90%;
 	padding-bottom: 0.5%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin: 0 auto;
 }
 
@@ -1089,7 +1092,7 @@ body.single-attachment .entry-content .attachment {
 	display: inline-block;
 	width: auto;
 	padding: 0 2.5% 1%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin: 0 auto 1.5%;
 }
 
@@ -1111,7 +1114,7 @@ article {
 			color: $text-color-secondary;
 			
 			.no-touch &:hover {
-				color: $accent-color-secondary;
+				color: $accent-color;
 			}
 			
 			.no-touch &:active {
@@ -1144,7 +1147,7 @@ article {
 		text-decoration: underline;
 		
 		.no-touch &:hover {
-			color: $accent-color-secondary;
+			color: $accent-color;
 			border-bottom: none;
 		}
 		
@@ -1334,7 +1337,7 @@ article {
 	margin-right: 1.5%;
 	
 	.no-touch &:hover {
-		color: $accent-color-secondary;
+		color: $accent-color;
 	}
 	
 	.no-touch &:active {
@@ -1487,15 +1490,15 @@ li.comment {
 	border-radius: 0;
 	
 	.no-touch &:hover {
-		border-color: #A6A6A6;
+		border-color: $text-color-secondary;
 		border-radius: 3px;
 	}
-}
-
-.search .page-header input[type='search']:focus {
-	color: $text-color;
-	border-color: $accent-color-secondary;
-	border-radius: 3px;
+	
+	.no-touch &:focus,
+	.touch &:focus {
+		border-color: $accent-color;
+		border-radius: 3px;
+	}
 }
 
 .search .page-header .search-submit {
@@ -1515,7 +1518,7 @@ li.comment {
 
 .search .entry-footer {
 	width: 90%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin: 0 auto;
 }
 
@@ -1576,7 +1579,7 @@ li.comment {
 .sidebar-top {
 	z-index: 1;
 	width: 100%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 	margin-bottom: 7.5%;
 	background-color: #E3E5E7;
 	cursor: pointer;
@@ -1752,7 +1755,7 @@ li.comment {
 	color: $text-color;
 	font-size: 1.15em;
 	padding-bottom: 1%;
-	border-bottom: 1px solid $accent-color-secondary;
+	border-bottom: 1px solid $accent-color;
 }
 
 .explore-page .widget:not(.search) {
@@ -1971,11 +1974,11 @@ li.comment {
 			}
 			
 			&.left {
-				border-right: 1px solid $accent-color-secondary;
+				border-right: 1px solid $accent-color;
 			}
 			
 			&.right {
-				border-left: 1px solid $accent-color-secondary;
+				border-left: 1px solid $accent-color;
 			}
 		}
 	}
