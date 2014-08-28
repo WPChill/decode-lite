@@ -7,5 +7,6 @@
 	<rule ref="WordPress">
 		<exclude name="WordPress.XSS.EscapeOutput" />
 		<exclude name="WordPress.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page" />
 	</rule>
 </ruleset>
