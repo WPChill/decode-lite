@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template for displaying social icons.
+ *
+ * @package Decode
+ */
+?>
+
 <div class="social-links">
 <div class="social-links-container">
 	<?php if ( get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>

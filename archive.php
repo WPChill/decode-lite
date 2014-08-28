@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -36,10 +36,10 @@ get_header(); ?>
 						_e( 'Asides', 'decode' );
 
 					elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-						_e( 'Galleries', 'decode');
+						_e( 'Galleries', 'decode' );
 
 					elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-						_e( 'Images', 'decode');
+						_e( 'Images', 'decode' );
 
 					elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
 						_e( 'Videos', 'decode' );

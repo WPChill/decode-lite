@@ -1,5 +1,8 @@
 <?php
 /**
+ * 
+ * The template for displaying excerpts of content.
+ *
  * @package Decode
  */
 ?>

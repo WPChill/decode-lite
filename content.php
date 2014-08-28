@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * The template for displaying content on the blog page (usually index.php).
+ *
  * @package Decode
  */
 ?>

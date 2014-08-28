@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * The template for displaying link post formats.
+ *
  * @package Decode
  */
 ?>

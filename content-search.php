@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * The template for displaying content in search results.
+ *
  * @package Decode
  */
 ?>

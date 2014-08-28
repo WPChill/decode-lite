@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * The template for displaying quote post formats.	
+ *
  * @package Decode
  */
 ?>
