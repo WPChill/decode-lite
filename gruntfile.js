@@ -229,6 +229,20 @@ module.exports = function(grunt) {
 		'cssmin',
 		'newer:imageoptim',
 		'markdown',
+		'copy',
+		'watch'
+	]);
+	
+	// $ grunt build: Concencates, prefixes, minifies JS and CSS files, and generates docs. For deployments and Travis.
+	grunt.registerTask('build', [
+		'modernizr',
+		'jshint',
+		'uglify',
+		'sass',
+		'csscomb',
+		'autoprefixer',
+		'cssmin',
+		'markdown',
 		'copy'
 	]);
 		
