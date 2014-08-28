@@ -159,7 +159,7 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
 function decode_custom_css() {
-	if ( get_theme_mod('custom_css', '' ) !== '' ) { ?>
+	if ( get_theme_mod( 'custom_css', '' ) !== '' ) { ?>
 		<!-- Decode Custom CSS -->
 		<style type="text/css">
 			<?php echo get_theme_mod( 'custom_css', '' ); ?>
@@ -262,7 +262,7 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 
 
 
-	if ( !empty( $post_keys ) ) {
+	if ( ! empty( $post_keys ) ) {
 
 		foreach ( $post_keys as $pkey ) {
 	

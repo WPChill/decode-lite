@@ -526,7 +526,7 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'twitter_username', array(
-		'label'           =>  sprintf( __( '%s Username', 'decode' ), 'Twitter' ),
+		'label'           => sprintf( __( '%s Username', 'decode' ), 'Twitter' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
@@ -551,7 +551,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'google_plus_username', array(
 		'label'           => sprintf( __( '%s Username', 'decode' ), 'Google+' ),
-		'description'     => __(' (or the long number in your profile URL)', 'decode'),
+		'description'     => __( ' (or the long number in your profile URL)', 'decode' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
@@ -967,7 +967,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'decode_content_options', array(
     	'title'       => __( 'Content Options', 'decode' ),
 		'priority'    => 37,
-		'description' => sprintf( _x( 'These options change the display of %s\'s content', '(blog name)\'s content.' ,'decode'), get_bloginfo( 'name', 'display' ) ),
+		'description' => sprintf( _x( 'These options change the display of %s\'s content', '(blog name)\'s content.' ,'decode' ), get_bloginfo( 'name', 'display' ) ),
     ) );
     
     
@@ -1277,7 +1277,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'text_color'
 			);
 			
-			if (get_theme_mod( 'accent_color_icons', false ) == false ) :
+			if ( get_theme_mod( 'accent_color_icons', false ) == false ) :
 				self::generate_css( 
 					'.menu-icon, .close-icon, .social-icon-fill',
 					'fill',
@@ -1384,7 +1384,7 @@ public static function decode_customize_register( $wp_customize ) {
 	* @param bool $echo Optional. Whether to print directly to the page (default: true).
 	* @return string Returns a single line of CSS with selectors and a property.
 	*/
-	public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+	public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
 		$return = '';
 		$mod = get_theme_mod( $mod_name );
 		if ( ! empty( $mod ) ) {

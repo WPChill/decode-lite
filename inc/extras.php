@@ -129,7 +129,7 @@ function decode_wp_title( $title, $sep, $sep_location ) {
 	// Comment the 4 lines of code below and see how odd the title format becomes
 	if ( $sep_location == 'right' && ! ( is_front_page() ) ) {
 		$custom = $custom . $sep;
-		$title = substr( $title, 0, -2) ;
+		$title = substr( $title, 0, -2 );
 	}
 
 	// return full title
