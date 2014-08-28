@@ -51,7 +51,7 @@ get_header(); ?>
 								'post_type'      => 'attachment',
 								'post_mime_type' => 'image',
 								'order'          => 'ASC',
-								'orderby'        => 'menu_order ID'
+								'orderby'        => 'menu_order ID',
 							) ) );
 							foreach ( $attachments as $k => $attachment ) {
 								if ( $attachment->ID == $post->ID )
@@ -98,7 +98,7 @@ get_header(); ?>
 		</article><!-- #post-<?php the_ID(); ?> -->
 
 		<?php
-			if (get_theme_mod( 'enable_comments', true ) == true ) :
+			if ( get_theme_mod( 'enable_comments', true ) == true ) :
 			
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || '0' != get_comments_number() ) {

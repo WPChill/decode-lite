@@ -18,8 +18,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( get_theme_mod( 'favicon_image', '' )) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
-<?php if ( get_theme_mod( 'favicon_image', '' )) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
+<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
+<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
 
 <?php tha_head_bottom(); ?>
 <?php wp_head(); ?>
@@ -33,7 +33,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 	
 	<?php function decode_create_sidebar_link() {
-		if ( get_theme_mod( 'show_sidebar', true ) == true) : ?>
+		if ( get_theme_mod( 'show_sidebar', true ) == true ) : ?>
 		<button id="sidebar-link" class="sidebar-link SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php _e( 'Show sidebar', 'decode' )?>">
 			<svg width="100%" height="100%" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 				<g class="menu-icon" fill-rule="evenodd">
@@ -48,7 +48,7 @@
 	<?php add_action( 'tha_header_before', 'decode_create_sidebar_link' ); ?>
 	
 	<?php tha_header_before(); ?>
-	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true) { echo '<div class="site-scroll">'; } ?>
+	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '<div class="site-scroll">'; } ?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php tha_header_top(); ?>
 		
@@ -74,7 +74,7 @@
 				<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
 				<h2 class="site-description"><?php echo get_theme_mod( 'html_description' ); ?></h2>
 				<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
-				<h2 class="site-description"><?php echo get_bloginfo ( 'description' );?></h2>
+				<h2 class="site-description"><?php echo get_bloginfo( 'description' );?></h2>
 				<?php endif; ?>
 			<?php endif; ?>
 			
@@ -90,7 +90,7 @@
 				'container'      => false,
 				'menu_class'     => 'menu horizontal-menu header-menu',
 				'menu_id'        => 'header-menu',
-				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->'
+				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
 			) );
 		endif; ?>
 		
@@ -100,17 +100,17 @@
 	
 		<?php tha_header_after(); ?>
 	
-		<?php if ( (function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' )) && !is_front_page() ) : ?>
+		<?php if ( (function_exists( 'bcn_display' ) || function_exists( 'breadcrumb_trail' )) && ! is_front_page() ) : ?>
 		
 			<nav class="site-breadcrumbs" role="navigation">
 				
 				<div class="site-breadcrumbs-container">
 				
-				<?php if( function_exists( 'bcn_display' ) ) {
+				<?php if ( function_exists( 'bcn_display' ) ) {
 					bcn_display();
 				}
 		
-				if( function_exists( 'breadcrumb_trail' ) ) {
+				if ( function_exists( 'breadcrumb_trail' ) ) {
 					breadcrumb_trail();
 				} ?>
 				

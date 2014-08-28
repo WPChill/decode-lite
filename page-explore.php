@@ -28,7 +28,7 @@ get_header(); ?>
 					<?php $recent_posts = wp_get_archives( array(
 						'type' => 'postbypost',
 						'limit' => 5,
-						'format' => 'html'
+						'format' => 'html',
 					) ); ?>
 				</ul>
 			</div>
@@ -43,7 +43,9 @@ get_header(); ?>
 			<div id="categories" class="widget categories">
 				<h1 class="widget-title"><?php _e( 'Categories', 'decode' ); ?></h1>
 				<ul>
-					<?php wp_list_categories( array( 'title_li' => '',  ) ); ?>
+					<?php wp_list_categories( array(
+						'title_li' => '',
+					) ); ?>
 				</ul>
 			</div>
 

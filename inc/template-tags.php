@@ -88,7 +88,7 @@ function decode_the_attached_image() {
 		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
-		'orderby'        => 'menu_order ID'
+		'orderby'        => 'menu_order ID',
 	) );
 
 	// If there is more than 1 attachment in a gallery...

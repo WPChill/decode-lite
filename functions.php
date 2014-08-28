@@ -69,7 +69,7 @@ function decode_setup() {
 		'comment-form',
 		'comment-list',
 		'gallery',
-		'search-form'
+		'search-form',
 	);
 	$args = apply_filters( 'decode_html5_args', $args );
 	add_theme_support( 'html5', $args );
@@ -90,7 +90,7 @@ function decode_setup() {
 		'image',
 		'video',
 		'quote',
-		'link'
+		'link',
 	); 
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
@@ -159,10 +159,10 @@ add_action( 'widgets_init', 'decode_widgets_init' );
 if ( ! is_admin() && ! function_exists( 'decode_custom_css' ) ) {
 
 function decode_custom_css() {
-	if ( get_theme_mod('custom_css', '') !== '' ) { ?>
+	if ( get_theme_mod('custom_css', '' ) !== '' ) { ?>
 		<!-- Decode Custom CSS -->
 		<style type="text/css">
-			<?php echo get_theme_mod('custom_css', ''); ?>
+			<?php echo get_theme_mod( 'custom_css', '' ); ?>
 		</style>
 	<?php }
 }
@@ -219,7 +219,7 @@ add_action( 'init', 'decode_add_editor_styles' );
  * Add body classes for sidebar layout options.
  */
 function decode_add_body_classes( $classes ) {
-	if ( get_theme_mod( 'show_sidebar', true ) == true) {
+	if ( get_theme_mod( 'show_sidebar', true ) == true ) {
 		// Add 'ghost-header-style' to the $classes array.
 		$classes[] = 'sidebar-style-' . get_theme_mod( 'constant_sidebar', 'closing' );
 		$classes[] = 'sidebar-style-' . get_theme_mod( 'sidebar_position', 'left' );
@@ -237,7 +237,7 @@ function decode_add_google_profile( $contactmethods ) {
 	$contactmethods['google_profile'] = 'Google Profile URL';
 	return $contactmethods;
 }
-add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1);
+add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1 );
 
 /*
  * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.
@@ -250,28 +250,28 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 
 	$thePostID = $post->ID;
 
-	$post_id = get_post($thePostID);
+	$post_id = get_post( $thePostID );
 
 	$title = $post_id->post_title;
 
-	$perm = get_permalink($post_id);
+	$perm = get_permalink( $post_id );
 
 	$post_keys = array(); $post_val = array();
 
-	$post_keys = get_post_custom_keys($thePostID);
+	$post_keys = get_post_custom_keys( $thePostID );
 
 
 
-	if (!empty($post_keys)) {
+	if ( !empty( $post_keys ) ) {
 
-		foreach ($post_keys as $pkey) {
+		foreach ( $post_keys as $pkey ) {
 	
-			if ($pkey=='title_url' || $pkey=='url_title' || $pkey=='title_link') {
-				$post_val = get_post_custom_values($pkey);
+			if ( $pkey == 'title_url' || $pkey == 'url_title' || $pkey == 'title_link' ) {
+				$post_val = get_post_custom_values( $pkey );
 			}
 		}
 	
-		if (empty($post_val)) {
+		if ( empty( $post_val ) ) {
 			$link = $perm;
 		}
 		
@@ -298,7 +298,7 @@ function add_post_types_to_query( $query ) {
 		$typelist = 'post';
 		if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 			$typelist .= ', ' . get_theme_mod( 'add_custom_post_types', '' );
-			$typelist = explode( ", ", $typelist );
+			$typelist = explode( ', ', $typelist );
 		}
 	if ( is_home() && $query->is_main_query() )
 		$query->set( 'post_type', $typelist );
