@@ -40,7 +40,7 @@ function decode_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 	
-	// Setup the WordPress core custom header feature.
+	// Set up the WordPress core custom header feature.
 	$args = array(
 		'default-image'          => '',
 		'flex-width'             => true,
@@ -53,7 +53,7 @@ function decode_setup() {
 	$args = apply_filters( 'decode_custom_header_args', $args );
 	add_theme_support( 'custom-header', $args );
 
-	// Setup the WordPress core custom background feature.
+	// Set up the WordPress core custom background feature.
 	$args = array(
 		'default-color' => 'ECF0F1',
 	); 
