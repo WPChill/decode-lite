@@ -932,7 +932,9 @@ embed, iframe, object {
 .single .byline, .group-blog .byline {
 	display: inline;
 }
-.page-content, .entry-content, .entry-summary {
+.page-content,
+.entry-content,
+.entry-summary {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	margin: 0 0 2.5%;
@@ -1033,17 +1035,16 @@ a .attachment-post-thumbnail {
 	}
 }
 
-
-body.single-attachment .entry-meta {
-	margin-top: 1.5%;
-}
-
-body.single-attachment .entry-content .attachment {
-	text-align: center;
-}
-
-.single-attachment .entry-content .attachment img {
-	margin: 0 auto 2.5%;
+.single-attachment {
+	.entry-meta {
+		margin-top: 1.5%;
+	}
+	.entry-content .attachment {
+		text-align: center;
+		img {
+			margin: 0 auto 2.5%;
+		}
+	}
 }
 
 .read-more {
