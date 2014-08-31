@@ -602,7 +602,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Profile URL', 'decode' ), 'LinkedIn' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 13,
 	) );
 
@@ -682,7 +683,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'Bandcamp' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 23,
 	) );
 	
@@ -698,7 +700,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Link', 'decode' ), 'iTunes' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 25,
 	) );
 
@@ -754,7 +757,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'Kickstarter' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 32,
 	) );
 	
@@ -778,7 +782,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'Tumblr' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 35,
 	) );
 	
@@ -794,7 +799,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'Svbtle' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 37,
 	) );
 	
@@ -802,7 +808,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Site URL', 'decode' ), 'WordPress' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 38,
 	) );
 
@@ -866,7 +873,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Profile URL', 'decode' ), 'Yelp' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 46,
 	) );
 	
@@ -938,7 +946,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => __( 'Email Address', 'decode' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'email',
+		'type'            => 'text',
+		//'type'            => 'email', /* Uncomment for WP >= 4.4 */
 		'priority'        => 55,
 	) );
 	
@@ -946,7 +955,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'label'           => sprintf( __( '%s Link', 'decode' ), 'Website' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'url',
+		'type'            => 'text',
+		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 56,
 	) );
 	
