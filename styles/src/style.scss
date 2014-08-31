@@ -1476,8 +1476,8 @@ li.comment {
 .sidebar-link {
 	transition: opacity 0.25s ease-out;
 	display: inline-block;
-	position: absolute;
-	top: 10%;
+	position: relative;
+	top: 0.5em;
 	height: 1.5em;
 	padding: 0;
 	border: none;
@@ -1486,11 +1486,10 @@ li.comment {
 	opacity: 1;
 	cursor: pointer;
 	&.left {
-		left: 5%;
+		left: 0.5em;
 	}
 	&.right {
-		float: right;
-		right: 5%;
+		right: 0.5em;
 	}
 	.no-touch &:hover {
 		border: none;
@@ -1757,29 +1756,28 @@ li.comment {
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
-	}
-
-	.admin-bar .sidebar-link {
-		top: calc(2.5% + 32px);
-	}
-
-	@media screen and (max-width:782px) {
-		.admin-bar .sidebar-link {
-			top: calc(2.5% + 46px);
+	
+		&.left {
+			left: 2.5%;
 		}
-	}
-
-	.sidebar-link svg, .sidebar-link img {
-		width: 1.75em;
-		height: 1.75em;
-	}
-
-	.sidebar-link.left {
-		left: 2.5%;
-	}
-
-	.sidebar-link.right {
-		right: 2.5%;
+	
+		&.right {
+			right: 2.5%;
+		}
+			
+		.admin-bar & {
+			top: calc(2.5% + 32px);
+			
+			@media screen and (max-width:782px) {
+				top: calc(2.5% + 46px);
+			}
+		}
+		
+		svg,
+		img {
+			width: 1.75em;
+			height: 1.75em;
+		}
 	}
 
 	.sidebar {
