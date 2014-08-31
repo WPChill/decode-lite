@@ -80,6 +80,6 @@ The Custom CSS feature allows you to change virtually anything about the style o
 
 To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory containes un-prefixed sass files that you may not want to work with.
 
-If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body {font-family: "name-of-font-family";}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
+If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body, button, input, select, textarea {font-family: 'name-of-font-family';}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 
 *The font "Oxygen" is supplied via Google Fonts. It is licensed under the [SIL Open Font License, version 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).*
