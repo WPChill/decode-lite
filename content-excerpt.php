@@ -14,7 +14,7 @@
 	<header class="entry-header">
 			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_excerpts', false ) == true ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-				<?php decode_srcset_post_thumbnail(); ?>
+				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
 		<div class="entry-title"><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>

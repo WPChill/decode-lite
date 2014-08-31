@@ -11,31 +11,18 @@ if ( ! function_exists( 'decode_srcset_post_thumbnail' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function decode_srcset_post_thumbnail() {
-	$post            = get_post();
-	$post_id         = $post->ID;
-	
+function decode_srcset_post_thumbnail( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 	$full_image_url  = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
 	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
 	
-	$attr['srcset']  = $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x';
-	$attr['width']   = '100%';
-	$attr['height']  = '100%';
+	$attr = 'srcset=' . $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x';
 	
-	echo get_the_post_thumbnail( $post_id, 'full', $attr );
+	$html = wp_get_attachment_image( $post_thumbnail_id, $size, false, $attr );
 	
-	/* Older version that outputs everything itself, I'd rather use built-in WP functions.
-echo '<img
-		width="' . $full_image_url[1] . '"
-		height="' . $full_image_url[2] .'"
-		srcset="' . $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x"
-		src="' . $large_image_url[0] .  '"
-		class="attachment-post-thumbnail wp-post-image"
-		alt="' . get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ) . '"
-	>'
-*/
+	return $html;
 }
 endif;
+add_filter( 'post_thumbnail_html', 'decode_srcset_post_thumbnail', 10, 5 );
 
 if ( ! function_exists( 'decode_paging_nav' ) ) :
 /**
