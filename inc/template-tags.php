@@ -6,6 +6,36 @@
  *
  * @package Decode
  */
+ 
+if ( ! function_exists( 'decode_srcset_post_thumbnail' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ */
+function decode_srcset_post_thumbnail() {
+	$post            = get_post();
+	$post_id         = $post->ID;
+	
+	$full_image_url  = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
+	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
+	
+	$attr['srcset']  = $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x';
+	$attr['width']   = '100%';
+	$attr['height']  = '100%';
+	
+	echo get_the_post_thumbnail( $post_id, 'full', $attr );
+	
+	/* Older version that outputs everything itself, I'd rather use built-in WP functions.
+echo '<img
+		width="' . $full_image_url[1] . '"
+		height="' . $full_image_url[2] .'"
+		srcset="' . $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x"
+		src="' . $large_image_url[0] .  '"
+		class="attachment-post-thumbnail wp-post-image"
+		alt="' . get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ) . '"
+	>'
+*/
+}
+endif;
 
 if ( ! function_exists( 'decode_paging_nav' ) ) :
 /**

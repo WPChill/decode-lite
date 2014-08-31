@@ -12,11 +12,11 @@
 	<?php tha_entry_top(); ?>
 
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_excerpts', false ) == true ) : ?>
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-			<?php the_post_thumbnail(); ?>
-		</a>
-		<?php endif; ?>
+			<?php if ( has_post_thumbnail() && get_theme_mod( 'show_featured_images_on_excerpts', false ) == true ) : ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+				<?php decode_srcset_post_thumbnail(); ?>
+			</a>
+			<?php endif; ?>
 		<div class="entry-title"><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
 		<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
 		<div class="entry-meta">
