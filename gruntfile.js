@@ -131,19 +131,7 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
-		
-		imageoptim: {
-			optimize: {
-				expand: true,
-				src: ['images'],
-				options: {
-					jpegMini: false,
-					imageAlpha: true,
-					quitAfter: true
-				}
-			}
-		},
-		
+				
 		markdown: {
 			readme: {
 				options: {
@@ -210,8 +198,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-newer');
-	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-exec');
@@ -227,7 +213,6 @@ module.exports = function(grunt) {
 		'csscomb',
 		'autoprefixer',
 		'cssmin',
-		'newer:imageoptim',
 		'markdown',
 		'copy',
 		'watch'
