@@ -105,7 +105,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '3.0.0' );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '3.0.1' );
 	
 	if ( get_theme_mod( 'latin_extended_font', false ) == true ) {
 		wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
