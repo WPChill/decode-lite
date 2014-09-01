@@ -18,15 +18,16 @@ Decode supports link posts, where the title can be hyperlinked. To do this, firs
 
 Featured Images are also supported, allowing you to display large, beautiful images at the top of your posts. A site-wide header image can also be set in the Header Options section of the theme customizer. 
 
-To add an explore page to your site, simply add a page with the title that you want and set the page template to "Explore Page" and Decode does the rest, adding an easy place to find new content on your site. 
+To add an explore page to your site, simply add a page with the title that you want and set the page template to "Explore Page" and Decode does the rest, adding an easy place for visitors to find new content on your site. 
 
 Breadcrumbs are supported via the [Breadcrumb Trail](http://wordpress.org/plugins/breadcrumb-trail/) or [Breadcrumb NavXT](http://wordpress.org/plugins/breadcrumb-navxt/) plugins. Simply activate either plugin and enjoy beautiful breadcrumbs across your site.
 
-Lastly, Decode has social icons in the header that can link to your profiles from every side of the Internet. These can all be configured in the Customize menu and are listed below.
+Lastly, Decode has social icons that can link to your profiles from every side of the Internet. These can all be configured in the Customize menu and are listed below.
 - Twitter
 - ADN
 - Facebook
 - Google+
+- Sina Weibo
 - MySpace
 - Diaspora
 - VK

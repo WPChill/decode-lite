@@ -12,6 +12,12 @@
 `.sociallink svg { height: 2.5em; width: 2.5em; }`<br>
 I suggest that you do not change this without using media queries because the social icons are responsively sized.
 
+### Change the color of the social icons:
+`.social-icon-fill { fill: #00B0CC; }`
+
+### Change the color of the menu and menu close icons:
+`.menu-icon, .close-icon { fill: #00B0CC; }`
+
 ### Change the font size of posts and pages:
 `.entry-content { font-size: 1em; }`<br>
 1em is the default.
@@ -27,10 +33,6 @@ I suggest that you do not change this without using media queries because the so
 ### Increase size of comment box by default:
 `textarea#comment { height: 4em; }`<br>
 7em is the default.
-
-### Hide note about allowed tags under comment form:
-`.form-allowed-tags { display: none !important; }`<br>
-This is hidden until the form is clicked on, but this will hide it at all times.
 
 ### Make the sidebar pop closed when the page loads
 `.sidebar.left {
