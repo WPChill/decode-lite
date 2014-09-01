@@ -27,6 +27,7 @@ Lastly, Decode has social icons in the header that can link to your profiles fro
 - ADN
 - Facebook
 - Google+
+- Sina Weibo
 - MySpace
 - Diaspora
 - VK
