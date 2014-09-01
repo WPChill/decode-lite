@@ -29,7 +29,7 @@ function decode_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'colophon',
-		'render'    => 'decode_render_infinte_scroll'
+		'render'    => 'decode_render_infinte_scroll',
 	) );
 }
 }
