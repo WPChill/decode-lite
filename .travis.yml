@@ -49,6 +49,7 @@ matrix:
 # Install devDependencies and build files with Grunt.
 install:
   - npm install
+  - npm install # Do it again because it goes wrong often enough to make builds error.
   - npm install -g grunt-cli
   - grunt build
 
