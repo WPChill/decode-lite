@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Comments.
+ * The template for displaying comments.
  *
  * The area of the page that contains both current comments
  * and the comment form.
@@ -17,7 +17,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-	<?php if (get_theme_mod( 'enable_comments', true ) == true ) : ?>
+	<?php if ( get_theme_mod( 'enable_comments', true ) == true ) : ?>
 
 	<?php tha_comments_before(); ?>
 <div id="comments" class="comments-area">
@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'       => 'ol',
 					'short_ping'  => true,
-					'avatar_size' => 64
+					'avatar_size' => 64,
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -78,9 +78,9 @@ if ( post_password_required() ) {
 			'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
 			'label_submit'         => __( 'Post Comment', 'decode' )
 		);
-	if (get_theme_mod( 'show_allowed_tags', false ) == false ) {
+	if ( get_theme_mod( 'show_allowed_tags', false ) == false ) {
 		$comments_args = array(
-			'comment_notes_after'  => ''
+			'comment_notes_after'  => '',
 		);
 	}
 	?>
@@ -95,7 +95,7 @@ if ( post_password_required() ) {
 		__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'decode' );
 	?>
 	
-	<?php if (get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
+	<?php if ( get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
 		<script>		
 			function hasClass(el, cls) {
 				return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;

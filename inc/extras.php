@@ -58,16 +58,16 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
 /**
  * Highlight search terms in search results.
  */
-function decode_highlight_search_results($text){
-     if(is_search()){
+function decode_highlight_search_results( $text ) {
+     if ( is_search() ) {
      $sr = get_search_query();
-     $keys = implode('|', explode(' ', get_search_query()));
-     $text = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text);
+     $keys = implode( '|', explode( ' ', get_search_query() ) );
+     $text = preg_replace( '/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text );
      }
      return $text;
 }
-add_filter('the_excerpt', 'decode_highlight_search_results');
-add_filter('the_title', 'decode_highlight_search_results');
+add_filter( 'the_excerpt', 'decode_highlight_search_results' );
+add_filter( 'the_title', 'decode_highlight_search_results' );
 
 /**
  * Link to post in excerpt [...] links.
@@ -75,65 +75,65 @@ add_filter('the_title', 'decode_highlight_search_results');
 if ( ! function_exists( 'link_ellipses' ) ) {
 
 function link_ellipses( $more ) {
-	if(!is_search()){
+	if ( ! is_search() ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">[&hellip;]</a>';
 	}
 }
 }
-add_filter('excerpt_more', 'link_ellipses');
+add_filter( 'excerpt_more', 'link_ellipses' );
 
 /* A custom callback function that displays a meaningful title
  * depending on the page being rendered
  */
 if ( ! function_exists( 'decode_wp_title' ) ) {
 
-function decode_wp_title($title, $sep, $sep_location) {
+function decode_wp_title( $title, $sep, $sep_location ) {
 
 	// add white space around $sep
 	$sep = ' ' . $sep . ' ';
 
-	$site_description = get_bloginfo('description');
+	$site_description = get_bloginfo( 'description' );
 	
-	if (is_feed())
+	if ( is_feed() )
 		return $title;
  
-	elseif ($site_description && is_front_page())
+	elseif ( $site_description && is_front_page() )
 		$custom = $sep . $site_description;
 
-	elseif(is_category())
-		$custom = $sep . __('Category', 'decode');
+	elseif ( is_category() )
+		$custom = $sep . __( 'Category', 'decode' );
 
-	elseif(is_tag())
-		$custom = $sep . __('Tag', 'decode');
+	elseif ( is_tag() )
+		$custom = $sep . __( 'Tag', 'decode' );
 
-	elseif(is_author())
-		$custom = $sep . __('Author', 'decode');
+	elseif ( is_author() )
+		$custom = $sep . __( 'Author', 'decode' );
 
-	elseif(is_year() || is_month() || is_day())
-		$custom = $sep . __('Archives', 'decode');
+	elseif ( is_year() || is_month() || is_day() )
+		$custom = $sep . __( 'Archives', 'decode' );
 
 	else
 		$custom = '';
 
 	// get the page number (main page or an archive)
-	if(get_query_var('paged'))
-		$page_number = $sep . __('Page ', 'decode') . get_query_var('paged');
+	if ( get_query_var( 'paged' ) )
+		$page_number = $sep . __( 'Page ', 'decode' ) . get_query_var( 'paged' );
 
 	// get the page number (post with multipages)
-	elseif(get_query_var('page'))
-		$page_number = $sep . __('Page ', 'decode') . get_query_var('page');
+	elseif ( get_query_var( 'page' ) )
+		$page_number = $sep . __( 'Page ', 'decode' ) . get_query_var( 'page' );
 
 	else
 		$page_number = '';
 
 	// Comment the 4 lines of code below and see how odd the title format becomes
-	if($sep_location == 'right' && !(is_front_page())) {
+	if ( $sep_location == 'right' && ! ( is_front_page() ) ) {
 		$custom = $custom . $sep;
-		$title = substr($title, 0, -2);
+		$title = substr( $title, 0, -2 );
 	}
 
 	// return full title
-	return get_bloginfo('name') . $custom . $title . $page_number;
+	return get_bloginfo( 'name' ) . $custom . $title . $page_number;
 
 } // end of decode_wp_title
 }
@@ -141,7 +141,7 @@ function decode_wp_title($title, $sep, $sep_location) {
 /* add function 'decode_wp_title()' to the
  * wp_title filter, with priority 10 and 3 args
  */
-add_filter('wp_title', 'decode_wp_title', 10, 3);
+add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
 
 /**
  * Sets the authordata global when viewing an author archive.

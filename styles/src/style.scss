@@ -4,10 +4,10 @@
 /*!
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
-Version: 3.0.0
+Version: 3.0.1
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 48 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Decode has been translated into Chinese, Dutch, French, German, Polish, Russian, and Spanish. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
+Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 53 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Decode has been translated into Chinese, Dutch, French, German, Polish, Russian, and Spanish. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
 Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -476,6 +476,9 @@ embed, iframe, object {
 	.GooglePlusLink {
 		background-image: url('images/GooglePlus.png');
 	}
+	.SinaWeiboLink {
+		background-image: url('images/SinaWeibo.png');
+	}
 	.MySpaceLink {
 		background-image: url('images/MySpace.png');
 	}
@@ -932,7 +935,9 @@ embed, iframe, object {
 .single .byline, .group-blog .byline {
 	display: inline;
 }
-.page-content, .entry-content, .entry-summary {
+.page-content,
+.entry-content,
+.entry-summary {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	margin: 0 0 2.5%;
@@ -1033,17 +1038,16 @@ a .attachment-post-thumbnail {
 	}
 }
 
-
-body.single-attachment .entry-meta {
-	margin-top: 1.5%;
-}
-
-body.single-attachment .entry-content .attachment {
-	text-align: center;
-}
-
-.single-attachment .entry-content .attachment img {
-	margin: 0 auto 2.5%;
+.single-attachment {
+	.entry-meta {
+		margin-top: 1.5%;
+	}
+	.entry-content .attachment {
+		text-align: center;
+		img {
+			margin: 0 auto 2.5%;
+		}
+	}
 }
 
 .read-more {
@@ -1476,8 +1480,8 @@ li.comment {
 .sidebar-link {
 	transition: opacity 0.25s ease-out;
 	display: inline-block;
-	position: absolute;
-	top: 10%;
+	position: relative;
+	top: 0.5em;
 	height: 1.5em;
 	padding: 0;
 	border: none;
@@ -1486,11 +1490,10 @@ li.comment {
 	opacity: 1;
 	cursor: pointer;
 	&.left {
-		left: 5%;
+		left: 0.5em;
 	}
 	&.right {
-		float: right;
-		right: 5%;
+		right: 0.5em;
 	}
 	.no-touch &:hover {
 		border: none;
@@ -1757,29 +1760,28 @@ li.comment {
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
-	}
-
-	.admin-bar .sidebar-link {
-		top: calc(2.5% + 32px);
-	}
-
-	@media screen and (max-width:782px) {
-		.admin-bar .sidebar-link {
-			top: calc(2.5% + 46px);
+	
+		&.left {
+			left: 2.5%;
 		}
-	}
-
-	.sidebar-link svg, .sidebar-link img {
-		width: 1.75em;
-		height: 1.75em;
-	}
-
-	.sidebar-link.left {
-		left: 2.5%;
-	}
-
-	.sidebar-link.right {
-		right: 2.5%;
+	
+		&.right {
+			right: 2.5%;
+		}
+			
+		.admin-bar & {
+			top: calc(2.5% + 32px);
+			
+			@media screen and (max-width:782px) {
+				top: calc(2.5% + 46px);
+			}
+		}
+		
+		svg,
+		img {
+			width: 1.75em;
+			height: 1.75em;
+		}
 	}
 
 	.sidebar {
@@ -1978,10 +1980,6 @@ li.comment {
 	.entry-title {
 		font-size: 1.75em;
 		width: 80%;
-	}
-
-	.entry-content {
-		font-size: 1.2em;
 	}
 
 	.gallery-columns-5 .gallery-caption {

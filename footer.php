@@ -28,7 +28,7 @@
 			'menu_class'     => 'menu horizontal-menu footer-menu',
 			'menu_id'        => 'footer-menu',
 			'fallback_cb'     => false,
-			'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->'
+			'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #footer-menu -->',
 		) ); 
 	}
 	?>
@@ -41,7 +41,7 @@
 	
 	<?php if ( get_theme_mod( 'show_theme_info', true ) == true ) : ?>
 	<div class="theme-info">
-		<p><?php printf(__( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'http://ScottHSmith.com/projects/decode/' ) . '">Decode</a>', 'Scott Smith') ?></p>
+		<p><?php printf( __( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'http://ScottHSmith.com/projects/decode/' ) . '">Decode</a>', 'Scott Smith' ) ?></p>
 	</div><!-- .theme-info -->
 	<?php endif; ?>
 	

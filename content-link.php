@@ -1,5 +1,8 @@
 <?php
 /**
+ *
+ * The template for displaying link post formats.
+ *
  * @package Decode
  */
 ?>
@@ -10,7 +13,7 @@
 
 	<header class="entry-header">
 			<?php if ( has_post_thumbnail() ) : ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
@@ -28,7 +31,7 @@
 	<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
 
 	<footer class="entry-footer">
-		<?php if (get_theme_mod( 'enable_comments', true ) == true && ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+		<?php if ( get_theme_mod( 'enable_comments', true ) == true && ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 			<div class="comments-link <?php echo get_theme_mod( 'enable_comments', '' ); ?>"><?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?></div>
 		<?php endif; ?>
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
@@ -37,7 +40,7 @@
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'show_categories', false ) == true ) : ?>
-				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category(', '); ?></p>
+				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
 				<p class="date"><?php decode_posted_on(); ?></p>

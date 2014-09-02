@@ -6,6 +6,23 @@
  *
  * @package Decode
  */
+ 
+if ( ! function_exists( 'decode_srcset_post_thumbnail' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ */
+function decode_srcset_post_thumbnail( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	$full_image_url  = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
+	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
+	
+	$attr = 'srcset=' . $large_image_url[0] . ' 1x, ' . $full_image_url[0] . ' 2x';
+	
+	$html = wp_get_attachment_image( $post_thumbnail_id, $size, false, $attr );
+	
+	return $html;
+}
+endif;
+add_filter( 'post_thumbnail_html', 'decode_srcset_post_thumbnail', 10, 5 );
 
 if ( ! function_exists( 'decode_paging_nav' ) ) :
 /**
@@ -88,7 +105,7 @@ function decode_the_attached_image() {
 		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
-		'orderby'        => 'menu_order ID'
+		'orderby'        => 'menu_order ID',
 	) );
 
 	// If there is more than 1 attachment in a gallery...
@@ -123,9 +140,9 @@ if ( ! function_exists( 'decode_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function decode_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated screen-reader-text" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated screen-reader-text" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,

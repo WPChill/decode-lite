@@ -22,7 +22,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php
-				if ( get_theme_mod( 'use_excerpts', false ) == true && !is_sticky() ) {
+				if ( get_theme_mod( 'use_excerpts', false ) == true && ! is_sticky() ) {
 					get_template_part( 'content', 'excerpt' );
 				}
 				

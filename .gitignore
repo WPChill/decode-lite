@@ -1,0 +1,15 @@
+
+config.codekit
+
+node_modules/
+
+# Built Files
+style.css
+editor-style.css
+styles/*.css
+styles/*.map
+styles/src/.sass-cache/
+scripts/*.js
+scripts/srcmaps/
+scripts/src/modernizr.js
+docs/*.html

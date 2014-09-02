@@ -1,3 +1,5 @@
+@import 'variables';
+
 .wp-editor {
 	color: #000;
 	font: 300 100%/1.5 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
@@ -5,13 +7,13 @@
 }
 
 .wp-editor a, .wp-editor a:visited {
-	transition: color 0.25s ease-out;
-	color: #009BCD;
+	transition: color 0.25s ease;
+	color: $accent-color;
 	text-decoration: underline;
 }
 
 .wp-editor a:hover {
-	color: #007EA6;
+	color: $accent-color-secondary;
 }
 
 h1 {

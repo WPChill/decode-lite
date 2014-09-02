@@ -86,7 +86,7 @@ function decode_admin_header_image() {
 		<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
 		<h2 class="site-description"><?php echo get_theme_mod( 'html_description' ); ?></h2>
 		<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
-		<h2 class="site-description"><?php echo get_bloginfo ( 'description' );?></h2>
+		<h2 class="site-description"><?php echo get_bloginfo( 'description' );?></h2>
 		<?php endif; ?>
 	<?php endif; ?>
 	
