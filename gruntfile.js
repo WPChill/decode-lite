@@ -1,10 +1,3 @@
-var exec = require('child_process').exec;
-process.on('SIGINT', function () {
-	exec('/Applications/MAMP/bin/stop.sh', function () {
-		process.exit();
-	});
-});
-
 module.exports = function(grunt) {
 	
 	// Configuration
@@ -177,15 +170,6 @@ module.exports = function(grunt) {
 				options: { livereload: true },
 				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js']
 			}
-		},
-		
-		exec: {
-			serverup: {
-				command: '/Applications/MAMP/bin/start.sh'
-			},
-			serverdown: {
-				command: '/Applications/MAMP/bin/stop.sh'
-			}
 		}
 	});
 	
@@ -200,7 +184,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-exec');
 
 	
 	// Workflows
@@ -231,11 +214,9 @@ module.exports = function(grunt) {
 		'copy'
 	]);
 		
-	// $ grunt dev: Starts MAMP server, watches for changes while developing.
+	// $ grunt dev: Watches for changes while developing.
 	grunt.registerTask('dev', [
-		'exec:serverup',
-		'watch',
-		'exec:serverdown'
+		'watch'
 	]);
 
 };
