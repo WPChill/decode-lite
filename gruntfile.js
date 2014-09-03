@@ -33,27 +33,19 @@ module.exports = function(grunt) {
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
+			all: ['Gruntfile.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
 		},
 		
 		uglify: {
 			options: {
 				sourceMap: true
 			},
-			build_decode_basic: {
+			decode: {
 				options: {
 					sourceMapName: 'scripts/srcmaps/decode.js.map'
 				},
 				files: {
 					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/fastclick.js'],
-				}
-			},
-			build_decode_with_sidebar: {
-				options: {
-					sourceMapName: 'scripts/srcmaps/decode-with-sidebar.js.map'
-				},
-				files: {
-					'scripts/decode-with-sidebar.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/fastclick.js'],
 				}
 			},
 			customizer: {
