@@ -6,13 +6,14 @@
 	background: #FFF;
 }
 
-.wp-editor a, .wp-editor a:visited {
+a,
+a:visited {
 	transition: color 0.25s ease;
 	color: $accent-color;
 	text-decoration: underline;
 }
 
-.wp-editor a:hover {
+a:hover {
 	color: $accent-color-secondary;
 }
 
@@ -54,7 +55,8 @@ blockquote {
 }
 
 /* Captions */
-.wp-caption, .html5-captions .wp-caption {
+.wp-caption,
+.html5-captions .wp-caption {
 	max-width: 100%;
 	margin-bottom: 1.5em;
 }
@@ -129,7 +131,15 @@ blockquote {
 	max-width: calc(11.1% - 4px);
 }
 
-.gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
 	margin-right: 0;
 }
 
@@ -143,12 +153,19 @@ blockquote {
 	max-width: 20em;
 }
 
-.gallery-columns-3 .gallery-caption, .gallery-columns-4 .gallery-caption, .gallery-columns-5 .gallery-caption, .gallery-columns-6 .gallery-caption, .gallery-columns-7 .gallery-caption, .gallery-columns-8 .gallery-caption, .gallery-columns-9 .gallery-caption {
+.gallery-columns-3 .gallery-caption,
+.gallery-columns-4 .gallery-caption,
+.gallery-columns-5 .gallery-caption,
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
 	display: none;
 }
 
 @media only screen and (min-width: 35em) {
-	.gallery-columns-3 .gallery-caption, .gallery-columns-4 .gallery-caption {
+	.gallery-columns-3 .gallery-caption,
+	.gallery-columns-4 .gallery-caption {
 		display: block; /* Show galleries that will fit on tablet-sized screens. */
 	}
 }
