@@ -73,10 +73,10 @@ if ( post_password_required() ) {
 	
 	<?php
 	$comments_args = array(
-		'title_reply'          => __( 'Leave a Reply', 'decode' ),
-		'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
-		'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
-		'label_submit'         => __( 'Post Comment', 'decode' ),
+		'title_reply'       => __( 'Leave a Reply', 'decode' ),
+		'title_reply_to'    => __( 'Leave a Reply to %s', 'decode' ),
+		'cancel_reply_link' => __( 'Cancel reply', 'decode' ),
+		'label_submit'      => __( 'Post Comment', 'decode' ),
 	);
 	if ( get_theme_mod( 'show_allowed_tags', false ) == false ) {
 		$comments_args = array(
