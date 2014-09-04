@@ -1311,7 +1311,7 @@ li.comment {
 	margin-top: 7.5%;
 }
 
-.comment-form {
+.comment-form:not(.jetpack-comments-active) {
 	display: flex;
 	justify-content: space-between;
 

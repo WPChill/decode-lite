@@ -84,8 +84,15 @@ if ( post_password_required() ) {
 		);
 	}
 	?>
-
-	<?php comment_form( $comments_args ); ?>
+	
+	<?php 
+		// Add a class to the comment form if Jetpack Comments are enabled.
+		ob_start();
+		comment_form( $comments_args );
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'comments' ) ) {
+			echo str_replace( 'class="comment-form"','class="comment-form jetpack-comments-active"', ob_get_clean() );
+		}
+	?>
 	
 	<?php
 		_x( 'Comment', 'noun', 'decode' );
