@@ -5,8 +5,12 @@
 		// Init functions
 		init: function() {
 			this.FastClick();
-			if ( Modernizr.touch ) { this.DecodeDropdown(); }
-			if ( document.getElementById( 'sidebar-link' ) ) { this.DecodeSidebar(); }
+			if ( Modernizr.touch ) {
+				this.DecodeDropdown();
+			}
+			if ( document.getElementById( 'sidebar-link' ) ) {
+				this.DecodeSidebar();
+			}
 		},
 		
 		// Initialize FastClick
