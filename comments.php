@@ -73,11 +73,11 @@ if ( post_password_required() ) {
 	
 	<?php
 	$comments_args = array(
-			'title_reply'          => __( 'Leave a Reply', 'decode' ),
-			'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
-			'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
-			'label_submit'         => __( 'Post Comment', 'decode' )
-		);
+		'title_reply'          => __( 'Leave a Reply', 'decode' ),
+		'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
+		'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
+		'label_submit'         => __( 'Post Comment', 'decode' ),
+	);
 	if ( get_theme_mod( 'show_allowed_tags', false ) == false ) {
 		$comments_args = array(
 			'comment_notes_after'  => '',
@@ -97,17 +97,17 @@ if ( post_password_required() ) {
 	
 	<?php if ( get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
 		<script>		
-			function hasClass(el, cls) {
-				return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+			function hasClass( el, cls ) {
+				return ( ' ' + el.className + ' ' ).indexOf( ' ' + cls + ' ' ) > -1;
 			}
 			
-			var target = document.querySelector('.form-allowed-tags');
+			var target = document.querySelector( '.form-allowed-tags' );
 			
-			document.querySelector('textarea#comment').addEventListener('click', function() {
-				if (!hasClass(target, 'visible')) {
+			document.querySelector( 'textarea#comment' ).addEventListener( 'click', function() {
+				if ( ! hasClass( target, 'visible' ) ) {
 					target.className += ' ' + 'visible';
 				}
-			}, false);
+			}, false );
 		</script>
 	<?php endif; ?>
 
