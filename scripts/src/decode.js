@@ -1,26 +1,34 @@
-( function() {
+( function () {
+	'use strict';
 
 	var decode = {
 		
 		// Init functions
 		init: function() {
 			this.FastClick();
-			if ( Modernizr.touch ) {
-				this.DecodeDropdown();
-			}
 			if ( document.getElementById( 'sidebar-link' ) ) {
 				this.DecodeSidebar();
 			}
+			if ( Modernizr.touch ) {
+				this.DecodeDropdown();
+			}
 		},
 		
-		// Initialize FastClick
+		// Initialize FastClick (see `scripts/src/fastclick.js`)
 		FastClick: function() {
-			window.addEventListener('load', function() {
+			window.addEventListener( 'load', function() {
 				FastClick.attach(document.body);
-			}, false);
+			}, false );
 		},
 		
-		// Decode Dropdown function (compressed, see `dropdown.js`)
+		// Initialize DecodeSidebar (see `scripts/src/sidebar.js`)
+		DecodeSidebar: function() {
+			window.addEventListener( 'load', function() {
+				DecodeSidebar.init( ['sidebar-link', 'sidebar-top'] );
+			}, false );
+		},
+		
+		// Decode Dropdown function (compressed, see `scripts/src/dropdown.js`)
 		DecodeDropdown: function() {
 				
 				/* jshint ignore:start */		
@@ -31,15 +39,8 @@
 				!1)});var matches;(function(a){matches=a.matches||a.matchesSelector||a.webkitMatchesSelector||a.mozMatchesSelector||a.oMatchesSelector||a.msMatchesSelector})(document.documentElement);
 				document.querySelector("."+activeDropdownClass)||document.addEventListener("click",function(a){matches.call(a.target,".menu-item."+activeDropdownClass+" *, .page_item."+activeDropdownClass+" *")||[].forEach.call(document.querySelectorAll("."+activeDropdownClass),function(a){a.classList.remove(activeDropdownClass)})},!1);
 				/* jshint ignore:end */
-		},
-		
-		// Decode Dropdown function (see `sidebar.js`)
-		DecodeSidebar: function() {
-			window.addEventListener('load', function() {
-				DecodeSidebar.init( 'sidebar-link' );
-				DecodeSidebar.init( 'sidebar-top' );
-			}, false);
 		}
+		
 	};
 	
 	decode.init();
