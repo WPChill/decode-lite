@@ -1760,23 +1760,18 @@ li.comment {
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
-	
 		&.left {
 			left: 2.5%;
 		}
-	
 		&.right {
 			right: 2.5%;
 		}
-			
 		.admin-bar & {
 			top: calc(2.5% + 32px);
-			
 			@media screen and (max-width:782px) {
 				top: calc(2.5% + 46px);
 			}
 		}
-		
 		svg,
 		img {
 			width: 1.75em;
