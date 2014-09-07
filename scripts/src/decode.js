@@ -6,9 +6,7 @@
 		// Init functions
 		init: function() {
 			this.FastClick();
-			if ( document.getElementById( 'sidebar-link' ) ) {
-				this.DecodeSidebar();
-			}
+			this.DecodeSidebar();
 			if ( Modernizr.touch ) {
 				this.DecodeDropdown();
 			}

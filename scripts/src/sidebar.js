@@ -9,14 +9,18 @@
 		for ( i = 0; i < elements.length; i++ ) {
 			var element = elements[i];
 			
-			// If it's a modern browser:
-			if ( document.addEventListener ) {
-				document.getElementById( element ).addEventListener( 'click', toggleClass( document.body, VisibleClass ), false );
-			}
-			
-			// If it's IE 8 or some crap like that:
-			else if ( document.attachEvent )	 {
-				document.getElementById( element ).attachEvent( 'onclick', toggleClass( document.body, VisibleClass ) );
+			// Check to see if the element exists before proceeding
+			if ( document.getElementById( element ) ) {
+				
+				// If it's a modern browser:
+				if ( document.addEventListener ) {
+					document.getElementById( element ).addEventListener( 'click', toggleClass( document.body, VisibleClass ), false );
+				}
+				
+				// If it's IE 8 or some crap like that:
+				else if ( document.attachEvent )	 {
+					document.getElementById( element ).attachEvent( 'onclick', toggleClass( document.body, VisibleClass ) );
+				}
 			}
 		}
 		
@@ -45,13 +49,13 @@
 		return new DecodeSidebar( elements, VisibleClass );
 	};
 	
-	if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+	if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
 	
 		// AMD. Register as an anonymous module.
-		define(function() {
+		define( function() {
 			return DecodeSidebar;
-		});
-	} else if (typeof module !== 'undefined' && module.exports) {
+		} );
+	} else if ( typeof module !== 'undefined' && module.exports ) {
 		module.exports = DecodeSidebar.init;
 		module.exports.DecodeSidebar = DecodeSidebar;
 	} else {
