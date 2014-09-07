@@ -40,17 +40,13 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use decode_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define decode_comment() and that will be used instead.
-				 * See decode_comment() in inc/template-tags.php for more.
-				 */
-				wp_list_comments( array(
+				$args = array(
 					'style'       => 'ol',
 					'short_ping'  => true,
 					'avatar_size' => 64,
-				) );
+				);
+				$args = apply_filters( 'decode_wp_list_comments_args', $args );
+				wp_list_comments( $args );
 			?>
 		</ol><!-- .comment-list -->
 
@@ -103,7 +99,7 @@ if ( post_password_required() ) {
 	?>
 	
 	<?php if ( get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
-		<script>		
+		<script>
 			function hasClass( el, cls ) {
 				return ( ' ' + el.className + ' ' ).indexOf( ' ' + cls + ' ' ) > -1;
 			}
