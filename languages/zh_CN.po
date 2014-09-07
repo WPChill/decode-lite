@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2014-08-27 00:43-0600\n"
-"PO-Revision-Date: 2014-08-27 13:55-0600\n"
+"PO-Revision-Date: 2014-09-07 08:35+0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
-"Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: MO <mapleobserver@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,11 +33,11 @@ msgstr "糟糕！该页面无法找到。"
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr "访问错误。尝试下面的一个链接或搜索吧"
+msgstr "访问错误，请尝试下面的链接或搜索。"
 
 #: 404.php:26
 msgid "Try looking in the monthly archives."
-msgstr "试试访问每月归档"
+msgstr "试试访问每月归档。"
 
 #: 404.php:32
 msgid "Most Used Categories"
@@ -132,11 +132,11 @@ msgstr "评论导航"
 
 #: comments.php:36 comments.php:60
 msgid "&larr; Older Comments"
-msgstr "&larr; 老评论"
+msgstr "&larr; 较早评论"
 
 #: comments.php:37 comments.php:61
 msgid "Newer Comments &rarr;"
-msgstr "最新评论"
+msgstr "较新评论"
 
 #: comments.php:71
 msgid "Comments are closed."
@@ -247,7 +247,7 @@ msgstr "准备发布你的第一个POST？<a href=\"%1$s\">点击开始</a>."
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "Sorry，没找到搜索结果，请尝试其他关键字。"
+msgstr "抱歉，没找到搜索结果，请尝试其他关键字。"
 
 #: content-none.php:28
 msgid ""
@@ -258,7 +258,7 @@ msgstr "对不起，似乎不能找到你想要的内容，试试搜索吧"
 #: footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
-msgstr ""
+msgstr "%1$s &nbsp;主题由&nbsp;%2$s&nbsp;设计"
 
 #: functions.php:33
 msgid "Header Menu"
@@ -286,9 +286,8 @@ msgid "Skip to content"
 msgstr "跳到内容"
 
 #: header.php:37
-#, fuzzy
 msgid "Show sidebar"
-msgstr "侧边栏"
+msgstr "显示侧边栏"
 
 #: image.php:22
 #, php-format
@@ -298,7 +297,7 @@ msgid ""
 "\"gallery\">%5$s</a>"
 msgstr ""
 "发布 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
-"%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
+"%2$s</time></span> 在 <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
 "\">%5$s</a>"
 
 #: image.php:34
@@ -469,11 +468,11 @@ msgstr "内容设置"
 #, php-format
 msgctxt "(blog name)'s content."
 msgid "These options change the display of %s's content"
-msgstr ""
+msgstr "这些选择会改变 %s 的内容显示方式。"
 
 #: inc/customizer.php:1040
 msgid "Load Latin Extended character set. This will increase page load times."
-msgstr ""
+msgstr "加载拉丁语扩展字符集，该设置会增加页面加载时间。"
 
 #: inc/customizer.php:1047
 msgid ""
@@ -554,30 +553,29 @@ msgstr "在首页显示以下类型的文章(用逗号分隔)"
 
 #: inc/customizer.php:1220
 msgid "Accent Color"
-msgstr "已访问链接颜色"
+msgstr "特殊颜色"
 
 #: inc/customizer.php:1221
 msgid "The main color used for links, borders, buttons, and more."
-msgstr ""
+msgstr "用于链接、边框、按钮等位置的颜色。"
 
 #: inc/customizer.php:1228
 msgid "Active Link Color"
-msgstr "未访问链接颜色"
+msgstr "已访问链接颜色"
 
 #: inc/customizer.php:1229
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
-msgstr ""
+msgstr "用于当前已点击过的链接<br>(建议使用比特殊颜色深一些的颜色。)"
 
 #: inc/customizer.php:1236
 msgid "Text Color"
 msgstr "文本颜色"
 
 #: inc/customizer.php:1237
-#, fuzzy
 msgid "The main text color."
-msgstr "文本颜色"
+msgstr "主要文本颜色。"
 
 #: inc/customizer.php:1244
 msgid "Secondary Text Color"
@@ -588,6 +586,7 @@ msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
+"用于二级文本的颜色，比如引用文字。<br>(建议使用比文本颜色深一些的颜色。)"
 
 #: inc/customizer.php:1252
 msgid "Use accent color instead of text color for icons"
@@ -614,42 +613,38 @@ msgid "Posts navigation"
 msgstr "文章导航"
 
 #: inc/template-tags.php:27
-#, fuzzy
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 前面的文章"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;较旧文章"
 
 #: inc/template-tags.php:31
-#, fuzzy
 msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "最近文章 <span class=\"meta-nav\">&rarr;</span>"
+msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:56
 msgid "Post navigation"
 msgstr "文章导航"
 
 #: inc/template-tags.php:59
-#, fuzzy
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
 #: inc/template-tags.php:60
-#, fuzzy
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:139
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "发布于 %s"
 
 #: inc/template-tags.php:144
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "作者 %s"
 
 #: page-explore.php:11
 msgid "Explore Page"
@@ -664,9 +659,8 @@ msgid "Categories"
 msgstr "分类"
 
 #: sidebar.php:11
-#, fuzzy
 msgid "Hide sidebar"
-msgstr "侧边栏"
+msgstr "隐藏侧边栏"
 
 #: sidebar.php:26
 msgid "Navigation"
