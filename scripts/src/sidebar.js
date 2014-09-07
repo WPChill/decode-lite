@@ -18,7 +18,7 @@
 				}
 				
 				// If it's IE 8 or some crap like that:
-				else if ( document.attachEvent )	 {
+				else if ( document.attachEvent ) {
 					document.getElementById( element ).attachEvent( 'onclick', toggleClass( document.body, VisibleClass ) );
 				}
 			}
