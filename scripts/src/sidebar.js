@@ -53,7 +53,7 @@ var DecodeSidebar = ( function () {
 				}
 				
 				element.className = classString;
-			}
+			};
 		}
 		
 		/**
@@ -69,17 +69,4 @@ var DecodeSidebar = ( function () {
 		return {
 			init: init
 		};
-		
-		if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
-		
-			// AMD. Register as an anonymous module.
-			define( function() {
-				return DecodeSidebar;
-			} );
-		} else if ( typeof module !== 'undefined' && module.exports ) {
-			module.exports = DecodeSidebar.init;
-			module.exports.DecodeSidebar = DecodeSidebar;
-		} else {
-			window.DecodeSidebar = DecodeSidebar;
-		}
 } )();
