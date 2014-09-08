@@ -26,7 +26,7 @@
 		
 		// Initialize DecodeDropdown (see `scripts/src/dropdown.js`)
 		DecodeDropdown: function() {
-				window.addEventListener( 'load', function() {
+			window.addEventListener( 'load', function() {
 				DecodeDropdown.init( ['menu-item-has-children', 'page_item_has_children'], ['menu-item', 'page_item'] );
 			}, false );
 		}
