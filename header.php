@@ -18,8 +18,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
-<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
+<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n" . 
+	'<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n"; } ?>
+<?php if ( get_background_image() ) { echo '<link rel="prefetch" href="' . get_background_image() . '">'; } ?>
 
 <?php tha_head_bottom(); ?>
 <?php wp_head(); ?>
