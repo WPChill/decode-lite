@@ -1,72 +1,104 @@
-var activeDropdownClass = 'open';
+( function () {
+	'use strict';
+	
+	function DecodeDropdown( parentElements, childElements, activeDropdownClass ) {
+		activeDropdownClass = activeDropdownClass || 'open';
+	
+	// Loop through the parentElements.
+	var i;
+	for ( i = 0; i < parentElements.length; i++ ) {
+		var element = parentElements[i];
+		
+		new OpenMenus( element, activeDropdownClass );
+		
+	}
+		
+	// Alias all the names for the matches() method.
+	var matches;
+	
+	( function( doc ) {
+		matches = 
+			doc.matches ||                // Latest Satandard
+			doc.matchesSelector ||        // Old Standard
+			doc.webkitMatchesSelector ||  // Safari 5+
+			doc.mozMatchesSelector ||     // Firefox 3.6+
+			doc.oMatchesSelector ||       // Opera 15+, 11.5+
+			doc.msMatchesSelector;        // IE 9+
+	} )( document.documentElement );
+	
+	// Dismiss dropdowns after a tap on any non-menu element
+	if ( ! ( document.querySelector( '.' + activeDropdownClass ) ) ) {
+		document.addEventListener( 'click', function( event ) {
+			
+			// Loop through the childElements and output a string with a CSS selector for the open items.
+			var i;
+			var openItemSelector = '';
+			for ( i = 0; i < childElements.length; i++ ) {
+				var element = childElements[i];
+				
+				// Only add a comma if this is the second or greater time through the loop.
+				if ( i > 0 ) {
+					openItemSelector = openItemSelector + ', .' + element + '.' + 'open' + ' *';
+				}
+				// Otherwise, don't add a comma.
+				else {
+					openItemSelector = openItemSelector + '.' + element + '.' + 'open' + ' *';
+				}
+			}
+			
+			if ( ! ( matches.call( event.target, openItemSelector ) ) ) {
+				new CloseMenus( activeDropdownClass );
+			}
+			
+		}, false );
+	}
+	}
+	
+	// Handles opening menus and closing currently open menus when a new menu is selected.
+	function OpenMenus( element, activeDropdownClass ) {
+		[].forEach.call( document.querySelectorAll( '.' + element ), function( element ) {
+			element.firstChild.addEventListener( 'click', function( event ) {
+				
+				// Close other dropdowns unless they are a parent.
+				if ( document.querySelector( '.' + activeDropdownClass ) && ! ( element.parentElement.parentElement.classList.contains( activeDropdownClass ) ) && ! ( element.classList.contains( activeDropdownClass ) ) ) {
+					
+					new CloseMenus( activeDropdownClass );
+				}
+				
+				// Open the dropdown and don't open the link.
+				if ( ! ( element.classList.contains( activeDropdownClass ) ) ) {
+					element.classList.toggle( activeDropdownClass );
+					event.preventDefault();
+				}
+				
+				// Anything else and the link will open as normal.
+				
+			}, false );
+		} );
+	}
+	
+	// Iterate over each element with the active dropdown class and remove it.
+	function CloseMenus( activeDropdownClass ) {
+		[].forEach.call( document.querySelectorAll('.' + activeDropdownClass ), function( element ) {
+			element.classList.remove(activeDropdownClass);
+		} );
+	}
 
-// Select all .menu-item-has-children elements
-[].forEach.call( document.querySelectorAll( '.menu-item-has-children' ), function( element ) {
-	element.firstChild.addEventListener( 'click', function( event ) {
-		
-		// Close other dropdowns unless they are a parent
-		if ( document.querySelector( '.' + activeDropdownClass ) && ! ( element.parentElement.parentElement.classList.contains( activeDropdownClass ) ) && ! ( element.classList.contains( activeDropdownClass ) ) ) {
-			// Iterate over each element with the active dropdown class and remove it
-			[].forEach.call( document.querySelectorAll('.' + activeDropdownClass ), function( element ) {
-				element.classList.remove(activeDropdownClass);
-			} );
-		}
-		
-		// Open the dropdown and don't open the link
-		if ( ! ( element.classList.contains( activeDropdownClass ) ) ) {
-			element.classList.toggle( activeDropdownClass );
-			event.preventDefault();
-		}
-		
-		// Anything else and the link will open as normal
-						
-	}, false );
-} );
-
-// Select all .page_item_has_children elements
-[].forEach.call( document.querySelectorAll( '.page_item_has_children' ), function( element ) {
-	element.firstChild.addEventListener( 'click', function( event ) {
-		
-		// Close other dropdowns unless they are a parent
-		if ( document.querySelector( '.' + activeDropdownClass ) && ! ( element.parentElement.parentElement.classList.contains( activeDropdownClass ) ) && ! ( element.classList.contains( activeDropdownClass ) ) ) {
-			// Iterate over each element with the active dropdown class and remove it
-			[].forEach.call( document.querySelectorAll('.' + activeDropdownClass), function( element ) {
-				element.classList.remove( activeDropdownClass );
-			} );
-		}
-		
-		// Open the dropdown and don't open the link
-		if ( ! ( element.classList.contains( activeDropdownClass ) ) ) {
-			element.classList.toggle( activeDropdownClass );
-			event.preventDefault();
-		}
-		
-		// Anything else and the link will open as normal
-						
-	}, false );
-} );
-
-// Alias all the names for the matches() method
-var matches;
-
-( function( doc ) {
-	matches = 
-		doc.matches ||                // Latest Satandard
-		doc.matchesSelector ||        // Old Standard
-		doc.webkitMatchesSelector ||  // Safari 5+
-		doc.mozMatchesSelector ||     // Firefox 3.6+
-		doc.oMatchesSelector ||       // Opera 15+, 11.5+
-		doc.msMatchesSelector;        // IE 9+
-} )( document.documentElement );
-
-// Dismiss dropdowns after a tap on any non-menu element
-if ( ! ( document.querySelector( '.' + activeDropdownClass ) ) ) {
-	document.addEventListener( 'click', function( event ) {
-		if ( ! ( matches.call( event.target, '.menu-item' + '.' + activeDropdownClass + ' *' + ', .page_item' + '.' + activeDropdownClass + ' *' ) ) ) {
-			// Iterate over each element with the active dropdown class and remove it
-			[].forEach.call( document.querySelectorAll( '.' + activeDropdownClass ), function( element ) {
-				element.classList.remove( activeDropdownClass );
-			} );
-		}
-	}, false );
-}
+	
+	DecodeDropdown.init = function( parentElements, childElements, activeDropdownClass ) {
+		return new DecodeDropdown( parentElements, childElements, activeDropdownClass );
+	};
+	
+	if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
+	
+		// AMD. Register as an anonymous module.
+		define( function() {
+			return DecodeDropdown;
+		} );
+	} else if ( typeof module !== 'undefined' && module.exports ) {
+		module.exports = DecodeDropdown.init;
+		module.exports.DecodeDropdown = DecodeDropdown;
+	} else {
+		window.DecodeDropdown = DecodeDropdown;
+	}
+} )();
