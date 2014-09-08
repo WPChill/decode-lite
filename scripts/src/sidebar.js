@@ -1,8 +1,8 @@
 ( function () {
 	'use strict';
 	
-	function DecodeSidebar( elements, VisibleClass ) {
-		VisibleClass = VisibleClass || 'sidebar-visible';
+	function DecodeSidebar( elements, visibleClass ) {
+		visibleClass = visibleClass || 'sidebar-visible';
 		
 		// Loop through the elements.
 		var i;
@@ -14,12 +14,12 @@
 				
 				// If it's a modern browser:
 				if ( document.addEventListener ) {
-					document.getElementById( element ).addEventListener( 'click', toggleClass( document.body, VisibleClass ), false );
+					document.getElementById( element ).addEventListener( 'click', toggleClass( document.body, visibleClass ), false );
 				}
 				
 				// If it's IE 8 or some crap like that:
 				else if ( document.attachEvent ) {
-					document.getElementById( element ).attachEvent( 'onclick', toggleClass( document.body, VisibleClass ) );
+					document.getElementById( element ).attachEvent( 'onclick', toggleClass( document.body, visibleClass ) );
 				}
 			}
 		}
@@ -45,8 +45,8 @@
 		}
 	}
 	
-	DecodeSidebar.init = function( elements, VisibleClass ) {
-		return new DecodeSidebar( elements, VisibleClass );
+	DecodeSidebar.init = function( elements, visibleClass ) {
+		return new DecodeSidebar( elements, visibleClass );
 	};
 	
 	if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
