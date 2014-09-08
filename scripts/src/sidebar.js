@@ -1,7 +1,8 @@
-( function () {
-	'use strict';
+'use strict';
+
+var DecodeSidebar = {
 	
-	function DecodeSidebar( elements, visibleClass ) {
+	sidebarClasses: function( elements, visibleClass ) {
 		visibleClass = visibleClass || 'sidebar-visible';
 		
 		// Loop through the elements.
@@ -43,22 +44,22 @@
 				element.className = classString;
 			};
 		}
+	},
+	
+	init: function( elements, visibleClass ) {
+		this.sidebarClasses( elements, visibleClass );
 	}
-	
-	DecodeSidebar.init = function( elements, visibleClass ) {
-		return new DecodeSidebar( elements, visibleClass );
-	};
-	
-	if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
-	
-		// AMD. Register as an anonymous module.
-		define( function() {
-			return DecodeSidebar;
-		} );
-	} else if ( typeof module !== 'undefined' && module.exports ) {
-		module.exports = DecodeSidebar.init;
-		module.exports.DecodeSidebar = DecodeSidebar;
-	} else {
-		window.DecodeSidebar = DecodeSidebar;
-	}
-} )();
+};
+
+if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
+
+	// AMD. Register as an anonymous module.
+	define( function() {
+		return DecodeSidebar;
+	} );
+} else if ( typeof module !== 'undefined' && module.exports ) {
+	module.exports = DecodeSidebar.init;
+	module.exports.DecodeSidebar = DecodeSidebar;
+} else {
+	window.DecodeSidebar = DecodeSidebar;
+}

@@ -21,9 +21,7 @@
 		
 		// Initialize DecodeSidebar (see `scripts/src/sidebar.js`)
 		DecodeSidebar: function() {
-			window.addEventListener( 'load', function() {
-				DecodeSidebar.init( ['sidebar-link', 'sidebar-top'] );
-			}, false );
+			DecodeSidebar.init( ['sidebar-link', 'sidebar-top'] );
 		},
 		
 		// Initialize DecodeDropdown (see `scripts/src/dropdown.js`)
