@@ -41,7 +41,7 @@
 	
 	<?php if ( get_theme_mod( 'show_theme_info', true ) == true ) : ?>
 	<div class="theme-info">
-		<p><?php printf( __( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'http://ScottHSmith.com/projects/decode/' ) . '">Decode</a>', 'Scott Smith' ) ?></p>
+		<p><?php printf( __( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'http://ScottHSmith.com/projects/decode/' ) . '" rel="designer">Decode</a>', 'Scott Smith' ) ?></p>
 	</div><!-- .theme-info -->
 	<?php endif; ?>
 	
