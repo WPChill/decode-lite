@@ -1,6 +1,20 @@
+/**
+ * A module for handling dropdown menus in Decode.
+ * @module DecodeDropdown
+ * @version 1.0.0
+ */
 var DecodeDropdown = ( function () {
 	'use strict';
 	
+	/**
+	 * Instantiate DecodeDropdown.
+	 *
+	 * @private
+	 * @constructor
+	 * @param {Object} Parent Elements that will have the class appended.
+	 * @param {Object} Child Elements. If anything other than the child element is tapped, the Parent Element will have its active class removed.
+	 * @param {String} Name of the class to be added to Parent Elements when they are active. Defaults to 'open'.
+	 */
 	function DecodeDropdown( parentElements, childElements, activeDropdownClass ) {
 		activeDropdownClass = activeDropdownClass || 'open';
 	
@@ -54,7 +68,12 @@ var DecodeDropdown = ( function () {
 		}
 	}
 	
-	// Handles opening menus and closing currently open menus when a new menu is selected.
+	/**
+	 * Handles opening menus and closing currently open menus when a new menu is selected.
+	 *
+	 * @function OpenMenus
+	 * @private
+	 */
 	function OpenMenus( element, activeDropdownClass ) {
 		[].forEach.call( document.querySelectorAll( '.' + element ), function( element ) {
 			element.firstChild.addEventListener( 'click', function( event ) {
@@ -77,13 +96,25 @@ var DecodeDropdown = ( function () {
 		} );
 	}
 	
-	// Iterate over each element with the active dropdown class and remove it.
+	/**
+	 * Iterates over each element with the active dropdown class and removes it.
+	 *
+	 * @function CloseMenus
+	 * @private
+	 */
 	function CloseMenus( activeDropdownClass ) {
 		[].forEach.call( document.querySelectorAll('.' + activeDropdownClass ), function( element ) {
 			element.classList.remove(activeDropdownClass);
 		} );
 	}
 	
+	/**
+	 * Factory method for setting up DecodeSidebar.
+	 *
+	 * @param {Object} Parent Elements that will have the class appended.
+	 * @param {Object} Child Elements. If anything other than the child element is tapped, the Parent Element will have its active class removed.
+	 * @param {String} Name of the class to be added to Parent Elements when they are active. Defaults to 'open'.
+	 */
 	function init( parentElements, childElements, activeDropdownClass ) {
 		return new DecodeDropdown( parentElements, childElements, activeDropdownClass );
 	}
