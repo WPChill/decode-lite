@@ -18,15 +18,7 @@ get_header(); ?>
 							
 			<?php if ( get_the_author_meta( 'first_name' ) && get_the_author_meta( 'last_name' ) ) : ?>
 			
-			<section class="author-section">
-				<div class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 300 ); ?></div>
-				<div class="author-text">
-					<div class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></a></div>
-					<?php if ( get_the_author_meta( 'user_url' ) ) echo '<div class="author-site"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">' . __( 'Website', 'decode' ) . '</a></div>'; ?>
-					<?php if ( get_the_author_meta( 'google_profile' ) ) echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" class="screen-reader-text"></a>'; ?>
-					<div class="author-bio"><?php echo get_the_author_meta( 'description' ); ?></div>
-				</div>
-			</section>
+			<?php decode_author_section(); ?>
 		
 		<?php else : ?>
 		

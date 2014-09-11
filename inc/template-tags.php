@@ -82,6 +82,38 @@ function decode_post_nav() {
 }
 endif;
 
+
+if ( ! function_exists( 'decode_author_section' ) ) :
+/**
+ * Displays the author's card.
+ */
+function decode_author_section() {
+	if ( get_theme_mod( 'show_author_section', false ) == true ) : ?>
+	
+		<section class="author-section cf vcard">
+			
+			<div class="author-image photo"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?></a></div>
+			
+			<div class="author-text">
+				<div class="author-name fn n"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>" rel="author"><?php echo get_the_author_meta( 'display_name' ); ?></a></div>
+				<?php
+				if ( get_the_author_meta( 'user_url' ) ) {
+					echo '<div class="author-site url"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">' . __( 'Website', 'decode' ) . '</a></div>';
+				}
+				if ( get_the_author_meta( 'google_profile' ) ) { 
+					echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" class="screen-reader-text"></a>';
+				}
+				?>
+				<div class="author-bio note"><?php echo get_the_author_meta( 'description' ); ?></div>
+			</div>
+			
+		</section>
+	
+	<?php endif;
+}
+endif;
+
+
 if ( ! function_exists( 'decode_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
