@@ -18,7 +18,9 @@
 		
 		<footer class="entry-footer">
 			<?php decode_author_section(); ?>
+			
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
 				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
@@ -56,7 +58,9 @@
 		
 		<footer class="entry-footer">
 			<?php decode_author_section(); ?>
+			
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
 				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
@@ -98,7 +102,9 @@
 		
 		<footer class="entry-footer">
 			<?php decode_author_section(); ?>
+			
 			<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
 				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>

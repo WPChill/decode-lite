@@ -37,7 +37,9 @@
 				<?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?>
 			</div>
 		<?php endif; ?>
+		
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+		
 		<div class="entry-meta">
 			<?php if ( get_theme_mod( 'show_tags', false ) == true ) : ?>
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
