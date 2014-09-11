@@ -11,8 +11,13 @@
 	<?php tha_entry_top(); ?>
 	
 	<header class="entry-header">
-		
-		<h1 class="entry-title<?php if ( get_theme_mod( 'show_page_headers', true ) == false ) echo ' screen-reader-text' ?>"><?php the_title(); ?></h1>
+		<?php
+			$page_title_class = 'entry-title';
+			if ( get_theme_mod( 'show_page_headers', true ) == false ) {
+				$page_title_class .= ' screen-reader-text';
+			}
+		?>
+		<?php the_title( '<h1 class="' . $page_title_class . '">', '</h1>' ); ?>
 		
 	</header><!-- .entry-header -->
 

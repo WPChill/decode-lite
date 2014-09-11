@@ -14,8 +14,8 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-
+				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				
 				<div class="entry-meta">
 					<?php
 						$metadata = wp_get_attachment_metadata();

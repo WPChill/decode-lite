@@ -17,7 +17,7 @@
 				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
-		<div class="entry-title"><h2><?php decode_print_post_title() ?><?php if ( get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h2></div>
+		<h1 class="entry-title"><?php decode_print_post_title() ?><?php if ( get_theme_mod( 'link_post_title_arrow', false ) == true ) echo '<span class="link-title-arrow">&#8594;</span>'; ?></h1>
 		<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
 		<div class="entry-meta">
 			<p class="date"><?php decode_posted_on(); ?></p>
