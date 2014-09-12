@@ -1494,6 +1494,7 @@ li.comment {
 	}
 	&.right {
 		right: 0.5em;
+		float: right;
 	}
 	.no-touch &:hover {
 		border: none;
