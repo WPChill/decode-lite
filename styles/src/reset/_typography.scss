@@ -22,3 +22,34 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+a {
+	transition: color 0.4s ease;
+	color: $accent-color;
+	text-decoration: none;
+	border-bottom: 0 solid rgba(69, 69, 69, 0);
+	.no-touch &:hover {
+		color: $accent-color;
+	}
+	.no-touch &:active {
+		color: $accent-color-secondary;
+	}
+}
+
+.no-touch .site-description a,
+.no-touch .entry-content a,
+.no-touch .categories a,
+.no-touch .tags a,
+.no-touch .comments-link a,
+.no-touch .edit-link a,
+.no-touch .author-site a,
+.no-touch .theme-info a,
+.no-touch .site-colophon a {
+	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+	&:hover {
+		border-bottom: 1px solid $accent-color;
+	}
+	&:active {
+		border-bottom: 1px solid $accent-color-secondary;
+	}
+}

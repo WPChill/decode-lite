@@ -25,10 +25,9 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 	1.2 - Typography
 	1.3 - Elements
 	1.4 - Forms
-2.0  - General
-	2.1 - Links
-	2.2 - Screen Readers
-	2.3 - Clearing
+2.0  - Utilities
+	2.1 - Screen Readers
+	2.2 - Clearing
 3.0  - Media
 	3.1 - Captions
 	3.2 - Galleries
@@ -69,81 +68,9 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 
 
 /*--------------------------------------------------------------
-2.0 - General
-----------------------------------------------------------------
-2.1 - Links
+2.0 - Utilities
 --------------------------------------------------------------*/
-a {
-	transition: color 0.4s ease;
-	color: $accent-color;
-	text-decoration: none;
-	border-bottom: 0 solid rgba(69, 69, 69, 0);
-	.no-touch &:hover {
-		color: $accent-color;
-	}
-	.no-touch &:active {
-		color: $accent-color-secondary;
-	}
-}
-
-.no-touch .site-description a,
-.no-touch .entry-content a,
-.no-touch .categories a,
-.no-touch .tags a,
-.no-touch .comments-link a,
-.no-touch .edit-link a,
-.no-touch .author-site a,
-.no-touch .theme-info a,
-.no-touch .site-colophon a {
-	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	&:hover {
-		border-bottom: 1px solid $accent-color;
-	}
-	&:active {
-		border-bottom: 1px solid $accent-color-secondary;
-	}
-}
-
-/*--------------------------------------------------------------
-2.2 - Screen Readers
---------------------------------------------------------------*/
-.screen-reader-text {
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	border: 0;
-	margin: -1px;
-}
-
-.screen-reader-text:active, .screen-reader-text:focus {
-	overflow: visible;
-	clip: auto;
-	position: static;
-	z-index: 100000; /* Above WP toolbar */
-	width: auto;
-	height: auto;
-	margin: 0;
-}
-
-/*--------------------------------------------------------------
-2.3 - Clearing
---------------------------------------------------------------*/
-/* Micro Clearfix */
-.cf {
-	@include clearfix();
-}
-
-.entry-content,
-.comment-content,
-.site-header,
-.site-content,
-.site-footer {
-	@include clearfix();
-}
-
+@import 'utilities/utilities';
 
 /*--------------------------------------------------------------
 3.0 - Media
