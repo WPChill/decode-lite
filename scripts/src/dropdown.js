@@ -109,7 +109,7 @@ var DecodeDropdown = ( function () {
 	}
 	
 	/**
-	 * Factory method for setting up DecodeSidebar.
+	 * Factory method for setting up DecodeDropdown.
 	 *
 	 * @param {Object} Parent Elements that will have the class appended.
 	 * @param {Object} Child Elements. If anything other than the child element is tapped, the Parent Element will have its active class removed.
