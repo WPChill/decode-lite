@@ -115,4 +115,7 @@ script:
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
 notifications:
-    email: false
+    email: 
+    	recipients:
+    	  - decode@ScottHSmith.com
+		on_failure: change
