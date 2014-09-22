@@ -80,7 +80,7 @@ module.exports = function(grunt) {
             files: {
 	        	expand: true,
 				flatten: true,
-				cwd: 'styles/src/',
+				cwd: 'src/',
 				src: '*.scss',
 				dest: 'styles/',
 				ext: '.css'
