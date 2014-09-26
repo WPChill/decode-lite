@@ -75,17 +75,17 @@ module.exports = function(grunt) {
 		
 		sass: {
 			options: {
-                sourceMap: true
-            },
-            files: {
-	        	expand: true,
+				sourceMap: true
+			},
+			files: {
+				expand: true,
 				flatten: true,
-				cwd: 'styles/src/',
+				cwd: 'src/',
 				src: '*.scss',
 				dest: 'styles/',
 				ext: '.css'
 			}
-    	},
+		},
 		
 		csscomb: {
 			options: {
