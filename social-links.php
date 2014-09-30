@@ -48,6 +48,16 @@
 	</a>
 	<?php endif; ?>
 	
+	<?php if ( get_theme_mod( 'ello_username', '' ) !== '' ) : ?>
+	<a class="social-link ElloLink" href="<?php echo esc_url( 'https://ello.co/' . get_theme_mod( 'ello_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
+	<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<path class="social-icon-fill SocialIconFill" d="M100,0 C44.772,0 0,44.772 0,100 C0,155.228 44.772,200 100,200 C155.228,200 200,155.228 200,100 C200,44.772 155.228,0 100,0 Z M100,160.000391 C72.6621094,160.000391 48.79375,141.496484 41.9609375,114.997656 C41.1734375,111.944141 43.0125,108.825391 46.0660156,108.037109 C49.1257813,107.246484 52.2378906,109.089062 53.0257813,112.145703 C58.5597656,133.592578 77.8734375,148.574219 100,148.574219 C122.123047,148.574219 141.440234,133.592578 146.971094,112.145703 C147.758594,109.089062 150.867578,107.242969 153.930859,108.037109 C156.9875,108.825391 158.826563,111.944141 158.035547,114.997656 C151.202734,141.496484 127.338281,160.000391 100,160.000391 Z" id="Ello" fill="#444444"></path>
+		</g>
+	</svg>
+	</a>
+	<?php endif; ?>
+	
 	<?php if ( get_theme_mod( 'sina_weibo_username', '' ) !== '' ) : ?>
 	<a class="social-link SinaWeiboLink" href="<?php echo esc_url( 'http://weibo.com/' . get_theme_mod( 'sina_weibo_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 	<svg width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
