@@ -52,7 +52,7 @@ function decode_sanitize_boolean( $input ) {
 // String sanitization function
 function decode_sanitize_string( $input ) {
  
-	$output = filter_var($value, FILTER_SANITIZE_STRING);
+	$output = filter_var( $input, FILTER_SANITIZE_STRING );
 	return $output;
 }
 
