@@ -1311,7 +1311,7 @@ public static function decode_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_setting( 'add_custom_post_types', array(
 		'default'           => '',
-		'sanitize_callback' => 'mysql_query',
+		'sanitize_callback' => 'decode_sanitize_setting',
 	) );
 	
 	
