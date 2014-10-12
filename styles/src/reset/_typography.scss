@@ -28,6 +28,8 @@ a {
 	color: $accent-color;
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
+	background-color: transparent;
+	
 	.no-touch &:hover {
 		color: $accent-color;
 	}
