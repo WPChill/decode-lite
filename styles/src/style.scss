@@ -285,7 +285,8 @@ embed, iframe, object {
 .site-logo {
 	transition: opacity 0.5s ease-out;
 	width: auto;
-	max-height: 8.5em;
+	max-height: 8.5em; // Fallback for rems
+	max-height: 15rem;
 	margin: 0 auto 2%;
 	opacity: 1;
 
