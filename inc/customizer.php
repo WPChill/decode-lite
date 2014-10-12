@@ -1438,7 +1438,7 @@ public static function decode_customize_register( $wp_customize ) {
 			);
 			
 			self::generate_css(
-				'body, button, input, select, textarea, .site-title a, .no-touch .site-title a:hover, .no-touch .site-title a:active, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger',
+				'body, button, input, select, textarea, .site-title a, .menu a, .entry-title, .search-entry, .search-entry .entry-title, .entry-title a, .format-link .entry-title h2 a, .read-more, .author-name a, .explore-page .widget h1, .decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger',
 				'color',
 				'text_color'
 			);
@@ -1471,7 +1471,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 			
 			self::generate_css(
-				'a, .no-touch a:hover, button, input[type=button], input[type=reset], input[type=submit], .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch article .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover',
+				'a, .no-touch a:hover, button, input[type=button], input[type=reset], input[type=submit], .no-touch .site-title a:hover, .no-touch .menu a:hover, .menu ul li.open > a, .sidebar-menu a, .menu .current-menu-item > a, .menu .current_page_item > a, .no-touch .search-entry:hover, .no-touch .search-entry:hover .entry-title, .no-touch article .date a:hover, .no-touch .format-link .entry-title a:hover, .no-touch .comment-metadata a:hover, .no-touch .decode-reply-tool-plugin .replylink:hover',
 				'color',
 				'accent_color'
 			);
@@ -1495,7 +1495,7 @@ public static function decode_customize_register( $wp_customize ) {
 			);
 			
 			self::generate_css(
-				'.no-touch a:active, .no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current-menu-item > a, .sidebar-menu ul .current_page_item > a, .no-touch .sidebar-content a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch article .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active',
+				'.no-touch a:active, .no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .site-title a:active, .no-touch .menu a:active, .no-touch .sidebar-menu a:hover, .sidebar-menu ul li.open > a, .menu .current-menu-item > a:hover, .menu .current_page_item > a:hover, .sidebar-menu ul .current-menu-item > a, .sidebar-menu ul .current_page_item > a, .no-touch .sidebar-content a:hover, .no-touch .search-entry:active, .no-touch .search-entry:active .entry-title, .no-touch article .date a:active, .no-touch .format-link .entry-title a:active, .no-touch .comment-metadata a:active, .no-touch .site-description a:active, .decode-reply-tool-plugin .replylink:active, .no-touch .decode-reply-tool-plugin .replylink:active',
 				'color',
 				'secondary_accent_color'
 			);
