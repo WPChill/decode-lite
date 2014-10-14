@@ -6,13 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2014-08-27 00:43-0600\n"
-"PO-Revision-Date: 2014-09-07 08:35+0800\n"
-=======
 "POT-Creation-Date: 2014-10-13 21:38-0800\n"
-"PO-Revision-Date: 2014-10-13 21:41-0800\n"
->>>>>>> 3.0.2
+"PO-Revision-Date: 2014-10-13 22:13-0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: MO <mapleobserver@gmail.com>\n"
 "Language: zh_CN\n"
@@ -285,12 +280,7 @@ msgstr "仅当侧边栏在自定义菜单中开启时显示"
 msgid "Skip to content"
 msgstr "跳到内容"
 
-<<<<<<< HEAD
-#: header.php:37
-=======
 #: header.php:38
-#, fuzzy
->>>>>>> 3.0.2
 msgid "Show sidebar"
 msgstr "显示侧边栏"
 
@@ -578,12 +568,7 @@ msgstr "用于当前已点击过的链接<br>(建议使用比特殊颜色深一�
 msgid "Text Color"
 msgstr "文本颜色"
 
-<<<<<<< HEAD
-#: inc/customizer.php:1237
-=======
 #: inc/customizer.php:1401
-#, fuzzy
->>>>>>> 3.0.2
 msgid "The main text color."
 msgstr "主要文本颜色。"
 
@@ -622,21 +607,11 @@ msgstr "页面"
 msgid "Posts navigation"
 msgstr "文章导航"
 
-<<<<<<< HEAD
-#: inc/template-tags.php:27
-=======
 #: inc/template-tags.php:44
-#, fuzzy
->>>>>>> 3.0.2
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;较旧文章"
 
-<<<<<<< HEAD
-#: inc/template-tags.php:31
-=======
 #: inc/template-tags.php:48
-#, fuzzy
->>>>>>> 3.0.2
 msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
@@ -644,22 +619,12 @@ msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgid "Post navigation"
 msgstr "文章导航"
 
-<<<<<<< HEAD
-#: inc/template-tags.php:59
-=======
 #: inc/template-tags.php:76
-#, fuzzy
->>>>>>> 3.0.2
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
-<<<<<<< HEAD
-#: inc/template-tags.php:60
-=======
 #: inc/template-tags.php:77
-#, fuzzy
->>>>>>> 3.0.2
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
