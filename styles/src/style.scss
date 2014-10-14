@@ -4,7 +4,7 @@
 /*!
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
-Version: 3.0.1
+Version: 3.0.2
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 Description: A minimal, modern theme, designed to be mobile first and fully responsive, Decode features the ability to change all the colors in the theme and an elegant sidebar conveniently accessed by tapping on the menu icon. The sidebar can fit all of your widgets and its position can be customized. You can also choose to keep the sidebar always visible on larger screens for an elegent two-column experience. You can even disable the sidebar and comment links if you choose. Decode supports link posts, where the title can be hyperlinked. Decode includes custom social icons in the header that you can easily link to your choice of 53 different social profiles from Twitter, and App.net, to Pinterest and LinkedIn, you will be sure to find support for the network you want alongside a bevy of customizations to make your site unique. Decode has been translated into Chinese, Dutch, French, German, Polish, Russian, and Spanish. <a href="http://scotthsmith.com/projects/decode/">More info here</a>
@@ -25,10 +25,9 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 	1.2 - Typography
 	1.3 - Elements
 	1.4 - Forms
-2.0  - General
-	2.1 - Links
-	2.2 - Screen Readers
-	2.3 - Clearing
+2.0  - Utilities
+	2.1 - Screen Readers
+	2.2 - Clearing
 3.0  - Media
 	3.1 - Captions
 	3.2 - Galleries
@@ -69,81 +68,9 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 
 
 /*--------------------------------------------------------------
-2.0 - General
-----------------------------------------------------------------
-2.1 - Links
+2.0 - Utilities
 --------------------------------------------------------------*/
-a {
-	transition: color 0.4s ease;
-	color: $accent-color;
-	text-decoration: none;
-	border-bottom: 0 solid rgba(69, 69, 69, 0);
-	.no-touch &:hover {
-		color: $accent-color;
-	}
-	.no-touch &:active {
-		color: $accent-color-secondary;
-	}
-}
-
-.no-touch .site-description a,
-.no-touch .entry-content a,
-.no-touch .categories a,
-.no-touch .tags a,
-.no-touch .comments-link a,
-.no-touch .edit-link a,
-.no-touch .author-site a,
-.no-touch .theme-info a,
-.no-touch .site-colophon a {
-	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	&:hover {
-		border-bottom: 1px solid $accent-color;
-	}
-	&:active {
-		border-bottom: 1px solid $accent-color-secondary;
-	}
-}
-
-/*--------------------------------------------------------------
-2.2 - Screen Readers
---------------------------------------------------------------*/
-.screen-reader-text {
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	border: 0;
-	margin: -1px;
-}
-
-.screen-reader-text:active, .screen-reader-text:focus {
-	overflow: visible;
-	clip: auto;
-	position: static;
-	z-index: 100000; /* Above WP toolbar */
-	width: auto;
-	height: auto;
-	margin: 0;
-}
-
-/*--------------------------------------------------------------
-2.3 - Clearing
---------------------------------------------------------------*/
-/* Micro Clearfix */
-.cf {
-	@include clearfix();
-}
-
-.entry-content,
-.comment-content,
-.site-header,
-.site-content,
-.site-footer {
-	@include clearfix();
-}
-
+@import 'utilities/utilities';
 
 /*--------------------------------------------------------------
 3.0 - Media
@@ -358,7 +285,8 @@ embed, iframe, object {
 .site-logo {
 	transition: opacity 0.5s ease-out;
 	width: auto;
-	max-height: 8.5em;
+	max-height: 8.5em; // Fallback for rems
+	max-height: 15rem;
 	margin: 0 auto 2%;
 	opacity: 1;
 
@@ -380,19 +308,17 @@ embed, iframe, object {
 	overflow-wrap: break-word;
 	margin: 0 0 0.5%;
 	a {
-		transition: text-shadow 0.5s;
+		transition: color 0.5s;
 		color: $text-color;
 		font-size: 1.95em;
 
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
 	.no-touch & a:hover {
-		color: $text-color;
-		text-shadow: 0 0 6px rgba(75,75,75,0.5);
+		color: $accent-color;
 	}
 	.no-touch & a:active {
-		color: $text-color;
-		text-shadow: 0 -2px 12px rgba(75,75,75,0.85);
+		color: $accent-color-secondary;
 	}
 }
 
@@ -445,6 +371,7 @@ embed, iframe, object {
 	}
 	svg,
 	img {
+		overflow: visible;
 		width: 2em;
 		height: 2em;
 	}
@@ -467,14 +394,17 @@ embed, iframe, object {
 	.TwitterLink {
 		background-image: url('images/Twitter.png');
 	}
-	.ADNLink {
-		background-image: url('images/ADN.png');
-	}
 	.FacebookLink {
 		background-image: url('images/Facebook.png');
 	}
 	.GooglePlusLink {
 		background-image: url('images/GooglePlus.png');
+	}
+	.ElloLink {
+		background-image: url('images/Ello.png');
+	}
+	.ADNLink {
+		background-image: url('images/ADN.png');
 	}
 	.SinaWeiboLink {
 		background-image: url('images/SinaWeibo.png');
@@ -1311,7 +1241,7 @@ li.comment {
 	margin-top: 7.5%;
 }
 
-.comment-form {
+.comment-form:not(.jetpack-comments-active) {
 	display: flex;
 	justify-content: space-between;
 
@@ -1480,7 +1410,7 @@ li.comment {
 .sidebar-link {
 	transition: opacity 0.25s ease-out;
 	display: inline-block;
-	position: relative;
+	position: absolute;
 	top: 0.5em;
 	height: 1.5em;
 	padding: 0;
@@ -1493,6 +1423,7 @@ li.comment {
 		left: 0.5em;
 	}
 	&.right {
+		float: right;
 		right: 0.5em;
 	}
 	.no-touch &:hover {
@@ -1760,23 +1691,18 @@ li.comment {
 		top: 2.5%;
 		width: 1.75em;
 		height: 1.75em;
-	
 		&.left {
 			left: 2.5%;
 		}
-	
 		&.right {
 			right: 2.5%;
 		}
-			
 		.admin-bar & {
 			top: calc(2.5% + 32px);
-			
 			@media screen and (max-width:782px) {
 				top: calc(2.5% + 46px);
 			}
 		}
-		
 		svg,
 		img {
 			width: 1.75em;

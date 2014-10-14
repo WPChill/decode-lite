@@ -18,8 +18,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
-<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">'; } ?>
+<?php if ( get_theme_mod( 'favicon_image', '' ) ) { echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n" . 
+	'<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n"; } ?>
+<?php if ( get_background_image() ) { echo '<link rel="prefetch" href="' . get_background_image() . '">'; } ?>
 
 <?php tha_head_bottom(); ?>
 <?php wp_head(); ?>
@@ -57,7 +58,7 @@
 			<?php function decode_create_header_image() {
 				if ( get_header_image() != '' ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="100%" alt="">
+						<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="">
 					</a>
 				<?php endif;
 			}

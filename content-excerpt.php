@@ -17,7 +17,7 @@
 				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
-		<div class="entry-title"><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
 		<div class="entry-meta">
 			<p class="date"><?php decode_posted_on(); ?></p>
@@ -30,8 +30,10 @@
 	</div><!-- .entry-summary -->
 	
 	<footer class="entry-footer">
-	<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php _e( 'Read More&hellip;', 'decode' ); ?></a>
-	<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+		<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php _e( 'Read More&hellip;', 'decode' ); ?></a>
+		
+		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
+		
 		<div class="entry-meta">
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
 				<p class="date"><?php decode_posted_on(); ?></p>

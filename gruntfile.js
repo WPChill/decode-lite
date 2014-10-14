@@ -1,10 +1,3 @@
-var exec = require('child_process').exec;
-process.on('SIGINT', function () {
-	exec('/Applications/MAMP/bin/stop.sh', function () {
-		process.exit();
-	});
-});
-
 module.exports = function(grunt) {
 	
 	// Configuration
@@ -40,27 +33,19 @@ module.exports = function(grunt) {
 		},
 		
 		jshint: {
-			all: ['Gruntfile.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
+			all: ['Gruntfile.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js']
 		},
 		
 		uglify: {
 			options: {
 				sourceMap: true
 			},
-			build_decode_basic: {
+			decode: {
 				options: {
 					sourceMapName: 'scripts/srcmaps/decode.js.map'
 				},
 				files: {
-					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/fastclick.js'],
-				}
-			},
-			build_decode_with_sidebar: {
-				options: {
-					sourceMapName: 'scripts/srcmaps/decode-with-sidebar.js.map'
-				},
-				files: {
-					'scripts/decode-with-sidebar.js': ['scripts/src/modernizr.js', 'scripts/src/decode.js', 'scripts/src/sidebar.js', 'scripts/src/fastclick.js'],
+					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/fastclick.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js', 'scripts/src/decode.js' ],
 				}
 			},
 			customizer: {
@@ -177,15 +162,6 @@ module.exports = function(grunt) {
 				options: { livereload: true },
 				files: ['*.php', '**/*.php', 'style.css', 'css/**', 'js/build/*.js']
 			}
-		},
-		
-		exec: {
-			serverup: {
-				command: '/Applications/MAMP/bin/start.sh'
-			},
-			serverdown: {
-				command: '/Applications/MAMP/bin/stop.sh'
-			}
 		}
 	});
 	
@@ -200,7 +176,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-exec');
 
 	
 	// Workflows
@@ -231,11 +206,9 @@ module.exports = function(grunt) {
 		'copy'
 	]);
 		
-	// $ grunt dev: Starts MAMP server, watches for changes while developing.
+	// $ grunt dev: Watches for changes while developing.
 	grunt.registerTask('dev', [
-		'exec:serverup',
-		'watch',
-		'exec:serverdown'
+		'watch'
 	]);
 
 };

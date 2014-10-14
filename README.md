@@ -24,9 +24,10 @@ Breadcrumbs are supported via the [Breadcrumb Trail](http://wordpress.org/plugin
 
 Lastly, Decode has social icons that can link to your profiles from every side of the Internet. These can all be configured in the Customize menu and are listed below.
 - Twitter
-- ADN
 - Facebook
 - Google+
+- Ello
+- ADN
 - Sina Weibo
 - MySpace
 - Diaspora

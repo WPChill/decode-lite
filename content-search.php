@@ -10,9 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<a class="search-entry" href="<?php the_permalink(); ?>">
-		<div class="entry-title">
-			<h3><?php the_title(); ?></h3>
-		</div>
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 		
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>

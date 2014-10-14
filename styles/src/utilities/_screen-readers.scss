@@ -1,0 +1,21 @@
+body .screen-reader-text {
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	margin: -1px;
+}
+
+body .screen-reader-text:active,
+body .screen-reader-text:focus {
+	overflow: visible;
+	clip: auto;
+	position: static;
+	z-index: 100000; /* Above WP toolbar */
+	width: auto;
+	height: auto;
+	margin: 0;
+}

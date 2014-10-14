@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
+		<nav id="comment-nav-above" class="comment-navigation cf" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'decode' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'decode' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'decode' ) ); ?></div>
@@ -40,22 +40,18 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use decode_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define decode_comment() and that will be used instead.
-				 * See decode_comment() in inc/template-tags.php for more.
-				 */
-				wp_list_comments( array(
+				$args = array(
 					'style'       => 'ol',
 					'short_ping'  => true,
 					'avatar_size' => 64,
-				) );
+				);
+				$args = apply_filters( 'decode_wp_list_comments_args', $args );
+				wp_list_comments( $args );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
+		<nav id="comment-nav-below" class="comment-navigation cf" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'decode' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'decode' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'decode' ) ); ?></div>
@@ -73,19 +69,26 @@ if ( post_password_required() ) {
 	
 	<?php
 	$comments_args = array(
-			'title_reply'          => __( 'Leave a Reply', 'decode' ),
-			'title_reply_to'       => __( 'Leave a Reply to %s', 'decode' ),
-			'cancel_reply_link'    => __( 'Cancel reply', 'decode' ),
-			'label_submit'         => __( 'Post Comment', 'decode' )
-		);
+		'title_reply'       => __( 'Leave a Reply', 'decode' ),
+		'title_reply_to'    => __( 'Leave a Reply to %s', 'decode' ),
+		'cancel_reply_link' => __( 'Cancel reply', 'decode' ),
+		'label_submit'      => __( 'Post Comment', 'decode' ),
+	);
 	if ( get_theme_mod( 'show_allowed_tags', false ) == false ) {
 		$comments_args = array(
 			'comment_notes_after'  => '',
 		);
 	}
 	?>
-
-	<?php comment_form( $comments_args ); ?>
+	
+	<?php 
+		// Add a class to the comment form if Jetpack Comments are enabled.
+		ob_start();
+		comment_form( $comments_args );
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'comments' ) ) {
+			echo str_replace( 'class="comment-form"','class="comment-form jetpack-comments-active"', ob_get_clean() );
+		}
+	?>
 	
 	<?php
 		_x( 'Comment', 'noun', 'decode' );
@@ -96,18 +99,18 @@ if ( post_password_required() ) {
 	?>
 	
 	<?php if ( get_theme_mod( 'show_allowed_tags', false ) == true ) : ?>
-		<script>		
-			function hasClass(el, cls) {
-				return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+		<script>
+			function hasClass( el, cls ) {
+				return ( ' ' + el.className + ' ' ).indexOf( ' ' + cls + ' ' ) > -1;
 			}
 			
-			var target = document.querySelector('.form-allowed-tags');
+			var target = document.querySelector( '.form-allowed-tags' );
 			
-			document.querySelector('textarea#comment').addEventListener('click', function() {
-				if (!hasClass(target, 'visible')) {
+			document.querySelector( 'textarea#comment' ).addEventListener( 'click', function() {
+				if ( ! hasClass( target, 'visible' ) ) {
 					target.className += ' ' + 'visible';
 				}
-			}, false);
+			}, false );
 		</script>
 	<?php endif; ?>
 
