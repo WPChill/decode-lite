@@ -134,6 +134,8 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'show_social_icons' );
 	remove_theme_mod( 'linkedin_username' );
 	remove_theme_mod( 'yelp_userid' );
+	remove_theme_mod( 'steam_user' );
+	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
 
 /**
@@ -601,12 +603,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 	
-	$wp_customize->add_setting( 'steam_username', array(
-		'default'           => '',
-		'sanitize_callback' => 'decode_sanitize_string',
-	) );
-	
-	$wp_customize->add_setting( 'steam_group_name', array(
+	$wp_customize->add_setting( 'steam_url', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
@@ -1064,20 +1061,12 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 53,
 	) );
 	
-	$wp_customize->add_control( 'steam_username', array(
-		'label'           => sprintf( __( '%s Username', 'decode' ), 'Steam' ),
+	$wp_customize->add_control( 'steam_url', array(
+		'label'           => sprintf( __( '%s Profile URL', 'decode' ), 'Steam' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		'priority'        => 54,
-	) );
-	
-	$wp_customize->add_control( 'steam_group_name', array(
-		'label'           => sprintf( __( '%s Group Name', 'decode' ), 'Steam' ),
-		'section'         => 'decode_social_options',
-		'active_callback' => 'decode_social_icons_are_enabled',
-		'type'            => 'text',
-		'priority'        => 55,
 	) );
 	
 	$wp_customize->add_control( 'skype_username', array(
@@ -1085,7 +1074,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		'priority'        => 56,
+		'priority'        => 55,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
@@ -1094,7 +1083,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'            => 'email', /* Uncomment for WP >= 4.4 */
-		'priority'        => 57,
+		'priority'        => 56,
 	) );
 	
 	$wp_customize->add_control( 'website_link', array(
@@ -1103,7 +1092,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
-		'priority'        => 58,
+		'priority'        => 57,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
@@ -1111,7 +1100,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'checkbox',
-		'priority'        => 59,
+		'priority'        => 58,
 	) );
 	
 
