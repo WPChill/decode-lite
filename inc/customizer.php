@@ -44,9 +44,8 @@ function decode_sanitize_setting( $input ) {
 // Boolean sanitization function
 function decode_sanitize_boolean( $input ) {
 	
-	if ( filter_var( $input, FILTER_VALIDATE_BOOLEAN ) ) {
-		return $input;
-	}
+	$output = filter_var($input, FILTER_VALIDATE_BOOLEAN);
+	return $output;
 }
 
 // String sanitization function
