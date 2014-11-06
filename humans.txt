@@ -25,8 +25,10 @@
 	
 	Polish Translation: Mateusz Wozniak
 	Email:              m.wozniak@gmx.net
-	URI;                multilingua.pl
+	URI:                multilingua.pl
 	Twitter:            @MateuszJWozniak
+	Updated by:         Michał Maciejewski
+	Email:              admin@echidna-computers.pl
 	
 	Russian Translation: Michael Yesutin
 	Email:               michael@yesutin.com
