@@ -129,6 +129,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 /**
  * Remove old, now unused theme modifications so that conflicts do not occur.
+ * One of these work, sometimes. Hopefully this will clear old settings.
  */
 	remove_theme_mod( 'show_site_navigation' );
 	remove_theme_mod( 'show_social_icons' );
@@ -137,6 +138,12 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'steam_user' );
 	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
+	$wp_customize->remove_setting( 'show_site_navigation' );
+	$wp_customize->remove_setting( 'show_social_icons' );
+	$wp_customize->remove_setting( 'yelp_userid' );
+	$wp_customize->remove_setting( 'steam_user' );
+	$wp_customize->remove_setting( 'steam_group' );
+	$wp_customize->remove_setting( 'show_all_post_types' );
 
 /**
  * Header Options
