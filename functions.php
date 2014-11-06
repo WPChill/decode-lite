@@ -94,6 +94,8 @@ function decode_setup() {
 	); 
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
+	
+	add_theme_support( 'title-tag' );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );

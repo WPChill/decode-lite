@@ -82,11 +82,12 @@ function link_ellipses( $more ) {
 }
 add_filter( 'excerpt_more', 'link_ellipses' );
 
-/* A custom callback function that displays a meaningful title
+/* A custom fallback callback function that displays a meaningful title
  * depending on the page being rendered
  */
-if ( ! function_exists( 'decode_wp_title' ) ) {
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
 
+if ( ! function_exists( 'decode_wp_title' ) ) {
 function decode_wp_title( $title, $sep, $sep_location ) {
 
 	// add white space around $sep
@@ -137,11 +138,12 @@ function decode_wp_title( $title, $sep, $sep_location ) {
 
 } // end of decode_wp_title
 }
-
 /* add function 'decode_wp_title()' to the
  * wp_title filter, with priority 10 and 3 args
  */
 add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
+
+}
 
 /**
  * Sets the authordata global when viewing an author archive.
