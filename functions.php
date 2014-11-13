@@ -95,6 +95,12 @@ function decode_setup() {
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
 	
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	*/
 	add_theme_support( 'title-tag' );
 }
 endif; // decode_setup
