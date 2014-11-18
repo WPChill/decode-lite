@@ -78,7 +78,7 @@
 				<?php endif; ?>
 			<?php endif; ?>
 			
-		</div>
+		</div><!-- .site-branding -->
 		
 		<?php if ( get_theme_mod( 'show_header_social_icons', false ) == true ) {
 			get_template_part( 'social-links' );
