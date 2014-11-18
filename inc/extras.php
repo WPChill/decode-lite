@@ -59,12 +59,14 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
  * Highlight search terms in search results.
  */
 function decode_highlight_search_results( $text ) {
-     if ( is_search() ) {
-     $sr = get_search_query();
-     $keys = implode( '|', explode( ' ', get_search_query() ) );
-     $text = preg_replace( '/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text );
-     }
-     return $text;
+    if ( is_search() ) {
+    	$sr = get_search_query();
+		$keys = implode( '|', explode( ' ', get_search_query() ) );
+		if ($keys != '') { // Check for empty search, and don't modify text if empty
+			$text = preg_replace( '/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text );
+		}
+    }
+    return $text;
 }
 add_filter( 'the_excerpt', 'decode_highlight_search_results' );
 add_filter( 'the_title', 'decode_highlight_search_results' );
@@ -231,11 +233,11 @@ endif;
 if ( ! function_exists( 'decode_setup_author' ) ) {
 
 function decode_setup_author() {
-        global $wp_query;
+    global $wp_query;
 
-        if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-                $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
-        }
+    if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+            $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+    }
 }
 }
 add_action( 'wp', 'decode_setup_author' );
