@@ -153,7 +153,7 @@ add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
  * @return string The filtered title.
  */
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	function decode_wp_title(( $title, $sep, $sep_location ) {
+	function decode_wp_title( $title, $sep, $sep_location ) {
 	
 		// add white space around $sep
 		$sep = ' ' . $sep . ' ';
