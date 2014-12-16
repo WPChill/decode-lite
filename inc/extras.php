@@ -59,12 +59,14 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
  * Highlight search terms in search results.
  */
 function decode_highlight_search_results( $text ) {
-     if ( is_search() ) {
-     $sr = get_search_query();
-     $keys = implode( '|', explode( ' ', get_search_query() ) );
-     $text = preg_replace( '/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text );
-     }
-     return $text;
+    if ( is_search() ) {
+    	$sr = get_search_query();
+		$keys = implode( '|', explode( ' ', get_search_query() ) );
+		if ($keys != '') { // Check for empty search, and don't modify text if empty
+			$text = preg_replace( '/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $text );
+		}
+    }
+    return $text;
 }
 add_filter( 'the_excerpt', 'decode_highlight_search_results' );
 add_filter( 'the_title', 'decode_highlight_search_results' );
@@ -82,11 +84,12 @@ function link_ellipses( $more ) {
 }
 add_filter( 'excerpt_more', 'link_ellipses' );
 
-/* A custom callback function that displays a meaningful title
+/* A custom fallback callback function that displays a meaningful title
  * depending on the page being rendered
  */
-if ( ! function_exists( 'decode_wp_title' ) ) {
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
 
+if ( ! function_exists( 'decode_wp_title' ) ) {
 function decode_wp_title( $title, $sep, $sep_location ) {
 
 	// add white space around $sep
@@ -137,11 +140,82 @@ function decode_wp_title( $title, $sep, $sep_location ) {
 
 } // end of decode_wp_title
 }
-
 /* add function 'decode_wp_title()' to the
  * wp_title filter, with priority 10 and 3 args
  */
 add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
+
+}
+
+/**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	function decode_wp_title( $title, $sep, $sep_location ) {
+	
+		// add white space around $sep
+		$sep = ' ' . $sep . ' ';
+	
+		$site_description = get_bloginfo( 'description' );
+		
+		if ( is_feed() )
+			return $title;
+	 
+		elseif ( $site_description && is_front_page() )
+			$custom = $sep . $site_description;
+	
+		elseif ( is_category() )
+			$custom = $sep . __( 'Category', 'decode' );
+	
+		elseif ( is_tag() )
+			$custom = $sep . __( 'Tag', 'decode' );
+	
+		elseif ( is_author() )
+			$custom = $sep . __( 'Author', 'decode' );
+	
+		elseif ( is_year() || is_month() || is_day() )
+			$custom = $sep . __( 'Archives', 'decode' );
+	
+		else
+			$custom = '';
+	
+		// get the page number (main page or an archive)
+		if ( get_query_var( 'paged' ) )
+			$page_number = $sep . __( 'Page ', 'decode' ) . get_query_var( 'paged' );
+	
+		// get the page number (post with multipages)
+		elseif ( get_query_var( 'page' ) )
+			$page_number = $sep . __( 'Page ', 'decode' ) . get_query_var( 'page' );
+	
+		else
+			$page_number = '';
+	
+		// Comment the 4 lines of code below and see how odd the title format becomes
+		if ( $sep_location == 'right' && ! ( is_front_page() ) ) {
+			$custom = $custom . $sep;
+			$title = substr( $title, 0, -2 );
+		}
+	
+		// return full title
+		return get_bloginfo( 'name' ) . $custom . $title . $page_number;
+		
+	}
+	add_filter( 'wp_title', 'decode_wp_title', 10, 2 );
+endif;
+
+/**
+ * Title shiv for blogs older than WordPress 4.1
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	function decode_render_title() {
+		echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+	}
+	add_action( 'wp_head', 'decode_render_title' );
+endif;
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -159,11 +233,11 @@ add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
 if ( ! function_exists( 'decode_setup_author' ) ) {
 
 function decode_setup_author() {
-        global $wp_query;
+    global $wp_query;
 
-        if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-                $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
-        }
+    if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+            $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+    }
 }
 }
 add_action( 'wp', 'decode_setup_author' );

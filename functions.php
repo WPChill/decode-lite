@@ -94,6 +94,14 @@ function decode_setup() {
 	); 
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
+	
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	*/
+	add_theme_support( 'title-tag' );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
@@ -228,7 +236,7 @@ add_filter( 'body_class', 'decode_add_body_classes' );
  */
 function decode_add_google_profile( $contactmethods ) {
 	// Add Google Profiles
-	$contactmethods['google_profile'] = 'Google Profile URL';
+	$contactmethods['google_profile'] = __( 'Google Profile URL', 'decode' );
 	return $contactmethods;
 }
 add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1 );
@@ -286,9 +294,9 @@ if ( ! function_exists( 'decode_print_post_title' ) ) {
 /*
  * Show all post types in main query
  */
-if ( ! function_exists( 'add_post_types_to_query' ) ) {
+if ( ! function_exists( 'decode_add_post_types_to_query' ) ) {
 
-function add_post_types_to_query( $query ) {
+function decode_add_post_types_to_query( $query ) {
 		$typelist = 'post';
 		if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 			$typelist .= ', ' . get_theme_mod( 'add_custom_post_types', '' );
@@ -301,5 +309,5 @@ function add_post_types_to_query( $query ) {
 }
 
 if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
-	add_action( 'pre_get_posts', 'add_post_types_to_query' );
+	add_action( 'pre_get_posts', 'decode_add_post_types_to_query' );
 }
