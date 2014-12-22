@@ -148,7 +148,7 @@ add_filter( 'wp_title', 'decode_wp_title', 10, 3 );
 }
 
 /**
- * Filters wp_title to print a neat `title` tag based on what is being viewed.
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
