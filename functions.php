@@ -40,6 +40,14 @@ function decode_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 	
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+	
 	// Set up the WordPress core custom header feature.
 	$args = array(
 		'default-image'          => '',
@@ -94,14 +102,6 @@ function decode_setup() {
 	); 
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
-	
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	*/
-	add_theme_support( 'title-tag' );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
