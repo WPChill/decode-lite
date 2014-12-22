@@ -215,7 +215,9 @@ endif;
  */
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	function decode_render_title() {
-		echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+		?>
+		<title><?php wp_title( '|', false, 'right' ); ?></title>
+		<?php
 	}
 	add_action( 'wp_head', 'decode_render_title' );
 endif;
