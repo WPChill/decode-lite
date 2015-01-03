@@ -8,20 +8,6 @@
  */
 
 /**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- */
-
-if ( ! function_exists( 'decode_page_menu_args' ) ) {
-
-function decode_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'decode_page_menu_args' );
-
-}
-
-/**
  * Adds custom classes to the array of body classes.
  */
 if ( ! function_exists( 'decode_body_classes' ) ) {
