@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'mixins';
-
 /*!
 Theme Name: Decode
 Theme URI: http://ScottHSmith.com/projects/decode/
@@ -21,12 +18,12 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0  - Reset
-	1.1 - General
-	1.2 - Typography
-	1.3 - Elements
+	1.1 - Normalize
+	1.2 - Elements
+	1.3 - Typography
 	1.4 - Forms
 2.0  - Utilities
-	2.1 - Screen Readers
+	2.1 - Accessibility
 	2.2 - Clearing
 3.0  - Media
 	3.1 - Captions
@@ -60,6 +57,8 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	15.4 - Print
 --------------------------------------------------------------*/
 
+@import 'variables';
+@import 'mixins';
 
 /*--------------------------------------------------------------
 1.0 - Reset
@@ -75,191 +74,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 /*--------------------------------------------------------------
 3.0 - Media
 --------------------------------------------------------------*/
-/* Fluid images for posts, comments, and widgets */
-.site-branding img,
-.site-content img,
-.site-footer img,
-.sidebar img,
-img.size-full,
-.comment-content img,
-.widget img,
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-	max-width: 100%;
-	height: auto;
-}
-
-/* Make sure embeds and iframes fit their containers */
-embed, iframe, object {
-	max-width: 100%;
-}
-
-/* Make sure images with WordPress-added height and width attributes are scaled correctly */
-.entry-content img, img[class*='align'], img[class*='wp-image-'] {
-	height: auto;
-}
-
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-	padding: 0;
-	border: none;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-3.1 - Captions
---------------------------------------------------------------*/
-.wp-caption {
-	max-width: 100%;
-	margin-bottom: 1.5em;
-}
-
-.wp-caption img[class*='wp-image-'] {
-	display: block;
-	max-width: 100%;
-	margin: 0 auto;
-}
-
-.wp-caption-text {
-	font-size: 0.85em;
-	text-align: center;
-}
-
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-
-/*--------------------------------------------------------------
-3.2 - Galleries
---------------------------------------------------------------*/
-.gallery {
-	margin: auto auto 1.5em;
-}
-
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-	margin: 0 4px 4px 0;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 48%;
-	max-width: calc(50% - 4px);
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 32%;
-	max-width: calc(33.3% - 4px);
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 23%;
-	max-width: calc(25% - 4px);
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 19%;
-	max-width: calc(20% - 4px);
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 15%;
-	max-width: calc(16.7% - 4px);
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 13%;
-	max-width: calc(14.28% - 4px);
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 11%;
-	max-width: calc(12.5% - 4px);
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 9%;
-	max-width: calc(11.1% - 4px);
-}
-
-.gallery-columns-1 .gallery-item:nth-of-type(1n),
-.gallery-columns-2 .gallery-item:nth-of-type(2n),
-.gallery-columns-3 .gallery-item:nth-of-type(3n),
-.gallery-columns-4 .gallery-item:nth-of-type(4n),
-.gallery-columns-5 .gallery-item:nth-of-type(5n),
-.gallery-columns-6 .gallery-item:nth-of-type(6n),
-.gallery-columns-7 .gallery-item:nth-of-type(7n),
-.gallery-columns-8 .gallery-item:nth-of-type(8n),
-.gallery-columns-9 .gallery-item:nth-of-type(9n) {
-	margin-right: 0;
-}
-
-/* Overwrites Core's default styles (≥ WP 3.8) */
-#content .gallery dd.gallery-caption {
-	margin: auto;
-}
-
-.gallery-caption {
-	font-size: 0.85em;
-	text-align: center;
-	margin: auto;
-}
-
-.gallery-columns-1 .gallery-caption {
-	max-width: 20em;
-}
-
-.gallery-columns-3 .gallery-caption,
-.gallery-columns-4 .gallery-caption,
-.gallery-columns-5 .gallery-caption,
-.gallery-columns-6 .gallery-caption,
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-	display: none;
-}
-
-.gallery-columns-6 .gallery-item img,
-.gallery-columns-7 .gallery-item img,
-.gallery-columns-8 .gallery-item img,
-.gallery-columns-9 .gallery-item img {
-	margin: 0 auto;
-}
-
-.gallery a img {
-	display: block;
-	border: none;
-}
-
-/*--------------------------------------------------------------
-3.3 - Alignment
---------------------------------------------------------------*/
-.entry-content {
-	.alignleft {
-		display: inline;
-		float: left;
-		margin-right: 2.5%;
-	}
-	.alignright {
-		display: inline;
-		float: right;
-		margin-left: 2.5%;
-	}
-	.aligncenter {
-		display: block;
-		clear: both;
-		margin-right: auto;
-		margin-left: auto;
-	}
-}
-
+@import 'media/media';
 
 /*--------------------------------------------------------------
 4.0 - Header
@@ -285,8 +100,8 @@ embed, iframe, object {
 .site-logo {
 	transition: opacity 0.5s ease-out;
 	width: auto;
-	max-height: 8.5em; // Fallback for rems
-	max-height: 15rem;
+	max-height: 9.5em; // Fallback for rems
+	max-height: 9.5rem;
 	margin: 0 auto 2%;
 	opacity: 1;
 
@@ -302,6 +117,7 @@ embed, iframe, object {
 
 
 .site-title {
+	font-size: 2.15em;
 	line-height: 1;
 	text-align: center;
 	word-wrap: break-word;
@@ -310,7 +126,6 @@ embed, iframe, object {
 	a {
 		transition: color 0.5s;
 		color: $text-color;
-		font-size: 1.95em;
 
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
@@ -336,6 +151,7 @@ embed, iframe, object {
 }
 
 .site-description {
+	font-size: 1.1em;
 	text-align: center;
 	margin-bottom: 0.75%;
 }
@@ -372,8 +188,8 @@ embed, iframe, object {
 	svg,
 	img {
 		overflow: visible;
-		width: 2em;
-		height: 2em;
+		width: 2.25em;
+		height: 2.25em;
 	}
 	.no-inlinesvg & svg {
 		display: none;
@@ -568,6 +384,7 @@ embed, iframe, object {
 
 .horizontal-menu {
 	position: relative; /* Sets context for absolutely positoned submenus */
+	font-size: 1.1em;
 	text-align: center;
 }
 
@@ -841,6 +658,10 @@ embed, iframe, object {
 /*--------------------------------------------------------------
 5.0 - Content
 --------------------------------------------------------------*/
+.site-content {
+	font-size: 1.1em;
+}
+
 .site-main, .site-footer {
 	width: 92.5%;
 	margin: 0 auto;
@@ -864,6 +685,7 @@ embed, iframe, object {
 .single .byline, .group-blog .byline {
 	display: inline;
 }
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -925,6 +747,9 @@ a .attachment-post-thumbnail {
 
 .entry-content {
 	font-size: 1em;
+	p {
+		margin-bottom: 1.5em;
+	}
 	h1 {
 		font-size: 2.35em;
 	}
@@ -1240,6 +1065,7 @@ li.comment {
 	margin-top: 7.5%;
 }
 
+/* Comments Form */
 .comment-form:not(.jetpack-comments-active) {
 	display: flex;
 	justify-content: space-between;
@@ -1252,7 +1078,7 @@ li.comment {
 }
 
 .comment-form-comment {
-	margin-bottom: 0;
+	margin-bottom: -1%;
 }
 
 .comment-form-comment textarea {
@@ -1269,7 +1095,7 @@ li.comment {
 	border-bottom: 1px solid transparent;
 	border-left: 1px solid #C0C0C0;
 	border-radius: 0 0 0 3px;
-	margin-bottom: 0;
+	margin: 0;
 	opacity: 0;
 	&.visible {
 		max-height: 12em;
@@ -1279,12 +1105,16 @@ li.comment {
 	}
 }
 
-.form-submit input[type=submit] {
-	float: right;
-	position: relative;
-	top: -1px;
-	border-top-color: transparent;
-	border-radius: 0 0 3px 3px;
+.form-submit {
+	margin: 0;
+
+	input[type=submit] {
+		float: right;
+		position: relative;
+		top: -1px;
+		border-top-color: transparent;
+		border-radius: 0 0 3px 3px;
+	}
 }
 
 
@@ -1411,7 +1241,7 @@ li.comment {
 	display: inline-block;
 	position: absolute;
 	top: 0.5em;
-	height: 1.5em;
+	height: 1.75em;
 	padding: 0;
 	border: none;
 	margin-bottom: 2.5%;
@@ -1444,8 +1274,8 @@ li.comment {
 	}
 	svg,
 	img {
-		width: 1.5em;
-		height: 1.5em;
+		width: 1.75em;
+		height: 1.75em;
 	}
 }
 
@@ -1513,7 +1343,6 @@ li.comment {
 	position: fixed;
 	z-index: 5;
 	top: 0;
-	font-size: 0.95em;
 	width: 95%;
 	height: 100%;
 	background-color: $background-color;
@@ -1527,6 +1356,10 @@ li.comment {
 		transform: translateX(110%);
 		right: 0;
 		box-shadow: -1px 0 15px rgba(0,0,0,0.5);
+	}
+
+	h2 {
+		font-size: 1em;
 	}
 }
 
@@ -1688,8 +1521,8 @@ li.comment {
 		position: fixed;
 		z-index: 1;
 		top: 2.5%;
-		width: 1.75em;
-		height: 1.75em;
+		width: 2em;
+		height: 2em;
 		&.left {
 			left: 2.5%;
 		}
@@ -1704,8 +1537,8 @@ li.comment {
 		}
 		svg,
 		img {
-			width: 1.75em;
-			height: 1.75em;
+			width: 2em;
+			height: 2em;
 		}
 	}
 
@@ -1717,9 +1550,10 @@ li.comment {
 		margin: 1.5% auto;
 	}
 
-	.social-link svg, .social-link img {
-		width: 2.25em;
-		height: 2.25em;
+	.social-link svg,
+	.social-link img {
+		width: 2.5em;
+		height: 2.5em;
 	}
 
 	/* The CSS below causes the absolutely positioned dropdowns
@@ -1855,8 +1689,8 @@ li.comment {
 		margin: 0 auto 5%;
 	}
 
-	.site-title a {
-		font-size: 2.8em;
+	.site-title {
+		font-size: 3.15em;
 	}
 
 	.author .author-section {
@@ -1868,8 +1702,8 @@ li.comment {
 
 	.social-link svg,
 	.social-link img {
-		width: 2.5em;
-		height: 2.5em;
+		width: 2.75em;
+		height: 2.75em;
 	}
 
 	.no-inlinesvg .social-link {
@@ -1948,14 +1782,14 @@ li.comment {
 		max-width: 60em;
 	}
 
-	.site-title a {
-		font-size: 3.5em;
+	.site-title {
+		font-size: 4em;
 	}
 
 	.social-link svg,
 	.social-link img {
-		width: 2.75em;
-		height: 2.75em;
+		width: 3em;
+		height: 3em;
 	}
 
 	.page-header {
@@ -1963,7 +1797,7 @@ li.comment {
 	}
 
 	.entry-title {
-		font-size: 2em;
+		font-size: 2.1em;
 	}
 
 	.sidebar-style-constant .site {

@@ -57,6 +57,40 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+						
+		markdown: {
+			readme: {
+				options: {
+					template: 'docs/src/READMETemplate.html'
+				},
+				files: {
+					'docs/README.html': 'docs/src/README.md'
+				}
+			},
+			customcss: {
+				options: {
+					template: 'docs/src/CustomCSSTemplate.html'
+				},
+				files: {
+					'docs/CustomCSS.html': 'docs/src/CustomCSS.md'
+				}
+			}
+		},
+		
+		copy: {
+			/* Move and rename Normalize so grunt-sass can import and concatenate it. */
+			normalize: {
+				files: {
+					'styles/src/reset/_normalize.scss': 'node_modules/normalize.css/normalize.css'
+				}
+			},
+			/* Copy Readme.md to project root. */
+			readme: {
+				files: {
+					'README.md': 'docs/src/README.md'
+				}
+			}
+		},
 		
 		sass: {
 			options: {
@@ -116,34 +150,6 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
-				
-		markdown: {
-			readme: {
-				options: {
-					template: 'docs/src/READMETemplate.html'
-				},
-				files: {
-					'docs/README.html': ['docs/src/README.md']
-				}
-			},
-			customcss: {
-				options: {
-					template: 'docs/src/CustomCSSTemplate.html'
-				},
-				files: {
-					'docs/CustomCSS.html': ['docs/src/CustomCSS.md']
-				}
-			}
-		},
-		
-		/* Copy Readme.md to project root */
-		copy: {
-			copy_readme: {
-				files: {
-					'README.md': ['docs/src/README.md']
-				}
-			}
-		},
 
 		watch: {
 			scripts: {
@@ -169,12 +175,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-modernizr");
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-markdown');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-csscomb');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	
@@ -184,12 +190,12 @@ module.exports = function(grunt) {
 		'modernizr',
 		'jshint',
 		'uglify',
+		'markdown',
+		'copy',
 		'sass',
 		'csscomb',
 		'autoprefixer',
 		'cssmin',
-		'markdown',
-		'copy',
 		'watch'
 	]);
 	
@@ -198,12 +204,12 @@ module.exports = function(grunt) {
 		'modernizr',
 		'jshint',
 		'uglify',
+		'markdown',
+		'copy',
 		'sass',
 		'csscomb',
 		'autoprefixer',
-		'cssmin',
-		'markdown',
-		'copy'
+		'cssmin'
 	]);
 		
 	// $ grunt dev: Watches for changes while developing.

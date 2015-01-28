@@ -19,5 +19,8 @@
     "grunt-markdown": "^0.6.1",
     "grunt-modernizr": "^0.6.0",
     "grunt-sass": "^0.17.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.2"
   }
 }

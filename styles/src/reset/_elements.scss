@@ -1,3 +1,17 @@
+html {
+	box-sizing: border-box; /* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: $background-color; /* Fallback for when there is no custom background color defined. */
+}
+
 hr {
 	height: 1px;
 	border: 0;
@@ -5,12 +19,9 @@ hr {
 	background-color: #CCC;
 }
 
-/* Text elements */
-p {
-	margin-bottom: 1.5em;
-}
-
-ul, ol {
+/* Lists */
+ul,
+ol {
 	margin: 0 0 1.5em 3em;
 }
 
@@ -22,7 +33,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul, li > ol {
+li > ul,
+li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -35,79 +47,8 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
-b, strong {
-	font-weight: bold;
-}
-
-dfn, cite, em, i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	overflow: auto;
-	font-family: 'Courier 10 Pitch', Courier, monospace;
-	line-height: 1.6;
-	max-width: 100%;
-	padding: 1.6em;
-	margin-bottom: 1.6em;
-	background: #EEE;
-}
-
-code, kbd, tt, var {
-	font: 15px Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-}
-
-abbr, acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark, ins {
-	text-decoration: none;
-	background: #FFF9C0;
-}
-
-sup, sub {
-	position: relative;
-	font-size: 75%;
-	line-height: 0;
-	vertical-align: baseline;
-	height: 0;
-}
-
-sup {
-	bottom: 1ex;
-}
-
-sub {
-	top: 0.5ex;
-}
-
-small {
-	font-size: 75%;
-}
-
-big {
-	font-size: 125%;
-}
-
-figure {
-	margin: 0;
-}
-
+/* Tables */
 table {
 	width: 100%;
 	margin: 0 0 1.5em;
-}
-
-th {
-	font-weight: bold;
 }
