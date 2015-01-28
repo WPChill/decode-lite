@@ -956,14 +956,15 @@ article {
 		border-radius: 50%;
 		opacity: 1;
 		box-shadow: 0 0 5px rgba(0,0,0,0);
-	}
-	.no-touch &:hover {
-		opacity: 1;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-	}
-	.no-touch &:active {
-		opacity: 0.85;
-		box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+		
+		.no-touch &:hover {
+			opacity: 1;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+		}
+		.no-touch &:active {
+			opacity: 0.85;
+			box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+		}
 	}
 }
 
