@@ -18,6 +18,9 @@ I suggest that you do not change this without using media queries because the so
 ### Change the color of the menu and menu close icons:
 `.menu-icon, .close-icon { fill: #00B0CC; }`
 
+### Change font family:
+`body, button, input, select, textarea { font-family: 'name-of-font-family'; }`
+
 ### Change the font size of posts and pages:
 `.entry-content { font-size: 1em; }`<br>
 1em is the default.
