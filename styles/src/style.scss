@@ -956,7 +956,7 @@ article {
 		border-radius: 50%;
 		opacity: 1;
 		box-shadow: 0 0 5px rgba(0,0,0,0);
-		
+
 		.no-touch &:hover {
 			opacity: 1;
 			box-shadow: 0 2px 5px rgba(0,0,0,0.5);
@@ -1123,7 +1123,7 @@ li.comment {
 9.0 - Navigation
 --------------------------------------------------------------*/
 .post-navigation,
-.paging-navigation,
+.posts-navigation,
 .image-navigation {
 	overflow: hidden;
 	margin: 2.5%;
@@ -1139,12 +1139,24 @@ li.comment {
 	float: left;
 	text-align: left;
 	width: 50%;
+
+	a::before {
+		/* Left arrow */
+		padding-right: 0.5%;
+		content: '\2190';
+	}
 }
 
 .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+
+	a::after {
+		/* Right arrow */
+		padding-left: 0.5%;
+		content: '\2192';
+	}
 }
 
 .nav-links a {
@@ -1492,7 +1504,7 @@ li.comment {
 14.0 - Infinite Scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer {
 	/* Theme Footer (when set to scrolling) */
 	display: none;
@@ -1837,7 +1849,7 @@ li.comment {
 	.sidebar-link,
 	.social-links,
 	.menu,
-	.paging-navigation,
+	.posts-navigation,
 	.comments-link,
 	.edit-link,
 	.post-navigation,
