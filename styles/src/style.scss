@@ -1293,7 +1293,7 @@ li.comment {
 }
 
 .sidebar-top {
-	z-index: 1;
+	z-index: 3; /* Submenus have z-index of 2. */
 	width: 100%;
 	border-bottom: 1px solid $accent-color;
 	margin-bottom: 7.5%;
