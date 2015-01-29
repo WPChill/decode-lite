@@ -849,7 +849,7 @@ article {
 
 .theme-info,
 .site-colophon {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	text-align: center;
 	margin-top: 1em;
 	p {
@@ -1141,9 +1141,9 @@ li.comment {
 	width: 50%;
 
 	a::before {
+		content: '\2190';
 		/* Left arrow */
 		padding-right: 0.5%;
-		content: '\2190';
 	}
 }
 
@@ -1153,9 +1153,9 @@ li.comment {
 	width: 50%;
 
 	a::after {
+		content: '\2192';
 		/* Right arrow */
 		padding-left: 0.5%;
-		content: '\2192';
 	}
 }
 
