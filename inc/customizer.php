@@ -57,7 +57,7 @@ function decode_sanitize_string( $input ) {
 
 // HTML sanitization function
 function decode_sanitize_html( $input ) {
-	$output = force_balance_tags( $input ); // Force HTML tags to be properly closed
+	$input = force_balance_tags( $input ); // Force HTML tags to be properly closed
 	
 	$allowed_html = array(
 		'a' => array(
