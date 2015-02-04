@@ -57,6 +57,7 @@ function decode_sanitize_string( $input ) {
 
 // HTML sanitization function
 function decode_sanitize_html( $input ) {
+	$output = force_balance_tags( $input ); // Force HTML tags to be properly closed
 	
 	$allowed_html = array(
 		'a' => array(
@@ -73,8 +74,7 @@ function decode_sanitize_html( $input ) {
 		),
 		'strong' => array(),
 	);
-	
-	$output = wp_kses( $input, $allowed_html );
+	$output = wp_kses( $input, $allowed_html ); // Apply HTML filter to output
 	return $output;
 }
 
