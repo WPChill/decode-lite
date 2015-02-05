@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 					sourceMapName: 'scripts/srcmaps/decode.js.map'
 				},
 				files: {
-					'scripts/decode.js': ['scripts/src/modernizr.js', 'scripts/src/fastclick.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js', 'scripts/src/decode.js' ],
+					'scripts/decode.js': ['scripts/src/modernizr.js', 'node_modules/fastclick/lib/fastclick.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js', 'scripts/src/decode.js' ],
 				}
 			},
 			customizer: {

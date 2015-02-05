@@ -21,6 +21,7 @@
     "grunt-sass": "^0.17.0"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "normalize.css": "^3.0.2"
   }
 }
