@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-10-13 21:38-0800\n"
-"PO-Revision-Date: 2014-10-13 21:42-0800\n"
+"POT-Creation-Date: 2015-02-04 21:44-0800\n"
+"PO-Revision-Date: 2015-02-04 21:50-0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -48,83 +48,7 @@ msgid "Most Used Categories"
 msgstr "Catégories les plus utilisées"
 
 # @ decode
-#: archive.php:27
-#, php-format
-msgid "Day: %s"
-msgstr "Jour: %s"
-
-# @ decode
-#: archive.php:30
-#, php-format
-msgid "Month: %s"
-msgstr "Mois: %s"
-
-#: archive.php:30
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-# @ decode
-#: archive.php:33
-#, php-format
-msgid "Year: %s"
-msgstr "Année: %s"
-
-#: archive.php:33
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-# @ decode
-#: archive.php:36
-msgid "Asides"
-msgstr "Apartés"
-
-# @ decode
-#: archive.php:39
-#, fuzzy
-msgid "Galleries"
-msgstr "Catégories"
-
-# @ decode
-#: archive.php:42
-msgid "Images"
-msgstr "Images"
-
-# @ decode
-#: archive.php:45
-msgid "Videos"
-msgstr "Vidéos"
-
-# @ decode
-#: archive.php:48
-msgid "Quotes"
-msgstr "Citations"
-
-# @ decode
-#: archive.php:51
-msgid "Links"
-msgstr "Liens"
-
-#: archive.php:54
-msgid "Statuses"
-msgstr ""
-
-#: archive.php:57
-msgid "Audios"
-msgstr ""
-
-#: archive.php:60
-msgid "Chats"
-msgstr ""
-
-# @ decode
-#: archive.php:63 inc/extras.php:113 page-explore.php:37 sidebar.php:41
-msgid "Archives"
-msgstr "Archives"
-
-# @ decode
-#: author.php:26
+#: author.php:26 inc/template-tags.php:218
 #, php-format
 msgid "Author: %s"
 msgstr "Auteur: %s"
@@ -307,7 +231,7 @@ msgstr "Image de l'en-tête"
 #: functions.php:34
 #, fuzzy
 msgid "Sidebar Menu"
-msgstr "Colonne latérale"
+msgstr "Menu de navigation"
 
 #: functions.php:35
 #, fuzzy
@@ -315,22 +239,27 @@ msgid "Footer Menu"
 msgstr "Image de l'en-tête"
 
 # @ decode
-#: functions.php:140
+#: functions.php:148
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
-#: functions.php:142
+#: functions.php:150
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr ""
 
+#: functions.php:239
+#, fuzzy
+msgid "Google Profile URL"
+msgstr "%s URL du profil"
+
 # @ decode
-#: header.php:34
+#: header.php:33
 msgid "Skip to content"
 msgstr "Voir le contenu"
 
 # @ decode
-#: header.php:38
+#: header.php:37
 #, fuzzy
 msgid "Show sidebar"
 msgstr "Colonne latérale"
@@ -348,39 +277,37 @@ msgstr ""
 "image\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Return to %7$s\" "
 "rel=\"gallery\">%8$s</a>"
 
-# @ decode
 #: image.php:34
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
+msgid "Previous"
+msgstr ""
 
-# @ decode
 #: image.php:35
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
+msgid "Next"
+msgstr ""
 
-#: inc/customizer.php:145
+#: inc/customizer.php:153
 msgid "Header Options"
 msgstr "Options de l'en-tête"
 
-#: inc/customizer.php:180
+#: inc/customizer.php:188
 #, fuzzy
 msgid "Favicon Image (must be a PNG)"
 msgstr "Favicon (format PNG recommandé)"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:195
 msgid "Show Site Title"
 msgstr "Afficher le titre du site"
 
-#: inc/customizer.php:194
+#: inc/customizer.php:202
 msgid "Show Site Description"
 msgstr "Afficher la description du site"
 
-#: inc/customizer.php:201
+#: inc/customizer.php:209
 #, fuzzy
 msgid "Show Header Menu"
 msgstr "Image de l'en-tête"
 
-#: inc/customizer.php:208
+#: inc/customizer.php:216
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
@@ -389,179 +316,175 @@ msgstr ""
 "blog par une balise HTML."
 
 # @ decode
-#: inc/customizer.php:222
+#: inc/customizer.php:230
 msgid "Sidebar Options"
 msgstr "Options de la colonne latérale"
 
 # @ decode
-#: inc/customizer.php:250
+#: inc/customizer.php:258
 msgid "Enable Sidebar"
 msgstr "Activer la colonne latérale"
 
 # @ decode
-#: inc/customizer.php:257
+#: inc/customizer.php:265
 msgid "Sidebar Position"
 msgstr "Position de la colonne latérale"
 
-#: inc/customizer.php:262 inc/customizer.php:274
+#: inc/customizer.php:270 inc/customizer.php:282
 msgid "Left"
 msgstr "Gauche"
 
-#: inc/customizer.php:263 inc/customizer.php:275
+#: inc/customizer.php:271 inc/customizer.php:283
 msgid "Right"
 msgstr "Droit"
 
-#: inc/customizer.php:269
+#: inc/customizer.php:277
 msgid "Sidebar Button Position"
 msgstr "Position du bouton de la colonne latérale"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:289
 msgid "Always Visible Sidebar"
 msgstr "Colonne latérale toujours visible"
 
-#: inc/customizer.php:286
+#: inc/customizer.php:294
 msgctxt "Sidebar option"
 msgid "Always open"
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:295
 msgctxt "Sidebar option"
 msgid "Closed by default"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:307
 msgid "Discussion Options"
 msgstr "Option de discussion"
 
 # @ decode
-#: inc/customizer.php:316
+#: inc/customizer.php:324
 msgid "Enable Comments"
 msgstr "Activer les commentaires"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:331
 msgid "Show allowed HTML tags on comment form"
 msgstr ""
 
-#: inc/customizer.php:336
+#: inc/customizer.php:344
 msgid "Social Options"
 msgstr "Options de réseaux sociaux"
 
-#: inc/customizer.php:637 inc/customizer.php:644
+#: inc/customizer.php:650 inc/customizer.php:657
 msgid "Show Social Icons"
 msgstr "Afficher les icônes de réseaux sociaux"
 
-#: inc/customizer.php:637
+#: inc/customizer.php:650
 #, fuzzy
 msgid "in Header"
-msgstr "Image de l'en-tête"
+msgstr "Options de l’en-tête"
 
-#: inc/customizer.php:644
+#: inc/customizer.php:657
 #, fuzzy
 msgid "in Footer"
 msgstr "Image de l'en-tête"
 
-#: inc/customizer.php:651
+#: inc/customizer.php:664
 msgid "Open Links in New Tab/Window"
 msgstr ""
 
-#: inc/customizer.php:659 inc/customizer.php:667 inc/customizer.php:675
-#: inc/customizer.php:684 inc/customizer.php:692 inc/customizer.php:700
-#: inc/customizer.php:709 inc/customizer.php:717 inc/customizer.php:725
-#: inc/customizer.php:733 inc/customizer.php:741 inc/customizer.php:758
-#: inc/customizer.php:766 inc/customizer.php:774 inc/customizer.php:782
-#: inc/customizer.php:790 inc/customizer.php:798 inc/customizer.php:806
-#: inc/customizer.php:814 inc/customizer.php:822 inc/customizer.php:839
-#: inc/customizer.php:856 inc/customizer.php:864 inc/customizer.php:872
-#: inc/customizer.php:880 inc/customizer.php:888 inc/customizer.php:896
-#: inc/customizer.php:913 inc/customizer.php:921 inc/customizer.php:938
-#: inc/customizer.php:972 inc/customizer.php:980 inc/customizer.php:988
-#: inc/customizer.php:996 inc/customizer.php:1012 inc/customizer.php:1029
-#: inc/customizer.php:1037 inc/customizer.php:1045 inc/customizer.php:1053
-#: inc/customizer.php:1061 inc/customizer.php:1069 inc/customizer.php:1085
+#: inc/customizer.php:672 inc/customizer.php:680 inc/customizer.php:688
+#: inc/customizer.php:697 inc/customizer.php:705 inc/customizer.php:713
+#: inc/customizer.php:722 inc/customizer.php:730 inc/customizer.php:738
+#: inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:771
+#: inc/customizer.php:779 inc/customizer.php:787 inc/customizer.php:795
+#: inc/customizer.php:803 inc/customizer.php:811 inc/customizer.php:819
+#: inc/customizer.php:827 inc/customizer.php:835 inc/customizer.php:843
+#: inc/customizer.php:860 inc/customizer.php:877 inc/customizer.php:885
+#: inc/customizer.php:893 inc/customizer.php:901 inc/customizer.php:909
+#: inc/customizer.php:917 inc/customizer.php:934 inc/customizer.php:942
+#: inc/customizer.php:959 inc/customizer.php:993 inc/customizer.php:1001
+#: inc/customizer.php:1009 inc/customizer.php:1017 inc/customizer.php:1033
+#: inc/customizer.php:1050 inc/customizer.php:1058 inc/customizer.php:1066
+#: inc/customizer.php:1074 inc/customizer.php:1082 inc/customizer.php:1106
 #, php-format
 msgid "%s Username"
 msgstr "%s Nom d'utilisateur"
 
-#: inc/customizer.php:676 inc/customizer.php:701
+#: inc/customizer.php:689 inc/customizer.php:714
 msgid " (or the long number in your profile URL)"
 msgstr "(ou la suite de chiffre dans l'URL de votre profil)"
 
-#: inc/customizer.php:749 inc/customizer.php:1020
+#: inc/customizer.php:762 inc/customizer.php:1041 inc/customizer.php:1090
+#: inc/customizer.php:1098
 #, php-format
 msgid "%s Profile URL"
 msgstr "%s URL du profil"
 
-#: inc/customizer.php:830 inc/customizer.php:904 inc/customizer.php:929
-#: inc/customizer.php:946 inc/customizer.php:955
+#: inc/customizer.php:851 inc/customizer.php:925 inc/customizer.php:950
+#: inc/customizer.php:967 inc/customizer.php:976
 #, php-format
 msgid "%s Site URL"
 msgstr "%s URL du site"
 
 # @ decode
-#: inc/customizer.php:847 inc/customizer.php:1102
+#: inc/customizer.php:868 inc/customizer.php:1123
 #, php-format
 msgid "%s Link"
 msgstr "%s Liens"
 
-#: inc/customizer.php:964 inc/customizer.php:1004
-#, php-format
+#: inc/customizer.php:985 inc/customizer.php:1025
+#, fuzzy, php-format
 msgid "%s User ID"
-msgstr ""
+msgstr "Jour: %s"
 
-#: inc/customizer.php:1077
-#, php-format
-msgid "%s Group Name"
-msgstr ""
-
-#: inc/customizer.php:1093
+#: inc/customizer.php:1114
 msgid "Email Address"
 msgstr "Adresse email"
 
-#: inc/customizer.php:1111
+#: inc/customizer.php:1132
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
-#: inc/customizer.php:1125
+#: inc/customizer.php:1146
 #, fuzzy
 msgid "Content Options"
-msgstr "Autres options"
+msgstr "Voir le contenu"
 
-#: inc/customizer.php:1127
+#: inc/customizer.php:1148
 #, php-format
 msgctxt "(blog name)'s content."
 msgid "These options change the display of %s's content"
 msgstr ""
 
-#: inc/customizer.php:1204
+#: inc/customizer.php:1225
 msgid "Load Latin Extended character set. This will increase page load times."
 msgstr ""
 
-#: inc/customizer.php:1211
+#: inc/customizer.php:1232
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Utiliser l'extrait à la place du texte entier sur la page d'accueil, à "
 "l'exception des articles mis en avant."
 
-#: inc/customizer.php:1218
+#: inc/customizer.php:1239
 msgid "Use entry excerpts on archive, category, and author pages."
 msgstr ""
 
-#: inc/customizer.php:1225
+#: inc/customizer.php:1246
 msgid "Display posts' featured images when excerpts are shown."
 msgstr ""
 
-#: inc/customizer.php:1232
+#: inc/customizer.php:1253
 msgid "Display a post's featured image on its individual page."
 msgstr ""
 
-#: inc/customizer.php:1239
+#: inc/customizer.php:1260
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Afficher les tags sur la page d'accueil (les tags seront affichés sur la "
 "page de chaque article)"
 
-#: inc/customizer.php:1246
+#: inc/customizer.php:1267
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -569,36 +492,44 @@ msgstr ""
 "Afficher les catégories sur la page d'accueil (les catégories seront "
 "affichées sur la page de chaque article)"
 
-#: inc/customizer.php:1253
+#: inc/customizer.php:1274
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 "Afficher le nom de l'auteur, l'image du profil et la bio après les articles"
 
-#: inc/customizer.php:1260
+#: inc/customizer.php:1281
 msgid "Entry Date Position"
 msgstr ""
 
-#: inc/customizer.php:1264
+#: inc/customizer.php:1285
+#, fuzzy
 msgid "Above Header"
-msgstr ""
+msgstr "Options de l’en-tête"
 
-#: inc/customizer.php:1265
+#: inc/customizer.php:1286
+#, fuzzy
 msgid "Below Header"
-msgstr ""
+msgstr "Options de l’en-tête"
 
-#: inc/customizer.php:1271
+#: inc/customizer.php:1292
+#, fuzzy
 msgid "Show Page Headers"
 msgstr ""
+"Afficher les tags sur la page d’accueil (les tags seront affichés sur la "
+"page de chaque article)"
 
-#: inc/customizer.php:1278
+#: inc/customizer.php:1299
+#, fuzzy
 msgid "Show entry date for post excepts on the main page"
 msgstr ""
+"Afficher les tags sur la page d’accueil (les tags seront affichés sur la "
+"page de chaque article)"
 
-#: inc/customizer.php:1285
+#: inc/customizer.php:1306
 msgid "Add an arrow before the title of a link post"
 msgstr "Ajouter une ombre devant le titre d'un lien d'article"
 
-#: inc/customizer.php:1292
+#: inc/customizer.php:1313
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -606,138 +537,239 @@ msgstr ""
 "Montrer les informations sur le thème (intègre une ligne sur le nom du thème "
 "et de son créateur à la fin des pages)"
 
-#: inc/customizer.php:1301
+#: inc/customizer.php:1322
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Texte (colophon, copyright, credits, etc.) pour le rooter de votre site"
 
-#: inc/customizer.php:1315
+#: inc/customizer.php:1336
 msgid "Other Options"
 msgstr "Autres options"
 
-#: inc/customizer.php:1334
+#: inc/customizer.php:1337
+msgid ""
+"Custom CSS is longer recommended. This feature is no longer allowed in "
+"Decode. To continue using these tweaks, copy and paste your CSS into a "
+"custom CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</"
+"a>. Get help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
+msgstr ""
+
+#: inc/customizer.php:1357
 msgid "Custom CSS"
 msgstr "Personnaliser le CSS"
 
-#: inc/customizer.php:1345
+#: inc/customizer.php:1368
 msgid "Show the following post types on home blog page. (Separate with commas)"
 msgstr ""
 
 # @ decode
-#: inc/customizer.php:1384
+#: inc/customizer.php:1407
 msgid "Accent Color"
 msgstr "Couleur du soulignement"
 
-#: inc/customizer.php:1385
+#: inc/customizer.php:1408
 msgid "The main color used for links, borders, buttons, and more."
 msgstr ""
 
 # @ decode
-#: inc/customizer.php:1392
+#: inc/customizer.php:1415
 msgid "Active Link Color"
 msgstr "Couleur du lien actif"
 
-#: inc/customizer.php:1393
+#: inc/customizer.php:1416
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
 msgstr ""
 
 # @ decode
-#: inc/customizer.php:1400
+#: inc/customizer.php:1423
 msgid "Text Color"
 msgstr "Couleur du texte"
 
 # @ decode
-#: inc/customizer.php:1401
+#: inc/customizer.php:1424
 #, fuzzy
 msgid "The main text color."
 msgstr "Couleur du texte"
 
 # @ decode
-#: inc/customizer.php:1408
+#: inc/customizer.php:1431
 msgid "Secondary Text Color"
 msgstr "Seconde couleur du texte"
 
-#: inc/customizer.php:1409
+#: inc/customizer.php:1432
 msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
 
-#: inc/customizer.php:1416
+#: inc/customizer.php:1439
 msgid "Use accent color instead of text color for icons"
 msgstr ""
 "Utiliser la couleur de soulignement à la place de la couleur du texte pour "
 "les icônes"
 
 # @ decode
-#: inc/extras.php:104
-msgid "Category"
-msgstr "Catégorie"
-
-# @ decode
-#: inc/extras.php:107
-msgid "Tag"
-msgstr "Tag"
-
-# @ decode
-#: inc/extras.php:110
-msgid "Author"
-msgstr "Auteur"
-
-# @ decode
-#: inc/extras.php:120 inc/extras.php:124
-msgid "Page "
+#: inc/extras.php:95
+#, fuzzy, php-format
+msgid "Page %s"
 msgstr "Page"
 
-# @ decode
-#: inc/template-tags.php:40
-msgid "Posts navigation"
-msgstr ""
-
-# @ decode
-#: inc/template-tags.php:44
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;Articles précédents"
-
-# @ decode
-#: inc/template-tags.php:48
-msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "Articles suivants&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-# @ decode
-#: inc/template-tags.php:73
-msgid "Post navigation"
-msgstr "Navigation dans les articles"
-
-# @ decode
-#: inc/template-tags.php:76
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;"
-
-# @ decode
-#: inc/template-tags.php:77
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:101
+#: inc/template-tags.php:42
 msgid "Website"
 msgstr "Site"
 
-#: inc/template-tags.php:190
+#: inc/template-tags.php:131
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:195
-#, php-format
+#: inc/template-tags.php:136
+#, fuzzy, php-format
 msgctxt "post author"
 msgid "by %s"
+msgstr "Jour: %s"
+
+# @ decode
+#: inc/template-tags.php:158
+msgid "Posts navigation"
 msgstr ""
+
+#: inc/template-tags.php:162
+msgid "Older posts"
+msgstr ""
+
+# @ decode
+#: inc/template-tags.php:166
+#, fuzzy
+msgid "Newer posts"
+msgstr "Articles récents"
+
+# @ decode
+#: inc/template-tags.php:189
+msgid "Post navigation"
+msgstr "Navigation dans les articles"
+
+# @ decode
+#: inc/template-tags.php:214
+#, fuzzy, php-format
+msgid "Category: %s"
+msgstr "Catégorie"
+
+# @ decode
+#: inc/template-tags.php:216
+#, fuzzy, php-format
+msgid "Tag: %s"
+msgstr "Jour: %s"
+
+# @ decode
+#: inc/template-tags.php:220
+#, php-format
+msgid "Year: %s"
+msgstr "Année: %s"
+
+#: inc/template-tags.php:220
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+# @ decode
+#: inc/template-tags.php:222
+#, php-format
+msgid "Month: %s"
+msgstr "Mois: %s"
+
+#: inc/template-tags.php:222
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+# @ decode
+#: inc/template-tags.php:224
+#, php-format
+msgid "Day: %s"
+msgstr "Jour: %s"
+
+#: inc/template-tags.php:224
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+# @ decode
+#: inc/template-tags.php:227
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Apartés"
+
+# @ decode
+#: inc/template-tags.php:229
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Catégories"
+
+# @ decode
+#: inc/template-tags.php:231
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Images"
+
+# @ decode
+#: inc/template-tags.php:233
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Vidéos"
+
+# @ decode
+#: inc/template-tags.php:235
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Citations"
+
+# @ decode
+#: inc/template-tags.php:237
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Liens"
+
+#: inc/template-tags.php:239
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:241
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:243
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+# @ decode
+#: inc/template-tags.php:246
+#, fuzzy, php-format
+msgid "Archives: %s"
+msgstr "Archives"
+
+# @ decode
+#: inc/template-tags.php:250
+#, fuzzy, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s à %2$s"
+
+# @ decode
+#: inc/template-tags.php:252 page-explore.php:37 sidebar.php:41
+msgid "Archives"
+msgstr "Archives"
 
 #: page-explore.php:11
 msgid "Explore Page"
@@ -764,6 +796,40 @@ msgstr "Colonne latérale"
 #, fuzzy
 msgid "Navigation"
 msgstr "Afficher le navigation"
+
+# @ decode
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
+
+# @ decode
+#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#~ msgid "Tag"
+#~ msgstr "Tag"
+
+# @ decode
+#~ msgid "Author"
+#~ msgstr "Auteur"
+
+# @ decode
+#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;Articles précédents"
+
+# @ decode
+#~ msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Articles suivants&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+# @ decode
+#~ msgctxt "Previous post link"
+#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;"
+
+# @ decode
+#~ msgctxt "Next post link"
+#~ msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 # @ decode
 #, fuzzy
