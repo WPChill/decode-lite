@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2014-10-13 21:38-0800\n"
-"PO-Revision-Date: 2014-10-13 22:13-0800\n"
+"POT-Creation-Date: 2015-02-04 21:44-0800\n"
+"PO-Revision-Date: 2015-02-04 21:49-0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: MO <mapleobserver@gmail.com>\n"
 "Language: zh_CN\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
@@ -43,72 +43,7 @@ msgstr "试试访问每月归档。"
 msgid "Most Used Categories"
 msgstr "常用分类"
 
-#: archive.php:27
-#, php-format
-msgid "Day: %s"
-msgstr "日：%s"
-
-#: archive.php:30
-#, php-format
-msgid "Month: %s"
-msgstr "月：%s"
-
-#: archive.php:30
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "F Y"
-
-#: archive.php:33
-#, php-format
-msgid "Year: %s"
-msgstr "年：%s"
-
-#: archive.php:33
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: archive.php:36
-msgid "Asides"
-msgstr "旁白"
-
-#: archive.php:39
-msgid "Galleries"
-msgstr "图像"
-
-#: archive.php:42
-msgid "Images"
-msgstr "图片"
-
-#: archive.php:45
-msgid "Videos"
-msgstr "视频"
-
-#: archive.php:48
-msgid "Quotes"
-msgstr "引用"
-
-#: archive.php:51
-msgid "Links"
-msgstr "链接"
-
-#: archive.php:54
-msgid "Statuses"
-msgstr "状态"
-
-#: archive.php:57
-msgid "Audios"
-msgstr "音频"
-
-#: archive.php:60
-msgid "Chats"
-msgstr "讨论"
-
-#: archive.php:63 inc/extras.php:113 page-explore.php:37 sidebar.php:41
-msgid "Archives"
-msgstr "归档"
-
-#: author.php:26
+#: author.php:26 inc/template-tags.php:218
 #, php-format
 msgid "Author: %s"
 msgstr "作者: %s"
@@ -267,20 +202,25 @@ msgstr "侧边菜单"
 msgid "Footer Menu"
 msgstr "页脚菜单"
 
-#: functions.php:140
+#: functions.php:148
 msgid "Sidebar"
 msgstr "侧边栏"
 
-#: functions.php:142
+#: functions.php:150
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr "仅当侧边栏在自定义菜单中开启时显示"
 
-#: header.php:34
+#: functions.php:239
+#, fuzzy
+msgid "Google Profile URL"
+msgstr "%s 资料 URL"
+
+#: header.php:33
 msgid "Skip to content"
 msgstr "跳到内容"
 
-#: header.php:38
+#: header.php:37
 msgid "Show sidebar"
 msgstr "显示侧边栏"
 
@@ -296,354 +236,452 @@ msgstr ""
 "\">%5$s</a>"
 
 #: image.php:34
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+#, fuzzy
+msgid "Previous"
 msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
 
 #: image.php:35
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+#, fuzzy
+msgid "Next"
 msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/customizer.php:145
+#: inc/customizer.php:153
 msgid "Header Options"
 msgstr "页首设置"
 
-#: inc/customizer.php:180
+#: inc/customizer.php:188
 msgid "Favicon Image (must be a PNG)"
 msgstr "网站图标(必须是PNG)"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:195
 msgid "Show Site Title"
 msgstr "显示站点标题"
 
-#: inc/customizer.php:194
+#: inc/customizer.php:202
 msgid "Show Site Description"
 msgstr "显示站点描述"
 
-#: inc/customizer.php:201
+#: inc/customizer.php:209
 msgid "Show Header Menu"
 msgstr "首先头部菜单"
 
-#: inc/customizer.php:208
+#: inc/customizer.php:216
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
 msgstr "介绍的HTML，如果你想用HTML替换你的博客介绍"
 
-#: inc/customizer.php:222
+#: inc/customizer.php:230
 msgid "Sidebar Options"
 msgstr "边栏设置"
 
-#: inc/customizer.php:250
+#: inc/customizer.php:258
 msgid "Enable Sidebar"
 msgstr "使用边栏"
 
-#: inc/customizer.php:257
+#: inc/customizer.php:265
 msgid "Sidebar Position"
 msgstr "边栏位置"
 
-#: inc/customizer.php:262 inc/customizer.php:274
+#: inc/customizer.php:270 inc/customizer.php:282
 msgid "Left"
 msgstr "靠左"
 
-#: inc/customizer.php:263 inc/customizer.php:275
+#: inc/customizer.php:271 inc/customizer.php:283
 msgid "Right"
 msgstr "靠右"
 
-#: inc/customizer.php:269
+#: inc/customizer.php:277
 msgid "Sidebar Button Position"
 msgstr "边栏按钮位置"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:289
 msgid "Always Visible Sidebar"
 msgstr "边栏始终可见"
 
-#: inc/customizer.php:286
+#: inc/customizer.php:294
 msgctxt "Sidebar option"
 msgid "Always open"
 msgstr "总是打开 [边栏选项]"
 
-#: inc/customizer.php:287
+#: inc/customizer.php:295
 msgctxt "Sidebar option"
 msgid "Closed by default"
 msgstr "默认关闭 [边栏选项]"
 
-#: inc/customizer.php:299
+#: inc/customizer.php:307
 msgid "Discussion Options"
 msgstr "评论设置"
 
-#: inc/customizer.php:316
+#: inc/customizer.php:324
 msgid "Enable Comments"
 msgstr "开启评论"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:331
 msgid "Show allowed HTML tags on comment form"
 msgstr "显示允许评论中允许的html标签"
 
-#: inc/customizer.php:336
+#: inc/customizer.php:344
 msgid "Social Options"
 msgstr "社交设置"
 
-#: inc/customizer.php:637 inc/customizer.php:644
+#: inc/customizer.php:650 inc/customizer.php:657
 msgid "Show Social Icons"
 msgstr "显示社交图标"
 
-#: inc/customizer.php:637
+#: inc/customizer.php:650
 msgid "in Header"
 msgstr "在页首"
 
-#: inc/customizer.php:644
+#: inc/customizer.php:657
 msgid "in Footer"
 msgstr "在页脚"
 
-#: inc/customizer.php:651
+#: inc/customizer.php:664
 msgid "Open Links in New Tab/Window"
 msgstr "在新标签中打开链接"
 
-#: inc/customizer.php:659 inc/customizer.php:667 inc/customizer.php:675
-#: inc/customizer.php:684 inc/customizer.php:692 inc/customizer.php:700
-#: inc/customizer.php:709 inc/customizer.php:717 inc/customizer.php:725
-#: inc/customizer.php:733 inc/customizer.php:741 inc/customizer.php:758
-#: inc/customizer.php:766 inc/customizer.php:774 inc/customizer.php:782
-#: inc/customizer.php:790 inc/customizer.php:798 inc/customizer.php:806
-#: inc/customizer.php:814 inc/customizer.php:822 inc/customizer.php:839
-#: inc/customizer.php:856 inc/customizer.php:864 inc/customizer.php:872
-#: inc/customizer.php:880 inc/customizer.php:888 inc/customizer.php:896
-#: inc/customizer.php:913 inc/customizer.php:921 inc/customizer.php:938
-#: inc/customizer.php:972 inc/customizer.php:980 inc/customizer.php:988
-#: inc/customizer.php:996 inc/customizer.php:1012 inc/customizer.php:1029
-#: inc/customizer.php:1037 inc/customizer.php:1045 inc/customizer.php:1053
-#: inc/customizer.php:1061 inc/customizer.php:1069 inc/customizer.php:1085
+#: inc/customizer.php:672 inc/customizer.php:680 inc/customizer.php:688
+#: inc/customizer.php:697 inc/customizer.php:705 inc/customizer.php:713
+#: inc/customizer.php:722 inc/customizer.php:730 inc/customizer.php:738
+#: inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:771
+#: inc/customizer.php:779 inc/customizer.php:787 inc/customizer.php:795
+#: inc/customizer.php:803 inc/customizer.php:811 inc/customizer.php:819
+#: inc/customizer.php:827 inc/customizer.php:835 inc/customizer.php:843
+#: inc/customizer.php:860 inc/customizer.php:877 inc/customizer.php:885
+#: inc/customizer.php:893 inc/customizer.php:901 inc/customizer.php:909
+#: inc/customizer.php:917 inc/customizer.php:934 inc/customizer.php:942
+#: inc/customizer.php:959 inc/customizer.php:993 inc/customizer.php:1001
+#: inc/customizer.php:1009 inc/customizer.php:1017 inc/customizer.php:1033
+#: inc/customizer.php:1050 inc/customizer.php:1058 inc/customizer.php:1066
+#: inc/customizer.php:1074 inc/customizer.php:1082 inc/customizer.php:1106
 #, php-format
 msgid "%s Username"
 msgstr "%s 用户名"
 
-#: inc/customizer.php:676 inc/customizer.php:701
+#: inc/customizer.php:689 inc/customizer.php:714
 msgid " (or the long number in your profile URL)"
 msgstr "或你个人资料页的长号码"
 
-#: inc/customizer.php:749 inc/customizer.php:1020
+#: inc/customizer.php:762 inc/customizer.php:1041 inc/customizer.php:1090
+#: inc/customizer.php:1098
 #, php-format
 msgid "%s Profile URL"
 msgstr "%s 资料 URL"
 
-#: inc/customizer.php:830 inc/customizer.php:904 inc/customizer.php:929
-#: inc/customizer.php:946 inc/customizer.php:955
+#: inc/customizer.php:851 inc/customizer.php:925 inc/customizer.php:950
+#: inc/customizer.php:967 inc/customizer.php:976
 #, php-format
 msgid "%s Site URL"
 msgstr "%s 站点 URL"
 
-#: inc/customizer.php:847 inc/customizer.php:1102
+#: inc/customizer.php:868 inc/customizer.php:1123
 #, php-format
 msgid "%s Link"
 msgstr "%s 链接"
 
-#: inc/customizer.php:964 inc/customizer.php:1004
+#: inc/customizer.php:985 inc/customizer.php:1025
 #, php-format
 msgid "%s User ID"
 msgstr "%s 用户ID"
 
-#: inc/customizer.php:1077
-#, php-format
-msgid "%s Group Name"
-msgstr "%s 组名"
-
-#: inc/customizer.php:1093
+#: inc/customizer.php:1114
 msgid "Email Address"
 msgstr "邮箱"
 
-#: inc/customizer.php:1111
+#: inc/customizer.php:1132
 msgid "RSS Feed"
 msgstr "RSS 订阅"
 
-#: inc/customizer.php:1125
+#: inc/customizer.php:1146
 msgid "Content Options"
 msgstr "内容设置"
 
-#: inc/customizer.php:1127
+#: inc/customizer.php:1148
 #, php-format
 msgctxt "(blog name)'s content."
 msgid "These options change the display of %s's content"
 msgstr "这些选择会改变 %s 的内容显示方式。"
 
-#: inc/customizer.php:1204
+#: inc/customizer.php:1225
 msgid "Load Latin Extended character set. This will increase page load times."
 msgstr "加载拉丁语扩展字符集，该设置会增加页面加载时间。"
 
-#: inc/customizer.php:1211
+#: inc/customizer.php:1232
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr "首页显示摘要而不是全文，除了置顶文章"
 
-#: inc/customizer.php:1218
+#: inc/customizer.php:1239
 msgid "Use entry excerpts on archive, category, and author pages."
 msgstr "在归档、分类和个人页上显示摘要"
 
-#: inc/customizer.php:1225
+#: inc/customizer.php:1246
 msgid "Display posts' featured images when excerpts are shown."
 msgstr "显示摘要时也展示文章特色图片"
 
-#: inc/customizer.php:1232
+#: inc/customizer.php:1253
 msgid "Display a post's featured image on its individual page."
 msgstr "在个人页展示文章的特色图片"
 
-#: inc/customizer.php:1239
+#: inc/customizer.php:1260
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr "在个人页显示标签"
 
-#: inc/customizer.php:1246
+#: inc/customizer.php:1267
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
 msgstr "在个人页显示分类"
 
-#: inc/customizer.php:1253
+#: inc/customizer.php:1274
 msgid "Show author's name, profile image, and bio after posts"
 msgstr "在文章后显示作者名字，个人资料图片"
 
-#: inc/customizer.php:1260
+#: inc/customizer.php:1281
 msgid "Entry Date Position"
 msgstr "发表时间位置"
 
-#: inc/customizer.php:1264
+#: inc/customizer.php:1285
 msgid "Above Header"
 msgstr "在页头上"
 
-#: inc/customizer.php:1265
+#: inc/customizer.php:1286
 msgid "Below Header"
 msgstr "在页头下"
 
-#: inc/customizer.php:1271
+#: inc/customizer.php:1292
 msgid "Show Page Headers"
 msgstr "显示页头"
 
-#: inc/customizer.php:1278
+#: inc/customizer.php:1299
 msgid "Show entry date for post excepts on the main page"
 msgstr "除了首页，显示文章的发表日期"
 
-#: inc/customizer.php:1285
+#: inc/customizer.php:1306
 msgid "Add an arrow before the title of a link post"
 msgstr "在文章标题链接前加一个箭头"
 
-#: inc/customizer.php:1292
+#: inc/customizer.php:1313
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
 msgstr "显示主题信息(在页面底部显示主题和他的作者)"
 
-#: inc/customizer.php:1301
+#: inc/customizer.php:1322
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr "页脚文本(可以是版权、捐献等)"
 
-#: inc/customizer.php:1315
+#: inc/customizer.php:1336
 msgid "Other Options"
 msgstr "其他选项"
 
-#: inc/customizer.php:1334
+#: inc/customizer.php:1337
+msgid ""
+"Custom CSS is longer recommended. This feature is no longer allowed in "
+"Decode. To continue using these tweaks, copy and paste your CSS into a "
+"custom CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</"
+"a>. Get help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
+msgstr ""
+
+#: inc/customizer.php:1357
 msgid "Custom CSS"
 msgstr "自定义CSS"
 
-#: inc/customizer.php:1345
+#: inc/customizer.php:1368
 msgid "Show the following post types on home blog page. (Separate with commas)"
 msgstr "在首页显示以下类型的文章(用逗号分隔)"
 
-#: inc/customizer.php:1384
+#: inc/customizer.php:1407
 msgid "Accent Color"
 msgstr "特殊颜色"
 
-#: inc/customizer.php:1385
+#: inc/customizer.php:1408
 msgid "The main color used for links, borders, buttons, and more."
 msgstr "用于链接、边框、按钮等位置的颜色。"
 
-#: inc/customizer.php:1392
+#: inc/customizer.php:1415
 msgid "Active Link Color"
 msgstr "已访问链接颜色"
 
-#: inc/customizer.php:1393
+#: inc/customizer.php:1416
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
 msgstr "用于当前已点击过的链接<br>(建议使用比特殊颜色深一些的颜色。)"
 
-#: inc/customizer.php:1400
+#: inc/customizer.php:1423
 msgid "Text Color"
 msgstr "文本颜色"
 
-#: inc/customizer.php:1401
+#: inc/customizer.php:1424
 msgid "The main text color."
 msgstr "主要文本颜色。"
 
-#: inc/customizer.php:1408
+#: inc/customizer.php:1431
 msgid "Secondary Text Color"
 msgstr "二级文字颜色"
 
-#: inc/customizer.php:1409
+#: inc/customizer.php:1432
 msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
 "用于二级文本的颜色，比如引用文字。<br>(建议使用比文本颜色深一些的颜色。)"
 
-#: inc/customizer.php:1416
+#: inc/customizer.php:1439
 msgid "Use accent color instead of text color for icons"
 msgstr "使用最近颜色取代标签文本颜色"
 
-#: inc/extras.php:104
-msgid "Category"
-msgstr "分类"
-
-#: inc/extras.php:107
-msgid "Tag"
-msgstr "标签"
-
-#: inc/extras.php:110
-msgid "Author"
-msgstr "作者"
-
-#: inc/extras.php:120 inc/extras.php:124
-msgid "Page "
+#: inc/extras.php:95
+#, fuzzy, php-format
+msgid "Page %s"
 msgstr "页面"
 
-#: inc/template-tags.php:40
-msgid "Posts navigation"
-msgstr "文章导航"
-
-#: inc/template-tags.php:44
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;较旧文章"
-
-#: inc/template-tags.php:48
-msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:73
-msgid "Post navigation"
-msgstr "文章导航"
-
-#: inc/template-tags.php:76
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: inc/template-tags.php:77
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:101
+#: inc/template-tags.php:42
 msgid "Website"
 msgstr "网站"
 
-#: inc/template-tags.php:190
+#: inc/template-tags.php:131
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "发布于 %s"
 
-#: inc/template-tags.php:195
+#: inc/template-tags.php:136
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "作者 %s"
+
+#: inc/template-tags.php:158
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:162
+#, fuzzy
+msgid "Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 前面的文章"
+
+#: inc/template-tags.php:166
+#, fuzzy
+msgid "Newer posts"
+msgstr "最近文章"
+
+#: inc/template-tags.php:189
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:214
+#, fuzzy, php-format
+msgid "Category: %s"
+msgstr "分类"
+
+#: inc/template-tags.php:216
+#, fuzzy, php-format
+msgid "Tag: %s"
+msgstr "日：%s"
+
+#: inc/template-tags.php:220
+#, php-format
+msgid "Year: %s"
+msgstr "年：%s"
+
+#: inc/template-tags.php:220
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/template-tags.php:222
+#, php-format
+msgid "Month: %s"
+msgstr "月：%s"
+
+#: inc/template-tags.php:222
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-tags.php:224
+#, php-format
+msgid "Day: %s"
+msgstr "日：%s"
+
+#: inc/template-tags.php:224
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:227
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "旁白"
+
+#: inc/template-tags.php:229
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "图像"
+
+#: inc/template-tags.php:231
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "图片"
+
+#: inc/template-tags.php:233
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "视频"
+
+#: inc/template-tags.php:235
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "引用"
+
+#: inc/template-tags.php:237
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "链接"
+
+#: inc/template-tags.php:239
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "状态"
+
+#: inc/template-tags.php:241
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "音频"
+
+#: inc/template-tags.php:243
+#, fuzzy
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "讨论"
+
+#: inc/template-tags.php:246
+#, fuzzy, php-format
+msgid "Archives: %s"
+msgstr "归档"
+
+#: inc/template-tags.php:250
+#, fuzzy, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+"发布 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
+"%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
+"\">%5$s</a>"
+
+#: inc/template-tags.php:252 page-explore.php:37 sidebar.php:41
+msgid "Archives"
+msgstr "归档"
 
 #: page-explore.php:11
 msgid "Explore Page"
@@ -664,6 +702,35 @@ msgstr "隐藏侧边栏"
 #: sidebar.php:26
 msgid "Navigation"
 msgstr "导航"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
+
+#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "%s Group Name"
+#~ msgstr "%s 组名"
+
+#~ msgid "Tag"
+#~ msgstr "标签"
+
+#~ msgid "Author"
+#~ msgstr "作者"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;较旧文章"
+
+#~ msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgctxt "Previous post link"
+#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+
+#~ msgctxt "Next post link"
+#~ msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #~ msgctxt "[noun] [translation string] (explanation)"
 #~ msgid "%1$s Username %2$s"

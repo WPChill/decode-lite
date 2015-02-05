@@ -1,0 +1,18 @@
+.entry-content {
+	.alignleft {
+		display: inline;
+		float: left;
+		margin-right: 2.5%;
+	}
+	.alignright {
+		display: inline;
+		float: right;
+		margin-left: 2.5%;
+	}
+	.aligncenter {
+		display: block;
+		clear: both;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

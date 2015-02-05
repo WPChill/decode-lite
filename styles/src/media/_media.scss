@@ -1,0 +1,54 @@
+/* Fluid images for posts, comments, and widgets */
+.site-branding img,
+.site-content img,
+.site-footer img,
+.sidebar img,
+img.size-full,
+.comment-content img,
+.widget img,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Make sure images with WordPress-added height and width attributes are scaled correctly */
+.entry-content img,
+img[class*='align'],
+img[class*='wp-image-'] {
+	height: auto;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	padding: 0;
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+3.1 - Captions
+--------------------------------------------------------------*/
+@import 'captions';
+
+/*--------------------------------------------------------------
+3.2 - Galleries
+--------------------------------------------------------------*/
+@import 'galleries';
+
+/*--------------------------------------------------------------
+3.3 - Alignment
+--------------------------------------------------------------*/
+@import 'alignment';

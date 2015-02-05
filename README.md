@@ -39,6 +39,7 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - Pinboard
 - Delicious
 - Instagram
+- VSCO Grid
 - 500px
 - Flickr
 - deviantART
@@ -71,11 +72,10 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - Playstation Network
 - Xbox Live
 - Steam
+- Twitch
 - Skype
 - Website
 - Email
-
-The Custom CSS feature allows you to change virtually anything about the style of your site. Refer to the "CustomCSS.md" file in the "docs" folder theme for common and helpful entries and experiment with creating your own to make Decode yours.
 
 To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory containes un-prefixed sass files that you may not want to work with.
 

@@ -25,7 +25,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 	
-	<?php decode_post_nav(); ?>
+	<?php the_post_navigation(); ?>
 
 </div><!-- #primary -->
 

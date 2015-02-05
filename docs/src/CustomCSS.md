@@ -1,5 +1,5 @@
 # Helpful Custom CSS entries
-*A collection of CSS snippets that anyone can use in Decode's Custom CSS feature in the Other Options section of the theme Customize menu.*
+*A collection of CSS snippets that anyone can use in Jetpack's Custom CSS feature. [Download Jetpack](http://jetpack.me/install/) | [Get Help](http://jetpack.me/support/custom-css/)*
 
 ### Change the size of the header image:
 `.site-logo { max-height: 8.5em; }`<br>
@@ -17,6 +17,9 @@ I suggest that you do not change this without using media queries because the so
 
 ### Change the color of the menu and menu close icons:
 `.menu-icon, .close-icon { fill: #00B0CC; }`
+
+### Change font family:
+`body, button, input, select, textarea { font-family: 'name-of-font-family'; }`
 
 ### Change the font size of posts and pages:
 `.entry-content { font-size: 1em; }`<br>

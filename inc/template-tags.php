@@ -9,7 +9,7 @@
  
 if ( ! function_exists( 'decode_srcset_post_thumbnail' ) ) :
 /**
- * Display navigation to next/previous set of posts when applicable.
+ * Filters post thumbnails/featured images to use src-set responive images spec.
  */
 function decode_srcset_post_thumbnail( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 	$full_image_url  = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
@@ -23,65 +23,6 @@ function decode_srcset_post_thumbnail( $html, $post_id, $post_thumbnail_id, $siz
 }
 endif;
 add_filter( 'post_thumbnail_html', 'decode_srcset_post_thumbnail', 10, 5 );
-
-if ( ! function_exists( 'decode_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
- * @return void
- */
-function decode_paging_nav() {
-        // Don't print empty markup if there's only one page.
-        if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-                return;
-        }
-        ?>
-        <nav class="navigation paging-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'decode' ); ?></h1>
-                <div class="nav-links">
-
-                        <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span>&nbsp;Older posts', 'decode' ) ); ?></div>
-                        <?php endif; ?>
-
-                        <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts&nbsp;<span class="meta-nav">&rarr;</span>', 'decode' ) ); ?></div>
-                        <?php endif; ?>
-
-                </div><!-- .nav-links -->
-        </nav><!-- .navigation -->
-        <?php
-}
-endif;
-
-if ( ! function_exists( 'decode_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @return void
- */
-function decode_post_nav() {
-        // Don't print empty markup if there's nowhere to navigate.
-        $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-        $next     = get_adjacent_post( false, '', false );
-
-        if ( ! $next && ! $previous ) {
-                return;
-        }
-        ?>
-        <nav class="navigation post-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h1>
-                <div class="nav-links">
-                	<?php
-						previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'decode' ) );
-						next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'decode' ) );
-					?>
-                </div><!-- .nav-links -->
-        </nav><!-- .navigation -->
-        <?php
-}
-endif;
-
 
 if ( ! function_exists( 'decode_author_section' ) ) :
 /**
@@ -201,6 +142,62 @@ function decode_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'the_posts_navigation' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ */
+function the_posts_navigation() {
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'decode' ); ?></h2>
+		<div class="nav-links">
+
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'decode' ) ); ?></div>
+			<?php endif; ?>
+
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'decode' ) ); ?></div>
+			<?php endif; ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+if ( ! function_exists( 'the_post_navigation' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ */
+function the_post_navigation() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'decode' ); ?></h2>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.
@@ -225,24 +222,26 @@ function the_archive_title( $before = '', $after = '' ) {
 		$title = sprintf( __( 'Month: %s', '_s' ), get_the_date( _x( 'F Y', 'monthly archives date format', '_s' ) ) );
 	} elseif ( is_day() ) {
 		$title = sprintf( __( 'Day: %s', '_s' ), get_the_date( _x( 'F j, Y', 'daily archives date format', '_s' ) ) );
-	} elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
-		$title = _x( 'Asides', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-		$title = _x( 'Galleries', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-		$title = _x( 'Images', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-		$title = _x( 'Videos', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-		$title = _x( 'Quotes', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-		$title = _x( 'Links', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-		$title = _x( 'Statuses', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-		$title = _x( 'Audio', 'post format archive title', '_s' );
-	} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-		$title = _x( 'Chats', 'post format archive title', '_s' );
+	} elseif ( is_tax( 'post_format' ) ) {
+		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
+			$title = _x( 'Asides', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+			$title = _x( 'Galleries', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+			$title = _x( 'Images', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+			$title = _x( 'Videos', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+			$title = _x( 'Quotes', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+			$title = _x( 'Links', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+			$title = _x( 'Statuses', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+			$title = _x( 'Audio', 'post format archive title', '_s' );
+		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+			$title = _x( 'Chats', 'post format archive title', '_s' );
+		}
 	} elseif ( is_post_type_archive() ) {
 		$title = sprintf( __( 'Archives: %s', '_s' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {

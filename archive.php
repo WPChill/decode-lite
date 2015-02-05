@@ -46,7 +46,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 	
-	<?php decode_paging_nav(); ?>
+	<?php the_posts_navigation(); ?>
 	
 </div><!-- #primary -->
 
