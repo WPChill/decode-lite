@@ -72,5 +72,6 @@ textarea {
 }
 
 input[type='search'] {
+	-webkit-appearance: none; /* Override Normalize.css. Allows styling on iOS. */
 	box-sizing: border-box; /* Override Normalize.css. */
 }
