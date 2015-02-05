@@ -1212,29 +1212,31 @@ li.comment {
 	margin-top: 2.5%;
 }
 
-.search .page-header input[type='search'] {
-	color: $text-color-secondary;
-	font-size: 1.25em;
-	border-top-color: transparent;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	border-radius: 0;
-	.no-touch &:hover {
-		border-color: $text-color-secondary;
-		border-radius: 3px;
+.search .page-header {
+	.search-field {
+		color: $text-color-secondary;
+		font-size: 1.25em;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-left-color: transparent;
+		border-radius: 0;
+		.no-touch &:hover {
+			border-color: $text-color-secondary;
+			border-radius: 3px;
+		}
+		.no-touch &:focus,
+		.touch &:focus {
+			border-color: $accent-color;
+			border-radius: 3px;
+		}
 	}
-	.no-touch &:focus,
-	.touch &:focus {
-		border-color: $accent-color;
-		border-radius: 3px;
+	
+	.search-submit {
+		font-size: 1.25em;
+		padding: 0 0.5em;
+		border-color: transparent;
 	}
-}
-
-.search .page-header .search-submit {
-	font-size: 1.25em;
-	padding: 0 0.5em;
-	border-color: transparent;
-}
+}	
 
 .search article {
 	margin-bottom: 10%;
