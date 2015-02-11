@@ -192,21 +192,21 @@ public static function decode_customize_register( $wp_customize ) {
 	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
-		'label'    => __( 'Show Site Title', 'decode' ),
+		'label'    => __( 'Display Site Title', 'decode' ),
 		'section'  => 'decode_header_options',
 		'type'     => 'checkbox',
 		'priority' => 2,
 	) );
 	
 	$wp_customize->add_control( 'show_site_description', array(
-		'label'    => __( 'Show Site Description', 'decode' ),
+		'label'    => __( 'Display Site Description', 'decode' ),
 		'section'  => 'decode_header_options',
 		'type'     => 'checkbox',
 		'priority' => 3,
 	) );
 	
 	$wp_customize->add_control( 'show_header_menu', array(
-		'label'    => __( 'Show Header Menu', 'decode' ),
+		'label'    => __( 'Display Header Menu', 'decode' ),
 		'section'  => 'decode_header_options',
 		'type'     => 'checkbox',
 		'priority' => 4,
