@@ -1340,9 +1340,9 @@ public static function decode_customize_register( $wp_customize ) {
     
     
     $wp_customize->add_setting( 'custom_css', array(
-		'default'           => '',
-		'capability'        => 'edit_themes',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'default'              => '',
+		'capability'           => 'edit_themes',
+		'sanitize_callback'    => 'wp_filter_nohtml_kses',
 		'sanitize_js_callback' => 'wp_filter_nohtml_kses',
 	) );
 	
