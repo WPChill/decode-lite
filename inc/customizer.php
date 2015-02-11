@@ -1342,7 +1342,8 @@ public static function decode_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'custom_css', array(
 		'default'           => '',
 		'capability'        => 'edit_themes',
-		'sanitize_callback' => 'decode_sanitize_string',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_js_callback' => 'wp_filter_nohtml_kses',
 	) );
 	
 	$wp_customize->add_setting( 'add_custom_post_types', array(
