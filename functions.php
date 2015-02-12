@@ -232,16 +232,6 @@ function decode_add_body_classes( $classes ) {
 add_filter( 'body_class', 'decode_add_body_classes' );
 
 /*
- * Add Google Profile to user contact methods.
- */
-function decode_add_google_profile( $contactmethods ) {
-	// Add Google Profiles
-	$contactmethods['google_profile'] = __( 'Google Profile URL', 'decode' );
-	return $contactmethods;
-}
-add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1 );
-
-/*
  * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.
  */
 if ( ! function_exists( 'decode_print_post_title' ) ) {
