@@ -70,9 +70,12 @@ function decode_admin_header_image() {
 
 <div class="decode-custom-header-preview site-branding">
 
-	<?php if ( get_header_image() != '' ) : ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%" alt="" />
+	<?php if (function_exists( 'jetpack_the_site_logo' ) ) :
+		jetpack_the_site_logo();
+	// If no Jetpack site logo exists, use Decode's logo, if avaliable.
+	elseif ( get_header_image() != '' ) : ?>
+		<a class="site-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="">
 		</a>
 	<?php endif; ?>
 	
