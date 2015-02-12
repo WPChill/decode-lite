@@ -77,7 +77,7 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - Website
 - Email
 
-To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory containes un-prefixed sass files that you may not want to work with.
+To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory contains un-prefixed sass files that you may not want to work with.
 
 If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body, button, input, select, textarea {font-family: 'name-of-font-family';}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 
