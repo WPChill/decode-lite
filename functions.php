@@ -5,7 +5,7 @@
  * @package Decode
  */
  
-/**
+/*
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -48,6 +48,20 @@ function decode_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 	
+	/** 
+	 * Register support for Jetpack Site Logo.
+	 *
+	 * @link http://jetpack.me/support/site-logo/
+	 */
+	$args = array(
+		'header-text' => array(
+			'site-title',
+			'site-description',
+		)
+	);
+	$args = apply_filters( 'decode_site_logo_args', $args );
+	add_theme_support( 'site-logo', $args );
+	
 	// Set up the WordPress core custom header feature.
 	$args = array(
 		'default-image'          => '',
@@ -82,16 +96,16 @@ function decode_setup() {
 	$args = apply_filters( 'decode_html5_args', $args );
 	add_theme_support( 'html5', $args );
 
-	/*
+	/**
      * Enable support for Post Thumbnails on posts and pages.
      *
      * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
 	add_theme_support( 'post-thumbnails' );
 	
-	/*
+	/**
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * @link http://codex.wordpress.org/Post_Formats
 	 */
 	$args = array(
 		'aside',
@@ -136,7 +150,7 @@ function decode_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
-/*
+/**
  * Register widgetized area and update sidebar with default widgets.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar

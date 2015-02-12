@@ -32,19 +32,19 @@
 	
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
 	
-	<?php function decode_create_sidebar_link() {
-		if ( get_theme_mod( 'show_sidebar', true ) == true ) : ?>
-		<button id="sidebar-link" class="sidebar-link SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php _e( 'Show sidebar', 'decode' )?>">
-			<svg width="100%" height="100%" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-				<g class="menu-icon" fill-rule="evenodd">
-					<path d="M0,160 L0,200 L240,200 L240,160 L0,160 Z M0,160"></path>
-					<path d="M0,80 L0,120 L240,120 L240,80 L0,80 Z M0,80"></path>
-					<path d="M0,0 L0,40 L240,40 L240,0 L0,0 Z M0,0"></path>
-				</g>
-			</svg>
-		</button>
-		<?php endif;
-	}?>
+		<?php function decode_create_sidebar_link() {
+			if ( get_theme_mod( 'show_sidebar', true ) == true ) : ?>
+			<button id="sidebar-link" class="sidebar-link SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php _e( 'Show sidebar', 'decode' )?>">
+				<svg width="100%" height="100%" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<g class="menu-icon" fill-rule="evenodd">
+						<path d="M0,160 L0,200 L240,200 L240,160 L0,160 Z M0,160"></path>
+						<path d="M0,80 L0,120 L240,120 L240,80 L0,80 Z M0,80"></path>
+						<path d="M0,0 L0,40 L240,40 L240,0 L0,0 Z M0,0"></path>
+					</g>
+				</svg>
+			</button>
+			<?php endif;
+		}?>
 	<?php add_action( 'tha_header_before', 'decode_create_sidebar_link' ); ?>
 	
 	<?php tha_header_before(); ?>
@@ -54,14 +54,18 @@
 		
 		<div class="site-branding">
 			
-			<?php function decode_create_header_image() {
-				if ( get_header_image() != '' ) : ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="">
-					</a>
-				<?php endif;
-			}
-			add_action( 'decode_header_image', 'decode_create_header_image' ); ?>
+				<?php function decode_create_header_image() {
+					// If Decode's site logo exists, give it preference over Jetpack's.
+					if ( get_header_image() != '' ) : ?>
+						<a class="site-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<img class="site-logo" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="">
+						</a>
+					<?php // If no Decode site logo exists, use Jetpack's logo, if avaliable.
+					elseif ( function_exists( 'jetpack_the_site_logo' ) ) :
+						jetpack_the_site_logo();
+					endif;
+				}
+				add_action( 'decode_header_image', 'decode_create_header_image' ); ?>
 			<?php decode_header_image(); ?>
 				
 			<?php if ( get_theme_mod( 'show_site_title', true ) == true ) : ?>			
