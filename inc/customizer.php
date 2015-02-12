@@ -133,6 +133,7 @@ public static function decode_customize_register( $wp_customize ) {
  */
 	remove_theme_mod( 'show_site_navigation' );
 	remove_theme_mod( 'show_social_icons' );
+	remove_theme_mod( 'enable_comments' );
 	remove_theme_mod( 'linkedin_username' );
 	remove_theme_mod( 'yelp_userid' );
 	remove_theme_mod( 'steam_user' );
@@ -140,6 +141,7 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'show_all_post_types' );
 	$wp_customize->remove_setting( 'show_site_navigation' );
 	$wp_customize->remove_setting( 'show_social_icons' );
+	$wp_customize->remove_setting( 'enable_comments' );
 	$wp_customize->remove_setting( 'yelp_userid' );
 	$wp_customize->remove_setting( 'steam_user' );
 	$wp_customize->remove_setting( 'steam_group' );
@@ -295,43 +297,6 @@ public static function decode_customize_register( $wp_customize ) {
 			'closing'        => _x( 'Closed by default', 'Sidebar option', 'decode' ),
         ),
         'priority'  => 4,
-	) );
-
-
-
-/**
- * Discussion Options
- */
-
-	$wp_customize->add_section( 'decode_discussion_options', array(
-    	'title'    => __( 'Discussion Options', 'decode' ),
-		'priority' => 34,
-    ) );
-
-
-	$wp_customize->add_setting( 'enable_comments', array(
-		'default'           => true,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-	) );
-	
-	$wp_customize->add_setting( 'show_allowed_tags', array(
-		'default'           => false,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-	) );
-
-
-	$wp_customize->add_control( 'enable_comments', array(
-		'label'    => __( 'Enable Comments', 'decode' ),
-		'section'  => 'decode_discussion_options',
-		'type'     => 'checkbox',
-		'priority' => 1,
-	) );
-	
-	$wp_customize->add_control( 'show_allowed_tags', array(
-		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
-		'section'  => 'decode_discussion_options',
-		'type'     => 'checkbox',
-		'priority' => 2,
 	) );
 
 
@@ -1199,6 +1164,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_boolean',
 	) );
 	
+	$wp_customize->add_setting( 'show_allowed_tags', array(
+		'default'           => false,
+		'sanitize_callback' => 'decode_sanitize_boolean',
+	) );
+	
 	$wp_customize->add_setting( 'show_page_headers', array(
 		'default'           => true,
 		'sanitize_callback' => 'decode_sanitize_boolean',
@@ -1288,32 +1258,39 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority' => 9,
 	) );
 	
-	$wp_customize->add_control( 'show_page_headers', array(
-		'label'    => __( 'Show Page Headers', 'decode' ),
+	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
+		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
 		'priority' => 10,
 	) );
 	
-	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
-		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
+	$wp_customize->add_control( 'show_allowed_tags', array(
+		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
 		'priority' => 11,
+	) );
+	
+	$wp_customize->add_control( 'show_page_headers', array(
+		'label'    => __( 'Show Page Headers', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 12,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 12,
+		'priority' => 13,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 13,
+		'priority' => 14,
 	) );
 	
 	$wp_customize->add_control(
@@ -1323,7 +1300,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'section'  => 'decode_content_options',
 			'settings' => 'site_colophon',
 			'type'     => 'textarea',
-			'priority' => 14,
+			'priority' => 15,
 	) ) );
 	
 	

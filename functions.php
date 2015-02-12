@@ -124,7 +124,7 @@ function decode_scripts() {
 	
 	wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/scripts/decode.js', array(), '3.0.6', true );
 	
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	

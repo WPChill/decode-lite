@@ -17,7 +17,6 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-	<?php if ( get_theme_mod( 'enable_comments', true ) == true ) : ?>
 
 	<?php tha_comments_before(); ?>
 <div id="comments" class="comments-area">
@@ -116,5 +115,3 @@ if ( post_password_required() ) {
 
 </div><!-- #comments -->
 	<?php tha_comments_after(); ?>
-
-<?php endif; ?>
