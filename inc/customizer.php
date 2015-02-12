@@ -1311,7 +1311,7 @@ public static function decode_customize_register( $wp_customize ) {
  
  	$wp_customize->add_section( 'decode_other_options', array(
     	'title'    => __( 'Other Options', 'decode' ),
-    	'description' => __( 'Custom CSS is longer recommended. This feature is no longer allowed in Decode. To continue using these tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
+    	'description' => __( 'Custom CSS is longer recommended. This feature may be removed in a future update. To continue using your tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
 		'priority' => 38,
     ) );
     
