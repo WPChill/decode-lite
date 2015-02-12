@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2015-02-04 21:44-0800\n"
-"PO-Revision-Date: 2015-02-04 21:45-0800\n"
+"POT-Creation-Date: 2015-02-11 19:04-0800\n"
+"PO-Revision-Date: 2015-02-11 19:04-0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "MIME-Version: 1.0\n"
@@ -472,51 +472,51 @@ msgid ""
 "a>. Get help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
 msgstr ""
 
-#: inc/customizer.php:1357
+#: inc/customizer.php:1358
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:1368
+#: inc/customizer.php:1369
 msgid "Show the following post types on home blog page. (Separate with commas)"
 msgstr ""
 
-#: inc/customizer.php:1407
+#: inc/customizer.php:1408
 msgid "Accent Color"
 msgstr ""
 
-#: inc/customizer.php:1408
+#: inc/customizer.php:1409
 msgid "The main color used for links, borders, buttons, and more."
 msgstr ""
 
-#: inc/customizer.php:1415
+#: inc/customizer.php:1416
 msgid "Active Link Color"
 msgstr ""
 
-#: inc/customizer.php:1416
+#: inc/customizer.php:1417
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
 msgstr ""
 
-#: inc/customizer.php:1423
+#: inc/customizer.php:1424
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer.php:1424
+#: inc/customizer.php:1425
 msgid "The main text color."
 msgstr ""
 
-#: inc/customizer.php:1431
+#: inc/customizer.php:1432
 msgid "Secondary Text Color"
 msgstr ""
 
-#: inc/customizer.php:1432
+#: inc/customizer.php:1433
 msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
 
-#: inc/customizer.php:1439
+#: inc/customizer.php:1440
 msgid "Use accent color instead of text color for icons"
 msgstr ""
 
