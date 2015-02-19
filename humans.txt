@@ -9,6 +9,9 @@
 	Email:               yhzhtk@gmail.com
 	URI:                 http://yhzhtk.info/
 	
+	Czech Translation: Christian Kopec
+	Email:             chkopec@yahoo.com
+	
 	Dutch Translation: Tom van den Kieboom
 	Email:             tvdkieboom@sharp-edge.nl
 	URI:               http://www.sharp-edge.nl

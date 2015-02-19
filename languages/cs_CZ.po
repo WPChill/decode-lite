@@ -1,0 +1,709 @@
+# Czech (cs_CZ) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# Christian Kopec <chkopec@yahoo.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode 3.0.6\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2015-02-11 19:04-0800\n"
+"PO-Revision-Date: 2015-02-15 02:22+0100\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: Christian Kopec <chkopec@yahoo.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: cs_CZ\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Stránka nebyla nalezena!"
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Vypadá to, že na tomto místě nebylo nic nalezeno. Možná zkuste použít "
+"vyhledávání."
+
+#: 404.php:26
+msgid "Try looking in the monthly archives."
+msgstr "Zkuste se podívat do archívu měsíce."
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr "Nejčastěji používané kategorie"
+
+#: author.php:26 inc/template-tags.php:218
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Jeden komentář k &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentáře k &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s komentářů k &ldquo;%2$s&rdquo;"
+
+#: comments.php:35 comments.php:55
+msgid "Comment navigation"
+msgstr "Přehled komentářů"
+
+#: comments.php:36 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: comments.php:37 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Komentáře zakázány."
+
+#: comments.php:72
+msgid "Leave a Reply"
+msgstr "Napiš odpověď"
+
+#: comments.php:73
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Napsat odpověď pro %s"
+
+#: comments.php:74
+msgid "Cancel reply"
+msgstr "Zrušit odpověď"
+
+#: comments.php:75
+msgid "Post Comment"
+msgstr "Odeslat"
+
+#: comments.php:94
+msgctxt "noun"
+msgid "Comment"
+msgstr "Komentář"
+
+#: comments.php:95
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Musíš se <a href=\"%s\">přihlásit</a> pro přidání komentáře."
+
+#: comments.php:96
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Přihlášen(a) jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"out of this account\">Odhlásit se?</a>"
+
+#: comments.php:97
+msgid "Your email address will not be published."
+msgstr "Tvoje emailová adresa nebude publikována."
+
+#: comments.php:98
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Můžeš použít tyto tagy a atributy jazyka <abbr title=\"HyperText Markup "
+"Language\">HTML</abbr>: %s"
+
+#: content-excerpt.php:33
+msgid "Read More&hellip;"
+msgstr "Více&hellip;"
+
+#: content-excerpt.php:35 content-link.php:38 content-page.php:32
+#: content-quote.php:25 content-search.php:20 content-single.php:22
+#: content-single.php:62 content-single.php:106 content.php:41 image.php:30
+msgid "Edit"
+msgstr "Editovat"
+
+#: content-link.php:29 content-quote.php:15 content-single.php:14
+#: content-single.php:56 content-single.php:98 content.php:29
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pokračovat ve čtení <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-link.php:31 content-page.php:28 content-quote.php:18
+#: content-single.php:17 content-single.php:101 content.php:32 image.php:91
+msgid "Pages:"
+msgstr "Strany:"
+
+#: content-link.php:35 content-quote.php:22 content.php:37
+msgid "Leave a comment"
+msgstr "Napsat komentář"
+
+#: content-link.php:35 content-quote.php:22 content.php:37
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: content-link.php:35 content-quote.php:22 content.php:37
+msgid "% Comments"
+msgstr "Komentářů: %"
+
+#: content-link.php:42 content-quote.php:29 content-single.php:25
+#: content-single.php:65 content-single.php:109 content.php:45
+msgid "Tagged as: "
+msgstr "Označen jako:"
+
+#: content-link.php:45 content-quote.php:32 content-single.php:26
+#: content-single.php:66 content-single.php:110 content.php:48
+msgid "Categorized in&#58; "
+msgstr "Kategorie: "
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nic nebylo nalezeno."
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Chceš napsat svůj první příspěvek? <a href=\"%1$s\">Začni zde</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Omlouvám se, ale nic neodpovídá zadaným heslům pro hledání. Zkus to prosím "
+"znovu s jinými hesly."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Vypadá to, že nelze nalézt to co hledáš. Zkus použít hledání."
+
+#: footer.php:44
+#, php-format
+msgid "%1$s by %2$s"
+msgstr "%1$s &mdash; %2$s"
+
+#: functions.php:33
+msgid "Header Menu"
+msgstr "Menu záhlaví"
+
+#: functions.php:34
+msgid "Sidebar Menu"
+msgstr "Menu bočního panelu"
+
+#: functions.php:35
+msgid "Footer Menu"
+msgstr "Menu zápatí"
+
+#: functions.php:148
+msgid "Sidebar"
+msgstr "Boční panel"
+
+#: functions.php:150
+msgctxt "sidebar description"
+msgid "Only displayed if sidebar remains enabled in the Customize menu."
+msgstr "Zobrazeno pouze pokud boční panel je povolen ve vlastních volbách."
+
+#: functions.php:239
+msgid "Google Profile URL"
+msgstr "URL pro Google profil"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Přeskoč do obsahu"
+
+#: header.php:37
+msgid "Show sidebar"
+msgstr "Zobrazit boční panel"
+
+#: image.php:22
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
+"\"gallery\">%5$s</a>"
+msgstr ""
+"Publikováno <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> v <a href=\"%3$s\" title=\"Zpět do %4$s\" rel="
+"\"gallery\">%5$s</a>"
+
+#: image.php:34
+msgid "Previous"
+msgstr "Předchozí"
+
+#: image.php:35
+msgid "Next"
+msgstr "Další"
+
+#: inc/customizer.php:153
+msgid "Header Options"
+msgstr "Volby záhlaví"
+
+#: inc/customizer.php:188
+msgid "Favicon Image (must be a PNG)"
+msgstr "Obrázek faviconu (musí být PNG)"
+
+#: inc/customizer.php:195
+msgid "Show Site Title"
+msgstr "Zobrazit název webu"
+
+#: inc/customizer.php:202
+msgid "Show Site Description"
+msgstr "Zobrazit popis webu"
+
+#: inc/customizer.php:209
+msgid "Show Header Menu"
+msgstr "Zobrazit menu záhlaví"
+
+#: inc/customizer.php:216
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr "HTML pro popis, pokud chcete zaměnit váš popis blogu za HTML značku"
+
+#: inc/customizer.php:230
+msgid "Sidebar Options"
+msgstr "Volby bočního panelu"
+
+#: inc/customizer.php:258
+msgid "Enable Sidebar"
+msgstr "Povolit boční panel"
+
+#: inc/customizer.php:265
+msgid "Sidebar Position"
+msgstr "Pozice bočního panelu"
+
+#: inc/customizer.php:270 inc/customizer.php:282
+msgid "Left"
+msgstr "Zleva"
+
+#: inc/customizer.php:271 inc/customizer.php:283
+msgid "Right"
+msgstr "Zprava"
+
+#: inc/customizer.php:277
+msgid "Sidebar Button Position"
+msgstr "Pozice tlačítka bočního panelu"
+
+#: inc/customizer.php:289
+msgid "Always Visible Sidebar"
+msgstr "Vždy viditelný boční panel"
+
+#: inc/customizer.php:294
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr "Vždy otevřený"
+
+#: inc/customizer.php:295
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr "Implicitně zavřený"
+
+#: inc/customizer.php:307
+msgid "Discussion Options"
+msgstr "Volby diskuze"
+
+#: inc/customizer.php:324
+msgid "Enable Comments"
+msgstr "Povolit komentáře"
+
+#: inc/customizer.php:331
+msgid "Show allowed HTML tags on comment form"
+msgstr "Zobrazit povolené HTML tagy na formuláři komentářů"
+
+#: inc/customizer.php:344
+msgid "Social Options"
+msgstr "Sociální volby"
+
+#: inc/customizer.php:650 inc/customizer.php:657
+msgid "Show Social Icons"
+msgstr "Zobrazit sociální ikony"
+
+#: inc/customizer.php:650
+msgid "in Header"
+msgstr "v záhlaví"
+
+#: inc/customizer.php:657
+msgid "in Footer"
+msgstr "v zápatí"
+
+#: inc/customizer.php:664
+msgid "Open Links in New Tab/Window"
+msgstr "Otevřít odkazy v nové záložce/okně"
+
+#: inc/customizer.php:672 inc/customizer.php:680 inc/customizer.php:688
+#: inc/customizer.php:697 inc/customizer.php:705 inc/customizer.php:713
+#: inc/customizer.php:722 inc/customizer.php:730 inc/customizer.php:738
+#: inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:771
+#: inc/customizer.php:779 inc/customizer.php:787 inc/customizer.php:795
+#: inc/customizer.php:803 inc/customizer.php:811 inc/customizer.php:819
+#: inc/customizer.php:827 inc/customizer.php:835 inc/customizer.php:843
+#: inc/customizer.php:860 inc/customizer.php:877 inc/customizer.php:885
+#: inc/customizer.php:893 inc/customizer.php:901 inc/customizer.php:909
+#: inc/customizer.php:917 inc/customizer.php:934 inc/customizer.php:942
+#: inc/customizer.php:959 inc/customizer.php:993 inc/customizer.php:1001
+#: inc/customizer.php:1009 inc/customizer.php:1017 inc/customizer.php:1033
+#: inc/customizer.php:1050 inc/customizer.php:1058 inc/customizer.php:1066
+#: inc/customizer.php:1074 inc/customizer.php:1082 inc/customizer.php:1106
+#, php-format
+msgid "%s Username"
+msgstr "%s uživatelské jméno"
+
+#: inc/customizer.php:689 inc/customizer.php:714
+msgid " (or the long number in your profile URL)"
+msgstr " (nebo dlouhé číslo v URL profilu)"
+
+#: inc/customizer.php:762 inc/customizer.php:1041 inc/customizer.php:1090
+#: inc/customizer.php:1098
+#, php-format
+msgid "%s Profile URL"
+msgstr "%s URL profilu"
+
+#: inc/customizer.php:851 inc/customizer.php:925 inc/customizer.php:950
+#: inc/customizer.php:967 inc/customizer.php:976
+#, php-format
+msgid "%s Site URL"
+msgstr "%s URL webu"
+
+#: inc/customizer.php:868 inc/customizer.php:1123
+#, php-format
+msgid "%s Link"
+msgstr "%s odkaz"
+
+#: inc/customizer.php:985 inc/customizer.php:1025
+#, php-format
+msgid "%s User ID"
+msgstr "%s ID uživatele"
+
+#: inc/customizer.php:1114
+msgid "Email Address"
+msgstr "Emailova adresa"
+
+#: inc/customizer.php:1132
+msgid "RSS Feed"
+msgstr "RSS vlákno"
+
+#: inc/customizer.php:1146
+msgid "Content Options"
+msgstr "Volby obsahu"
+
+#: inc/customizer.php:1148
+#, php-format
+msgctxt "(blog name)'s content."
+msgid "These options change the display of %s's content"
+msgstr "Tyto volby změní zobrazení webu %s"
+
+#: inc/customizer.php:1225
+msgid "Load Latin Extended character set. This will increase page load times."
+msgstr ""
+"Nahrát rozšířenou znakovou sadu Latin. Toto prodlouží nahrávání stránek."
+
+#: inc/customizer.php:1232
+msgid ""
+"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr ""
+"Použít zkrácený text záznamu místo celého textu na domovské stránce. "
+"Vylučuje sticky příspěvky."
+
+#: inc/customizer.php:1239
+msgid "Use entry excerpts on archive, category, and author pages."
+msgstr "Použít zkrácený text záznamu na stránkách archívu, kategorie a autora."
+
+#: inc/customizer.php:1246
+msgid "Display posts' featured images when excerpts are shown."
+msgstr "Zobrazit obrázek k příspěvku pokud je zobrazen zkrácený text."
+
+#: inc/customizer.php:1253
+msgid "Display a post's featured image on its individual page."
+msgstr "Zobrazit obrázek k příspěvku na vlastní stránce."
+
+#: inc/customizer.php:1260
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr ""
+"Zobrazit značky na přední straně (značky budou zobrazeny na vlastní stránce "
+"příspěvku)"
+
+#: inc/customizer.php:1267
+msgid ""
+"Show categories on front page (categories will be shown on post's individual "
+"page)"
+msgstr ""
+"Zobrazit kategorie na přední straně (kategorie budou zobrazeny na vlastní "
+"stránce příspěvku)"
+
+#: inc/customizer.php:1274
+msgid "Show author's name, profile image, and bio after posts"
+msgstr "Zobrazit jméno autora, profilový obrázek a bio pod příspěvkem"
+
+#: inc/customizer.php:1281
+msgid "Entry Date Position"
+msgstr "Pozice data záznamu"
+
+#: inc/customizer.php:1285
+msgid "Above Header"
+msgstr "Nad hlavičkou"
+
+#: inc/customizer.php:1286
+msgid "Below Header"
+msgstr "Pod hlavičkou"
+
+#: inc/customizer.php:1292
+msgid "Show Page Headers"
+msgstr "Zobrazit záhlaví stránky"
+
+#: inc/customizer.php:1299
+msgid "Show entry date for post excepts on the main page"
+msgstr "Zobrazí datum vložení příspěvku vyjma hlavní stránky"
+
+#: inc/customizer.php:1306
+msgid "Add an arrow before the title of a link post"
+msgstr "Přidat šipku před název odkazu příspěvku"
+
+#: inc/customizer.php:1313
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at "
+"the bottom of pages)"
+msgstr ""
+"Zobrazit informace o šabloně (zobrazí v zápatí stránek název šablony a "
+"autora)"
+
+#: inc/customizer.php:1322
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr "Text (tiráž, copyright, titulky, atd.) v zápatí stránky"
+
+#: inc/customizer.php:1336
+msgid "Other Options"
+msgstr "Další volby"
+
+#: inc/customizer.php:1337
+msgid ""
+"Custom CSS is longer recommended. This feature is no longer allowed in "
+"Decode. To continue using these tweaks, copy and paste your CSS into a "
+"custom CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</"
+"a>. Get help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
+msgstr ""
+"Vlastní CSS styly nejsou již delší dobu doporučovány. Tato vlastnost již "
+"není povolená v Decode. Pokud chcete i nadále používat tyto vylepšení, "
+"zkopírujte vaše CSS do custom CSS pluginu jako je <a href=\"http://jetpack."
+"me/install/\">Jetpack</a>. Nápověda je <a href=\"http://jetpack.me/support/"
+"custom-css/\">zde</a>."
+
+#: inc/customizer.php:1358
+msgid "Custom CSS"
+msgstr "Vlastní CSS"
+
+#: inc/customizer.php:1369
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr ""
+"Zobrazit tyto typy příspěvku na domovské stránce blogu (oddělujte čárkou)."
+
+#: inc/customizer.php:1408
+msgid "Accent Color"
+msgstr "Barva zvýraznění"
+
+#: inc/customizer.php:1409
+msgid "The main color used for links, borders, buttons, and more."
+msgstr "Hlavní barva používaná pro odkazy, okraje, tlačítka a jiné."
+
+#: inc/customizer.php:1416
+msgid "Active Link Color"
+msgstr "Barva aktivního odkazu"
+
+#: inc/customizer.php:1417
+msgid ""
+"The color for currently clicked links.<br>(Try using a darker color than the "
+"Accent Color.)"
+msgstr ""
+"Barva pro aktuálně zvolené odkazy.<br>(Použijte tmavší barvu než je barva "
+"zvýraznění.)"
+
+#: inc/customizer.php:1424
+msgid "Text Color"
+msgstr "Barva textu"
+
+#: inc/customizer.php:1425
+msgid "The main text color."
+msgstr "Barva hlavního textu"
+
+#: inc/customizer.php:1432
+msgid "Secondary Text Color"
+msgstr "Barva vedlejšího textu"
+
+#: inc/customizer.php:1433
+msgid ""
+"Text color used for text of secondary importance.<br>(Try using a lighter "
+"color than the main Text Color.)"
+msgstr ""
+"Barva textu vedlejšího významu.<br>(Použijte světlejší barvu než je hlavní "
+"barva textu.)"
+
+#: inc/customizer.php:1440
+msgid "Use accent color instead of text color for icons"
+msgstr "Použít barvu zvýraznění místo barvy textu pro ikony."
+
+#: inc/extras.php:95
+#, php-format
+msgid "Page %s"
+msgstr "Strana %s"
+
+#: inc/template-tags.php:42
+msgid "Website"
+msgstr "Webová stránka"
+
+#: inc/template-tags.php:131
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publikováno %s"
+
+#: inc/template-tags.php:136
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ", autor: %s"
+
+#: inc/template-tags.php:158
+msgid "Posts navigation"
+msgstr "Přehled příspěvků"
+
+#: inc/template-tags.php:162
+msgid "Older posts"
+msgstr "Starší příspěvky"
+
+#: inc/template-tags.php:166
+msgid "Newer posts"
+msgstr "Novější příspěvky"
+
+#: inc/template-tags.php:189
+msgid "Post navigation"
+msgstr "Přehled příspěvku"
+
+#: inc/template-tags.php:214
+#, php-format
+msgid "Category: %s"
+msgstr "Kategorie: %s"
+
+#: inc/template-tags.php:216
+#, php-format
+msgid "Tag: %s"
+msgstr "Značka: %s"
+
+#: inc/template-tags.php:220
+#, php-format
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: inc/template-tags.php:220
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/template-tags.php:222
+#, php-format
+msgid "Month: %s"
+msgstr "Měsíc: %s"
+
+#: inc/template-tags.php:222
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-tags.php:224
+#, php-format
+msgid "Day: %s"
+msgstr "Den: %s"
+
+#: inc/template-tags.php:224
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#: inc/template-tags.php:227
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Poznámky"
+
+#: inc/template-tags.php:229
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Galerie"
+
+#: inc/template-tags.php:231
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Obrázky"
+
+#: inc/template-tags.php:233
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Videa"
+
+#: inc/template-tags.php:235
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Citace"
+
+#: inc/template-tags.php:237
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Odkazy"
+
+#: inc/template-tags.php:239
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "Statusy"
+
+#: inc/template-tags.php:241
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "Audio"
+
+#: inc/template-tags.php:243
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "Chaty"
+
+#: inc/template-tags.php:246
+#, php-format
+msgid "Archives: %s"
+msgstr "Archívy: %s"
+
+#: inc/template-tags.php:250
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: inc/template-tags.php:252 page-explore.php:37 sidebar.php:41
+msgid "Archives"
+msgstr "Archívy"
+
+#: page-explore.php:11
+msgid "Explore Page"
+msgstr "Explore Page"
+
+#: page-explore.php:26
+msgid "Recent Posts"
+msgstr "Poslední příspěvky"
+
+#: page-explore.php:44
+msgid "Categories"
+msgstr "Kategorie"
+
+#: sidebar.php:11
+msgid "Hide sidebar"
+msgstr "Skrýt boční panel"
+
+#: sidebar.php:26
+msgid "Navigation"
+msgstr "Navigace"
