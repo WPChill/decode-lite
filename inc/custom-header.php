@@ -5,6 +5,7 @@
 
 /**
  * Setup the WordPress core custom header feature.
+ * @todo: Remove this file when WordPress 4.3 is released
  *
  * @uses decode_admin_header_style()
  * @uses decode_admin_header_image()
