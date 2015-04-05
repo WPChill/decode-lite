@@ -1366,12 +1366,12 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'text_color', array(
-		'default'           => '#4C4C4C',
+		'default'           => '#444444',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_setting( 'secondary_text_color', array(
-		'default'           => '#8C8C8C',
+		'default'           => '#808080',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	
