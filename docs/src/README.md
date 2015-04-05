@@ -6,7 +6,7 @@
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
+I built Decode to be a beautifully crafted, modern theme that puts mobile devices first. 
 
 If you want to change any of the colors in your theme, enable the sidebar, social links, and more, access the Customize menu in Admin > Appearance > Customize. From here you can access all the settings available for this theme. 
 
