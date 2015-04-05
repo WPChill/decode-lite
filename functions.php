@@ -87,6 +87,7 @@ function decode_setup() {
 	 * to output valid HTML5.
 	 */
 	$args = array(
+		'widgets',
 		'caption',
 		'comment-form',
 		'comment-list',
