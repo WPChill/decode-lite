@@ -700,11 +700,6 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	margin: 0 0 2.5%;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
 .entry-header {
 	text-align: center;
 	margin: 5% auto 3.5%;
@@ -812,6 +807,27 @@ a .attachment-post-thumbnail {
 
 .read-more {
 	color: $text-color;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page-link {
+	transition: border 0.25s ease;
+	text-align: center;
+	padding: 0 0.5em;
+	border: 1px solid $text-color;
+	border-radius: 3px;
+	
+	a & {
+	border: 1px solid $accent-color; // Override border color for page links within a tags.
+	}
+	
+	a &:active {
+		border-color: $accent-color-secondary;
+	}
 }
 
 .entry-footer {
