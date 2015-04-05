@@ -131,6 +131,7 @@ public static function decode_customize_register( $wp_customize ) {
  * Remove old, now unused theme modifications so that conflicts do not occur.
  * One of these work, sometimes. Hopefully this will clear old settings.
  */
+	remove_theme_mod( 'youtube_username' );
 	remove_theme_mod( 'show_site_navigation' );
 	remove_theme_mod( 'show_social_icons' );
 	remove_theme_mod( 'enable_comments' );
@@ -139,6 +140,7 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'steam_user' );
 	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
+	$wp_customize->remove_setting( 'youtube_username' );
 	$wp_customize->remove_setting( 'show_site_navigation' );
 	$wp_customize->remove_setting( 'show_social_icons' );
 	$wp_customize->remove_setting( 'enable_comments' );
@@ -474,8 +476,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
-
-	$wp_customize->add_setting( 'youtube_username', array(
+	
+	$wp_customize->add_setting( 'youtube_url', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
@@ -878,8 +880,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 33,
 	) );
 
-	$wp_customize->add_control( 'youtube_username', array(
-		'label'           => sprintf( __( '%s Username', 'decode' ), 'YouTube' ),
+	$wp_customize->add_control( 'youtube_url', array(
+		'label'           => sprintf( __( '%s Link', 'decode' ), 'YouTube' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
