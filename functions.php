@@ -48,8 +48,8 @@ function decode_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 	
-	/** 
-	 * Register support for Jetpack Site Logo.
+	/**
+	 * Add theme support for Jetpack Site Logo.
 	 *
 	 * @link http://jetpack.me/support/site-logo/
 	 */

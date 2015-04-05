@@ -8,7 +8,8 @@
 
 /**
  * Add theme support for Infinite Scroll.
- * See: http://jetpack.me/support/infinite-scroll/
+ *
+ * @link http://jetpack.me/support/infinite-scroll/
  */
 if ( ! function_exists( 'decode_render_infinte_scroll' ) ) {
 	
