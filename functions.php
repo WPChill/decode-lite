@@ -57,7 +57,8 @@ function decode_setup() {
 		'header-text' => array(
 			'site-title',
 			'site-description',
-		)
+		),
+		'size' => 'full'
 	);
 	$args = apply_filters( 'decode_site_logo_args', $args );
 	add_theme_support( 'site-logo', $args );
