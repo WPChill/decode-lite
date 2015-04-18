@@ -5,7 +5,7 @@
  * @package Decode
  */
  
-/**
+/*
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -48,6 +48,20 @@ function decode_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 	
+	/**
+	 * Add theme support for Jetpack Site Logo.
+	 *
+	 * @link http://jetpack.me/support/site-logo/
+	 */
+	$args = array(
+		'header-text' => array(
+			'site-title',
+			'site-description',
+		)
+	);
+	$args = apply_filters( 'decode_site_logo_args', $args );
+	add_theme_support( 'site-logo', $args );
+	
 	// Set up the WordPress core custom header feature.
 	$args = array(
 		'default-image'          => '',
@@ -55,8 +69,8 @@ function decode_setup() {
 		'height'                 => 300,
 		'flex-height'            => true,
 		'header-text'            => false,
-		'admin-head-callback'    => 'decode_admin_header_style',
-		'admin-preview-callback' => 'decode_admin_header_image',
+		'admin-head-callback'    => 'decode_admin_header_style', // @todo: Remove this function when WordPress 4.3 is released
+		'admin-preview-callback' => 'decode_admin_header_image', // @todo: Remove this function when WordPress 4.3 is released
 	); 
 	$args = apply_filters( 'decode_custom_header_args', $args );
 	add_theme_support( 'custom-header', $args );
@@ -73,6 +87,7 @@ function decode_setup() {
 	 * to output valid HTML5.
 	 */
 	$args = array(
+		'widgets',
 		'caption',
 		'comment-form',
 		'comment-list',
@@ -82,16 +97,16 @@ function decode_setup() {
 	$args = apply_filters( 'decode_html5_args', $args );
 	add_theme_support( 'html5', $args );
 
-	/*
+	/**
      * Enable support for Post Thumbnails on posts and pages.
      *
      * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
 	add_theme_support( 'post-thumbnails' );
 	
-	/*
+	/**
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * @link http://codex.wordpress.org/Post_Formats
 	 */
 	$args = array(
 		'aside',
@@ -113,7 +128,7 @@ if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 
 function decode_scripts() {
 
-	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '3.0.6' );
+	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '3.0.7' );
 	
 	if ( get_theme_mod( 'latin_extended_font', false ) == true ) {
 		wp_enqueue_style( 'decode-font-stylesheet', '//fonts.googleapis.com/css?family=Oxygen&subset=latin-ext' );
@@ -124,7 +139,7 @@ function decode_scripts() {
 	
 	wp_enqueue_script( 'decode-scripts', get_template_directory_uri() . '/scripts/decode.js', array(), '3.0.6', true );
 	
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && get_theme_mod( 'enable_comments', true ) == true ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
@@ -136,7 +151,7 @@ function decode_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 
-/*
+/**
  * Register widgetized area and update sidebar with default widgets.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -230,16 +245,6 @@ function decode_add_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'decode_add_body_classes' );
-
-/*
- * Add Google Profile to user contact methods.
- */
-function decode_add_google_profile( $contactmethods ) {
-	// Add Google Profiles
-	$contactmethods['google_profile'] = __( 'Google Profile URL', 'decode' );
-	return $contactmethods;
-}
-add_filter( 'user_contactmethods', 'decode_add_google_profile', 10, 1 );
 
 /*
  * Link post titles are turned into links to the link URL not the permalink for link blog-style behaviour.

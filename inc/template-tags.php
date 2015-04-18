@@ -41,9 +41,6 @@ function decode_author_section() {
 				if ( get_the_author_meta( 'user_url' ) ) {
 					echo '<div class="author-site url"><a href="' . get_the_author_meta( 'user_url' ) . '" rel="me">' . __( 'Website', 'decode' ) . '</a></div>';
 				}
-				if ( get_the_author_meta( 'google_profile' ) ) { 
-					echo '<a href="' . esc_url( get_the_author_meta( 'google_profile' ) . '?rel=author' ) . '" class="screen-reader-text"></a>';
-				}
 				?>
 				<div class="author-bio note"><?php echo get_the_author_meta( 'description' ); ?></div>
 			</div>

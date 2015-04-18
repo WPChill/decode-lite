@@ -131,15 +131,19 @@ public static function decode_customize_register( $wp_customize ) {
  * Remove old, now unused theme modifications so that conflicts do not occur.
  * One of these work, sometimes. Hopefully this will clear old settings.
  */
+	remove_theme_mod( 'youtube_username' );
 	remove_theme_mod( 'show_site_navigation' );
 	remove_theme_mod( 'show_social_icons' );
+	remove_theme_mod( 'enable_comments' );
 	remove_theme_mod( 'linkedin_username' );
 	remove_theme_mod( 'yelp_userid' );
 	remove_theme_mod( 'steam_user' );
 	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
+	$wp_customize->remove_setting( 'youtube_username' );
 	$wp_customize->remove_setting( 'show_site_navigation' );
 	$wp_customize->remove_setting( 'show_social_icons' );
+	$wp_customize->remove_setting( 'enable_comments' );
 	$wp_customize->remove_setting( 'yelp_userid' );
 	$wp_customize->remove_setting( 'steam_user' );
 	$wp_customize->remove_setting( 'steam_group' );
@@ -295,43 +299,6 @@ public static function decode_customize_register( $wp_customize ) {
 			'closing'        => _x( 'Closed by default', 'Sidebar option', 'decode' ),
         ),
         'priority'  => 4,
-	) );
-
-
-
-/**
- * Discussion Options
- */
-
-	$wp_customize->add_section( 'decode_discussion_options', array(
-    	'title'    => __( 'Discussion Options', 'decode' ),
-		'priority' => 34,
-    ) );
-
-
-	$wp_customize->add_setting( 'enable_comments', array(
-		'default'           => true,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-	) );
-	
-	$wp_customize->add_setting( 'show_allowed_tags', array(
-		'default'           => false,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-	) );
-
-
-	$wp_customize->add_control( 'enable_comments', array(
-		'label'    => __( 'Enable Comments', 'decode' ),
-		'section'  => 'decode_discussion_options',
-		'type'     => 'checkbox',
-		'priority' => 1,
-	) );
-	
-	$wp_customize->add_control( 'show_allowed_tags', array(
-		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
-		'section'  => 'decode_discussion_options',
-		'type'     => 'checkbox',
-		'priority' => 2,
 	) );
 
 
@@ -509,8 +476,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
-
-	$wp_customize->add_setting( 'youtube_username', array(
+	
+	$wp_customize->add_setting( 'youtube_url', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
@@ -913,8 +880,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 33,
 	) );
 
-	$wp_customize->add_control( 'youtube_username', array(
-		'label'           => sprintf( __( '%s Username', 'decode' ), 'YouTube' ),
+	$wp_customize->add_control( 'youtube_url', array(
+		'label'           => sprintf( __( '%s Link', 'decode' ), 'YouTube' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
@@ -1199,6 +1166,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_boolean',
 	) );
 	
+	$wp_customize->add_setting( 'show_allowed_tags', array(
+		'default'           => false,
+		'sanitize_callback' => 'decode_sanitize_boolean',
+	) );
+	
 	$wp_customize->add_setting( 'show_page_headers', array(
 		'default'           => true,
 		'sanitize_callback' => 'decode_sanitize_boolean',
@@ -1288,32 +1260,39 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority' => 9,
 	) );
 	
-	$wp_customize->add_control( 'show_page_headers', array(
-		'label'    => __( 'Show Page Headers', 'decode' ),
+	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
+		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
 		'priority' => 10,
 	) );
 	
-	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
-		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
+	$wp_customize->add_control( 'show_allowed_tags', array(
+		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
 		'priority' => 11,
+	) );
+	
+	$wp_customize->add_control( 'show_page_headers', array(
+		'label'    => __( 'Show Page Headers', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 12,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 12,
+		'priority' => 13,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 13,
+		'priority' => 14,
 	) );
 	
 	$wp_customize->add_control(
@@ -1323,7 +1302,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'section'  => 'decode_content_options',
 			'settings' => 'site_colophon',
 			'type'     => 'textarea',
-			'priority' => 14,
+			'priority' => 15,
 	) ) );
 	
 	
@@ -1334,15 +1313,16 @@ public static function decode_customize_register( $wp_customize ) {
  
  	$wp_customize->add_section( 'decode_other_options', array(
     	'title'    => __( 'Other Options', 'decode' ),
-    	'description' => __( 'Custom CSS is longer recommended. This feature is no longer allowed in Decode. To continue using these tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
+    	'description' => __( 'Custom CSS is longer recommended. This feature may be removed in a future update. To continue using your tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
 		'priority' => 38,
     ) );
     
     
     $wp_customize->add_setting( 'custom_css', array(
-		'default'           => '',
-		'capability'        => 'edit_themes',
-		'sanitize_callback' => 'decode_sanitize_string',
+		'default'              => '',
+		'capability'           => 'edit_themes',
+		'sanitize_callback'    => 'wp_filter_nohtml_kses',
+		'sanitize_js_callback' => 'wp_filter_nohtml_kses',
 	) );
 	
 	$wp_customize->add_setting( 'add_custom_post_types', array(
@@ -1388,12 +1368,12 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'text_color', array(
-		'default'           => '#4C4C4C',
+		'default'           => '#444444',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_setting( 'secondary_text_color', array(
-		'default'           => '#8C8C8C',
+		'default'           => '#808080',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	
@@ -1467,6 +1447,12 @@ public static function decode_customize_register( $wp_customize ) {
 			);
 			
 			self::generate_css( 
+				'.page-link',
+				'border-color',
+				'text_color'
+			);
+			
+			self::generate_css( 
 				'.menu ul > .menu-item-has-children > a::after, .menu ul > .page_item_has_children > a::after',
 				'border-top-color',
 				'text_color'
@@ -1500,7 +1486,7 @@ public static function decode_customize_register( $wp_customize ) {
 			);
 			
 			self::generate_css(
-				'.no-touch button:hover, .no-touch input[type=button]:hover, .no-touch input[type=reset]:hover, .no-touch input[type=submit]:hover, .no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .site-description a:hover, .no-touch .entry-content a:hover, .no-touch .categories a:hover, .no-touch .tags a:hover, .no-touch .comments-link a:hover, .no-touch .edit-link a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .entry-footer, .entry-header .entry-meta, .search .entry-footer, .sidebar-top, .sidebar-style-constant .sidebar.left, .sidebar-style-constant .sidebar.right, .explore-page .widget h1',
+				'.no-touch button:hover, .no-touch input[type=button]:hover, .no-touch input[type=reset]:hover, .no-touch input[type=submit]:hover, .no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .site-description a:hover, .no-touch .entry-content a:hover, a .page-link, .no-touch .categories a:hover, .no-touch .tags a:hover, .no-touch .comments-link a:hover, .no-touch .edit-link a:hover, .no-touch .author-site a:hover, .no-touch .theme-info a:hover, .no-touch .site-colophon a:hover, .site-header, .menu ul ul, .menu a:focus, .site-breadcrumbs, .page-title, .post blockquote, .page blockquote, .entry-footer, .entry-header .entry-meta, .search .entry-footer, .sidebar-top, .sidebar-style-constant .sidebar.left, .sidebar-style-constant .sidebar.right, .explore-page .widget h1',
 				'border-color',
 				'accent_color'
 			);
@@ -1524,7 +1510,7 @@ public static function decode_customize_register( $wp_customize ) {
 			);
 			
 			self::generate_css(
-				'.no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .site-description a:active, .no-touch .entry-content a:active, .no-touch .categories a:active, .no-touch .tags a:active, .no-touch .comments-link a:active, .no-touch .edit-link a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
+				'.no-touch button:focus, .touch button:focus, .no-touch button:active, .touch button:active, .no-touch input[type=button]:focus, .touch input[type=button]:focus, .no-touch input[type=button]:active, .touch input[type=button]:active, .no-touch input[type=reset]:focus, .touch input[type=reset]:focus, .no-touch input[type=reset]:active, .touch input[type=reset]:active, .no-touch input[type=submit]:focus, .touch input[type=submit]:focus, .no-touch input[type=submit]:active, .touch input[type=submit]:active, .no-touch .site-description a:active, .no-touch .entry-content a:active, a .page-link:active .no-touch .categories a:active, .no-touch .tags a:active, .no-touch .comments-link a:active, .no-touch .edit-link a:active, .no-touch .author-site a:active, .no-touch .theme-info a:active, .no-touch .site-colophon a:active',
 				'border-color',
 				'secondary_accent_color'
 			);

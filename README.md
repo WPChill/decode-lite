@@ -6,7 +6,7 @@
 
 Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
 
-I built Decode, the theme I use on [Beyond The Code](http://beyondtheco.de), to be a beautifully crafted, mobile first theme that uses media queries to bring in CSS for larger screens. 
+I built Decode to be a beautifully crafted, modern theme that puts mobile devices first. 
 
 If you want to change any of the colors in your theme, enable the sidebar, social links, and more, access the Customize menu in Admin > Appearance > Customize. From here you can access all the settings available for this theme. 
 
@@ -77,7 +77,7 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - Website
 - Email
 
-To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory containes un-prefixed sass files that you may not want to work with.
+To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory contains un-prefixed sass files that you may not want to work with.
 
 If you desire to add Typekit fonts to your blog, I recommend the [Typekit Fonts for WordPress plugin](http://wordpress.org/plugins/typekit-fonts-for-wordpress/). In the CSS field, add: `body, button, input, select, textarea {font-family: 'name-of-font-family';}` to override the default Decode font. This allows you more flexibility and ease when adding or changing fonts. 
 

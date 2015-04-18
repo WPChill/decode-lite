@@ -98,7 +98,12 @@
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'decode' ) ); ?>
 		</div>
 		
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'decode' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array(
+			'before'      => '<div class="page-links">' . __( 'Pages:', 'decode' ),
+			'after'       => '</div>',
+			'link_before' => '<span class="page-link">',
+			'link_after'  => '</span>',
+		) ); ?>
 		
 		<footer class="entry-footer">
 			<?php decode_author_section(); ?>

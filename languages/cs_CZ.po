@@ -1,105 +1,107 @@
-# LANGUAGE (LOCALE) translation for WordPress.
+# Czech (cs_CZ) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
-# Daihui Gu <yhzhtk@gmail.com>, 2014.
+# Christian Kopec <chkopec@yahoo.com>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Decode v2.9.1\n"
+"Project-Id-Version: Decode 3.0.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2015-04-04 19:59-0800\n"
-"PO-Revision-Date: 2015-04-04 20:00-0800\n"
+"PO-Revision-Date: 2015-04-04 20:01-0800\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
-"Language-Team: MO <mapleobserver@gmail.com>\n"
-"Language: zh_CN\n"
+"Language-Team: Christian Kopec <chkopec@yahoo.com>\n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.5\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
-"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"Description:\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "糟糕！该页面无法找到。"
+msgstr "Stránka nebyla nalezena!"
 
 #: 404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr "访问错误，请尝试下面的链接或搜索。"
+msgstr ""
+"Vypadá to, že na tomto místě nebylo nic nalezeno. Možná zkuste použít "
+"vyhledávání."
 
 #: 404.php:26
 msgid "Try looking in the monthly archives."
-msgstr "试试访问每月归档。"
+msgstr "Zkuste se podívat do archívu měsíce."
 
 #: 404.php:32
 msgid "Most Used Categories"
-msgstr "常用分类"
+msgstr "Nejčastěji používané kategorie"
 
 #: author.php:26 inc/template-tags.php:215
 #, php-format
 msgid "Author: %s"
-msgstr "作者: %s"
+msgstr "Autor: %s"
 
 #: comments.php:27
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "在 &ldquo;%2$s&rdquo; 上有一个观点"
-msgstr[1] "在 &ldquo;%2$s&rdquo; 上有%1$s个观点"
+msgstr[0] "Jeden komentář k &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentáře k &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s komentářů k &ldquo;%2$s&rdquo;"
 
 #: comments.php:34 comments.php:58
 msgid "Comment navigation"
-msgstr "评论导航"
+msgstr "Přehled komentářů"
 
 #: comments.php:37 comments.php:61
 #, fuzzy
 msgid "Older Comments"
-msgstr "&larr; 较早评论"
+msgstr "&larr; Starší komentáře"
 
 #: comments.php:38 comments.php:62
 #, fuzzy
 msgid "Newer Comments"
-msgstr "较新评论"
+msgstr "Novější komentáře &rarr;"
 
 #: comments.php:74
 msgid "Comments are closed."
-msgstr "评论已关闭"
+msgstr "Komentáře zakázány."
 
 #: comments.php:79
 msgid "Leave a Reply"
-msgstr "发表回复"
+msgstr "Napiš odpověď"
 
 #: comments.php:80
 #, php-format
 msgid "Leave a Reply to %s"
-msgstr "发表回复给 %s"
+msgstr "Napsat odpověď pro %s"
 
 #: comments.php:81
 msgid "Cancel reply"
-msgstr "取消回复"
+msgstr "Zrušit odpověď"
 
 #: comments.php:82
 msgid "Post Comment"
-msgstr "发送评论"
+msgstr "Odeslat"
 
 #: comments.php:101
 msgctxt "noun"
 msgid "Comment"
-msgstr "评论"
+msgstr "Komentář"
 
 #: comments.php:102
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "评论之前你必须 <a href=\"%s\">登录</a>"
+msgstr "Musíš se <a href=\"%s\">přihlásit</a> pro přidání komentáře."
 
 #: comments.php:103
 #, php-format
@@ -107,12 +109,12 @@ msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
-"已登录 <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
-"account\">退出?</a>"
+"Přihlášen(a) jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"out of this account\">Odhlásit se?</a>"
 
 #: comments.php:104
 msgid "Your email address will not be published."
-msgstr "你的邮件地址不会被公开"
+msgstr "Tvoje emailová adresa nebude publikována."
 
 #: comments.php:105
 #, php-format
@@ -120,106 +122,108 @@ msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
 "and attributes: %s"
 msgstr ""
-"你可以使用以下<abbr title=\"HyperText Markup Language\">HTML</abbr> 标签和属"
-"性: %s"
+"Můžeš použít tyto tagy a atributy jazyka <abbr title=\"HyperText Markup "
+"Language\">HTML</abbr>: %s"
 
 #: content-excerpt.php:33
 msgid "Read More&hellip;"
-msgstr "阅读更多&hellip;"
+msgstr "Více&hellip;"
 
 #: content-excerpt.php:35 content-link.php:38 content-page.php:32
 #: content-quote.php:25 content-search.php:20 content-single.php:22
 #: content-single.php:62 content-single.php:111 content.php:41 image.php:30
 msgid "Edit"
-msgstr "编辑"
+msgstr "Editovat"
 
 #: content-link.php:29 content-quote.php:15 content-single.php:14
 #: content-single.php:56 content-single.php:98 content.php:29
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "继续阅读 <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pokračovat ve čtení <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-link.php:31 content-page.php:28 content-quote.php:18
 #: content-single.php:17 content-single.php:102 content.php:32 image.php:91
 msgid "Pages:"
-msgstr "页面："
+msgstr "Strany:"
 
 #: content-link.php:35 content-quote.php:22 content.php:37
 msgid "Leave a comment"
-msgstr "发表评论"
+msgstr "Napsat komentář"
 
 #: content-link.php:35 content-quote.php:22 content.php:37
 msgid "1 Comment"
-msgstr "1 个评论"
+msgstr "1 komentář"
 
 #: content-link.php:35 content-quote.php:22 content.php:37
 msgid "% Comments"
-msgstr "% 个评论"
+msgstr "Komentářů: %"
 
 #: content-link.php:42 content-quote.php:29 content-single.php:25
 #: content-single.php:65 content-single.php:114 content.php:45
 msgid "Tagged as: "
-msgstr "标签："
+msgstr "Označen jako:"
 
 #: content-link.php:45 content-quote.php:32 content-single.php:26
 #: content-single.php:66 content-single.php:115 content.php:48
 msgid "Categorized in&#58; "
-msgstr "分类："
+msgstr "Kategorie: "
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr "未找到"
+msgstr "Nic nebylo nalezeno."
 
 #: content-none.php:19
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "准备发布你的第一个POST？<a href=\"%1$s\">点击开始</a>."
+msgstr "Chceš napsat svůj první příspěvek? <a href=\"%1$s\">Začni zde</a>."
 
 #: content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "抱歉，没找到搜索结果，请尝试其他关键字。"
+msgstr ""
+"Omlouvám se, ale nic neodpovídá zadaným heslům pro hledání. Zkus to prosím "
+"znovu s jinými hesly."
 
 #: content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "对不起，似乎不能找到你想要的内容，试试搜索吧"
+msgstr "Vypadá to, že nelze nalézt to co hledáš. Zkus použít hledání."
 
 #: footer.php:44
 #, php-format
 msgid "%1$s by %2$s"
-msgstr "%1$s &nbsp;主题由&nbsp;%2$s&nbsp;设计"
+msgstr "%1$s &mdash; %2$s"
 
 #: functions.php:33
 msgid "Header Menu"
-msgstr "页头菜单"
+msgstr "Menu záhlaví"
 
 #: functions.php:34
 msgid "Sidebar Menu"
-msgstr "侧边菜单"
+msgstr "Menu bočního panelu"
 
 #: functions.php:35
 msgid "Footer Menu"
-msgstr "页脚菜单"
+msgstr "Menu zápatí"
 
 #: functions.php:163
 msgid "Sidebar"
-msgstr "侧边栏"
+msgstr "Boční panel"
 
 #: functions.php:165
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
-msgstr "仅当侧边栏在自定义菜单中开启时显示"
+msgstr "Zobrazeno pouze pokud boční panel je povolen ve vlastních volbách."
 
 #: header.php:33
 msgid "Skip to content"
-msgstr "跳到内容"
+msgstr "Přeskoč do obsahu"
 
 #: header.php:37
 msgid "Show sidebar"
-msgstr "显示侧边栏"
+msgstr "Zobrazit boční panel"
 
 #: image.php:22
 #, php-format
@@ -228,103 +232,101 @@ msgid ""
 "\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
 "\"gallery\">%5$s</a>"
 msgstr ""
-"发布 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
-"%2$s</time></span> 在 <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
-"\">%5$s</a>"
+"Publikováno <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> v <a href=\"%3$s\" title=\"Zpět do %4$s\" rel="
+"\"gallery\">%5$s</a>"
 
 #: image.php:34
-#, fuzzy
 msgid "Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
+msgstr "Předchozí"
 
 #: image.php:35
-#, fuzzy
 msgid "Next"
-msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Další"
 
 #: inc/customizer.php:157
 msgid "Header Options"
-msgstr "页首设置"
+msgstr "Volby záhlaví"
 
 #: inc/customizer.php:192
 msgid "Favicon Image (must be a PNG)"
-msgstr "网站图标(必须是PNG)"
+msgstr "Obrázek faviconu (musí být PNG)"
 
 #: inc/customizer.php:199
 msgid "Show Site Title"
-msgstr "显示站点标题"
+msgstr "Zobrazit název webu"
 
 #: inc/customizer.php:206
 msgid "Show Site Description"
-msgstr "显示站点描述"
+msgstr "Zobrazit popis webu"
 
 #: inc/customizer.php:213
 msgid "Show Header Menu"
-msgstr "首先头部菜单"
+msgstr "Zobrazit menu záhlaví"
 
 #: inc/customizer.php:220
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
-msgstr "介绍的HTML，如果你想用HTML替换你的博客介绍"
+msgstr "HTML pro popis, pokud chcete zaměnit váš popis blogu za HTML značku"
 
 #: inc/customizer.php:234
 msgid "Sidebar Options"
-msgstr "边栏设置"
+msgstr "Volby bočního panelu"
 
 #: inc/customizer.php:262
 msgid "Enable Sidebar"
-msgstr "使用边栏"
+msgstr "Povolit boční panel"
 
 #: inc/customizer.php:269
 msgid "Sidebar Position"
-msgstr "边栏位置"
+msgstr "Pozice bočního panelu"
 
 #: inc/customizer.php:274 inc/customizer.php:286
 msgid "Left"
-msgstr "靠左"
+msgstr "Zleva"
 
 #: inc/customizer.php:275 inc/customizer.php:287
 msgid "Right"
-msgstr "靠右"
+msgstr "Zprava"
 
 #: inc/customizer.php:281
 msgid "Sidebar Button Position"
-msgstr "边栏按钮位置"
+msgstr "Pozice tlačítka bočního panelu"
 
 #: inc/customizer.php:293
 msgid "Always Visible Sidebar"
-msgstr "边栏始终可见"
+msgstr "Vždy viditelný boční panel"
 
 #: inc/customizer.php:298
 msgctxt "Sidebar option"
 msgid "Always open"
-msgstr "总是打开 [边栏选项]"
+msgstr "Vždy otevřený"
 
 #: inc/customizer.php:299
 msgctxt "Sidebar option"
 msgid "Closed by default"
-msgstr "默认关闭 [边栏选项]"
+msgstr "Implicitně zavřený"
 
 #: inc/customizer.php:311
 msgid "Social Options"
-msgstr "社交设置"
+msgstr "Sociální volby"
 
 #: inc/customizer.php:617 inc/customizer.php:624
 msgid "Show Social Icons"
-msgstr "显示社交图标"
+msgstr "Zobrazit sociální ikony"
 
 #: inc/customizer.php:617
 msgid "in Header"
-msgstr "在页首"
+msgstr "v záhlaví"
 
 #: inc/customizer.php:624
 msgid "in Footer"
-msgstr "在页脚"
+msgstr "v zápatí"
 
 #: inc/customizer.php:631
 msgid "Open Links in New Tab/Window"
-msgstr "在新标签中打开链接"
+msgstr "Otevřít odkazy v nové záložce/okně"
 
 #: inc/customizer.php:639 inc/customizer.php:647 inc/customizer.php:655
 #: inc/customizer.php:664 inc/customizer.php:672 inc/customizer.php:680
@@ -342,239 +344,256 @@ msgstr "在新标签中打开链接"
 #: inc/customizer.php:1049 inc/customizer.php:1073
 #, php-format
 msgid "%s Username"
-msgstr "%s 用户名"
+msgstr "%s uživatelské jméno"
 
 #: inc/customizer.php:656 inc/customizer.php:681
 msgid " (or the long number in your profile URL)"
-msgstr "或你个人资料页的长号码"
+msgstr " (nebo dlouhé číslo v URL profilu)"
 
 #: inc/customizer.php:729 inc/customizer.php:1008 inc/customizer.php:1057
 #: inc/customizer.php:1065
 #, php-format
 msgid "%s Profile URL"
-msgstr "%s 资料 URL"
+msgstr "%s URL profilu"
 
 #: inc/customizer.php:818 inc/customizer.php:892 inc/customizer.php:917
 #: inc/customizer.php:934 inc/customizer.php:943
 #, php-format
 msgid "%s Site URL"
-msgstr "%s 站点 URL"
+msgstr "%s URL webu"
 
 #: inc/customizer.php:835 inc/customizer.php:884 inc/customizer.php:1090
 #, php-format
 msgid "%s Link"
-msgstr "%s 链接"
+msgstr "%s odkaz"
 
 #: inc/customizer.php:952 inc/customizer.php:992
 #, php-format
 msgid "%s User ID"
-msgstr "%s 用户ID"
+msgstr "%s ID uživatele"
 
 #: inc/customizer.php:1081
 msgid "Email Address"
-msgstr "邮箱"
+msgstr "Emailova adresa"
 
 #: inc/customizer.php:1099
 msgid "RSS Feed"
-msgstr "RSS 订阅"
+msgstr "RSS vlákno"
 
 #: inc/customizer.php:1113
 msgid "Content Options"
-msgstr "内容设置"
+msgstr "Volby obsahu"
 
 #: inc/customizer.php:1115
 #, php-format
 msgctxt "(blog name)'s content."
 msgid "These options change the display of %s's content"
-msgstr "这些选择会改变 %s 的内容显示方式。"
+msgstr "Tyto volby změní zobrazení webu %s"
 
 #: inc/customizer.php:1197
 msgid "Load Latin Extended character set. This will increase page load times."
-msgstr "加载拉丁语扩展字符集，该设置会增加页面加载时间。"
+msgstr ""
+"Nahrát rozšířenou znakovou sadu Latin. Toto prodlouží nahrávání stránek."
 
 #: inc/customizer.php:1204
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
-msgstr "首页显示摘要而不是全文，除了置顶文章"
+msgstr ""
+"Použít zkrácený text záznamu místo celého textu na domovské stránce. "
+"Vylučuje sticky příspěvky."
 
 #: inc/customizer.php:1211
 msgid "Use entry excerpts on archive, category, and author pages."
-msgstr "在归档、分类和个人页上显示摘要"
+msgstr "Použít zkrácený text záznamu na stránkách archívu, kategorie a autora."
 
 #: inc/customizer.php:1218
 msgid "Display posts' featured images when excerpts are shown."
-msgstr "显示摘要时也展示文章特色图片"
+msgstr "Zobrazit obrázek k příspěvku pokud je zobrazen zkrácený text."
 
 #: inc/customizer.php:1225
 msgid "Display a post's featured image on its individual page."
-msgstr "在个人页展示文章的特色图片"
+msgstr "Zobrazit obrázek k příspěvku na vlastní stránce."
 
 #: inc/customizer.php:1232
 msgid "Show tags on front page (tags will be shown on post's individual page)"
-msgstr "在个人页显示标签"
+msgstr ""
+"Zobrazit značky na přední straně (značky budou zobrazeny na vlastní stránce "
+"příspěvku)"
 
 #: inc/customizer.php:1239
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
-msgstr "在个人页显示分类"
+msgstr ""
+"Zobrazit kategorie na přední straně (kategorie budou zobrazeny na vlastní "
+"stránce příspěvku)"
 
 #: inc/customizer.php:1246
 msgid "Show author's name, profile image, and bio after posts"
-msgstr "在文章后显示作者名字，个人资料图片"
+msgstr "Zobrazit jméno autora, profilový obrázek a bio pod příspěvkem"
 
 #: inc/customizer.php:1253
 msgid "Entry Date Position"
-msgstr "发表时间位置"
+msgstr "Pozice data záznamu"
 
 #: inc/customizer.php:1257
 msgid "Above Header"
-msgstr "在页头上"
+msgstr "Nad hlavičkou"
 
 #: inc/customizer.php:1258
 msgid "Below Header"
-msgstr "在页头下"
+msgstr "Pod hlavičkou"
 
 #: inc/customizer.php:1264
 msgid "Show entry date for post excepts on the main page"
-msgstr "除了首页，显示文章的发表日期"
+msgstr "Zobrazí datum vložení příspěvku vyjma hlavní stránky"
 
 #: inc/customizer.php:1271
 msgid "Show allowed HTML tags on comment form"
-msgstr "显示允许评论中允许的html标签"
+msgstr "Zobrazit povolené HTML tagy na formuláři komentářů"
 
 #: inc/customizer.php:1278
 msgid "Show Page Headers"
-msgstr "显示页头"
+msgstr "Zobrazit záhlaví stránky"
 
 #: inc/customizer.php:1285
 msgid "Add an arrow before the title of a link post"
-msgstr "在文章标题链接前加一个箭头"
+msgstr "Přidat šipku před název odkazu příspěvku"
 
 #: inc/customizer.php:1292
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
-msgstr "显示主题信息(在页面底部显示主题和他的作者)"
+msgstr ""
+"Zobrazit informace o šabloně (zobrazí v zápatí stránek název šablony a "
+"autora)"
 
 #: inc/customizer.php:1301
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
-msgstr "页脚文本(可以是版权、捐献等)"
+msgstr "Text (tiráž, copyright, titulky, atd.) v zápatí stránky"
 
 #: inc/customizer.php:1315
 msgid "Other Options"
-msgstr "其他选项"
+msgstr "Další volby"
 
 #: inc/customizer.php:1316
+#, fuzzy
 msgid ""
 "Custom CSS is longer recommended. This feature may be removed in a future "
 "update. To continue using your tweaks, copy and paste your CSS into a custom "
 "CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</a>. Get "
 "help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
 msgstr ""
+"Vlastní CSS styly nejsou již delší dobu doporučovány. Tato vlastnost již "
+"není povolená v Decode. Pokud chcete i nadále používat tyto vylepšení, "
+"zkopírujte vaše CSS do custom CSS pluginu jako je <a href=\"http://jetpack."
+"me/install/\">Jetpack</a>. Nápověda je <a href=\"http://jetpack.me/support/"
+"custom-css/\">zde</a>."
 
 #: inc/customizer.php:1337
 msgid "Custom CSS"
-msgstr "自定义CSS"
+msgstr "Vlastní CSS"
 
 #: inc/customizer.php:1348
 msgid "Show the following post types on home blog page. (Separate with commas)"
-msgstr "在首页显示以下类型的文章(用逗号分隔)"
+msgstr ""
+"Zobrazit tyto typy příspěvku na domovské stránce blogu (oddělujte čárkou)."
 
 #: inc/customizer.php:1387
 msgid "Accent Color"
-msgstr "特殊颜色"
+msgstr "Barva zvýraznění"
 
 #: inc/customizer.php:1388
 msgid "The main color used for links, borders, buttons, and more."
-msgstr "用于链接、边框、按钮等位置的颜色。"
+msgstr "Hlavní barva používaná pro odkazy, okraje, tlačítka a jiné."
 
 #: inc/customizer.php:1395
 msgid "Active Link Color"
-msgstr "已访问链接颜色"
+msgstr "Barva aktivního odkazu"
 
 #: inc/customizer.php:1396
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
-msgstr "用于当前已点击过的链接<br>(建议使用比特殊颜色深一些的颜色。)"
+msgstr ""
+"Barva pro aktuálně zvolené odkazy.<br>(Použijte tmavší barvu než je barva "
+"zvýraznění.)"
 
 #: inc/customizer.php:1403
 msgid "Text Color"
-msgstr "文本颜色"
+msgstr "Barva textu"
 
 #: inc/customizer.php:1404
 msgid "The main text color."
-msgstr "主要文本颜色。"
+msgstr "Barva hlavního textu"
 
 #: inc/customizer.php:1411
 msgid "Secondary Text Color"
-msgstr "二级文字颜色"
+msgstr "Barva vedlejšího textu"
 
 #: inc/customizer.php:1412
 msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
-"用于二级文本的颜色，比如引用文字。<br>(建议使用比文本颜色深一些的颜色。)"
+"Barva textu vedlejšího významu.<br>(Použijte světlejší barvu než je hlavní "
+"barva textu.)"
 
 #: inc/customizer.php:1419
 msgid "Use accent color instead of text color for icons"
-msgstr "使用最近颜色取代标签文本颜色"
+msgstr "Použít barvu zvýraznění místo barvy textu pro ikony."
 
 #: inc/extras.php:95
-#, fuzzy, php-format
+#, php-format
 msgid "Page %s"
-msgstr "页面"
+msgstr "Strana %s"
 
 #: inc/template-tags.php:42
 msgid "Website"
-msgstr "网站"
+msgstr "Webová stránka"
 
 #: inc/template-tags.php:128
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr "发布于 %s"
+msgstr "Publikováno %s"
 
 #: inc/template-tags.php:133
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr "作者 %s"
+msgstr ", autor: %s"
 
 #: inc/template-tags.php:155
 msgid "Posts navigation"
-msgstr "文章导航"
+msgstr "Přehled příspěvků"
 
 #: inc/template-tags.php:159
-#, fuzzy
 msgid "Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 前面的文章"
+msgstr "Starší příspěvky"
 
 #: inc/template-tags.php:163
-#, fuzzy
 msgid "Newer posts"
-msgstr "最近文章"
+msgstr "Novější příspěvky"
 
 #: inc/template-tags.php:186
 msgid "Post navigation"
-msgstr "文章导航"
+msgstr "Přehled příspěvku"
 
 #: inc/template-tags.php:211
-#, fuzzy, php-format
+#, php-format
 msgid "Category: %s"
-msgstr "分类"
+msgstr "Kategorie: %s"
 
 #: inc/template-tags.php:213
-#, fuzzy, php-format
+#, php-format
 msgid "Tag: %s"
-msgstr "日：%s"
+msgstr "Značka: %s"
 
 #: inc/template-tags.php:217
 #, php-format
 msgid "Year: %s"
-msgstr "年：%s"
+msgstr "Rok: %s"
 
 #: inc/template-tags.php:217
 msgctxt "yearly archives date format"
@@ -584,7 +603,7 @@ msgstr "Y"
 #: inc/template-tags.php:219
 #, php-format
 msgid "Month: %s"
-msgstr "月：%s"
+msgstr "Měsíc: %s"
 
 #: inc/template-tags.php:219
 msgctxt "monthly archives date format"
@@ -594,153 +613,97 @@ msgstr "F Y"
 #: inc/template-tags.php:221
 #, php-format
 msgid "Day: %s"
-msgstr "日：%s"
+msgstr "Den: %s"
 
 #: inc/template-tags.php:221
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr ""
+msgstr "F j, Y"
 
 #: inc/template-tags.php:224
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr "旁白"
+msgstr "Poznámky"
 
 #: inc/template-tags.php:226
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Galleries"
-msgstr "图像"
+msgstr "Galerie"
 
 #: inc/template-tags.php:228
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Images"
-msgstr "图片"
+msgstr "Obrázky"
 
 #: inc/template-tags.php:230
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Videos"
-msgstr "视频"
+msgstr "Videa"
 
 #: inc/template-tags.php:232
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Quotes"
-msgstr "引用"
+msgstr "Citace"
 
 #: inc/template-tags.php:234
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Links"
-msgstr "链接"
+msgstr "Odkazy"
 
 #: inc/template-tags.php:236
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Statuses"
-msgstr "状态"
+msgstr "Statusy"
 
 #: inc/template-tags.php:238
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Audio"
-msgstr "音频"
+msgstr "Audio"
 
 #: inc/template-tags.php:240
-#, fuzzy
 msgctxt "post format archive title"
 msgid "Chats"
-msgstr "讨论"
+msgstr "Chaty"
 
 #: inc/template-tags.php:243
-#, fuzzy, php-format
+#, php-format
 msgid "Archives: %s"
-msgstr "归档"
+msgstr "Archívy: %s"
 
 #: inc/template-tags.php:247
-#, fuzzy, php-format
+#, php-format
 msgid "%1$s: %2$s"
-msgstr ""
-"发布 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
-"%2$s</time></span> 在 <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery"
-"\">%5$s</a>"
+msgstr "%1$s: %2$s"
 
 #: inc/template-tags.php:249 page-explore.php:37 sidebar.php:41
 msgid "Archives"
-msgstr "归档"
+msgstr "Archívy"
 
 #: page-explore.php:11
 msgid "Explore Page"
-msgstr "浏览页"
+msgstr "Explore Page"
 
 #: page-explore.php:26
 msgid "Recent Posts"
-msgstr "最近文章"
+msgstr "Poslední příspěvky"
 
 #: page-explore.php:44
 msgid "Categories"
-msgstr "分类"
+msgstr "Kategorie"
 
 #: sidebar.php:11
 msgid "Hide sidebar"
-msgstr "隐藏侧边栏"
+msgstr "Skrýt boční panel"
 
 #: sidebar.php:26
 msgid "Navigation"
-msgstr "导航"
+msgstr "Navigace"
 
-#, fuzzy
 #~ msgid "Google Profile URL"
-#~ msgstr "%s 资料 URL"
+#~ msgstr "URL pro Google profil"
 
 #~ msgid "Discussion Options"
-#~ msgstr "评论设置"
+#~ msgstr "Volby diskuze"
 
 #~ msgid "Enable Comments"
-#~ msgstr "开启评论"
-
-#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-#~ msgstr "<span class=\"meta-nav\">&larr;</span> 上一个"
-
-#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "下一个 <span class=\"meta-nav\">&rarr;</span>"
-
-#~ msgid "%s Group Name"
-#~ msgstr "%s 组名"
-
-#~ msgid "Tag"
-#~ msgstr "标签"
-
-#~ msgid "Author"
-#~ msgstr "作者"
-
-#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;Older posts"
-#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;较旧文章"
-
-#~ msgid "Newer posts&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "较近文章&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#~ msgctxt "Previous post link"
-#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#~ msgctxt "Next post link"
-#~ msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#~ msgctxt "[noun] [translation string] (explanation)"
-#~ msgid "%1$s Username %2$s"
-#~ msgstr "%1$s 用户名  %2$s"
-
-#~ msgid ""
-#~ "<span class=\"posted-on-text\">Posted on </span><span class=\"posted-on-"
-#~ "date\">%1$s</span><span class=\"byline\"> by %2$s</span>"
-#~ msgstr ""
-#~ "<span class=\"posted-on-text\">发表于 </span><span class=\"posted-on-date"
-#~ "\">%1$s</span><span class=\"byline\"> by %2$s</span>"
-
-#~ msgid "View all posts by %s"
-#~ msgstr "查看 %s 的所有文章"
+#~ msgstr "Povolit komentáře"
