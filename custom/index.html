@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Decode Custom CSS Snippets</title>
+	<meta charset="UTF-8">
+	
+	<style>
+		body {
+			background: #E3E5E7;
+			color: #444444;
+			margin: 0;
+			font: normal 300 100% sans-serif; }
+		
+		::selection {
+			background: rgba(0, 155, 205, 0.25); }
+		
+		::-moz-selection {
+			background: rgba(0, 155, 205, 0.25); }
+		
+		a {
+			-webkit-transition: color 0.35s ease-out;
+			-moz-transition: color 0.35s ease-out;
+			transition: color 0.35s ease-out;
+			text-decoration: none;
+			color: #009BCD; }
+		
+		a:hover {
+			color: #007EA6; }
+		
+		a:active {
+			color: #444444; }
+		
+		img {
+			border: none; }
+		
+		ul {
+			margin: 0;
+			padding: 0; }
+		
+		header p {
+			text-align: justify; }
+		
+		main {
+			margin: 0 auto 5%;;
+			width: 70%; }
+		
+		main img {
+			max-width: 100%;
+			box-shadow: 0 0 5px rgba(0,0,0,0.35); }
+						
+		main p {
+			padding-bottom: 1.5%;
+			border-bottom: 1px solid #009BCD;
+			margin-bottom: 5%; }
+			
+		main code {
+			background: #d3d3d3;
+			padding: 0.3em;
+			border-radius: 3px;
+			margin-bottom: 1em;
+			display: inline-block;; }
+		
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+	
+		<h1 id="helpful-custom-css-entries">Helpful Custom CSS entries</h1>
+<p><em>A collection of CSS snippets that anyone can use in Jetpack&#39;s Custom CSS feature. <a href="http://jetpack.me/install/">Download Jetpack</a> | <a href="http://jetpack.me/support/custom-css/">Get Help</a></em></p>
+<h3 id="change-the-size-of-the-header-image-">Change the size of the header image:</h3>
+<p><code>.site-logo { max-height: 8.5em; }</code><br>
+8.5ems is the default. Raise or lower this amount to what suits you.</p>
+<h3 id="fit-background-image-to-page-width-">Fit background image to page width:</h3>
+<p><code>body.custom-background { background-size: cover; }</code></p>
+<h3 id="change-the-size-of-the-social-icons-">Change the size of the social icons:</h3>
+<p><code>.sociallink svg { height: 2.5em; width: 2.5em; }</code><br>
+I suggest that you do not change this without using media queries because the social icons are responsively sized.</p>
+<h3 id="change-the-color-of-the-social-icons-">Change the color of the social icons:</h3>
+<p><code>.social-icon-fill { fill: #00B0CC; }</code></p>
+<h3 id="change-the-color-of-the-menu-and-menu-close-icons-">Change the color of the menu and menu close icons:</h3>
+<p><code>.menu-icon, .close-icon { fill: #00B0CC; }</code></p>
+<h3 id="change-font-family-">Change font family:</h3>
+<p><code>body, button, input, select, textarea { font-family: &#39;name-of-font-family&#39;; }</code></p>
+<h3 id="change-the-font-size-of-posts-and-pages-">Change the font size of posts and pages:</h3>
+<p><code>.entry-content { font-size: 1em; }</code><br>
+1em is the default.</p>
+<h3 id="change-the-maximum-width-of-the-main-content-area-">Change the maximum width of the main content area:</h3>
+<p><code>.site-main, .site-footer { max-width: 45em; }</code><br>
+45em is the default. It is recommended that the footer be the same width as the main content area.</p>
+<h3 id="change-the-maximum-width-of-the-header-">Change the maximum width of the header:</h3>
+<p><code>.site-header { max-width: 60em; }</code><br>
+60em is the default.</p>
+<h3 id="increase-size-of-comment-box-by-default-">Increase size of comment box by default:</h3>
+<p><code>textarea#comment { height: 4em; }</code><br>
+7em is the default.</p>
+<h3 id="make-the-sidebar-pop-closed-when-the-page-loads">Make the sidebar pop closed when the page loads</h3>
+<p><code>.sidebar.left {
+    animation: pop-closed 0.75s 0.75s;
+}</code></p>
+<h3 id="prevent-current-menu-item-from-shaking-on-hover-">Prevent current menu item from shaking on hover:</h3>
+<p><code>.menu .current-menu-item &gt; a:hover,
+.menu .current_page_item &gt; a:hover {
+    -webkit-animation: none;
+    animation: none;
+}</code></p>
+<h3 id="remove-the-border-between-the-header-and-the-main-section-of-the-site-">Remove the border between the header and the main section of the site:</h3>
+<p><code>.site-header { border-bottom: none; }</code></p>
+<h3 id="remove-the-the-border-from-below-posts-">Remove the the border from below posts:</h3>
+<p><code>.post .entry-meta { border-bottom: none; }</code></p>
+<h3 id="remove-the-the-border-under-hovered-links-in-an-entry-">Remove the the border under hovered links in an entry:</h3>
+<p><code>.no-touch .entry-content a:hover { border-bottom: none; }</code></p>
+<h3 id="hide-page-titles-on-archive-pages-">Hide Page Titles on archive pages:</h3>
+<p><code>.archive .page-header { display: none; }</code></p>
+<h3 id="hide-page-titles-on-category-pages-">Hide Page Titles on category pages:</h3>
+<p><code>.category.page-header { display: none; }</code></p>
+<h3 id="hide-page-titles-on-specific-category-pages-">Hide Page Titles on specific category pages:</h3>
+<p><code>.category-NAMEOFCATEGORY .page-header { display: none; }</code></p>
+
+		
+	<main>
+
+</body>
+</html>
