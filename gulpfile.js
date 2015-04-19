@@ -1,11 +1,12 @@
-var gulp         = require('gulp'),
-	merge        = require('merge-stream'),
-	csscomb      = require('gulp-csscomb'),
-	sass         = require('gulp-sass'),
-	postcss      = require('gulp-postcss'),
-	concat       = require('gulp-concat'),
-	uglify       = require('gulp-uglify'),
-	sourcemaps   = require('gulp-sourcemaps');
+var gulp       = require('gulp'),
+	merge      = require('merge-stream'),
+	csscomb    = require('gulp-csscomb'),
+	sass       = require('gulp-sass'),
+	postcss    = require('gulp-postcss'),
+	concat     = require('gulp-concat'),
+	uglify     = require('gulp-uglify'),
+	modernizr  = require('gulp-modernizr');
+	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
 	styles:           ['styles/src/*.scss', '!styles/src/_*.scss'],
@@ -29,7 +30,14 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('styles/'));
 });
 
-gulp.task('scripts', function() {
+gulp.task('copy', ['styles'], function() {
+	gulp.src('styles/style.css')
+		.pipe(sourcemaps.init({loadMaps: true}))
+		.pipe(sourcemaps.write('styles/srcmaps/'))
+		.pipe(gulp.dest('./'));
+});
+
+gulp.task('scripts', ['modernizr'], function() {
 	var decodeScript = gulp.src(paths.decodeScript)
 		.pipe(sourcemaps.init())
 			.pipe(concat('decode.js'))
@@ -47,6 +55,15 @@ gulp.task('scripts', function() {
 	return merge(decodeScript, customizerScript);
 });
 
+gulp.task('modernizr', function() {
+	gulp.src('scripts/*.js').pipe(modernizr({
+		options: ['mq', 'html5printshiv'],
+		tests: ['csstransforms', 'flexbox', 'inlinesvg', 'touchevents'],
+		crawl: false,
+	}))
+	.pipe(gulp.dest('scripts/src/'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['styles']);
 	gulp.watch([paths.decodeScript, paths.customizerScript], ['scripts']);
@@ -54,7 +71,7 @@ gulp.task('watch', function() {
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-gulp.task('default', ['styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'copy', 'scripts', 'watch']);
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-gulp.task('build', ['styles', 'scripts']);
+gulp.task('build', ['styles', 'copy', 'scripts']);
