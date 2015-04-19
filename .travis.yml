@@ -50,8 +50,8 @@ matrix:
 install:
   - npm install
   - npm install # Do it again because it goes wrong often enough to make builds error.
-  - npm install -g grunt-cli
-  - grunt build
+  - npm install -g gulp
+  - gulp build
 
 # Use this to prepare the system to install prerequisites or dependencies.
 # e.g. sudo apt-get update.
