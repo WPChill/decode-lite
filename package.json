@@ -8,17 +8,18 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-csscomb": "^3.0.0",
-    "grunt-markdown": "^0.7.0",
-    "grunt-modernizr": "^0.6.0",
-    "grunt-sass": "^0.18.1"
+    "autoprefixer-core": "^5.1.10",
+    "css-mqpacker": "^3.1.0",
+    "csswring": "^3.0.3",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-postcss": "^5.1.1",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "merge-stream": "^0.1.7",
+    "postcss-import": "^5.2.1"
   },
   "dependencies": {
     "fastclick": "^1.0.6",

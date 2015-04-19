@@ -1,16 +1,16 @@
-
 config.codekit
-
 node_modules/
 
 # Built Files
 style.css
 editor-style.css
+
 styles/*.css
-styles/*.map
+styles/**/*.map
 styles/src/.sass-cache/
-styles/src/reset/_normalize.scss
+
 scripts/*.js
-scripts/srcmaps/
+scripts/**/*.map
 scripts/src/modernizr.js
+
 docs/*.html
