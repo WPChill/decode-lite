@@ -1,4 +1,8 @@
-# Helpful Custom CSS entries
+---
+title: Helpful Custom CSS entries
+template: custom-css.hbs
+---
+
 *A collection of CSS snippets that anyone can use in Jetpack's Custom CSS feature. [Download Jetpack](http://jetpack.me/install/) | [Get Help](http://jetpack.me/support/custom-css/)*
 
 ### Change the size of the header image:
@@ -66,4 +70,3 @@ I suggest that you do not change this without using media queries because the so
 
 ### Hide Page Titles on specific category pages:
 `.category-NAMEOFCATEGORY .page-header { display: none; }`
-

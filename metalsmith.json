@@ -1,0 +1,15 @@
+{
+	"source": "src",
+	"clean": false,
+	"destination": "build",
+	"metadata": {
+		"title": "Decode Docs",
+		"description": "Documentation for the Decode theme for WordPress and Ghost."
+	},
+	"plugins": {
+		"metalsmith-markdown": {},
+		"metalsmith-templates": {
+			"engine": "handlebars"
+		}
+	}
+}

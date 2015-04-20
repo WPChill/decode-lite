@@ -1,4 +1,8 @@
-# Decode 3.0
+---
+title: Welcome to Decode
+template: main.hbs
+---
+
 [![GitHub Release](http://img.shields.io/github/release/ScottSmith95/Decode.svg?style=flat)](https://github.com/ScottSmith95/Decode/releases/latest)
 [![Built with Grunt](http://img.shields.io/badge/built_with-GRUNT-orange.svg?style=flat)](http://gruntjs.com/)
 [![devDependency Status](http://img.shields.io/david/dev/ScottSmith95/Decode.svg?style=flat)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
