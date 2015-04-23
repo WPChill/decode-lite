@@ -101,13 +101,13 @@ function decode_setup() {
 	/**
      * Enable support for Post Thumbnails on posts and pages.
      *
-     * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+     * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
 	add_theme_support( 'post-thumbnails' );
 	
 	/**
 	 * Enable support for Post Formats.
-	 * @link http://codex.wordpress.org/Post_Formats
+	 * @link https://codex.wordpress.org/Post_Formats
 	 */
 	$args = array(
 		'aside',
@@ -155,7 +155,7 @@ add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
 if ( ! function_exists( 'decode_widgets_init' ) ) {
 
