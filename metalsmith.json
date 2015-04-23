@@ -1,7 +1,7 @@
 {
-	"source": "src",
+	"source": "./src",
+	"destination": "./",
 	"clean": false,
-	"destination": "build",
 	"metadata": {
 		"title": "Decode Docs",
 		"description": "Documentation for the Decode theme for WordPress and Ghost."

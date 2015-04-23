@@ -7,7 +7,7 @@ Metalsmith(__dirname)
 	.clean(false)
 	.use(markdown())
 	.use(templates('handlebars'))
-	.destination('./build')
+	.destination('./')
 	.build(function(err){
 		if (err) throw err;
 	});
