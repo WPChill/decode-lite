@@ -30,11 +30,11 @@
 
 <div id="page" class="hfeed site">
 	
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'decode' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'decode' ); ?></a>
 	
 		<?php function decode_create_sidebar_link() {
 			if ( get_theme_mod( 'show_sidebar', true ) == true ) : ?>
-			<button id="sidebar-link" class="sidebar-link SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php _e( 'Show sidebar', 'decode' )?>">
+			<button id="sidebar-link" class="sidebar-link SidebarLink <?php echo get_theme_mod( 'sidebar_button_position', 'left' );?>" title="<?php esc_attr_e( 'Show sidebar', 'decode' )?>">
 				<svg width="100%" height="100%" viewBox="0 0 240 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<g class="menu-icon" fill-rule="evenodd">
 						<path d="M0,160 L0,200 L240,200 L240,160 L0,160 Z M0,160"></path>

@@ -30,7 +30,7 @@
 	</div><!-- .entry-summary -->
 	
 	<footer class="entry-footer">
-		<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php _e( 'Read More&hellip;', 'decode' ); ?></a>
+		<a class="read-more-link" href="<?php echo get_permalink(); ?>"><?php esc_html_e( 'Read More&hellip;', 'decode' ); ?></a>
 		
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>
 		

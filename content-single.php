@@ -23,7 +23,7 @@
 			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
-				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
+				<p class="categories"><?php esc_html_e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
 				<p class="date"><?php decode_posted_on(); ?></p>
 			</div>
 		</footer><!-- .entry-footer -->
@@ -63,7 +63,7 @@
 			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
-				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
+				<p class="categories"><?php esc_html_e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
 				<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
 					<p class="date"><?php decode_posted_on(); ?></p>
 				<?php endif; ?>
@@ -112,7 +112,7 @@
 			
 			<div class="entry-meta">
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
-				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
+				<p class="categories"><?php esc_html_e( 'Categorized in&#58; ', 'decode' ) . the_category( ', ' ); ?></p>
 				<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'below' ) : ?>
 					<p class="date"><?php decode_posted_on(); ?></p>
 				<?php endif; ?>
