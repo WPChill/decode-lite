@@ -21,6 +21,7 @@ gulp.task('styles', function() {
 		require('postcss-import')({path: ['node_modules']}),
 		require('csswring')
     ];
+    
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
 			.pipe(csscomb())
@@ -57,9 +58,11 @@ gulp.task('scripts', ['modernizr'], function() {
 
 gulp.task('modernizr', function() {
 	gulp.src('scripts/*.js').pipe(modernizr({
+		cache:   true,
+		dest:    'scripts/src/modernizr.js',
 		options: ['mq', 'html5printshiv'],
-		tests: ['csstransforms', 'flexbox', 'inlinesvg', 'touchevents'],
-		crawl: false,
+		tests:   ['csstransforms', 'flexbox', 'inlinesvg', 'touchevents'],
+		crawl:   false
 	}))
 	.pipe(gulp.dest('scripts/src/'));
 });
