@@ -47,7 +47,7 @@ matrix:
     fast_finish: true
 
 before_install:
- - sudo npm install -g npm # Update npm to latest version.
+ - npm install -g npm # Update npm to latest version.
 
 # Install devDependencies and build files with Grunt.
 install:
