@@ -45,7 +45,7 @@ add_filter( 'attachment_link', 'decode_enhanced_image_navigation', 10, 2 );
  * Highlight search terms in search results.
  */
 function decode_highlight_search_results( $text ) {
-    if ( is_search() ) {
+    if ( is_search() && ! is_admin() ) {
     	$sr = get_search_query();
 		$keys = implode( '|', explode( ' ', get_search_query() ) );
 		if ($keys != '') { // Check for empty search, and don't modify text if empty
