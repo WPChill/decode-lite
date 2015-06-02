@@ -57,7 +57,7 @@ gulp.task('scripts', ['modernizr'], function() {
 });
 
 gulp.task('modernizr', function() {
-	gulp.src('scripts/*.js').pipe(modernizr({
+	gulp.src('scripts/src/*.js').pipe(modernizr({
 		cache:   true,
 		dest:    'scripts/src/modernizr.js',
 		options: ['mq', 'html5printshiv'],
