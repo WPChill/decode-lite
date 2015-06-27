@@ -60,7 +60,7 @@ gulp.task('modernizr', function() {
 	gulp.src('scripts/src/*.js').pipe(modernizr({
 		cache:   true,
 		dest:    'scripts/src/modernizr.js',
-		options: ['mq', 'html5printshiv'],
+		options: ['setClasses', 'mq', 'html5printshiv'],
 		tests:   ['csstransforms', 'flexbox', 'inlinesvg', 'touchevents'],
 		crawl:   false
 	}))
