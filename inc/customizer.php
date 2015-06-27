@@ -730,7 +730,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 15,
 	) );
 
@@ -819,7 +819,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 26,
 	) );
 	
@@ -836,7 +836,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 28,
 	) );
 
@@ -893,7 +893,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 35,
 	) );
 	
@@ -918,7 +918,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 38,
 	) );
 	
@@ -944,7 +944,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 41,
 	) );
 
@@ -1082,7 +1082,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'email', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'email', /* Uncomment for WP >= 4.4 */
 		'priority'        => 58,
 	) );
 	
@@ -1091,7 +1091,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		//'type'            => 'url', /* Uncomment for WP >= 4.4 */
+		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
 		'priority'        => 59,
 	) );
 	
@@ -1312,7 +1312,7 @@ public static function decode_customize_register( $wp_customize ) {
  */
  
  	$wp_customize->add_section( 'decode_other_options', array(
-    	'title'    => __( 'Other Options', 'decode' ),
+    	'title'       => __( 'Other Options', 'decode' ),
     	'description' => __( 'Custom CSS is longer recommended. This feature may be removed in a future update. To continue using your tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
 		'priority' => 38,
     ) );
