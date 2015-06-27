@@ -23,7 +23,7 @@ get_header(); ?>
 		<div class="post-lists">
 			
 			<div id="recent_posts" class="widget recent-posts">
-				<h1 class="widget-title"><?php _e( 'Recent Posts', 'decode' ); ?></h1>
+				<h1 class="widget-title"><?php esc_html_e( 'Recent Posts', 'decode' ); ?></h1>
 				<ul>
 					<?php $recent_posts = wp_get_archives( array(
 						'type' => 'postbypost',
@@ -34,14 +34,14 @@ get_header(); ?>
 			</div>
 		
 			<div id="archives" class="widget archives">
-				<h1 class="widget-title"><?php _e( 'Archives', 'decode' ); ?></h1>
+				<h1 class="widget-title"><?php esc_html_e( 'Archives', 'decode' ); ?></h1>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</div>
 			
 			<div id="categories" class="widget categories">
-				<h1 class="widget-title"><?php _e( 'Categories', 'decode' ); ?></h1>
+				<h1 class="widget-title"><?php esc_html_e( 'Categories', 'decode' ); ?></h1>
 				<ul>
 					<?php wp_list_categories( array(
 						'title_li' => '',

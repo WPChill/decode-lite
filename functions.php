@@ -5,13 +5,6 @@
  * @package Decode
  */
  
-/*
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'decode_setup' ) ) :
 /*
  * Sets up theme defaults and registers support for various WordPress features.
@@ -57,7 +50,8 @@ function decode_setup() {
 		'header-text' => array(
 			'site-title',
 			'site-description',
-		)
+		),
+		'size' => 'full'
 	);
 	$args = apply_filters( 'decode_site_logo_args', $args );
 	add_theme_support( 'site-logo', $args );
@@ -100,13 +94,13 @@ function decode_setup() {
 	/**
      * Enable support for Post Thumbnails on posts and pages.
      *
-     * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+     * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
 	add_theme_support( 'post-thumbnails' );
 	
 	/**
 	 * Enable support for Post Formats.
-	 * @link http://codex.wordpress.org/Post_Formats
+	 * @link https://codex.wordpress.org/Post_Formats
 	 */
 	$args = array(
 		'aside',
@@ -120,6 +114,18 @@ function decode_setup() {
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function decode_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'decode_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'decode_content_width', 0 );
 
 /*
  * Register styles and scripts.
@@ -154,7 +160,7 @@ add_action( 'wp_enqueue_scripts', 'decode_scripts' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
 if ( ! function_exists( 'decode_widgets_init' ) ) {
 

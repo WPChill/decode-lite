@@ -28,12 +28,12 @@ env:
     - WP_VERSION=master WP_MULTISITE=1
     # WordPress 4.1
     # @link https://github.com/WordPress/WordPress/tree/4.1-branch
-    - WP_VERSION=4.1 WP_MULTISITE=0
-    - WP_VERSION=4.1 WP_MULTISITE=1
+    - WP_VERSION=4.2 WP_MULTISITE=0
+    - WP_VERSION=4.2 WP_MULTISITE=1
     # WordPress 4.0
     # @link https://github.com/WordPress/WordPress/tree/4.0-branch
-    - WP_VERSION=4.0 WP_MULTISITE=0
-    - WP_VERSION=4.0 WP_MULTISITE=1
+    - WP_VERSION=4.1 WP_MULTISITE=0
+    - WP_VERSION=4.1 WP_MULTISITE=1
 
 # Declare 5.6 beta in test matrix.
 # @link https://buddypress.trac.wordpress.org/ticket/5620
@@ -46,12 +46,15 @@ matrix:
         - php: 5.6
     fast_finish: true
 
+before_install:
+ - npm install -g npm # Update npm to latest version.
+
 # Install devDependencies and build files with Grunt.
 install:
   - npm install
   - npm install # Do it again because it goes wrong often enough to make builds error.
-  - npm install -g grunt-cli
-  - grunt build
+  - npm install -g gulp
+  - gulp build
 
 # Use this to prepare the system to install prerequisites or dependencies.
 # e.g. sudo apt-get update.

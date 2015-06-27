@@ -29,7 +29,7 @@
 				<p class="tags"><?php the_tags( __( 'Tagged as: ', 'decode' ),', ' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'show_categories', false ) == true ) : ?>
-				<p class="categories"><?php _e( 'Categorized in&#58; ', 'decode' )  . the_category( ', ' ); ?></p>
+				<p class="categories"><?php esc_html_e( 'Categorized in&#58; ', 'decode' )  . the_category( ', ' ); ?></p>
 			<?php endif; ?>
 			<p class="date"><?php decode_posted_on(); ?></p>
 		</div>

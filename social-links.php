@@ -8,6 +8,9 @@
 
 <div class="social-links">
 <div class="social-links-container">
+	
+	<?php decode_social_icons_first(); ?>
+	
 	<?php if ( get_theme_mod( 'twitter_username', '' ) !== '' ) : ?>
 	<a class="social-link TwitterLink" href="<?php echo esc_url( 'https://twitter.com/' . get_theme_mod( 'twitter_username' ) );?>" <?php if ( get_theme_mod( 'open_links_in_new_tab', false ) == true ) echo 'target="_blank"'; ?> rel="me">
 	<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -592,5 +595,8 @@
 	</svg>
 	</a>
 	<?php endif; ?>
+	
+	<?php decode_social_icons_last(); ?>
+	
 </div>
 </div><!-- .social-links -->

@@ -1,6 +1,6 @@
 {
   "name": "Decode",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "author": "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)",
   "license": "GPLv3",
   "repository": {
@@ -8,20 +8,20 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-contrib-uglify": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-csscomb": "^3.0.0",
-    "grunt-markdown": "^0.7.0",
-    "grunt-modernizr": "^0.6.0",
-    "grunt-sass": "^0.18.1"
-  },
-  "dependencies": {
+    "autoprefixer-core": "^5.2.0",
+    "css-mqpacker": "^3.1.0",
+    "csswring": "^3.0.5",
     "fastclick": "^1.0.6",
-    "normalize.css": "^3.0.2"
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-postcss": "^5.1.8",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "merge-stream": "^0.1.7",
+    "normalize.css": "^3.0.3",
+    "postcss-import": "^5.2.2"
   }
 }
