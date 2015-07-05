@@ -68,7 +68,7 @@ gulp.task('modernizr', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.styles, ['styles', 'copy']);
 	gulp.watch([paths.decodeScript, paths.customizerScript], ['scripts']);
 });
 
