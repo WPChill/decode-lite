@@ -105,7 +105,7 @@ function decode_use_decode_icon() {
 	}
 }
 
-function decode_has_decode_icon() {	
+function decode_has_site_icon() {	
 	if ( function_exists( 'has_site_icon' ) ) {
 		if ( has_site_icon() ) {
 			return true;
