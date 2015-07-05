@@ -96,15 +96,6 @@ function decode_sidebar_is_enabled() {
 	}
 }
 
-function decode_use_decode_icon() {	
-	if ( function_exists( 'has_site_icon' ) ) {
-		return false;
-	}
-	else {
-		return true;
-	}
-}
-
 function decode_has_site_icon() {	
 	if ( function_exists( 'has_site_icon' ) ) {
 		if ( has_site_icon() ) {
@@ -215,7 +206,6 @@ public static function decode_customize_register( $wp_customize ) {
 			'label'    => __( 'Favicon Image (must be a PNG)', 'decode' ),
 			'section'  => 'decode_header_options',
 			'settings' => 'favicon_image',
-			'active_callback' => 'decode_use_decode_icon',
 			'priority' => 1,
 	) ) );
 	
