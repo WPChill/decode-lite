@@ -38,7 +38,7 @@ gulp.task('copy', ['styles'], function() {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('scripts', ['modernizr'], function() {
+gulp.task('scripts', function() {
 	var decodeScript = gulp.src(paths.decodeScript)
 		.pipe(sourcemaps.init())
 			.pipe(concat('decode.js'))
