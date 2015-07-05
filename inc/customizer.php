@@ -97,11 +97,25 @@ function decode_sidebar_is_enabled() {
 }
 
 function decode_use_decode_icon() {	
-	if ( function_exists('has_site_icon') ) {
+	if ( function_exists( 'has_site_icon' ) ) {
 		return false;
 	}
 	else {
 		return true;
+	}
+}
+
+function decode_has_decode_icon() {	
+	if ( function_exists( 'has_site_icon' ) ) {
+		if ( has_site_icon() ) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
 	}
 }
 
