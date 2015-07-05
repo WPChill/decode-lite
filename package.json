@@ -8,20 +8,20 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.0",
+    "autoprefixer-core": "^5.2.1",
     "css-mqpacker": "^3.1.0",
     "csswring": "^3.0.5",
     "fastclick": "^1.0.6",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-csscomb": "^3.0.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-csscomb": "^3.0.6",
     "gulp-modernizr": "^1.0.0-alpha",
-    "gulp-postcss": "^5.1.8",
-    "gulp-sass": "^2.0.1",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sass": "^2.0.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
-    "merge-stream": "^0.1.7",
+    "merge-stream": "^0.1.8",
     "normalize.css": "^3.0.3",
-    "postcss-import": "^5.2.2"
+    "postcss-import": "^6.0.0"
   }
 }
