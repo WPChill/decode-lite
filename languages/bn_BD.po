@@ -7,19 +7,18 @@ msgstr ""
 "Project-Id-Version: Decode\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
 "POT-Creation-Date: 2015-06-01 23:38-0800\n"
-"PO-Revision-Date: 2015-07-10 19:59-0800\n"
-"Last-Translator: nafSadh Khan<khan@nafsadh.com>\n"
-"Language-Team: nafSadh Khan<khan@nafsadh.com>\n"
+"PO-Revision-Date: 2015-07-10 17:03-0400\n"
+"Last-Translator: nafSadh Khan <khan@nafsadh.com>\n"
+"Language-Team: nafSadh Khan <khan@nafsadh.com>\n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
@@ -29,9 +28,7 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "আহাঃ! পাতাটি পাওয়া যায়নি"
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr "দেখা যাচ্ছে এখানে কিছু পাওয়া যায় নি । নিচের একটি একটি লিংক দেখুন, কিংবা আবারো সার্চ করুন!"
 
 #: 404.php:26
@@ -100,11 +97,8 @@ msgstr "এখানে মন্তব্য করতে <a href=\"%s\">লগ
 
 #: comments.php:103
 #, php-format
-msgid ""
-"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
-"this account\">Log out?</a>"
-msgstr "<a href=\"%1$s\">%2$s</a> হিসেবে লগ-ইন আছেন । <a href=\"%3$s\" title=\"Log out of "
-"this account\">লগ-আউট?</a>"
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "<a href=\"%1$s\">%2$s</a> হিসেবে লগ-ইন আছেন । <a href=\"%3$s\" title=\"Log out of this account\">লগ-আউট?</a>"
 
 #: comments.php:104
 msgid "Your email address will not be published."
@@ -112,28 +106,25 @@ msgstr "আপনার ই-মেইল ঠিকানা কারো কা�
 
 #: comments.php:105
 #, php-format
-msgid ""
-"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
-"and attributes: %s"
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
 msgstr "এই  <abbr title=\"HyperText Markup Language\">এইচটিএমএল</abbr> ট্যাগ ও  অ্যাট্রিবিউট সমূহ ব্যবহার করতে পারেন: %s"
 
 #: content-excerpt.php:33
 msgid "Read More&hellip;"
 msgstr "আরও পড়ুন&hellip;"
 
-#: content-excerpt.php:35 content-link.php:38 content-page.php:32
-#: content-quote.php:25 content-search.php:20 content-single.php:22
-#: content-single.php:62 content-single.php:111 content.php:41 image.php:30
+#: content-excerpt.php:35 content-link.php:38 content-page.php:32 content-quote.php:25 content-search.php:20
+#: content-single.php:22 content-single.php:62 content-single.php:111 content.php:41 image.php:30
 msgid "Edit"
 msgstr "পরিমার্জন"
 
-#: content-link.php:29 content-quote.php:15 content-single.php:14
-#: content-single.php:56 content-single.php:98 content.php:29
+#: content-link.php:29 content-quote.php:15 content-single.php:14 content-single.php:56 content-single.php:98
+#: content.php:29
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "আরও <span class=\"meta-nav\">&rarr;</span>"
 
-#: content-link.php:31 content-page.php:28 content-quote.php:18
-#: content-single.php:17 content-single.php:102 content.php:32 image.php:91
+#: content-link.php:31 content-page.php:28 content-quote.php:18 content-single.php:17 content-single.php:102
+#: content.php:32 image.php:91
 msgid "Pages:"
 msgstr "পাতা সমূহ:"
 
@@ -149,13 +140,13 @@ msgstr "১টি মন্তব্য"
 msgid "% Comments"
 msgstr "%টি মন্তব্য"
 
-#: content-link.php:42 content-quote.php:29 content-single.php:25
-#: content-single.php:65 content-single.php:114 content.php:45
+#: content-link.php:42 content-quote.php:29 content-single.php:25 content-single.php:65 content-single.php:114
+#: content.php:45
 msgid "Tagged as: "
 msgstr "ট্যাগায়িত:"
 
-#: content-link.php:45 content-quote.php:32 content-single.php:26
-#: content-single.php:66 content-single.php:115 content.php:48
+#: content-link.php:45 content-quote.php:32 content-single.php:26 content-single.php:66 content-single.php:115
+#: content.php:48
 msgid "Categorized in&#58; "
 msgstr "বিভাগ &#58; "
 
@@ -165,20 +156,15 @@ msgstr "কিছু পাওয়া যায় নি"
 
 #: content-none.php:19
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "লেখবেন নাকি আপনার প্রথম লেখা? <a href=\"%1$s\">শুরু হোক এখানেই</a>।"
 
 #: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "আহাঃ! কিছু খুঁজে পাওয়া যায় নি । অন্যান্য শব্দ দিয়ে খোঁজ করুন ।"
 
 #: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "দেখা যাচ্ছে আপনি যা খুঁজছেন তা পাওযা যাচ্ছে না । সার্চ করে দেখতে পারেন ।"
 
 #: footer.php:44
@@ -218,9 +204,8 @@ msgstr "সাইডবার প্রদর্শন"
 #: image.php:22
 #, php-format
 msgid ""
-"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel="
-"\"gallery\">%5$s</a>"
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> in <a href=\"%3$s"
+"\" title=\"Return to %4$s\" rel=\"gallery\">%5$s</a>"
 msgstr ""
 
 #: image.php:34
@@ -252,9 +237,7 @@ msgid "Show Header Menu"
 msgstr "হেডার মেনু দেখাও"
 
 #: inc/customizer.php:220
-msgid ""
-"HTML for description, if you wish to replace your blog description with HTML "
-"markup"
+msgid "HTML for description, if you wish to replace your blog description with HTML markup"
 msgstr "এইচটিএমএল বর্ণনা (ব্লগের বর্ণনা এইচটিএমএল মার্কাপ ব্যবহার করে দেখাতে চাইলে)"
 
 #: inc/customizer.php:234
@@ -315,19 +298,14 @@ msgstr "ফুটারে"
 msgid "Open Links in New Tab/Window"
 msgstr "লিংক নতুন ট্যাব/উইন্ডোতে খোলা হোক"
 
-#: inc/customizer.php:639 inc/customizer.php:647 inc/customizer.php:655
-#: inc/customizer.php:664 inc/customizer.php:672 inc/customizer.php:680
-#: inc/customizer.php:689 inc/customizer.php:697 inc/customizer.php:705
-#: inc/customizer.php:713 inc/customizer.php:721 inc/customizer.php:738
-#: inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:762
-#: inc/customizer.php:770 inc/customizer.php:778 inc/customizer.php:786
-#: inc/customizer.php:794 inc/customizer.php:802 inc/customizer.php:810
-#: inc/customizer.php:827 inc/customizer.php:844 inc/customizer.php:852
-#: inc/customizer.php:860 inc/customizer.php:868 inc/customizer.php:876
-#: inc/customizer.php:901 inc/customizer.php:909 inc/customizer.php:926
-#: inc/customizer.php:960 inc/customizer.php:968 inc/customizer.php:976
-#: inc/customizer.php:984 inc/customizer.php:1000 inc/customizer.php:1017
-#: inc/customizer.php:1025 inc/customizer.php:1033 inc/customizer.php:1041
+#: inc/customizer.php:639 inc/customizer.php:647 inc/customizer.php:655 inc/customizer.php:664 inc/customizer.php:672
+#: inc/customizer.php:680 inc/customizer.php:689 inc/customizer.php:697 inc/customizer.php:705 inc/customizer.php:713
+#: inc/customizer.php:721 inc/customizer.php:738 inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:762
+#: inc/customizer.php:770 inc/customizer.php:778 inc/customizer.php:786 inc/customizer.php:794 inc/customizer.php:802
+#: inc/customizer.php:810 inc/customizer.php:827 inc/customizer.php:844 inc/customizer.php:852 inc/customizer.php:860
+#: inc/customizer.php:868 inc/customizer.php:876 inc/customizer.php:901 inc/customizer.php:909 inc/customizer.php:926
+#: inc/customizer.php:960 inc/customizer.php:968 inc/customizer.php:976 inc/customizer.php:984 inc/customizer.php:1000
+#: inc/customizer.php:1017 inc/customizer.php:1025 inc/customizer.php:1033 inc/customizer.php:1041
 #: inc/customizer.php:1049 inc/customizer.php:1073
 #, php-format
 msgid "%s Username"
@@ -337,14 +315,12 @@ msgstr "%s উইজার-নাম"
 msgid " (or the long number in your profile URL)"
 msgstr " (অথাবা প্রোফাইল ইউআরএ়ল-এ লম্বা সংখ্যাটি)"
 
-#: inc/customizer.php:729 inc/customizer.php:1008 inc/customizer.php:1057
-#: inc/customizer.php:1065
+#: inc/customizer.php:729 inc/customizer.php:1008 inc/customizer.php:1057 inc/customizer.php:1065
 #, php-format
 msgid "%s Profile URL"
 msgstr "%s প্রোফাইল ইউআরএল"
 
-#: inc/customizer.php:818 inc/customizer.php:892 inc/customizer.php:917
-#: inc/customizer.php:934 inc/customizer.php:943
+#: inc/customizer.php:818 inc/customizer.php:892 inc/customizer.php:917 inc/customizer.php:934 inc/customizer.php:943
 #, php-format
 msgid "%s Site URL"
 msgstr "%s সাইট ইউআরএল"
@@ -382,8 +358,7 @@ msgid "Load Latin Extended character set. This will increase page load times."
 msgstr "ল্যাটিন এক্সটেন্ডেড ক্যারাকটার সেট ও লোড করা হোক । এটি পেজ লোডের সময় বাড়িয়ে দেবে ।"
 
 #: inc/customizer.php:1204
-msgid ""
-"Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgid "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr "সাইট হোমে পুরো লেখার বদলে সারাংশ (এক্সার্প্ট) দেখানো হোক (স্টিকি পোস্ট বাদে) ।"
 
 #: inc/customizer.php:1211
@@ -403,9 +378,7 @@ msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr "মূল পাতায় ট্যাগ দেখানো হোক (লেখার নিজস্ব পাতায় ট্যাগ তো দেখানো হবেই)"
 
 #: inc/customizer.php:1239
-msgid ""
-"Show categories on front page (categories will be shown on post's individual "
-"page)"
+msgid "Show categories on front page (categories will be shown on post's individual page)"
 msgstr "মূল পাতায় বিভাগ দেখানো হোক (লেখার নিজস্ব পাতায় তো বিভাগ উল্লেখ করা হবেই)"
 
 #: inc/customizer.php:1246
@@ -441,9 +414,7 @@ msgid "Add an arrow before the title of a link post"
 msgstr "লিংক পোস্টের আগে একটি তীর চিহ্ন দেখানো হোক"
 
 #: inc/customizer.php:1292
-msgid ""
-"Show Theme Info (display a line of text about the theme and its creator at "
-"the bottom of pages)"
+msgid "Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)"
 msgstr "থিমের তথ্য দেখানো হোক (পাতার একদম নিচের দিকে থিম এবং থিম যে বানিয়েছে তার তথ্য দেখানো হবে)"
 
 #: inc/customizer.php:1301
@@ -456,10 +427,9 @@ msgstr "অন্যান্য অপশন"
 
 #: inc/customizer.php:1316
 msgid ""
-"Custom CSS is longer recommended. This feature may be removed in a future "
-"update. To continue using your tweaks, copy and paste your CSS into a custom "
-"CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</a>. Get "
-"help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
+"Custom CSS is longer recommended. This feature may be removed in a future update. To continue using your tweaks, copy "
+"and paste your CSS into a custom CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</a>. Get help <a "
+"href=\"http://jetpack.me/support/custom-css/\">here</a>."
 msgstr ""
 
 #: inc/customizer.php:1337
@@ -483,9 +453,7 @@ msgid "Active Link Color"
 msgstr "অ্যাকটিভ লিংকের রং"
 
 #: inc/customizer.php:1396
-msgid ""
-"The color for currently clicked links.<br>(Try using a darker color than the "
-"Accent Color.)"
+msgid "The color for currently clicked links.<br>(Try using a darker color than the Accent Color.)"
 msgstr "ক্লিক করা আছে এমন লিংকের রং । <br>(অ্যাক্সেন্ট রঙের চেয়ে একটু গাঢ় রং ব্যবহার করা ভাল)"
 
 #: inc/customizer.php:1403
@@ -501,9 +469,7 @@ msgid "Secondary Text Color"
 msgstr "অপ্রধান লেখার রং"
 
 #: inc/customizer.php:1412
-msgid ""
-"Text color used for text of secondary importance.<br>(Try using a lighter "
-"color than the main Text Color.)"
+msgid "Text color used for text of secondary importance.<br>(Try using a lighter color than the main Text Color.)"
 msgstr "অপ্রধান টেক্সটে এ রঙে দেখানো হবে।<br>(মূল লেখার রং থেকে একটু হালকা রং ব্যবহার করা ভাল)"
 
 #: inc/customizer.php:1419
