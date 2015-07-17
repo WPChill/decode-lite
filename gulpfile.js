@@ -38,7 +38,7 @@ gulp.task('copy', ['styles'], function() {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('scripts', ['modernizr'], function() {
+gulp.task('scripts', function() {
 	var decodeScript = gulp.src(paths.decodeScript)
 		.pipe(sourcemaps.init())
 			.pipe(concat('decode.js'))
@@ -60,7 +60,7 @@ gulp.task('modernizr', function() {
 	gulp.src('scripts/src/*.js').pipe(modernizr({
 		cache:   true,
 		dest:    'scripts/src/modernizr.js',
-		options: ['mq', 'html5printshiv'],
+		options: ['setClasses', 'mq', 'html5printshiv'],
 		tests:   ['csstransforms', 'flexbox', 'inlinesvg', 'touchevents'],
 		crawl:   false
 	}))
@@ -68,7 +68,7 @@ gulp.task('modernizr', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.styles, ['styles', 'copy']);
 	gulp.watch([paths.decodeScript, paths.customizerScript], ['scripts']);
 });
 
