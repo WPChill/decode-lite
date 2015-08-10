@@ -41,3 +41,9 @@
 	
 	Spanish Translation: Xabier Obanos
 	Email:               xobanos@gmail.com
+
+	Persian Translation: Benyamin Salimi
+	Email:               benyamin.salimi@gmail.com
+	URL:                 http://cyanogen.ir
+	Twitter:             @benyaminsalimi
+	
