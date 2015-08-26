@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables.css';
 
 .wp-editor {
 	color: #000;
