@@ -1,6 +1,5 @@
 var gulp       = require('gulp'),
 	merge      = require('merge-stream'),
-	csscomb    = require('gulp-csscomb'),
 	sass       = require('gulp-sass'),
 	postcss    = require('gulp-postcss'),
 	concat     = require('gulp-concat'),
@@ -9,23 +8,25 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:           ['styles/src/*.scss', '!styles/src/_*.scss'],
+	styles:           ['styles/src/*.css', '!styles/src/_*.css'],
 	decodeScript:     ['scripts/src/modernizr.js', 'node_modules/fastclick/lib/fastclick.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js', 'scripts/src/decode.js' ],
 	customizerScript: 'scripts/src/customizer.js'
 };
 
 gulp.task('styles', function() {
 	var processors = [
+		require('postcss-import'),
 		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
-		require('css-mqpacker'),
-		require('postcss-import')({path: ['node_modules']}),
+		require('postcss-nested'),
+	    require('postcss-simple-vars'),
+	    require('postcss-inline-comment'),
+	    require('postcss-pseudoelements'),
+		require('css-mqpacker')({sort: true}),
 		require('csswring')
     ];
     
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
-			.pipe(csscomb())
-			.pipe(sass())
 			.pipe(postcss(processors))
 		.pipe(sourcemaps.write('srcmaps/'))
 		.pipe(gulp.dest('styles/'));

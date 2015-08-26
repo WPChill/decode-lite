@@ -57,24 +57,24 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	15.4 - Print
 --------------------------------------------------------------*/
 
-@import 'variables';
-@import 'mixins';
+@import '_variables.css';
+@import '_mixins.css';
 
 /*--------------------------------------------------------------
 1.0 - Reset
 --------------------------------------------------------------*/
-@import 'reset/reset';
+@import 'reset/_reset.css';
 
 
 /*--------------------------------------------------------------
 2.0 - Utilities
 --------------------------------------------------------------*/
-@import 'utilities/utilities';
+@import 'utilities/_utilities.css';
 
 /*--------------------------------------------------------------
 3.0 - Media
 --------------------------------------------------------------*/
-@import 'media/media';
+@import 'media/_media.css';
 
 /*--------------------------------------------------------------
 4.0 - Header
@@ -100,13 +100,13 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 .site-logo {
 	transition: opacity 0.5s ease-out;
 	width: auto;
-	max-height: 9.5em; // Fallback for rems
+	max-height: 9.5em;
 	max-height: 9.5rem;
 	margin: 0 auto 2%;
 	opacity: 1;
-
 	-webkit-user-drag: none;
 	        user-drag: none;
+	        
 	.no-touch &:hover {
 		opacity: 0.75;
 	}
@@ -823,7 +823,7 @@ a .attachment-post-thumbnail {
 	border-radius: 3px;
 	
 	a & {
-	border: 1px solid $accent-color; // Override border color for page links within a tags.
+	border: 1px solid $accent-color; /* Override border color for page links within a tags. */
 	}
 	
 	a &:active {
@@ -1547,7 +1547,7 @@ li.comment {
 ----------------------------------------------------------------
 15.1 - Tablet (<35ems)
 --------------------------------------------------------------*/
-@media only screen and (min-width: 35em) {
+@media (min-width: 35em) {
 	.site-header, .site-breadcrumbs, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
 		width: 82.5%;
 	}
@@ -1664,7 +1664,7 @@ li.comment {
 /*--------------------------------------------------------------
 15.2 - Desktop (<50ems)
 --------------------------------------------------------------*/
-@media only screen and (min-width: 50em) {
+@media (min-width: 50em) {
 	.site-header,
 	.site-breadcrumbs,
 	.site-main,
@@ -1808,7 +1808,7 @@ li.comment {
 /*--------------------------------------------------------------
 15.3 - Large Screen (<68.5ems)
 --------------------------------------------------------------*/
-@media only screen and (min-width: 68.5em) {
+@media (min-width: 68.5em) {
 	.site-header,
 	.site-breadcrumbs,
 	.site-main,

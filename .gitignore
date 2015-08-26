@@ -5,12 +5,11 @@ node_modules/
 style.css
 editor-style.css
 
-styles/*.css
+styles/style.css
+styles/editor-style.css
 styles/**/*.map
 styles/src/.sass-cache/
 
 scripts/*.js
 scripts/**/*.map
 scripts/src/modernizr.js
-
-docs/*.html
