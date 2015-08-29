@@ -97,13 +97,8 @@ function decode_sidebar_is_enabled() {
 }
 
 function decode_has_site_icon() {	
-	if ( function_exists( 'has_site_icon' ) ) {
-		if ( has_site_icon() ) {
-			return true;
-		}
-		else {
-			return false;
-		}
+	if ( function_exists( 'wp_site_icon' ) && has_site_icon() ) {
+		return true;
 	}
 	else {
 		return false;
