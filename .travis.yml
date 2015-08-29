@@ -57,7 +57,7 @@ install:
   - npm install
   - npm install # Do it again because it goes wrong often enough to make builds error.
   - npm install -g gulp npm-check-updates
-  - ncu -e
+  - ncu --error-level 2
   - gulp build
 
 # Use this to prepare the system to install prerequisites or dependencies.
