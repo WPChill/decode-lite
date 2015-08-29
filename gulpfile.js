@@ -1,6 +1,5 @@
 var gulp       = require('gulp'),
 	merge      = require('merge-stream'),
-	sass       = require('gulp-sass'),
 	postcss    = require('gulp-postcss'),
 	concat     = require('gulp-concat'),
 	uglify     = require('gulp-uglify'),
