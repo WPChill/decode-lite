@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: $background-color; /* Fallback for when there is no custom background color defined. */
+	background: var(--background-color); /* Fallback for when there is no custom background color defined. */
 }
 
 hr {

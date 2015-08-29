@@ -58,7 +58,6 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 --------------------------------------------------------------*/
 
 @import '_variables.css';
-@import '_mixins.css';
 
 /*--------------------------------------------------------------
 1.0 - Reset
@@ -88,7 +87,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 
 .site-header {
 	width: 100%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin: 3.5% auto 0;
 }
 
@@ -125,15 +124,15 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	margin: 0 0 0.5%;
 	a {
 		transition: color 0.5s;
-		color: $text-color;
+		color: var(--text-color);
 
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
 	.no-touch & a:hover {
-		color: $accent-color;
+		color: var(--accent-color);
 	}
 	.no-touch & a:active {
-		color: $accent-color-secondary;
+		color: var(--accent-color-secondary);
 	}
 }
 
@@ -147,7 +146,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	font-size: 1.65em;
 	text-align: center;
 	padding: 1.5%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 }
 
 .site-description {
@@ -442,7 +441,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 }
 
 .menu a:focus {
-	color: $accent-color;
+	color: var(--accent-color);
 }
 
 /* Display a triangle to indicate that the menu has a child menu. */
@@ -462,7 +461,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 .menu ul .page_item_has_children > a::after,
 .sidebar-menu ul .menu-item-has-children > a::after,
 .sidebar-menu ul .page_item_has_children > a::after {
-	border-top: 5px solid $text-color;
+	border-top: 5px solid var(--text-color);
 	border-right: 5px solid transparent;
 	border-bottom: none;
 	border-left: 5px solid transparent;
@@ -473,74 +472,74 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 .footer-menu ul .page_item_has_children > a::after {
 	border-top: none;
 	border-right: 5px solid transparent;
-	border-bottom: 5px solid $text-color;
+	border-bottom: 5px solid var(--text-color);
 	border-left: 5px solid transparent;
 }
 
 
 .menu a {
-	color: $text-color;
+	color: var(--text-color);
 }
 
 .menu ul > .menu-item-has-children > a::after,
 .menu ul > .page_item_has_children > a::after {
-	border-top-color: $text-color;
+	border-top-color: var(--text-color);
 }
 
 .no-touch .menu a:hover,
 .menu ul li.open > a {
-	color: $accent-color;
+	color: var(--accent-color);
 }
 
 .no-touch .menu ul > .menu-item-has-children > a:hover::after,
 .no-touch .menu ul > .page_item_has_children > a:hover::after,
 .menu ul li.open > a::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: var(--accent-color-secondary);
 }
 
 .no-touch .menu a:active {
-	color: $accent-color-secondary;
+	color: var(--accent-color-secondary);
 }
 
 .no-touch .menu ul > .menu-item-has-children > a:active::after,
 .no-touch .menu ul > .page_item_has_children > a:active::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: var(--accent-color-secondary);
 }
 
 .sidebar-menu a {
-	color: $accent-color;
+	color: var(--accent-color);
 }
 
 .no-touch .sidebar-menu a:hover,
 .sidebar-menu ul li.open > a {
-	color: $accent-color-secondary;
+	color: var(--accent-color-secondary);
 }
 
 .sidebar-menu ul .menu-item-has-children > a::after,
 .sidebar-menu ul .page_item_has_children > a::after {
-	border-top-color: $accent-color;
+	border-top-color: var(--accent-color);
 }
 
 .no-touch .sidebar-menu ul .menu-item-has-children > a:hover::after,
 .no-touch .sidebar-menu ul .page_item_has_children > a:hover::after,
 .sidebar-menu ul li.open > a::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: var(--accent-color-secondary);
 }
 
 .footer-menu ul > .menu-item-has-children > a::after,
 .footer-menu ul > .page_item_has_children > a::after {
-	border-bottom-color: $text-color;
+	border-bottom-color: var(--text-color);
 }
 
 .no-touch .footer-menu ul > .menu-item-has-children > a:hover::after,
 .no-touch .footer-menu ul > .page_item_has_children > a:hover::after,
 .footer-menu ul > li.open > a::after {
-	border-bottom-color: $accent-color;
+	border-bottom-color: var(--accent-color);
 }
 
 .no-touch .footer-menu ul > .menu-item-has-children > a:active::after,
 .no-touch .footer-menu ul > .page_item_has_children > a:active::after {
-	border-bottom-color: $accent-color-secondary;
+	border-bottom-color: var(--accent-color-secondary);
 }
 
 
@@ -551,8 +550,8 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	z-index: 2;
 	left: 0;
 	padding: 0.25em;
-	border-bottom: 2px solid $accent-color;
-	background-color: $background-color;
+	border-bottom: 2px solid var(--accent-color);
+	background-color: var(--background-color);
 	box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
@@ -604,33 +603,33 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 .menu .current-menu-item > a,
 .menu .current_page_item > a {
 	position: relative;
-	color: $accent-color;
+	color: var(--accent-color);
 }
 
 .menu > ul > .current_page_item.menu-item-has-children > a::after,
 .menu > ul > .current_page_item.page_item_has_children > a::after {
-	border-top-color: $accent-color;
+	border-top-color: var(--accent-color);
 }
 
 .sidebar-menu ul .current-menu-item > a,
 .sidebar-menu ul .current_page_item > a {
-	color: $accent-color-secondary;
+	color: var(--accent-color-secondary);
 }
 
 .sidebar-menu ul .current_page_item.menu-item-has-children > a::after,
 .sidebar-menu ul .current_page_item.page_item_has_children > a::after {
-	border-top-color: $accent-color-secondary;
+	border-top-color: var(--accent-color-secondary);
 }
 
 .footer-menu > ul > .current_page_item.menu-item-has-children > a::after,
 .footer-menu > ul > .current_page_item.page_item_has_children > a::after {
-	border-bottom-color: $accent-color;
+	border-bottom-color: var(--accent-color);
 }
 
 .menu .current-menu-item > a:hover,
 .menu .current_page_item > a:hover {
 	animation: shake 0.25s ease 0.25s;
-	color: $accent-color-secondary;
+	color: var(--accent-color-secondary);
 }
 
 @keyframes shake {
@@ -651,7 +650,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 .site-breadcrumbs {
 	width: 100%;
 	padding: 1.5% 0;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin: 0 auto;
 }
 
@@ -743,7 +742,7 @@ a .attachment-post-thumbnail {
 	width: 90%;
 	margin: 0 auto;
 	a {
-		color: $text-color;
+		color: var(--text-color);
 	}
 }
 
@@ -789,7 +788,7 @@ a .attachment-post-thumbnail {
 	blockquote {
 		font-style: italic;
 		padding: 0 0 0 5%;
-		border-left: 0.15em solid $accent-color;
+		border-left: 0.15em solid var(--accent-color);
 		margin: 1.5% 0;
 	}
 }
@@ -807,7 +806,7 @@ a .attachment-post-thumbnail {
 }
 
 .read-more {
-	color: $text-color;
+	color: var(--text-color);
 }
 
 .page-links {
@@ -819,22 +818,22 @@ a .attachment-post-thumbnail {
 	transition: border 0.25s ease;
 	text-align: center;
 	padding: 0 0.5em;
-	border: 1px solid $text-color;
+	border: 1px solid var(--text-color);
 	border-radius: 3px;
 	
 	a & {
-	border: 1px solid $accent-color; /* Override border color for page links within a tags. */
+	border: 1px solid var(--accent-color); /* Override border color for page links within a tags. */
 	}
 	
 	a &:active {
-		border-color: $accent-color-secondary;
+		border-color: var(--accent-color-secondary);
 	}
 }
 
 .entry-footer {
 	width: 90%;
 	padding-bottom: 0.5%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin: 0 auto;
 }
 
@@ -842,7 +841,7 @@ a .attachment-post-thumbnail {
 	display: inline-block;
 	width: auto;
 	padding: 0 2.5% 1%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin: 0 auto 1.5%;
 }
 
@@ -851,7 +850,7 @@ article {
 	.tags,
 	.categories {
 		clear: both;
-		color: $text-color-secondary;
+		color: var(--text-color-secondary);
 		font-size: 0.8em;
 		margin: 1.5% 0;
 	}
@@ -859,12 +858,12 @@ article {
 		margin-bottom: 0;
 		a {
 			transition-duration: 0.25s;
-			color: $text-color-secondary;
+			color: var(--text-color-secondary);
 			.no-touch &:hover {
-				color: $accent-color;
+				color: var(--accent-color);
 			}
 			.no-touch &:active {
-				color: $accent-color-secondary;
+				color: var(--accent-color-secondary);
 			}
 		}
 	}
@@ -888,14 +887,14 @@ article {
 --------------------------------------------------------------*/
 .format-link {
 	.entry-title a {
-		color: $text-color;
+		color: var(--text-color);
 		text-decoration: underline;
 		.no-touch &:hover {
-			color: $accent-color;
+			color: var(--accent-color);
 			border-bottom: none;
 		}
 		.no-touch &:active {
-			color: $accent-color-secondary;
+			color: var(--accent-color-secondary);
 			border-bottom: none;
 		}
 	}
@@ -1000,7 +999,7 @@ article {
 .author-name {
 	font-size: 1.4em;
 	a {
-		color: $text-color;
+		color: var(--text-color);
 	}
 }
 
@@ -1067,14 +1066,14 @@ article {
 }
 
 .comment-metadata a {
-	color: $text-color-secondary;
+	color: var(--text-color-secondary);
 	font-size: 0.8em;
 	margin-right: 1.5%;
 	.no-touch &:hover {
-		color: $accent-color;
+		color: var(--accent-color);
 	}
 	.no-touch &:active {
-		color: $accent-color-secondary;
+		color: var(--accent-color-secondary);
 	}
 }
 
@@ -1218,7 +1217,7 @@ li.comment {
 .search-entry,
 .search-entry .entry-title {
 	transition-duration: 0.25s;
-	color: $text-color;
+	color: var(--text-color);
 }
 
 .search-entry .entry-title {
@@ -1232,19 +1231,19 @@ li.comment {
 
 .search .page-header {
 	.search-field {
-		color: $text-color-secondary;
+		color: var(--text-color-secondary);
 		font-size: 1.25em;
 		border-top-color: transparent;
 		border-right-color: transparent;
 		border-left-color: transparent;
 		border-radius: 0;
 		.no-touch &:hover {
-			border-color: $text-color-secondary;
+			border-color: var(--text-color-secondary);
 			border-radius: 3px;
 		}
 		.no-touch &:focus,
 		.touch &:focus {
-			border-color: $accent-color;
+			border-color: var(--accent-color);
 			border-radius: 3px;
 		}
 	}
@@ -1267,7 +1266,7 @@ li.comment {
 
 .search .entry-footer {
 	width: 90%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin: 0 auto;
 }
 
@@ -1321,9 +1320,9 @@ li.comment {
 .sidebar-top {
 	z-index: 3; /* Submenus have z-index of 2. */
 	width: 100%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 	margin-bottom: 7.5%;
-	background-color: $background-color;
+	background-color: var(--background-color);
 	cursor: pointer;
 	.no-touch & {
 		position: sticky;
@@ -1384,7 +1383,7 @@ li.comment {
 	top: 0;
 	width: 95%;
 	height: 100%;
-	background-color: $background-color;
+	background-color: var(--background-color);
 	&.left {
 		transform: translateX(-110%);
 		/* animation: pop-closed 0.75s 0.75s; */ /* Add this for a nice pop as the sidebar loads */
@@ -1405,7 +1404,7 @@ li.comment {
 .sidebar-content {
 	margin: 0 5%;
 	.no-touch & a:hover {
-		color: $accent-color-secondary;
+		color: var(--accent-color-secondary);
 	}
 }
 
@@ -1490,10 +1489,10 @@ li.comment {
 }
 
 .explore-page .widget h1 {
-	color: $text-color;
+	color: var(--text-color);
 	font-size: 1.15em;
 	padding-bottom: 1%;
-	border-bottom: 1px solid $accent-color;
+	border-bottom: 1px solid var(--accent-color);
 }
 
 .explore-page .widget:not(.search) {
@@ -1701,10 +1700,10 @@ li.comment {
 				margin-top: 5%;
 			}
 			&.left {
-				border-right: 1px solid $accent-color;
+				border-right: 1px solid var(--accent-color);
 			}
 			&.right {
-				border-left: 1px solid $accent-color;
+				border-left: 1px solid var(--accent-color);
 			}
 		}
 	}

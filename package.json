@@ -16,15 +16,14 @@
     "gulp-concat": "^2.6.0",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^6.0.0",
-    "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.0",
     "merge-stream": "^1.0.0",
     "normalize.css": "^3.0.3",
+    "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
     "postcss-inline-comment": "^2.0.0",
     "postcss-nested": "^1.0.0",
-    "postcss-pseudoelements": "^2.2.0",
-    "postcss-simple-vars": "^1.0.0"
+    "postcss-pseudoelements": "^2.2.0"
   }
 }

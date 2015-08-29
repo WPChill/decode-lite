@@ -1,6 +1,13 @@
 /* Micro Clearfix */
 .cf {
-	@include clearfix();
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 .entry-content,
@@ -8,5 +15,12 @@
 .site-header,
 .site-content,
 .site-footer {
-	@include clearfix();
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
 }
