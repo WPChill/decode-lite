@@ -1,21 +1,21 @@
 # LANGUAGE (LOCALE) translation for WordPress.
 # This file is distributed under the same license as the WordPress package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <Benyamin.salimi@gmail.com>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fa-Decode v2.9.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2015-04-04 19:59-0800\n"
-"PO-Revision-Date: 2015-04-04 20:01-0800\n"
-"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"POT-Creation-Date: 2015-07-05 17:00-0600\n"
+"PO-Revision-Date: 2015-08-10 18:55+0330\n"
+"Last-Translator: Scott Smith <benyamin.salimi@gmail.com>\n"
 "Language-Team: BenYamin Salimi <benyamin.salimi@gmail.com>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
@@ -55,8 +55,8 @@ msgstr "نویسنده: %s"
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "دیدگاه در  &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s دیدگاه در  &ldquo;%2$s&rdquo;"
 
 #: comments.php:34 comments.php:58
 msgid "Comment navigation"
@@ -109,6 +109,8 @@ msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
+"شما وارد شده اید <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out "
+"of this account\">میخواهد خارج شوید ؟</a>"
 
 #: comments.php:104
 msgid "Your email address will not be published."
@@ -161,7 +163,7 @@ msgstr "برچسب گذاشته شده به عنوان:"
 #: content-link.php:45 content-quote.php:32 content-single.php:26
 #: content-single.php:66 content-single.php:115 content.php:48
 msgid "Categorized in&#58; "
-msgstr "طبقه بندی در&#58; "
+msgstr "دسته بندی : &#58; "
 
 #: content-none.php:13
 msgid "Nothing Found"
@@ -194,23 +196,23 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr "%1$s توسط %2$s"
 
-#: functions.php:33
+#: functions.php:26
 msgid "Header Menu"
 msgstr "منوی هدر "
 
-#: functions.php:34
+#: functions.php:27
 msgid "Sidebar Menu"
 msgstr "منوی نوار کناری"
 
-#: functions.php:35
+#: functions.php:28
 msgid "Footer Menu"
 msgstr "منوی فوتر"
 
-#: functions.php:163
+#: functions.php:169
 msgid "Sidebar"
 msgstr "نوار کناری"
 
-#: functions.php:165
+#: functions.php:171
 msgctxt "sidebar description"
 msgid "Only displayed if sidebar remains enabled in the Customize menu."
 msgstr ""
@@ -238,33 +240,33 @@ msgstr ""
 
 #: image.php:34
 msgid "Previous"
-msgstr ""
+msgstr "قبلی "
 
 #: image.php:35
 msgid "Next"
-msgstr ""
+msgstr "بعدی"
 
-#: inc/customizer.php:157
+#: inc/customizer.php:166
 msgid "Header Options"
 msgstr "تنظیمات هدر"
 
-#: inc/customizer.php:192
+#: inc/customizer.php:201
 msgid "Favicon Image (must be a PNG)"
 msgstr ""
 
-#: inc/customizer.php:199
+#: inc/customizer.php:209
 msgid "Show Site Title"
 msgstr "نمایش عنوان  سایت"
 
-#: inc/customizer.php:206
+#: inc/customizer.php:216
 msgid "Show Site Description"
 msgstr "نمایش توضیحات سایت"
 
-#: inc/customizer.php:213
+#: inc/customizer.php:223
 msgid "Show Header Menu"
 msgstr "نمایش منوی هدر"
 
-#: inc/customizer.php:220
+#: inc/customizer.php:230
 msgid ""
 "HTML for description, if you wish to replace your blog description with HTML "
 "markup"
@@ -272,154 +274,154 @@ msgstr ""
 "توضیحات وبسایت به زبان HTML . اگر دوست دارید به جای توضیحات تگ اچ تی ام ال "
 "وارد کنید کد مورد نظر خود را در کادر زیر بنویسید."
 
-#: inc/customizer.php:234
+#: inc/customizer.php:244
 msgid "Sidebar Options"
 msgstr "تنظیمات ساید بار"
 
-#: inc/customizer.php:262
+#: inc/customizer.php:272
 msgid "Enable Sidebar"
 msgstr "فعال سازی ساید بار"
 
-#: inc/customizer.php:269
+#: inc/customizer.php:279
 msgid "Sidebar Position"
 msgstr "حالت نوار کناری"
 
-#: inc/customizer.php:274 inc/customizer.php:286
+#: inc/customizer.php:284 inc/customizer.php:296
 msgid "Left"
 msgstr "چپ"
 
-#: inc/customizer.php:275 inc/customizer.php:287
+#: inc/customizer.php:285 inc/customizer.php:297
 msgid "Right"
 msgstr "راست"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:291
 msgid "Sidebar Button Position"
 msgstr "تنظیم حالت دکمه نوار کناری"
 
-#: inc/customizer.php:293
+#: inc/customizer.php:303
 msgid "Always Visible Sidebar"
 msgstr "نوار کناری همیشه نمایش داده شود"
 
-#: inc/customizer.php:298
+#: inc/customizer.php:308
 msgctxt "Sidebar option"
 msgid "Always open"
 msgstr "همیشه باز"
 
-#: inc/customizer.php:299
+#: inc/customizer.php:309
 msgctxt "Sidebar option"
 msgid "Closed by default"
 msgstr "به صورت پیشفرض بسته باشد"
 
-#: inc/customizer.php:311
+#: inc/customizer.php:321
 msgid "Social Options"
 msgstr "تنظیمات اجتماعی"
 
-#: inc/customizer.php:617 inc/customizer.php:624
+#: inc/customizer.php:627 inc/customizer.php:634
 msgid "Show Social Icons"
 msgstr "نمیاش ایکون شکبه های اجتماعی"
 
-#: inc/customizer.php:617
+#: inc/customizer.php:627
 msgid "in Header"
 msgstr "در هدر"
 
-#: inc/customizer.php:624
+#: inc/customizer.php:634
 msgid "in Footer"
 msgstr "در فوتر"
 
-#: inc/customizer.php:631
+#: inc/customizer.php:641
 msgid "Open Links in New Tab/Window"
 msgstr "باز کردن پیوند ها در زبانه/پنجه جدید"
 
-#: inc/customizer.php:639 inc/customizer.php:647 inc/customizer.php:655
-#: inc/customizer.php:664 inc/customizer.php:672 inc/customizer.php:680
-#: inc/customizer.php:689 inc/customizer.php:697 inc/customizer.php:705
-#: inc/customizer.php:713 inc/customizer.php:721 inc/customizer.php:738
-#: inc/customizer.php:746 inc/customizer.php:754 inc/customizer.php:762
-#: inc/customizer.php:770 inc/customizer.php:778 inc/customizer.php:786
-#: inc/customizer.php:794 inc/customizer.php:802 inc/customizer.php:810
-#: inc/customizer.php:827 inc/customizer.php:844 inc/customizer.php:852
-#: inc/customizer.php:860 inc/customizer.php:868 inc/customizer.php:876
-#: inc/customizer.php:901 inc/customizer.php:909 inc/customizer.php:926
-#: inc/customizer.php:960 inc/customizer.php:968 inc/customizer.php:976
-#: inc/customizer.php:984 inc/customizer.php:1000 inc/customizer.php:1017
-#: inc/customizer.php:1025 inc/customizer.php:1033 inc/customizer.php:1041
-#: inc/customizer.php:1049 inc/customizer.php:1073
+#: inc/customizer.php:649 inc/customizer.php:657 inc/customizer.php:665
+#: inc/customizer.php:674 inc/customizer.php:682 inc/customizer.php:690
+#: inc/customizer.php:699 inc/customizer.php:707 inc/customizer.php:715
+#: inc/customizer.php:723 inc/customizer.php:731 inc/customizer.php:748
+#: inc/customizer.php:756 inc/customizer.php:764 inc/customizer.php:772
+#: inc/customizer.php:780 inc/customizer.php:788 inc/customizer.php:796
+#: inc/customizer.php:804 inc/customizer.php:812 inc/customizer.php:820
+#: inc/customizer.php:837 inc/customizer.php:854 inc/customizer.php:862
+#: inc/customizer.php:870 inc/customizer.php:878 inc/customizer.php:886
+#: inc/customizer.php:911 inc/customizer.php:919 inc/customizer.php:936
+#: inc/customizer.php:970 inc/customizer.php:978 inc/customizer.php:986
+#: inc/customizer.php:994 inc/customizer.php:1010 inc/customizer.php:1027
+#: inc/customizer.php:1035 inc/customizer.php:1043 inc/customizer.php:1051
+#: inc/customizer.php:1059 inc/customizer.php:1083
 #, php-format
 msgid "%s Username"
 msgstr "%s نام کاربری"
 
-#: inc/customizer.php:656 inc/customizer.php:681
+#: inc/customizer.php:666 inc/customizer.php:691
 msgid " (or the long number in your profile URL)"
 msgstr ""
 
-#: inc/customizer.php:729 inc/customizer.php:1008 inc/customizer.php:1057
-#: inc/customizer.php:1065
+#: inc/customizer.php:739 inc/customizer.php:1018 inc/customizer.php:1067
+#: inc/customizer.php:1075
 #, php-format
 msgid "%s Profile URL"
 msgstr "%s آدرس پروفایل"
 
-#: inc/customizer.php:818 inc/customizer.php:892 inc/customizer.php:917
-#: inc/customizer.php:934 inc/customizer.php:943
+#: inc/customizer.php:828 inc/customizer.php:902 inc/customizer.php:927
+#: inc/customizer.php:944 inc/customizer.php:953
 #, php-format
 msgid "%s Site URL"
 msgstr "%s آدرس سایت"
 
-#: inc/customizer.php:835 inc/customizer.php:884 inc/customizer.php:1090
+#: inc/customizer.php:845 inc/customizer.php:894 inc/customizer.php:1100
 #, php-format
 msgid "%s Link"
 msgstr "%s پیوند"
 
-#: inc/customizer.php:952 inc/customizer.php:992
+#: inc/customizer.php:962 inc/customizer.php:1002
 #, fuzzy, php-format
 msgid "%s User ID"
 msgstr "نویسنده: %s"
 
-#: inc/customizer.php:1081
+#: inc/customizer.php:1091
 msgid "Email Address"
 msgstr "ادرس ایمیل"
 
-#: inc/customizer.php:1099
+#: inc/customizer.php:1109
 msgid "RSS Feed"
 msgstr "خوراک RSS"
 
-#: inc/customizer.php:1113
+#: inc/customizer.php:1123
 msgid "Content Options"
 msgstr "تنظیمات محتوا"
 
-#: inc/customizer.php:1115
+#: inc/customizer.php:1125
 #, php-format
 msgctxt "(blog name)'s content."
 msgid "These options change the display of %s's content"
 msgstr ""
 
-#: inc/customizer.php:1197
+#: inc/customizer.php:1207
 msgid "Load Latin Extended character set. This will increase page load times."
 msgstr ""
 
-#: inc/customizer.php:1204
+#: inc/customizer.php:1214
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 
-#: inc/customizer.php:1211
+#: inc/customizer.php:1221
 msgid "Use entry excerpts on archive, category, and author pages."
 msgstr ""
 
-#: inc/customizer.php:1218
+#: inc/customizer.php:1228
 msgid "Display posts' featured images when excerpts are shown."
 msgstr ""
 
-#: inc/customizer.php:1225
+#: inc/customizer.php:1235
 msgid "Display a post's featured image on its individual page."
 msgstr "نمایش تصویر شاخص پست در صفحات فردی"
 
-#: inc/customizer.php:1232
+#: inc/customizer.php:1242
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "نمای برچسب ها در پایین صفحه ( در صورت غیر فعال بودن نیز برچسب ها در صفحات "
 "فردی نمایش داده میشوند)"
 
-#: inc/customizer.php:1239
+#: inc/customizer.php:1249
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -427,110 +429,115 @@ msgstr ""
 "نمایش ظبقه بندی در پایین صفحه ( در صورت  غیر فعال بودن نیز طبقه بندی در "
 "صفحات فردی نمایش داده میشود)   "
 
-#: inc/customizer.php:1246
+#: inc/customizer.php:1256
 msgid "Show author's name, profile image, and bio after posts"
 msgstr "نمایش نام،عکس پروفایل،و بیو بعد از پست ها "
 
-#: inc/customizer.php:1253
+#: inc/customizer.php:1263
 msgid "Entry Date Position"
 msgstr "حالت ورودی تاریخ"
 
-#: inc/customizer.php:1257
+#: inc/customizer.php:1267
 msgid "Above Header"
 msgstr "بالاتر از هدر"
 
-#: inc/customizer.php:1258
+#: inc/customizer.php:1268
 msgid "Below Header"
 msgstr "پایین هدر"
 
-#: inc/customizer.php:1264
+#: inc/customizer.php:1274
 msgid "Show entry date for post excepts on the main page"
 msgstr "نمایش تاریخ ارسال پست به جز در صفحه اصلی "
 
-#: inc/customizer.php:1271
+#: inc/customizer.php:1281
 msgid "Show allowed HTML tags on comment form"
 msgstr "نمایش تگهای مجاز HTML  در فرم نظرات"
 
-#: inc/customizer.php:1278
+#: inc/customizer.php:1288
 msgid "Show Page Headers"
 msgstr "نمایش عنوان صفحه "
 
-#: inc/customizer.php:1285
+#: inc/customizer.php:1295
 msgid "Add an arrow before the title of a link post"
 msgstr "اضافه کردن کمان  قبل از عنوان لینک نوشته"
 
-#: inc/customizer.php:1292
+#: inc/customizer.php:1302
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
-msgstr ""
-"نمایش اطلاعات قالب(نمایش نام سازنده قالب ته صفحه) \"متعرجم : بی فرهنگی در "
-"نیاز این تیک رو ور ندار\""
+msgstr "نمایش اطلاعات قالب(نمایش نام سازنده قالب ته صفحه) "
 
-#: inc/customizer.php:1301
+#: inc/customizer.php:1311
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr "متن (شرایط کپی رایت،نام پیدید آورنده و...)"
 
-#: inc/customizer.php:1315
+#: inc/customizer.php:1325
 msgid "Other Options"
 msgstr "دیگر تنظیمات"
 
-#: inc/customizer.php:1316
+#: inc/customizer.php:1326
 msgid ""
 "Custom CSS is longer recommended. This feature may be removed in a future "
 "update. To continue using your tweaks, copy and paste your CSS into a custom "
 "CSS plugin such as <a href=\"http://jetpack.me/install/\">Jetpack</a>. Get "
 "help <a href=\"http://jetpack.me/support/custom-css/\">here</a>."
 msgstr ""
+"Custom CSSدیگر پیشنهاد نمیشود . ممکن است در آپدیت های آینده حذف شود .   برای "
+"استفاده از این امکان از پلاگین هایی نطسر : <a href=\"http://jetpack.me/"
+"install/\">Jetpack</a>. اطلاعات بیشتر  <a href=\"http://jetpack.me/support/"
+"custom-css/\">اینجا</a>."
 
-#: inc/customizer.php:1337
+#: inc/customizer.php:1347
 msgid "Custom CSS"
 msgstr "CSS کاستوم"
 
-#: inc/customizer.php:1348
+#: inc/customizer.php:1358
 msgid "Show the following post types on home blog page. (Separate with commas)"
-msgstr ""
+msgstr "نمایش پست های زیر در صفخه اصلی وبلاگ ( با کاما جدا کنید )"
 
-#: inc/customizer.php:1387
+#: inc/customizer.php:1397
 msgid "Accent Color"
-msgstr ""
+msgstr "رنگ اصلی"
 
-#: inc/customizer.php:1388
+#: inc/customizer.php:1398
 msgid "The main color used for links, borders, buttons, and more."
-msgstr ""
+msgstr "رنگ اصلی که برای لینک ها،بوردرها، دکمه ها و غیر استفاده میشود"
 
-#: inc/customizer.php:1395
+#: inc/customizer.php:1405
 msgid "Active Link Color"
-msgstr ""
+msgstr "رنگ لینک های فعال"
 
-#: inc/customizer.php:1396
+#: inc/customizer.php:1406
 msgid ""
 "The color for currently clicked links.<br>(Try using a darker color than the "
 "Accent Color.)"
 msgstr ""
+"رنگ لینکهایی که روی آنها کلیک شده است( رنگ تیره تر از Accent را انتخاب کنید)"
 
-#: inc/customizer.php:1403
+#: inc/customizer.php:1413
 msgid "Text Color"
 msgstr "رنگ متن"
 
-#: inc/customizer.php:1404
+#: inc/customizer.php:1414
 #, fuzzy
 msgid "The main text color."
 msgstr "رنگ متن"
 
-#: inc/customizer.php:1411
+#: inc/customizer.php:1421
 msgid "Secondary Text Color"
 msgstr "رنگ دوم متن "
 
-#: inc/customizer.php:1412
+#: inc/customizer.php:1422
 msgid ""
 "Text color used for text of secondary importance.<br>(Try using a lighter "
 "color than the main Text Color.)"
 msgstr ""
+"رنگی که برای متن های با اولویت دوم استفاده میشود(سعی کنید رنگ روشن‌تر از رنگ "
+"متن اصلی باشد)"
 
-#: inc/customizer.php:1419
+#: inc/customizer.php:1429
 msgid "Use accent color instead of text color for icons"
-msgstr ""
+msgstr "رنگ اصلی برای متن و آیکن ها !"
 
 #: inc/extras.php:95
 #, fuzzy, php-format
@@ -555,11 +562,11 @@ msgstr "نویسنده: %s"
 
 #: inc/template-tags.php:155
 msgid "Posts navigation"
-msgstr ""
+msgstr "ناوبری پست ها"
 
 #: inc/template-tags.php:159
 msgid "Older posts"
-msgstr ""
+msgstr "مطالب قدیمی‌تر "
 
 #: inc/template-tags.php:163
 #, fuzzy
@@ -568,7 +575,7 @@ msgstr "مطالب اخیر"
 
 #: inc/template-tags.php:186
 msgid "Post navigation"
-msgstr ""
+msgstr "ناوبری این پست"
 
 #: inc/template-tags.php:211
 #, fuzzy, php-format
