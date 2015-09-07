@@ -57,7 +57,7 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	15.4 - Print
 --------------------------------------------------------------*/
 
-@import '_variables.css';
+@import 'variables.css';
 
 /*--------------------------------------------------------------
 1.0 - Reset

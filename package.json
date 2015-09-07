@@ -8,9 +8,9 @@
     "url": "https://github.com/ScottSmith95/Decode.git"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+    "autoprefixer": "^6.0.2",
     "css-mqpacker": "^4.0.0",
-    "csswring": "^3.0.7",
+    "cssnano": "^3.0.0",
     "fastclick": "^1.0.6",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
@@ -24,6 +24,6 @@
     "postcss-import": "^7.0.0",
     "postcss-inline-comment": "^2.0.0",
     "postcss-nested": "^1.0.0",
-    "postcss-pseudoelements": "^2.2.0"
+    "postcss-pseudoelements": "^3.0.0"
   }
 }

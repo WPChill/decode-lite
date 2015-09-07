@@ -7,7 +7,7 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:           ['styles/src/*.css', '!styles/src/_*.css'],
+	styles:           ['styles/src/*.css', '!styles/src/variables.css'],
 	decodeScript:     ['scripts/src/modernizr.js', 'node_modules/fastclick/lib/fastclick.js', 'scripts/src/sidebar.js', 'scripts/src/dropdown.js', 'scripts/src/decode.js' ],
 	customizerScript: 'scripts/src/customizer.js'
 };
@@ -15,13 +15,13 @@ var paths = {
 gulp.task('styles', function() {
 	var processors = [
 		require('postcss-import'),
-		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
+		require('autoprefixer')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
 		require('postcss-nested'),
 	    require('postcss-custom-properties'),
 	    require('postcss-inline-comment'),
 	    require('postcss-pseudoelements'),
 		require('css-mqpacker')({sort: true}),
-		require('csswring')
+		require('cssnano')({autoprefixer: false})
     ];
     
 	return gulp.src(paths.styles)
