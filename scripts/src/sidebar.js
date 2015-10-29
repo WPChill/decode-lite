@@ -19,7 +19,7 @@ var DecodeSidebar = ( function () {
 		
 		// Loop through the elements.
 		var i;
-		for ( i = 0; i < elements.length; i++ ) {
+		for ( i = 0; i < elements.length; ++i ) {
 			var element = elements[i],
 			    currentElement = document.getElementById( element );
 			
