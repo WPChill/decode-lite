@@ -13,7 +13,7 @@ body {
 	-webkit-overflow-scrolling: touch; /* Corrects touch events not being passed to body if `-webkit-overflow-scrolling: touch;` is used on any other elements */
 	text-align: left;
 	margin: 0;
-	background-color: #E3E5E7;
+	background-color: var(--background-color);
 }
 
 /* Headings */

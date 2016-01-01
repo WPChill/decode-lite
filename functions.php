@@ -71,7 +71,7 @@ function decode_setup() {
 
 	// Set up the WordPress core custom background feature.
 	$args = array(
-		'default-color' => 'ECF0F1',
+		'default-color' => 'E9EBED',
 	); 
 	$args = apply_filters( 'decode_custom_background_args', $args );
 	add_theme_support( 'custom-background', $args );
