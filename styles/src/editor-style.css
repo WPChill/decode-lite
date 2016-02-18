@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'variables.css';
 
 .wp-editor {
 	color: #000;
@@ -9,12 +9,12 @@
 a,
 a:visited {
 	transition: color 0.25s ease;
-	color: $accent-color;
+	color: var(--accent-color);
 	text-decoration: underline;
 }
 
 a:hover {
-	color: $accent-color-secondary;
+	color: var(--accent-color-secondary);
 }
 
 h1 {

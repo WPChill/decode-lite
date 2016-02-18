@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-	color: $text-color;
+	color: var(--text-color);
 	font-family: 'Oxygen', 'Helvetica Neue', 'Arial', sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
@@ -13,7 +13,7 @@ body {
 	-webkit-overflow-scrolling: touch; /* Corrects touch events not being passed to body if `-webkit-overflow-scrolling: touch;` is used on any other elements */
 	text-align: left;
 	margin: 0;
-	background-color: #E3E5E7;
+	background-color: var(--background-color);
 }
 
 /* Headings */
@@ -26,16 +26,16 @@ h1, h2, h3, h4, h5, h6 {
 /* Links */
 a {
 	transition: color 0.4s ease;
-	color: $accent-color;
+	color: var(--accent-color);
 	text-decoration: none;
 	border-bottom: 0 solid rgba(69, 69, 69, 0);
 	background-color: transparent;
 	
 	.no-touch &:hover {
-		color: $accent-color;
+		color: var(--accent-color);
 	}
 	.no-touch &:active {
-		color: $accent-color-secondary;
+		color: var(--accent-color-secondary);
 	}
 }
 
@@ -50,10 +50,10 @@ a {
 .no-touch .site-colophon a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	&:hover {
-		border-bottom: 1px solid $accent-color;
+		border-bottom: 1px solid var(--accent-color);
 	}
 	&:active {
-		border-bottom: 1px solid $accent-color-secondary;
+		border-bottom: 1px solid var(--accent-color-secondary);
 	}
 }
 

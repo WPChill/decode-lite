@@ -1,0 +1,26 @@
+/* Micro Clearfix */
+.cf {
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
+}

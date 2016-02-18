@@ -4,6 +4,9 @@
 # For use with the Decode WordPress theme
 # @link https://github.com/ScottSmith95/Decode
 
+# Use Travis's container-based infrastructure.
+sudo: false
+
 # Declare project language.
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
@@ -26,12 +29,12 @@ env:
     # @link https://github.com/WordPress/WordPress
     - WP_VERSION=master WP_MULTISITE=0
     - WP_VERSION=master WP_MULTISITE=1
-    # WordPress 4.1
-    # @link https://github.com/WordPress/WordPress/tree/4.1-branch
+    # WordPress 4.2
+    # @link https://github.com/WordPress/WordPress/tree/4.2-branch
     - WP_VERSION=4.2 WP_MULTISITE=0
     - WP_VERSION=4.2 WP_MULTISITE=1
-    # WordPress 4.0
-    # @link https://github.com/WordPress/WordPress/tree/4.0-branch
+    # WordPress 4.1
+    # @link https://github.com/WordPress/WordPress/tree/4.1-branch
     - WP_VERSION=4.1 WP_MULTISITE=0
     - WP_VERSION=4.1 WP_MULTISITE=1
 
@@ -53,7 +56,8 @@ before_install:
 install:
   - npm install
   - npm install # Do it again because it goes wrong often enough to make builds error.
-  - npm install -g gulp
+  - npm install -g gulp npm-check-updates
+  - ncu --error-level 2
   - gulp build
 
 # Use this to prepare the system to install prerequisites or dependencies.
@@ -111,6 +115,7 @@ script:
     # -s flag: Show sniff codes in all reports.
     # -v flag: Print verbose output.
 notifications:
+  slack: scottsmith:DrGdcTNOe2liaJR7X5t2q03f
   email:
     recipients:
       - decode@ScottHSmith.com

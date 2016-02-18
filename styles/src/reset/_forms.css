@@ -3,7 +3,7 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'] {
 	transition: border 0.25s ease-out, color 0.25s ease-out;
-	color: $accent-color;
+	color: var(--accent-color);
 	min-height: 22px;
 	min-height: 2rem;
 	padding: 0 0.7em;
@@ -12,15 +12,15 @@ input[type='submit'] {
 	background: transparent;
 
 	.no-touch &:hover {
-		border: 1px solid $accent-color;
+		border: 1px solid var(--accent-color);
 	}
 	
 	.no-touch &:focus,
 	.touch &:focus,
 	.no-touch &:active,
 	.touch &:active {
-		color: $accent-color-secondary;
-		border-color: $accent-color-secondary;
+		color: var(--accent-color-secondary);
+		border-color: var(--accent-color-secondary);
 	}
 }
 
@@ -59,14 +59,14 @@ input[type='tel'],
 input[type='url'],
 textarea {
 	.no-touch &:hover {
-		color: $text-color-secondary;
-		border-color: $text-color-secondary;
+		color: var(--text-color-secondary);
+		border-color: var(--text-color-secondary);
 	}
 	
 	.no-touch &:focus,
 	.touch &:focus {
-		color: $text-color;
-		border-color: $accent-color;
+		color: var(--text-color);
+		border-color: var(--accent-color);
 		outline: none;
 	}
 }
