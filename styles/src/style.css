@@ -841,6 +841,13 @@ a .attachment-post-thumbnail {
 	table td#next {
 		padding-top: 10px;
 	}
+	figure {
+		margin-left: 0;
+	}
+	figure,
+	img {
+		max-width: 100%;
+	}
 }
 
 .single-attachment {

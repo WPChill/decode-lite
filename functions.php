@@ -123,7 +123,7 @@ add_action( 'after_setup_theme', 'decode_setup' );
  * @global int $content_width
  */
 function decode_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'decode_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'decode_content_width', 792 );
 }
 add_action( 'after_setup_theme', 'decode_content_width', 0 );
 
