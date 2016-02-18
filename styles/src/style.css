@@ -790,6 +790,52 @@ a .attachment-post-thumbnail {
 		border-left: 0.15em solid var(--accent-color);
 		margin: 1.5% 0;
 	}
+	table {
+		width: 100%;
+	}
+	table caption {
+		margin-bottom: 10px;
+		font-weight: 700;
+	}
+	table thead th {
+		padding-bottom: 5px;
+		text-align: center;
+	}
+	table thead th:last-child {
+		border-right: none;
+	}
+	table tbody {
+		text-align: center;
+		font-size: 12px;
+		font-weight: 300;
+	}
+	table tbody a {
+		font-weight: 700;
+	}
+	table tbody tr:last-child {
+		border-bottom: none;
+	}
+	table tbody tr td {
+		padding: 7px;
+	}
+	table tfoot {
+		font-size: 14px;
+	}
+	table tfoot #next {
+		text-align: right;
+	}
+	table a {
+		text-decoration: underline;
+	}
+	table a:hover {
+		text-decoration: none;
+	}
+	table td#prev {
+		padding-top: 10px;
+	}
+	table td#next {
+		padding-top: 10px;
+	}
 }
 
 .single-attachment {
