@@ -57,6 +57,10 @@ function decode_admin_header_style() {
 			text-align: center;
 			margin-bottom: 0.75%;
 		}
+
+		#comment-form-subscribe {
+			color: <?php echo get_theme_mod( 'text_color', '#444444' ); ?>;
+		}
 	</style>
 <?php
 }
