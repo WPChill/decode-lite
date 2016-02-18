@@ -789,6 +789,11 @@ a .attachment-post-thumbnail {
 		padding: 0 0 0 5%;
 		border-left: 0.15em solid var(--accent-color);
 		margin: 1.5% 0;
+
+		q:before,
+		q:after {
+			content: "''";
+		}
 	}
 	table {
 		width: 100%;
