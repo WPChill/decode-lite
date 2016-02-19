@@ -1581,6 +1581,10 @@ li.comment {
 	margin: 0;
 }
 
+.explore-page .widget ul li a:hover {
+	text-decoration: underline;
+}
+
 
 /*--------------------------------------------------------------
 14.0 - Infinite Scroll
