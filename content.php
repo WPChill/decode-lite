@@ -33,9 +33,15 @@
 	
 	<footer class="entry-footer">
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<div class="comments-link">
-				<?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?>
-			</div>
+			<?php if( get_theme_mod( 'show_leave_a_comment_link', true ) == true ): ?>
+				<div class="comments-link">
+					<?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?>
+				</div>
+			<?php else: ?>
+				<div class="comments-link">
+					<?php comments_popup_link( '', __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?>
+				</div>
+			<?php endif; ?>
 		<?php endif; ?>
 		
 		<?php edit_post_link( __( 'Edit', 'decode' ), '<div class="edit-link">', '</div>' ); ?>

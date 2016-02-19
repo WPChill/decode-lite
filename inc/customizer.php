@@ -1177,6 +1177,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'default'           => false,
 		'sanitize_callback' => 'decode_sanitize_boolean',
 	) );
+
+	$wp_customize->add_setting( 'show_leave_a_comment_link', array(
+		'default'           => true,
+		'sanitize_callback' => 'decode_sanitize_boolean',
+	) );
 	
 	$wp_customize->add_setting( 'entry_date_position', array(
 		'default'           => 'below',
@@ -1270,6 +1275,14 @@ public static function decode_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 8,
 	) );
+
+	/* Aici */
+	$wp_customize->add_control( 'show_leave_a_comment_link', array(
+		'label'    => __( 'Show "Leave a comment" link after posts.', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 9,
+	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
 		'label'   => __( 'Entry Date Position', 'decode' ),
@@ -1279,42 +1292,42 @@ public static function decode_customize_register( $wp_customize ) {
 			'above' => __( 'Above Header', 'decode' ),
 			'below' => __( 'Below Header', 'decode' ),
         ),
-		'priority' => 9,
+		'priority' => 10,
 	) );
 	
 	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
 		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 10,
+		'priority' => 11,
 	) );
 	
 	$wp_customize->add_control( 'show_allowed_tags', array(
 		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 11,
+		'priority' => 12,
 	) );
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'    => __( 'Show Page Headers', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 12,
+		'priority' => 13,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 13,
+		'priority' => 14,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
-		'priority' => 14,
+		'priority' => 15,
 	) );
 	
 	$wp_customize->add_control(
@@ -1324,7 +1337,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'section'  => 'decode_content_options',
 			'settings' => 'site_colophon',
 			'type'     => 'textarea',
-			'priority' => 15,
+			'priority' => 16,
 	) ) );
 	
 	
