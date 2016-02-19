@@ -1276,7 +1276,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority' => 8,
 	) );
 
-	/* Aici */
 	$wp_customize->add_control( 'show_leave_a_comment_link', array(
 		'label'    => __( 'Show "Leave a comment" link after posts.', 'decode' ),
 		'section'  => 'decode_content_options',
