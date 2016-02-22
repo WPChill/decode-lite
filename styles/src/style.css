@@ -863,6 +863,10 @@ a .attachment-post-thumbnail {
 	img {
 		max-width: 100%;
 	}
+	a[hreflang]:after {
+		content: "\0000a0[" attr(hreflang) "]";
+		background: transparent;
+	}
 }
 
 .single-attachment {
