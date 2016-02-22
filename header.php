@@ -126,5 +126,5 @@
 			
 		<?php endif; ?>
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content <?php if( get_theme_mod( 'center_content_mobile', false ) ): echo 'center-content-mobile'; endif; ?>">
 		<?php tha_content_top(); ?>

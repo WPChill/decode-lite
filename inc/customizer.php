@@ -1213,6 +1213,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_boolean',
 	) );
 
+	$wp_customize->add_setting( 'center_content_mobile', array(
+		'default'           => false,
+		'sanitize_callback' => 'decode_sanitize_boolean',
+	) );
+
 	$wp_customize->add_setting( 'site_colophon', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_html',
@@ -1327,6 +1332,14 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'  => 'decode_content_options',
 		'type'     => 'checkbox',
 		'priority' => 15,
+	) );
+
+	/* Aici */
+	$wp_customize->add_control( 'center_content_mobile', array(
+		'label'    => __( 'Center the content on mobile.', 'decode' ),
+		'section'  => 'decode_content_options',
+		'type'     => 'checkbox',
+		'priority' => 16,
 	) );
 	
 	$wp_customize->add_control(

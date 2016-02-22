@@ -1626,6 +1626,10 @@ li.comment {
 15.1 - Tablet (<35ems)
 --------------------------------------------------------------*/
 @media (min-width: 35em) {
+	.center-content-mobile {
+		text-align: center;
+	}
+	
 	.site-header, .site-breadcrumbs, .site-main, .site-footer, .sidebar-style-constant .site-header, .sidebar-style-constant .site-main, .sidebar-style-constant .site-footer {
 		width: 82.5%;
 	}
