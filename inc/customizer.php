@@ -626,6 +626,16 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 
+	$wp_customize->add_setting( 'google_scholar_url', array(
+		'default'           => '',
+		'sanitize_callback' => 'decode_sanitize_string',
+	) );
+
+	$wp_customize->add_setting( 'my_ncbi_bibliography_url', array(
+		'default'           => '',
+		'sanitize_callback' => 'decode_sanitize_string',
+	) );
+
 	$wp_customize->add_setting( 'pgp_username', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
@@ -1143,12 +1153,28 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 61,
 	) );
 
+	$wp_customize->add_control( 'google_scholar_url', array(
+		'label'           => sprintf( __( '%s URL', 'decode' ), 'Google Scholar' ),
+		'section'         => 'decode_social_options',
+		'active_callback' => 'decode_social_icons_are_enabled',
+		'type'            => 'text',
+		'priority'        => 62,
+	) );
+
+	$wp_customize->add_control( 'my_ncbi_bibliography_url', array(
+		'label'           => sprintf( __( '%s URL', 'decode' ), 'My NCBI Bibliography' ),
+		'section'         => 'decode_social_options',
+		'active_callback' => 'decode_social_icons_are_enabled',
+		'type'            => 'text',
+		'priority'        => 63,
+	) );
+
 	$wp_customize->add_control( 'pgp_username', array(
 		'label'           => sprintf( __( '%s Username', 'decode' ), 'PGP' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		'priority'        => 62,
+		'priority'        => 64,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
@@ -1157,7 +1183,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'          => 'email', /* Uncomment for WP >= 4.4 */
-		'priority'        => 63,
+		'priority'        => 65,
 	) );
 	
 	$wp_customize->add_control( 'website_link', array(
@@ -1166,7 +1192,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
-		'priority'        => 65,
+		'priority'        => 66,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
@@ -1174,7 +1200,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'checkbox',
-		'priority'        => 65,
+		'priority'        => 67,
 	) );
 	
 
