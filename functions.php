@@ -192,6 +192,11 @@ function decode_custom_css() {
 }
 add_action( 'wp_head', 'decode_custom_css', 11 ); // Priority of 11 will cause this to appear after the custom colors CSS.
 
+/**
+ *	TGM Plugin Activation
+ */
+require get_template_directory() . '/inc/tgm-plugin-activation/tgm-plugin-activation.php';
+
 /*
  * Custom template tags for this theme.
  */
