@@ -1334,7 +1334,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority' => 15,
 	) );
 
-	/* Aici */
 	$wp_customize->add_control( 'center_content_mobile', array(
 		'label'    => __( 'Center the content on mobile.', 'decode' ),
 		'section'  => 'decode_content_options',
