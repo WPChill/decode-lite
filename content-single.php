@@ -86,11 +86,6 @@
 				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
-			<?php
-			/* Aici
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-			*/
-			?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' ) : ?>
 			<div class="entry-meta">
