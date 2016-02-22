@@ -611,6 +611,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 
+	$wp_customize->add_setting( 'periscope_username', array(
+		'default'           => '',
+		'sanitize_callback' => 'decode_sanitize_string',
+	) );
+
 	$wp_customize->add_setting( 'pgp_username', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
@@ -1104,12 +1109,20 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 58,
 	) );
 
+	$wp_customize->add_control( 'periscope_username', array(
+		'label'           => sprintf( __( '%s Username', 'decode' ), 'Periscope' ),
+		'section'         => 'decode_social_options',
+		'active_callback' => 'decode_social_icons_are_enabled',
+		'type'            => 'text',
+		'priority'        => 59,
+	) );
+
 	$wp_customize->add_control( 'pgp_username', array(
 		'label'           => sprintf( __( '%s Username', 'decode' ), 'PGP' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
-		'priority'        => 59,
+		'priority'        => 60,
 	) );
 	
 	$wp_customize->add_control( 'email_address', array(
@@ -1118,7 +1131,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'          => 'email', /* Uncomment for WP >= 4.4 */
-		'priority'        => 60,
+		'priority'        => 61,
 	) );
 	
 	$wp_customize->add_control( 'website_link', array(
@@ -1127,7 +1140,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
 		//'type'          => 'url', /* Uncomment for WP >= 4.4 */
-		'priority'        => 61,
+		'priority'        => 62,
 	) );
 	
 	$wp_customize->add_control( 'show_rss_icon', array(
@@ -1135,7 +1148,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'checkbox',
-		'priority'        => 62,
+		'priority'        => 63,
 	) );
 	
 
