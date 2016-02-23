@@ -171,17 +171,17 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 /*--------------------------------------------------------------
 4.2 - Social Links
 --------------------------------------------------------------*/
-.social-links {
+.contact-links {
 	display: block;
 	margin: 1% 0;
 }
 
-.social-links-container {
+.contact-links-container {
 	text-align: center;
 	margin: 0 auto;
 }
 
-.social-link {
+.contact-link {
 	transition: opacity 0.4s ease-out;
 	border: none;
 	margin: 0 1%;
@@ -1673,12 +1673,12 @@ li.comment {
 		width: 55%;
 	}
 
-	.social-links {
+	.contact-links {
 		margin: 1.5% auto;
 	}
 
-	.social-link svg,
-	.social-link img {
+	.contact-link svg,
+	.contact-link img {
 		width: 2.5em;
 		height: 2.5em;
 	}
@@ -1827,13 +1827,13 @@ li.comment {
 		margin-top: 3.5%;
 	}
 
-	.social-link svg,
-	.social-link img {
+	.contact-link svg,
+	.contact-link img {
 		width: 2.75em;
 		height: 2.75em;
 	}
 
-	.no-inlinesvg .social-link {
+	.no-inlinesvg .contact-link {
 		margin: 1%;
 	}
 
@@ -1913,8 +1913,8 @@ li.comment {
 		font-size: 4em;
 	}
 
-	.social-link svg,
-	.social-link img {
+	.contact-link svg,
+	.contact-link img {
 		width: 3em;
 		height: 3em;
 	}
@@ -1961,7 +1961,7 @@ li.comment {
 @media only print {
 	.sidebar,
 	.sidebar-link,
-	.social-links,
+	.contact-links,
 	.menu,
 	.posts-navigation,
 	.comments-link,
