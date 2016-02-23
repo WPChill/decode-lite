@@ -94,6 +94,14 @@ Decode is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	*zoom: 1;
 }
 
+.customizer-display-none {
+	display: none !important;
+}
+
+.customizer-display-block {
+	display: block !important;
+}
+
 .site {
 	overflow: auto;
 	width: 100%;
