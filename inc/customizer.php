@@ -1493,7 +1493,8 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'accent_color', array(
 		'default'           => '#00B0CC',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_setting( 'secondary_accent_color', array(
@@ -1504,11 +1505,13 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'text_color', array(
 		'default'           => '#444444',
 		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_setting( 'secondary_text_color', array(
 		'default'           => '#808080',
 		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'			=> 'postMessage'
 	) );
 	
 	$wp_customize->add_setting( 'accent_color_icons', array(
