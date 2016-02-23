@@ -176,4 +176,26 @@
 			}
 		});
 	});
+
+	// Show "Leave a comment" link after posts.
+	wp.customize( 'show_leave_a_comment_link', function( value ) {
+		value.bind( function( to ) {
+			if( to == false ) {
+				$( '.comments-link[data-customizer="leave-a-comment"]' ).addClass( 'customizer-display-none' );
+			} else if( to == true ) {
+				$( '.comments-link[data-customizer="leave-a-comment"]' ).removeClass( 'customizer-display-none' );
+			}
+		});
+	});
+
+	// Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)
+	wp.customize( 'show_theme_info', function( value ) {
+		value.bind( function( to ) {
+			if( to == false ) {
+				$( '.theme-info' ).addClass( 'customizer-display-none' );
+			} else if( to == true ) {
+				$( '.theme-info' ).removeClass( 'customizer-display-none' );
+			}
+		});
+	});
 } )( jQuery );

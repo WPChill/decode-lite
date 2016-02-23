@@ -33,7 +33,7 @@
 	<footer class="entry-footer">
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 			<?php if( get_theme_mod( 'show_leave_a_comment_link', true ) == true ): ?>
-				<div class="comments-link">
+				<div class="comments-link" data-customizer="leave-a-comment">
 					<?php comments_popup_link( __( 'Leave a comment', 'decode' ), __( '1 Comment', 'decode' ), __( '% Comments', 'decode' ) ); ?>
 				</div>
 			<?php else: ?>

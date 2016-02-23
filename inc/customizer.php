@@ -1251,7 +1251,7 @@ public static function decode_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'show_tags', array(
 		'default'           => false,
-		'sanitize_callback' => 'decode_sanitize_boolean',
+		'sanitize_callback' => 'decode_sanitize_boolean'
 	) );
 
 	$wp_customize->add_setting( 'show_categories', array(
@@ -1267,6 +1267,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'show_leave_a_comment_link', array(
 		'default'           => true,
 		'sanitize_callback' => 'decode_sanitize_boolean',
+		'transport'			=> 'postMessage'
 	) );
 	
 	$wp_customize->add_setting( 'entry_date_position', array(
@@ -1297,6 +1298,7 @@ public static function decode_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'show_theme_info', array(
 		'default'           => true,
 		'sanitize_callback' => 'decode_sanitize_boolean',
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_setting( 'center_content_mobile', array(
@@ -1491,7 +1493,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'accent_color', array(
 		'default'           => '#00B0CC',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 
 	$wp_customize->add_setting( 'secondary_accent_color', array(
