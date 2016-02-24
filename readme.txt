@@ -5,7 +5,7 @@ Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, c
 
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 3.0.7
+Stable tag: 3.10.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,23 +32,56 @@ Decode includes support for:
 
 == Changelog ==
 
-= 3.0.7 - April 18 2015 =
-= Added: =
-* Jetpack Site Logo support
-* Czech translation
-* HTML 5 widget output in WordPress 4.2
+### v3.10.0
+	Added:
+		- TGM recommend WPPR.
+		- StumbleUpon Social Icon.
+		- New social icons - Google Scholar and My NCBI Bibliography.
+		- Social Icon for Amazon Wishlist.
+		- Live update for fields.
+		- Add Periscope Icon.
+		- Social icon for PGP public key.
+		- Add PayPal donation button to the Social buttons.
 
-= Improved: =
-* Support YouTube URLs (Existing YouTube URLs will need to be re-added)
-* Better post pagination design
-* New default text colors
+	Improved:
+		- Change copyright message / link.
+		- Move the sidebar close button, to align right when sidebar is left.
+		- Center alignment for posts.
+		- Changing global width.
+		- Credits FR translation mistake.
+		- Change the theme credits to 'Decode Theme by Scott Smith'.
+		- Maximum image width is too narrow.
+		- For href html tag, support hreflang attribute by showing it to visitors.
+		- Hide "Leave a comment" link.
+		- Support Inline quoting htlm tag <q>.
+		- Request: add some <table> styling.
+		- Comment and blog subscription label not visible when page background is black.
+		- Too much indentation in lists.
 
-= Removed: =
-* Enable Comments option
-* Google Authorship
+	Removed:
+		- Errors from Theme Check plugin.
 
-= Fixed: =
-* Fix large type in <pre> and <code> tags
+	Fixed:
+		- Different title styles.
+		- Hover text-decoration in Explore page.
+
+### v3.0.7
+	Added:
+		- Jetpack Site Logo support.
+		- Czech translation.
+		- HTML 5 widget output in WordPress 4.2.
+
+	Improved:
+		- Support YouTube URLs (Existing YouTube URLs will need to be re-added).
+		- Better post pagination design.
+		- New default text colors.
+
+	Removed:
+		- Enable Comments option.
+		- Google Authorship.
+
+	Fixed:
+		- Fix large type in <pre> and <code> tags.
 
 == Credits ==
 

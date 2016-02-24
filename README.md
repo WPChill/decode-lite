@@ -76,6 +76,13 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - Skype
 - Website
 - Email
+- StumbleUpon
+- Google Scholar
+- My NCBI Bibliography
+- Amazon Wishlist
+- Periscope
+- PGP
+- PayPal
 
 To find un-minified, vendor-prefixed CSS, look no further than the .css files in the "styles" directory. No seriously, don't look any further because the styles/src directory contains un-prefixed sass files that you may not want to work with.
 
