@@ -135,6 +135,8 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' ) ->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_image'  )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_image_data'  )->transport = 'postMessage';
 
 /**
  * Remove old, now unused theme modifications so that conflicts do not occur.
@@ -1515,6 +1517,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'accent_color_icons', array(
 		'default'           => false,
 		'sanitize_callback' => 'decode_sanitize_boolean',
+		'transport'			=> 'postMessage'
 	) );
 
 
@@ -1681,7 +1684,7 @@ public static function decode_customize_register( $wp_customize ) {
 				'text_color'
 			);
 				
-				self::generate_css(
+			self::generate_css(
 				'.no-touch input[type=text]:focus, .touch input[type=text]:focus, .no-touch input[type=email]:focus, .touch input[type=email]:focus, .no-touch input[type=password]:focus, .touch input[type=password]:focus, .no-touch input[type=search]:focus, .touch input[type=search]:focus, .no-touch input[type=tel]:focus, .touch input[type=tel]:focus, .no-touch input[type=url]:focus, .touch input[type=url]:focus, .no-touch textarea:focus, .touch textarea:focus, .no-touch .search .page-header input[type=search]:focus, .touch .search .page-header input[type=search]:focus',
 				'border-color',
 				'accent_color'
