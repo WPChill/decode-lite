@@ -144,28 +144,6 @@
 		});
 	});
 
-	// Show Social Icons in Header
-	wp.customize( 'show_header_social_icons', function( value ) {
-		value.bind( function( to ) {
-			if( to == false ) {
-				$( '.site-header .contact-links' ).addClass( 'customizer-display-none' );
-			} else if( to == true ) {
-				$( '.site-header .contact-links' ).removeClass( 'customizer-display-none' );
-			}
-		});
-	});
-
-	// Show Social Icons in Footer
-	wp.customize( 'show_footer_social_icons', function( value ) {
-		value.bind( function( to ) {
-			if( to == false ) {
-				$( '.site-footer .contact-links' ).addClass( 'customizer-display-none' );
-			} else if( to == true ) {
-				$( '.site-footer .contact-links' ).removeClass( 'customizer-display-none' );
-			}
-		});
-	});
-
 	// Open Links in New Tab/Window
 	wp.customize( 'open_links_in_new_tab', function( value ) {
 		value.bind( function( to ) {

@@ -329,14 +329,12 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'show_header_social_icons', array(
 		'default'           => false,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-		'transport'			=> 'postMessage'
+		'sanitize_callback' => 'decode_sanitize_boolean'
 	) );
 	
 	$wp_customize->add_setting( 'show_footer_social_icons', array(
 		'default'           => false,
-		'sanitize_callback' => 'decode_sanitize_boolean',
-		'transport'			=> 'postMessage'
+		'sanitize_callback' => 'decode_sanitize_boolean'
 	) );
 	
 	$wp_customize->add_setting( 'open_links_in_new_tab', array(
