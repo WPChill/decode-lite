@@ -29,7 +29,7 @@
 	
 	</div><!-- .entry-content -->
 	
-	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'decode' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 	
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
