@@ -1,10 +1,6 @@
 # Decode 3.0
-[![GitHub Release](http://img.shields.io/github/release/ScottSmith95/Decode.svg?style=flat)](https://github.com/ScottSmith95/Decode/releases/latest)
-[![Built with Grunt](http://img.shields.io/badge/built_with-GRUNT-orange.svg?style=flat)](http://gruntjs.com/)
-[![devDependency Status](http://img.shields.io/david/dev/ScottSmith95/Decode.svg?style=flat)](https://david-dm.org/ScottSmith95/Decode#info=devDependencies)
-[![Build Status](http://img.shields.io/travis/ScottSmith95/Decode.svg?style=flat)](https://travis-ci.org/ScottSmith95/Decode)
 
-Changelogs for each version can be found [on GitHub](https://github.com/ScottSmith95/Decode/releases).
+Changelogs for each version can be found [on GitHub](https://github.com/MachoThemes/Decode/releases).
 
 I built Decode to be a beautifully crafted, modern theme that puts mobile devices first. 
 
