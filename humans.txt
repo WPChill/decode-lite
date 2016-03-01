@@ -1,49 +1,48 @@
 /* Author */
-	Name:    Scott Smith
-	Email:   mail@ScottHSmith.com
-	URI:     http://ScottHSmith.com
-	Twitter: @ScottSmith95
+Name:    Macho Themes
+Email:   office@machothemes.com
+URI:     http://www.machothemes.com
+Twitter: @machothemes
 
 /* Translation Credits */
-	Chinese Translation: Daihui Gu
-	Email:               yhzhtk@gmail.com
-	URL:                 http://yhzhtk.info/
-	
-	Czech Translation:   Christian Kopec
-	Email:               chkopec@yahoo.com
-	Twitter:             @chkopec
-	
-	Dutch Translation:   Tom van den Kieboom
-	Email:               tvdkieboom@sharp-edge.nl
-	URL:                 http://www.sharp-edge.nl
-	
-	French Translation:  Stéphane Bataillon
-	Email:               sbataillon@yahoo.fr
-	URI:                 http://www.stephanebataillon.com
-	Twitter:             @sbataillon
-	
-	German Translation:  Christoph Purschke
-	Email:               christoph@purschke.info
-	URL:                 http://purschke.info
-	Twitter:             @cpu_inside
-	
-	Polish Translation:  Mateusz Wozniak
-	Email:               m.wozniak@gmx.net
-	URL:                 multilingua.pl
-	Twitter:             @MateuszJWozniak
-	Updated by:          Michał Maciejewski
-	Email:               admin@echidna-computers.pl
-	
-	Russian Translation: Michael Yesutin
-	Email:               michael@yesutin.com
-	URL:                 http://about.me/yesutin
-	Twitter:             @yesutin
-	
-	Spanish Translation: Xabier Obanos
-	Email:               xobanos@gmail.com
+Chinese Translation: Daihui Gu
+Email:               yhzhtk@gmail.com
+URL:                 http://yhzhtk.info/
 
-	Persian Translation: Benyamin Salimi
-	Email:               benyamin.salimi@gmail.com
-	URL:                 http://cyanogen.ir
-	Twitter:             @benyaminsalimi
-	
+Czech Translation:   Christian Kopec
+Email:               chkopec@yahoo.com
+Twitter:             @chkopec
+
+Dutch Translation:   Tom van den Kieboom
+Email:               tvdkieboom@sharp-edge.nl
+URL:                 http://www.sharp-edge.nl
+
+French Translation:  Stéphane Bataillon
+Email:               sbataillon@yahoo.fr
+URI:                 http://www.stephanebataillon.com
+Twitter:             @sbataillon
+
+German Translation:  Christoph Purschke
+Email:               christoph@purschke.info
+URL:                 http://purschke.info
+Twitter:             @cpu_inside
+
+Polish Translation:  Mateusz Wozniak
+Email:               m.wozniak@gmx.net
+URL:                 multilingua.pl
+Twitter:             @MateuszJWozniak
+Updated by:          Michał Maciejewski
+Email:               admin@echidna-computers.pl
+
+Russian Translation: Michael Yesutin
+Email:               michael@yesutin.com
+URL:                 http://about.me/yesutin
+Twitter:             @yesutin
+
+Spanish Translation: Xabier Obanos
+Email:               xobanos@gmail.com
+
+Persian Translation: Benyamin Salimi
+Email:               benyamin.salimi@gmail.com
+URL:                 http://cyanogen.ir
+Twitter:             @benyaminsalimi
