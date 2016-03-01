@@ -6,7 +6,9 @@
  */
 
 function decode_add_customize_controls( $wp_customize ) {
-	/* Adds Textarea Control (Required until WP 4.4) */
+	/**
+	 *	Adds Textarea Control (Required until WP 4.4)
+	 */
 	class Decode_Customize_Textarea_Control extends WP_Customize_Control {
 	    public $type = 'textarea';
 	 
@@ -20,10 +22,64 @@ function decode_add_customize_controls( $wp_customize ) {
 	    }
 	}
 	
-	/* Adds a favicon image uploader control that only allows .ico and .png files to be uploaded */
+	/**
+	 *	Adds a favicon image uploader control that only allows .ico and .png files to be uploaded.
+	 */
 	class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
 		public $extensions = array( 'png', 'ico', 'image/x-icon' );
 	}
+
+	/**
+	 *	Slider Control
+	 */
+	class Decode_Customize_Slider_Control extends WP_Customize_Control {
+
+        public $type = 'slider';
+
+        public function enqueue() {
+            wp_enqueue_script( 'jquery-ui' );
+            wp_enqueue_script( 'jquery-ui-slider' );
+            wp_enqueue_style( 'decode-customize-slider-controle', get_template_directory_uri() . '/inc/customizer/assets/css/slider-control/slider-control.css' );
+        }
+
+        public function render_content() { ?>
+            <label>
+
+                <span class="customize-control-title">
+                    <?php echo esc_attr( $this->label ); ?>
+                    <?php if ( ! empty( $this->description ) ) : ?>
+                        <span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+                    <?php endif; ?>
+                </span>
+
+                <input type="text" class="rl-slider" id="input_<?php echo $this->id; ?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?>/>
+
+            </label>
+
+            <div id="slider_<?php echo $this->id; ?>" class="ss-slider"></div>
+            <script>
+                jQuery(document).ready(function($) {
+                    $( '[id="slider_<?php echo $this->id; ?>"]' ).slider({
+                        value : <?php echo esc_attr( $this->value() ); ?>,
+                        min   : <?php echo $this->choices['min']; ?>,
+                        max   : <?php echo $this->choices['max']; ?>,
+                        step  : <?php echo $this->choices['step']; ?>,
+                        slide : function( event, ui ) { $( '[id="input_<?php echo $this->id; ?>"]' ).val(ui.value).keyup(); }
+                    });
+                    $( '[id="input_<?php echo $this->id; ?>"]' ).val( $( '[id="slider_<?php echo $this->id; ?>"]' ).slider( "value" ) );
+
+                    $( '[id="input_<?php echo $this->id; ?>"]' ).change(function() {
+                        $( '[id="slider_<?php echo $this->id; ?>"]' ).slider({
+                            value : $( this ).val()
+                        });
+                    });
+
+                });
+            </script>
+            <?php
+
+        }
+    }
 }
 add_action( 'customize_register', 'decode_add_customize_controls' );
 
@@ -1306,6 +1362,11 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_boolean',
 	) );
 
+	$wp_customize->add_setting( 'content_width', array(
+		'default'			=> 792,
+		'sanitize_callback'	=> 'absint'
+	) );
+
 	$wp_customize->add_setting( 'site_colophon', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_html',
@@ -1428,6 +1489,19 @@ public static function decode_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 16,
 	) );
+
+	$wp_customize->add_control(
+		new Decode_Customize_Slider_Control(
+		$wp_customize, 'content_width', array(
+			'label'			=> esc_html__( 'Content Width', 'decode' ),
+			'choices'		=> array(
+				'min'	=> 640,
+				'max'	=> 792,
+				'step'	=> 1
+			),
+			'section'		=> 'decode_content_options',
+			'priority'		=> 17,
+	) ) );
 	
 	$wp_customize->add_control(
 		new Decode_Customize_Textarea_Control(
@@ -1436,7 +1510,7 @@ public static function decode_customize_register( $wp_customize ) {
 			'section'  => 'decode_content_options',
 			'settings' => 'site_colophon',
 			'type'     => 'textarea',
-			'priority' => 16,
+			'priority' => 18,
 	) ) );
 	
 	
