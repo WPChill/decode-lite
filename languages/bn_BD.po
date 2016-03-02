@@ -1,0 +1,1147 @@
+# LANGUAGE (LOCALE) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2016-02-29 23:58+0200\n"
+"PO-Revision-Date: 2016-02-29 23:58+0200\n"
+"Last-Translator: nafSadh Khan <khan@nafsadh.com>\n"
+"Language-Team: nafSadh Khan <khan@nafsadh.com>\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "আহাঃ! পাতাটি পাওয়া যায়নি"
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"দেখা যাচ্ছে এখানে কিছু পাওয়া যায় নি । নিচের একটি একটি লিংক দেখুন, কিংবা আবারো সার্চ "
+"করুন!"
+
+#: 404.php:26
+msgid "Try looking in the monthly archives."
+msgstr "মাসিক আর্কাইভ সমূহে দেখুন"
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr "বেশি ব্যবহৃত বিভাগ"
+
+#: author.php:26 inc/template-tags.php:215
+#, php-format
+msgid "Author: %s"
+msgstr "লিখেছেন: %s"
+
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; নিয়ে একটি মন্তব্য"
+msgstr[1] "&ldquo;%2$s&rdquo; সম্পর্কে %1$sটি মন্তব্য"
+
+#: comments.php:34 comments.php:58
+msgid "Comment navigation"
+msgstr "মন্তব্য নেভিগেশন"
+
+#: comments.php:37 comments.php:61
+msgid "Older Comments"
+msgstr "আগের মন্তব্য"
+
+#: comments.php:38 comments.php:62
+msgid "Newer Comments"
+msgstr "নতুন মন্তব্য"
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr "কমেন্ট বন্ধ"
+
+#: comments.php:79
+msgid "Leave a Reply"
+msgstr "প্রত্যুত্তর দিন"
+
+#: comments.php:80
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "%s এর জবাব"
+
+#: comments.php:81
+msgid "Cancel reply"
+msgstr "জবাব বাতিল"
+
+#: comments.php:82
+msgid "Post Comment"
+msgstr "মন্তব্য প্রকাশ"
+
+#: comments.php:101
+msgctxt "noun"
+msgid "Comment"
+msgstr "মন্তব্য"
+
+#: comments.php:102
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "এখানে মন্তব্য করতে <a href=\"%s\">লগ-ইন</a> করতে হবে । "
+
+#: comments.php:103
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
+"account\">Log out?</a>"
+msgstr ""
+"<a href=\"%1$s\">%2$s</a> হিসেবে লগ-ইন আছেন । <a href=\"%3$s\" title=\"Log out of "
+"this account\">লগ-আউট?</a>"
+
+#: comments.php:104
+msgid "Your email address will not be published."
+msgstr "আপনার ই-মেইল ঠিকানা কারো কাছে প্রকাশ করা হবে না ।"
+
+#: comments.php:105
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and "
+"attributes: %s"
+msgstr ""
+"এই  <abbr title=\"HyperText Markup Language\">এইচটিএমএল</abbr> ট্যাগ ও  অ্যাট্রিবিউট "
+"সমূহ ব্যবহার করতে পারেন: %s"
+
+#: content-excerpt.php:33
+msgid "Read More&hellip;"
+msgstr "আরও পড়ুন&hellip;"
+
+#: content-excerpt.php:35 content-link.php:46 content-page.php:32
+#: content-quote.php:33 content-search.php:20 content-single.php:22
+#: content-single.php:62 content-single.php:111 content.php:47 image.php:29
+msgid "Edit"
+msgstr "পরিমার্জন"
+
+#: content-link.php:29 content-quote.php:15 content-single.php:14
+#: content-single.php:56 content-single.php:98 content.php:29
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "আরও <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-link.php:31 content-page.php:28 content-quote.php:18
+#: content-single.php:17 content-single.php:102 content.php:32 image.php:90
+msgid "Pages:"
+msgstr "পাতা সমূহ:"
+
+#: content-link.php:37 content-quote.php:24 content.php:38
+msgid "Leave a comment"
+msgstr "কিছু একটা লিখে যান"
+
+#: content-link.php:37 content-link.php:41 content-quote.php:24 content-quote.php:28
+#: content.php:38 content.php:42
+msgid "1 Comment"
+msgstr "১টি মন্তব্য"
+
+#: content-link.php:37 content-link.php:41 content-quote.php:24 content-quote.php:28
+#: content.php:38 content.php:42
+msgid "% Comments"
+msgstr "%টি মন্তব্য"
+
+#: content-link.php:50 content-quote.php:37 content-single.php:25
+#: content-single.php:65 content-single.php:114 content.php:51
+msgid "Tagged as: "
+msgstr "ট্যাগায়িত:"
+
+#: content-link.php:53 content-quote.php:40 content-single.php:26
+#: content-single.php:66 content-single.php:115 content.php:54
+msgid "Categorized in&#58; "
+msgstr "বিভাগ &#58; "
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "কিছু পাওয়া যায় নি"
+
+#: content-none.php:19
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "লেখবেন নাকি আপনার প্রথম লেখা? <a href=\"%1$s\">শুরু হোক এখানেই</a>।"
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "আহাঃ! কিছু খুঁজে পাওয়া যায় নি । অন্যান্য শব্দ দিয়ে খোঁজ করুন ।"
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can "
+"help."
+msgstr "দেখা যাচ্ছে আপনি যা খুঁজছেন তা পাওযা যাচ্ছে না । সার্চ করে দেখতে পারেন ।"
+
+#: footer.php:44
+#, php-format
+msgid "%1$s by %2$s"
+msgstr "%1$s দ্বারা %2$s"
+
+#: footer.php:44
+msgid "Theme"
+msgstr ""
+
+#: functions.php:26
+msgid "Header Menu"
+msgstr "হেডার মেনু"
+
+#: functions.php:27
+msgid "Sidebar Menu"
+msgstr "সাইডবার মেনু"
+
+#: functions.php:28
+msgid "Footer Menu"
+msgstr "ফুটার মেনু"
+
+#: functions.php:169
+msgid "Sidebar"
+msgstr "সাইডবার"
+
+#: functions.php:171
+msgctxt "sidebar description"
+msgid "Only displayed if sidebar remains enabled in the Customize menu."
+msgstr "কাস্টমাইজ মেনুতে সাইডবার সক্রিয় করা কেবল থাকলেই দেখাবে ।"
+
+#: header.php:35
+msgid "Skip to content"
+msgstr "সরাসরি কন্টেন্টে"
+
+#: header.php:39
+msgid "Show sidebar"
+msgstr "সাইডবার প্রদর্শন"
+
+#: image.php:21
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">"
+"%2$s</time></span> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery\">"
+"%5$s</a>"
+msgstr ""
+
+#: image.php:33
+msgid "Previous"
+msgstr "আগের"
+
+#: image.php:34
+msgid "Next"
+msgstr "পরের"
+
+#: inc/customizer.php:168
+msgid "Header Options"
+msgstr "হেডার অপশন"
+
+#: inc/customizer.php:206
+msgid "Favicon Image (must be a PNG)"
+msgstr "ফেভিকন (পিএনজি)"
+
+#: inc/customizer.php:213
+msgid "Show Site Title"
+msgstr "সাইটের নাম দেখাও"
+
+#: inc/customizer.php:220
+msgid "Show Site Description"
+msgstr "সাইট বর্ণনা দেখাও"
+
+#: inc/customizer.php:227
+msgid "Show Header Menu"
+msgstr "হেডার মেনু দেখাও"
+
+#: inc/customizer.php:234
+msgid ""
+"HTML for description, if you wish to replace your blog description with HTML "
+"markup"
+msgstr "এইচটিএমএল বর্ণনা (ব্লগের বর্ণনা এইচটিএমএল মার্কাপ ব্যবহার করে দেখাতে চাইলে)"
+
+#: inc/customizer.php:248
+msgid "Sidebar Options"
+msgstr "সাইডবার অপশন সমূহ"
+
+#: inc/customizer.php:279
+msgid "Enable Sidebar"
+msgstr "সাইডবার এনাবল"
+
+#: inc/customizer.php:286
+msgid "Sidebar Position"
+msgstr "সাইডবারের অবস্থান"
+
+#: inc/customizer.php:291 inc/customizer.php:303
+msgid "Left"
+msgstr "বাম"
+
+#: inc/customizer.php:292 inc/customizer.php:304
+msgid "Right"
+msgstr "ডান"
+
+#: inc/customizer.php:298
+msgid "Sidebar Button Position"
+msgstr "সাইডবার বাটন অবস্থান"
+
+#: inc/customizer.php:310
+msgid "Always Visible Sidebar"
+msgstr "সাইডবার সবসময় দৃশ্যমান"
+
+#: inc/customizer.php:315
+msgctxt "Sidebar option"
+msgid "Always open"
+msgstr "সবসময় খোলা"
+
+#: inc/customizer.php:316
+msgctxt "Sidebar option"
+msgid "Closed by default"
+msgstr "ডিফল্টে বন্ধ"
+
+#: inc/customizer.php:328
+msgid "Social Options"
+msgstr "সোস্যাল অপশন সমূহ"
+
+#: inc/customizer.php:670 inc/customizer.php:677
+msgid "Show Social Icons"
+msgstr "সোস্যাল আইকন দেখানো হোক"
+
+#: inc/customizer.php:670
+msgid "in Header"
+msgstr "হেডারে"
+
+#: inc/customizer.php:677
+msgid "in Footer"
+msgstr "ফুটারে"
+
+#: inc/customizer.php:684
+msgid "Open Links in New Tab/Window"
+msgstr "লিংক নতুন ট্যাব/উইন্ডোতে খোলা হোক"
+
+#: inc/customizer.php:692 inc/customizer.php:700 inc/customizer.php:708
+#: inc/customizer.php:717 inc/customizer.php:725 inc/customizer.php:733
+#: inc/customizer.php:742 inc/customizer.php:750 inc/customizer.php:758
+#: inc/customizer.php:766 inc/customizer.php:774 inc/customizer.php:791
+#: inc/customizer.php:799 inc/customizer.php:807 inc/customizer.php:815
+#: inc/customizer.php:823 inc/customizer.php:831 inc/customizer.php:839
+#: inc/customizer.php:847 inc/customizer.php:855 inc/customizer.php:863
+#: inc/customizer.php:880 inc/customizer.php:897 inc/customizer.php:905
+#: inc/customizer.php:913 inc/customizer.php:921 inc/customizer.php:929
+#: inc/customizer.php:954 inc/customizer.php:962 inc/customizer.php:979
+#: inc/customizer.php:1013 inc/customizer.php:1021 inc/customizer.php:1029
+#: inc/customizer.php:1037 inc/customizer.php:1053 inc/customizer.php:1070
+#: inc/customizer.php:1078 inc/customizer.php:1086 inc/customizer.php:1094
+#: inc/customizer.php:1102 inc/customizer.php:1126 inc/customizer.php:1142
+#: inc/customizer.php:1182
+#, php-format
+msgid "%s Username"
+msgstr "%s উইজার-নাম"
+
+#: inc/customizer.php:709 inc/customizer.php:734
+msgid " (or the long number in your profile URL)"
+msgstr " (অথাবা প্রোফাইল ইউআরএ়ল-এ লম্বা সংখ্যাটি)"
+
+#: inc/customizer.php:782 inc/customizer.php:1061 inc/customizer.php:1110
+#: inc/customizer.php:1118
+#, php-format
+msgid "%s Profile URL"
+msgstr "%s প্রোফাইল ইউআরএল"
+
+#: inc/customizer.php:871 inc/customizer.php:945 inc/customizer.php:970
+#: inc/customizer.php:987 inc/customizer.php:996
+#, php-format
+msgid "%s Site URL"
+msgstr "%s সাইট ইউআরএল"
+
+#: inc/customizer.php:888 inc/customizer.php:937 inc/customizer.php:1199
+#, php-format
+msgid "%s Link"
+msgstr "%s লিংক"
+
+#: inc/customizer.php:1005 inc/customizer.php:1045
+#, php-format
+msgid "%s User ID"
+msgstr "%s উইজার আইডি"
+
+#: inc/customizer.php:1134 inc/customizer.php:1150 inc/customizer.php:1158
+#: inc/customizer.php:1166 inc/customizer.php:1174
+#, php-format
+msgid "%s URL"
+msgstr ""
+
+#: inc/customizer.php:1190
+msgid "Email Address"
+msgstr "ই-মেইল ঠিকানা"
+
+#: inc/customizer.php:1208
+msgid "RSS Feed"
+msgstr "আরএসএস ফিড"
+
+#: inc/customizer.php:1221
+msgid "Content Options"
+msgstr "কন্টেন্ট অপশন"
+
+#: inc/customizer.php:1223
+#, php-format
+msgctxt "(blog name)'s content."
+msgid "These options change the display of %s's content"
+msgstr "এই অপশনগুলো %s এর কন্টেন্ট প্রদর্শন বদলে দেয় ।"
+
+#: inc/customizer.php:1317
+msgid "Load Latin Extended character set. This will increase page load times."
+msgstr ""
+"ল্যাটিন এক্সটেন্ডেড ক্যারাকটার সেট ও লোড করা হোক । এটি পেজ লোডের সময় বাড়িয়ে দেবে ।"
+
+#: inc/customizer.php:1324
+msgid "Use entry excerpts instead of full text on site home. Excludes sticky posts."
+msgstr "সাইট হোমে পুরো লেখার বদলে সারাংশ (এক্সার্প্ট) দেখানো হোক (স্টিকি পোস্ট বাদে) ।"
+
+#: inc/customizer.php:1331
+msgid "Use entry excerpts on archive, category, and author pages."
+msgstr "আর্কাইভ, বিভাগ ও লেখক পাতায় সারাংশ (এক্সার্প্ট) দেখানো হোক ।"
+
+#: inc/customizer.php:1338
+msgid "Display posts' featured images when excerpts are shown."
+msgstr "সারাংশ (এক্সার্প্ট) এর সাথে ফিচার ছবিও দেখানো হোক ।"
+
+#: inc/customizer.php:1345
+msgid "Display a post's featured image on its individual page."
+msgstr "লেখার ফিচার ছবি তার নিজস্ব পাতায় দেখানো হোক ।"
+
+#: inc/customizer.php:1352
+msgid "Show tags on front page (tags will be shown on post's individual page)"
+msgstr "মূল পাতায় ট্যাগ দেখানো হোক (লেখার নিজস্ব পাতায় ট্যাগ তো দেখানো হবেই)"
+
+#: inc/customizer.php:1359
+msgid ""
+"Show categories on front page (categories will be shown on post's individual page)"
+msgstr "মূল পাতায় বিভাগ দেখানো হোক (লেখার নিজস্ব পাতায় তো বিভাগ উল্লেখ করা হবেই)"
+
+#: inc/customizer.php:1366
+msgid "Show author's name, profile image, and bio after posts"
+msgstr "লেখার পরে লেখাক/লেখিকার নাম, ছবি ও জীবনী দেখানো হোক ।"
+
+#: inc/customizer.php:1373
+msgid "Show \"Leave a comment\" link after posts."
+msgstr ""
+
+#: inc/customizer.php:1380
+msgid "Entry Date Position"
+msgstr "প্রকাশনার তারিখের অবস্থান"
+
+#: inc/customizer.php:1384
+msgid "Above Header"
+msgstr "হেডারের উপরে"
+
+#: inc/customizer.php:1385
+msgid "Below Header"
+msgstr "হেডারের নিচে"
+
+#: inc/customizer.php:1391
+msgid "Show entry date for post excepts on the main page"
+msgstr "লেখার সাথে প্রকাশের তারিখ দেখানো হোক (মূল পাতা বাদে)"
+
+#: inc/customizer.php:1398
+msgid "Show allowed HTML tags on comment form"
+msgstr "মন্তব্য ফর্মে গ্রহণযোগ্য  এইচটিএমএল ট্যাগ দেখানো হোক"
+
+#: inc/customizer.php:1405
+msgid "Show Page Headers"
+msgstr "পেজ হেডার সমূহ দেখানো হোক"
+
+#: inc/customizer.php:1412
+msgid "Add an arrow before the title of a link post"
+msgstr "লিংক পোস্টের আগে একটি তীর চিহ্ন দেখানো হোক"
+
+#: inc/customizer.php:1419
+msgid ""
+"Show Theme Info (display a line of text about the theme and its creator at the "
+"bottom of pages)"
+msgstr ""
+"থিমের তথ্য দেখানো হোক (পাতার একদম নিচের দিকে থিম এবং থিম যে বানিয়েছে তার তথ্য "
+"দেখানো হবে)"
+
+#: inc/customizer.php:1426
+msgid "Center the content on mobile."
+msgstr ""
+
+#: inc/customizer.php:1435
+msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
+msgstr "সাইটের ফুটারে দেখানোর জন্য টেক্সট (কপিরাইট, ক্রেডিট, কলোফোন ইত্যাদি)"
+
+#: inc/customizer.php:1449
+msgid "Other Options"
+msgstr "অন্যান্য অপশন"
+
+#: inc/customizer.php:1450
+msgid ""
+"Custom CSS is longer recommended. This feature may be removed in a future update. "
+"To continue using your tweaks, copy and paste your CSS into a custom CSS plugin "
+"such as <a href=\"http://jetpack.me/install/\">Jetpack</a>. Get help <a href="
+"\"http://jetpack.me/support/custom-css/\">here</a>."
+msgstr ""
+
+#: inc/customizer.php:1471
+msgid "Custom CSS"
+msgstr "কাস্টম সিএসএস"
+
+#: inc/customizer.php:1482
+msgid "Show the following post types on home blog page. (Separate with commas)"
+msgstr "নিম্নোক্ত প্রকারের পোস্ট গুলো হোম পেজে দেখানো হোক (কমা দিয়ে আলাদা করুন)"
+
+#: inc/customizer.php:1525
+msgid "Accent Color"
+msgstr "অ্যাক্সেন্ট রং"
+
+#: inc/customizer.php:1526
+msgid "The main color used for links, borders, buttons, and more."
+msgstr "লিংক, বর্ডার, বাটন ইত্যাদি ব্যবহারের জন্য প্রধান রং"
+
+#: inc/customizer.php:1533
+msgid "Active Link Color"
+msgstr "অ্যাকটিভ লিংকের রং"
+
+#: inc/customizer.php:1534
+msgid ""
+"The color for currently clicked links.<br>(Try using a darker color than the "
+"Accent Color.)"
+msgstr ""
+"ক্লিক করা আছে এমন লিংকের রং । <br>(অ্যাক্সেন্ট রঙের চেয়ে একটু গাঢ় রং ব্যবহার করা ভাল)"
+
+#: inc/customizer.php:1541
+msgid "Text Color"
+msgstr "লেখার রং"
+
+#: inc/customizer.php:1542
+msgid "The main text color."
+msgstr "মূল লেখার রং"
+
+#: inc/customizer.php:1549
+msgid "Secondary Text Color"
+msgstr "অপ্রধান লেখার রং"
+
+#: inc/customizer.php:1550
+msgid ""
+"Text color used for text of secondary importance.<br>(Try using a lighter color "
+"than the main Text Color.)"
+msgstr ""
+"অপ্রধান টেক্সটে এ রঙে দেখানো হবে।<br>(মূল লেখার রং থেকে একটু হালকা রং ব্যবহার করা ভাল)"
+
+#: inc/customizer.php:1557
+msgid "Use accent color instead of text color for icons"
+msgstr "আইকনের রং হিসেবে লেখার রং এর পরিবর্তে অ্যাক্সেন্ট রং ব্যবহার করা হোক"
+
+#: inc/extras.php:95
+#, php-format
+msgid "Page %s"
+msgstr "পৃষ্ঠা %s"
+
+#: inc/template-tags.php:42
+msgid "Website"
+msgstr "ওয়েবসাইট"
+
+#: inc/template-tags.php:128
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "%s তারিখে প্রকাশিত"
+
+#: inc/template-tags.php:133
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "লিখেছেন %s"
+
+#: inc/template-tags.php:155
+msgid "Posts navigation"
+msgstr "লেখা সমূহে নেভিগেশন"
+
+#: inc/template-tags.php:159
+msgid "Older posts"
+msgstr "আগের লেখাগুলি"
+
+#: inc/template-tags.php:163
+msgid "Newer posts"
+msgstr "নতুন লেখাগুলি"
+
+#: inc/template-tags.php:186
+msgid "Post navigation"
+msgstr "পোস্ট নেভিগেশন"
+
+#: inc/template-tags.php:211
+#, php-format
+msgid "Category: %s"
+msgstr "বিভাগ: %s"
+
+#: inc/template-tags.php:213
+#, php-format
+msgid "Tag: %s"
+msgstr "ট্যাগ: %s"
+
+#: inc/template-tags.php:217
+#, php-format
+msgid "Year: %s"
+msgstr "বছর: %s"
+
+#: inc/template-tags.php:217
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:219
+#, php-format
+msgid "Month: %s"
+msgstr "মাস: %s"
+
+#: inc/template-tags.php:219
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:221
+#, php-format
+msgid "Day: %s"
+msgstr "দিন: %s"
+
+#: inc/template-tags.php:221
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:224
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "পাশেরগুলি"
+
+#: inc/template-tags.php:226
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "গ্যালারি সমূহ"
+
+#: inc/template-tags.php:228
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "ছবি সমূহ"
+
+#: inc/template-tags.php:230
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "ভিডিও সমূহ"
+
+#: inc/template-tags.php:232
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "উদ্ধৃতি সমূহ"
+
+#: inc/template-tags.php:234
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "লিংক সমূহ"
+
+#: inc/template-tags.php:236
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "স্ট্যাটাস সমূহ"
+
+#: inc/template-tags.php:238
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "অডিও"
+
+#: inc/template-tags.php:240
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "আড্ডা সমূহ"
+
+#: inc/template-tags.php:243
+#, php-format
+msgid "Archives: %s"
+msgstr "আর্কাইভ সমূহ: %s"
+
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:247
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: inc/template-tags.php:249 page-explore.php:37 sidebar.php:41
+msgid "Archives"
+msgstr "আর্কাইভ সমূহ"
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:338
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %1$s plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:353
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure maximum "
+"compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:363
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:378
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:383
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:393
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3030
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:400
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2833
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. Please "
+"update the plugin."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:829
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3439
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:936
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug and "
+"renaming did not work."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:936
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:939
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin according "
+"to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:939
+msgid ""
+"The remote plugin package consists of more than one file, but the files are not "
+"packaged in a folder."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1117
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2829
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1882
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2168
+msgid "Required"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2171
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2187
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2190
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2193
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2210
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2214
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2216
+msgid "Active"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2222
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2225
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2228
+msgid "Update recommended"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2236
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2281
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2284
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2287
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2290
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2372
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2380
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2388
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2400
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2423
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2437
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2438
+msgid "Source"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2439
+msgid "Type"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2443
+msgid "Version"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2444
+msgid "Status"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2492
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2496
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2501
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2571
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2604
+msgid "Install"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2610
+msgid "Update"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2613
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2644
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2646
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2682
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2684
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2789
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2815
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3029
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3363
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3366
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3370
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3371
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3371
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3377
+msgid "Show Details"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3371
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3377
+msgid "Hide Details"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3372
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3373
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3376
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3377
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3378
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3379
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: page-explore.php:11
+msgid "Explore Page"
+msgstr "পাতায় পাতায় ঘুরুন"
+
+#: page-explore.php:26
+msgid "Recent Posts"
+msgstr "সাম্প্রতিক লেখাগুলি"
+
+#: page-explore.php:44
+msgid "Categories"
+msgstr "বিভাগ সমূহ"
+
+#: sidebar.php:11
+msgid "Hide sidebar"
+msgstr "সাইডবার লুকানো হোক"
+
+#: sidebar.php:26
+msgid "Navigation"
+msgstr "নেভিগেশন"
