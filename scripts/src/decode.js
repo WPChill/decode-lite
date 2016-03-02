@@ -7,9 +7,9 @@
 		init: function() {
 			this.FastClick();
 			this.DecodeSidebar();
-			// if ( Modernizr.touch ) {
-			this.DecodeDropdown();
-			// }
+			if ( Modernizr.touch ) {
+				this.DecodeDropdown();
+			}
 		},
 		
 		// Initialize FastClick (see `scripts/src/fastclick.js`)
