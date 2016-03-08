@@ -5,7 +5,7 @@ Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, c
 
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 3.11.0
+Stable tag: 3.12.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,12 @@ Decode includes support for:
 * Breadcrumb NavXT, and Breadcrumb trail for breadcrumb navigation
 
 == Changelog ==
+
+### v3.12.0
+	Improved:
+		- Has been changed the permalink on "More Info Here" from style.css file.
+		- Has been changed the screenshot.
+		- Has been changed "Keybase" instead "PHP" in social options.
 
 ### v3.11.0
 	Added:
