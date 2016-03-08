@@ -5,7 +5,7 @@ Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, c
 
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 3.11.0
+Stable tag: 3.12.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,6 +32,12 @@ Decode includes support for:
 
 == Changelog ==
 
+### v3.12.0
+	Improved:
+		- Has been changed the permalink on "More Info Here" from style.css file.
+		- Has been changed the screenshot.
+		- Has been changed "Keybase" instead "PHP" in social options.
+
 ### v3.11.0
 	Added:
 		- Has been added Bangladesh language.
@@ -50,7 +56,7 @@ Decode includes support for:
 		- Social Icon for Amazon Wishlist.
 		- Live update for fields.
 		- Add Periscope Icon.
-		- Social icon for PGP public key.
+		- Social icon for Keybase.
 		- Add PayPal donation button to the Social buttons.
 
 	Improved:
