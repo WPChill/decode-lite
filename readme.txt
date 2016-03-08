@@ -50,7 +50,7 @@ Decode includes support for:
 		- Social Icon for Amazon Wishlist.
 		- Live update for fields.
 		- Add Periscope Icon.
-		- Social icon for PGP public key.
+		- Social icon for Keybase.
 		- Add PayPal donation button to the Social buttons.
 
 	Improved:

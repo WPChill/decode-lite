@@ -701,7 +701,7 @@ public static function decode_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 
-	$wp_customize->add_setting( 'pgp_username', array(
+	$wp_customize->add_setting( 'keybase_username', array(
 		'default'           => '',
 		'sanitize_callback' => 'decode_sanitize_string',
 	) );
@@ -1234,8 +1234,8 @@ public static function decode_customize_register( $wp_customize ) {
 		'priority'        => 63,
 	) );
 
-	$wp_customize->add_control( 'pgp_username', array(
-		'label'           => sprintf( __( '%s Username', 'decode' ), 'PGP' ),
+	$wp_customize->add_control( 'keybase_username', array(
+		'label'           => sprintf( __( '%s Username', 'decode' ), 'Keybase' ),
 		'section'         => 'decode_social_options',
 		'active_callback' => 'decode_social_icons_are_enabled',
 		'type'            => 'text',
