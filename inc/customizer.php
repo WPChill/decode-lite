@@ -21,13 +21,6 @@ function decode_add_customize_controls( $wp_customize ) {
 	        <?php
 	    }
 	}
-	
-	/**
-	 *	Adds a favicon image uploader control that only allows .ico and .png files to be uploaded.
-	 */
-	class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
-		public $extensions = array( 'png', 'ico', 'image/x-icon' );
-	}
 
 	/**
 	 *	Slider Control
@@ -187,8 +180,8 @@ class Decode_Customize {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 public static function decode_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )        ->transport = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' ) ->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_image'  )->transport = 'postMessage';
@@ -207,6 +200,7 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'steam_user' );
 	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
+	remove_theme_mod( 'favicon_image' );
 	$wp_customize->remove_setting( 'youtube_username' );
 	$wp_customize->remove_setting( 'show_site_navigation' );
 	$wp_customize->remove_setting( 'show_social_icons' );
@@ -215,6 +209,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->remove_setting( 'steam_user' );
 	$wp_customize->remove_setting( 'steam_group' );
 	$wp_customize->remove_setting( 'show_all_post_types' );
+	$wp_customize->remove_setting( 'favicon_image' );
 
 /**
  * Header Options
@@ -223,12 +218,6 @@ public static function decode_customize_register( $wp_customize ) {
  	$wp_customize->add_section( 'decode_header_options', array(
     	'title'    => __( 'Header Options', 'decode' ),
 		'priority' => 32,
-	) );
-
-	
-	$wp_customize->add_setting( 'favicon_image', array(
-		'default'           => '',
-		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 	
 	$wp_customize->add_setting( 'show_site_title', array(
@@ -254,16 +243,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'decode_sanitize_html',
 	) );
-
-	
-	$wp_customize->add_control(
-		new Decode_Customize_Favicon_Image_Control(
-		$wp_customize, 'favicon_image', array(
-			'label'    => __( 'Favicon Image (must be a PNG)', 'decode' ),
-			'section'  => 'decode_header_options',
-			'settings' => 'favicon_image',
-			'priority' => 1,
-	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
 		'label'    => __( 'Show Site Title', 'decode' ),

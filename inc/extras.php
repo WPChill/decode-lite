@@ -111,3 +111,33 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'decode_render_title' );
 endif;
+
+/**
+ *	Get image ID from image URL
+ */
+function decode_get_image_id_from_image_url( $image_url ) {
+    global $wpdb;
+    $attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ) );
+    if( $attachment ) {
+        return $attachment[0];
+    }
+}
+
+if( version_compare( $GLOBALS['wp_version'], '4.3', '>' ) ) {
+	/**
+	 *	Site Icon
+	 */
+	add_action( 'upgrader_process_complete', 'decode_site_icon' );
+	function decode_site_icon() {
+		$get_theme = wp_get_theme();
+
+		if( $get_theme['Version'] > '3.12.0' ) {
+			$favicon_image = get_theme_mod( 'favicon_image', '' );
+
+			if( $favicon_image && !has_site_icon() ) {
+				$image_id = decode_get_image_id_from_image_url( $favicon_image );
+				update_option( 'site_icon', $image_id );
+			}
+		}
+	}
+}
