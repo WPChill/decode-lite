@@ -127,7 +127,7 @@ if( version_compare( $GLOBALS['wp_version'], '4.3', '>' ) ) {
 	/**
 	 *	Site Icon
 	 */
-	add_action( 'upgrader_process_complete', 'decode_site_icon' );
+	add_action( 'admin_init', 'decode_site_icon' );
 	function decode_site_icon() {
 		$get_theme = wp_get_theme();
 
