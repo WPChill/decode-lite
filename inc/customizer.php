@@ -280,7 +280,7 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'show_header_menu', array(
-		'label'    => __( 'Show Header Menu', 'decode' ),
+		'label'    => __( 'Show Navigation Menu', 'decode' ),
 		'section'  => 'decode_header_options',
 		'type'     => 'checkbox',
 		'priority' => 4,
