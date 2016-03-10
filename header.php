@@ -78,7 +78,7 @@
 			
 			<?php if ( get_theme_mod( 'show_site_description', true ) == true ) : ?>
 				<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
-				<h2 class="site-description"><?php echo wp_kses_post( get_theme_mod( 'html_description' ) ); ?></h2>
+				<h2 class="site-description"><?php echo decode_sanitize_html( get_theme_mod( 'html_description' ) ); ?></h2>
 				<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
 				<h2 class="site-description"><?php echo esc_html( get_bloginfo( 'description' ) );?></h2>
 				<?php endif; ?>
