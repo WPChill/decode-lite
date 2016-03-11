@@ -5,7 +5,7 @@ Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, c
 
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 3.12.0
+Stable tag: 3.13.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,22 @@ Decode includes support for:
 * Breadcrumb NavXT, and Breadcrumb trail for breadcrumb navigation
 
 == Changelog ==
+
+### v3.13.0
+	Added:
+		- Has been added "Content Width".
+
+	Improved:
+		- Has been updated sanitize callback for "HTML Description..." field from customizer.
+		- Has been renamed "Show Navigation Menu" instead "Show Header Menu".
+		- "Content Options" panel has been separated in three sections: General, Content, Content Single.
+
+	Removed:
+		- Has been removed "Favicon Icon" field from customizer.
+		- Has been removed the label from "Other Options" section.
+
+	Fixed:
+		- Has been removed target blank attribute on e-mail social icon.
 
 ### v3.12.0
 	Improved:

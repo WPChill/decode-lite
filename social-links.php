@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying social icons.
+ *	The template for displaying social icons.
  *
- * @package Decode
+ *	@package Decode
  */
 ?>
 
