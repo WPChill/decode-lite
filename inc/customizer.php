@@ -1362,8 +1362,9 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'content_width', array(
-		'default'			=> 792,
-		'sanitize_callback'	=> 'absint'
+		'default'			=> 41.619,
+		'sanitize_callback'	=> 'absint',
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
@@ -1493,10 +1494,11 @@ public static function decode_customize_register( $wp_customize ) {
 		new Decode_Customize_Slider_Control(
 		$wp_customize, 'content_width', array(
 			'label'			=> esc_html__( 'Content Width', 'decode' ),
+			'description'	=> esc_html__( 'Select the content width in percentage.', 'decode' ),
 			'choices'		=> array(
-				'min'	=> 640,
-				'max'	=> 792,
-				'step'	=> 1
+				'min'	=> 41.619,
+				'max'	=> 80,
+				'step'	=> 0.001
 			),
 			'section'		=> 'decode_content_options_general',
 			'priority'		=> 7,
@@ -1643,7 +1645,8 @@ public static function decode_customize_register( $wp_customize ) {
 		?>
 		<!-- Decode Custom Colors CSS -->
 		<style type="text/css">
-			<?php self::generate_css(
+			<?php
+			self::generate_css(
 				'body, .sidebar, .sidebar-top, .menu ul ul, .header-style-ghost .site',
 				'background-color',
 				'background_color',
@@ -1761,8 +1764,23 @@ public static function decode_customize_register( $wp_customize ) {
 				'border-color',
 				'accent_color'
 			);
-			
 			?>
+
+			@media (min-width: 68.5em) {
+				.site-main {
+					max-width: none;
+				}
+
+				<?php
+				self::generate_css(
+					'.site-main',
+					'width',
+					'content_width',
+					'',
+					'%'
+				);
+				?>
+			}
 		</style>
 		<?php
 	}
