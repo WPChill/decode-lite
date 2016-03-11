@@ -17,10 +17,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( ! ( function_exists( 'wp_site_icon' ) && has_site_icon() ) ) {
-	echo '<link rel="icon" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n" . 
-	'<link rel="apple-touch-icon-precomposed" href="' . esc_url( get_theme_mod( 'favicon_image', '' ) ) . '">' . "\n";
-} ?>
 <?php if ( get_background_image() ) { echo '<link rel="prefetch" href="' . get_background_image() . '">'; } ?>
 
 <?php tha_head_bottom(); ?>
@@ -78,9 +74,9 @@
 			
 			<?php if ( get_theme_mod( 'show_site_description', true ) == true ) : ?>
 				<?php if ( get_theme_mod( 'html_description', '' ) !== '' ) : ?>
-				<h2 class="site-description"><?php echo get_theme_mod( 'html_description' ); ?></h2>
+				<h2 class="site-description"><?php echo decode_sanitize_html( get_theme_mod( 'html_description' ) ); ?></h2>
 				<?php elseif ( get_theme_mod( 'html_description', '' ) == '' ) : ?>
-				<h2 class="site-description"><?php echo get_bloginfo( 'description' );?></h2>
+				<h2 class="site-description"><?php echo esc_html( get_bloginfo( 'description' ) );?></h2>
 				<?php endif; ?>
 			<?php endif; ?>
 			

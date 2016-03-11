@@ -124,9 +124,7 @@ add_action( 'after_setup_theme', 'decode_setup' );
  */
 
 function decode_content_width() {
-	$width = get_theme_mod( 'content_width', 792 );
-
-	$GLOBALS['content_width'] = apply_filters( 'decode_content_width', $width );
+	$GLOBALS['content_width'] = apply_filters( 'decode_content_width', 792 );
 }
 add_action( 'after_setup_theme', 'decode_content_width', 0 );
 

@@ -21,13 +21,6 @@ function decode_add_customize_controls( $wp_customize ) {
 	        <?php
 	    }
 	}
-	
-	/**
-	 *	Adds a favicon image uploader control that only allows .ico and .png files to be uploaded.
-	 */
-	class Decode_Customize_Favicon_Image_Control extends WP_Customize_Image_Control {
-		public $extensions = array( 'png', 'ico', 'image/x-icon' );
-	}
 
 	/**
 	 *	Slider Control
@@ -187,8 +180,8 @@ class Decode_Customize {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 public static function decode_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )        ->transport = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' ) ->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_image'  )->transport = 'postMessage';
@@ -207,6 +200,7 @@ public static function decode_customize_register( $wp_customize ) {
 	remove_theme_mod( 'steam_user' );
 	remove_theme_mod( 'steam_group' );
 	remove_theme_mod( 'show_all_post_types' );
+	remove_theme_mod( 'favicon_image' );
 	$wp_customize->remove_setting( 'youtube_username' );
 	$wp_customize->remove_setting( 'show_site_navigation' );
 	$wp_customize->remove_setting( 'show_social_icons' );
@@ -215,6 +209,7 @@ public static function decode_customize_register( $wp_customize ) {
 	$wp_customize->remove_setting( 'steam_user' );
 	$wp_customize->remove_setting( 'steam_group' );
 	$wp_customize->remove_setting( 'show_all_post_types' );
+	$wp_customize->remove_setting( 'favicon_image' );
 
 /**
  * Header Options
@@ -223,12 +218,6 @@ public static function decode_customize_register( $wp_customize ) {
  	$wp_customize->add_section( 'decode_header_options', array(
     	'title'    => __( 'Header Options', 'decode' ),
 		'priority' => 32,
-	) );
-
-	
-	$wp_customize->add_setting( 'favicon_image', array(
-		'default'           => '',
-		'sanitize_callback' => 'decode_sanitize_string',
 	) );
 	
 	$wp_customize->add_setting( 'show_site_title', array(
@@ -254,16 +243,6 @@ public static function decode_customize_register( $wp_customize ) {
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'decode_sanitize_html',
 	) );
-
-	
-	$wp_customize->add_control(
-		new Decode_Customize_Favicon_Image_Control(
-		$wp_customize, 'favicon_image', array(
-			'label'    => __( 'Favicon Image (must be a PNG)', 'decode' ),
-			'section'  => 'decode_header_options',
-			'settings' => 'favicon_image',
-			'priority' => 1,
-	) ) );
 	
 	$wp_customize->add_control( 'show_site_title', array(
 		'label'    => __( 'Show Site Title', 'decode' ),
@@ -280,7 +259,7 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'show_header_menu', array(
-		'label'    => __( 'Show Header Menu', 'decode' ),
+		'label'    => __( 'Show Navigation Menu', 'decode' ),
 		'section'  => 'decode_header_options',
 		'type'     => 'checkbox',
 		'priority' => 4,
@@ -1269,16 +1248,36 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 
-/**
- * Reading Options
- */
+	/**
+	 *	Content Options
+	 */
+	$wp_customize->add_panel( 'decode_content_options_panel', array(
+		'priority'			=> 37,
+		'capability'		=> 'edit_theme_options',
+		'theme_supports'	=> '',
+		'title'				=> esc_html__( 'Content Options', 'decode' )
+	) );
 
-	$wp_customize->add_section( 'decode_content_options', array(
-    	'title'       => __( 'Content Options', 'decode' ),
-		'priority'    => 37,
-		'description' => sprintf( _x( 'These options change the display of %s\'s content', '(blog name)\'s content.' ,'decode' ), get_bloginfo( 'name', 'display' ) ),
-    ) );
-    
+	// General
+	$wp_customize->add_section( 'decode_content_options_general', array(
+		'title'			=> __( 'General', 'decode' ),
+		'priority'		=> 1,
+		'panel'			=> 'decode_content_options_panel'
+	) );
+
+	// Content
+	$wp_customize->add_section( 'decode_content_options_content', array(
+		'title'			=> __( 'Content', 'decode' ),
+		'priority'		=> 2,
+		'panel'			=> 'decode_content_options_panel'
+	) );
+
+	// Content Single
+	$wp_customize->add_section( 'decode_content_options_content_single', array(
+		'title'			=> __( 'Content Single', 'decode' ),
+		'priority'		=> 3,
+		'panel'			=> 'decode_content_options_panel'
+	) );
     
     $wp_customize->add_setting( 'latin_extended_font', array(
 		'default'           => false,
@@ -1363,8 +1362,9 @@ public static function decode_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'content_width', array(
-		'default'			=> 792,
-		'sanitize_callback'	=> 'absint'
+		'default'			=> 41.619,
+		'sanitize_callback'	=> 'absint',
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_setting( 'site_colophon', array(
@@ -1376,141 +1376,142 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'latin_extended_font', array(
 		'label'    => __( 'Load Latin Extended character set. This will increase page load times.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_general',
 		'type'     => 'checkbox',
 		'priority' => 1,
 	) );
 
 	$wp_customize->add_control( 'use_excerpts', array(
 		'label'    => __( 'Use entry excerpts instead of full text on site home. Excludes sticky posts.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 2,
+		'priority' => 1,
 	) );
 	
 	$wp_customize->add_control( 'use_excerpts_on_archives', array(
 		'label'    => __( 'Use entry excerpts on archive, category, and author pages.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 3,
+		'priority' => 2,
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_excerpts', array(
 		'label'    => __( 'Display posts\' featured images when excerpts are shown.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 4,
+		'priority' => 3,
 	) );
 	
 	$wp_customize->add_control( 'show_featured_images_on_singles', array(
 		'label'    => __( 'Display a post\'s featured image on its individual page.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content_single',
 		'type'     => 'checkbox',
-		'priority' => 5,
+		'priority' => 1,
 	) );
 
 	$wp_customize->add_control( 'show_tags', array(
 		'label'    => __( 'Show tags on front page (tags will be shown on post\'s individual page)', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 6,
+		'priority' => 4,
 	) );
 
 	$wp_customize->add_control( 'show_categories', array(
 		'label'    => __( 'Show categories on front page (categories will be shown on post\'s individual page)', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 7,
+		'priority' => 5,
 	) );
 	
 	$wp_customize->add_control( 'show_author_section', array(
 		'label'    => __( 'Show author\'s name, profile image, and bio after posts', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content_single',
 		'type'     => 'checkbox',
-		'priority' => 8,
+		'priority' => 2,
 	) );
 
 	$wp_customize->add_control( 'show_leave_a_comment_link', array(
 		'label'    => __( 'Show "Leave a comment" link after posts.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content_single',
 		'type'     => 'checkbox',
-		'priority' => 9,
+		'priority' => 3,
 	) );
 	
 	$wp_customize->add_control( 'entry_date_position', array(
 		'label'   => __( 'Entry Date Position', 'decode' ),
-		'section' => 'decode_content_options',
+		'section' => 'decode_content_options_general',
 		'type'    => 'radio',
 		'choices' => array(
 			'above' => __( 'Above Header', 'decode' ),
 			'below' => __( 'Below Header', 'decode' ),
         ),
-		'priority' => 10,
+		'priority' => 2,
 	) );
 	
 	$wp_customize->add_control( 'show_entry_date_on_excerpts', array(
 		'label'    => __( 'Show entry date for post excepts on the main page', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content',
 		'type'     => 'checkbox',
-		'priority' => 11,
+		'priority' => 6,
 	) );
 	
 	$wp_customize->add_control( 'show_allowed_tags', array(
 		'label'    => __( 'Show allowed HTML tags on comment form', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_content_single',
 		'type'     => 'checkbox',
-		'priority' => 12,
+		'priority' => 4,
 	) );
 	
 	$wp_customize->add_control( 'show_page_headers', array(
 		'label'    => __( 'Show Page Headers', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_general',
 		'type'     => 'checkbox',
-		'priority' => 13,
+		'priority' => 3,
 	) );
 
 	$wp_customize->add_control( 'link_post_title_arrow', array(
 		'label'    => __( 'Add an arrow before the title of a link post', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_general',
 		'type'     => 'checkbox',
-		'priority' => 14,
+		'priority' => 4,
 	) );
 
 	$wp_customize->add_control( 'show_theme_info', array(
 		'label'    => __( 'Show Theme Info (display a line of text about the theme and its creator at the bottom of pages)', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_general',
 		'type'     => 'checkbox',
-		'priority' => 15,
+		'priority' => 5,
 	) );
 
 	$wp_customize->add_control( 'center_content_mobile', array(
 		'label'    => __( 'Center the content on mobile.', 'decode' ),
-		'section'  => 'decode_content_options',
+		'section'  => 'decode_content_options_general',
 		'type'     => 'checkbox',
-		'priority' => 16,
+		'priority' => 6,
 	) );
 
 	$wp_customize->add_control(
 		new Decode_Customize_Slider_Control(
 		$wp_customize, 'content_width', array(
 			'label'			=> esc_html__( 'Content Width', 'decode' ),
+			'description'	=> esc_html__( 'Select the content width in percentage.', 'decode' ),
 			'choices'		=> array(
-				'min'	=> 640,
-				'max'	=> 792,
-				'step'	=> 1
+				'min'	=> 41.619,
+				'max'	=> 80,
+				'step'	=> 0.001
 			),
-			'section'		=> 'decode_content_options',
-			'priority'		=> 17,
+			'section'		=> 'decode_content_options_general',
+			'priority'		=> 7,
 	) ) );
 	
 	$wp_customize->add_control(
 		new Decode_Customize_Textarea_Control(
 		$wp_customize, 'site_colophon', array(
 			'label'    => __( 'Text (colophon, copyright, credits, etc.) for the footer of the site', 'decode' ),
-			'section'  => 'decode_content_options',
+			'section'  => 'decode_content_options_general',
 			'settings' => 'site_colophon',
 			'type'     => 'textarea',
-			'priority' => 18,
+			'priority' => 8,
 	) ) );
 	
 	
@@ -1521,7 +1522,6 @@ public static function decode_customize_register( $wp_customize ) {
  
  	$wp_customize->add_section( 'decode_other_options', array(
     	'title'       => __( 'Other Options', 'decode' ),
-    	'description' => __( 'Custom CSS is longer recommended. This feature may be removed in a future update. To continue using your tweaks, copy and paste your CSS into a custom CSS plugin such as <a href="http://jetpack.me/install/">Jetpack</a>. Get help <a href="http://jetpack.me/support/custom-css/">here</a>.', 'decode' ),
 		'priority' => 38,
     ) );
     
@@ -1645,7 +1645,8 @@ public static function decode_customize_register( $wp_customize ) {
 		?>
 		<!-- Decode Custom Colors CSS -->
 		<style type="text/css">
-			<?php self::generate_css(
+			<?php
+			self::generate_css(
 				'body, .sidebar, .sidebar-top, .menu ul ul, .header-style-ghost .site',
 				'background-color',
 				'background_color',
@@ -1763,8 +1764,23 @@ public static function decode_customize_register( $wp_customize ) {
 				'border-color',
 				'accent_color'
 			);
-			
 			?>
+
+			@media (min-width: 68.5em) {
+				.site-main {
+					max-width: none;
+				}
+
+				<?php
+				self::generate_css(
+					'.site-main',
+					'width',
+					'content_width',
+					'',
+					'%'
+				);
+				?>
+			}
 		</style>
 		<?php
 	}
