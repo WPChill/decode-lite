@@ -114,9 +114,3 @@ script:
     # -p flag: Show progress of the run.
     # -s flag: Show sniff codes in all reports.
     # -v flag: Print verbose output.
-notifications:
-  slack: scottsmith:DrGdcTNOe2liaJR7X5t2q03f
-  email:
-    recipients:
-      - decode@ScottHSmith.com
-    on_failure: change
