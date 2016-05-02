@@ -12,7 +12,30 @@
 </div><!-- #content -->
 	<?php tha_content_after(); ?>
 
-	<?php do_action( 'footer_widgets' ); ?>
+	<?php if( class_exists( 'Decode_Pro' ) ): ?>
+		<div id="footer-widgets">
+			<?php if( is_active_sidebar( 'footer-sidebar-1' ) ): ?>
+				<div class="footer-widgets-col-3">
+					<?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+				</div><!--/.footer-widgets-col-3-->
+			<?php endif; ?>
+			<?php if( is_active_sidebar( 'footer-sidebar-2' ) ): ?>
+				<div class="footer-widgets-col-3">
+					<?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
+				</div><!--/.footer-widgets-col-3-->
+			<?php endif; ?>
+			<?php if( is_active_sidebar( 'footer-sidebar-3' ) ): ?>
+				<div class="footer-widgets-col-3">
+					<?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
+				</div><!--/.footer-widgets-col-3-->
+			<?php endif; ?>
+			<?php if( is_active_sidebar( 'footer-sidebar-4' ) ): ?>
+				<div class="footer-widgets-col-3">
+					<?php dynamic_sidebar( 'footer-sidebar-4' ); ?>
+				</div><!--/.footer-widgets-col-3-->
+			<?php endif; ?>
+		</div><!--/#footer-widgets-->
+	<?php endif; ?>
 
 	<?php tha_footer_before(); ?>
 <footer id="colophon" class="site-footer" role="contentinfo">
