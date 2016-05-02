@@ -16,6 +16,8 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<?php tha_footer_top(); ?>
 
+	<?php do_action( 'footer_widgets' ); ?>
+
 	<?php
 	if ( get_theme_mod( 'show_footer_social_icons', false ) == true ) {
 		get_template_part( 'social-links' );
