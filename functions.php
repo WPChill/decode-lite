@@ -113,7 +113,7 @@ function decode_setup() {
 	add_theme_support( 'post-formats', $args );
 
 	// Add Image Size
-	add_image_size( 'related-posts', 203, 150, true );
+	add_image_size( 'decode-pro-related-posts', 203, 150, true );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );
