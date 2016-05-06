@@ -111,6 +111,9 @@ function decode_setup() {
 	); 
 	$args = apply_filters( 'decode_post_formats_args', $args );
 	add_theme_support( 'post-formats', $args );
+
+	// Add Image Size
+	add_image_size( 'related-posts', 203, 150, true );
 }
 endif; // decode_setup
 add_action( 'after_setup_theme', 'decode_setup' );

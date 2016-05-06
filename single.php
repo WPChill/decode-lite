@@ -15,7 +15,7 @@
 		if ( comments_open() || get_comments_number() ) {
 			comments_template();
 		}
-		 ?>
+		?>
 	<?php endwhile; // end of the loop. ?>
 	</main><!-- #main -->
 	<?php the_post_navigation(); ?>
