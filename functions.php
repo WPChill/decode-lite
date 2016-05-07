@@ -331,3 +331,21 @@ function decode_add_post_types_to_query( $query ) {
 if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 	add_action( 'pre_get_posts', 'decode_add_post_types_to_query' );
 }
+
+/**
+ *	Header Menu Bottom
+ */
+if( !function_exists( 'header_menu_bottom' ) ) {
+	add_action( 'header_menu_bottom', 'header_menu_bottom' );
+	function header_menu_bottom() {
+		if ( get_theme_mod( 'show_header_menu', true ) == true ) {
+			wp_nav_menu( array(
+				'theme_location' => 'header-menu',
+				'container'      => false,
+				'menu_class'     => 'menu horizontal-menu header-menu',
+				'menu_id'        => 'header-menu',
+				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
+			) );
+		}
+	}
+}

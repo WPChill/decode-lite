@@ -6,7 +6,8 @@
  *
  * @package Decode
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
@@ -49,6 +50,8 @@
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '<div class="site-scroll">'; } ?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php tha_header_top(); ?>
+
+		<?php do_action( 'header_menu_top' ); ?>
 		
 		<div class="site-branding">
 				
@@ -86,7 +89,12 @@
 			get_template_part( 'social-links' );
 		} ?>
 
-		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) :
+		<?php do_action( 'header_menu_bottom' ); ?>
+
+		<?php
+		/* Aici
+		<?php
+		if ( get_theme_mod( 'show_header_menu', true ) == true ):
 			wp_nav_menu( array(
 				'theme_location' => 'header-menu',
 				'container'      => false,
@@ -94,7 +102,10 @@
 				'menu_id'        => 'header-menu',
 				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
 			) );
-		endif; ?>
+		endif;
+		?>
+		*/
+		?>
 		
 		<?php tha_header_bottom(); ?>
 		
