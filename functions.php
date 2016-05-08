@@ -338,7 +338,7 @@ if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 if( !function_exists( 'header_menu_bottom' ) ) {
 	add_action( 'header_menu_bottom', 'header_menu_bottom' );
 	function header_menu_bottom() {
-		if ( get_theme_mod( 'show_header_menu', true ) == true && !class_exists( 'Decode_Pro' ) ) {
+		if ( get_theme_mod( 'show_header_menu', true ) == true && get_theme_mod( 'decode_pro_header_options_navigation_menu_position', 'after_logo' ) == 'after_logo' ) {
 			wp_nav_menu( array(
 				'theme_location' => 'header-menu',
 				'container'      => false,
