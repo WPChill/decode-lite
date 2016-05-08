@@ -333,12 +333,12 @@ if ( get_theme_mod( 'add_custom_post_types', '' ) !== '' ) {
 }
 
 /**
- *	Header Menu Bottom
+ *	Header menu bottom
  */
 if( !function_exists( 'header_menu_bottom' ) ) {
 	add_action( 'header_menu_bottom', 'header_menu_bottom' );
 	function header_menu_bottom() {
-		if ( get_theme_mod( 'show_header_menu', true ) == true ) {
+		if ( get_theme_mod( 'show_header_menu', true ) == true && !class_exists( 'Decode_Pro' ) ) {
 			wp_nav_menu( array(
 				'theme_location' => 'header-menu',
 				'container'      => false,
