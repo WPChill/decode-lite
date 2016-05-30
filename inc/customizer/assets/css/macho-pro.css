@@ -1,0 +1,232 @@
+/* Wordpress 4.4 fixes */
+.checkbox-pro-feature .customize-control-checkbox label,
+.checkbox-pro-feature .customize-control-nav_menu_auto_add label,
+.checkbox-pro-feature .customize-control-radio label {
+    margin-left: 0;
+}
+
+.checkbox-pro-feature .customize-control-checkbox input,
+.checkbox-pro-feature .customize-control-nav_menu_auto_add input,
+.checkbox-pro-feature .customize-control-radio input {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.checkbox-pro-feature .customize-control-title {
+    display: inline-block;
+    font-size: 12px;
+}
+/* END WordPress 4.4 fixes */
+
+#customize-controls .description,
+.customizer-section-intro {
+    background-color: #545454;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 13px !important;
+    font-weight: 300;
+    color: #FFF !important;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.dotted-below {
+    border-bottom: 1px dotted;
+    padding-bottom: 3px;
+}
+
+.dotted-above {
+    padding-top: 3px;
+    border-top: 1px dotted;
+}
+
+/* PRO Version CSS below */
+#accordion-section-pixova_lite_pro_section .accordion-section-content {
+    padding: 10px;
+}
+
+.upgrade,
+.review,
+.document {
+    color: #777 !important;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    width: 90%;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.upgrade {
+    border: 1px solid rgb(226, 81, 54);
+}
+.upgrade:hover {
+    background-color: rgb(226, 81, 54);
+    color: #FFF !important;
+}
+
+.document {
+    border: 1px solid #2ecc71;
+}
+
+.document:hover {
+    background-color: #2ecc71;
+    color: #FFF !important;
+}
+
+.review {
+    border: 1px solid #298cba;
+}
+.review:hover {
+    background-color: #298cba !important;
+    color: #FFF !important;
+}
+
+.pro-box {
+    text-align:center;
+}
+
+.control-section-themes .accordion-section-title {
+    margin              : 0;
+}
+
+
+/* Upsell link */
+.doc-link,
+.review-link {
+    display: block;
+    width: 90%;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px auto;
+
+}
+
+.upsell-link {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 10px auto 0;
+}
+
+.upsell-link:hover,
+.review-link:hover,
+.doc-link:hover {
+    cursor: pointer;
+}
+
+.upsell-link {
+    background-color: #e25136;
+    color: #fff;
+    border: 1px solid #e25136;
+}
+
+.upsell-link:hover {
+    color: #e25136;
+    border: 1px solid #e25136;
+    background-color: transparent;
+}
+
+.review-link {
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+    background-color: transparent;
+}
+    .review-link:hover {
+        background-color: #2ecc71;
+        color: #FFF;
+        border: 1px solid #2ecc71;
+    }
+
+.doc-link {
+    background-color: transparent;
+    color: #298cba;
+    border: 1px solid #298cba;
+}
+    .doc-link:hover {
+        background-color: #298cba;
+        border: 1px solid #298cba;
+        color: #FFF;
+    }
+
+
+.pro-box {
+    text-align          :center;
+}
+
+.pro-version {
+    text-align          : center;
+    margin              : 15px auto;
+}
+
+.pro-version p{
+    line-height         : 1.5;
+}
+
+/* Add dotted lines on PRO sections */
+li[id$="_upsell"] .accordion-section-title,
+li[id$="_upsell"] .accordion-section-title:hover {
+    background-image: url('../images/gray-lines.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+}
+
+#customize-theme-controls li[id$="_upsell"] .accordion-section-title:after {
+    content: '\f160';
+}
+
+
+/* PRO disabled fields */
+.textarea-pro-feature,
+.text-pro-feature,
+.checkbox-pro-feature {
+    border: 1px solid #e25136;
+    border-top-right-radius: 4px;
+    padding: 7.5px;
+    position: relative;
+}
+
+.textarea-pro-feature .pro-badge,
+.text-pro-feature .pro-badge,
+.checkbox-pro-feature .pro-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 19px 7.5px;
+    background: #e25136;
+    color: #FFF;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#customize-controls .customize-info {
+    border-bottom: 0 !important;
+}
+
+#accordion-section-pixova_lite_woocommerce {}
+
+#accordion-section-pixova_lite_woocommerce .accordion-section-title,
+#accordion-section-pixova_lite_woocommerce .accordion-section-title:hover {
+    background-color: #a46497 !important;
+    color: #ffffff !important;
+}
+
+#accordion-section-pixova_lite_woocommerce .accordion-section-title:after,
+#accordion-section-pixova_lite_woocommerce .accordion-section-title:hover:after {
+    color: #ffffff !important;
+}

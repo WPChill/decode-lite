@@ -1988,3 +1988,18 @@ li.comment {
 		margin-top: 0;
 	}
 }
+
+/* New CSS */
+
+.archive-listings .entry-content,
+.archive-listings .entry-footer {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.archive-listings .entry-footer {
+	width: 100% !important;
+}
+.entry-header > a {
+	display: block;
+	margin-bottom: 30px;
+}
