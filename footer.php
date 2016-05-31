@@ -43,7 +43,7 @@
 	
 	<?php if ( get_theme_mod( 'show_theme_info', true ) == true ) : ?>
 	<div class="theme-info">
-		<p><?php printf( __( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'http://www.machothemes.com/themes/decode/' ) . '" rel="designer">Decode '. __( 'Theme', 'decode' ) .'</a>', 'Macho Themes' ) ?></p>
+		<p><?php printf( __( '%1$s by %2$s', 'decode' ), '<a href="' . esc_url( 'https://www.machothemes.com/themes/decode/' ) . '" rel="dofollow">'. __( 'Decode Theme', 'decode' ) .'</a>', '<a href="' . esc_url( 'https://www.machothemes.com/' ) . '" rel="dofollow" title="Professional & Responsive WordPress Themes">'. __( 'Macho Themes', 'decode' ) .'</a>' ) ?></p>
 	</div><!-- .theme-info -->
 	<?php endif; ?>
 	
