@@ -3990,6 +3990,17 @@ li.comment {
 	display: block;
 	margin-bottom: 4%;
 }
+.entry-meta i {
+	margin-right: 5px;
+	display: inline-block;
+}
+.entry-meta .date > span {
+	display: inline-block;
+	margin-right: 30px;
+}
+.entry-meta .date > span:last-child {
+	margin-right: 0;
+}
 .entry-summary {
 	padding-left: 20px;
 	padding-right: 20px;
