@@ -123,6 +123,7 @@ add_action( 'after_setup_theme', 'decode_content_width', 0 );
  */
 if ( ! is_admin() && ! function_exists( 'decode_scripts' ) ) {
 function decode_scripts() {
+	wp_enqueue_style( 'decode-icomoon', get_stylesheet_directory_uri().'/assets/icomoon.css', array(), '3.0.7' );
 	wp_enqueue_style( 'decode-style', get_stylesheet_uri(), array(), '3.0.7' );
 	
 	if ( get_theme_mod( 'latin_extended_font', false ) == true ) {
