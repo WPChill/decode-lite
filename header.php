@@ -6,7 +6,8 @@
  *
  * @package Decode
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
@@ -47,8 +48,10 @@
 	
 	<?php tha_header_before(); ?>
 	<?php if ( get_theme_mod( 'constant_sidebar', 'closing' ) == 'constant' && get_theme_mod( 'show_sidebar', true ) == true ) { echo '<div class="site-scroll">'; } ?>
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner" style="<?php if( get_theme_mod( 'decode_pro_header_image_background', '' ) ): ?>background-image: url(<?php echo esc_url( get_theme_mod( 'decode_pro_header_image_background', '' ) ); ?>); border-bottom: 0;<?php endif; ?><?php if( get_theme_mod( 'decode_pro_enable_parallax', true ) == true ): ?>background-position: center center; background-attachment: fixed; -webkit-background-size: cover; -moz-background-size: cover; -ms-background-size: cover; background-size: cover;<?php endif; ?>">
 		<?php tha_header_top(); ?>
+
+		<?php do_action( 'header_menu_top' ); ?>
 		
 		<div class="site-branding">
 				
@@ -86,15 +89,7 @@
 			get_template_part( 'social-links' );
 		} ?>
 
-		<?php if ( get_theme_mod( 'show_header_menu', true ) == true ) :
-			wp_nav_menu( array(
-				'theme_location' => 'header-menu',
-				'container'      => false,
-				'menu_class'     => 'menu horizontal-menu header-menu',
-				'menu_id'        => 'header-menu',
-				'items_wrap'     => '<nav id="%1$s" class="%2$s" role="navigation"><ul>%3$s</ul></nav><!-- #header-menu -->',
-			) );
-		endif; ?>
+		<?php do_action( 'header_menu_bottom' ); ?>
 		
 		<?php tha_header_bottom(); ?>
 		

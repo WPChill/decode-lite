@@ -17,7 +17,7 @@
 				<?php the_post_thumbnail(); ?>
 			</a>
 			<?php endif; ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php if ( get_theme_mod( 'entry_date_position', 'below' ) == 'above' && get_theme_mod( 'show_entry_date_on_excerpts', false ) == true ) : ?>
 		<div class="entry-meta">
 			<p class="date"><?php decode_posted_on(); ?></p>
