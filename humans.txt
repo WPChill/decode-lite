@@ -1,8 +1,8 @@
 /* Author */
 Name:    Macho Themes
-Email:   office@machothemes.com
-URI:     http://www.machothemes.com
-Twitter: @machothemes
+Email:   support@machothemes.com
+URI:     https://www.machothemes.com
+Twitter: @machothemez
 
 /* Translation Credits */
 Chinese Translation: Daihui Gu

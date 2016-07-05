@@ -32,6 +32,25 @@ Decode includes support for:
 
 == Changelog ==
 
+### V 3.14.7
+    Fixed:
+        - Made it 100% child-theme compatible. Replaced all instances of get_stylesheet_directory_uri() with get_template_directory_uri()
+
+### V 3.14.6
+    Fixed:
+        - Removed riba-lite text domain
+        - Updated TGMPA to recommend Kiwi 1.0.2
+
+### V 3.14.4
+    Fixed:
+        - Had more than 1 text domain.
+
+### V 3.14.3
+    Added:
+        - Has been added UBer reCaptcha & Kiwi Social Share as recommended plugins
+        - Has been fixed a content width bug
+        - Slightly reworked a few up-sells to make them more meaningful.
+
 ### v3.13.0
 	Added:
 		- Has been added "Content Width".

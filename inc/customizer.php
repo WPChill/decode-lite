@@ -2333,7 +2333,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	) );
 
-	$wp_customize->add_setting( 'content_width', array(
+	$wp_customize->add_setting( 'container_content_width', array(
 
 		'default'			=> 60,
 
@@ -2556,7 +2556,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control(
 		new Decode_Customize_Slider_Control(
-		$wp_customize, 'content_width', array(
+		$wp_customize, 'container_content_width', array(
 			'label'			=> esc_html__( 'Content Width', 'decode' ),
 			'description'	=> esc_html__( 'Select the content width in percentage.', 'decode' ),
 			'choices'		=> array(
@@ -2741,46 +2741,26 @@ public static function decode_customize_register( $wp_customize ) {
 			'priority'  => 2,
 	    ) );
 
-		// Header Image
-		// $wp_customize->add_setting( 'decode_pro_image', array(
-		// 	'default'			=> true,
-		// 	'sanitize_callback'	=> 'decode_sanitize_boolean'
-		// ) );
-
-		// $wp_customize->add_control( new Macho_General_Pro_Field($wp_customize, 'decode_pro_image', array(
-		// 	'label'		=> __( 'In order to add header image/header backgroud color and  you need to buy PRO version', 'decode-pro' ),
-		// 	'section'	=> 'decode_header_image_upsell',
-		// 	'priority'	=> 1,
-		// ) ) );
-		// $wp_customize->add_setting( 'decode_enable_parallax', array(
-		// 	'default'			=> true,
-		// 	'sanitize_callback'	=> 'decode_sanitize_boolean'
-		// ) );
-
-		// $wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_enable_parallax', array(
-		// 	'label'		=> __( 'Enable parallax', 'decode-pro' ),
-		// 	'section'	=> 'decode_header_image_upsell',
-		// 	'type'		=> 'checkbox',
-		// 	'priority'	=> 1,
-		// ) ) );
-
 		// Header Options
 		// Container width
+		/*
 		$wp_customize->add_setting( 'decode_header_options_container_width', array(
 			'default'			=> 'full_width',
 			'sanitize_callback'	=> 'decode_sanitize_string'
 		) );
 
+
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_header_options_container_width', array(
-			'label'		=> __( 'Container width', 'decode-pro' ),
+			'label'		=> __( 'Container width', 'decode' ),
 			'section'	=> 'decode_header_options',
 			'type'		=> 'radio',
 			'choices'	=> array(
-				'full_width'	=> __( 'Full width', 'decode-pro' ),
-				'boxed'			=> __( 'Boxed', 'decode-pro' ),
+				'full_width'	=> __( 'Full width', 'decode' ),
+				'boxed'			=> __( 'Boxed', 'decode' ),
 			),
 			'priority'=> 1
 		) ));
+		*/
 
 		// Navigation menu position
 		$wp_customize->add_setting( 'decode_header_options_navigation_menu_position', array(
@@ -2789,13 +2769,9 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_header_options_navigation_menu_position', array(
-			'label'		=> __( 'Navigation menu position', 'decode-pro' ),
+			'label'		=> __( 'Move menu before logo?', 'decode' ),
 			'section'	=> 'decode_header_options',
-			'type'		=> 'radio',
-			'choices'	=> array(
-				'before_logo'	=> __( 'Before logo', 'decode-pro' ),
-				'after_logo'	=> __( 'After logo', 'decode-pro' ),
-			),
+			'type'		=> 'checkbox',
 			'priority'=> 1
 		) ));
 
@@ -2806,7 +2782,7 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_General_Pro_Field($wp_customize, 'decode_skins_upsell', array(
-			'label'		=> __( 'In order to choose a skin you need to buy PRO version', 'decode-pro' ),
+			'label'		=> __( 'Decode PRO comes with built-in premium, hand-crafted pixel-perfect skins. Click on the button below to learn more.', 'decode' ),
 			'section'	=> 'decode_pro_premium_skins_upsell',
 			'priority'	=> 1,
 		) ) );
@@ -2818,20 +2794,20 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_enable_related_posts', array(
-			'label'		=> __( 'Enable Related Posts', 'decode-pro' ),
-			'section'	=> 'decode_related_upsell',
+			'label'		=> __( 'Enable Related Posts', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 1,
 		) ));
-
+		/*
 		$wp_customize->add_setting( 'decode_enable_thumbnail_related_posts', array(
 			'default'			=> true,
 			'sanitize_callback'	=> 'decode_sanitize_boolean'
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_enable_thumbnail_related_posts', array(
-			'label'		=> __( 'Show Thumbnail on Related Posts', 'decode-pro' ),
-			'section'	=> 'decode_related_upsell',
+			'label'		=> __( 'Show Thumbnail on Related Posts', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 1,
 		) ));
@@ -2842,8 +2818,8 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_enable_title_related_posts', array(
-			'label'		=> __( 'Show Title on Related Posts', 'decode-pro' ),
-			'section'	=> 'decode_related_upsell',
+			'label'		=> __( 'Show Title on Related Posts', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 1,
 		) ));
@@ -2854,11 +2830,28 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_enable_content_related_posts', array(
-			'label'		=> __( 'Show Content on Related Posts', 'decode-pro' ),
-			'section'	=> 'decode_related_upsell',
+			'label'		=> __( 'Show Content on Related Posts', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 1,
 		) ));
+		*/
+
+
+		// Social Sharing
+		$wp_customize->add_setting( 'decode_ss_all', array(
+			'default'			=> true,
+			'sanitize_callback'	=> 'decode_sanitize_boolean'
+		) );
+
+		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_all', array(
+			'label'		=> __( 'Enable Social Sharing icons?', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
+			'type'		=> 'checkbox',
+			'priority'	=> 2,
+		) ));
+
+		/*
 
 		// Social Sharing
 		$wp_customize->add_setting( 'decode_ss_facebook', array(
@@ -2867,8 +2860,8 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_facebook', array(
-			'label'		=> __( 'Enable Facebook', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Facebook', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
@@ -2879,8 +2872,8 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_twitter', array(
-			'label'		=> __( 'Enable Twitter', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Twitter', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
@@ -2891,8 +2884,8 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_linkedin', array(
-			'label'		=> __( 'Enable LinkedIN', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable LinkedIN', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
@@ -2903,23 +2896,12 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_reddit', array(
-			'label'		=> __( 'Enable Reddit', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Reddit', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
-		
-		$wp_customize->add_setting( 'decode_ss_tumblr', array(
-			'default'			=> true,
-			'sanitize_callback'	=> 'decode_sanitize_boolean'
-		) );
 
-		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_tumblr', array(
-			'label'		=> __( 'Enable Tumblr', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
-			'type'		=> 'checkbox',
-			'priority'	=> 2,
-		) ));
 
 		$wp_customize->add_setting( 'decode_ss_googleplus', array(
 			'default'			=> true,
@@ -2927,8 +2909,8 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_googleplus', array(
-			'label'		=> __( 'Enable Google+', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Google+', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
@@ -2939,23 +2921,13 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_pinterest', array(
-			'label'		=> __( 'Enable Pinterest', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Pinterest', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
 
-		$wp_customize->add_setting( 'decode_ss_vk', array(
-			'default'			=> true,
-			'sanitize_callback'	=> 'decode_sanitize_boolean'
-		) );
 
-		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_vk', array(
-			'label'		=> __( 'Enable Vkontakte', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
-			'type'		=> 'checkbox',
-			'priority'	=> 2,
-		) ));
 
 		$wp_customize->add_setting( 'decode_ss_email', array(
 			'default'			=> true,
@@ -2963,11 +2935,13 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_Disabled_Custom_Control($wp_customize, 'decode_ss_email', array(
-			'label'		=> __( 'Enable Email', 'decode-pro' ),
-			'section'	=> 'decode_social_upsell',
+			'label'		=> __( 'Enable Email', 'decode' ),
+			'section'	=> 'decode_content_options_content_single',
 			'type'		=> 'checkbox',
 			'priority'	=> 2,
 		) ));
+
+		*/
 
 		// Footer Settings
 		$wp_customize->add_setting( 'decode_footer_settings', array(
@@ -2976,7 +2950,7 @@ public static function decode_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Macho_General_Pro_Field($wp_customize, 'decode_footer_settings', array(
-			'label'		=> __( 'In order to edit footer settings  you need to buy PRO version', 'decode-pro' ),
+			'label'		=> __( 'Decode PRO comes with a widgetized footer. Click on the button below to learn more.', 'decode' ),
 			'section'	=> 'decode_footer_upsell',
 			'priority'	=> 1,
 		) ) );
@@ -3263,7 +3237,7 @@ public static function decode_customize_register( $wp_customize ) {
 
 					'width',
 
-					'content_width',
+					'container_content_width',
 
 					'',
 
@@ -3338,11 +3312,11 @@ function decode_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'decode_customize_preview_js' );
 
-if( !function_exists( 'pixova_lite_prefix_upsell_notice' ) ) {
+if( !function_exists( 'decode_prefix_upsell_notice' ) ) {
     /**
      * Display upgrade notice on customizer page
      */
-    function pixova_lite_prefix_upsell_notice() {
+    function decode_prefix_upsell_notice() {
 
         // Enqueue the script
         wp_enqueue_script( 'macho-customizer-upsell', get_template_directory_uri() . '/inc/customizer/assets/js/upsell.js', array(), '1.0.1', true );
@@ -3355,13 +3329,13 @@ if( !function_exists( 'pixova_lite_prefix_upsell_notice' ) ) {
 
                 # Upsell URL
                 'prefixUpsellURL' => Macho_Pro_Version_URL,
-                'prefixUpsellLabel' => esc_html__('View PRO version', 'macho'),
+                'prefixUpsellLabel' => esc_html__('View PRO version', 'decode'),
 
             )
         );
 
     }
     if ( apply_filters( 'decode_add_upsell', true ) ) {
-    	add_action('customize_controls_enqueue_scripts', 'pixova_lite_prefix_upsell_notice');
+    	add_action('customize_controls_enqueue_scripts', 'decode_prefix_upsell_notice');
     }
 }

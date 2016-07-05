@@ -234,7 +234,7 @@
 	} );
 
 	// Content Width
-	wp.customize( 'content_width', function( value ) {
+	wp.customize( 'container_content_width', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-main' ).css( 'width', to + '%' );
 		} );
