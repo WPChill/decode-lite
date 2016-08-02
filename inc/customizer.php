@@ -690,14 +690,6 @@ class Decode_Customize {
 		) );
 
 
-		$wp_customize->add_setting( 'rdio_username', array(
-
-			'default' => '',
-
-			'sanitize_callback' => 'decode_sanitize_string',
-
-		) );
-
 
 		$wp_customize->add_setting( 'spotify_username', array(
 
@@ -1446,19 +1438,6 @@ class Decode_Customize {
 
 		) );
 
-		$wp_customize->add_control( 'rdio_username', array(
-
-			'label' => sprintf( __( '%s Username', 'decode' ), 'Rdio' ),
-
-			'section' => 'decode_social_options',
-
-			'active_callback' => 'decode_social_icons_are_enabled',
-
-			'type' => 'text',
-
-			'priority' => 29,
-
-		) );
 
 		$wp_customize->add_control( 'spotify_username', array(
 
