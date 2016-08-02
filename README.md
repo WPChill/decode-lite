@@ -41,7 +41,6 @@ Lastly, Decode has social icons that can link to your profiles from every side o
 - deviantART
 - SoundCloud
 - Bandcamp
-- Rdio
 - Spotify
 - Last.Fm
 - Vine
