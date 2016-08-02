@@ -32,9 +32,9 @@ Decode includes support for:
 
 == Changelog ==
 
-### V 3.14.7
+### V 3.15.1
     Fixed:
-        - Made it 100% child-theme compatible. Replaced all instances of get_stylesheet_directory_uri() with get_template_directory_uri()
+        - Moved the copyright settings into it's own panel to make it easier to see/use
 
 ### V 3.14.6
     Fixed:

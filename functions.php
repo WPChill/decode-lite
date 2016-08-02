@@ -56,8 +56,8 @@ function decode_setup() {
 		'height'                 => 300,
 		'flex-height'            => true,
 		'header-text'            => false,
-		//'admin-head-callback'    => 'decode_admin_header_style', // @todo: Remove this function when WordPress 4.3 is released
-		//'admin-preview-callback' => 'decode_admin_header_image', // @todo: Remove this function when WordPress 4.3 is released
+		'admin-head-callback'    => 'decode_admin_header_style', // @todo: Remove this function when WordPress 4.3 is released
+		'admin-preview-callback' => 'decode_admin_header_image', // @todo: Remove this function when WordPress 4.3 is released
 	); 
 	$args = apply_filters( 'decode_custom_header_args', $args );
 	add_theme_support( 'custom-header', $args );
