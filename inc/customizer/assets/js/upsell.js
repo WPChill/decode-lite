@@ -20,7 +20,7 @@
 		// $('.upsell-links').prepend( documentatLink );
 		// $('.upsell-links').prepend( supportLink );
 		// $('.upsell-links').prepend( upsellLink );
-		$('.preview-notice').append( upsellLink );
+		$( '.upsell-links' ).prepend( upsellLink );
 
 	}
 

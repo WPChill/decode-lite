@@ -151,7 +151,7 @@ if(!class_exists('Macho_CF7_Custom_Control')) {
                         $contact_forms[$cform->ID] = $cform->post_title;
                     }
                 } else {
-                    $contact_forms[0] = __('No contact forms found', 'pixova-lite');
+                    $contact_forms[0] = __('No contact forms found', 'decode');
                 }
             }
             return $contact_forms;
@@ -166,7 +166,7 @@ if(!class_exists('Macho_CF7_Custom_Control')) {
                 <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
                 <select <?php $this->link(); ?> style="width:100%;">
 
-                <?php echo '<option selected="selected" value="default">'.__('Select your contact form', 'pixova-lite').'</option>';
+                <?php echo '<option selected="selected" value="default">'.__('Select your contact form', 'decode').'</option>';
 
                 foreach ($Macho_contact_forms as $form_id => $form_title) {
                     echo '<option value="' . sanitize_key( $form_id ). '" >' . esc_html( $form_title ). '</option>';
@@ -194,39 +194,13 @@ if( !class_exists( 'Macho_General_Pro_Field' ) ) {
             </div>
 
             <div class="pro-box">
-                <a href="<?php echo esc_url(Macho_Pro_Version_URL);?>" target="_blank" class="upgrade" id="review_pro"><?php _e( 'View PRO version','macho' ); ?></a>
+                <a href="<?php echo esc_url(Macho_Pro_Version_URL);?>" target="_blank" class="upgrade" id="review_pro"><?php _e( 'View PRO version','decode' ); ?></a>
             </div>
 
        <?php }
     }
 }
 
-
-/**
- * Customize for premium features, extend the WP Customizer
- *
- * @since Macho 1.0.8
- */
-if( !class_exists( 'Macho_WP_Document_Customizer_Control') ) {
-    class Macho_WP_Document_Customize_Control extends WP_Customize_Control
-    {
-        public $type = 'new_menu';
-
-        //Render the control's content
-        public function render_content()
-        {
-            ?>
-            <div class="pro-box">
-            <a href="<?php echo esc_url('http://www.machothemes.com/themes/pixova/');?>" target="_blank" class="document" id="review_pro"><?php _e('Theme Documentation', 'pixova-lite'); ?></a>
-
-            <div>
-            <div class="pro-version">
-                <?php _e('By upgrading to the PRO version you are unlocking the full potential of Pixova. You will get: unlimited sliders / carousels, unlimited Google Maps, Unlimited Team Members, Section Ordering, Control over theme typography and colors. Upgrade NOW!', 'pixova-lite'); ?>
-            </div>
-            <?php
-        }
-    }
-}
 
 /**
  * Customize for premium features, extend the WP Customizer
@@ -242,7 +216,7 @@ if( !class_exists( 'Macho_WP_Pro_Customize_Control' ) ) {
         public function render_content() {
             ?>
             <div class="pro-box">
-                <a href="<?php echo esc_url('http://www.machothemes.com/themes/pixova/');?>" target="_blank" class="upgrade" id="review_pro"><?php _e( 'View PRO version','pixova-lite' ); ?></a>
+                <a href="<?php echo esc_url(Macho_Pro_Version_URL);?>" target="_blank" class="upgrade" id="review_pro"><?php _e( 'View PRO version','decode' ); ?></a>
             </div>
             <?php
         }

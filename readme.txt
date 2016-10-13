@@ -32,6 +32,31 @@ Decode includes support for:
 
 == Changelog ==
 
+### V 3.15.2
+    Fixed:
+        - Proper sanitization of generate_css, see: https://themes.trac.wordpress.org/ticket/31095#comment:22
+        - Improved upsell in customizer
+        - Fixed a few unescaped variables, see: https://themes.trac.wordpress.org/ticket/31095#comment:15
+
+### V 3.15.1
+    Fixed:
+        - Moved the copyright settings into it's own panel to make it easier to see/use
+
+### V 3.14.6
+    Fixed:
+        - Removed riba-lite text domain
+        - Updated TGMPA to recommend Kiwi 1.0.2
+
+### V 3.14.4
+    Fixed:
+        - Had more than 1 text domain.
+
+### V 3.14.3
+    Added:
+        - Has been added UBer reCaptcha & Kiwi Social Share as recommended plugins
+        - Has been fixed a content width bug
+        - Slightly reworked a few up-sells to make them more meaningful.
+
 ### v3.13.0
 	Added:
 		- Has been added "Content Width".
